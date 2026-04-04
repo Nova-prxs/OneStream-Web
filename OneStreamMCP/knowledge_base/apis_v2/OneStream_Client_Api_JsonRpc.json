@@ -1,0 +1,1065 @@
+{
+  "namespace": "OneStream.Client.Api.JsonRpc",
+  "generated_at": "2025-12-08T19:28:51.262045",
+  "statistics": {
+    "classes": 1,
+    "interfaces": 0,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 0,
+    "total_methods": 38,
+    "total_properties": 0
+  },
+  "classes": [
+    {
+      "name": "ClientFactory",
+      "namespace": "OneStream.Client.Api.JsonRpc",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "Create",
+          "return_type": "IApiClient",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "interfaceType",
+              "type": "Type",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "httpClientFactory",
+              "type": "IAuthenticatedHttpClientFactory",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "baseServerUri",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates operation",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "AdminGridServiceClient",
+          "return_type": "> new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "httpClientFactory",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "baseServerUri",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Admins grid service client",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "ApplicationAdminServiceClient",
+          "return_type": "> new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "httpClientFactory",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "baseServerUri",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Applications admin service client",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "AttachmentsAjaxServiceClient",
+          "return_type": "> new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "httpClientFactory",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "baseServerUri",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Attachmentss ajax service client",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "BusinessRuleServiceClient",
+          "return_type": "> new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "httpClientFactory",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "baseServerUri",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Businesss rule service client",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "ClientUpdaterServiceClient",
+          "return_type": "> new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "httpClientFactory",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "baseServerUri",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Clients updater service client",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "CubeServiceClient",
+          "return_type": "> new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "httpClientFactory",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "baseServerUri",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Cubes service client",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "CubeViewsAjaxServiceClient",
+          "return_type": "> new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "httpClientFactory",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "baseServerUri",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Cubes views ajax service client",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "DashboardsAjaxServiceClient",
+          "return_type": "> new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "httpClientFactory",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "baseServerUri",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Dashboardss ajax service client",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "DataExplorerServiceClient",
+          "return_type": "> new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "httpClientFactory",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "baseServerUri",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Datas explorer service client",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "DataManagementAjaxServiceClient",
+          "return_type": "> new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "httpClientFactory",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "baseServerUri",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Datas management ajax service client",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "DataProviderServiceClient",
+          "return_type": "> new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "httpClientFactory",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "baseServerUri",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Datas provider service client",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "DataQualityAdminServiceClient",
+          "return_type": "> new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "httpClientFactory",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "baseServerUri",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Datas quality admin service client",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "DataQualityProcessingServiceClient",
+          "return_type": "> new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "httpClientFactory",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "baseServerUri",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Datas quality processing service client",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "DimensionLibraryServiceClient",
+          "return_type": "> new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "httpClientFactory",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "baseServerUri",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Dimensions library service client",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "ExcelServiceClient",
+          "return_type": "> new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "httpClientFactory",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "baseServerUri",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Excels service client",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "FileExplorerServiceClient",
+          "return_type": "> new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "httpClientFactory",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "baseServerUri",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Files explorer service client",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "FormsAjaxServiceClient",
+          "return_type": "> new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "httpClientFactory",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "baseServerUri",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Formss ajax service client",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "FxRatesServiceClient",
+          "return_type": "> new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "httpClientFactory",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "baseServerUri",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Fxs rates service client",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "JournalsAjaxServiceClient",
+          "return_type": "> new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "httpClientFactory",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "baseServerUri",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Journalss ajax service client",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "MemberSelectionServiceClient",
+          "return_type": "> new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "httpClientFactory",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "baseServerUri",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Members selection service client",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "PovServiceClient",
+          "return_type": "> new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "httpClientFactory",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "baseServerUri",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Povs service client",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "SecurityAdminServiceClient",
+          "return_type": "> new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "httpClientFactory",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "baseServerUri",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Securitys admin service client",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "SmartIntegrationManagementServiceClient",
+          "return_type": "> new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "httpClientFactory",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "baseServerUri",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Smarts integration management service client",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "StageAdminServiceClient",
+          "return_type": "> new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "httpClientFactory",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "baseServerUri",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Stages admin service client",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "StageProcessingServiceClient",
+          "return_type": "> new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "httpClientFactory",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "baseServerUri",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Stages processing service client",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "SystemServiceClient",
+          "return_type": "> new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "httpClientFactory",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "baseServerUri",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Systems service client",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "TimeDimProfileServiceClient",
+          "return_type": "> new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "httpClientFactory",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "baseServerUri",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Times dim profile service client",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "UserActivityAjaxServiceClient",
+          "return_type": "> new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "httpClientFactory",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "baseServerUri",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Users activity ajax service client",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "WorkflowAdminServiceClient",
+          "return_type": "> new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "httpClientFactory",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "baseServerUri",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Workflows admin service client",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "WorkflowAjaxServiceClient",
+          "return_type": "> new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "httpClientFactory",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "baseServerUri",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Workflows ajax service client",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "WsAssembliesAjaxServiceClient",
+          "return_type": "> new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "httpClientFactory",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "baseServerUri",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Wss assemblies ajax service client",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "XbrlAjaxServiceClient",
+          "return_type": "> new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "httpClientFactory",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "baseServerUri",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Xbrls ajax service client",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "XFEnvironmentAjaxServiceClient",
+          "return_type": "> new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "httpClientFactory",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "baseServerUri",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Xs f environment ajax service client",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "XFSqlAjaxServiceClient",
+          "return_type": "> new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "httpClientFactory",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "baseServerUri",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Xs f sql ajax service client",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "XmlLoadExtractServiceClient",
+          "return_type": "> new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "httpClientFactory",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "baseServerUri",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Xmls load extract service client",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "XtraReportViewerAjaxServiceClient",
+          "return_type": "> new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "httpClientFactory",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "baseServerUri",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Xtras report viewer ajax service client",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "ArgumentException",
+          "return_type": "> throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "interfaceType.Name",
+              "type": "\"Interface not found: \" +",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Arguments exception",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Api/JsonRpc/ClientFactory.cs"
+    }
+  ],
+  "interfaces": [],
+  "structs": [],
+  "delegates": [],
+  "enums": []
+}

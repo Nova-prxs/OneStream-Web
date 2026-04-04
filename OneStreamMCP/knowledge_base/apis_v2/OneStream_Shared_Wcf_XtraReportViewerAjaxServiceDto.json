@@ -1,0 +1,209 @@
+{
+  "namespace": "OneStream.Shared.Wcf.XtraReportViewerAjaxServiceDto",
+  "generated_at": "2025-12-08T19:28:52.409187",
+  "statistics": {
+    "classes": 2,
+    "interfaces": 0,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 0,
+    "total_methods": 0,
+    "total_properties": 18
+  },
+  "classes": [
+    {
+      "name": "GetReportDisplayInfoCompressedRequestDto",
+      "namespace": "OneStream.Shared.Wcf.XtraReportViewerAjaxServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "ReportViewerType",
+          "type": "ReportViewerType",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "DashboardID",
+          "type": "Guid",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "DashboardComponentID",
+          "type": "Guid",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "IsSystemLevel",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "WorkspaceID",
+          "type": "Guid",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "CubeViewName",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "ReportName",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "SubstVars",
+          "type": "NameValueDictionary",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/XtraReportViewerAjaxServiceDto/GetReportDisplayInfoCompressedRequestDto.cs"
+    },
+    {
+      "name": "StartGetReportDisplayInfoCompressedRequestDto",
+      "namespace": "OneStream.Shared.Wcf.XtraReportViewerAjaxServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "ReportViewerType",
+          "type": "ReportViewerType",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "DashboardID",
+          "type": "Guid",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "DashboardComponentID",
+          "type": "Guid",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "IsSystemLevel",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "WorkspaceID",
+          "type": "Guid",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "CubeViewName",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "ReportName",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "SubstVars",
+          "type": "NameValueDictionary",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/XtraReportViewerAjaxServiceDto/StartGetReportDisplayInfoCompressedRequestDto.cs"
+    }
+  ],
+  "interfaces": [],
+  "structs": [],
+  "delegates": [],
+  "enums": []
+}

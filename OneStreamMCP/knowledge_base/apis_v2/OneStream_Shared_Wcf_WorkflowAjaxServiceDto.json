@@ -1,0 +1,1858 @@
+{
+  "namespace": "OneStream.Shared.Wcf.WorkflowAjaxServiceDto",
+  "generated_at": "2025-12-08T19:28:52.404800",
+  "statistics": {
+    "classes": 41,
+    "interfaces": 0,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 0,
+    "total_methods": 0,
+    "total_properties": 112
+  },
+  "classes": [
+    {
+      "name": "StartMultipleProcessStepsRequestDto",
+      "namespace": "OneStream.Shared.Wcf.WorkflowAjaxServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "BatchInfos",
+          "type": "List<WorkflowBatchInfo>",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/WorkflowAjaxServiceDto/StartMultipleProcessStepsRequestDto.cs"
+    },
+    {
+      "name": "GetControlledICPartnerWorkflowStatusCompressedRequestDto",
+      "namespace": "OneStream.Shared.Wcf.WorkflowAjaxServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "WorkflowUnitClusterPk",
+          "type": "WorkflowUnitClusterPk",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "PartnerEntity",
+          "type": "int",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/WorkflowAjaxServiceDto/GetControlledICPartnerWorkflowStatusCompressedRequestDto.cs"
+    },
+    {
+      "name": "GetUserWorkflowInitInfoCompressedRequestDto",
+      "namespace": "OneStream.Shared.Wcf.WorkflowAjaxServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/WorkflowAjaxServiceDto/GetUserWorkflowInitInfoCompressedRequestDto.cs"
+    },
+    {
+      "name": "GetWorkflowAuditInitInfoRequestDto",
+      "namespace": "OneStream.Shared.Wcf.WorkflowAjaxServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "WorkflowUnitPk",
+          "type": "WorkflowUnitPk",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/WorkflowAjaxServiceDto/GetWorkflowAuditInitInfoRequestDto.cs"
+    },
+    {
+      "name": "SetWorkflowStateRequestDto",
+      "namespace": "OneStream.Shared.Wcf.WorkflowAjaxServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "WorkflowUnitClusterPk",
+          "type": "WorkflowUnitClusterPk",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "CloseWorkflow",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "KeepHierachyHistoryIfExists",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/WorkflowAjaxServiceDto/SetWorkflowStateRequestDto.cs"
+    },
+    {
+      "name": "GetWorkflowBatchInitInfoRequestDto",
+      "namespace": "OneStream.Shared.Wcf.WorkflowAjaxServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "DefaultWorkflowUnitClusterPk",
+          "type": "WorkflowUnitClusterPk",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/WorkflowAjaxServiceDto/GetWorkflowBatchInitInfoRequestDto.cs"
+    },
+    {
+      "name": "SetUserWorkflowViewInXFFileSystemRequestDto",
+      "namespace": "OneStream.Shared.Wcf.WorkflowAjaxServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "WorkflowView",
+          "type": "WorkflowView",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/WorkflowAjaxServiceDto/SetUserWorkflowViewInXFFileSystemRequestDto.cs"
+    },
+    {
+      "name": "UnlockWorkflowUnitRequestDto",
+      "namespace": "OneStream.Shared.Wcf.WorkflowAjaxServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "WorkflowUnitClusterPk",
+          "type": "WorkflowUnitClusterPk",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/WorkflowAjaxServiceDto/UnlockWorkflowUnitRequestDto.cs"
+    },
+    {
+      "name": "GetControlledWorkflowHierarchyStatusCompressedRequestDto",
+      "namespace": "OneStream.Shared.Wcf.WorkflowAjaxServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "WorkflowUnitClusterPk",
+          "type": "WorkflowUnitClusterPk",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "ProfileType",
+          "type": "WorkflowProfileTypes",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "RelativeType",
+          "type": "WorkflowProfileRelativeTypes",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "IncludeInputChildren",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/WorkflowAjaxServiceDto/GetControlledWorkflowHierarchyStatusCompressedRequestDto.cs"
+    },
+    {
+      "name": "GetUserWorkflowViewFromXFFileSystemRequestDto",
+      "namespace": "OneStream.Shared.Wcf.WorkflowAjaxServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/WorkflowAjaxServiceDto/GetUserWorkflowViewFromXFFileSystemRequestDto.cs"
+    },
+    {
+      "name": "SaveWorkflowChannelRequestDto",
+      "namespace": "OneStream.Shared.Wcf.WorkflowAjaxServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "WfChannel",
+          "type": "WorkflowChannel",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "IsNew",
+          "type": "TriStateBool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/WorkflowAjaxServiceDto/SaveWorkflowChannelRequestDto.cs"
+    },
+    {
+      "name": "UnlockWorkflowUnitDescendantsRequestDto",
+      "namespace": "OneStream.Shared.Wcf.WorkflowAjaxServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "WorkflowUnitClusterPk",
+          "type": "WorkflowUnitClusterPk",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "ProfileType",
+          "type": "WorkflowProfileTypes",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "WorkflowChannelKey",
+          "type": "Guid",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/WorkflowAjaxServiceDto/UnlockWorkflowUnitDescendantsRequestDto.cs"
+    },
+    {
+      "name": "CertifyAndLockWorkflowUnitDescendantsRequestDto",
+      "namespace": "OneStream.Shared.Wcf.WorkflowAjaxServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "WorkflowUnitClusterPk",
+          "type": "WorkflowUnitClusterPk",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "Reason",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/WorkflowAjaxServiceDto/CertifyAndLockWorkflowUnitDescendantsRequestDto.cs"
+    },
+    {
+      "name": "GetWorkflowLockHistoryRequestDto",
+      "namespace": "OneStream.Shared.Wcf.WorkflowAjaxServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "WorkflowUnitClusterPk",
+          "type": "WorkflowUnitClusterPk",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/WorkflowAjaxServiceDto/GetWorkflowLockHistoryRequestDto.cs"
+    },
+    {
+      "name": "GetWorkflowInfoRequestDto",
+      "namespace": "OneStream.Shared.Wcf.WorkflowAjaxServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "WorkflowUnitPk",
+          "type": "WorkflowUnitPk",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/WorkflowAjaxServiceDto/GetWorkflowInfoRequestDto.cs"
+    },
+    {
+      "name": "GetWorkflowViewSelectInfoCompressedRequestDto",
+      "namespace": "OneStream.Shared.Wcf.WorkflowAjaxServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "IncludeInitialWFProfileIDPath",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/WorkflowAjaxServiceDto/GetWorkflowViewSelectInfoCompressedRequestDto.cs"
+    },
+    {
+      "name": "DeleteWorkflowChannelRequestDto",
+      "namespace": "OneStream.Shared.Wcf.WorkflowAjaxServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "WfChannelID",
+          "type": "Guid",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/WorkflowAjaxServiceDto/DeleteWorkflowChannelRequestDto.cs"
+    },
+    {
+      "name": "LockWorkflowUnitDescendantsRequestDto",
+      "namespace": "OneStream.Shared.Wcf.WorkflowAjaxServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "WorkflowUnitClusterPk",
+          "type": "WorkflowUnitClusterPk",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "ProfileType",
+          "type": "WorkflowProfileTypes",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "WorkflowChannelKey",
+          "type": "Guid",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/WorkflowAjaxServiceDto/LockWorkflowUnitDescendantsRequestDto.cs"
+    },
+    {
+      "name": "GetWorkflowViewSelectCubeRootInfoRequestDto",
+      "namespace": "OneStream.Shared.Wcf.WorkflowAjaxServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "CubeRootWFProfileID",
+          "type": "Guid",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "IncludeWfProfileHierarchy",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "IncludeScenarios",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/WorkflowAjaxServiceDto/GetWorkflowViewSelectCubeRootInfoRequestDto.cs"
+    },
+    {
+      "name": "StartProcessStepsRequestDto",
+      "namespace": "OneStream.Shared.Wcf.WorkflowAjaxServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "BatchInfo",
+          "type": "WorkflowBatchInfo",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/WorkflowAjaxServiceDto/StartProcessStepsRequestDto.cs"
+    },
+    {
+      "name": "UnlockAndUncertifyWorkflowUnitAncestorsRequestDto",
+      "namespace": "OneStream.Shared.Wcf.WorkflowAjaxServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "WorkflowUnitClusterPk",
+          "type": "WorkflowUnitClusterPk",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "Reason",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/WorkflowAjaxServiceDto/UnlockAndUncertifyWorkflowUnitAncestorsRequestDto.cs"
+    },
+    {
+      "name": "GetUserWorkflowUnitInfoFromXFFileSystemRequestDto",
+      "namespace": "OneStream.Shared.Wcf.WorkflowAjaxServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/WorkflowAjaxServiceDto/GetUserWorkflowUnitInfoFromXFFileSystemRequestDto.cs"
+    },
+    {
+      "name": "GetUserWorkflowInitInfoRequestDto",
+      "namespace": "OneStream.Shared.Wcf.WorkflowAjaxServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/WorkflowAjaxServiceDto/GetUserWorkflowInitInfoRequestDto.cs"
+    },
+    {
+      "name": "GetControlledWorkflowProfileRelativesRequestDto",
+      "namespace": "OneStream.Shared.Wcf.WorkflowAjaxServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "WorkflowUnitClusterPk",
+          "type": "WorkflowUnitClusterPk",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "ProfileType",
+          "type": "WorkflowProfileTypes",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "RelativeType",
+          "type": "WorkflowProfileRelativeTypes",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "IncludeAttributes",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "IncludeInputChildren",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/WorkflowAjaxServiceDto/GetControlledWorkflowProfileRelativesRequestDto.cs"
+    },
+    {
+      "name": "ClearCubeDataForWorkflowRequestDto",
+      "namespace": "OneStream.Shared.Wcf.WorkflowAjaxServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "InputParentWfUnitPk",
+          "type": "WorkflowUnitPk",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "ClearOriginImport",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "ClearOriginForms",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/WorkflowAjaxServiceDto/ClearCubeDataForWorkflowRequestDto.cs"
+    },
+    {
+      "name": "GetWorkflowChannelUsingNameRequestDto",
+      "namespace": "OneStream.Shared.Wcf.WorkflowAjaxServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "Name",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/WorkflowAjaxServiceDto/GetWorkflowChannelUsingNameRequestDto.cs"
+    },
+    {
+      "name": "GetWorkflowChannelsRequestDto",
+      "namespace": "OneStream.Shared.Wcf.WorkflowAjaxServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/WorkflowAjaxServiceDto/GetWorkflowChannelsRequestDto.cs"
+    },
+    {
+      "name": "CompleteOrRevertWorkflowRequestDto",
+      "namespace": "OneStream.Shared.Wcf.WorkflowAjaxServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "WorkflowUnitClusterPk",
+          "type": "WorkflowUnitClusterPk",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "Complete",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/WorkflowAjaxServiceDto/CompleteOrRevertWorkflowRequestDto.cs"
+    },
+    {
+      "name": "GetControlledICPartnerWorkflowStatusRequestDto",
+      "namespace": "OneStream.Shared.Wcf.WorkflowAjaxServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "WorkflowUnitClusterPk",
+          "type": "WorkflowUnitClusterPk",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "PartnerEntity",
+          "type": "int",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/WorkflowAjaxServiceDto/GetControlledICPartnerWorkflowStatusRequestDto.cs"
+    },
+    {
+      "name": "GetWorkflowViewSelectInfoRequestDto",
+      "namespace": "OneStream.Shared.Wcf.WorkflowAjaxServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "IncludeInitialWFProfileIDPath",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/WorkflowAjaxServiceDto/GetWorkflowViewSelectInfoRequestDto.cs"
+    },
+    {
+      "name": "GetWorkflowChannelRequestDto",
+      "namespace": "OneStream.Shared.Wcf.WorkflowAjaxServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "WfChannelID",
+          "type": "Guid",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/WorkflowAjaxServiceDto/GetWorkflowChannelRequestDto.cs"
+    },
+    {
+      "name": "ExecuteMultipleProcessStepsRequestDto",
+      "namespace": "OneStream.Shared.Wcf.WorkflowAjaxServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "BatchInfos",
+          "type": "List<WorkflowBatchInfo>",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "ThrowOnError",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/WorkflowAjaxServiceDto/ExecuteMultipleProcessStepsRequestDto.cs"
+    },
+    {
+      "name": "ExecuteProcessStepsRequestDto",
+      "namespace": "OneStream.Shared.Wcf.WorkflowAjaxServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "BatchInfo",
+          "type": "WorkflowBatchInfo",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "ThrowOnError",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/WorkflowAjaxServiceDto/ExecuteProcessStepsRequestDto.cs"
+    },
+    {
+      "name": "GetWorkflowViewSelectCubeRootInfoCompressedRequestDto",
+      "namespace": "OneStream.Shared.Wcf.WorkflowAjaxServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "CubeRootWFProfileID",
+          "type": "Guid",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "IncludeWfProfileHierarchy",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "IncludeScenarios",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/WorkflowAjaxServiceDto/GetWorkflowViewSelectCubeRootInfoCompressedRequestDto.cs"
+    },
+    {
+      "name": "GetControlledWorkflowHierarchyStatusRequestDto",
+      "namespace": "OneStream.Shared.Wcf.WorkflowAjaxServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "WorkflowUnitClusterPk",
+          "type": "WorkflowUnitClusterPk",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "ProfileType",
+          "type": "WorkflowProfileTypes",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "RelativeType",
+          "type": "WorkflowProfileRelativeTypes",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "IncludeInputChildren",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/WorkflowAjaxServiceDto/GetControlledWorkflowHierarchyStatusRequestDto.cs"
+    },
+    {
+      "name": "GetWorkflowControllerInitInfoCompressedRequestDto",
+      "namespace": "OneStream.Shared.Wcf.WorkflowAjaxServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "WorkflowUnitClusterPk",
+          "type": "WorkflowUnitClusterPk",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "ProfileType",
+          "type": "WorkflowProfileTypes",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "RelativeType",
+          "type": "WorkflowProfileRelativeTypes",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "IncludeInputChildren",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/WorkflowAjaxServiceDto/GetWorkflowControllerInitInfoCompressedRequestDto.cs"
+    },
+    {
+      "name": "GetWorkflowChannelsInitInfoRequestDto",
+      "namespace": "OneStream.Shared.Wcf.WorkflowAjaxServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/WorkflowAjaxServiceDto/GetWorkflowChannelsInitInfoRequestDto.cs"
+    },
+    {
+      "name": "GetWorkflowStateRequestDto",
+      "namespace": "OneStream.Shared.Wcf.WorkflowAjaxServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "WorkflowUnitClusterPk",
+          "type": "WorkflowUnitClusterPk",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/WorkflowAjaxServiceDto/GetWorkflowStateRequestDto.cs"
+    },
+    {
+      "name": "LockWorkflowUnitRequestDto",
+      "namespace": "OneStream.Shared.Wcf.WorkflowAjaxServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "WorkflowUnitClusterPk",
+          "type": "WorkflowUnitClusterPk",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/WorkflowAjaxServiceDto/LockWorkflowUnitRequestDto.cs"
+    },
+    {
+      "name": "GetWorkflowControllerInitInfoRequestDto",
+      "namespace": "OneStream.Shared.Wcf.WorkflowAjaxServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "WorkflowUnitClusterPk",
+          "type": "WorkflowUnitClusterPk",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "ProfileType",
+          "type": "WorkflowProfileTypes",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "RelativeType",
+          "type": "WorkflowProfileRelativeTypes",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "IncludeInputChildren",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/WorkflowAjaxServiceDto/GetWorkflowControllerInitInfoRequestDto.cs"
+    },
+    {
+      "name": "GetWorkspaceInfoForWorkflowRequestDto",
+      "namespace": "OneStream.Shared.Wcf.WorkflowAjaxServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "WorkflowUnitClusterPk",
+          "type": "WorkflowUnitClusterPk",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/WorkflowAjaxServiceDto/GetWorkspaceInfoForWorkflowRequestDto.cs"
+    }
+  ],
+  "interfaces": [],
+  "structs": [],
+  "delegates": [],
+  "enums": []
+}

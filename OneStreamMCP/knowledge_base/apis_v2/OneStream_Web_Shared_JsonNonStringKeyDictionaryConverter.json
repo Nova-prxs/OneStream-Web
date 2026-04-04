@@ -1,0 +1,180 @@
+{
+  "namespace": "OneStream.Web.Shared.JsonNonStringKeyDictionaryConverter",
+  "generated_at": "2025-12-08T19:28:52.427757",
+  "statistics": {
+    "classes": 1,
+    "interfaces": 0,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 0,
+    "total_methods": 5,
+    "total_properties": 0
+  },
+  "classes": [
+    {
+      "name": "DictionaryKeyValueConverterInner",
+      "namespace": "OneStream.Web.Shared.JsonNonStringKeyDictionaryConverter",
+      "type": "class",
+      "modifiers": [
+        "private"
+      ],
+      "base_class": "JsonConverter<Dictionary<TKey",
+      "interfaces": [
+        "TValue>>"
+      ],
+      "generic_params": [
+        "TKey",
+        "TValue"
+      ],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "options",
+              "type": "JsonSerializerOptions",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [
+        {
+          "name": "Read",
+          "return_type": "override Dictionary<TKey, TValue>",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "reader",
+              "type": "Utf8JsonReader",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "typeToConvert",
+              "type": "Type",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "options",
+              "type": "JsonSerializerOptions",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Reads operation",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "JsonException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "StartObject.\"",
+              "type": "\"TokenType differs from",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Jsons exception",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "Dictionary",
+          "return_type": "Dictionary",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Dictionarys operation",
+          "generic_params": [
+            "TKey",
+            "TValue"
+          ],
+          "overloads": 1
+        },
+        {
+          "name": "JsonException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "JsonNonStringKeyDictionaryConverter.\"",
+              "type": "\"Unable to deserialize",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Jsons exception",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "Write",
+          "return_type": "override void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "writer",
+              "type": "Utf8JsonWriter",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "value",
+              "type": "Dictionary<TKey, TValue>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "options",
+              "type": "JsonSerializerOptions",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Writes operation",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Web/Shared/JsonNonStringKeyDictionaryConverter.cs"
+    }
+  ],
+  "interfaces": [],
+  "structs": [],
+  "delegates": [],
+  "enums": []
+}

@@ -1,0 +1,6621 @@
+{
+  "namespace": "OneStream.Client.Api.SmartIntegrationManagementServiceReference",
+  "generated_at": "2025-12-08T19:28:51.279893",
+  "statistics": {
+    "classes": 6,
+    "interfaces": 1,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 0,
+    "total_methods": 230,
+    "total_properties": 0
+  },
+  "classes": [
+    {
+      "name": "GetCurrentRelayStatusCompletedEventArgs",
+      "namespace": "OneStream.Client.Api.SmartIntegrationManagementServiceReference",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "AsyncCompletedEventArgs",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "results",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "exception",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cancelled",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [
+        {
+          "name": "RaiseExceptionIfNecessary",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Raises exception if necessary",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Api/SmartIntegrationManagementServiceReference/GetCurrentRelayStatusCompletedEventArgs.cs",
+      "source_code": "public class GetCurrentRelayStatusCompletedEventArgs : AsyncCompletedEventArgs\n{\n\tprivate object[] results;\n\n\tpublic RelayAgentState Result\n\t{\n\t\tget\n\t\t{\n\t\t\tRaiseExceptionIfNecessary();\n\t\t\treturn (RelayAgentState)results[0];\n\t\t}\n\t}\n\n\tpublic GetCurrentRelayStatusCompletedEventArgs(object[] results, Exception exception, bool cancelled, object userState)\n\t\t: base(exception, cancelled, userState)\n\t{\n\t\tthis.results = results;\n\t}\n}"
+    },
+    {
+      "name": "GetRemoteServerDetailsCompletedEventArgs",
+      "namespace": "OneStream.Client.Api.SmartIntegrationManagementServiceReference",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "AsyncCompletedEventArgs",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "results",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "exception",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cancelled",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [
+        {
+          "name": "RaiseExceptionIfNecessary",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Raises exception if necessary",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Api/SmartIntegrationManagementServiceReference/GetRemoteServerDetailsCompletedEventArgs.cs",
+      "source_code": "public class GetRemoteServerDetailsCompletedEventArgs : AsyncCompletedEventArgs\n{\n\tprivate object[] results;\n\n\tpublic AzureRelayDetails[] Result\n\t{\n\t\tget\n\t\t{\n\t\t\tRaiseExceptionIfNecessary();\n\t\t\treturn (AzureRelayDetails[])results[0];\n\t\t}\n\t}\n\n\tpublic GetRemoteServerDetailsCompletedEventArgs(object[] results, Exception exception, bool cancelled, object userState)\n\t\t: base(exception, cancelled, userState)\n\t{\n\t\tthis.results = results;\n\t}\n}"
+    },
+    {
+      "name": "GetRemoteServerListCompletedEventArgs",
+      "namespace": "OneStream.Client.Api.SmartIntegrationManagementServiceReference",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "AsyncCompletedEventArgs",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "results",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "exception",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cancelled",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [
+        {
+          "name": "RaiseExceptionIfNecessary",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Raises exception if necessary",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Api/SmartIntegrationManagementServiceReference/GetRemoteServerListCompletedEventArgs.cs",
+      "source_code": "public class GetRemoteServerListCompletedEventArgs : AsyncCompletedEventArgs\n{\n\tprivate object[] results;\n\n\tpublic TwoObjects<Dictionary<string, string>, bool> Result\n\t{\n\t\tget\n\t\t{\n\t\t\tRaiseExceptionIfNecessary();\n\t\t\treturn (TwoObjects<Dictionary<string, string>, bool>)results[0];\n\t\t}\n\t}\n\n\tpublic GetRemoteServerListCompletedEventArgs(object[] results, Exception exception, bool cancelled, object userState)\n\t\t: base(exception, cancelled, userState)\n\t{\n\t\tthis.results = results;\n\t}\n}"
+    },
+    {
+      "name": "GetRootRelayDetailCompletedEventArgs",
+      "namespace": "OneStream.Client.Api.SmartIntegrationManagementServiceReference",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "AsyncCompletedEventArgs",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "results",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "exception",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cancelled",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [
+        {
+          "name": "RaiseExceptionIfNecessary",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Raises exception if necessary",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Api/SmartIntegrationManagementServiceReference/GetRootRelayDetailCompletedEventArgs.cs",
+      "source_code": "public class GetRootRelayDetailCompletedEventArgs : AsyncCompletedEventArgs\n{\n\tprivate object[] results;\n\n\tpublic AzureRelayDetails Result\n\t{\n\t\tget\n\t\t{\n\t\t\tRaiseExceptionIfNecessary();\n\t\t\treturn (AzureRelayDetails)results[0];\n\t\t}\n\t}\n\n\tpublic GetRootRelayDetailCompletedEventArgs(object[] results, Exception exception, bool cancelled, object userState)\n\t\t: base(exception, cancelled, userState)\n\t{\n\t\tthis.results = results;\n\t}\n}"
+    },
+    {
+      "name": "GetConfigFileStringCompletedEventArgs",
+      "namespace": "OneStream.Client.Api.SmartIntegrationManagementServiceReference",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "AsyncCompletedEventArgs",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "results",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "exception",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cancelled",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [
+        {
+          "name": "RaiseExceptionIfNecessary",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Raises exception if necessary",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Api/SmartIntegrationManagementServiceReference/GetConfigFileStringCompletedEventArgs.cs",
+      "source_code": "public class GetConfigFileStringCompletedEventArgs : AsyncCompletedEventArgs\n{\n\tprivate object[] results;\n\n\tpublic string Result\n\t{\n\t\tget\n\t\t{\n\t\t\tRaiseExceptionIfNecessary();\n\t\t\treturn (string)results[0];\n\t\t}\n\t}\n\n\tpublic GetConfigFileStringCompletedEventArgs(object[] results, Exception exception, bool cancelled, object userState)\n\t\t: base(exception, cancelled, userState)\n\t{\n\t\tthis.results = results;\n\t}\n}"
+    },
+    {
+      "name": "SmartIntegrationManagementServiceClient",
+      "namespace": "OneStream.Client.Api.SmartIntegrationManagementServiceReference",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "ClientBase<ISmartIntegrationManagementServiceClient>",
+      "interfaces": [
+        "ISmartIntegrationManagementServiceClient",
+        "IDisposable",
+        "IApiClient"
+      ],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "httpClientFactory",
+              "type": "IAuthenticatedHttpClientFactory",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "baseServerUri",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [
+        {
+          "name": "GetRemoteServerList",
+          "return_type": "TwoObjects<Dictionary<string, string>, bool>",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets remote server list",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "SessionInfo",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Sessions info",
+          "generic_params": [],
+          "overloads": 10
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "ex",
+              "type": "AggregateException",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 10
+        },
+        {
+          "name": "BeginGetRemoteServerList",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins get remote server list",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetRemoteServerList",
+          "return_type": ">",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets remote server list",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "antecedent.Result",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 15
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "OnEndResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 15
+        },
+        {
+          "name": "AsyncOperationContinuation",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "result",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "asyncState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Asyncs operation continuation",
+          "generic_params": [],
+          "overloads": 10
+        },
+        {
+          "name": "EndGetRemoteServerList",
+          "return_type": "TwoObjects<Dictionary<string, string>, bool>",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends get remote server list",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnBeginGetRemoteServerList",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "inValues",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            }
+          ],
+          "description": "Ons begin get remote server list",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnEndGetRemoteServerList",
+          "return_type": "object[]",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end get remote server list",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnGetRemoteServerListCompleted",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "state",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons get remote server list completed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetRemoteServerListCompletedEventArgs",
+          "return_type": "this, new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "e.Results",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Error",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Cancelled",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.UserState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets remote server list completed event args",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetRemoteServerListAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets remote server list async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "GetRemoteServerListAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets remote server list async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "GetRemoteServerListAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets remote server list async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "InvokeAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "onBeginGetRemoteServerListDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "}",
+              "type": "new object[1] { si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onEndGetRemoteServerListDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onGetRemoteServerListCompletedDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "userState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Invokes async",
+          "generic_params": [],
+          "overloads": 10
+        },
+        {
+          "name": "GetRemoteServerDetails",
+          "return_type": "AzureRelayDetails[]",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets remote server details",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "SessionInfo",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Sessions info",
+          "generic_params": [],
+          "overloads": 10
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "ex",
+              "type": "AggregateException",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 10
+        },
+        {
+          "name": "BeginGetRemoteServerDetails",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins get remote server details",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetRemoteServerDetails",
+          "return_type": ">",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets remote server details",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "antecedent.Result",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 15
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "OnEndResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 15
+        },
+        {
+          "name": "AsyncOperationContinuation",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "result",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "asyncState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Asyncs operation continuation",
+          "generic_params": [],
+          "overloads": 10
+        },
+        {
+          "name": "EndGetRemoteServerDetails",
+          "return_type": "AzureRelayDetails[]",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends get remote server details",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnBeginGetRemoteServerDetails",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "inValues",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            }
+          ],
+          "description": "Ons begin get remote server details",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnEndGetRemoteServerDetails",
+          "return_type": "object[]",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end get remote server details",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnGetRemoteServerDetailsCompleted",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "state",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons get remote server details completed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetRemoteServerDetailsCompletedEventArgs",
+          "return_type": "this, new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "e.Results",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Error",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Cancelled",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.UserState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets remote server details completed event args",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetRemoteServerDetailsAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets remote server details async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "GetRemoteServerDetailsAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets remote server details async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "GetRemoteServerDetailsAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets remote server details async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "InvokeAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "onBeginGetRemoteServerDetailsDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "}",
+              "type": "new object[1] { si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onEndGetRemoteServerDetailsDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onGetRemoteServerDetailsCompletedDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "userState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Invokes async",
+          "generic_params": [],
+          "overloads": 10
+        },
+        {
+          "name": "GetCurrentRelayStatus",
+          "return_type": "RelayAgentState",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets current relay status",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "SessionInfo",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Sessions info",
+          "generic_params": [],
+          "overloads": 10
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "ex",
+              "type": "AggregateException",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 10
+        },
+        {
+          "name": "BeginGetCurrentRelayStatus",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins get current relay status",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetCurrentRelayStatus",
+          "return_type": ">",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets current relay status",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "antecedent.Result",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 15
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "OnEndResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 15
+        },
+        {
+          "name": "AsyncOperationContinuation",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "result",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "asyncState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Asyncs operation continuation",
+          "generic_params": [],
+          "overloads": 10
+        },
+        {
+          "name": "EndGetCurrentRelayStatus",
+          "return_type": "RelayAgentState",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends get current relay status",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnBeginGetCurrentRelayStatus",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "inValues",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            }
+          ],
+          "description": "Ons begin get current relay status",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnEndGetCurrentRelayStatus",
+          "return_type": "object[]",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end get current relay status",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnGetCurrentRelayStatusCompleted",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "state",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons get current relay status completed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetCurrentRelayStatusCompletedEventArgs",
+          "return_type": "this, new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "e.Results",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Error",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Cancelled",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.UserState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets current relay status completed event args",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetCurrentRelayStatusAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets current relay status async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "GetCurrentRelayStatusAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets current relay status async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "GetCurrentRelayStatusAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets current relay status async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "InvokeAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "onBeginGetCurrentRelayStatusDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "}",
+              "type": "new object[1] { si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onEndGetCurrentRelayStatusDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onGetCurrentRelayStatusCompletedDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "userState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Invokes async",
+          "generic_params": [],
+          "overloads": 10
+        },
+        {
+          "name": "GetRootRelayDetail",
+          "return_type": "AzureRelayDetails",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets root relay detail",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "SessionInfo",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Sessions info",
+          "generic_params": [],
+          "overloads": 10
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "ex",
+              "type": "AggregateException",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 10
+        },
+        {
+          "name": "BeginGetRootRelayDetail",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins get root relay detail",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetRootRelayDetail",
+          "return_type": ">",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets root relay detail",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "antecedent.Result",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 15
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "OnEndResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 15
+        },
+        {
+          "name": "AsyncOperationContinuation",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "result",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "asyncState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Asyncs operation continuation",
+          "generic_params": [],
+          "overloads": 10
+        },
+        {
+          "name": "EndGetRootRelayDetail",
+          "return_type": "AzureRelayDetails",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends get root relay detail",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnBeginGetRootRelayDetail",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "inValues",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            }
+          ],
+          "description": "Ons begin get root relay detail",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnEndGetRootRelayDetail",
+          "return_type": "object[]",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end get root relay detail",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnGetRootRelayDetailCompleted",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "state",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons get root relay detail completed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetRootRelayDetailCompletedEventArgs",
+          "return_type": "this, new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "e.Results",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Error",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Cancelled",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.UserState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets root relay detail completed event args",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetRootRelayDetailAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets root relay detail async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "GetRootRelayDetailAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets root relay detail async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "GetRootRelayDetailAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets root relay detail async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "InvokeAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "onBeginGetRootRelayDetailDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "}",
+              "type": "new object[1] { si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onEndGetRootRelayDetailDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onGetRootRelayDetailCompletedDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "userState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Invokes async",
+          "generic_params": [],
+          "overloads": 10
+        },
+        {
+          "name": "GetConfigFileString",
+          "return_type": "string",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "relayName",
+              "type": "string[]",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets config file string",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "SessionInfo",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Sessions info",
+          "generic_params": [],
+          "overloads": 10
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "ex",
+              "type": "AggregateException",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 10
+        },
+        {
+          "name": "BeginGetConfigFileString",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "relayName",
+              "type": "string[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins get config file string",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetConfigFileString",
+          "return_type": ">",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "relayName",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets config file string",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "antecedent.Result",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 15
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "OnEndResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 15
+        },
+        {
+          "name": "AsyncOperationContinuation",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "result",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "asyncState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Asyncs operation continuation",
+          "generic_params": [],
+          "overloads": 10
+        },
+        {
+          "name": "EndGetConfigFileString",
+          "return_type": "string",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends get config file string",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnBeginGetConfigFileString",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "inValues",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            }
+          ],
+          "description": "Ons begin get config file string",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnEndGetConfigFileString",
+          "return_type": "object[]",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end get config file string",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnGetConfigFileStringCompleted",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "state",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons get config file string completed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetConfigFileStringCompletedEventArgs",
+          "return_type": "this, new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "e.Results",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Error",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Cancelled",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.UserState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets config file string completed event args",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetConfigFileStringAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "relayName",
+              "type": "string[]",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets config file string async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "GetConfigFileStringAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "relayName",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets config file string async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "GetConfigFileStringAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "relayName",
+              "type": "string[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets config file string async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "InvokeAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "onBeginGetConfigFileStringDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "si",
+              "type": "new object[2] {",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "}",
+              "type": "relayName",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onEndGetConfigFileStringDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onGetConfigFileStringCompletedDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "userState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Invokes async",
+          "generic_params": [],
+          "overloads": 10
+        },
+        {
+          "name": "SaveRelayDetails",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "relayInfos",
+              "type": "List<AzureRelayDetails>",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Saves relay details",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "SessionInfo",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Sessions info",
+          "generic_params": [],
+          "overloads": 10
+        },
+        {
+          "name": "PostAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "\"SaveRelayDetails\"",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "requestDto",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Posts async",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "ex",
+              "type": "AggregateException",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 10
+        },
+        {
+          "name": "BeginSaveRelayDetails",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "relayInfos",
+              "type": "List<AzureRelayDetails>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins save relay details",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "SaveRelayDetails",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "relayInfos",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Saves relay details",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "OnEndResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 15
+        },
+        {
+          "name": "AsyncOperationContinuation",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "result",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "asyncState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Asyncs operation continuation",
+          "generic_params": [],
+          "overloads": 10
+        },
+        {
+          "name": "EndSaveRelayDetails",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends save relay details",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnBeginSaveRelayDetails",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "inValues",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            }
+          ],
+          "description": "Ons begin save relay details",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnEndSaveRelayDetails",
+          "return_type": "object[]",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end save relay details",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EndSaveRelayDetails",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "result",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends save relay details",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnSaveRelayDetailsCompleted",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "state",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons save relay details completed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "AsyncCompletedEventArgs",
+          "return_type": "this, new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "e.Error",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Cancelled",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.UserState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Asyncs completed event args",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "SaveRelayDetailsAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "relayInfos",
+              "type": "List<AzureRelayDetails>",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Saves relay details async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "SaveRelayDetailsAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "relayInfos",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Saves relay details async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "SaveRelayDetailsAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "relayInfos",
+              "type": "List<AzureRelayDetails>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Saves relay details async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "InvokeAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "onBeginSaveRelayDetailsDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "si",
+              "type": "new object[2] {",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "}",
+              "type": "relayInfos",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onEndSaveRelayDetailsDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onSaveRelayDetailsCompletedDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "userState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Invokes async",
+          "generic_params": [],
+          "overloads": 10
+        },
+        {
+          "name": "CheckMaxGatewayErrors",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Checks max gateway errors",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "SessionInfo",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Sessions info",
+          "generic_params": [],
+          "overloads": 10
+        },
+        {
+          "name": "PostAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "\"CheckMaxGatewayErrors\"",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "requestDto",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Posts async",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "ex",
+              "type": "AggregateException",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 10
+        },
+        {
+          "name": "BeginCheckMaxGatewayErrors",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins check max gateway errors",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "CheckMaxGatewayErrors",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Checks max gateway errors",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "OnEndResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 15
+        },
+        {
+          "name": "AsyncOperationContinuation",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "result",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "asyncState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Asyncs operation continuation",
+          "generic_params": [],
+          "overloads": 10
+        },
+        {
+          "name": "EndCheckMaxGatewayErrors",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends check max gateway errors",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnBeginCheckMaxGatewayErrors",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "inValues",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            }
+          ],
+          "description": "Ons begin check max gateway errors",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnEndCheckMaxGatewayErrors",
+          "return_type": "object[]",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end check max gateway errors",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EndCheckMaxGatewayErrors",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "result",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends check max gateway errors",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnCheckMaxGatewayErrorsCompleted",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "state",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons check max gateway errors completed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "AsyncCompletedEventArgs",
+          "return_type": "this, new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "e.Error",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Cancelled",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.UserState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Asyncs completed event args",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "CheckMaxGatewayErrorsAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Checks max gateway errors async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "CheckMaxGatewayErrorsAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Checks max gateway errors async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "CheckMaxGatewayErrorsAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Checks max gateway errors async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "InvokeAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "onBeginCheckMaxGatewayErrorsDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "}",
+              "type": "new object[1] { si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onEndCheckMaxGatewayErrorsDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onCheckMaxGatewayErrorsCompletedDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "userState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Invokes async",
+          "generic_params": [],
+          "overloads": 10
+        },
+        {
+          "name": "CreateNewRelay",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "relayInfo",
+              "type": "AzureRelayDetails",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates new relay",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "SessionInfo",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Sessions info",
+          "generic_params": [],
+          "overloads": 10
+        },
+        {
+          "name": "PostAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "\"CreateNewRelay\"",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "requestDto",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Posts async",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "ex",
+              "type": "AggregateException",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 10
+        },
+        {
+          "name": "BeginCreateNewRelay",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "relayInfo",
+              "type": "AzureRelayDetails",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins create new relay",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "CreateNewRelay",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "relayInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates new relay",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "OnEndResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 15
+        },
+        {
+          "name": "AsyncOperationContinuation",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "result",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "asyncState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Asyncs operation continuation",
+          "generic_params": [],
+          "overloads": 10
+        },
+        {
+          "name": "EndCreateNewRelay",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends create new relay",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnBeginCreateNewRelay",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "inValues",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            }
+          ],
+          "description": "Ons begin create new relay",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnEndCreateNewRelay",
+          "return_type": "object[]",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end create new relay",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EndCreateNewRelay",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "result",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends create new relay",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnCreateNewRelayCompleted",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "state",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons create new relay completed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "AsyncCompletedEventArgs",
+          "return_type": "this, new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "e.Error",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Cancelled",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.UserState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Asyncs completed event args",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "CreateNewRelayAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "relayInfo",
+              "type": "AzureRelayDetails",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates new relay async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "CreateNewRelayAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "relayInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates new relay async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "CreateNewRelayAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "relayInfo",
+              "type": "AzureRelayDetails",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates new relay async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "InvokeAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "onBeginCreateNewRelayDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "si",
+              "type": "new object[2] {",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "}",
+              "type": "relayInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onEndCreateNewRelayDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onCreateNewRelayCompletedDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "userState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Invokes async",
+          "generic_params": [],
+          "overloads": 10
+        },
+        {
+          "name": "RegenerateKey",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "relayInfo",
+              "type": "AzureRelayDetails",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Regenerates key",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "SessionInfo",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Sessions info",
+          "generic_params": [],
+          "overloads": 10
+        },
+        {
+          "name": "PostAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "\"RegenerateKey\"",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "requestDto",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Posts async",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "ex",
+              "type": "AggregateException",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 10
+        },
+        {
+          "name": "BeginRegenerateKey",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "relayInfo",
+              "type": "AzureRelayDetails",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins regenerate key",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "RegenerateKey",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "relayInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Regenerates key",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "OnEndResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 15
+        },
+        {
+          "name": "AsyncOperationContinuation",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "result",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "asyncState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Asyncs operation continuation",
+          "generic_params": [],
+          "overloads": 10
+        },
+        {
+          "name": "EndRegenerateKey",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends regenerate key",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnBeginRegenerateKey",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "inValues",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            }
+          ],
+          "description": "Ons begin regenerate key",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnEndRegenerateKey",
+          "return_type": "object[]",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end regenerate key",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EndRegenerateKey",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "result",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends regenerate key",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnRegenerateKeyCompleted",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "state",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons regenerate key completed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "AsyncCompletedEventArgs",
+          "return_type": "this, new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "e.Error",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Cancelled",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.UserState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Asyncs completed event args",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "RegenerateKeyAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "relayInfo",
+              "type": "AzureRelayDetails",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Regenerates key async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "RegenerateKeyAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "relayInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Regenerates key async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "RegenerateKeyAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "relayInfo",
+              "type": "AzureRelayDetails",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Regenerates key async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "InvokeAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "onBeginRegenerateKeyDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "si",
+              "type": "new object[2] {",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "}",
+              "type": "relayInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onEndRegenerateKeyDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onRegenerateKeyCompletedDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "userState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Invokes async",
+          "generic_params": [],
+          "overloads": 10
+        },
+        {
+          "name": "DeleteRelay",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "relayInfo",
+              "type": "AzureRelayDetails",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Deletes relay",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "SessionInfo",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Sessions info",
+          "generic_params": [],
+          "overloads": 10
+        },
+        {
+          "name": "PostAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "\"DeleteRelay\"",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "requestDto",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Posts async",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "ex",
+              "type": "AggregateException",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 10
+        },
+        {
+          "name": "BeginDeleteRelay",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "relayInfo",
+              "type": "AzureRelayDetails",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins delete relay",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "DeleteRelay",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "relayInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Deletes relay",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "OnEndResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 15
+        },
+        {
+          "name": "AsyncOperationContinuation",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "result",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "asyncState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Asyncs operation continuation",
+          "generic_params": [],
+          "overloads": 10
+        },
+        {
+          "name": "EndDeleteRelay",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends delete relay",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnBeginDeleteRelay",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "inValues",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            }
+          ],
+          "description": "Ons begin delete relay",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnEndDeleteRelay",
+          "return_type": "object[]",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end delete relay",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EndDeleteRelay",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "result",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends delete relay",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnDeleteRelayCompleted",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "state",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons delete relay completed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "AsyncCompletedEventArgs",
+          "return_type": "this, new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "e.Error",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Cancelled",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.UserState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Asyncs completed event args",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "DeleteRelayAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "relayInfo",
+              "type": "AzureRelayDetails",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Deletes relay async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "DeleteRelayAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "relayInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Deletes relay async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "DeleteRelayAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "relayInfo",
+              "type": "AzureRelayDetails",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Deletes relay async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "InvokeAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "onBeginDeleteRelayDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "si",
+              "type": "new object[2] {",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "}",
+              "type": "relayInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onEndDeleteRelayDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onDeleteRelayCompletedDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "userState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Invokes async",
+          "generic_params": [],
+          "overloads": 10
+        }
+      ],
+      "events": [
+        {
+          "name": "GetRemoteServerListCompleted",
+          "type": "EventHandler<GetRemoteServerListCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "GetRemoteServerDetailsCompleted",
+          "type": "EventHandler<GetRemoteServerDetailsCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "GetCurrentRelayStatusCompleted",
+          "type": "EventHandler<GetCurrentRelayStatusCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "GetRootRelayDetailCompleted",
+          "type": "EventHandler<GetRootRelayDetailCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "GetConfigFileStringCompleted",
+          "type": "EventHandler<GetConfigFileStringCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "SaveRelayDetailsCompleted",
+          "type": "EventHandler<AsyncCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "CheckMaxGatewayErrorsCompleted",
+          "type": "EventHandler<AsyncCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "CreateNewRelayCompleted",
+          "type": "EventHandler<AsyncCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "RegenerateKeyCompleted",
+          "type": "EventHandler<AsyncCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "DeleteRelayCompleted",
+          "type": "EventHandler<AsyncCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        }
+      ],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Api/SmartIntegrationManagementServiceReference/SmartIntegrationManagementServiceClient.cs"
+    }
+  ],
+  "interfaces": [
+    {
+      "name": "ISmartIntegrationManagementServiceClient",
+      "namespace": "OneStream.Client.Api.SmartIntegrationManagementServiceReference",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IDisposable",
+        "IApiClient"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "GetRemoteServerList",
+          "return_type": "TwoObjects<Dictionary<string, string>, bool>",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets remote server list",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "BeginGetRemoteServerList",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins get remote server list",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EndGetRemoteServerList",
+          "return_type": "TwoObjects<Dictionary<string, string>, bool>",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends get remote server list",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetRemoteServerListAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets remote server list async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "GetRemoteServerListAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets remote server list async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "GetRemoteServerDetails",
+          "return_type": "AzureRelayDetails[]",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets remote server details",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "BeginGetRemoteServerDetails",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins get remote server details",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EndGetRemoteServerDetails",
+          "return_type": "AzureRelayDetails[]",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends get remote server details",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetRemoteServerDetailsAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets remote server details async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "GetRemoteServerDetailsAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets remote server details async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "GetCurrentRelayStatus",
+          "return_type": "RelayAgentState",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets current relay status",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "BeginGetCurrentRelayStatus",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins get current relay status",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EndGetCurrentRelayStatus",
+          "return_type": "RelayAgentState",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends get current relay status",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetCurrentRelayStatusAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets current relay status async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "GetCurrentRelayStatusAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets current relay status async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "GetRootRelayDetail",
+          "return_type": "AzureRelayDetails",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets root relay detail",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "BeginGetRootRelayDetail",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins get root relay detail",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EndGetRootRelayDetail",
+          "return_type": "AzureRelayDetails",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends get root relay detail",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetRootRelayDetailAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets root relay detail async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "GetRootRelayDetailAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets root relay detail async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "GetConfigFileString",
+          "return_type": "string",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "relayName",
+              "type": "string[]",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets config file string",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "BeginGetConfigFileString",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "relayName",
+              "type": "string[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins get config file string",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EndGetConfigFileString",
+          "return_type": "string",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends get config file string",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetConfigFileStringAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "relayName",
+              "type": "string[]",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets config file string async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "GetConfigFileStringAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "relayName",
+              "type": "string[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets config file string async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "SaveRelayDetails",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "relayInfos",
+              "type": "List<AzureRelayDetails>",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Saves relay details",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "BeginSaveRelayDetails",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "relayInfos",
+              "type": "List<AzureRelayDetails>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins save relay details",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EndSaveRelayDetails",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends save relay details",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "SaveRelayDetailsAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "relayInfos",
+              "type": "List<AzureRelayDetails>",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Saves relay details async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "SaveRelayDetailsAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "relayInfos",
+              "type": "List<AzureRelayDetails>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Saves relay details async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "CheckMaxGatewayErrors",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Checks max gateway errors",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "BeginCheckMaxGatewayErrors",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins check max gateway errors",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EndCheckMaxGatewayErrors",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends check max gateway errors",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "CheckMaxGatewayErrorsAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Checks max gateway errors async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "CheckMaxGatewayErrorsAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Checks max gateway errors async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "CreateNewRelay",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "relayInfo",
+              "type": "AzureRelayDetails",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates new relay",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "BeginCreateNewRelay",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "relayInfo",
+              "type": "AzureRelayDetails",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins create new relay",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EndCreateNewRelay",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends create new relay",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "CreateNewRelayAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "relayInfo",
+              "type": "AzureRelayDetails",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates new relay async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "CreateNewRelayAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "relayInfo",
+              "type": "AzureRelayDetails",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates new relay async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "RegenerateKey",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "relayInfo",
+              "type": "AzureRelayDetails",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Regenerates key",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "BeginRegenerateKey",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "relayInfo",
+              "type": "AzureRelayDetails",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins regenerate key",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EndRegenerateKey",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends regenerate key",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "RegenerateKeyAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "relayInfo",
+              "type": "AzureRelayDetails",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Regenerates key async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "RegenerateKeyAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "relayInfo",
+              "type": "AzureRelayDetails",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Regenerates key async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "DeleteRelay",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "relayInfo",
+              "type": "AzureRelayDetails",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Deletes relay",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "BeginDeleteRelay",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "relayInfo",
+              "type": "AzureRelayDetails",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins delete relay",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EndDeleteRelay",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends delete relay",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "DeleteRelayAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "relayInfo",
+              "type": "AzureRelayDetails",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Deletes relay async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "DeleteRelayAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "relayInfo",
+              "type": "AzureRelayDetails",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Deletes relay async",
+          "generic_params": [],
+          "overloads": 2
+        }
+      ],
+      "events": [
+        {
+          "name": "GetRemoteServerListCompleted",
+          "type": "EventHandler<GetRemoteServerListCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "GetRemoteServerDetailsCompleted",
+          "type": "EventHandler<GetRemoteServerDetailsCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "GetCurrentRelayStatusCompleted",
+          "type": "EventHandler<GetCurrentRelayStatusCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "GetRootRelayDetailCompleted",
+          "type": "EventHandler<GetRootRelayDetailCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "GetConfigFileStringCompleted",
+          "type": "EventHandler<GetConfigFileStringCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "SaveRelayDetailsCompleted",
+          "type": "EventHandler<AsyncCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "CheckMaxGatewayErrorsCompleted",
+          "type": "EventHandler<AsyncCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "CreateNewRelayCompleted",
+          "type": "EventHandler<AsyncCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "RegenerateKeyCompleted",
+          "type": "EventHandler<AsyncCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "DeleteRelayCompleted",
+          "type": "EventHandler<AsyncCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        }
+      ],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Api/SmartIntegrationManagementServiceReference/ISmartIntegrationManagementServiceClient.cs",
+      "source_code": "public interface ISmartIntegrationManagementServiceClient : IDisposable, IApiClient\n{\n\tevent EventHandler<GetRemoteServerListCompletedEventArgs> GetRemoteServerListCompleted;\n\n\tevent EventHandler<GetRemoteServerDetailsCompletedEventArgs> GetRemoteServerDetailsCompleted;\n\n\tevent EventHandler<GetCurrentRelayStatusCompletedEventArgs> GetCurrentRelayStatusCompleted;\n\n\tevent EventHandler<GetRootRelayDetailCompletedEventArgs> GetRootRelayDetailCompleted;\n\n\tevent EventHandler<GetConfigFileStringCompletedEventArgs> GetConfigFileStringCompleted;\n\n\tevent EventHandler<AsyncCompletedEventArgs> SaveRelayDetailsCompleted;\n\n\tevent EventHandler<AsyncCompletedEventArgs> CheckMaxGatewayErrorsCompleted;\n\n\tevent EventHandler<AsyncCompletedEventArgs> CreateNewRelayCompleted;\n\n\tevent EventHandler<AsyncCompletedEventArgs> RegenerateKeyCompleted;\n\n\tevent EventHandler<AsyncCompletedEventArgs> DeleteRelayCompleted;\n\n\tTwoObjects<Dictionary<string, string>, bool> GetRemoteServerList(SessionInfo si);\n\n\tTask BeginGetRemoteServerList(SessionInfo si, object callback, object asyncState);\n\n\tTwoObjects<Dictionary<string, string>, bool> EndGetRemoteServerList(OnEndResult result);\n\n\tvoid GetRemoteServerListAsync(SessionInfo si);\n\n\tvoid GetRemoteServerListAsync(SessionInfo si, object userState);\n\n\tAzureRelayDetails[] GetRemoteServerDetails(SessionInfo si);\n\n\tTask BeginGetRemoteServerDetails(SessionInfo si, object callback, object asyncState);\n\n\tAzureRelayDetails[] EndGetRemoteServerDetails(OnEndResult result);\n\n\tvoid GetRemoteServerDetailsAsync(SessionInfo si);\n\n\tvoid GetRemoteServerDetailsAsync(SessionInfo si, object userState);\n\n\tRelayAgentState GetCurrentRelayStatus(SessionInfo si);\n\n\tTask BeginGetCurrentRelayStatus(SessionInfo si, object callback, object asyncState);\n\n\tRelayAgentState EndGetCurrentRelayStatus(OnEndResult result);\n\n\tvoid GetCurrentRelayStatusAsync(SessionInfo si);\n\n\tvoid GetCurrentRelayStatusAsync(SessionInfo si, object userState);\n\n\tAzureRelayDetails GetRootRelayDetail(SessionInfo si);\n\n\tTask BeginGetRootRelayDetail(SessionInfo si, object callback, object asyncState);\n\n\tAzureRelayDetails EndGetRootRelayDetail(OnEndResult result);\n\n\tvoid GetRootRelayDetailAsync(SessionInfo si);\n\n\tvoid GetRootRelayDetailAsync(SessionInfo si, object userState);\n\n\tstring GetConfigFileString(SessionInfo si, string[] relayName);\n\n\tTask BeginGetConfigFileString(SessionInfo si, string[] relayName, object callback, object asyncState);\n\n\tstring EndGetConfigFileString(OnEndResult result);\n\n\tvoid GetConfigFileStringAsync(SessionInfo si, string[] relayName);\n\n\tvoid GetConfigFileStringAsync(SessionInfo si, string[] relayName, object userState);\n\n\tvoid SaveRelayDetails(SessionInfo si, List<AzureRelayDetails> relayInfos);\n\n\tTask BeginSaveRelayDetails(SessionInfo si, List<AzureRelayDetails> relayInfos, object callback, object asyncState);\n\n\tvoid EndSaveRelayDetails(OnEndResult result);\n\n\tvoid SaveRelayDetailsAsync(SessionInfo si, List<AzureRelayDetails> relayInfos);\n\n\tvoid SaveRelayDetailsAsync(SessionInfo si, List<AzureRelayDetails> relayInfos, object userState);\n\n\tvoid CheckMaxGatewayErrors(SessionInfo si);\n\n\tTask BeginCheckMaxGatewayErrors(SessionInfo si, object callback, object asyncState);\n\n\tvoid EndCheckMaxGatewayErrors(OnEndResult result);\n\n\tvoid CheckMaxGatewayErrorsAsync(SessionInfo si);\n\n\tvoid CheckMaxGatewayErrorsAsync(SessionInfo si, object userState);\n\n\tvoid CreateNewRelay(SessionInfo si, AzureRelayDetails relayInfo);\n\n\tTask BeginCreateNewRelay(SessionInfo si, AzureRelayDetails relayInfo, object callback, object asyncState);\n\n\tvoid EndCreateNewRelay(OnEndResult result);\n\n\tvoid CreateNewRelayAsync(SessionInfo si, AzureRelayDetails relayInfo);\n\n\tvoid CreateNewRelayAsync(SessionInfo si, AzureRelayDetails relayInfo, object userState);\n\n\tvoid RegenerateKey(SessionInfo si, AzureRelayDetails relayInfo);\n\n\tTask BeginRegenerateKey(SessionInfo si, AzureRelayDetails relayInfo, object callback, object asyncState);\n\n\tvoid EndRegenerateKey(OnEndResult result);\n\n\tvoid RegenerateKeyAsync(SessionInfo si, AzureRelayDetails relayInfo);\n\n\tvoid RegenerateKeyAsync(SessionInfo si, AzureRelayDetails relayInfo, object userState);\n\n\tvoid DeleteRelay(SessionInfo si, AzureRelayDetails relayInfo);\n\n\tTask BeginDeleteRelay(SessionInfo si, AzureRelayDetails relayInfo, object callback, object asyncState);\n\n\tvoid EndDeleteRelay(OnEndResult result);\n\n\tvoid DeleteRelayAsync(SessionInfo si, AzureRelayDetails relayInfo);\n\n\tvoid DeleteRelayAsync(SessionInfo si, AzureRelayDetails relayInfo, object userState);\n}"
+    }
+  ],
+  "structs": [],
+  "delegates": [],
+  "enums": []
+}

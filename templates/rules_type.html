@@ -1,0 +1,81 @@
+{% extends "docs_base.html" %}
+
+{% block title %}{{ rule_type.name }} — OneStream Docs{% endblock %}
+
+{% block content %}
+<nav aria-label="Breadcrumb" class="breadcrumb">
+  <a href="/docs/rules/">Business Rules</a> &rsaquo;
+  <strong>{{ rule_type.name }}</strong>
+</nav>
+
+<hgroup>
+  <h1>{{ rule_type.name }}</h1>
+  <p>{{ rules|length }} business rules</p>
+</hgroup>
+
+<input type="text" id="rule-filter" placeholder="Filter rules..." oninput="filterRules()">
+
+{% if subcategories %}
+{# --- Assemblies: grouped by subcategory --- #}
+
+<div class="subcat-nav">
+  {% for sc in subcategories %}
+  <a href="#sc-{{ loop.index }}" class="subcat-chip">{{ sc.name }} <small>({{ sc.count }})</small></a>
+  {% endfor %}
+</div>
+
+{% for sc in subcategories %}
+<h2 id="sc-{{ loop.index }}" class="subcat-header">{{ sc.name }} <small>({{ sc.count }})</small></h2>
+<div class="api-class-list">
+  {% for slug in sc.rule_slugs %}
+  {% set r = rules_map[slug] %}
+  <a href="/docs/rules/{{ r.full_slug }}" class="api-class-item" data-name="{{ r.name|lower }} {{ r.workspace|lower }}" data-subcat="{{ sc.name|lower }}">
+    <span class="api-type-badge rule">{{ r.language[0]|upper }}</span>
+    <div class="api-class-info">
+      <strong>{{ r.name }}</strong>
+      {% if r.workspace %}<span class="workspace-badge">{{ r.workspace }}</span>{% endif %}
+      <small>{{ r.line_count }} lines &mdash; {{ r.api_count }} APIs</small>
+    </div>
+  </a>
+  {% endfor %}
+</div>
+{% endfor %}
+
+{% else %}
+{# --- Other types: flat list --- #}
+
+<div class="api-class-list" id="rules-list">
+  {% for r in rules %}
+  <a href="/docs/rules/{{ r.full_slug }}" class="api-class-item" data-name="{{ r.name|lower }}">
+    <span class="api-type-badge rule">{{ r.language[0]|upper }}</span>
+    <div class="api-class-info">
+      <strong>{{ r.name }}</strong>
+      <small>{{ r.line_count }} lines &mdash; {{ r.api_count }} APIs</small>
+    </div>
+  </a>
+  {% endfor %}
+</div>
+
+{% endif %}
+
+<script>
+var items = document.querySelectorAll('.api-class-item');
+var headers = document.querySelectorAll('.subcat-header');
+function filterRules() {
+  var text = document.getElementById('rule-filter').value.toLowerCase();
+  items.forEach(function(el) {
+    el.style.display = (!text || el.dataset.name.indexOf(text) !== -1) ? '' : 'none';
+  });
+  // Hide empty subcategory headers
+  headers.forEach(function(h) {
+    var section = h.nextElementSibling;
+    if (section && text) {
+      var visible = section.querySelectorAll('.api-class-item:not([style*="display: none"])');
+      h.style.display = visible.length ? '' : 'none';
+    } else {
+      h.style.display = '';
+    }
+  });
+}
+</script>
+{% endblock %}

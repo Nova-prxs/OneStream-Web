@@ -1,0 +1,242 @@
+{
+  "namespace": "OneStream.Client.WpfVb.WorkflowProcessTree",
+  "generated_at": "2025-12-08T19:28:52.051500",
+  "statistics": {
+    "classes": 0,
+    "interfaces": 0,
+    "structs": 0,
+    "delegates": 6,
+    "enums": 2,
+    "total_methods": 6,
+    "total_properties": 0
+  },
+  "classes": [],
+  "interfaces": [],
+  "structs": [],
+  "delegates": [
+    {
+      "name": "GetWorkflowInfoCompletedEventHandler",
+      "namespace": "OneStream.Client.WpfVb.WorkflowProcessTree",
+      "type": "delegate",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "Invoke",
+          "return_type": "void",
+          "parameters": [],
+          "access": "public",
+          "is_static": false,
+          "is_async": false,
+          "description": "Delegate invocation method returning void"
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/WpfVb/WorkflowProcessTree.cs"
+    },
+    {
+      "name": "GetTaskActivityItemCompletedEventHandler",
+      "namespace": "OneStream.Client.WpfVb.WorkflowProcessTree",
+      "type": "delegate",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "Invoke",
+          "return_type": "void",
+          "parameters": [],
+          "access": "public",
+          "is_static": false,
+          "is_async": false,
+          "description": "Delegate invocation method returning void"
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/WpfVb/WorkflowProcessTree.cs"
+    },
+    {
+      "name": "StatusItemSelectedEventHandler",
+      "namespace": "OneStream.Client.WpfVb.WorkflowProcessTree",
+      "type": "delegate",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "Invoke",
+          "return_type": "void",
+          "parameters": [],
+          "access": "public",
+          "is_static": false,
+          "is_async": false,
+          "description": "Delegate invocation method returning void"
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/WpfVb/WorkflowProcessTree.cs"
+    },
+    {
+      "name": "StatusItemClickEventHandler",
+      "namespace": "OneStream.Client.WpfVb.WorkflowProcessTree",
+      "type": "delegate",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "Invoke",
+          "return_type": "void",
+          "parameters": [],
+          "access": "public",
+          "is_static": false,
+          "is_async": false,
+          "description": "Delegate invocation method returning void"
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/WpfVb/WorkflowProcessTree.cs"
+    },
+    {
+      "name": "AnalysisItemSelectedEventHandler",
+      "namespace": "OneStream.Client.WpfVb.WorkflowProcessTree",
+      "type": "delegate",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "Invoke",
+          "return_type": "void",
+          "parameters": [],
+          "access": "public",
+          "is_static": false,
+          "is_async": false,
+          "description": "Delegate invocation method returning void"
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/WpfVb/WorkflowProcessTree.cs"
+    },
+    {
+      "name": "AnalysisItemClickEventHandler",
+      "namespace": "OneStream.Client.WpfVb.WorkflowProcessTree",
+      "type": "delegate",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "Invoke",
+          "return_type": "void",
+          "parameters": [],
+          "access": "public",
+          "is_static": false,
+          "is_async": false,
+          "description": "Delegate invocation method returning void"
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/WpfVb/WorkflowProcessTree.cs"
+    }
+  ],
+  "enums": [
+    {
+      "name": "StatusNodeProcessingState",
+      "namespace": "OneStream.Client.WpfVb.WorkflowProcessTree",
+      "underlying_type": "int",
+      "is_flags": false,
+      "values": [
+        {
+          "name": "InitialValue",
+          "value": 1
+        },
+        {
+          "name": "Processing",
+          "value": 2
+        },
+        {
+          "name": "ProcessingBackground",
+          "value": 3
+        },
+        {
+          "name": "Completed",
+          "value": 4
+        },
+        {
+          "name": "CompletedWithError",
+          "value": 5
+        }
+      ],
+      "access": "public"
+    },
+    {
+      "name": "PanelTypes",
+      "namespace": "OneStream.Client.WpfVb.WorkflowProcessTree",
+      "underlying_type": "int",
+      "is_flags": false,
+      "values": [
+        {
+          "name": "General",
+          "value": 0
+        },
+        {
+          "name": "ICMatching",
+          "value": 1
+        },
+        {
+          "name": "CubeViews",
+          "value": 2
+        },
+        {
+          "name": "Dashboards",
+          "value": 3
+        }
+      ],
+      "access": "public"
+    }
+  ]
+}

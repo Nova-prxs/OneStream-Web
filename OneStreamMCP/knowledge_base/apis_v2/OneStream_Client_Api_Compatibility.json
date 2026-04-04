@@ -1,0 +1,104 @@
+{
+  "namespace": "OneStream.Client.Api.Compatibility",
+  "generated_at": "2025-12-08T19:28:51.080879",
+  "statistics": {
+    "classes": 2,
+    "interfaces": 0,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 0,
+    "total_methods": 0,
+    "total_properties": 0
+  },
+  "classes": [
+    {
+      "name": "OnEndResult",
+      "namespace": "OneStream.Client.Api.Compatibility",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "task",
+              "type": "Task",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "apiResult",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Api/Compatibility/OnEndResult.cs"
+    },
+    {
+      "name": "CompletionCallbackEventArgs",
+      "namespace": "OneStream.Client.Api.Compatibility",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "AsyncCompletedEventArgs",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "results",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "error",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cancelled",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Api/Compatibility/CompletionCallbackEventArgs.cs",
+      "source_code": "public class CompletionCallbackEventArgs : AsyncCompletedEventArgs\n{\n\tpublic object[] Results;\n\n\tpublic CompletionCallbackEventArgs(object[] results, Exception error, bool cancelled, object userState)\n\t\t: base(error, cancelled, userState)\n\t{\n\t\tResults = results;\n\t}\n}"
+    }
+  ],
+  "interfaces": [],
+  "structs": [],
+  "delegates": [],
+  "enums": []
+}

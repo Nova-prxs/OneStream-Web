@@ -1,0 +1,88 @@
+{
+  "namespace": "OneStream.Client.Wpf.MemberDisplayNamesViewModel",
+  "generated_at": "2025-12-08T19:28:51.956483",
+  "statistics": {
+    "classes": 0,
+    "interfaces": 0,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 1,
+    "total_methods": 0,
+    "total_properties": 0
+  },
+  "classes": [],
+  "interfaces": [],
+  "structs": [],
+  "delegates": [],
+  "enums": [
+    {
+      "name": "JournalControlColumnType",
+      "namespace": "OneStream.Client.Wpf.MemberDisplayNamesViewModel",
+      "underlying_type": "int",
+      "is_flags": false,
+      "values": [
+        {
+          "name": "None",
+          "value": 0
+        },
+        {
+          "name": "Entity",
+          "value": 1
+        },
+        {
+          "name": "Parent",
+          "value": 2
+        },
+        {
+          "name": "Account",
+          "value": 4
+        },
+        {
+          "name": "Flow",
+          "value": 8
+        },
+        {
+          "name": "IC",
+          "value": 16
+        },
+        {
+          "name": "UD1",
+          "value": 32
+        },
+        {
+          "name": "UD2",
+          "value": 64
+        },
+        {
+          "name": "UD3",
+          "value": 128
+        },
+        {
+          "name": "UD4",
+          "value": 256
+        },
+        {
+          "name": "UD5",
+          "value": 512
+        },
+        {
+          "name": "UD6",
+          "value": 1024
+        },
+        {
+          "name": "UD7",
+          "value": 2048
+        },
+        {
+          "name": "UD8",
+          "value": 4096
+        },
+        {
+          "name": "All",
+          "value": 65535
+        }
+      ],
+      "access": "public"
+    }
+  ]
+}

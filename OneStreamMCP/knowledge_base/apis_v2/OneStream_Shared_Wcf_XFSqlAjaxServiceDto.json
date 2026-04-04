@@ -1,0 +1,626 @@
+{
+  "namespace": "OneStream.Shared.Wcf.XFSqlAjaxServiceDto",
+  "generated_at": "2025-12-08T19:28:52.408068",
+  "statistics": {
+    "classes": 9,
+    "interfaces": 0,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 0,
+    "total_methods": 0,
+    "total_properties": 50
+  },
+  "classes": [
+    {
+      "name": "GetDatabaseTableInfoRequestDto",
+      "namespace": "OneStream.Shared.Wcf.XFSqlAjaxServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "DbLocation",
+          "type": "DbLocation",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "ExternalDBConnName",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "TableName",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/XFSqlAjaxServiceDto/GetDatabaseTableInfoRequestDto.cs"
+    },
+    {
+      "name": "GetDatabaseTableNamesRequestDto",
+      "namespace": "OneStream.Shared.Wcf.XFSqlAjaxServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "DbLocation",
+          "type": "DbLocation",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "ExternalDBConnName",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/XFSqlAjaxServiceDto/GetDatabaseTableNamesRequestDto.cs"
+    },
+    {
+      "name": "SelectFromTableAndReturnDataTableRequestDto",
+      "namespace": "OneStream.Shared.Wcf.XFSqlAjaxServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "DbLocation",
+          "type": "DbLocation",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "ExternalDBConnName",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "SqlTableName",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "DbSelect",
+          "type": "DbSelect",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/XFSqlAjaxServiceDto/SelectFromTableAndReturnDataTableRequestDto.cs"
+    },
+    {
+      "name": "GetInitialDatabaseTableForPivotGridRequestDto",
+      "namespace": "OneStream.Shared.Wcf.XFSqlAjaxServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "DbLocation",
+          "type": "DbLocation",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "ExternalDBConnName",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "SqlTableName",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/XFSqlAjaxServiceDto/GetInitialDatabaseTableForPivotGridRequestDto.cs"
+    },
+    {
+      "name": "GetPivotGridDataTableRequestDto",
+      "namespace": "OneStream.Shared.Wcf.XFSqlAjaxServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "DbLocation",
+          "type": "DbLocation",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "ExternalDBConnName",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "SqlTableName",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "FieldCount",
+          "type": "int",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "ColumnAreaFields",
+          "type": "List<XFLargeDataPivotGridField>",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "RowAreaFields",
+          "type": "List<XFLargeDataPivotGridField>",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "DataAreaFields",
+          "type": "List<XFLargeDataPivotGridField>",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "WhereClause",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "PreFilterCriteria",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "GetRecordCount",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "PageIndex",
+          "type": "int",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "PageSize",
+          "type": "int",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/XFSqlAjaxServiceDto/GetPivotGridDataTableRequestDto.cs"
+    },
+    {
+      "name": "GetDatabaseTableColumnNamesRequestDto",
+      "namespace": "OneStream.Shared.Wcf.XFSqlAjaxServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "DbLocation",
+          "type": "DbLocation",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "ExternalDBConnName",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "TableName",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/XFSqlAjaxServiceDto/GetDatabaseTableColumnNamesRequestDto.cs"
+    },
+    {
+      "name": "SelectFromTableAndReturnPivotGridDataTableRequestDto",
+      "namespace": "OneStream.Shared.Wcf.XFSqlAjaxServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "DbLocation",
+          "type": "DbLocation",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "ExternalDBConnName",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "SqlTableName",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "DbSelect",
+          "type": "DbSelect",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "GetRecordCount",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/XFSqlAjaxServiceDto/SelectFromTableAndReturnPivotGridDataTableRequestDto.cs"
+    },
+    {
+      "name": "SelectFromTableRequestDto",
+      "namespace": "OneStream.Shared.Wcf.XFSqlAjaxServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "DbLocation",
+          "type": "DbLocation",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "ExternalDBConnName",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "SqlTableName",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "SqlQuery",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/XFSqlAjaxServiceDto/SelectFromTableRequestDto.cs"
+    },
+    {
+      "name": "GetPivotGridDistinctListForFilterRequestDto",
+      "namespace": "OneStream.Shared.Wcf.XFSqlAjaxServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "DbLocation",
+          "type": "DbLocation",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "ExternalDBConnName",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "FieldName",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "SqlTableName",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "WhereClause",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/XFSqlAjaxServiceDto/GetPivotGridDistinctListForFilterRequestDto.cs"
+    }
+  ],
+  "interfaces": [],
+  "structs": [],
+  "delegates": [],
+  "enums": []
+}

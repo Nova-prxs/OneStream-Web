@@ -1,0 +1,139 @@
+{
+  "code_examples": [
+    {
+      "title": "Complete ETL Connector Business Rule - Extender",
+      "description": "Full production-ready extender business rule that manages multiple RestFast endpoints via control table with automatic logging and error handling",
+      "business_rule_type": "Extender",
+      "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName.BusinessRule.Extender.extender_restfast_connector",
+      "use_case": "Automated ETL loads from REST APIs with incremental date tracking, control table management, and execution logging",
+      "key_features": [
+        "Executes multiple RestFast endpoints from control table",
+        "Dynamic variable substitution (from/to dates)",
+        "Incremental and full load support",
+        "Automatic ReferenceDate updates",
+        "Comprehensive execution logging to audit table",
+        "Error handling with individual endpoint isolation",
+        "Record count tracking before/after load"
+      ],
+      "dependencies": [
+        "Workspace.RESTAPIFramework.RESTAPIRequestManager.Classes",
+        "OneStream.BusinessRule.Finance.UTI_SharedFunctions (for LoadDataTableToCustomTable)"
+      ],
+      "database_objects": [
+        "XFC_STG_ETL_LOAD_CONTROL - Control table with LoadId, EndPoint, TargetTable, ReferenceDate, ReferenceColumn, Enable, LoadType",
+        "XFC_STG_ETL_LOAD_LOG - Audit log table with LoadId, LoadType, TargetTable, ExecutionStart, ExecutionEnd, Records, LoadStatus, ErrorMessage, ExecutedBy, ReferenceDate"
+      ],
+      "main_functions": [
+        {
+          "name": "Main",
+          "signature": "Public Function Main(ByVal si As SessionInfo, ByVal globals As BRGlobals, ByVal api As Object, ByVal args As ExtenderArgs) As Object",
+          "description": "Entry point - handles ExtenderFunctionType.ExecuteDataMgmtBusinessRuleStep with p_function parameter",
+          "parameters": [
+            "p_function - Function name to execute (e.g., 'ExecuteRestFastRequest')"
+          ]
+        },
+        {
+          "name": "ExecuteAllRestFastRequests",
+          "signature": "Private Sub ExecuteAllRestFastRequests(ByVal si As SessionInfo)",
+          "description": "Loops through all enabled endpoints in control table and executes each one, with individual error handling",
+          "features": [
+            "Queries XFC_STG_ETL_LOAD_CONTROL for enabled endpoints",
+            "Processes each endpoint independently",
+            "Continues on error (doesn't fail entire batch)",
+            "Reports success/fail counts"
+          ]
+        },
+        {
+          "name": "ExecuteRestFastRequest",
+          "signature": "Private Function ExecuteRestFastRequest(ByVal si As SessionInfo, ByVal requestName As String) As Object",
+          "description": "Executes a single RestFast request with dynamic variables and updates control table",
+          "features": [
+            "Reads control table configuration",
+            "Calculates from/to dates based on ReferenceDate",
+            "Updates ReferenceDate BEFORE execution",
+            "Builds custom variables dictionary",
+            "Calls RestFast PopulateTable",
+            "Counts records before/after load",
+            "Logs execution to audit table"
+          ]
+        },
+        {
+          "name": "LogExecution",
+          "signature": "Private Sub LogExecution(si, requestName, targetTable, loadType, executionStart, executionEnd, recordCount, loadStatus, errorMessage, referenceDate)",
+          "description": "Logs execution details to XFC_STG_ETL_LOAD_LOG audit table",
+          "logged_fields": [
+            "LoadId, LoadType, TargetTable",
+            "ExecutionStart, ExecutionEnd",
+            "Records (count)",
+            "LoadStatus (OK/ERROR)",
+            "ErrorMessage, ExecutedBy, ReferenceDate"
+          ]
+        }
+      ],
+      "important_patterns": [
+        {
+          "pattern": "Custom Variables Dictionary",
+          "code": "Dim customVars As New Dictionary(Of String, String)()\ncustomVars(\"from\") = fromDate\ncustomVars(\"to\") = toDate\nrequest.PopulateTable(si, customVars)",
+          "why": "NEVER modify request.variables directly - always create separate dictionary and pass as parameter"
+        },
+        {
+          "pattern": "Date Calculation",
+          "code": "Dim toDate As String = DateTime.Now.ToString(\"yyyyMMddHHmmss\")\nDim fromDate As String = currentDateTime.Date.ToString(\"yyyyMMdd\") & \"000000\"\nDim defaultFromDate As String = New DateTime(currentDateTime.Year, currentDateTime.Month, 1).ToString(\"yyyyMMdd\") & \"000000\"",
+          "why": "Consistent date format (yyyyMMddHHmmss) for API compatibility"
+        },
+        {
+          "pattern": "Update ReferenceDate BEFORE Execution",
+          "code": "Dim newReferenceDate As String = currentDateTime.Date.ToString(\"yyyyMMdd\") & \"000000\"\nDim updateQuery As String = $\"UPDATE XFC_STG_ETL_LOAD_CONTROL SET ReferenceDate = '{newReferenceDate}' WHERE LoadId = {loadId}\"\nBRApi.Database.ExecuteSql(dbConn, updateQuery, False)",
+          "why": "Prevents reprocessing same data if execution fails mid-way"
+        },
+        {
+          "pattern": "Record Count Tracking",
+          "code": "Dim recordCountBefore As Integer = 0\n' ... execute PopulateTable ...\nDim recordCountAfter As Integer = 0\nrecordCount = recordCountAfter  ' Since PopulateTable uses 'replace'",
+          "why": "Track actual records loaded for audit and monitoring"
+        },
+        {
+          "pattern": "Execution Logging with Try-Catch",
+          "code": "executionStart = DateTime.Now\nTry\n  ' ... execution logic ...\n  executionEnd = DateTime.Now\n  loadStatus = \"OK\"\n  Me.LogExecution(...)\nCatch ex As Exception\n  executionEnd = DateTime.Now\n  loadStatus = \"ERROR\"\n  Me.LogExecution(..., ex.Message, ...)\n  Throw\nEnd Try",
+          "why": "Ensure all executions are logged regardless of success/failure"
+        }
+      ],
+      "data_management_step_config": {
+        "step_type": "Business Rule",
+        "business_rule": "Workspace.ETL_Load_Control.ETL_Load_Control.BusinessRule.Extender.extender_restfast_connector.MainClass",
+        "parameters": "p_function=ExecuteRestFastRequest"
+      },
+      "full_code_sections": {
+        "imports": "Imports System\nImports System.Collections.Generic\nImports System.Data\nImports Workspace.RESTAPIFramework.RESTAPIRequestManager.Classes",
+        "main_entry_point": "Public Function Main(ByVal si As SessionInfo, ByVal globals As BRGlobals, ByVal api As Object, ByVal args As ExtenderArgs) As Object\n    Try\n        Select Case args.FunctionType\n            Case Is = ExtenderFunctionType.ExecuteDataMgmtBusinessRuleStep\n                Dim functionName As String = args.NameValuePairs.XFGetValue(\"p_function\")\n                If functionName.XFEqualsIgnoreCase(\"ExecuteRestFastRequest\") Then\n                    Me.ExecuteAllRestFastRequests(si)\n                    Return Nothing\n                End If\n        End Select\n        Return Nothing\n    Catch ex As Exception\n        Throw ErrorHandler.LogWrite(si, New XFException(si, ex))\n    End Try\nEnd Function",
+        "execute_all_pattern": "Private Sub ExecuteAllRestFastRequests(ByVal si As SessionInfo)\n    ' Get enabled endpoints\n    Dim query As String = \"SELECT EndPoint FROM XFC_STG_ETL_LOAD_CONTROL WHERE Enable = 1 ORDER BY LoadId\"\n    Dim dtEndpoints As DataTable = BRApi.Database.GetDataTable(dbConn, query, Nothing, Nothing, False)\n    \n    ' Loop through each endpoint\n    Dim successCount As Integer = 0\n    Dim failCount As Integer = 0\n    For Each row As DataRow In dtEndpoints.Rows\n        Try\n            Me.ExecuteRestFastRequest(si, row(\"EndPoint\").ToString())\n            successCount += 1\n        Catch ex As Exception\n            failCount += 1\n            ' Continue processing other endpoints\n        End Try\n    Next\nEnd Sub",
+        "execute_single_pattern": "Private Function ExecuteRestFastRequest(si As SessionInfo, requestName As String) As Object\n    ' Calculate dates\n    Dim toDate As String = DateTime.Now.ToString(\"yyyyMMddHHmmss\")\n    \n    ' Get control table info\n    Dim query As String = \"SELECT LoadId, TargetTable, ReferenceDate, ReferenceColumn, LoadType FROM XFC_STG_ETL_LOAD_CONTROL...\"\n    Dim dtControl As DataTable = BRApi.Database.GetDataTable(dbConn, query...)\n    \n    ' Determine fromDate\n    Dim fromDate As String = If(String.IsNullOrEmpty(referenceDate), defaultFromDate, referenceDate)\n    \n    ' Update ReferenceDate BEFORE execution\n    BRApi.Database.ExecuteSql(dbConn, \"UPDATE XFC_STG_ETL_LOAD_CONTROL SET ReferenceDate = ...\")\n    \n    ' Get RestFast request\n    Dim utils As New Utils()\n    Dim request As RESTAPIRequest = utils.GetSavedRequest(si, requestName)\n    \n    ' Build custom variables\n    Dim customVars As New Dictionary(Of String, String)()\n    If Not String.IsNullOrEmpty(referenceColumn) Then\n        customVars(\"from\") = fromDate\n        customVars(\"to\") = toDate\n    End If\n    \n    ' Execute\n    request.PopulateTable(si, customVars)\n    \n    ' Log execution\n    Me.LogExecution(...)\nEnd Function"
+      },
+      "common_issues_and_solutions": [
+        {
+          "issue": "Variables not being replaced in endpoint",
+          "solution": "Ensure you're passing customVars as parameter to PopulateTable, not modifying request.variables"
+        },
+        {
+          "issue": "Records showing 0 count after load",
+          "solution": "Check that targetTable matches the actual table name in database. Use recordCountAfter since PopulateTable uses 'replace' mode"
+        },
+        {
+          "issue": "ReferenceDate not updating",
+          "solution": "Verify LoadId is correctly retrieved from control table before UPDATE query"
+        },
+        {
+          "issue": "One endpoint failure stops all endpoints",
+          "solution": "ExecuteAllRestFastRequests has Try-Catch inside loop to continue processing on individual failures"
+        }
+      ],
+      "best_practices": [
+        "Always log extensively - this code has detailed logging at each step",
+        "Update ReferenceDate BEFORE execution to prevent duplicate processing",
+        "Use separate Try-Catch for PopulateTable to get detailed error info",
+        "Log both successful and failed executions to audit table",
+        "Check for predefined variables in request to avoid conflicts",
+        "Use newReferenceDate as start of current day (not current timestamp) for cleaner date boundaries"
+      ]
+    }
+  ]
+}

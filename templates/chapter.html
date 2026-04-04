@@ -1,0 +1,127 @@
+{% extends "base.html" %}
+
+{% block title %}{{ chapter.metadata.title }} — {{ chapter.book_title }}{% endblock %}
+
+{% block content %}
+<nav class="breadcrumb">
+  <a href="/">Home</a>
+  <span>&rsaquo;</span>
+  <a href="/exam-prep/guide/{{ chapter.book_slug }}">{{ chapter.book_title }}</a>
+  <span>&rsaquo;</span>
+  <span>{{ chapter.metadata.title }}</span>
+</nav>
+
+<h1>{{ chapter.metadata.title }}</h1>
+
+<div class="chapter-layout">
+  <aside class="toc-sidebar">
+    <details open>
+      <summary><strong>Table of Contents</strong></summary>
+      <nav class="toc">
+        {{ chapter.toc | safe }}
+      </nav>
+    </details>
+  </aside>
+
+  <div class="chapter-content">
+    {{ chapter.html | safe }}
+
+    {# Mini-Quiz — #7: related questions at end of chapter #}
+    {% if mini_quiz %}
+    <div class="mini-quiz" id="mini-quiz">
+      <h3>Test Your Understanding</h3>
+      <p><small>{{ mini_quiz|length }} questions related to this chapter</small></p>
+      {% for q in mini_quiz %}
+      {% set qi = loop.index0 %}
+      <div class="mini-quiz-question" id="mq-{{ qi }}">
+        <p class="mq-text"><strong>{{ loop.index }}.</strong> {{ q.text }} <span class="obj-q-diff {{ q.difficulty | lower }}">{{ q.difficulty }}</span></p>
+        <div class="mq-options">
+          {% for opt in q.options %}
+          <button class="option-btn mq-btn" data-qi="{{ qi }}" data-letter="{{ opt.letter }}" data-correct="{{ q.correct_answer }}" onclick="answerMiniQuiz(this)">
+            <strong>{{ opt.letter }})</strong> {{ opt.text }}
+          </button>
+          {% endfor %}
+        </div>
+        <div class="mq-feedback" id="mq-fb-{{ qi }}" style="display:none">
+          <p class="mq-explanation">{{ q.explanation }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    {# User notes section #}
+    <div class="chapter-notes">
+      <details>
+        <summary><strong>My Notes</strong></summary>
+        <textarea id="chapter-notes" placeholder="Add your study notes here..." oninput="saveNotes()"></textarea>
+        <small class="notes-saved" id="notes-saved">Saved</small>
+        <div style="margin-top: 0.5rem">
+          <button class="outline" style="margin:0;padding:0.3rem 0.6rem;font-size:0.8rem" onclick="HL.downloadChapterHighlights('{{ chapter.book_slug }}', '{{ chapter.metadata.file | chapter_slug }}')">Export chapter to MD</button>
+          <button class="outline" style="margin:0;padding:0.3rem 0.6rem;font-size:0.8rem" onclick="HL.openInObsidian('{{ chapter.book_slug }}', '{{ chapter.metadata.file | chapter_slug }}')">Open in Obsidian</button>
+        </div>
+      </details>
+      <p class="pen-mode-hint">Tip: Use Apple Pencil to highlight text directly — just select with the pen.</p>
+    </div>
+  </div>
+</div>
+
+<nav class="chapter-nav">
+  <div>
+    {% if prev_chapter %}
+    <a href="/exam-prep/guide/{{ chapter.book_slug }}/{{ prev_chapter.file | chapter_slug }}">&larr; Previous: {{ prev_chapter.title }}</a>
+    {% endif %}
+  </div>
+  <div>
+    {% if next_chapter %}
+    <a href="/exam-prep/guide/{{ chapter.book_slug }}/{{ next_chapter.file | chapter_slug }}">Next: {{ next_chapter.title }} &rarr;</a>
+    {% endif %}
+  </div>
+</nav>
+
+<script src="/static/js/highlights.js"></script>
+<script>
+(function() {
+  var noteKey = 'notes_{{ chapter.book_slug }}_{{ chapter.metadata.file | chapter_slug }}';
+  var textarea = document.getElementById('chapter-notes');
+  var savedEl = document.getElementById('notes-saved');
+  var timer = null;
+
+  // Load saved notes
+  try {
+    var saved = localStorage.getItem(noteKey);
+    if (saved) textarea.value = saved;
+  } catch(e) {}
+
+  // Mini-quiz answer handler
+  window.answerMiniQuiz = function(btn) {
+    var qi = btn.dataset.qi;
+    var letter = btn.dataset.letter;
+    var correct = btn.dataset.correct;
+    // Disable all options for this question
+    document.querySelectorAll('.mq-btn[data-qi="' + qi + '"]').forEach(function(b) {
+      b.disabled = true;
+      if (b.dataset.letter === correct) b.classList.add('correct');
+      else if (b.dataset.letter === letter && letter !== correct) b.classList.add('incorrect');
+    });
+    // Show feedback
+    var fb = document.getElementById('mq-fb-' + qi);
+    if (fb) fb.style.display = 'block';
+  };
+
+  window.saveNotes = function() {
+    clearTimeout(timer);
+    timer = setTimeout(function() {
+      try {
+        localStorage.setItem(noteKey, textarea.value);
+        savedEl.classList.add('show');
+        setTimeout(function() { savedEl.classList.remove('show'); }, 1500);
+      } catch(e) {}
+    }, 500);
+  };
+
+  // Initialize highlighting engine
+  HL.init('{{ chapter.book_slug }}', '{{ chapter.metadata.file | chapter_slug }}');
+})();
+</script>
+{% endblock %}

@@ -1,0 +1,4301 @@
+{
+  "namespace": "OneStream.Client.Api.MemberSelectionServiceReference",
+  "generated_at": "2025-12-08T19:28:51.263907",
+  "statistics": {
+    "classes": 6,
+    "interfaces": 1,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 0,
+    "total_methods": 115,
+    "total_properties": 0
+  },
+  "classes": [
+    {
+      "name": "MemberSelectionServiceClient",
+      "namespace": "OneStream.Client.Api.MemberSelectionServiceReference",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "ClientBase<IMemberSelectionServiceClient>",
+      "interfaces": [
+        "IMemberSelectionServiceClient",
+        "IDisposable",
+        "IApiClient"
+      ],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "httpClientFactory",
+              "type": "IAuthenticatedHttpClientFactory",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "baseServerUri",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [
+        {
+          "name": "EnumCubes",
+          "return_type": "ObservableCollection<AjaxCubeSummaryInfo>",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Enums cubes",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "SessionInfo",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Sessions info",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "ex",
+              "type": "AggregateException",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "BeginEnumCubes",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins enum cubes",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EnumCubes",
+          "return_type": ">",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Enums cubes",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "antecedent.Result",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 10
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "OnEndResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 10
+        },
+        {
+          "name": "AsyncOperationContinuation",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "result",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "asyncState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Asyncs operation continuation",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "EndEnumCubes",
+          "return_type": "ObservableCollection<AjaxCubeSummaryInfo>",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends enum cubes",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnBeginEnumCubes",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "inValues",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            }
+          ],
+          "description": "Ons begin enum cubes",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnEndEnumCubes",
+          "return_type": "object[]",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end enum cubes",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnEnumCubesCompleted",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "state",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons enum cubes completed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EnumCubesCompletedEventArgs",
+          "return_type": "this, new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "e.Results",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Error",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Cancelled",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.UserState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Enums cubes completed event args",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EnumCubesAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Enums cubes async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "EnumCubesAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Enums cubes async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "EnumCubesAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Enums cubes async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "InvokeAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "onBeginEnumCubesDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "}",
+              "type": "new object[1] { si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onEndEnumCubesDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onEnumCubesCompletedDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "userState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Invokes async",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "GetMemberHierarchyInitInfo",
+          "return_type": "AjaxMemberHierarchyInitInfo",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectionOptions",
+              "type": "AjaxMemberSelectionOptions",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets member hierarchy init info",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "SessionInfo",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Sessions info",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "ex",
+              "type": "AggregateException",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "BeginGetMemberHierarchyInitInfo",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectionOptions",
+              "type": "AjaxMemberSelectionOptions",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins get member hierarchy init info",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetMemberHierarchyInitInfo",
+          "return_type": ">",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "selectionOptions",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets member hierarchy init info",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "antecedent.Result",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 10
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "OnEndResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 10
+        },
+        {
+          "name": "AsyncOperationContinuation",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "result",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "asyncState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Asyncs operation continuation",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "EndGetMemberHierarchyInitInfo",
+          "return_type": "AjaxMemberHierarchyInitInfo",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends get member hierarchy init info",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnBeginGetMemberHierarchyInitInfo",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "inValues",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            }
+          ],
+          "description": "Ons begin get member hierarchy init info",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnEndGetMemberHierarchyInitInfo",
+          "return_type": "object[]",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end get member hierarchy init info",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnGetMemberHierarchyInitInfoCompleted",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "state",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons get member hierarchy init info completed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetMemberHierarchyInitInfoCompletedEventArgs",
+          "return_type": "this, new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "e.Results",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Error",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Cancelled",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.UserState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets member hierarchy init info completed event args",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetMemberHierarchyInitInfoAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectionOptions",
+              "type": "AjaxMemberSelectionOptions",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets member hierarchy init info async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "GetMemberHierarchyInitInfoAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "selectionOptions",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets member hierarchy init info async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "GetMemberHierarchyInitInfoAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectionOptions",
+              "type": "AjaxMemberSelectionOptions",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets member hierarchy init info async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "InvokeAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "onBeginGetMemberHierarchyInitInfoDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "si",
+              "type": "new object[2] {",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "}",
+              "type": "selectionOptions",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onEndGetMemberHierarchyInitInfoDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onGetMemberHierarchyInitInfoCompletedDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "userState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Invokes async",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "GetChildMembers",
+          "return_type": "ObservableCollection<MemberInfo>",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cubeIdOrUnknown",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dimTypeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dimId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "filterText",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "memberId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets child members",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "SessionInfo",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Sessions info",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "ex",
+              "type": "AggregateException",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "BeginGetChildMembers",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cubeIdOrUnknown",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dimTypeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dimId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "filterText",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "memberId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins get child members",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetChildMembers",
+          "return_type": ">",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "cubeIdOrUnknown",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "dimTypeId",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "dimId",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "filterText",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "memberId",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets child members",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "antecedent.Result",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 10
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "OnEndResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 10
+        },
+        {
+          "name": "AsyncOperationContinuation",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "result",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "asyncState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Asyncs operation continuation",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "EndGetChildMembers",
+          "return_type": "ObservableCollection<MemberInfo>",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends get child members",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnBeginGetChildMembers",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "inValues",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            }
+          ],
+          "description": "Ons begin get child members",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnEndGetChildMembers",
+          "return_type": "object[]",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end get child members",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnGetChildMembersCompleted",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "state",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons get child members completed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetChildMembersCompletedEventArgs",
+          "return_type": "this, new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "e.Results",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Error",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Cancelled",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.UserState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets child members completed event args",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetChildMembersAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cubeIdOrUnknown",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dimTypeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dimId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "filterText",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "memberId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets child members async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "GetChildMembersAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "cubeIdOrUnknown",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "dimTypeId",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "dimId",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "filterText",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "memberId",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets child members async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "GetChildMembersAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cubeIdOrUnknown",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dimTypeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dimId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "filterText",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "memberId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets child members async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "InvokeAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "onBeginGetChildMembersDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "si",
+              "type": "new object[6] {",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "cubeIdOrUnknown",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "dimTypeId",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "dimId",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "filterText",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "}",
+              "type": "memberId",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onEndGetChildMembersDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onGetChildMembersCompletedDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "userState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Invokes async",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "GetAllMembers",
+          "return_type": "ObservableCollection<MemberInfo>",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dimPk",
+              "type": "DimPk",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "includeInheritedDims",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dimDisplayOptions",
+              "type": "DimDisplayOptions",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets all members",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "SessionInfo",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Sessions info",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "ex",
+              "type": "AggregateException",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "BeginGetAllMembers",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dimPk",
+              "type": "DimPk",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "includeInheritedDims",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dimDisplayOptions",
+              "type": "DimDisplayOptions",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins get all members",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetAllMembers",
+          "return_type": ">",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "dimPk",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "includeInheritedDims",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "dimDisplayOptions",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets all members",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "antecedent.Result",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 10
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "OnEndResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 10
+        },
+        {
+          "name": "AsyncOperationContinuation",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "result",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "asyncState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Asyncs operation continuation",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "EndGetAllMembers",
+          "return_type": "ObservableCollection<MemberInfo>",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends get all members",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnBeginGetAllMembers",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "inValues",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            }
+          ],
+          "description": "Ons begin get all members",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnEndGetAllMembers",
+          "return_type": "object[]",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end get all members",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnGetAllMembersCompleted",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "state",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons get all members completed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetAllMembersCompletedEventArgs",
+          "return_type": "this, new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "e.Results",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Error",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Cancelled",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.UserState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets all members completed event args",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetAllMembersAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dimPk",
+              "type": "DimPk",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "includeInheritedDims",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dimDisplayOptions",
+              "type": "DimDisplayOptions",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets all members async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "GetAllMembersAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "dimPk",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "includeInheritedDims",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "dimDisplayOptions",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets all members async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "GetAllMembersAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dimPk",
+              "type": "DimPk",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "includeInheritedDims",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dimDisplayOptions",
+              "type": "DimDisplayOptions",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets all members async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "InvokeAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "onBeginGetAllMembersDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "si",
+              "type": "new object[4] {",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "dimPk",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "includeInheritedDims",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "}",
+              "type": "dimDisplayOptions",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onEndGetAllMembersDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onGetAllMembersCompletedDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "userState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Invokes async",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "GetMemberSearchResult",
+          "return_type": "AjaxMemberSearchResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cubeIdOrUnknown",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dimTypeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dimId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "filterText",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "searchText",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "searchType",
+              "type": "AjaxMemberSearchType",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets member search result",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "SessionInfo",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Sessions info",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "ex",
+              "type": "AggregateException",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "BeginGetMemberSearchResult",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cubeIdOrUnknown",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dimTypeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dimId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "filterText",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "searchText",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "searchType",
+              "type": "AjaxMemberSearchType",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins get member search result",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetMemberSearchResult",
+          "return_type": ">",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "cubeIdOrUnknown",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "dimTypeId",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "dimId",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "filterText",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "searchText",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "searchType",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets member search result",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "antecedent.Result",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 10
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "OnEndResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 10
+        },
+        {
+          "name": "AsyncOperationContinuation",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "result",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "asyncState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Asyncs operation continuation",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "EndGetMemberSearchResult",
+          "return_type": "AjaxMemberSearchResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends get member search result",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnBeginGetMemberSearchResult",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "inValues",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            }
+          ],
+          "description": "Ons begin get member search result",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnEndGetMemberSearchResult",
+          "return_type": "object[]",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end get member search result",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnGetMemberSearchResultCompleted",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "state",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons get member search result completed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetMemberSearchResultCompletedEventArgs",
+          "return_type": "this, new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "e.Results",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Error",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Cancelled",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.UserState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets member search result completed event args",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetMemberSearchResultAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cubeIdOrUnknown",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dimTypeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dimId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "filterText",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "searchText",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "searchType",
+              "type": "AjaxMemberSearchType",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets member search result async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "GetMemberSearchResultAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "cubeIdOrUnknown",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "dimTypeId",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "dimId",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "filterText",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "searchText",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "searchType",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets member search result async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "GetMemberSearchResultAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cubeIdOrUnknown",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dimTypeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dimId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "filterText",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "searchText",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "searchType",
+              "type": "AjaxMemberSearchType",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets member search result async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "InvokeAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "onBeginGetMemberSearchResultDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "si",
+              "type": "new object[7] {",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "cubeIdOrUnknown",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "dimTypeId",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "dimId",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "filterText",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "searchText",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "}",
+              "type": "searchType",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onEndGetMemberSearchResultDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onGetMemberSearchResultCompletedDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "userState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Invokes async",
+          "generic_params": [],
+          "overloads": 5
+        }
+      ],
+      "events": [
+        {
+          "name": "EnumCubesCompleted",
+          "type": "EventHandler<EnumCubesCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "GetMemberHierarchyInitInfoCompleted",
+          "type": "EventHandler<GetMemberHierarchyInitInfoCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "GetChildMembersCompleted",
+          "type": "EventHandler<GetChildMembersCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "GetAllMembersCompleted",
+          "type": "EventHandler<GetAllMembersCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "GetMemberSearchResultCompleted",
+          "type": "EventHandler<GetMemberSearchResultCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        }
+      ],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Api/MemberSelectionServiceReference/MemberSelectionServiceClient.cs"
+    },
+    {
+      "name": "GetChildMembersCompletedEventArgs",
+      "namespace": "OneStream.Client.Api.MemberSelectionServiceReference",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "AsyncCompletedEventArgs",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "results",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "exception",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cancelled",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [
+        {
+          "name": "RaiseExceptionIfNecessary",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Raises exception if necessary",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Api/MemberSelectionServiceReference/GetChildMembersCompletedEventArgs.cs",
+      "source_code": "public class GetChildMembersCompletedEventArgs : AsyncCompletedEventArgs\n{\n\tprivate object[] results;\n\n\tpublic ObservableCollection<MemberInfo> Result\n\t{\n\t\tget\n\t\t{\n\t\t\tRaiseExceptionIfNecessary();\n\t\t\treturn (ObservableCollection<MemberInfo>)results[0];\n\t\t}\n\t}\n\n\tpublic GetChildMembersCompletedEventArgs(object[] results, Exception exception, bool cancelled, object userState)\n\t\t: base(exception, cancelled, userState)\n\t{\n\t\tthis.results = results;\n\t}\n}"
+    },
+    {
+      "name": "EnumCubesCompletedEventArgs",
+      "namespace": "OneStream.Client.Api.MemberSelectionServiceReference",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "AsyncCompletedEventArgs",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "results",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "exception",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cancelled",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [
+        {
+          "name": "RaiseExceptionIfNecessary",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Raises exception if necessary",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Api/MemberSelectionServiceReference/EnumCubesCompletedEventArgs.cs",
+      "source_code": "public class EnumCubesCompletedEventArgs : AsyncCompletedEventArgs\n{\n\tprivate object[] results;\n\n\tpublic ObservableCollection<AjaxCubeSummaryInfo> Result\n\t{\n\t\tget\n\t\t{\n\t\t\tRaiseExceptionIfNecessary();\n\t\t\treturn (ObservableCollection<AjaxCubeSummaryInfo>)results[0];\n\t\t}\n\t}\n\n\tpublic EnumCubesCompletedEventArgs(object[] results, Exception exception, bool cancelled, object userState)\n\t\t: base(exception, cancelled, userState)\n\t{\n\t\tthis.results = results;\n\t}\n}"
+    },
+    {
+      "name": "GetMemberSearchResultCompletedEventArgs",
+      "namespace": "OneStream.Client.Api.MemberSelectionServiceReference",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "AsyncCompletedEventArgs",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "results",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "exception",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cancelled",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [
+        {
+          "name": "RaiseExceptionIfNecessary",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Raises exception if necessary",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Api/MemberSelectionServiceReference/GetMemberSearchResultCompletedEventArgs.cs",
+      "source_code": "public class GetMemberSearchResultCompletedEventArgs : AsyncCompletedEventArgs\n{\n\tprivate object[] results;\n\n\tpublic AjaxMemberSearchResult Result\n\t{\n\t\tget\n\t\t{\n\t\t\tRaiseExceptionIfNecessary();\n\t\t\treturn (AjaxMemberSearchResult)results[0];\n\t\t}\n\t}\n\n\tpublic GetMemberSearchResultCompletedEventArgs(object[] results, Exception exception, bool cancelled, object userState)\n\t\t: base(exception, cancelled, userState)\n\t{\n\t\tthis.results = results;\n\t}\n}"
+    },
+    {
+      "name": "GetAllMembersCompletedEventArgs",
+      "namespace": "OneStream.Client.Api.MemberSelectionServiceReference",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "AsyncCompletedEventArgs",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "results",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "exception",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cancelled",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [
+        {
+          "name": "RaiseExceptionIfNecessary",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Raises exception if necessary",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Api/MemberSelectionServiceReference/GetAllMembersCompletedEventArgs.cs",
+      "source_code": "public class GetAllMembersCompletedEventArgs : AsyncCompletedEventArgs\n{\n\tprivate object[] results;\n\n\tpublic ObservableCollection<MemberInfo> Result\n\t{\n\t\tget\n\t\t{\n\t\t\tRaiseExceptionIfNecessary();\n\t\t\treturn (ObservableCollection<MemberInfo>)results[0];\n\t\t}\n\t}\n\n\tpublic GetAllMembersCompletedEventArgs(object[] results, Exception exception, bool cancelled, object userState)\n\t\t: base(exception, cancelled, userState)\n\t{\n\t\tthis.results = results;\n\t}\n}"
+    },
+    {
+      "name": "GetMemberHierarchyInitInfoCompletedEventArgs",
+      "namespace": "OneStream.Client.Api.MemberSelectionServiceReference",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "AsyncCompletedEventArgs",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "results",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "exception",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cancelled",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [
+        {
+          "name": "RaiseExceptionIfNecessary",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Raises exception if necessary",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Api/MemberSelectionServiceReference/GetMemberHierarchyInitInfoCompletedEventArgs.cs",
+      "source_code": "public class GetMemberHierarchyInitInfoCompletedEventArgs : AsyncCompletedEventArgs\n{\n\tprivate object[] results;\n\n\tpublic AjaxMemberHierarchyInitInfo Result\n\t{\n\t\tget\n\t\t{\n\t\t\tRaiseExceptionIfNecessary();\n\t\t\treturn (AjaxMemberHierarchyInitInfo)results[0];\n\t\t}\n\t}\n\n\tpublic GetMemberHierarchyInitInfoCompletedEventArgs(object[] results, Exception exception, bool cancelled, object userState)\n\t\t: base(exception, cancelled, userState)\n\t{\n\t\tthis.results = results;\n\t}\n}"
+    }
+  ],
+  "interfaces": [
+    {
+      "name": "IMemberSelectionServiceClient",
+      "namespace": "OneStream.Client.Api.MemberSelectionServiceReference",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IDisposable",
+        "IApiClient"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "EnumCubes",
+          "return_type": "ObservableCollection<AjaxCubeSummaryInfo>",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Enums cubes",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "BeginEnumCubes",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins enum cubes",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EndEnumCubes",
+          "return_type": "ObservableCollection<AjaxCubeSummaryInfo>",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends enum cubes",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EnumCubesAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Enums cubes async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "EnumCubesAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Enums cubes async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "GetMemberHierarchyInitInfo",
+          "return_type": "AjaxMemberHierarchyInitInfo",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectionOptions",
+              "type": "AjaxMemberSelectionOptions",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets member hierarchy init info",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "BeginGetMemberHierarchyInitInfo",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectionOptions",
+              "type": "AjaxMemberSelectionOptions",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins get member hierarchy init info",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EndGetMemberHierarchyInitInfo",
+          "return_type": "AjaxMemberHierarchyInitInfo",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends get member hierarchy init info",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetMemberHierarchyInitInfoAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectionOptions",
+              "type": "AjaxMemberSelectionOptions",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets member hierarchy init info async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "GetMemberHierarchyInitInfoAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectionOptions",
+              "type": "AjaxMemberSelectionOptions",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets member hierarchy init info async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "GetChildMembers",
+          "return_type": "ObservableCollection<MemberInfo>",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cubeIdOrUnknown",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dimTypeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dimId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "filterText",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "memberId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets child members",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "BeginGetChildMembers",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cubeIdOrUnknown",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dimTypeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dimId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "filterText",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "memberId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins get child members",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EndGetChildMembers",
+          "return_type": "ObservableCollection<MemberInfo>",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends get child members",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetChildMembersAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cubeIdOrUnknown",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dimTypeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dimId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "filterText",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "memberId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets child members async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "GetChildMembersAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cubeIdOrUnknown",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dimTypeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dimId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "filterText",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "memberId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets child members async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "GetAllMembers",
+          "return_type": "ObservableCollection<MemberInfo>",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dimPk",
+              "type": "DimPk",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "includeInheritedDims",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dimDisplayOptions",
+              "type": "DimDisplayOptions",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets all members",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "BeginGetAllMembers",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dimPk",
+              "type": "DimPk",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "includeInheritedDims",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dimDisplayOptions",
+              "type": "DimDisplayOptions",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins get all members",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EndGetAllMembers",
+          "return_type": "ObservableCollection<MemberInfo>",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends get all members",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetAllMembersAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dimPk",
+              "type": "DimPk",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "includeInheritedDims",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dimDisplayOptions",
+              "type": "DimDisplayOptions",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets all members async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "GetAllMembersAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dimPk",
+              "type": "DimPk",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "includeInheritedDims",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dimDisplayOptions",
+              "type": "DimDisplayOptions",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets all members async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "GetMemberSearchResult",
+          "return_type": "AjaxMemberSearchResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cubeIdOrUnknown",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dimTypeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dimId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "filterText",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "searchText",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "searchType",
+              "type": "AjaxMemberSearchType",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets member search result",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "BeginGetMemberSearchResult",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cubeIdOrUnknown",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dimTypeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dimId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "filterText",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "searchText",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "searchType",
+              "type": "AjaxMemberSearchType",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins get member search result",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EndGetMemberSearchResult",
+          "return_type": "AjaxMemberSearchResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends get member search result",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetMemberSearchResultAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cubeIdOrUnknown",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dimTypeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dimId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "filterText",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "searchText",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "searchType",
+              "type": "AjaxMemberSearchType",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets member search result async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "GetMemberSearchResultAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cubeIdOrUnknown",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dimTypeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dimId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "filterText",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "searchText",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "searchType",
+              "type": "AjaxMemberSearchType",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets member search result async",
+          "generic_params": [],
+          "overloads": 2
+        }
+      ],
+      "events": [
+        {
+          "name": "EnumCubesCompleted",
+          "type": "EventHandler<EnumCubesCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "GetMemberHierarchyInitInfoCompleted",
+          "type": "EventHandler<GetMemberHierarchyInitInfoCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "GetChildMembersCompleted",
+          "type": "EventHandler<GetChildMembersCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "GetAllMembersCompleted",
+          "type": "EventHandler<GetAllMembersCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "GetMemberSearchResultCompleted",
+          "type": "EventHandler<GetMemberSearchResultCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        }
+      ],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Api/MemberSelectionServiceReference/IMemberSelectionServiceClient.cs",
+      "source_code": "public interface IMemberSelectionServiceClient : IDisposable, IApiClient\n{\n\tevent EventHandler<EnumCubesCompletedEventArgs> EnumCubesCompleted;\n\n\tevent EventHandler<GetMemberHierarchyInitInfoCompletedEventArgs> GetMemberHierarchyInitInfoCompleted;\n\n\tevent EventHandler<GetChildMembersCompletedEventArgs> GetChildMembersCompleted;\n\n\tevent EventHandler<GetAllMembersCompletedEventArgs> GetAllMembersCompleted;\n\n\tevent EventHandler<GetMemberSearchResultCompletedEventArgs> GetMemberSearchResultCompleted;\n\n\tObservableCollection<AjaxCubeSummaryInfo> EnumCubes(SessionInfo si);\n\n\tTask BeginEnumCubes(SessionInfo si, object callback, object asyncState);\n\n\tObservableCollection<AjaxCubeSummaryInfo> EndEnumCubes(OnEndResult result);\n\n\tvoid EnumCubesAsync(SessionInfo si);\n\n\tvoid EnumCubesAsync(SessionInfo si, object userState);\n\n\tAjaxMemberHierarchyInitInfo GetMemberHierarchyInitInfo(SessionInfo si, AjaxMemberSelectionOptions selectionOptions);\n\n\tTask BeginGetMemberHierarchyInitInfo(SessionInfo si, AjaxMemberSelectionOptions selectionOptions, object callback, object asyncState);\n\n\tAjaxMemberHierarchyInitInfo EndGetMemberHierarchyInitInfo(OnEndResult result);\n\n\tvoid GetMemberHierarchyInitInfoAsync(SessionInfo si, AjaxMemberSelectionOptions selectionOptions);\n\n\tvoid GetMemberHierarchyInitInfoAsync(SessionInfo si, AjaxMemberSelectionOptions selectionOptions, object userState);\n\n\tObservableCollection<MemberInfo> GetChildMembers(SessionInfo si, int cubeIdOrUnknown, int dimTypeId, int dimId, string filterText, int memberId);\n\n\tTask BeginGetChildMembers(SessionInfo si, int cubeIdOrUnknown, int dimTypeId, int dimId, string filterText, int memberId, object callback, object asyncState);\n\n\tObservableCollection<MemberInfo> EndGetChildMembers(OnEndResult result);\n\n\tvoid GetChildMembersAsync(SessionInfo si, int cubeIdOrUnknown, int dimTypeId, int dimId, string filterText, int memberId);\n\n\tvoid GetChildMembersAsync(SessionInfo si, int cubeIdOrUnknown, int dimTypeId, int dimId, string filterText, int memberId, object userState);\n\n\tObservableCollection<MemberInfo> GetAllMembers(SessionInfo si, DimPk dimPk, bool includeInheritedDims, DimDisplayOptions dimDisplayOptions);\n\n\tTask BeginGetAllMembers(SessionInfo si, DimPk dimPk, bool includeInheritedDims, DimDisplayOptions dimDisplayOptions, object callback, object asyncState);\n\n\tObservableCollection<MemberInfo> EndGetAllMembers(OnEndResult result);\n\n\tvoid GetAllMembersAsync(SessionInfo si, DimPk dimPk, bool includeInheritedDims, DimDisplayOptions dimDisplayOptions);\n\n\tvoid GetAllMembersAsync(SessionInfo si, DimPk dimPk, bool includeInheritedDims, DimDisplayOptions dimDisplayOptions, object userState);\n\n\tAjaxMemberSearchResult GetMemberSearchResult(SessionInfo si, int cubeIdOrUnknown, int dimTypeId, int dimId, string filterText, string searchText, AjaxMemberSearchType searchType);\n\n\tTask BeginGetMemberSearchResult(SessionInfo si, int cubeIdOrUnknown, int dimTypeId, int dimId, string filterText, string searchText, AjaxMemberSearchType searchType, object callback, object asyncState);\n\n\tAjaxMemberSearchResult EndGetMemberSearchResult(OnEndResult result);\n\n\tvoid GetMemberSearchResultAsync(SessionInfo si, int cubeIdOrUnknown, int dimTypeId, int dimId, string filterText, string searchText, AjaxMemberSearchType searchType);\n\n\tvoid GetMemberSearchResultAsync(SessionInfo si, int cubeIdOrUnknown, int dimTypeId, int dimId, string filterText, string searchText, AjaxMemberSearchType searchType, object userState);\n}"
+    }
+  ],
+  "structs": [],
+  "delegates": [],
+  "enums": []
+}

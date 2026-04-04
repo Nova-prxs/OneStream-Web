@@ -1,0 +1,229 @@
+{
+  "faq": [
+    {
+      "question": "How do I reference RestFast in my Business Rules?",
+      "answer": "1. In Workspace Assemblies: Add reference to 'Workspace.RESTAPIFramework.RESTAPIRequestManager'\n2. In general Business Rules: Add reference using 'isWsAssembly=true'\n3. Import: Imports Workspace.RESTAPIFramework.RESTAPIRequestManager.Classes\n4. You may also need to reference: RESTAPIFramework_SharedFunctions"
+    },
+    {
+      "question": "Where are saved requests stored?",
+      "answer": "Saved requests are stored in the OneStream Application database as custom table records. They are managed through the RESTFAST dashboard and can be accessed programmatically using Utils.GetSavedRequest(si, requestName)."
+    },
+    {
+      "question": "Can I use RestFast in Dashboard Extenders?",
+      "answer": "Yes! RestFast can be used in any Business Rule type (Finance, Dashboard Extender, Data Adapter, etc.). Simply reference the assembly and use the Utils class to execute saved requests or create new ones."
+    },
+    {
+      "question": "How do pagination work in RestFast?",
+      "answer": "RestFast supports two pagination methods:\n1. Auto-pagination: Set nextLinkKey to JSON path of next URL (e.g., 'pagination->next')\n2. Manual pagination: Set topParamName, skipParamName, and dataLimit for offset-based pagination\nThe GetDataTable() and PopulateTable() methods automatically handle pagination loops."
+    },
+    {
+      "question": "What authentication methods are supported?",
+      "answer": "RestFast supports:\n- Basic Authentication (username/password)\n- Bearer Token\n- API Key (header or query parameter)\n- OAuth 2.0 (all grant types: Client Credentials, Password, Authorization Code, Refresh Token, Device Code, Custom)\nOAuth includes automatic token refresh when expired."
+    },
+    {
+      "question": "Can I override variables at runtime?",
+      "answer": "Yes! Pass a Dictionary(Of String, String) to Execute(), GetDataTable(), or PopulateTable() methods:\nDim vars As New Dictionary(Of String, String) From {{\"key\", \"value\"}}\nrequest.Execute(vars)\nThis overrides default variables in the saved request."
+    },
+    {
+      "question": "How do I test my requests before using them in Business Rules?",
+      "answer": "Use the RESTFAST dashboard:\n1. Configure your request (endpoint, headers, auth, etc.)\n2. Click 'Test Request' icon\n3. View response in the Response panel\n4. Use response to configure dataKey and columnMappings\n5. Test 'Populate Table' before using in production"
+    },
+    {
+      "question": "What is the format for p_variables in Data Management Steps?",
+      "answer": "Format: [key1]=[value1],[key2]=[value2]\nExample: p_variables=[region]=[EMEA],[year]=[2024]\nNote: Use square brackets around both keys and values, comma-separated."
+    },
+    {
+      "question": "Can I use RestFast to call internal OneStream APIs?",
+      "answer": "RestFast is designed for external REST APIs. For internal OneStream operations, use native BRApi methods. However, you could technically call OneStream's REST API endpoints if needed."
+    },
+    {
+      "question": "How do I handle nested JSON in responses?",
+      "answer": "Use arrow notation (->) in:\n- dataKey: Navigate to data array (e.g., 'results->data->items')\n- nextLinkKey: Navigate to pagination URL (e.g., 'meta->pagination->next')\n- columnMappings keys: Navigate to nested properties (e.g., 'customer->details->name')"
+    },
+    {
+      "question": "What happens if API call fails?",
+      "answer": "The HttpResult object contains:\n- StatusCode: HTTP status code\n- Content: Response body (may contain error details)\n- Err: Exception message if request completely failed\nAlways check StatusCode before processing Content. Implement try-catch and retry logic for production."
+    },
+    {
+      "question": "Can I use variables in the request body?",
+      "answer": "Yes! Variables work in:\n- Endpoint URL\n- Query parameters (urlParams)\n- Headers\n- Body (both JSON string and key-value pairs)\nExample body: {\"customer\": \"{{customerId}}\", \"amount\": {{amount}}}"
+    },
+    {
+      "question": "How do column mappings work?",
+      "answer": "Column mappings map JSON response keys to custom table columns:\n- Source (key): JSON property name (can use arrow notation for nested)\n- Target (value): Custom table column name\n- ALL target table columns must be mapped, even if names match\nExample: {\"api_id\": \"CustomerID\", \"api_name\": \"CustomerName\"}"
+    },
+    {
+      "question": "Can I call RestFast from Cube Views or Dashboard Data Sets?",
+      "answer": "RestFast is best used in:\n- Finance Business Rules\n- Dashboard Extenders\n- Data Management Steps\n- Assembly Services\nFor Cube Views, consider using Finance Business Rules (Data Cells) that call RestFast. For Dashboard Data Sets, call RestFast in the GetDataSet function."
+    },
+    {
+      "question": "Is there a limit on response size?",
+      "answer": "No hard limit in RestFast, but be mindful of:\n- OneStream memory limits\n- Network timeouts (default 100 seconds)\n- Database transaction limits when populating tables\nFor large datasets, use pagination with reasonable page sizes (e.g., 100-1000 records per call)."
+    },
+    {
+      "question": "Can I use RestFast for file uploads?",
+      "answer": "Yes, RestFast supports multipart/form-data body type for file uploads. Configure:\n- bodyType: 'multipart/form-data'\n- body: Dictionary with file fields\nNote: This is more complex and may require custom code depending on API requirements."
+    },
+    {
+      "question": "How do I debug requests?",
+      "answer": "1. Use Test Request in RESTFAST dashboard to see raw response\n2. Log HttpResult properties in Business Rules: result.StatusCode, result.Content, result.GetFormattedHeaders()\n3. Check OneStream error logs for exceptions\n4. Use BRApi.ErrorLog.LogMessage() to log intermediate values\n5. Test endpoint in Postman/curl first to verify API behavior"
+    },
+    {
+      "question": "Can I schedule RestFast requests?",
+      "answer": "Yes! Use Data Management with RESTAPIFramework_PopulateTable BR:\n1. Create DM Sequence\n2. Add Step with RESTAPIFramework_PopulateTable\n3. Configure p_request_name parameter\n4. Schedule DM Sequence in workflow\nThis will automatically populate your custom table on schedule."
+    },
+    {
+      "question": "What's the difference between Execute, GetDataTable, and PopulateTable?",
+      "answer": "- Execute(): Returns raw HttpResult, you handle response parsing\n- GetDataTable(): Returns parsed DataTable, handles pagination, you handle data loading\n- PopulateTable(): Handles everything - pagination, parsing, loading to custom table\nUse Execute() for custom processing, GetDataTable() for programmatic data handling, PopulateTable() for simplest automation."
+    },
+    {
+      "question": "Can I use global variables across multiple requests?",
+      "answer": "Yes! Set global variables in RESTFAST dashboard Settings tab. These are available to all requests. Request-specific variables override globals."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "error": "Request not found: [requestName]",
+      "cause": "Saved request doesn't exist or name is misspelled",
+      "solution": "1. Check request name in RESTFAST dashboard\n2. Verify exact spelling (case-sensitive)\n3. Ensure request was saved successfully\n4. Check application context (requests are per-application)"
+    },
+    {
+      "error": "Method not allowed (405)",
+      "cause": "HTTP method doesn't match API requirements",
+      "solution": "1. Verify API documentation for correct method (GET/POST/PUT/DELETE)\n2. Check if endpoint requires specific method\n3. Some endpoints use POST for queries instead of GET"
+    },
+    {
+      "error": "Unauthorized (401) or Forbidden (403)",
+      "cause": "Authentication failed or insufficient permissions",
+      "solution": "1. Verify authentication credentials are correct\n2. Check if token/API key is expired\n3. Verify authentication type matches API requirements\n4. Check if API key has required permissions\n5. For OAuth, ensure scopes are correctly configured"
+    },
+    {
+      "error": "Bad Request (400)",
+      "cause": "Invalid request parameters or body",
+      "solution": "1. Check required parameters are provided\n2. Verify parameter data types\n3. Validate JSON body syntax\n4. Check Content-Type header matches body type\n5. Review API documentation for parameter requirements"
+    },
+    {
+      "error": "Cannot find column [columnName] in DataTable",
+      "cause": "Column mapping references non-existent JSON property",
+      "solution": "1. Test request in dashboard to see actual response structure\n2. Verify dataKey points to correct data array\n3. Check JSON property names (case-sensitive)\n4. Use arrow notation for nested properties: customer->details->name"
+    },
+    {
+      "error": "Table [tableName] does not exist",
+      "cause": "Custom table not created in OneStream",
+      "solution": "1. Create custom table in OneStream Application\n2. Verify table name matches exactly (case-sensitive)\n3. Ensure table has all columns referenced in columnMappings\n4. Check table columns have correct data types"
+    },
+    {
+      "error": "The remote server returned an error: (404) Not Found",
+      "cause": "API endpoint doesn't exist or URL is incorrect",
+      "solution": "1. Verify endpoint URL is complete and correct\n2. Check if variables are being replaced correctly\n3. Test endpoint in browser or Postman\n4. Verify API base URL and version\n5. Check if resource ID exists (for endpoints like /api/items/{id})"
+    },
+    {
+      "error": "Request timed out",
+      "cause": "API response taking too long",
+      "solution": "1. Check if API is slow or down\n2. Reduce page size for paginated requests\n3. Increase timeout if necessary (advanced configuration)\n4. Check network connectivity\n5. Verify API isn't rate limiting requests"
+    },
+    {
+      "error": "Variable {{varName}} not replaced",
+      "cause": "Variable not defined in variables dictionary",
+      "solution": "1. Define variable in request variables\n2. Pass variable in paramVariables parameter\n3. Set global variable in Settings\n4. Check variable name spelling in {{brackets}}"
+    },
+    {
+      "error": "Unable to cast object to Dictionary",
+      "cause": "Body type mismatch",
+      "solution": "1. Ensure bodyType matches body content\n2. For JSON strings, use bodyType='application/json' and body as String\n3. For form data, use bodyType='application/x-www-form-urlencoded' and body as Dictionary\n4. Check body format in saved request"
+    },
+    {
+      "error": "Pagination not working - only getting first page",
+      "cause": "nextLinkKey or pagination params misconfigured",
+      "solution": "1. Test request to see actual pagination structure\n2. Verify nextLinkKey path is correct (e.g., 'pagination->next')\n3. For manual pagination, ensure topParamName, skipParamName, and dataLimit are set\n4. Check if API returns nextLink as relative or absolute URL"
+    },
+    {
+      "error": "Rate limit exceeded (429)",
+      "cause": "Too many requests to API",
+      "solution": "1. Implement retry logic with delays\n2. Reduce frequency of requests\n3. Check API rate limit documentation\n4. Use pagination with smaller page sizes\n5. Coordinate with API provider for higher limits"
+    },
+    {
+      "error": "SSL/TLS error",
+      "cause": "Certificate validation issues",
+      "solution": "1. Verify API uses valid SSL certificate\n2. Check if OneStream server can reach API endpoint\n3. Verify network firewall rules\n4. Contact IT for certificate issues"
+    },
+    {
+      "error": "Assembly reference not found",
+      "cause": "RestFast assembly not referenced in Business Rule",
+      "solution": "1. Add reference to Workspace.RESTAPIFramework.RESTAPIRequestManager\n2. For Workspace BRs: Add as Workspace Assembly\n3. For Global BRs: Add with isWsAssembly=true\n4. Add import: Imports Workspace.RESTAPIFramework.RESTAPIRequestManager.Classes"
+    },
+    {
+      "error": "Data not appearing in custom table",
+      "cause": "Multiple possible causes",
+      "solution": "1. Verify dataKey points to correct data array\n2. Check columnMappings map all required table columns\n3. Ensure data types compatible between API and table\n4. Test PopulateTable from dashboard first\n5. Check OneStream error logs for detailed error messages"
+    }
+  ],
+  "best_practices": [
+    {
+      "title": "Always Test in Dashboard First",
+      "description": "Before using requests in Business Rules or DM Steps, test thoroughly in RESTFAST dashboard. Use Test Request to verify response structure and Populate Table to verify data loading."
+    },
+    {
+      "title": "Use Saved Requests",
+      "description": "Configure requests in dashboard rather than building programmatically. This makes maintenance easier and allows non-developers to modify configurations."
+    },
+    {
+      "title": "Implement Error Handling",
+      "description": "Always check HttpResult.StatusCode before processing response. Wrap calls in Try-Catch blocks. Log errors for debugging."
+    },
+    {
+      "title": "Use Pagination Wisely",
+      "description": "Set reasonable page sizes (100-1000 records). Use limit parameter in GetDataTable() to prevent infinite loops. Test pagination thoroughly."
+    },
+    {
+      "title": "Secure Credentials",
+      "description": "Never hardcode API keys or passwords. Use OneStream's secure storage mechanisms. Consider using environment-specific configurations."
+    },
+    {
+      "title": "Use Custom Tables as Staging",
+      "description": "Populate custom tables first, then transform and merge into dimension/fact tables. This allows validation and recovery if needed."
+    },
+    {
+      "title": "Log Everything",
+      "description": "Use BRApi.ErrorLog.LogMessage() to log request execution, row counts, errors. This helps debugging production issues."
+    },
+    {
+      "title": "Variable Naming Convention",
+      "description": "Use descriptive variable names. Document variables in request description. Use global variables for values shared across requests."
+    },
+    {
+      "title": "Monitor API Usage",
+      "description": "Be aware of API rate limits. Implement delays between requests if needed. Monitor API costs if applicable."
+    },
+    {
+      "title": "Version Control",
+      "description": "Export RestFast configuration regularly. Document request purposes and parameters. Track changes to requests."
+    }
+  ],
+  "performance_tips": [
+    {
+      "tip": "Use appropriate page sizes",
+      "description": "Too small = many API calls. Too large = timeouts. Start with 100-500 records per page."
+    },
+    {
+      "tip": "Limit pagination loops",
+      "description": "Use limit parameter in GetDataTable() to prevent excessive API calls during development/testing."
+    },
+    {
+      "tip": "Filter at API level",
+      "description": "Use API query parameters to filter data before retrieval rather than filtering after loading."
+    },
+    {
+      "tip": "Schedule during off-peak",
+      "description": "Run data loads during off-peak hours to minimize impact on OneStream performance and API rate limits."
+    },
+    {
+      "tip": "Use incremental loads",
+      "description": "If API supports it, use date filters to load only new/changed data rather than full extracts."
+    },
+    {
+      "tip": "Cache responses when appropriate",
+      "description": "For reference data that changes infrequently, consider caching responses rather than calling API repeatedly."
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "namespace": "OneStream.Client.SharedUI.MemberFilterEditorDlg",
+  "generated_at": "2025-12-08T19:28:51.664484",
+  "statistics": {
+    "classes": 0,
+    "interfaces": 0,
+    "structs": 0,
+    "delegates": 2,
+    "enums": 0,
+    "total_methods": 2,
+    "total_properties": 0
+  },
+  "classes": [],
+  "interfaces": [],
+  "structs": [],
+  "delegates": [
+    {
+      "name": "MemberFilterEditorDlgOnAfterOKDelegate",
+      "namespace": "OneStream.Client.SharedUI.MemberFilterEditorDlg",
+      "type": "delegate",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "Invoke",
+          "return_type": "void",
+          "parameters": [],
+          "access": "public",
+          "is_static": false,
+          "is_async": false,
+          "description": "Delegate invocation method returning void"
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/SharedUI/MemberFilterEditorDlg.cs"
+    },
+    {
+      "name": "MemberFilterEditorDlgOnAfterOKAsyncDelegate",
+      "namespace": "OneStream.Client.SharedUI.MemberFilterEditorDlg",
+      "type": "delegate",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "Invoke",
+          "return_type": "Task",
+          "parameters": [],
+          "access": "public",
+          "is_static": false,
+          "is_async": true,
+          "description": "Delegate invocation method returning Task"
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/SharedUI/MemberFilterEditorDlg.cs"
+    }
+  ],
+  "enums": []
+}

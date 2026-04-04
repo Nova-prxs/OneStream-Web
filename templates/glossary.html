@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% block title %}Glossary — OneStream Study Guide{% endblock %}
+{% block content %}
+
+<nav class="breadcrumb">
+  <a href="/">Home</a> &rsaquo;
+  <span>Glossary</span>
+</nav>
+
+<h1>Glossary <small>({{ terms|length }} terms)</small></h1>
+<p>All key OneStream terms extracted from the study guides. Click any term to jump to its chapter context.</p>
+
+<input type="search" id="glossary-search" placeholder="Filter terms..." oninput="filterGlossary()" autofocus>
+
+{# Alphabet quick-jump #}
+<div class="glossary-alpha" id="glossary-alpha"></div>
+
+<div id="glossary-count"><small>Showing {{ terms|length }} terms</small></div>
+
+<div class="glossary-list" id="glossary-list">
+  {% for term in terms %}
+  <div class="glossary-entry" data-term="{{ term.term | lower }}">
+    <div class="glossary-term">
+      <a href="/exam-prep/guide/{{ term.book_slug }}/{{ term.chapter_slug }}#{{ term.anchor }}">{{ term.term }}</a>
+    </div>
+    <div class="glossary-source">
+      <small>{{ term.book_title }} &rsaquo; {{ term.chapter_title }}</small>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<script>
+(function() {
+  var entries = document.querySelectorAll('.glossary-entry');
+  var searchInput = document.getElementById('glossary-search');
+  var countEl = document.getElementById('glossary-count');
+
+  // Build alphabet jump links
+  var letters = new Set();
+  entries.forEach(function(e) {
+    var first = e.dataset.term.charAt(0).toUpperCase();
+    if (/[A-Z]/.test(first)) letters.add(first);
+  });
+  var alphaEl = document.getElementById('glossary-alpha');
+  'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').forEach(function(letter) {
+    var span = document.createElement('span');
+    span.textContent = letter;
+    span.className = 'alpha-link' + (letters.has(letter) ? '' : ' alpha-disabled');
+    if (letters.has(letter)) {
+      span.onclick = function() {
+        searchInput.value = letter;
+        filterGlossary();
+        // Scroll to first match
+        var first = document.querySelector('.glossary-entry:not([style*="display: none"])');
+        if (first) first.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      };
+    }
+    alphaEl.appendChild(span);
+  });
+
+  window.filterGlossary = function() {
+    var query = searchInput.value.toLowerCase().trim();
+    var visible = 0;
+    entries.forEach(function(entry) {
+      var match = entry.dataset.term.indexOf(query) !== -1;
+      entry.style.display = match ? '' : 'none';
+      if (match) visible++;
+    });
+    countEl.innerHTML = '<small>Showing ' + visible + ' of ' + entries.length + ' terms</small>';
+  };
+})();
+</script>
+{% endblock %}

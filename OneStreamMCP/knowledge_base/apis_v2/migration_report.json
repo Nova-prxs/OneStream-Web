@@ -1,0 +1,28 @@
+{
+  "timestamp": "2025-11-30T19:47:18.320768",
+  "source": "../knowledge_base",
+  "destination": "../knowledge_base/apis_v2",
+  "migrated_files": [
+    {
+      "source": "../knowledge_base/restfast/RestFast_Classes.json",
+      "destination": "../knowledge_base/apis_v2/RestFast.json",
+      "type": "restfast_classes"
+    },
+    {
+      "source": "../knowledge_base/restfast/RestFast_Examples.json",
+      "destination": "../knowledge_base/apis_v2/RestFast_Examples.json",
+      "type": "restfast_examples"
+    },
+    {
+      "source": "../knowledge_base/onestream_apis_extended.json",
+      "destination": "Multiple namespace files",
+      "type": "extended_apis",
+      "namespaces": [
+        "OneStream.Shared.Interfaces",
+        "OneStream.Extended.APIs"
+      ]
+    }
+  ],
+  "skipped_files": [],
+  "errors": []
+}

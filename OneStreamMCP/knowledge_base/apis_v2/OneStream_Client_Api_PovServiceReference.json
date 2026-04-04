@@ -1,0 +1,6468 @@
+{
+  "namespace": "OneStream.Client.Api.PovServiceReference",
+  "generated_at": "2025-12-08T19:28:51.265934",
+  "statistics": {
+    "classes": 7,
+    "interfaces": 1,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 0,
+    "total_methods": 184,
+    "total_properties": 0
+  },
+  "classes": [
+    {
+      "name": "GetPovSelectInfoCompletedEventArgs",
+      "namespace": "OneStream.Client.Api.PovServiceReference",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "AsyncCompletedEventArgs",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "results",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "exception",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cancelled",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [
+        {
+          "name": "RaiseExceptionIfNecessary",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Raises exception if necessary",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Api/PovServiceReference/GetPovSelectInfoCompletedEventArgs.cs",
+      "source_code": "public class GetPovSelectInfoCompletedEventArgs : AsyncCompletedEventArgs\n{\n\tprivate object[] results;\n\n\tpublic AjaxPovSelectInfo Result\n\t{\n\t\tget\n\t\t{\n\t\t\tRaiseExceptionIfNecessary();\n\t\t\treturn (AjaxPovSelectInfo)results[0];\n\t\t}\n\t}\n\n\tpublic GetPovSelectInfoCompletedEventArgs(object[] results, Exception exception, bool cancelled, object userState)\n\t\t: base(exception, cancelled, userState)\n\t{\n\t\tthis.results = results;\n\t}\n}"
+    },
+    {
+      "name": "GetUserPovDisplayInfoFromXFFileSystemCompletedEventArgs",
+      "namespace": "OneStream.Client.Api.PovServiceReference",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "AsyncCompletedEventArgs",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "results",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "exception",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cancelled",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [
+        {
+          "name": "RaiseExceptionIfNecessary",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Raises exception if necessary",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Api/PovServiceReference/GetUserPovDisplayInfoFromXFFileSystemCompletedEventArgs.cs",
+      "source_code": "public class GetUserPovDisplayInfoFromXFFileSystemCompletedEventArgs : AsyncCompletedEventArgs\n{\n\tprivate object[] results;\n\n\tpublic PovDisplayInfo Result\n\t{\n\t\tget\n\t\t{\n\t\t\tRaiseExceptionIfNecessary();\n\t\t\treturn (PovDisplayInfo)results[0];\n\t\t}\n\t}\n\n\tpublic GetUserPovDisplayInfoFromXFFileSystemCompletedEventArgs(object[] results, Exception exception, bool cancelled, object userState)\n\t\t: base(exception, cancelled, userState)\n\t{\n\t\tthis.results = results;\n\t}\n}"
+    },
+    {
+      "name": "GetPovInfoFromDataCellPkCompletedEventArgs",
+      "namespace": "OneStream.Client.Api.PovServiceReference",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "AsyncCompletedEventArgs",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "results",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "exception",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cancelled",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [
+        {
+          "name": "RaiseExceptionIfNecessary",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Raises exception if necessary",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Api/PovServiceReference/GetPovInfoFromDataCellPkCompletedEventArgs.cs",
+      "source_code": "public class GetPovInfoFromDataCellPkCompletedEventArgs : AsyncCompletedEventArgs\n{\n\tprivate object[] results;\n\n\tpublic PovDisplayInfo Result\n\t{\n\t\tget\n\t\t{\n\t\t\tRaiseExceptionIfNecessary();\n\t\t\treturn (PovDisplayInfo)results[0];\n\t\t}\n\t}\n\n\tpublic GetPovInfoFromDataCellPkCompletedEventArgs(object[] results, Exception exception, bool cancelled, object userState)\n\t\t: base(exception, cancelled, userState)\n\t{\n\t\tthis.results = results;\n\t}\n}"
+    },
+    {
+      "name": "EnumChildMembersCompletedEventArgs",
+      "namespace": "OneStream.Client.Api.PovServiceReference",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "AsyncCompletedEventArgs",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "results",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "exception",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cancelled",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [
+        {
+          "name": "RaiseExceptionIfNecessary",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Raises exception if necessary",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Api/PovServiceReference/EnumChildMembersCompletedEventArgs.cs",
+      "source_code": "public class EnumChildMembersCompletedEventArgs : AsyncCompletedEventArgs\n{\n\tprivate object[] results;\n\n\tpublic ObservableCollection<AjaxMemberSummaryInfo> Result\n\t{\n\t\tget\n\t\t{\n\t\t\tRaiseExceptionIfNecessary();\n\t\t\treturn (ObservableCollection<AjaxMemberSummaryInfo>)results[0];\n\t\t}\n\t}\n\n\tpublic EnumChildMembersCompletedEventArgs(object[] results, Exception exception, bool cancelled, object userState)\n\t\t: base(exception, cancelled, userState)\n\t{\n\t\tthis.results = results;\n\t}\n}"
+    },
+    {
+      "name": "GetPovSearchResultCompletedEventArgs",
+      "namespace": "OneStream.Client.Api.PovServiceReference",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "AsyncCompletedEventArgs",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "results",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "exception",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cancelled",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [
+        {
+          "name": "RaiseExceptionIfNecessary",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Raises exception if necessary",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Api/PovServiceReference/GetPovSearchResultCompletedEventArgs.cs",
+      "source_code": "public class GetPovSearchResultCompletedEventArgs : AsyncCompletedEventArgs\n{\n\tprivate object[] results;\n\n\tpublic AjaxPovSearchResult Result\n\t{\n\t\tget\n\t\t{\n\t\t\tRaiseExceptionIfNecessary();\n\t\t\treturn (AjaxPovSearchResult)results[0];\n\t\t}\n\t}\n\n\tpublic GetPovSearchResultCompletedEventArgs(object[] results, Exception exception, bool cancelled, object userState)\n\t\t: base(exception, cancelled, userState)\n\t{\n\t\tthis.results = results;\n\t}\n}"
+    },
+    {
+      "name": "PovServiceClient",
+      "namespace": "OneStream.Client.Api.PovServiceReference",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "ClientBase<IPovServiceClient>",
+      "interfaces": [
+        "IPovServiceClient",
+        "IDisposable",
+        "IApiClient"
+      ],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "httpClientFactory",
+              "type": "IAuthenticatedHttpClientFactory",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "baseServerUri",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [
+        {
+          "name": "GetPovSelectInfo",
+          "return_type": "AjaxPovSelectInfo",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedCubeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedDimTypeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "filterText",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedMemberId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedMemberPath",
+              "type": "List<int>",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets pov select info",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "SessionInfo",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Sessions info",
+          "generic_params": [],
+          "overloads": 8
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "ex",
+              "type": "AggregateException",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 8
+        },
+        {
+          "name": "BeginGetPovSelectInfo",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedCubeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedDimTypeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "filterText",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedMemberId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedMemberPath",
+              "type": "List<int>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins get pov select info",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetPovSelectInfo",
+          "return_type": ">",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "selectedCubeId",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "selectedDimTypeId",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "filterText",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "selectedMemberId",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "selectedMemberPath",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets pov select info",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "antecedent.Result",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 14
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "OnEndResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 14
+        },
+        {
+          "name": "AsyncOperationContinuation",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "result",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "asyncState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Asyncs operation continuation",
+          "generic_params": [],
+          "overloads": 8
+        },
+        {
+          "name": "EndGetPovSelectInfo",
+          "return_type": "AjaxPovSelectInfo",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends get pov select info",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnBeginGetPovSelectInfo",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "inValues",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            }
+          ],
+          "description": "Ons begin get pov select info",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnEndGetPovSelectInfo",
+          "return_type": "object[]",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end get pov select info",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnGetPovSelectInfoCompleted",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "state",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons get pov select info completed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetPovSelectInfoCompletedEventArgs",
+          "return_type": "this, new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "e.Results",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Error",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Cancelled",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.UserState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets pov select info completed event args",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetPovSelectInfoAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedCubeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedDimTypeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "filterText",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedMemberId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedMemberPath",
+              "type": "List<int>",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets pov select info async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "GetPovSelectInfoAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "selectedCubeId",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "selectedDimTypeId",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "filterText",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "selectedMemberId",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "selectedMemberPath",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets pov select info async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "GetPovSelectInfoAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedCubeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedDimTypeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "filterText",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedMemberId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedMemberPath",
+              "type": "List<int>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets pov select info async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "InvokeAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "onBeginGetPovSelectInfoDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "si",
+              "type": "new object[6] {",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "selectedCubeId",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "selectedDimTypeId",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "filterText",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "selectedMemberId",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "}",
+              "type": "selectedMemberPath",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onEndGetPovSelectInfoDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onGetPovSelectInfoCompletedDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "userState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Invokes async",
+          "generic_params": [],
+          "overloads": 8
+        },
+        {
+          "name": "EnumChildMembers",
+          "return_type": "ObservableCollection<AjaxMemberSummaryInfo>",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedCubeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedDimTypeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedDimId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "memberId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Enums child members",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "SessionInfo",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Sessions info",
+          "generic_params": [],
+          "overloads": 8
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "ex",
+              "type": "AggregateException",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 8
+        },
+        {
+          "name": "BeginEnumChildMembers",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedCubeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedDimTypeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedDimId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "memberId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins enum child members",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EnumChildMembers",
+          "return_type": ">",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "selectedCubeId",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "selectedDimTypeId",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "selectedDimId",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "memberId",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Enums child members",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "antecedent.Result",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 14
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "OnEndResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 14
+        },
+        {
+          "name": "AsyncOperationContinuation",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "result",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "asyncState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Asyncs operation continuation",
+          "generic_params": [],
+          "overloads": 8
+        },
+        {
+          "name": "EndEnumChildMembers",
+          "return_type": "ObservableCollection<AjaxMemberSummaryInfo>",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends enum child members",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnBeginEnumChildMembers",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "inValues",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            }
+          ],
+          "description": "Ons begin enum child members",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnEndEnumChildMembers",
+          "return_type": "object[]",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end enum child members",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnEnumChildMembersCompleted",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "state",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons enum child members completed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EnumChildMembersCompletedEventArgs",
+          "return_type": "this, new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "e.Results",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Error",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Cancelled",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.UserState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Enums child members completed event args",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EnumChildMembersAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedCubeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedDimTypeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedDimId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "memberId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Enums child members async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "EnumChildMembersAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "selectedCubeId",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "selectedDimTypeId",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "selectedDimId",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "memberId",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Enums child members async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "EnumChildMembersAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedCubeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedDimTypeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedDimId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "memberId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Enums child members async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "InvokeAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "onBeginEnumChildMembersDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "si",
+              "type": "new object[5] {",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "selectedCubeId",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "selectedDimTypeId",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "selectedDimId",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "}",
+              "type": "memberId",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onEndEnumChildMembersDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onEnumChildMembersCompletedDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "userState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Invokes async",
+          "generic_params": [],
+          "overloads": 8
+        },
+        {
+          "name": "GetPovSearchResult",
+          "return_type": "AjaxPovSearchResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedCubeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedDimTypeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "filterText",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "searchText",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets pov search result",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "SessionInfo",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Sessions info",
+          "generic_params": [],
+          "overloads": 8
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "ex",
+              "type": "AggregateException",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 8
+        },
+        {
+          "name": "BeginGetPovSearchResult",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedCubeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedDimTypeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "filterText",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "searchText",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins get pov search result",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetPovSearchResult",
+          "return_type": ">",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "selectedCubeId",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "selectedDimTypeId",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "filterText",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "searchText",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets pov search result",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "antecedent.Result",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 14
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "OnEndResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 14
+        },
+        {
+          "name": "AsyncOperationContinuation",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "result",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "asyncState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Asyncs operation continuation",
+          "generic_params": [],
+          "overloads": 8
+        },
+        {
+          "name": "EndGetPovSearchResult",
+          "return_type": "AjaxPovSearchResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends get pov search result",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnBeginGetPovSearchResult",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "inValues",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            }
+          ],
+          "description": "Ons begin get pov search result",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnEndGetPovSearchResult",
+          "return_type": "object[]",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end get pov search result",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnGetPovSearchResultCompleted",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "state",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons get pov search result completed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetPovSearchResultCompletedEventArgs",
+          "return_type": "this, new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "e.Results",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Error",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Cancelled",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.UserState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets pov search result completed event args",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetPovSearchResultAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedCubeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedDimTypeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "filterText",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "searchText",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets pov search result async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "GetPovSearchResultAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "selectedCubeId",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "selectedDimTypeId",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "filterText",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "searchText",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets pov search result async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "GetPovSearchResultAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedCubeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedDimTypeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "filterText",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "searchText",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets pov search result async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "InvokeAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "onBeginGetPovSearchResultDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "si",
+              "type": "new object[5] {",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "selectedCubeId",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "selectedDimTypeId",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "filterText",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "}",
+              "type": "searchText",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onEndGetPovSearchResultDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onGetPovSearchResultCompletedDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "userState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Invokes async",
+          "generic_params": [],
+          "overloads": 8
+        },
+        {
+          "name": "GetUserPovDisplayInfoFromXFFileSystem",
+          "return_type": "PovDisplayInfo",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets user pov display info from x f file system",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "SessionInfo",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Sessions info",
+          "generic_params": [],
+          "overloads": 8
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "ex",
+              "type": "AggregateException",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 8
+        },
+        {
+          "name": "BeginGetUserPovDisplayInfoFromXFFileSystem",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins get user pov display info from x f file system",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetUserPovDisplayInfoFromXFFileSystem",
+          "return_type": ">",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets user pov display info from x f file system",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "antecedent.Result",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 14
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "OnEndResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 14
+        },
+        {
+          "name": "AsyncOperationContinuation",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "result",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "asyncState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Asyncs operation continuation",
+          "generic_params": [],
+          "overloads": 8
+        },
+        {
+          "name": "EndGetUserPovDisplayInfoFromXFFileSystem",
+          "return_type": "PovDisplayInfo",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends get user pov display info from x f file system",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnBeginGetUserPovDisplayInfoFromXFFileSystem",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "inValues",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            }
+          ],
+          "description": "Ons begin get user pov display info from x f file system",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnEndGetUserPovDisplayInfoFromXFFileSystem",
+          "return_type": "object[]",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end get user pov display info from x f file system",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnGetUserPovDisplayInfoFromXFFileSystemCompleted",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "state",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons get user pov display info from x f file system completed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetUserPovDisplayInfoFromXFFileSystemCompletedEventArgs",
+          "return_type": "this, new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "e.Results",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Error",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Cancelled",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.UserState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets user pov display info from x f file system completed event args",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetUserPovDisplayInfoFromXFFileSystemAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets user pov display info from x f file system async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "GetUserPovDisplayInfoFromXFFileSystemAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets user pov display info from x f file system async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "GetUserPovDisplayInfoFromXFFileSystemAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets user pov display info from x f file system async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "InvokeAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "onBeginGetUserPovDisplayInfoFromXFFileSystemDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "}",
+              "type": "new object[1] { si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onEndGetUserPovDisplayInfoFromXFFileSystemDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onGetUserPovDisplayInfoFromXFFileSystemCompletedDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "userState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Invokes async",
+          "generic_params": [],
+          "overloads": 8
+        },
+        {
+          "name": "SetUserPovInfoInXFFileSystem",
+          "return_type": "PovDisplayInfo",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cubeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "ajaxPovMemberUpdateInfos",
+              "type": "List<AjaxPovMemberUpdateInfo>",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Sets user pov info in x f file system",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "SessionInfo",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Sessions info",
+          "generic_params": [],
+          "overloads": 8
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "ex",
+              "type": "AggregateException",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 8
+        },
+        {
+          "name": "BeginSetUserPovInfoInXFFileSystem",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cubeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "ajaxPovMemberUpdateInfos",
+              "type": "List<AjaxPovMemberUpdateInfo>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins set user pov info in x f file system",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "SetUserPovInfoInXFFileSystem",
+          "return_type": ">",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "cubeId",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "ajaxPovMemberUpdateInfos",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Sets user pov info in x f file system",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "antecedent.Result",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 14
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "OnEndResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 14
+        },
+        {
+          "name": "AsyncOperationContinuation",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "result",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "asyncState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Asyncs operation continuation",
+          "generic_params": [],
+          "overloads": 8
+        },
+        {
+          "name": "EndSetUserPovInfoInXFFileSystem",
+          "return_type": "PovDisplayInfo",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends set user pov info in x f file system",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnBeginSetUserPovInfoInXFFileSystem",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "inValues",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            }
+          ],
+          "description": "Ons begin set user pov info in x f file system",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnEndSetUserPovInfoInXFFileSystem",
+          "return_type": "object[]",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end set user pov info in x f file system",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnSetUserPovInfoInXFFileSystemCompleted",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "state",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons set user pov info in x f file system completed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "SetUserPovInfoInXFFileSystemCompletedEventArgs",
+          "return_type": "this, new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "e.Results",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Error",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Cancelled",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.UserState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Sets user pov info in x f file system completed event args",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "SetUserPovInfoInXFFileSystemAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cubeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "ajaxPovMemberUpdateInfos",
+              "type": "List<AjaxPovMemberUpdateInfo>",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Sets user pov info in x f file system async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "SetUserPovInfoInXFFileSystemAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "cubeId",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "ajaxPovMemberUpdateInfos",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Sets user pov info in x f file system async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "SetUserPovInfoInXFFileSystemAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cubeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "ajaxPovMemberUpdateInfos",
+              "type": "List<AjaxPovMemberUpdateInfo>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Sets user pov info in x f file system async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "InvokeAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "onBeginSetUserPovInfoInXFFileSystemDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "si",
+              "type": "new object[3] {",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "cubeId",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "}",
+              "type": "ajaxPovMemberUpdateInfos",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onEndSetUserPovInfoInXFFileSystemDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onSetUserPovInfoInXFFileSystemCompletedDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "userState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Invokes async",
+          "generic_params": [],
+          "overloads": 8
+        },
+        {
+          "name": "GetPovInfoFromDataCellPk",
+          "return_type": "PovDisplayInfo",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "povDataCellPk",
+              "type": "DataCellPk",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "changeAllSettingToUnknownSetting",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets pov info from data cell pk",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "SessionInfo",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Sessions info",
+          "generic_params": [],
+          "overloads": 8
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "ex",
+              "type": "AggregateException",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 8
+        },
+        {
+          "name": "BeginGetPovInfoFromDataCellPk",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "povDataCellPk",
+              "type": "DataCellPk",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "changeAllSettingToUnknownSetting",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins get pov info from data cell pk",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetPovInfoFromDataCellPk",
+          "return_type": ">",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "povDataCellPk",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "changeAllSettingToUnknownSetting",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets pov info from data cell pk",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "antecedent.Result",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 14
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "OnEndResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 14
+        },
+        {
+          "name": "AsyncOperationContinuation",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "result",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "asyncState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Asyncs operation continuation",
+          "generic_params": [],
+          "overloads": 8
+        },
+        {
+          "name": "EndGetPovInfoFromDataCellPk",
+          "return_type": "PovDisplayInfo",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends get pov info from data cell pk",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnBeginGetPovInfoFromDataCellPk",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "inValues",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            }
+          ],
+          "description": "Ons begin get pov info from data cell pk",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnEndGetPovInfoFromDataCellPk",
+          "return_type": "object[]",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end get pov info from data cell pk",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnGetPovInfoFromDataCellPkCompleted",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "state",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons get pov info from data cell pk completed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetPovInfoFromDataCellPkCompletedEventArgs",
+          "return_type": "this, new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "e.Results",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Error",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Cancelled",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.UserState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets pov info from data cell pk completed event args",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetPovInfoFromDataCellPkAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "povDataCellPk",
+              "type": "DataCellPk",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "changeAllSettingToUnknownSetting",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets pov info from data cell pk async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "GetPovInfoFromDataCellPkAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "povDataCellPk",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "changeAllSettingToUnknownSetting",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets pov info from data cell pk async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "GetPovInfoFromDataCellPkAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "povDataCellPk",
+              "type": "DataCellPk",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "changeAllSettingToUnknownSetting",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets pov info from data cell pk async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "InvokeAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "onBeginGetPovInfoFromDataCellPkDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "si",
+              "type": "new object[3] {",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "povDataCellPk",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "}",
+              "type": "changeAllSettingToUnknownSetting",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onEndGetPovInfoFromDataCellPkDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onGetPovInfoFromDataCellPkCompletedDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "userState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Invokes async",
+          "generic_params": [],
+          "overloads": 8
+        },
+        {
+          "name": "SaveUserPovToFavorites",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "fileSystemLocation",
+              "type": "FileSystemLocation",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "fullFolderName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "fileName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Saves user pov to favorites",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "SessionInfo",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Sessions info",
+          "generic_params": [],
+          "overloads": 8
+        },
+        {
+          "name": "PostAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "\"SaveUserPovToFavorites\"",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "requestDto",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Posts async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "ex",
+              "type": "AggregateException",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 8
+        },
+        {
+          "name": "BeginSaveUserPovToFavorites",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "fileSystemLocation",
+              "type": "FileSystemLocation",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "fullFolderName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "fileName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins save user pov to favorites",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "SaveUserPovToFavorites",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "fileSystemLocation",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "fullFolderName",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "fileName",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Saves user pov to favorites",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "OnEndResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 14
+        },
+        {
+          "name": "AsyncOperationContinuation",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "result",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "asyncState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Asyncs operation continuation",
+          "generic_params": [],
+          "overloads": 8
+        },
+        {
+          "name": "EndSaveUserPovToFavorites",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends save user pov to favorites",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnBeginSaveUserPovToFavorites",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "inValues",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            }
+          ],
+          "description": "Ons begin save user pov to favorites",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnEndSaveUserPovToFavorites",
+          "return_type": "object[]",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end save user pov to favorites",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EndSaveUserPovToFavorites",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "result",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends save user pov to favorites",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnSaveUserPovToFavoritesCompleted",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "state",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons save user pov to favorites completed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "AsyncCompletedEventArgs",
+          "return_type": "this, new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "e.Error",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Cancelled",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.UserState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Asyncs completed event args",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "SaveUserPovToFavoritesAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "fileSystemLocation",
+              "type": "FileSystemLocation",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "fullFolderName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "fileName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Saves user pov to favorites async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "SaveUserPovToFavoritesAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "fileSystemLocation",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "fullFolderName",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "fileName",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Saves user pov to favorites async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "SaveUserPovToFavoritesAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "fileSystemLocation",
+              "type": "FileSystemLocation",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "fullFolderName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "fileName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Saves user pov to favorites async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "InvokeAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "onBeginSaveUserPovToFavoritesDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "si",
+              "type": "new object[4] {",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "fileSystemLocation",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "fullFolderName",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "}",
+              "type": "fileName",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onEndSaveUserPovToFavoritesDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onSaveUserPovToFavoritesCompletedDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "userState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Invokes async",
+          "generic_params": [],
+          "overloads": 8
+        },
+        {
+          "name": "SavePovAsInitialPovForNewUsers",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Saves pov as initial pov for new users",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "SessionInfo",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Sessions info",
+          "generic_params": [],
+          "overloads": 8
+        },
+        {
+          "name": "PostAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "\"SavePovAsInitialPovForNewUsers\"",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "requestDto",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Posts async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "ex",
+              "type": "AggregateException",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 8
+        },
+        {
+          "name": "BeginSavePovAsInitialPovForNewUsers",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins save pov as initial pov for new users",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "SavePovAsInitialPovForNewUsers",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Saves pov as initial pov for new users",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "OnEndResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 14
+        },
+        {
+          "name": "AsyncOperationContinuation",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "result",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "asyncState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Asyncs operation continuation",
+          "generic_params": [],
+          "overloads": 8
+        },
+        {
+          "name": "EndSavePovAsInitialPovForNewUsers",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends save pov as initial pov for new users",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnBeginSavePovAsInitialPovForNewUsers",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "inValues",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            }
+          ],
+          "description": "Ons begin save pov as initial pov for new users",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnEndSavePovAsInitialPovForNewUsers",
+          "return_type": "object[]",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end save pov as initial pov for new users",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EndSavePovAsInitialPovForNewUsers",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "result",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends save pov as initial pov for new users",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnSavePovAsInitialPovForNewUsersCompleted",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "state",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons save pov as initial pov for new users completed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "AsyncCompletedEventArgs",
+          "return_type": "this, new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "e.Error",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Cancelled",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.UserState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Asyncs completed event args",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "SavePovAsInitialPovForNewUsersAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Saves pov as initial pov for new users async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "SavePovAsInitialPovForNewUsersAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Saves pov as initial pov for new users async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "SavePovAsInitialPovForNewUsersAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Saves pov as initial pov for new users async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "InvokeAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "onBeginSavePovAsInitialPovForNewUsersDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "}",
+              "type": "new object[1] { si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onEndSavePovAsInitialPovForNewUsersDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onSavePovAsInitialPovForNewUsersCompletedDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "userState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Invokes async",
+          "generic_params": [],
+          "overloads": 8
+        }
+      ],
+      "events": [
+        {
+          "name": "GetPovSelectInfoCompleted",
+          "type": "EventHandler<GetPovSelectInfoCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "EnumChildMembersCompleted",
+          "type": "EventHandler<EnumChildMembersCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "GetPovSearchResultCompleted",
+          "type": "EventHandler<GetPovSearchResultCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "GetUserPovDisplayInfoFromXFFileSystemCompleted",
+          "type": "EventHandler<GetUserPovDisplayInfoFromXFFileSystemCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "SetUserPovInfoInXFFileSystemCompleted",
+          "type": "EventHandler<SetUserPovInfoInXFFileSystemCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "GetPovInfoFromDataCellPkCompleted",
+          "type": "EventHandler<GetPovInfoFromDataCellPkCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "SaveUserPovToFavoritesCompleted",
+          "type": "EventHandler<AsyncCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "SavePovAsInitialPovForNewUsersCompleted",
+          "type": "EventHandler<AsyncCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        }
+      ],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Api/PovServiceReference/PovServiceClient.cs"
+    },
+    {
+      "name": "SetUserPovInfoInXFFileSystemCompletedEventArgs",
+      "namespace": "OneStream.Client.Api.PovServiceReference",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "AsyncCompletedEventArgs",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "results",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "exception",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cancelled",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [
+        {
+          "name": "RaiseExceptionIfNecessary",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Raises exception if necessary",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Api/PovServiceReference/SetUserPovInfoInXFFileSystemCompletedEventArgs.cs",
+      "source_code": "public class SetUserPovInfoInXFFileSystemCompletedEventArgs : AsyncCompletedEventArgs\n{\n\tprivate object[] results;\n\n\tpublic PovDisplayInfo Result\n\t{\n\t\tget\n\t\t{\n\t\t\tRaiseExceptionIfNecessary();\n\t\t\treturn (PovDisplayInfo)results[0];\n\t\t}\n\t}\n\n\tpublic SetUserPovInfoInXFFileSystemCompletedEventArgs(object[] results, Exception exception, bool cancelled, object userState)\n\t\t: base(exception, cancelled, userState)\n\t{\n\t\tthis.results = results;\n\t}\n}"
+    }
+  ],
+  "interfaces": [
+    {
+      "name": "IPovServiceClient",
+      "namespace": "OneStream.Client.Api.PovServiceReference",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IDisposable",
+        "IApiClient"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "GetPovSelectInfo",
+          "return_type": "AjaxPovSelectInfo",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedCubeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedDimTypeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "filterText",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedMemberId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedMemberPath",
+              "type": "List<int>",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets pov select info",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "BeginGetPovSelectInfo",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedCubeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedDimTypeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "filterText",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedMemberId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedMemberPath",
+              "type": "List<int>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins get pov select info",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EndGetPovSelectInfo",
+          "return_type": "AjaxPovSelectInfo",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends get pov select info",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetPovSelectInfoAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedCubeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedDimTypeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "filterText",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedMemberId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedMemberPath",
+              "type": "List<int>",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets pov select info async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "GetPovSelectInfoAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedCubeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedDimTypeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "filterText",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedMemberId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedMemberPath",
+              "type": "List<int>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets pov select info async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "EnumChildMembers",
+          "return_type": "ObservableCollection<AjaxMemberSummaryInfo>",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedCubeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedDimTypeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedDimId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "memberId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Enums child members",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "BeginEnumChildMembers",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedCubeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedDimTypeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedDimId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "memberId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins enum child members",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EndEnumChildMembers",
+          "return_type": "ObservableCollection<AjaxMemberSummaryInfo>",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends enum child members",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EnumChildMembersAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedCubeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedDimTypeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedDimId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "memberId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Enums child members async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "EnumChildMembersAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedCubeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedDimTypeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedDimId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "memberId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Enums child members async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "GetPovSearchResult",
+          "return_type": "AjaxPovSearchResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedCubeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedDimTypeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "filterText",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "searchText",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets pov search result",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "BeginGetPovSearchResult",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedCubeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedDimTypeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "filterText",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "searchText",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins get pov search result",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EndGetPovSearchResult",
+          "return_type": "AjaxPovSearchResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends get pov search result",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetPovSearchResultAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedCubeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedDimTypeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "filterText",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "searchText",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets pov search result async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "GetPovSearchResultAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedCubeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedDimTypeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "filterText",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "searchText",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets pov search result async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "GetUserPovDisplayInfoFromXFFileSystem",
+          "return_type": "PovDisplayInfo",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets user pov display info from x f file system",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "BeginGetUserPovDisplayInfoFromXFFileSystem",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins get user pov display info from x f file system",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EndGetUserPovDisplayInfoFromXFFileSystem",
+          "return_type": "PovDisplayInfo",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends get user pov display info from x f file system",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetUserPovDisplayInfoFromXFFileSystemAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets user pov display info from x f file system async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "GetUserPovDisplayInfoFromXFFileSystemAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets user pov display info from x f file system async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "SetUserPovInfoInXFFileSystem",
+          "return_type": "PovDisplayInfo",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cubeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "ajaxPovMemberUpdateInfos",
+              "type": "List<AjaxPovMemberUpdateInfo>",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Sets user pov info in x f file system",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "BeginSetUserPovInfoInXFFileSystem",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cubeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "ajaxPovMemberUpdateInfos",
+              "type": "List<AjaxPovMemberUpdateInfo>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins set user pov info in x f file system",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EndSetUserPovInfoInXFFileSystem",
+          "return_type": "PovDisplayInfo",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends set user pov info in x f file system",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "SetUserPovInfoInXFFileSystemAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cubeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "ajaxPovMemberUpdateInfos",
+              "type": "List<AjaxPovMemberUpdateInfo>",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Sets user pov info in x f file system async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "SetUserPovInfoInXFFileSystemAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cubeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "ajaxPovMemberUpdateInfos",
+              "type": "List<AjaxPovMemberUpdateInfo>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Sets user pov info in x f file system async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "GetPovInfoFromDataCellPk",
+          "return_type": "PovDisplayInfo",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "povDataCellPk",
+              "type": "DataCellPk",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "changeAllSettingToUnknownSetting",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets pov info from data cell pk",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "BeginGetPovInfoFromDataCellPk",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "povDataCellPk",
+              "type": "DataCellPk",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "changeAllSettingToUnknownSetting",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins get pov info from data cell pk",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EndGetPovInfoFromDataCellPk",
+          "return_type": "PovDisplayInfo",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends get pov info from data cell pk",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetPovInfoFromDataCellPkAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "povDataCellPk",
+              "type": "DataCellPk",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "changeAllSettingToUnknownSetting",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets pov info from data cell pk async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "GetPovInfoFromDataCellPkAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "povDataCellPk",
+              "type": "DataCellPk",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "changeAllSettingToUnknownSetting",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets pov info from data cell pk async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "SaveUserPovToFavorites",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "fileSystemLocation",
+              "type": "FileSystemLocation",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "fullFolderName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "fileName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Saves user pov to favorites",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "BeginSaveUserPovToFavorites",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "fileSystemLocation",
+              "type": "FileSystemLocation",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "fullFolderName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "fileName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins save user pov to favorites",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EndSaveUserPovToFavorites",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends save user pov to favorites",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "SaveUserPovToFavoritesAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "fileSystemLocation",
+              "type": "FileSystemLocation",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "fullFolderName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "fileName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Saves user pov to favorites async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "SaveUserPovToFavoritesAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "fileSystemLocation",
+              "type": "FileSystemLocation",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "fullFolderName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "fileName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Saves user pov to favorites async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "SavePovAsInitialPovForNewUsers",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Saves pov as initial pov for new users",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "BeginSavePovAsInitialPovForNewUsers",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins save pov as initial pov for new users",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EndSavePovAsInitialPovForNewUsers",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends save pov as initial pov for new users",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "SavePovAsInitialPovForNewUsersAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Saves pov as initial pov for new users async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "SavePovAsInitialPovForNewUsersAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Saves pov as initial pov for new users async",
+          "generic_params": [],
+          "overloads": 2
+        }
+      ],
+      "events": [
+        {
+          "name": "GetPovSelectInfoCompleted",
+          "type": "EventHandler<GetPovSelectInfoCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "EnumChildMembersCompleted",
+          "type": "EventHandler<EnumChildMembersCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "GetPovSearchResultCompleted",
+          "type": "EventHandler<GetPovSearchResultCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "GetUserPovDisplayInfoFromXFFileSystemCompleted",
+          "type": "EventHandler<GetUserPovDisplayInfoFromXFFileSystemCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "SetUserPovInfoInXFFileSystemCompleted",
+          "type": "EventHandler<SetUserPovInfoInXFFileSystemCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "GetPovInfoFromDataCellPkCompleted",
+          "type": "EventHandler<GetPovInfoFromDataCellPkCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "SaveUserPovToFavoritesCompleted",
+          "type": "EventHandler<AsyncCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "SavePovAsInitialPovForNewUsersCompleted",
+          "type": "EventHandler<AsyncCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        }
+      ],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Api/PovServiceReference/IPovServiceClient.cs",
+      "source_code": "public interface IPovServiceClient : IDisposable, IApiClient\n{\n\tevent EventHandler<GetPovSelectInfoCompletedEventArgs> GetPovSelectInfoCompleted;\n\n\tevent EventHandler<EnumChildMembersCompletedEventArgs> EnumChildMembersCompleted;\n\n\tevent EventHandler<GetPovSearchResultCompletedEventArgs> GetPovSearchResultCompleted;\n\n\tevent EventHandler<GetUserPovDisplayInfoFromXFFileSystemCompletedEventArgs> GetUserPovDisplayInfoFromXFFileSystemCompleted;\n\n\tevent EventHandler<SetUserPovInfoInXFFileSystemCompletedEventArgs> SetUserPovInfoInXFFileSystemCompleted;\n\n\tevent EventHandler<GetPovInfoFromDataCellPkCompletedEventArgs> GetPovInfoFromDataCellPkCompleted;\n\n\tevent EventHandler<AsyncCompletedEventArgs> SaveUserPovToFavoritesCompleted;\n\n\tevent EventHandler<AsyncCompletedEventArgs> SavePovAsInitialPovForNewUsersCompleted;\n\n\tAjaxPovSelectInfo GetPovSelectInfo(SessionInfo si, int selectedCubeId, int selectedDimTypeId, string filterText, int selectedMemberId, List<int> selectedMemberPath);\n\n\tTask BeginGetPovSelectInfo(SessionInfo si, int selectedCubeId, int selectedDimTypeId, string filterText, int selectedMemberId, List<int> selectedMemberPath, object callback, object asyncState);\n\n\tAjaxPovSelectInfo EndGetPovSelectInfo(OnEndResult result);\n\n\tvoid GetPovSelectInfoAsync(SessionInfo si, int selectedCubeId, int selectedDimTypeId, string filterText, int selectedMemberId, List<int> selectedMemberPath);\n\n\tvoid GetPovSelectInfoAsync(SessionInfo si, int selectedCubeId, int selectedDimTypeId, string filterText, int selectedMemberId, List<int> selectedMemberPath, object userState);\n\n\tObservableCollection<AjaxMemberSummaryInfo> EnumChildMembers(SessionInfo si, int selectedCubeId, int selectedDimTypeId, int selectedDimId, int memberId);\n\n\tTask BeginEnumChildMembers(SessionInfo si, int selectedCubeId, int selectedDimTypeId, int selectedDimId, int memberId, object callback, object asyncState);\n\n\tObservableCollection<AjaxMemberSummaryInfo> EndEnumChildMembers(OnEndResult result);\n\n\tvoid EnumChildMembersAsync(SessionInfo si, int selectedCubeId, int selectedDimTypeId, int selectedDimId, int memberId);\n\n\tvoid EnumChildMembersAsync(SessionInfo si, int selectedCubeId, int selectedDimTypeId, int selectedDimId, int memberId, object userState);\n\n\tAjaxPovSearchResult GetPovSearchResult(SessionInfo si, int selectedCubeId, int selectedDimTypeId, string filterText, string searchText);\n\n\tTask BeginGetPovSearchResult(SessionInfo si, int selectedCubeId, int selectedDimTypeId, string filterText, string searchText, object callback, object asyncState);\n\n\tAjaxPovSearchResult EndGetPovSearchResult(OnEndResult result);\n\n\tvoid GetPovSearchResultAsync(SessionInfo si, int selectedCubeId, int selectedDimTypeId, string filterText, string searchText);\n\n\tvoid GetPovSearchResultAsync(SessionInfo si, int selectedCubeId, int selectedDimTypeId, string filterText, string searchText, object userState);\n\n\tPovDisplayInfo GetUserPovDisplayInfoFromXFFileSystem(SessionInfo si);\n\n\tTask BeginGetUserPovDisplayInfoFromXFFileSystem(SessionInfo si, object callback, object asyncState);\n\n\tPovDisplayInfo EndGetUserPovDisplayInfoFromXFFileSystem(OnEndResult result);\n\n\tvoid GetUserPovDisplayInfoFromXFFileSystemAsync(SessionInfo si);\n\n\tvoid GetUserPovDisplayInfoFromXFFileSystemAsync(SessionInfo si, object userState);\n\n\tPovDisplayInfo SetUserPovInfoInXFFileSystem(SessionInfo si, int cubeId, List<AjaxPovMemberUpdateInfo> ajaxPovMemberUpdateInfos);\n\n\tTask BeginSetUserPovInfoInXFFileSystem(SessionInfo si, int cubeId, List<AjaxPovMemberUpdateInfo> ajaxPovMemberUpdateInfos, object callback, object asyncState);\n\n\tPovDisplayInfo EndSetUserPovInfoInXFFileSystem(OnEndResult result);\n\n\tvoid SetUserPovInfoInXFFileSystemAsync(SessionInfo si, int cubeId, List<AjaxPovMemberUpdateInfo> ajaxPovMemberUpdateInfos);\n\n\tvoid SetUserPovInfoInXFFileSystemAsync(SessionInfo si, int cubeId, List<AjaxPovMemberUpdateInfo> ajaxPovMemberUpdateInfos, object userState);\n\n\tPovDisplayInfo GetPovInfoFromDataCellPk(SessionInfo si, DataCellPk povDataCellPk, bool changeAllSettingToUnknownSetting);\n\n\tTask BeginGetPovInfoFromDataCellPk(SessionInfo si, DataCellPk povDataCellPk, bool changeAllSettingToUnknownSetting, object callback, object asyncState);\n\n\tPovDisplayInfo EndGetPovInfoFromDataCellPk(OnEndResult result);\n\n\tvoid GetPovInfoFromDataCellPkAsync(SessionInfo si, DataCellPk povDataCellPk, bool changeAllSettingToUnknownSetting);\n\n\tvoid GetPovInfoFromDataCellPkAsync(SessionInfo si, DataCellPk povDataCellPk, bool changeAllSettingToUnknownSetting, object userState);\n\n\tvoid SaveUserPovToFavorites(SessionInfo si, FileSystemLocation fileSystemLocation, string fullFolderName, string fileName);\n\n\tTask BeginSaveUserPovToFavorites(SessionInfo si, FileSystemLocation fileSystemLocation, string fullFolderName, string fileName, object callback, object asyncState);\n\n\tvoid EndSaveUserPovToFavorites(OnEndResult result);\n\n\tvoid SaveUserPovToFavoritesAsync(SessionInfo si, FileSystemLocation fileSystemLocation, string fullFolderName, string fileName);\n\n\tvoid SaveUserPovToFavoritesAsync(SessionInfo si, FileSystemLocation fileSystemLocation, string fullFolderName, string fileName, object userState);\n\n\tvoid SavePovAsInitialPovForNewUsers(SessionInfo si);\n\n\tTask BeginSavePovAsInitialPovForNewUsers(SessionInfo si, object callback, object asyncState);\n\n\tvoid EndSavePovAsInitialPovForNewUsers(OnEndResult result);\n\n\tvoid SavePovAsInitialPovForNewUsersAsync(SessionInfo si);\n\n\tvoid SavePovAsInitialPovForNewUsersAsync(SessionInfo si, object userState);\n}"
+    }
+  ],
+  "structs": [],
+  "delegates": [],
+  "enums": []
+}

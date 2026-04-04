@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block title %}{% if query %}Search: {{ query }}{% else %}Search{% endif %} — OneStream Study Guide{% endblock %}
+
+{% block content %}
+<h1>Search</h1>
+
+<form action="/exam-prep/search" method="get" role="search" id="search-form">
+  <input type="search" name="q" id="search-input" placeholder="Search across all 60 chapters..." aria-label="Search" value="{{ query }}" autofocus>
+</form>
+
+<div id="search-results">
+{% if not query %}
+  <p>Enter a search term to find topics across all 60 chapters.</p>
+{% elif results %}
+  <p>Found {{ results|length }} result{{ 's' if results|length != 1 }} for &ldquo;{{ query }}&rdquo;</p>
+  {% for r in results %}
+  <article class="search-result">
+    {% set book_slug = r.file_key.split('/')[0] %}
+    {% set chapter_slug = r.file_key.split('/')[1].replace('.md', '') %}
+    <header>
+      <h3><a href="/exam-prep/guide/{{ book_slug }}/{{ chapter_slug }}">{{ r.title }}</a></h3>
+      <small>{{ r.book_title }}</small>
+    </header>
+    <p>{{ r.snippet | safe }}</p>
+  </article>
+  {% endfor %}
+{% else %}
+  <p>No results found for &ldquo;{{ query }}&rdquo;.</p>
+{% endif %}
+</div>
+
+<script>
+(function() {
+  var input = document.getElementById('search-input');
+  var timer = null;
+
+  input.addEventListener('input', function() {
+    clearTimeout(timer);
+    var q = input.value.trim();
+    if (q.length < 2) return;
+    timer = setTimeout(function() {
+      // Update URL without full reload for instant feel
+      var url = '/exam-prep/search?q=' + encodeURIComponent(q);
+      fetch(url, { headers: { 'X-Requested-With': 'XMLHttpRequest' } })
+        .then(function(r) { return r.text(); })
+        .then(function(html) {
+          // Extract search-results content from response
+          var parser = new DOMParser();
+          var doc = parser.parseFromString(html, 'text/html');
+          var newResults = doc.getElementById('search-results');
+          if (newResults) {
+            document.getElementById('search-results').innerHTML = newResults.innerHTML;
+          }
+          // Update URL bar
+          history.replaceState(null, '', url);
+        })
+        .catch(function() {});
+    }, 300);
+  });
+})();
+</script>
+{% endblock %}

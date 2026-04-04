@@ -1,0 +1,1234 @@
+[
+  {
+    "file": "FSK_ConsolidationRule.vb",
+    "namespace": "OneStream.BusinessRule.Finance.FSK_ConsolidationRule",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "System.Collections.Concurrent",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "FinanceRulesApi"
+      },
+      {
+        "name": "args",
+        "type": "FinanceRulesArgs"
+      }
+    ],
+    "return_type": null
+  },
+  {
+    "file": "BDG_WCAP.vb",
+    "namespace": "OneStream.BusinessRule.Finance.BDG_WCAP",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "FinanceRulesApi"
+      },
+      {
+        "name": "args",
+        "type": "FinanceRulesArgs"
+      }
+    ],
+    "return_type": "Object"
+  },
+  {
+    "file": "ALL_AllocationCalc_Inge.vb",
+    "namespace": "OneStream.BusinessRule.Finance.ALL_AllocationCalc_inge",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "System",
+      "System.Windows.Forms",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "FinanceRulesApi"
+      },
+      {
+        "name": "args",
+        "type": "FinanceRulesArgs"
+      }
+    ],
+    "return_type": "Object"
+  },
+  {
+    "file": "RESTAPIFramework_SharedFunctions.vb",
+    "namespace": "OneStream.BusinessRule.Finance.RESTAPIFramework_SharedFunctions",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "DocumentFormat.OpenXml",
+      "OneStream.Shared.Common",
+      "System.IO",
+      "OneStream.Shared.Wcf",
+      "OneStream.Finance.Engine",
+      "System.Linq",
+      "System.Collections.Generic",
+      "System.Data",
+      "OneStream.Stage.Database",
+      "DocumentFormat.OpenXml.Packaging",
+      "Microsoft.VisualBasic",
+      "OneStream.Finance.Database",
+      "System.Data.Common",
+      "DocumentFormat.OpenXml.Spreadsheet",
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "OneStream.Stage.Engine",
+      "System",
+      "System.Text.RegularExpressions",
+      "OneStream.Shared.Database"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "Object"
+      },
+      {
+        "name": "args",
+        "type": "ExtenderArgs"
+      }
+    ],
+    "return_type": "Object"
+  },
+  {
+    "file": "MemberListICEntities.vb",
+    "namespace": "OneStream.BusinessRule.Finance.MemberListICEntities",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "FinanceRulesApi"
+      },
+      {
+        "name": "args",
+        "type": "FinanceRulesArgs"
+      }
+    ],
+    "return_type": "Object"
+  },
+  {
+    "file": "BudgetCopyV2.vb",
+    "namespace": "OneStream.BusinessRule.Finance.BudgetCopyV2",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "FinanceRulesApi"
+      },
+      {
+        "name": "args",
+        "type": "FinanceRulesArgs"
+      }
+    ],
+    "return_type": "Object"
+  },
+  {
+    "file": "MemberFormulas.vb",
+    "namespace": "OneStream.BusinessRule.Finance.MemberFormulas",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "FinanceRulesApi"
+      },
+      {
+        "name": "args",
+        "type": "FinanceRulesArgs"
+      }
+    ],
+    "return_type": "Object"
+  },
+  {
+    "file": "CashFlow_MapMembers.vb",
+    "namespace": "OneStream.BusinessRule.Finance.CashFlow_MapMembers",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "FinanceRulesApi"
+      },
+      {
+        "name": "args",
+        "type": "FinanceRulesArgs"
+      }
+    ],
+    "return_type": "Object"
+  },
+  {
+    "file": "Scenario_Block.vb",
+    "namespace": "OneStream.BusinessRule.Finance.Scenario_Block",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "FinanceRulesApi"
+      },
+      {
+        "name": "args",
+        "type": "FinanceRulesArgs"
+      }
+    ],
+    "return_type": "Object"
+  },
+  {
+    "file": "CopyFlows.vb",
+    "namespace": "OneStream.BusinessRule.Finance.CopyFlows",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "FinanceRulesApi"
+      },
+      {
+        "name": "args",
+        "type": "FinanceRulesArgs"
+      }
+    ],
+    "return_type": "Object"
+  },
+  {
+    "file": "CFX_FinanceHelper.vb",
+    "namespace": "OneStream.BusinessRule.Finance.CFX_FinanceHelper",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "System",
+      "System.Windows.Forms",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "FinanceRulesApi"
+      },
+      {
+        "name": "args",
+        "type": "FinanceRulesArgs"
+      }
+    ],
+    "return_type": null
+  },
+  {
+    "file": "FCST_WCAP.vb",
+    "namespace": "OneStream.BusinessRule.Finance.FCST_WCAP",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "FinanceRulesApi"
+      },
+      {
+        "name": "args",
+        "type": "FinanceRulesArgs"
+      }
+    ],
+    "return_type": "Object"
+  },
+  {
+    "file": "HRS_Utilities.vb",
+    "namespace": "OneStream.BusinessRule.Finance.HRS_Utilities",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "FinanceRulesApi"
+      },
+      {
+        "name": "args",
+        "type": "FinanceRulesArgs"
+      }
+    ],
+    "return_type": "Object"
+  },
+  {
+    "file": "Copy_Allocations.vb",
+    "namespace": "OneStream.BusinessRule.Finance.Copy_Allocations",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "FinanceRulesApi"
+      },
+      {
+        "name": "args",
+        "type": "FinanceRulesArgs"
+      }
+    ],
+    "return_type": "Object"
+  },
+  {
+    "file": "MemberSiblingAccounts.vb",
+    "namespace": "OneStream.BusinessRule.Finance.MemberSiblingAccounts",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "FinanceRulesApi"
+      },
+      {
+        "name": "args",
+        "type": "FinanceRulesArgs"
+      }
+    ],
+    "return_type": "Object"
+  },
+  {
+    "file": "BDG_All.vb",
+    "namespace": "OneStream.BusinessRule.Finance.BDG_All",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "FinanceRulesApi"
+      },
+      {
+        "name": "args",
+        "type": "FinanceRulesArgs"
+      }
+    ],
+    "return_type": "Object"
+  },
+  {
+    "file": "VariableRepository.vb",
+    "namespace": "OneStream.BusinessRule.Finance.VariableRepository",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "System",
+      "System.Windows.Forms",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": null,
+    "parameters": [],
+    "return_type": null
+  },
+  {
+    "file": "SHARED_DashboardFuncs.vb",
+    "namespace": "OneStream.BusinessRule.Finance.SHARED_DashboardFuncs",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "FinanceRulesApi"
+      },
+      {
+        "name": "args",
+        "type": "FinanceRulesArgs"
+      }
+    ],
+    "return_type": "Object"
+  },
+  {
+    "file": "MemberListICAccounts.vb",
+    "namespace": "OneStream.BusinessRule.Finance.MemberListICAccounts",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "FinanceRulesApi"
+      },
+      {
+        "name": "args",
+        "type": "FinanceRulesArgs"
+      }
+    ],
+    "return_type": "Object"
+  },
+  {
+    "file": "FCST_ALL.vb",
+    "namespace": "OneStream.BusinessRule.Finance.FCST_ALL",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "FinanceRulesApi"
+      },
+      {
+        "name": "args",
+        "type": "FinanceRulesArgs"
+      }
+    ],
+    "return_type": "Object"
+  },
+  {
+    "file": "UTI_SharedFunctions.vb",
+    "namespace": "OneStream.BusinessRule.Finance.UTI_SharedFunctions",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "DocumentFormat.OpenXml",
+      "OneStream.Shared.Common",
+      "System.IO",
+      "OneStream.Shared.Wcf",
+      "OneStream.Finance.Engine",
+      "System.Linq",
+      "System.Collections.Generic",
+      "System.Data",
+      "OneStream.Stage.Database",
+      "DocumentFormat.OpenXml.Packaging",
+      "Microsoft.VisualBasic",
+      "OneStream.Finance.Database",
+      "System.Data.Common",
+      "DocumentFormat.OpenXml.Spreadsheet",
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "OneStream.Stage.Engine",
+      "System",
+      "System.Text.RegularExpressions",
+      "OneStream.Shared.Database"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "Object"
+      },
+      {
+        "name": "args",
+        "type": "ExtenderArgs"
+      }
+    ],
+    "return_type": "Object"
+  },
+  {
+    "file": "SQL_Truncate_data.vb",
+    "namespace": "OneStream.BusinessRule.Finance.SQL_Truncate_data",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "FinanceRulesApi"
+      },
+      {
+        "name": "args",
+        "type": "FinanceRulesArgs"
+      }
+    ],
+    "return_type": "Object"
+  },
+  {
+    "file": "FSK_OpeningScenario.vb",
+    "namespace": "OneStream.BusinessRule.Finance.FSK_OpeningScenario",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "FinanceRulesApi"
+      },
+      {
+        "name": "args",
+        "type": "FinanceRulesArgs"
+      }
+    ],
+    "return_type": "Object"
+  },
+  {
+    "file": "BDG_BudgetCalc.vb",
+    "namespace": "OneStream.BusinessRule.Finance.BDG_BudgetCalc",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "FinanceRulesApi"
+      },
+      {
+        "name": "args",
+        "type": "FinanceRulesArgs"
+      }
+    ],
+    "return_type": "Object"
+  },
+  {
+    "file": "ALL_AllocationCalc.vb",
+    "namespace": "OneStream.BusinessRule.Finance.ALL_AllocationCalc",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "System",
+      "System.Windows.Forms",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "FinanceRulesApi"
+      },
+      {
+        "name": "args",
+        "type": "FinanceRulesArgs"
+      }
+    ],
+    "return_type": "Object"
+  },
+  {
+    "file": "NOVA_FIN_Calcs.vb",
+    "namespace": "OneStream.BusinessRule.Finance.NOVA_FIN_Calcs",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "FinanceRulesApi"
+      },
+      {
+        "name": "args",
+        "type": "FinanceRulesArgs"
+      }
+    ],
+    "return_type": "Object"
+  },
+  {
+    "file": "CopyRF06_temp.vb",
+    "namespace": "OneStream.BusinessRule.Finance.CopyRF06_temp",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "FinanceRulesApi"
+      },
+      {
+        "name": "args",
+        "type": "FinanceRulesArgs"
+      }
+    ],
+    "return_type": "Object"
+  },
+  {
+    "file": "Business rules/UTI_sharedFunctions.vb",
+    "namespace": "OneStream.BusinessRule.Finance.UTI_SharedFunctions",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "DocumentFormat.OpenXml",
+      "OneStream.Shared.Common",
+      "System.IO",
+      "OneStream.Shared.Wcf",
+      "OneStream.Finance.Engine",
+      "System.Linq",
+      "System.Collections.Generic",
+      "System.Data",
+      "OneStream.Stage.Database",
+      "DocumentFormat.OpenXml.Packaging",
+      "Microsoft.VisualBasic",
+      "OneStream.Finance.Database",
+      "System.Data.Common",
+      "DocumentFormat.OpenXml.Spreadsheet",
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "OneStream.Stage.Engine",
+      "System",
+      "System.Text.RegularExpressions",
+      "OneStream.Shared.Database"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "Object"
+      },
+      {
+        "name": "args",
+        "type": "ExtenderArgs"
+      }
+    ],
+    "return_type": "Object"
+  }
+]

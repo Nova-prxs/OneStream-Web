@@ -1,0 +1,72 @@
+{
+  "namespace": "My.Resources",
+  "generated_at": "2025-12-08T19:28:51.063247",
+  "statistics": {
+    "classes": 1,
+    "interfaces": 0,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 0,
+    "total_methods": 1,
+    "total_properties": 0
+  },
+  "classes": [
+    {
+      "name": "Resources",
+      "namespace": "My.Resources",
+      "type": "class",
+      "modifiers": [
+        "internal",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "ResourceManager",
+          "return_type": "ResourceManager",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": ".Resources\"",
+              "type": "\"\\r\\n",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "typeof(Resources",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Resources manager",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [
+        "StandardModule",
+        "GeneratedCode",
+        "DebuggerNonUserCode",
+        "CompilerGenerated",
+        "HideModuleName"
+      ],
+      "source_file": "output/types/My/Resources/Resources.cs"
+    }
+  ],
+  "interfaces": [],
+  "structs": [],
+  "delegates": [],
+  "enums": []
+}

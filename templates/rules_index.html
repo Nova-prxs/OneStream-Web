@@ -1,0 +1,24 @@
+{% extends "docs_base.html" %}
+
+{% block title %}Business Rules — OneStream Docs{% endblock %}
+
+{% block content %}
+<hgroup>
+  <h1>Business Rules Catalog</h1>
+  <p>{{ total_rules }} real OneStream business rules organized by type</p>
+</hgroup>
+
+<div class="book-grid">
+  {% for rt in rule_types %}
+  <article>
+    <header>
+      <h3><a href="/docs/rules/{{ rt.slug }}">{{ rt.name }}</a></h3>
+    </header>
+    <p>{{ rt.count }} rule{{ 's' if rt.count != 1 }}</p>
+    <footer>
+      <a href="/docs/rules/{{ rt.slug }}">Browse rules</a>
+    </footer>
+  </article>
+  {% endfor %}
+</div>
+{% endblock %}

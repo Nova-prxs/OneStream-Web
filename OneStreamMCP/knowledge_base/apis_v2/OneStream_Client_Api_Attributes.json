@@ -1,0 +1,55 @@
+{
+  "namespace": "OneStream.Client.Api.Attributes",
+  "generated_at": "2025-12-08T19:28:51.075022",
+  "statistics": {
+    "classes": 1,
+    "interfaces": 0,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 0,
+    "total_methods": 0,
+    "total_properties": 0
+  },
+  "classes": [
+    {
+      "name": "GenerateApiClientClassAttribute",
+      "namespace": "OneStream.Client.Api.Attributes",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "Attribute",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": []
+        },
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "convertCollectionReturnTypeToObservable",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [
+        "AttributeUsage"
+      ],
+      "source_file": "output/types/OneStream/Client/Api/Attributes/GenerateApiClientClassAttribute.cs"
+    }
+  ],
+  "interfaces": [],
+  "structs": [],
+  "delegates": [],
+  "enums": []
+}

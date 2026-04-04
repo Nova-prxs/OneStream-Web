@@ -1,0 +1,22 @@
+.git
+.gitignore
+.DS_Store
+__pycache__
+*.pyc
+*.pkl
+tests
+.planning
+.claude
+.playwright-mcp
+.pytest_cache
+OneStreamMCP/node_modules
+OneStreamMCP/dist
+OneStreamMCP/src
+OneStreamMCP/.git
+OneStreamMCP/package-lock.json
+Business Rule/.git
+Business Rule/.planning
+Business Rule/data
+Business Rule/tests
+Business Rule/src
+Business Rule/__pycache__

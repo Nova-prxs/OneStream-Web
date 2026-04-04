@@ -1,0 +1,133 @@
+{
+  "module": "RestFast",
+  "version": "1.2",
+  "description": "OneStream Framework for managing HTTP API Requests without coding",
+  "author": "Nova-Praxis",
+  "purpose": "Enables consultants/developers to configure and execute REST API calls within OneStream Business Rules and Data Management Steps",
+  "components": {
+    "workspace_assemblies": [
+      {
+        "name": "RESTAPIFramework",
+        "namespace": "Workspace.RESTAPIFramework",
+        "type": "Workspace Assembly",
+        "description": "Main framework assembly"
+      },
+      {
+        "name": "RESTAPIRequestManager",
+        "namespace": "Workspace.RESTAPIFramework.RESTAPIRequestManager",
+        "type": "Workspace Assembly",
+        "description": "Core classes and utilities for REST API requests",
+        "files": [
+          "Classes.vb",
+          "Utils.vb"
+        ]
+      }
+    ],
+    "business_rules": [
+      {
+        "name": "RESTAPIFramework_SharedFunctions",
+        "type": "Finance",
+        "namespace": "OneStream.BusinessRule.Finance.RESTAPIFramework_SharedFunctions",
+        "is_global": true,
+        "description": "Shared utility functions including DataTable operations, dimension member lookups",
+        "key_functions": [
+          "ClearDataBuffer",
+          "CreateMemberLookupUsingFilter",
+          "LoadDataTableToCustomTable",
+          "SplitQueryParams"
+        ]
+      },
+      {
+        "name": "RESTAPIFramework_PopulateTable",
+        "type": "Extender",
+        "namespace": "OneStream.BusinessRule.Extender.RESTAPIFramework_PopulateTable",
+        "is_global": false,
+        "description": "Data Management Step extender for populating custom tables via saved requests",
+        "parameters": {
+          "p_request_name": "Name of the saved request to execute",
+          "p_variables": "Optional key-value pairs to override request variables (format: [key1]=[value1],[key2]=[value2])"
+        }
+      }
+    ],
+    "dashboard": {
+      "name": "RESTAPIFramework_MainNavigation",
+      "description": "RESTFAST UI Dashboard for managing API requests",
+      "type": "TopLevel",
+      "access": "Administrators",
+      "features": [
+        "Create/Delete saved requests",
+        "Configure HTTP method, endpoint, headers, body, params",
+        "Setup authentication (Basic, Bearer, API Key, OAuth 2.0)",
+        "Test requests with live response preview",
+        "Configure data retrieval options (pagination, column mappings)",
+        "Populate custom tables directly from dashboard",
+        "Manage global and request-specific variables"
+      ]
+    },
+    "custom_tables": {
+      "storage": "OneStream Application Database",
+      "purpose": "Store REST API response data for staging or direct use",
+      "operations": [
+        "replace",
+        "merge"
+      ],
+      "note": "Tables can be used as staging tables for merging into dimension/fact tables"
+    }
+  },
+  "main_workflows": [
+    {
+      "name": "UI-Based Request Configuration",
+      "steps": [
+        "1. Open RESTFAST dashboard in OneStream",
+        "2. Create new request with unique name",
+        "3. Configure endpoint, method, headers, body",
+        "4. Set up authentication if needed",
+        "5. Configure variables using {{key}} pattern",
+        "6. Test request and view response",
+        "7. Configure data retrieval options (dataKey, nextLinkKey, columnMappings)",
+        "8. Populate custom table directly or save for later use"
+      ]
+    },
+    {
+      "name": "Business Rule Integration",
+      "steps": [
+        "1. Reference assembly: Workspace.RESTAPIFramework.RESTAPIRequestManager",
+        "2. Import: Workspace.RESTAPIFramework.RESTAPIRequestManager.Classes",
+        "3. Use Utils functions to get/execute saved requests",
+        "4. Process responses or populate tables programmatically"
+      ]
+    },
+    {
+      "name": "Data Management Step",
+      "steps": [
+        "1. Create DM Sequence/Step",
+        "2. Set BR: RESTAPIFramework_PopulateTable",
+        "3. Pass parameters: p_request_name=YourRequestName",
+        "4. Optional: Override variables with p_variables",
+        "5. Execute to populate custom table automatically"
+      ]
+    }
+  ],
+  "key_features": [
+    "No-code REST API integration",
+    "Built-in authentication support (Basic, Bearer, API Key, OAuth 2.0)",
+    "Automatic pagination handling (via nextLink or manual top/skip)",
+    "Variable substitution in endpoint, params, headers, body",
+    "JSON response parsing with dataKey path navigation",
+    "Column mapping for flexible data transformation",
+    "Direct custom table population",
+    "Testing interface with live response preview",
+    "Integration with OneStream Business Rules and DM Steps"
+  ],
+  "authentication_methods": [
+    "Basic Authentication",
+    "Bearer Token",
+    "API Key (header or query param)",
+    "OAuth 2.0 (Client Credentials, Password, Authorization Code, Refresh Token, Device Code, Custom)"
+  ],
+  "references": [
+    "User Guide: See RestFast documentation",
+    "Technical Documentation: See RestFast technical docs",
+    "Package Files: See RESTFAST_Package v1.2 distribution"
+  ]
+}

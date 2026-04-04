@@ -1,0 +1,68 @@
+{
+  "namespace": "OneStream.Shared.Common.Shims",
+  "generated_at": "2025-12-08T19:28:52.149140",
+  "statistics": {
+    "classes": 0,
+    "interfaces": 0,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 1,
+    "total_methods": 0,
+    "total_properties": 0
+  },
+  "classes": [],
+  "interfaces": [],
+  "structs": [],
+  "delegates": [],
+  "enums": [
+    {
+      "name": "DateInterval",
+      "namespace": "OneStream.Shared.Common.Shims",
+      "underlying_type": "int",
+      "is_flags": false,
+      "values": [
+        {
+          "name": "Year",
+          "value": 0
+        },
+        {
+          "name": "Quarter",
+          "value": 1
+        },
+        {
+          "name": "Month",
+          "value": 2
+        },
+        {
+          "name": "DayOfYear",
+          "value": 3
+        },
+        {
+          "name": "Day",
+          "value": 4
+        },
+        {
+          "name": "WeekOfYear",
+          "value": 5
+        },
+        {
+          "name": "Weekday",
+          "value": 6
+        },
+        {
+          "name": "Hour",
+          "value": 7
+        },
+        {
+          "name": "Minute",
+          "value": 8
+        },
+        {
+          "name": "Second",
+          "value": 9
+        }
+      ],
+      "access": "public"
+    }
+  ]
+}

@@ -1,0 +1,213 @@
+{
+  "namespace": "OneStream.Shared.Database",
+  "generated_at": "2025-12-08T19:28:52.150641",
+  "statistics": {
+    "classes": 6,
+    "interfaces": 0,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 0,
+    "total_methods": 2,
+    "total_properties": 0
+  },
+  "classes": [
+    {
+      "name": "DbConnInfoFW",
+      "namespace": "OneStream.Shared.Database",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [
+        "XFApiDoc"
+      ],
+      "source_file": "output/types/OneStream/Shared/Database/DbConnInfoFW.cs"
+    },
+    {
+      "name": "DbRetryManager",
+      "namespace": "OneStream.Shared.Database",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "retryType",
+              "type": "DbRetryType",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [
+        {
+          "name": "ExecuteRetries",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "actionToRetry",
+              "type": "Action",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Executes retries",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "ExecuteRetriesAndRepairConnection",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "dbConnInfoToRepair",
+              "type": "DbConnInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "createTransactionAroundEachRetry",
+              "type": "DbUseTransaction",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "actionToRetry",
+              "type": "Action",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Executes retries and repair connection",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [
+        "XFApiDoc"
+      ],
+      "source_file": "output/types/OneStream/Shared/Database/DbRetryManager.cs"
+    },
+    {
+      "name": "DbConnInfoApp",
+      "namespace": "OneStream.Shared.Database",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [
+        "XFApiDoc"
+      ],
+      "source_file": "output/types/OneStream/Shared/Database/DbConnInfoApp.cs"
+    },
+    {
+      "name": "DbConnInfo",
+      "namespace": "OneStream.Shared.Database",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [
+        "XFApiDoc"
+      ],
+      "source_file": "output/types/OneStream/Shared/Database/DbConnInfo.cs",
+      "source_code": "public class DbConnInfo\n{\n}"
+    },
+    {
+      "name": "DbConnInfoCubeData",
+      "namespace": "OneStream.Shared.Database",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "DbConnInfoApp",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [
+        "XFApiDoc"
+      ],
+      "source_file": "output/types/OneStream/Shared/Database/DbConnInfoCubeData.cs"
+    },
+    {
+      "name": "DbConnInfoStageData",
+      "namespace": "OneStream.Shared.Database",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "DbConnInfoApp",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [
+        "XFApiDoc"
+      ],
+      "source_file": "output/types/OneStream/Shared/Database/DbConnInfoStageData.cs"
+    }
+  ],
+  "interfaces": [],
+  "structs": [],
+  "delegates": [],
+  "enums": []
+}

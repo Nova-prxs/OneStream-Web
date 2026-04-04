@@ -1,0 +1,369 @@
+{
+  "namespace": "OneStream.Shared.Wcf.SmartIntegrationManagementServiceDto",
+  "generated_at": "2025-12-08T19:28:52.399654",
+  "statistics": {
+    "classes": 10,
+    "interfaces": 0,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 0,
+    "total_methods": 0,
+    "total_properties": 15
+  },
+  "classes": [
+    {
+      "name": "CheckMaxGatewayErrorsRequestDto",
+      "namespace": "OneStream.Shared.Wcf.SmartIntegrationManagementServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/SmartIntegrationManagementServiceDto/CheckMaxGatewayErrorsRequestDto.cs"
+    },
+    {
+      "name": "DeleteRelayRequestDto",
+      "namespace": "OneStream.Shared.Wcf.SmartIntegrationManagementServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "RelayInfo",
+          "type": "AzureRelayDetails",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/SmartIntegrationManagementServiceDto/DeleteRelayRequestDto.cs"
+    },
+    {
+      "name": "GetRemoteServerDetailsRequestDto",
+      "namespace": "OneStream.Shared.Wcf.SmartIntegrationManagementServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/SmartIntegrationManagementServiceDto/GetRemoteServerDetailsRequestDto.cs"
+    },
+    {
+      "name": "SaveRelayDetailsRequestDto",
+      "namespace": "OneStream.Shared.Wcf.SmartIntegrationManagementServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "RelayInfos",
+          "type": "List<AzureRelayDetails>",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/SmartIntegrationManagementServiceDto/SaveRelayDetailsRequestDto.cs"
+    },
+    {
+      "name": "RegenerateKeyRequestDto",
+      "namespace": "OneStream.Shared.Wcf.SmartIntegrationManagementServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "RelayInfo",
+          "type": "AzureRelayDetails",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/SmartIntegrationManagementServiceDto/RegenerateKeyRequestDto.cs"
+    },
+    {
+      "name": "CreateNewRelayRequestDto",
+      "namespace": "OneStream.Shared.Wcf.SmartIntegrationManagementServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "RelayInfo",
+          "type": "AzureRelayDetails",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/SmartIntegrationManagementServiceDto/CreateNewRelayRequestDto.cs"
+    },
+    {
+      "name": "GetRootRelayDetailRequestDto",
+      "namespace": "OneStream.Shared.Wcf.SmartIntegrationManagementServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/SmartIntegrationManagementServiceDto/GetRootRelayDetailRequestDto.cs"
+    },
+    {
+      "name": "GetCurrentRelayStatusRequestDto",
+      "namespace": "OneStream.Shared.Wcf.SmartIntegrationManagementServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/SmartIntegrationManagementServiceDto/GetCurrentRelayStatusRequestDto.cs"
+    },
+    {
+      "name": "GetRemoteServerListRequestDto",
+      "namespace": "OneStream.Shared.Wcf.SmartIntegrationManagementServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/SmartIntegrationManagementServiceDto/GetRemoteServerListRequestDto.cs"
+    },
+    {
+      "name": "GetConfigFileStringRequestDto",
+      "namespace": "OneStream.Shared.Wcf.SmartIntegrationManagementServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "RelayName",
+          "type": "string[]",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/SmartIntegrationManagementServiceDto/GetConfigFileStringRequestDto.cs"
+    }
+  ],
+  "interfaces": [],
+  "structs": [],
+  "delegates": [],
+  "enums": []
+}

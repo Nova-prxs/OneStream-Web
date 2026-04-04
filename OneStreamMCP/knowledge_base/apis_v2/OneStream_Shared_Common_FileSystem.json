@@ -1,0 +1,475 @@
+{
+  "namespace": "OneStream.Shared.Common.FileSystem",
+  "generated_at": "2025-12-08T19:28:52.147755",
+  "statistics": {
+    "classes": 1,
+    "interfaces": 1,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 0,
+    "total_methods": 18,
+    "total_properties": 0
+  },
+  "classes": [
+    {
+      "name": "FileSystemWrapper",
+      "namespace": "OneStream.Shared.Common.FileSystem",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IFileSystemWrapper"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "DirectoryExists",
+          "return_type": "bool",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "path",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Directorys exists",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "CreateDirectory",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "path",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates directory",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "FileExists",
+          "return_type": "bool",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "path",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Files exists",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "CopyFile",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "source",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "destination",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "overwrite",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Copys file",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "PathCombine",
+          "return_type": "string",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "paths",
+              "type": "string[]",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Paths combine",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OpenRead",
+          "return_type": "Stream",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "path",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Opens read",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EnsureDirectoryExists",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "path",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ensures directory exists",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "CreateDirectory",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "path",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates directory",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "FileHashesAreEqual",
+          "return_type": "bool",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "filePath1",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "filePath2",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Files hashes are equal",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "IOException",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/FileSystem/FileSystemWrapper.cs"
+    }
+  ],
+  "interfaces": [
+    {
+      "name": "IFileSystemWrapper",
+      "namespace": "OneStream.Shared.Common.FileSystem",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "DirectoryExists",
+          "return_type": "bool",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "path",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Checks exists",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "CreateDirectory",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "path",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates directory",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "FileExists",
+          "return_type": "bool",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "path",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Checks exists",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "CopyFile",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "source",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "destination",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "overwrite",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Copys file",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "PathCombine",
+          "return_type": "string",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "paths",
+              "type": "string[]",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Paths combine",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OpenRead",
+          "return_type": "Stream",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "path",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Opens read",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EnsureDirectoryExists",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "path",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ensures directory exists",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "FileHashesAreEqual",
+          "return_type": "bool",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "filePath1",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "filePath2",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Checks hashes are equal",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/FileSystem/IFileSystemWrapper.cs",
+      "source_code": "public interface IFileSystemWrapper\n{\n\tbool DirectoryExists(string path);\n\n\tvoid CreateDirectory(string path);\n\n\tbool FileExists(string path);\n\n\tvoid CopyFile(string source, string destination, bool overwrite);\n\n\tstring PathCombine(params string[] paths);\n\n\tStream OpenRead(string path);\n\n\tvoid EnsureDirectoryExists(string path);\n\n\tbool FileHashesAreEqual(string filePath1, string filePath2);\n}"
+    }
+  ],
+  "structs": [],
+  "delegates": [],
+  "enums": []
+}

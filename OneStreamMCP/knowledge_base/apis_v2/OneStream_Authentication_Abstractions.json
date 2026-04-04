@@ -1,0 +1,1168 @@
+{
+  "namespace": "OneStream.Authentication.Abstractions",
+  "generated_at": "2025-12-08T19:28:51.063415",
+  "statistics": {
+    "classes": 1,
+    "interfaces": 8,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 5,
+    "total_methods": 4,
+    "total_properties": 82
+  },
+  "classes": [
+    {
+      "name": "OidcProviderConfiguration",
+      "namespace": "OneStream.Authentication.Abstractions",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": []
+        },
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "clientId",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "scope",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "authority",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "additionalAudiences",
+              "type": "HashSet<string>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "additionalEndpointAddresses",
+              "type": "HashSet<string>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "authorizeEndpoint",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "discoEndpoint",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "jwksEndpoint",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "tokenEndpoint",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userInfoEndpoint",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "ClientId",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "Scope",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "Authority",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "AdditionalAudiences",
+          "type": "HashSet<string>",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "AdditionalEndpointAddresses",
+          "type": "HashSet<string>",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "AuthorizeEndpoint",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "DiscoEndpoint",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "JwksEndpoint",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "TokenEndpoint",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "UserInfoEndpoint",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [
+        {
+          "name": "HashSet",
+          "return_type": "HashSet",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Hashs set",
+          "generic_params": [
+            "string"
+          ],
+          "overloads": 2
+        },
+        {
+          "name": "HashSet",
+          "return_type": "HashSet",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Hashs set",
+          "generic_params": [
+            "string"
+          ],
+          "overloads": 2
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Authentication/Abstractions/OidcProviderConfiguration.cs"
+    }
+  ],
+  "interfaces": [
+    {
+      "name": "ISamlSsoSettings",
+      "namespace": "OneStream.Authentication.Abstractions",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "TimeComparisonTolerance",
+          "type": "int",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "IdPCertificateStoreName",
+          "type": "CertificateStoreName",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "IdPCertificateStoreLocation",
+          "type": "CertificateStoreLocation",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "IdPCertificateFindType",
+          "type": "CertificateFindType",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "IdPCertificateFindValue",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "StoredIdPMetadataForWeb",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "IdPEntityIDWeb",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "SingleSignOnServiceWeb",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "StoredIdPMetadataForNative",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "IdPEntityIDNative",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "SingleSignOnServiceNative",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Authentication/Abstractions/ISamlSsoSettings.cs",
+      "source_code": "public interface ISamlSsoSettings\n{\n\tint TimeComparisonTolerance { get; }\n\n\tCertificateStoreName IdPCertificateStoreName { get; }\n\n\tCertificateStoreLocation IdPCertificateStoreLocation { get; }\n\n\tCertificateFindType IdPCertificateFindType { get; }\n\n\tstring IdPCertificateFindValue { get; }\n\n\tstring StoredIdPMetadataForWeb { get; }\n\n\tstring IdPEntityIDWeb { get; }\n\n\tstring SingleSignOnServiceWeb { get; }\n\n\tstring StoredIdPMetadataForNative { get; }\n\n\tstring IdPEntityIDNative { get; }\n\n\tstring SingleSignOnServiceNative { get; }\n}"
+    },
+    {
+      "name": "IOisSsoSettings",
+      "namespace": "OneStream.Authentication.Abstractions",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "OpenIdAuthority",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "OpenIdScopes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "OpenIdNativeRedirectUri",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "OpenIdNativeClientId",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "OpenIdBrowserUXClientId",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "OpenIdBrowserUXSecret",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "OpenIdBrowserUXScopes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "OpenIdWebApiClientId",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "OpenIdWebApiScopes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "OpenIdWebApiSecretKey",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Authentication/Abstractions/IOisSsoSettings.cs",
+      "source_code": "public interface IOisSsoSettings\n{\n\tstring OpenIdAuthority { get; }\n\n\tstring OpenIdScopes { get; }\n\n\tstring OpenIdNativeRedirectUri { get; }\n\n\tstring OpenIdNativeClientId { get; }\n\n\tstring OpenIdBrowserUXClientId { get; }\n\n\tstring OpenIdBrowserUXSecret { get; }\n\n\tstring OpenIdBrowserUXScopes { get; }\n\n\tstring OpenIdWebApiClientId { get; }\n\n\tstring OpenIdWebApiScopes { get; }\n\n\tstring OpenIdWebApiSecretKey { get; }\n}"
+    },
+    {
+      "name": "ISsoProvider",
+      "namespace": "OneStream.Authentication.Abstractions",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "ClientSessionId",
+          "type": "Guid",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "ClientVersion",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "ClientIPAddress",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "PrimaryAppServerName",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "ClientAuthenticationRequest",
+          "type": "IClientAuthenticationRequest",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [
+        {
+          "name": "GetRedirectUri",
+          "return_type": "string",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "type",
+              "type": "ApplicationType",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets redirect uri",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetAuthorizationUri",
+          "return_type": "string",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "type",
+              "type": "ApplicationType",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets authorization uri",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Authentication/Abstractions/ISsoProvider.cs",
+      "source_code": "public interface ISsoProvider\n{\n\tGuid ClientSessionId { get; }\n\n\tstring ClientVersion { get; set; }\n\n\tstring ClientIPAddress { get; set; }\n\n\tstring PrimaryAppServerName { get; set; }\n\n\tIClientAuthenticationRequest ClientAuthenticationRequest { get; set; }\n\n\tstring GetRedirectUri(ApplicationType type);\n\n\tstring GetAuthorizationUri(ApplicationType type);\n}"
+    },
+    {
+      "name": "IClientAuthenticationRequest",
+      "namespace": "OneStream.Authentication.Abstractions",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "Id",
+          "type": "Guid",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "State",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "Nonce",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "CodeVerifier",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "ClientVersion",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "ClientIPAddress",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "PrimaryAppServerName",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Authentication/Abstractions/IClientAuthenticationRequest.cs",
+      "source_code": "public interface IClientAuthenticationRequest\n{\n\tGuid Id { get; set; }\n\n\tstring State { get; set; }\n\n\tstring Nonce { get; set; }\n\n\tstring CodeVerifier { get; set; }\n\n\tstring ClientVersion { get; set; }\n\n\tstring ClientIPAddress { get; set; }\n\n\tstring PrimaryAppServerName { get; set; }\n}"
+    },
+    {
+      "name": "IPingFederateSsoSettings",
+      "namespace": "OneStream.Authentication.Abstractions",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "PingFederateAuthority",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "PingFederateScopes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "PingFederateNativeRedirectUri",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "PingFederateNativeClientId",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "PingFederateNativeJwksEndpointPath",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "PingFederateWebClientId",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "PingFederateWebSSOSecretKey",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "PingFederateWebApiClientId",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "PingFederateWebApiScopes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "PingFederateWebApiJwksEndpointPath",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Authentication/Abstractions/IPingFederateSsoSettings.cs",
+      "source_code": "public interface IPingFederateSsoSettings\n{\n\tstring PingFederateAuthority { get; }\n\n\tstring PingFederateScopes { get; }\n\n\tstring PingFederateNativeRedirectUri { get; }\n\n\tstring PingFederateNativeClientId { get; }\n\n\tstring PingFederateNativeJwksEndpointPath { get; }\n\n\tstring PingFederateWebClientId { get; }\n\n\tstring PingFederateWebSSOSecretKey { get; }\n\n\tstring PingFederateWebApiClientId { get; }\n\n\tstring PingFederateWebApiScopes { get; }\n\n\tstring PingFederateWebApiJwksEndpointPath { get; }\n}"
+    },
+    {
+      "name": "ISsoSettings",
+      "namespace": "OneStream.Authentication.Abstractions",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "ProviderType",
+          "type": "ProviderType",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "ValidateAudience",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "ValidateEndpoints",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "ValidateIssuerName",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "AzureSsoSettings",
+          "type": "IAzureSsoSettings",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "OisSsoSettings",
+          "type": "IOisSsoSettings",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "OktaSsoSettings",
+          "type": "IOktaSsoSettings",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "PingFederateSsoSettings",
+          "type": "IPingFederateSsoSettings",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "SamlSsoSettings",
+          "type": "ISamlSsoSettings",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Authentication/Abstractions/ISsoSettings.cs",
+      "source_code": "public interface ISsoSettings\n{\n\tProviderType ProviderType { get; }\n\n\tbool ValidateAudience { get; }\n\n\tbool ValidateEndpoints { get; }\n\n\tbool ValidateIssuerName { get; }\n\n\tIAzureSsoSettings AzureSsoSettings { get; }\n\n\tIOisSsoSettings OisSsoSettings { get; }\n\n\tIOktaSsoSettings OktaSsoSettings { get; }\n\n\tIPingFederateSsoSettings PingFederateSsoSettings { get; }\n\n\tISamlSsoSettings SamlSsoSettings { get; }\n}"
+    },
+    {
+      "name": "IAzureSsoSettings",
+      "namespace": "OneStream.Authentication.Abstractions",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "AzureADEndPoint",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "AzureADGraphAPI",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "AzureADTenantId",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "AzureScopes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "AzureADClientId",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "AzureADClientRedirectUri",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "AzureADWebSSOSecretKey",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "AzureADWebClientId",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "AzureADWebApiClientId",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "AzureADWebApiCustomScopes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Authentication/Abstractions/IAzureSsoSettings.cs",
+      "source_code": "public interface IAzureSsoSettings\n{\n\tstring AzureADEndPoint { get; }\n\n\tstring AzureADGraphAPI { get; }\n\n\tstring AzureADTenantId { get; }\n\n\tstring AzureScopes { get; }\n\n\tstring AzureADClientId { get; }\n\n\tstring AzureADClientRedirectUri { get; }\n\n\tstring AzureADWebSSOSecretKey { get; }\n\n\tstring AzureADWebClientId { get; }\n\n\tstring AzureADWebApiClientId { get; }\n\n\tstring AzureADWebApiCustomScopes { get; }\n}"
+    },
+    {
+      "name": "IOktaSsoSettings",
+      "namespace": "OneStream.Authentication.Abstractions",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "OktaAuthority",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "OktaScopes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "OktaAuthorizationServerId",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "OktaNativeRedirectUri",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "OktaNativeClientId",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "OktaWebClientId",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "OktaWebSSOSecretKey",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "OktaWebApiMtmClientId",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "OktaWebApiMtmCustomScopes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "OktaWebApiAuthorizationServerId",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Authentication/Abstractions/IOktaSsoSettings.cs",
+      "source_code": "public interface IOktaSsoSettings\n{\n\tstring OktaAuthority { get; }\n\n\tstring OktaScopes { get; }\n\n\tstring OktaAuthorizationServerId { get; }\n\n\tstring OktaNativeRedirectUri { get; }\n\n\tstring OktaNativeClientId { get; }\n\n\tstring OktaWebClientId { get; }\n\n\tstring OktaWebSSOSecretKey { get; }\n\n\tstring OktaWebApiMtmClientId { get; }\n\n\tstring OktaWebApiMtmCustomScopes { get; }\n\n\tstring OktaWebApiAuthorizationServerId { get; }\n}"
+    }
+  ],
+  "structs": [],
+  "delegates": [],
+  "enums": [
+    {
+      "name": "CertificateStoreLocation",
+      "namespace": "OneStream.Authentication.Abstractions",
+      "underlying_type": "int",
+      "is_flags": false,
+      "values": [
+        {
+          "name": "Unknown",
+          "value": -1
+        },
+        {
+          "name": "CurrentUser",
+          "value": 1
+        },
+        {
+          "name": "LocalMachine",
+          "value": 2
+        }
+      ],
+      "access": "public"
+    },
+    {
+      "name": "ApplicationType",
+      "namespace": "OneStream.Authentication.Abstractions",
+      "underlying_type": "int",
+      "is_flags": false,
+      "values": [
+        {
+          "name": "Unknown",
+          "value": 0
+        },
+        {
+          "name": "RestApi",
+          "value": 1
+        },
+        {
+          "name": "Web",
+          "value": 2
+        },
+        {
+          "name": "Windows",
+          "value": 3
+        }
+      ],
+      "access": "public"
+    },
+    {
+      "name": "CertificateFindType",
+      "namespace": "OneStream.Authentication.Abstractions",
+      "underlying_type": "int",
+      "is_flags": false,
+      "values": [
+        {
+          "name": "Unknown",
+          "value": -1
+        },
+        {
+          "name": "FindByThumbprint",
+          "value": 0
+        },
+        {
+          "name": "FindBySubjectName",
+          "value": 1
+        },
+        {
+          "name": "FindBySubjectDistinguishedName",
+          "value": 2
+        },
+        {
+          "name": "FindByIssuerName",
+          "value": 3
+        },
+        {
+          "name": "FindByIssuerDistinguishedName",
+          "value": 4
+        },
+        {
+          "name": "FindBySerialNumber",
+          "value": 5
+        },
+        {
+          "name": "FindBySubjectKeyIdentifier",
+          "value": 14
+        }
+      ],
+      "access": "public"
+    },
+    {
+      "name": "CertificateStoreName",
+      "namespace": "OneStream.Authentication.Abstractions",
+      "underlying_type": "int",
+      "is_flags": false,
+      "values": [
+        {
+          "name": "Unknown",
+          "value": -1
+        },
+        {
+          "name": "AddressBook",
+          "value": 1
+        },
+        {
+          "name": "AuthRoot",
+          "value": 2
+        },
+        {
+          "name": "CertificateAuthority",
+          "value": 3
+        },
+        {
+          "name": "Disallowed",
+          "value": 4
+        },
+        {
+          "name": "My",
+          "value": 5
+        },
+        {
+          "name": "Root",
+          "value": 6
+        },
+        {
+          "name": "TrustedPeople",
+          "value": 7
+        },
+        {
+          "name": "TrustedPublisher",
+          "value": 8
+        }
+      ],
+      "access": "public"
+    },
+    {
+      "name": "ProviderType",
+      "namespace": "OneStream.Authentication.Abstractions",
+      "underlying_type": "int",
+      "is_flags": false,
+      "values": [
+        {
+          "name": "None",
+          "value": 0
+        },
+        {
+          "name": "Azure",
+          "value": 1
+        },
+        {
+          "name": "OIS",
+          "value": 2
+        },
+        {
+          "name": "Okta",
+          "value": 3
+        },
+        {
+          "name": "PingFederate",
+          "value": 4
+        },
+        {
+          "name": "Saml",
+          "value": 5
+        }
+      ],
+      "access": "public"
+    }
+  ]
+}

@@ -1,0 +1,2757 @@
+{
+  "namespace": "OneStream.Shared.Wcf.DataExplorerServiceDto",
+  "generated_at": "2025-12-08T19:28:52.387783",
+  "statistics": {
+    "classes": 46,
+    "interfaces": 0,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 0,
+    "total_methods": 0,
+    "total_properties": 210
+  },
+  "classes": [
+    {
+      "name": "GetDrillDownDataCellsAsCSVFileRequestDto",
+      "namespace": "OneStream.Shared.Wcf.DataExplorerServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "Action",
+          "type": "DrillDownActionType",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "DataCellPkAndCalcScript",
+          "type": "DataCellPkAndCalcScript",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "WorkspaceID",
+          "type": "Guid",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "CubeViewName",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "CustomSubstVars",
+          "type": "Dictionary<string, string>",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "SuppressNoData",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/DataExplorerServiceDto/GetDrillDownDataCellsAsCSVFileRequestDto.cs"
+    },
+    {
+      "name": "StartOpenCubeViewGridAndGetRowPageInfoCompressedRequestDto",
+      "namespace": "OneStream.Shared.Wcf.DataExplorerServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "WorkspaceID",
+          "type": "Guid",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "CubeViewName",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "UiType",
+          "type": "CubeViewUIModuleType",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "CustomSubstVars",
+          "type": "Dictionary<string, string>",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "SuppressRows",
+          "type": "TriStateBool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "PageIndexForPreviousPage",
+          "type": "int",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "LastRowIDInPreviousPage",
+          "type": "CVGRowOrColUniqueIDStruct",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/DataExplorerServiceDto/StartOpenCubeViewGridAndGetRowPageInfoCompressedRequestDto.cs"
+    },
+    {
+      "name": "ExportReportLayoutFromCubeViewRequestDto",
+      "namespace": "OneStream.Shared.Wcf.DataExplorerServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "WorkspaceID",
+          "type": "Guid",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "CubeViewName",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "CustomSubstVars",
+          "type": "Dictionary<string, string>",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/DataExplorerServiceDto/ExportReportLayoutFromCubeViewRequestDto.cs"
+    },
+    {
+      "name": "GetDataUnitStatisticsRequestDto",
+      "namespace": "OneStream.Shared.Wcf.DataExplorerServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "DataUnitPk",
+          "type": "DataUnitPk",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/DataExplorerServiceDto/GetDataUnitStatisticsRequestDto.cs"
+    },
+    {
+      "name": "CalculateAllocationResultRequestDto",
+      "namespace": "OneStream.Shared.Wcf.DataExplorerServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "Options",
+          "type": "AllocationOptions",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/DataExplorerServiceDto/CalculateAllocationResultRequestDto.cs"
+    },
+    {
+      "name": "GetDataCellRequestDto",
+      "namespace": "OneStream.Shared.Wcf.DataExplorerServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "DataCellPkAndCalcScript",
+          "type": "DataCellPkAndCalcScript",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "WorkspaceID",
+          "type": "Guid",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "CubeViewName",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "CustomSubstVars",
+          "type": "Dictionary<string, string>",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "Options",
+          "type": "DataCellDisplayOptions",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/DataExplorerServiceDto/GetDataCellRequestDto.cs"
+    },
+    {
+      "name": "GetDataEntryAuditHistoryForDataCellRequestDto",
+      "namespace": "OneStream.Shared.Wcf.DataExplorerServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "DataCellPk",
+          "type": "DataCellPk",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/DataExplorerServiceDto/GetDataEntryAuditHistoryForDataCellRequestDto.cs"
+    },
+    {
+      "name": "SaveDataCellsRequestDto",
+      "namespace": "OneStream.Shared.Wcf.DataExplorerServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "DataCellExs",
+          "type": "List<DataCellEx>",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "DataEntryAuditItem",
+          "type": "DataEntryAuditItem",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/DataExplorerServiceDto/SaveDataCellsRequestDto.cs"
+    },
+    {
+      "name": "GetPagedDataRecordsRequestDto",
+      "namespace": "OneStream.Shared.Wcf.DataExplorerServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "MemberScript",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "StartRowIndex",
+          "type": "int",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "PageSize",
+          "type": "int",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/DataExplorerServiceDto/GetPagedDataRecordsRequestDto.cs"
+    },
+    {
+      "name": "ExportCubeViewGridToExcelFileRequestDto",
+      "namespace": "OneStream.Shared.Wcf.DataExplorerServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "WorkspaceID",
+          "type": "Guid",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "CubeViewName",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "CustomSubstVars",
+          "type": "Dictionary<string, string>",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "ReturnByteArray",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "SaveByteArrayToTempFile",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/DataExplorerServiceDto/ExportCubeViewGridToExcelFileRequestDto.cs"
+    },
+    {
+      "name": "OpenCubeViewGridCompressedRequestDto",
+      "namespace": "OneStream.Shared.Wcf.DataExplorerServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "WorkspaceID",
+          "type": "Guid",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "CubeViewName",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "UiType",
+          "type": "CubeViewUIModuleType",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "CustomSubstVars",
+          "type": "Dictionary<string, string>",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "SuppressRows",
+          "type": "TriStateBool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "PageIndexForPreviousPage",
+          "type": "int",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "LastRowIDInPreviousPage",
+          "type": "CVGRowOrColUniqueIDStruct",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "CompressedRowIndex",
+          "type": "int",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "OverridenCubeViewMemberExpansions",
+          "type": "List<CubeViewMemberExpansion>",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/DataExplorerServiceDto/OpenCubeViewGridCompressedRequestDto.cs"
+    },
+    {
+      "name": "StartExportCubeViewGridToPdfCompressedRequestDto",
+      "namespace": "OneStream.Shared.Wcf.DataExplorerServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "WorkspaceID",
+          "type": "Guid",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "CubeViewName",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "CustomSubstVars",
+          "type": "Dictionary<string, string>",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/DataExplorerServiceDto/StartExportCubeViewGridToPdfCompressedRequestDto.cs"
+    },
+    {
+      "name": "GetDataCellsCompressedRequestDto",
+      "namespace": "OneStream.Shared.Wcf.DataExplorerServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "CompressedDataCellPkAndCalcScripts",
+          "type": "CompressionResult",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "WorkspaceID",
+          "type": "Guid",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "CubeViewName",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "CustomSubstVars",
+          "type": "Dictionary<string, string>",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "Options",
+          "type": "DataCellDisplayOptions",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "TaskActivityContext",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/DataExplorerServiceDto/GetDataCellsCompressedRequestDto.cs"
+    },
+    {
+      "name": "GetDatabaseTableNamesRequestDto",
+      "namespace": "OneStream.Shared.Wcf.DataExplorerServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "DbLocation",
+          "type": "DbLocation",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/DataExplorerServiceDto/GetDatabaseTableNamesRequestDto.cs"
+    },
+    {
+      "name": "OpenCubeViewGridAndGetRowPageInfoCompressedRequestDto",
+      "namespace": "OneStream.Shared.Wcf.DataExplorerServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "WorkspaceID",
+          "type": "Guid",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "CubeViewName",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "UiType",
+          "type": "CubeViewUIModuleType",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "CustomSubstVars",
+          "type": "Dictionary<string, string>",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "SuppressRows",
+          "type": "TriStateBool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "PageIndexForPreviousPage",
+          "type": "int",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "LastRowIDInPreviousPage",
+          "type": "CVGRowOrColUniqueIDStruct",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/DataExplorerServiceDto/OpenCubeViewGridAndGetRowPageInfoCompressedRequestDto.cs"
+    },
+    {
+      "name": "GetDataCellPovDisplayInfosCompressedRequestDto",
+      "namespace": "OneStream.Shared.Wcf.DataExplorerServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "DataCellPkAndCalcScriptsCompressed",
+          "type": "CompressionResult",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "IncludeProperties",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "DimDisplayOptions",
+          "type": "DimDisplayOptions",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/DataExplorerServiceDto/GetDataCellPovDisplayInfosCompressedRequestDto.cs"
+    },
+    {
+      "name": "StartOpenCubeViewGridCompressedRequestDto",
+      "namespace": "OneStream.Shared.Wcf.DataExplorerServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "WorkspaceID",
+          "type": "Guid",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "CubeViewName",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "UiType",
+          "type": "CubeViewUIModuleType",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "CustomSubstVars",
+          "type": "Dictionary<string, string>",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "SuppressRows",
+          "type": "TriStateBool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "PageIndexForPreviousPage",
+          "type": "int",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "LastRowIDInPreviousPage",
+          "type": "CVGRowOrColUniqueIDStruct",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "CompressedRowIndex",
+          "type": "int",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "OverridenCubeViewMemberExpansions",
+          "type": "List<CubeViewMemberExpansion>",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/DataExplorerServiceDto/StartOpenCubeViewGridCompressedRequestDto.cs"
+    },
+    {
+      "name": "GetDrillDownDataCellsRequestDto",
+      "namespace": "OneStream.Shared.Wcf.DataExplorerServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "Action",
+          "type": "DrillDownActionType",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "DataCellPkAndCalcScript",
+          "type": "DataCellPkAndCalcScript",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "WorkspaceID",
+          "type": "Guid",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "CubeViewName",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "CustomSubstVars",
+          "type": "Dictionary<string, string>",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "SuppressNoData",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "StartItemIndex",
+          "type": "int",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "PageSize",
+          "type": "int",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/DataExplorerServiceDto/GetDrillDownDataCellsRequestDto.cs"
+    },
+    {
+      "name": "TranslateDataUnitsRequestDto",
+      "namespace": "OneStream.Shared.Wcf.DataExplorerServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "DataUnitPks",
+          "type": "List<DataUnitPk>",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "Force",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "UseDetailedLogging",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/DataExplorerServiceDto/TranslateDataUnitsRequestDto.cs"
+    },
+    {
+      "name": "ConsolidateDataUnitsRequestDto",
+      "namespace": "OneStream.Shared.Wcf.DataExplorerServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "DataUnitPks",
+          "type": "List<DataUnitPk>",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "Force",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "UseDetailedLogging",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/DataExplorerServiceDto/ConsolidateDataUnitsRequestDto.cs"
+    },
+    {
+      "name": "GetStageToFinanceLoadResultsForDataCellRequestDto",
+      "namespace": "OneStream.Shared.Wcf.DataExplorerServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "DataCellPk",
+          "type": "DataCellPk",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/DataExplorerServiceDto/GetStageToFinanceLoadResultsForDataCellRequestDto.cs"
+    },
+    {
+      "name": "ExportCubeViewToPdfRequestDto",
+      "namespace": "OneStream.Shared.Wcf.DataExplorerServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "WorkspaceID",
+          "type": "Guid",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "CubeViewName",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "CustomSubstVars",
+          "type": "Dictionary<string, string>",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/DataExplorerServiceDto/ExportCubeViewToPdfRequestDto.cs"
+    },
+    {
+      "name": "GetDataEntryAuditInfoForDataCellRequestDto",
+      "namespace": "OneStream.Shared.Wcf.DataExplorerServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "DataCellPk",
+          "type": "DataCellPk",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/DataExplorerServiceDto/GetDataEntryAuditInfoForDataCellRequestDto.cs"
+    },
+    {
+      "name": "StartConsolidationRequestDto",
+      "namespace": "OneStream.Shared.Wcf.DataExplorerServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "DataUnitPks",
+          "type": "List<DataUnitPk>",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "Force",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "UseDetailedLogging",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/DataExplorerServiceDto/StartConsolidationRequestDto.cs"
+    },
+    {
+      "name": "GetDataCellPovDisplayInfosRequestDto",
+      "namespace": "OneStream.Shared.Wcf.DataExplorerServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "DataCellPkAndCalcScripts",
+          "type": "List<DataCellPkAndCalcScript>",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "IncludeProperties",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "DimDisplayOptions",
+          "type": "DimDisplayOptions",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/DataExplorerServiceDto/GetDataCellPovDisplayInfosRequestDto.cs"
+    },
+    {
+      "name": "StartClearCubeDataRequestDto",
+      "namespace": "OneStream.Shared.Wcf.DataExplorerServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "MemberScript",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "ClearImportData",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "ClearFormsData",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "ClearAdjData",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "ClearCalculatedData",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "ClearDataAttachments",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/DataExplorerServiceDto/StartClearCubeDataRequestDto.cs"
+    },
+    {
+      "name": "CalculateDataUnitsRequestDto",
+      "namespace": "OneStream.Shared.Wcf.DataExplorerServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "DataUnitPks",
+          "type": "List<DataUnitPk>",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "Force",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "UseDetailedLogging",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/DataExplorerServiceDto/CalculateDataUnitsRequestDto.cs"
+    },
+    {
+      "name": "OpenCubeViewGridRequestDto",
+      "namespace": "OneStream.Shared.Wcf.DataExplorerServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "WorkspaceID",
+          "type": "Guid",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "CubeViewName",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "UiType",
+          "type": "CubeViewUIModuleType",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "CustomSubstVars",
+          "type": "Dictionary<string, string>",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "SuppressRows",
+          "type": "TriStateBool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "PageIndexForPreviousPage",
+          "type": "int",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "LastRowIDInPreviousPage",
+          "type": "CVGRowOrColUniqueIDStruct",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/DataExplorerServiceDto/OpenCubeViewGridRequestDto.cs"
+    },
+    {
+      "name": "StartGetDataCellsCompressedRequestDto",
+      "namespace": "OneStream.Shared.Wcf.DataExplorerServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "CompressedDataCellPkAndCalcScripts",
+          "type": "CompressionResult",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "WorkspaceID",
+          "type": "Guid",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "CubeViewName",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "CustomSubstVars",
+          "type": "Dictionary<string, string>",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "Options",
+          "type": "DataCellDisplayOptions",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "TaskActivityContext",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/DataExplorerServiceDto/StartGetDataCellsCompressedRequestDto.cs"
+    },
+    {
+      "name": "GetDataCellDetailEditInfoRequestDto",
+      "namespace": "OneStream.Shared.Wcf.DataExplorerServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "DataCellPk",
+          "type": "DataCellPk",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/DataExplorerServiceDto/GetDataCellDetailEditInfoRequestDto.cs"
+    },
+    {
+      "name": "GetDataEntryAuditCellsCompressedRequestDto",
+      "namespace": "OneStream.Shared.Wcf.DataExplorerServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "DataEntryAuditUniqueID",
+          "type": "Guid",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/DataExplorerServiceDto/GetDataEntryAuditCellsCompressedRequestDto.cs"
+    },
+    {
+      "name": "GetDataCellPovDisplayInfoRequestDto",
+      "namespace": "OneStream.Shared.Wcf.DataExplorerServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "DataCellPkAndCalcScript",
+          "type": "DataCellPkAndCalcScript",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "IncludeProperties",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "DimDisplayOptions",
+          "type": "DimDisplayOptions",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/DataExplorerServiceDto/GetDataCellPovDisplayInfoRequestDto.cs"
+    },
+    {
+      "name": "GetDataEntryAuditCellsRequestDto",
+      "namespace": "OneStream.Shared.Wcf.DataExplorerServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "DataEntryAuditUniqueID",
+          "type": "Guid",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/DataExplorerServiceDto/GetDataEntryAuditCellsRequestDto.cs"
+    },
+    {
+      "name": "GetDataEntryAuditInfoRequestDto",
+      "namespace": "OneStream.Shared.Wcf.DataExplorerServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "DataEntryAuditUniqueID",
+          "type": "Guid",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/DataExplorerServiceDto/GetDataEntryAuditInfoRequestDto.cs"
+    },
+    {
+      "name": "StartConsolidationUsingNamesRequestDto",
+      "namespace": "OneStream.Shared.Wcf.DataExplorerServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "Cube",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "Entity",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "Parent",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "Cons",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "Scenario",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "Time",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "Force",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "UseDetailedLogging",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/DataExplorerServiceDto/StartConsolidationUsingNamesRequestDto.cs"
+    },
+    {
+      "name": "StartGetPagedDataRecordsCompressedRequestDto",
+      "namespace": "OneStream.Shared.Wcf.DataExplorerServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "MemberScript",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "StartRowIndex",
+          "type": "int",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "PageSize",
+          "type": "int",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/DataExplorerServiceDto/StartGetPagedDataRecordsCompressedRequestDto.cs"
+    },
+    {
+      "name": "GetDataEntryAuditInfoAndFileBytesRequestDto",
+      "namespace": "OneStream.Shared.Wcf.DataExplorerServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "DataEntryAuditUniqueID",
+          "type": "Guid",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/DataExplorerServiceDto/GetDataEntryAuditInfoAndFileBytesRequestDto.cs"
+    },
+    {
+      "name": "StartExportCubeViewGridToExcelFileCompressedRequestDto",
+      "namespace": "OneStream.Shared.Wcf.DataExplorerServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "WorkspaceID",
+          "type": "Guid",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "CubeViewName",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "CustomSubstVars",
+          "type": "Dictionary<string, string>",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "ReturnByteArray",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "SaveByteArrayToTempFile",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/DataExplorerServiceDto/StartExportCubeViewGridToExcelFileCompressedRequestDto.cs"
+    },
+    {
+      "name": "SaveAllocationResultRequestDto",
+      "namespace": "OneStream.Shared.Wcf.DataExplorerServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "AllocationResult",
+          "type": "AllocationResult",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/DataExplorerServiceDto/SaveAllocationResultRequestDto.cs"
+    },
+    {
+      "name": "GetDrillDownDataCellsCompressedRequestDto",
+      "namespace": "OneStream.Shared.Wcf.DataExplorerServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "Action",
+          "type": "DrillDownActionType",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "DataCellPkAndCalcScript",
+          "type": "DataCellPkAndCalcScript",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "WorkspaceID",
+          "type": "Guid",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "CubeViewName",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "CustomSubstVars",
+          "type": "Dictionary<string, string>",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "SuppressNoData",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "StartItemIndex",
+          "type": "int",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "PageSize",
+          "type": "int",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/DataExplorerServiceDto/GetDrillDownDataCellsCompressedRequestDto.cs"
+    },
+    {
+      "name": "GetDataEntryAuditWorkflowUnitsRequestDto",
+      "namespace": "OneStream.Shared.Wcf.DataExplorerServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "DataEntryAuditUniqueID",
+          "type": "Guid",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/DataExplorerServiceDto/GetDataEntryAuditWorkflowUnitsRequestDto.cs"
+    },
+    {
+      "name": "StartExportCubeViewGridToDocxCompressedRequestDto",
+      "namespace": "OneStream.Shared.Wcf.DataExplorerServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "WorkspaceID",
+          "type": "Guid",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "CubeViewName",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "CustomSubstVars",
+          "type": "Dictionary<string, string>",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/DataExplorerServiceDto/StartExportCubeViewGridToDocxCompressedRequestDto.cs"
+    },
+    {
+      "name": "GetParameterDisplayInfosRequestDto",
+      "namespace": "OneStream.Shared.Wcf.DataExplorerServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "WorkspaceNameAndCubeViewNames",
+          "type": "List<TwoStringsIgnoreCase>",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "WorkspaceIDAndCubeViewNames",
+          "type": "List<GuidAndStringIgnoreCase>",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "CustSubstVarsAlreadyResolved",
+          "type": "Dictionary<string, string>",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/DataExplorerServiceDto/GetParameterDisplayInfosRequestDto.cs"
+    },
+    {
+      "name": "GetPostedJournalLineItemsForDataCellRequestDto",
+      "namespace": "OneStream.Shared.Wcf.DataExplorerServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "DataCellPk",
+          "type": "DataCellPk",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/DataExplorerServiceDto/GetPostedJournalLineItemsForDataCellRequestDto.cs"
+    },
+    {
+      "name": "ExportCubeViewToDocxRequestDto",
+      "namespace": "OneStream.Shared.Wcf.DataExplorerServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "WorkspaceID",
+          "type": "Guid",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "CubeViewName",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "CustomSubstVars",
+          "type": "Dictionary<string, string>",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/DataExplorerServiceDto/ExportCubeViewToDocxRequestDto.cs"
+    },
+    {
+      "name": "GetDatabaseSchemaAndTableNamesRequestDto",
+      "namespace": "OneStream.Shared.Wcf.DataExplorerServiceDto",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto",
+        "IAuthenticatedClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "DbLocation",
+          "type": "DbLocation",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/DataExplorerServiceDto/GetDatabaseSchemaAndTableNamesRequestDto.cs"
+    }
+  ],
+  "interfaces": [],
+  "structs": [],
+  "delegates": [],
+  "enums": []
+}

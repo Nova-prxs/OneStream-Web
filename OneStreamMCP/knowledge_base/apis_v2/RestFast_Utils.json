@@ -1,0 +1,308 @@
+{
+  "utils_class": {
+    "name": "Utils",
+    "namespace": "Workspace.RESTAPIFramework.RESTAPIRequestManager",
+    "type": "Class",
+    "description": "Utility functions for executing and managing REST API requests",
+    "file": "Utils.vb",
+    "critical_note": "\u26a0\ufe0f IMPORTANT: Utils class does NOT have GetDataTable() or PopulateTable() methods. Those methods belong to RESTAPIRequest class. Utils only provides helper functions to get, execute, and configure requests."
+  },
+  "methods_that_do_NOT_exist_in_Utils": [
+    "GetDataTable - This is a method of RESTAPIRequest, NOT Utils",
+    "PopulateTable - This is a method of RESTAPIRequest, NOT Utils"
+  ],
+  "correct_usage_pattern": {
+    "step1": "Dim utils As New Utils()",
+    "step2": "Dim request As RESTAPIRequest = utils.GetSavedRequest(si, requestName)",
+    "step3": "Dim dt As DataTable = request.GetDataTable() ' Call on request, NOT utils",
+    "step4": "request.PopulateTable(si) ' Call on request, NOT utils"
+  },
+  "functions": [
+    {
+      "name": "ExecuteRequest",
+      "signature": "Public Function ExecuteRequest(method As String, endpoint As String, urlParams As Dictionary(Of String, String), headers As Dictionary(Of String, String), bodyType As String, body As Object, variables As Dictionary(Of String, String), Optional authCredentials As AuthCredentials = Nothing, Optional modifiedUrlParams As Dictionary(Of String, String) = Nothing) As HttpResult",
+      "returns": "HttpResult",
+      "description": "Executes an HTTP request with full configuration",
+      "parameters": [
+        {
+          "name": "method",
+          "type": "String",
+          "description": "HTTP method: GET, POST, PUT, DELETE, PATCH"
+        },
+        {
+          "name": "endpoint",
+          "type": "String",
+          "description": "Target API URL (supports {{variable}} substitution)"
+        },
+        {
+          "name": "urlParams",
+          "type": "Dictionary(Of String, String)",
+          "description": "Query string parameters"
+        },
+        {
+          "name": "headers",
+          "type": "Dictionary(Of String, String)",
+          "description": "HTTP headers"
+        },
+        {
+          "name": "bodyType",
+          "type": "String",
+          "description": "Body MIME type: application/json, application/x-www-form-urlencoded, text/plain, multipart/form-data, none"
+        },
+        {
+          "name": "body",
+          "type": "Object",
+          "description": "Request body (String or Dictionary)"
+        },
+        {
+          "name": "variables",
+          "type": "Dictionary(Of String, String)",
+          "description": "Variables for {{key}} substitution"
+        },
+        {
+          "name": "authCredentials",
+          "type": "AuthCredentials",
+          "optional": true,
+          "description": "Authentication credentials"
+        },
+        {
+          "name": "modifiedUrlParams",
+          "type": "Dictionary(Of String, String)",
+          "optional": true,
+          "description": "Additional URL parameters to merge"
+        }
+      ],
+      "example": "Dim headers As New Dictionary(Of String, String) From {{\"Content-Type\", \"application/json\"}}\nDim params As New Dictionary(Of String, String) From {{\"page\", \"1\"}}\nDim vars As New Dictionary(Of String, String) From {{\"apikey\", \"abc123\"}}\nDim result As HttpResult = New Utils().ExecuteRequest(\n    \"GET\", \n    \"https://api.example.com/{{apikey}}/data\",\n    params,\n    headers,\n    \"none\",\n    Nothing,\n    vars\n)"
+    },
+    {
+      "name": "ExecuteSavedRequest",
+      "signature": "Public Function ExecuteSavedRequest(si As SessionInfo, requestName As String) As HttpResult",
+      "returns": "HttpResult",
+      "description": "Executes a saved request by name",
+      "parameters": [
+        {
+          "name": "si",
+          "type": "SessionInfo",
+          "description": "OneStream session info"
+        },
+        {
+          "name": "requestName",
+          "type": "String",
+          "description": "Name of the saved request"
+        }
+      ],
+      "example": "Dim result As HttpResult = New Utils().ExecuteSavedRequest(si, \"GetCustomers\")\nIf result.StatusCode = HttpStatusCode.OK Then\n    BRApi.ErrorLog.LogMessage(si, result.Content)\nEnd If"
+    },
+    {
+      "name": "GetSavedRequest",
+      "signature": "Public Function GetSavedRequest(si As SessionInfo, requestName As String) As RESTAPIRequest",
+      "returns": "RESTAPIRequest",
+      "description": "Retrieves a saved request configuration by name",
+      "parameters": [
+        {
+          "name": "si",
+          "type": "SessionInfo",
+          "description": "OneStream session info"
+        },
+        {
+          "name": "requestName",
+          "type": "String",
+          "description": "Name of the saved request"
+        }
+      ],
+      "example": "Dim request As RESTAPIRequest = New Utils().GetSavedRequest(si, \"GetProducts\")\n' Modify request if needed\nrequest.variables(\"category\") = \"electronics\"\n' Execute\nDim result As HttpResult = request.Execute()"
+    },
+    {
+      "name": "GetSavedRequestInfo",
+      "signature": "Public Function GetSavedRequestInfo(si As SessionInfo, requestName As String) As Dictionary(Of String, String)",
+      "returns": "Dictionary(Of String, String)",
+      "description": "Gets basic info about a saved request (name, method, endpoint, bodyType, etc.)",
+      "parameters": [
+        {
+          "name": "si",
+          "type": "SessionInfo"
+        },
+        {
+          "name": "requestName",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "GetSavedRequestParams",
+      "signature": "Public Function GetSavedRequestParams(si As SessionInfo, requestName As String) As Dictionary(Of String, String)",
+      "returns": "Dictionary(Of String, String)",
+      "description": "Gets URL parameters of a saved request",
+      "parameters": [
+        {
+          "name": "si",
+          "type": "SessionInfo"
+        },
+        {
+          "name": "requestName",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "GetSavedRequestHeaders",
+      "signature": "Public Function GetSavedRequestHeaders(si As SessionInfo, requestName As String) As Dictionary(Of String, String)",
+      "returns": "Dictionary(Of String, String)",
+      "description": "Gets headers of a saved request",
+      "parameters": [
+        {
+          "name": "si",
+          "type": "SessionInfo"
+        },
+        {
+          "name": "requestName",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "GetSavedRequestVariables",
+      "signature": "Public Function GetSavedRequestVariables(si As SessionInfo, requestName As String) As Dictionary(Of String, String)",
+      "returns": "Dictionary(Of String, String)",
+      "description": "Gets variables of a saved request",
+      "parameters": [
+        {
+          "name": "si",
+          "type": "SessionInfo"
+        },
+        {
+          "name": "requestName",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "GetSavedRequestBody",
+      "signature": "Public Function GetSavedRequestBody(si As SessionInfo, requestName As String, bodyType As String) As Object",
+      "returns": "Object",
+      "description": "Gets body content of a saved request",
+      "parameters": [
+        {
+          "name": "si",
+          "type": "SessionInfo"
+        },
+        {
+          "name": "requestName",
+          "type": "String"
+        },
+        {
+          "name": "bodyType",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "GetSavedRequestAuthCredentials",
+      "signature": "Public Function GetSavedRequestAuthCredentials(si As SessionInfo, requestName As String) As AuthCredentials",
+      "returns": "AuthCredentials",
+      "description": "Gets authentication credentials of a saved request",
+      "parameters": [
+        {
+          "name": "si",
+          "type": "SessionInfo"
+        },
+        {
+          "name": "requestName",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "GetSavedRequestColumnMappings",
+      "signature": "Public Function GetSavedRequestColumnMappings(si As SessionInfo, requestName As String) As Dictionary(Of String, String)",
+      "returns": "Dictionary(Of String, String)",
+      "description": "Gets column mappings configuration of a saved request",
+      "parameters": [
+        {
+          "name": "si",
+          "type": "SessionInfo"
+        },
+        {
+          "name": "requestName",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "ReplaceVariables",
+      "signature": "Public Function ReplaceVariables(text As String, variables As Dictionary(Of String, String), escape As Boolean) As String",
+      "returns": "String",
+      "description": "Replaces {{key}} patterns in text with values from variables dictionary",
+      "parameters": [
+        {
+          "name": "text",
+          "type": "String",
+          "description": "Text containing {{variable}} patterns"
+        },
+        {
+          "name": "variables",
+          "type": "Dictionary(Of String, String)",
+          "description": "Variable key-value pairs"
+        },
+        {
+          "name": "escape",
+          "type": "Boolean",
+          "description": "Whether to URL-encode the values"
+        }
+      ],
+      "example": "Dim text As String = \"https://api.com/{{path}}/{{id}}\"\nDim vars As New Dictionary(Of String, String) From {{\"path\", \"users\"}, {\"id\", \"123\"}}\nDim url As String = New Utils().ReplaceVariables(text, vars, True)\n' Result: https://api.com/users/123"
+    },
+    {
+      "name": "MergeDictionaries",
+      "signature": "Public Function MergeDictionaries(dict1 As Dictionary(Of String, String), dict2 As Dictionary(Of String, String)) As Dictionary(Of String, String)",
+      "returns": "Dictionary(Of String, String)",
+      "description": "Merges two dictionaries, with dict2 values overriding dict1",
+      "parameters": [
+        {
+          "name": "dict1",
+          "type": "Dictionary(Of String, String)"
+        },
+        {
+          "name": "dict2",
+          "type": "Dictionary(Of String, String)"
+        }
+      ]
+    },
+    {
+      "name": "ProcessDictionaryWithVariables",
+      "signature": "Public Function ProcessDictionaryWithVariables(original As Dictionary(Of String, String), variables As Dictionary(Of String, String), escape As Boolean) As Dictionary(Of String, String)",
+      "returns": "Dictionary(Of String, String)",
+      "description": "Processes all values in a dictionary through variable replacement",
+      "parameters": [
+        {
+          "name": "original",
+          "type": "Dictionary(Of String, String)"
+        },
+        {
+          "name": "variables",
+          "type": "Dictionary(Of String, String)"
+        },
+        {
+          "name": "escape",
+          "type": "Boolean"
+        }
+      ]
+    },
+    {
+      "name": "ProcessBodyVariables",
+      "signature": "Public Function ProcessBodyVariables(body As Object, variables As Dictionary(Of String, String)) As Object",
+      "returns": "Object",
+      "description": "Processes request body through variable replacement (handles String, Dictionary, IEnumerable)",
+      "parameters": [
+        {
+          "name": "body",
+          "type": "Object"
+        },
+        {
+          "name": "variables",
+          "type": "Dictionary(Of String, String)"
+        }
+      ]
+    }
+  ]
+}

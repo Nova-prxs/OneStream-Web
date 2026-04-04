@@ -1,0 +1,28 @@
+{
+  "title": "Extension Guide",
+  "description": "Complete documentation for the OneStream AI Helper VS Code extension and MCP server",
+  "version": "0.1.0",
+  "sections": [
+    {"slug": "getting-started", "title": "Getting Started", "icon": "rocket", "category": "guide"},
+    {"slug": "sql-query-editor", "title": "SQL Query Editor", "icon": "database", "category": "features"},
+    {"slug": "error-log-viewer", "title": "Error Log Viewer", "icon": "warning", "category": "features"},
+    {"slug": "task-activity-viewer", "title": "Task Activity Viewer", "icon": "list-checks", "category": "features"},
+    {"slug": "rule-assembly-sync", "title": "Rule & Assembly Sync", "icon": "git-merge", "category": "features"},
+    {"slug": "csharp-intellisense", "title": "C# IntelliSense", "icon": "code", "category": "features"},
+    {"slug": "code-compilation", "title": "Code Compilation", "icon": "play", "category": "features"},
+    {"slug": "data-management", "title": "Data Management", "icon": "table", "category": "features"},
+    {"slug": "dimension-metadata", "title": "Dimension Metadata", "icon": "tree-structure", "category": "features"},
+    {"slug": "member-formula-editor", "title": "Member Formula Editor", "icon": "function", "category": "features"},
+    {"slug": "execute-sequence", "title": "Execute Sequence", "icon": "play-circle", "category": "features"},
+    {"slug": "documentation-reports", "title": "Documentation Reports", "icon": "file-text", "category": "features"},
+    {"slug": "ai-assistant-integration", "title": "AI Assistant Integration", "icon": "robot", "category": "features"},
+    {"slug": "mcp-overview", "title": "MCP Server Overview", "icon": "plug", "category": "mcp"},
+    {"slug": "mcp-connection", "title": "Connection Tools", "icon": "link", "category": "mcp"},
+    {"slug": "mcp-repository", "title": "Repository Tools", "icon": "folder-search", "category": "mcp"},
+    {"slug": "mcp-dashboard", "title": "Dashboard Tools", "icon": "layout", "category": "mcp"},
+    {"slug": "mcp-knowledge-base", "title": "Knowledge Base Tools", "icon": "book-open", "category": "mcp"},
+    {"slug": "mcp-sql", "title": "SQL Tools", "icon": "database", "category": "mcp"},
+    {"slug": "configuration", "title": "Configuration Reference", "icon": "gear", "category": "guide"},
+    {"slug": "security", "title": "Security & Privacy", "icon": "shield", "category": "guide"}
+  ]
+}

@@ -1,0 +1,326 @@
+{% extends "base.html" %}
+{% block title %}Quiz: {{ section.name }} — OneStream Study Guide{% endblock %}
+{% block content %}
+
+{# Breadcrumb: Home > Quiz > Section Name #}
+<nav aria-label="breadcrumb" class="breadcrumb">
+  <a href="/">Home</a> &rsaquo;
+  <a href="/exam-prep/quiz">Quiz</a> &rsaquo;
+  <span>{{ section.name }}</span>
+</nav>
+
+<h1>{{ section.name }} <small>({{ section.weight }}% of exam)</small></h1>
+
+{# Progress bar #}
+<div class="quiz-progress-bar" id="progress-bar">
+  <div class="quiz-progress-bar-inner quiz-progress-correct" id="progress-bar-correct" style="width:0"></div>
+</div>
+
+{# Filters #}
+<div class="quiz-filters">
+  <label>Difficulty:</label>
+  <span class="filter-chip active" data-filter="diff" data-value="all" onclick="setFilter('diff','all',this)">All</span>
+  <span class="filter-chip" data-filter="diff" data-value="Easy" onclick="setFilter('diff','Easy',this)">Easy</span>
+  <span class="filter-chip" data-filter="diff" data-value="Medium" onclick="setFilter('diff','Medium',this)">Medium</span>
+  <span class="filter-chip" data-filter="diff" data-value="Hard" onclick="setFilter('diff','Hard',this)">Hard</span>
+
+  <label style="margin-left:0.5rem">Status:</label>
+  <span class="filter-chip active" data-filter="status" data-value="all" onclick="setFilter('status','all',this)">All</span>
+  <span class="filter-chip" data-filter="status" data-value="unanswered" onclick="setFilter('status','unanswered',this)">Unanswered</span>
+  <span class="filter-chip" data-filter="status" data-value="correct" onclick="setFilter('status','correct',this)">Correct</span>
+  <span class="filter-chip" data-filter="status" data-value="incorrect" onclick="setFilter('status','incorrect',this)">Incorrect</span>
+</div>
+
+{# Question counter and navigation bar #}
+<div class="quiz-nav">
+  <span id="question-counter">Question 1 of {{ section.question_count }}</span>
+  <div class="quiz-nav-controls">
+    <button id="btn-prev" onclick="prevQuestion()" disabled>&#8592; Prev <span class="kbd-hint"><kbd>&#8592;</kbd></span></button>
+    <select id="question-select" onchange="goToQuestion(parseInt(this.value))">
+      {% for q in section.questions %}
+      <option value="{{ loop.index0 }}">Q{{ q.number }}</option>
+      {% endfor %}
+    </select>
+    <button id="btn-next" onclick="nextQuestion()">Next &#8594; <span class="kbd-hint"><kbd>&#8594;</kbd></span></button>
+    <button id="btn-next-unanswered" class="btn-next-unanswered outline" onclick="nextUnanswered()">Skip to unanswered</button>
+  </div>
+</div>
+
+{# Question display area #}
+<article id="question-card">
+  <header>
+    <small id="question-meta"></small>
+  </header>
+  <p id="question-text"></p>
+  <div id="options-container">
+    {# Options rendered by JS #}
+  </div>
+  <div id="feedback" class="feedback hidden">
+    <p id="feedback-result"></p>
+    <p id="feedback-explanation"></p>
+    <p id="feedback-link" class="feedback-link"></p>
+  </div>
+</article>
+
+{# Section progress summary #}
+<div id="section-summary" class="section-summary">
+  <strong>Answered:</strong> <span id="summary-answered">0</span> / <span id="summary-total">{{ section.question_count }}</span>
+  | <strong>Correct:</strong> <span id="summary-correct">0</span>
+  (<span id="summary-pct">0</span>%)
+</div>
+
+{# Embed all questions as JSON for client-side rendering #}
+<script>
+const allQuestions = {{ section.questions | tojson }};
+const sectionSlug = {{ section.slug | tojson }};
+const storageKey = 'quiz_progress_' + sectionSlug;
+let currentIndex = 0;
+let answered = {};  // {index: selectedLetter}
+let filteredIndices = [];  // indices into allQuestions that match current filters
+let filters = { diff: 'all', status: 'all' };
+
+// --- localStorage persistence ---
+
+function loadProgress() {
+  try {
+    const raw = localStorage.getItem(storageKey);
+    if (raw) {
+      const data = JSON.parse(raw);
+      if (data && data.answered) answered = data.answered;
+    }
+  } catch (e) { answered = {}; }
+}
+
+function saveProgress() {
+  try {
+    localStorage.setItem(storageKey, JSON.stringify({answered: answered}));
+  } catch (e) {}
+}
+
+// --- Filtering ---
+
+function applyFilters() {
+  filteredIndices = [];
+  for (let i = 0; i < allQuestions.length; i++) {
+    const q = allQuestions[i];
+    // Difficulty filter
+    if (filters.diff !== 'all' && q.difficulty !== filters.diff) continue;
+    // Status filter
+    if (filters.status === 'unanswered' && answered[i] !== undefined) continue;
+    if (filters.status === 'correct' && (answered[i] === undefined || answered[i] !== q.correct_answer)) continue;
+    if (filters.status === 'incorrect' && (answered[i] === undefined || answered[i] === q.correct_answer)) continue;
+    filteredIndices.push(i);
+  }
+  // Update question selector
+  const sel = document.getElementById('question-select');
+  sel.innerHTML = '';
+  filteredIndices.forEach(function(idx, fi) {
+    const q = allQuestions[idx];
+    const opt = document.createElement('option');
+    opt.value = fi;
+    opt.textContent = 'Q' + q.number;
+    // Color code
+    if (answered[idx] !== undefined) {
+      opt.className = answered[idx] === q.correct_answer ? 'q-correct' : 'q-incorrect';
+    } else {
+      opt.className = 'q-unanswered';
+    }
+    sel.appendChild(opt);
+  });
+  document.getElementById('summary-total').textContent = filteredIndices.length;
+}
+
+function setFilter(type, value, el) {
+  filters[type] = value;
+  // Update chip active state
+  document.querySelectorAll('.filter-chip[data-filter="' + type + '"]').forEach(function(c) {
+    c.classList.toggle('active', c.dataset.value === value);
+  });
+  applyFilters();
+  if (filteredIndices.length > 0) {
+    currentIndex = 0;
+    renderQuestion(0);
+  } else {
+    document.getElementById('question-counter').textContent = 'No questions match filters';
+    document.getElementById('question-text').textContent = '';
+    document.getElementById('options-container').innerHTML = '<p>Try changing your filters.</p>';
+    document.getElementById('feedback').classList.add('hidden');
+    document.getElementById('feedback').classList.remove('visible');
+  }
+}
+
+// --- Progress bar ---
+
+function updateProgressBar() {
+  let correct = 0, incorrect = 0;
+  for (let i = 0; i < allQuestions.length; i++) {
+    if (answered[i] !== undefined) {
+      if (answered[i] === allQuestions[i].correct_answer) correct++;
+      else incorrect++;
+    }
+  }
+  const total = allQuestions.length;
+  const correctPct = (correct / total * 100).toFixed(1);
+  const incorrectPct = (incorrect / total * 100).toFixed(1);
+  document.getElementById('progress-bar-correct').style.width = correctPct + '%';
+}
+
+function updateSummary() {
+  let answeredCount = 0, correctCount = 0;
+  filteredIndices.forEach(function(idx) {
+    if (answered[idx] !== undefined) {
+      answeredCount++;
+      if (answered[idx] === allQuestions[idx].correct_answer) correctCount++;
+    }
+  });
+  document.getElementById('summary-answered').textContent = answeredCount;
+  document.getElementById('summary-correct').textContent = correctCount;
+  const pct = answeredCount > 0 ? Math.round((correctCount / answeredCount) * 100) : 0;
+  document.getElementById('summary-pct').textContent = pct;
+}
+
+// --- Rendering ---
+
+function renderQuestion(filterIdx) {
+  if (filterIdx < 0 || filterIdx >= filteredIndices.length) return;
+  currentIndex = filterIdx;
+  const realIdx = filteredIndices[filterIdx];
+  const q = allQuestions[realIdx];
+
+  document.getElementById('question-counter').textContent =
+    'Question ' + q.number + ' (' + (filterIdx + 1) + ' of ' + filteredIndices.length + ')';
+
+  document.getElementById('question-meta').textContent =
+    'Objective: ' + q.objective + ' | Difficulty: ' + q.difficulty;
+
+  document.getElementById('question-text').textContent = q.text;
+
+  // Render options
+  const container = document.getElementById('options-container');
+  container.innerHTML = '';
+  q.options.forEach(function(opt) {
+    const btn = document.createElement('button');
+    btn.className = 'option-btn';
+    btn.dataset.letter = opt.letter;
+    btn.innerHTML = '<strong>' + opt.letter + ')</strong> ' + opt.text + ' <span class="kbd-hint"><kbd>' + opt.letter + '</kbd></span>';
+    btn.onclick = function() { selectAnswer(opt.letter, realIdx); };
+
+    if (answered[realIdx] !== undefined) {
+      btn.disabled = true;
+      if (opt.letter === q.correct_answer) btn.classList.add('correct');
+      else if (opt.letter === answered[realIdx]) btn.classList.add('incorrect');
+    }
+    container.appendChild(btn);
+  });
+
+  // Show/hide feedback with animation
+  const feedback = document.getElementById('feedback');
+  if (answered[realIdx] !== undefined) {
+    const isCorrect = answered[realIdx] === q.correct_answer;
+    document.getElementById('feedback-result').innerHTML =
+      isCorrect ? '&#10003; Correct!' : '&#10007; Incorrect — correct answer: <strong>' + q.correct_answer + ')</strong>';
+    document.getElementById('feedback-result').className =
+      isCorrect ? 'feedback-correct' : 'feedback-incorrect';
+    // Enhanced explanation (#5): show selected answer context + why correct answer is right
+    var explanationHtml = '';
+    if (!isCorrect) {
+      var selectedOpt = q.options.find(function(o) { return o.letter === answered[realIdx]; });
+      if (selectedOpt) {
+        explanationHtml += '<span class="feedback-selected">You selected: <strong>' + selectedOpt.letter + ')</strong> ' + selectedOpt.text + '</span><br>';
+      }
+      var correctOpt = q.options.find(function(o) { return o.letter === q.correct_answer; });
+      if (correctOpt) {
+        explanationHtml += '<span class="feedback-correct-opt">Correct: <strong>' + correctOpt.letter + ')</strong> ' + correctOpt.text + '</span><br>';
+      }
+    }
+    explanationHtml += '<span class="feedback-explain">' + q.explanation + '</span>';
+    document.getElementById('feedback-explanation').innerHTML = explanationHtml;
+    // Related chapter link
+    const linkEl = document.getElementById('feedback-link');
+    if (q.related_chapter) {
+      const rc = q.related_chapter;
+      linkEl.innerHTML = 'Read more: <a href="/exam-prep/guide/' + rc.book_slug + '/' + rc.chapter_slug + '">' + rc.title + '</a> <small>(' + rc.book_title + ')</small>';
+    } else {
+      linkEl.innerHTML = '';
+    }
+    feedback.classList.remove('hidden');
+    requestAnimationFrame(function() { feedback.classList.add('visible'); });
+  } else {
+    feedback.classList.remove('visible');
+    feedback.classList.add('hidden');
+  }
+
+  // Nav state
+  document.getElementById('btn-prev').disabled = filterIdx === 0;
+  document.getElementById('btn-next').disabled = filterIdx === filteredIndices.length - 1;
+  document.getElementById('question-select').value = filterIdx;
+
+  updateSummary();
+  updateProgressBar();
+}
+
+function selectAnswer(letter, realIdx) {
+  if (answered[realIdx] !== undefined) return;
+  answered[realIdx] = letter;
+  saveProgress();
+  // Update selector color for this question
+  applyFilters();
+  // Find the new filterIdx for the same realIdx
+  var newFilterIdx = filteredIndices.indexOf(realIdx);
+  if (newFilterIdx === -1) newFilterIdx = Math.min(currentIndex, filteredIndices.length - 1);
+  renderQuestion(newFilterIdx);
+}
+
+function prevQuestion() {
+  if (currentIndex > 0) renderQuestion(currentIndex - 1);
+}
+
+function nextQuestion() {
+  if (currentIndex < filteredIndices.length - 1) renderQuestion(currentIndex + 1);
+}
+
+function goToQuestion(filterIdx) {
+  renderQuestion(filterIdx);
+}
+
+function nextUnanswered() {
+  // Find next unanswered from current position
+  for (let i = currentIndex + 1; i < filteredIndices.length; i++) {
+    if (answered[filteredIndices[i]] === undefined) { renderQuestion(i); return; }
+  }
+  // Wrap around
+  for (let i = 0; i <= currentIndex; i++) {
+    if (answered[filteredIndices[i]] === undefined) { renderQuestion(i); return; }
+  }
+}
+
+// --- Keyboard shortcuts ---
+document.addEventListener('keydown', function(e) {
+  // Don't capture if user is typing in an input
+  if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.tagName === 'SELECT') return;
+  const realIdx = filteredIndices[currentIndex];
+  switch(e.key) {
+    case 'ArrowLeft':
+      e.preventDefault(); prevQuestion(); break;
+    case 'ArrowRight':
+      e.preventDefault(); nextQuestion(); break;
+    case 'a': case 'A': case '1':
+      if (answered[realIdx] === undefined) selectAnswer('A', realIdx); break;
+    case 'b': case 'B': case '2':
+      if (answered[realIdx] === undefined) selectAnswer('B', realIdx); break;
+    case 'c': case 'C': case '3':
+      if (answered[realIdx] === undefined) selectAnswer('C', realIdx); break;
+    case 'd': case 'D': case '4':
+      if (answered[realIdx] === undefined) selectAnswer('D', realIdx); break;
+    case 'n':
+      nextUnanswered(); break;
+  }
+});
+
+// --- Init ---
+loadProgress();
+applyFilters();
+renderQuestion(0);
+</script>
+
+{% endblock %}

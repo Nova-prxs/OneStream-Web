@@ -1,0 +1,234 @@
+{
+  "namespace": "OneStream.Client.Api.Core",
+  "generated_at": "2025-12-08T19:28:51.081011",
+  "statistics": {
+    "classes": 2,
+    "interfaces": 1,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 0,
+    "total_methods": 5,
+    "total_properties": 6
+  },
+  "classes": [
+    {
+      "name": "ProblemDetails",
+      "namespace": "OneStream.Client.Api.Core",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "Type",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "Title",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "Status",
+          "type": "int",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "Detail",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "Instance",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "Extensions",
+          "type": "IDictionary<string, object>",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [
+        {
+          "name": "Dictionary",
+          "return_type": "Dictionary",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "StringComparer.Ordinal",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Dictionarys operation",
+          "generic_params": [
+            "string",
+            "object"
+          ],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Api/Core/ProblemDetails.cs"
+    },
+    {
+      "name": "AffinityHelper",
+      "namespace": "OneStream.Client.Api.Core",
+      "type": "class",
+      "modifiers": [
+        "internal",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "AffinitizeRequestMessage",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "message",
+              "type": "HttpRequestMessage",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "isLogoffRequest",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Affinitizes request message",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "InspectResponseMessage",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "message",
+              "type": "HttpResponseMessage",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "isLogoffRequest",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Inspects response message",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Api/Core/AffinityHelper.cs"
+    }
+  ],
+  "interfaces": [
+    {
+      "name": "IApiClient",
+      "namespace": "OneStream.Client.Api.Core",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "Close",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Closes operation",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "Abort",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Aborts operation",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Api/Core/IApiClient.cs",
+      "source_code": "public interface IApiClient\n{\n\tvoid Close();\n\n\tvoid Abort();\n}"
+    }
+  ],
+  "structs": [],
+  "delegates": [],
+  "enums": []
+}

@@ -1,0 +1,182 @@
+{
+  "namespace": "OneStream.Client.Wpf.DataManagement.ComboBoxLists",
+  "generated_at": "2025-12-08T19:28:51.955373",
+  "statistics": {
+    "classes": 1,
+    "interfaces": 0,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 0,
+    "total_methods": 6,
+    "total_properties": 0
+  },
+  "classes": [
+    {
+      "name": "DataMgmtNotificationEventComboBoxList",
+      "namespace": "OneStream.Client.Wpf.DataManagement.ComboBoxLists",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "GetItems",
+          "return_type": "List<PropertyGridComboBoxItem>",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Gets items",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "PropertyGridComboBoxItem",
+          "return_type": "PropertyGridComboBoxItem",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "DataMgmtNotificationType.NotUsed",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "GeneralUIStrings.NotUsed",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Propertys grid combo box item",
+          "generic_params": [],
+          "overloads": 4
+        },
+        {
+          "name": "PropertyGridComboBoxItem",
+          "return_type": ", new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "DataMgmtNotificationType.Success",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "GeneralUIStrings.OnSuccess",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Propertys grid combo box item",
+          "generic_params": [],
+          "overloads": 4
+        },
+        {
+          "name": "PropertyGridComboBoxItem",
+          "return_type": ", new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "DataMgmtNotificationType.Failure",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "GeneralUIStrings.OnFailure",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Propertys grid combo box item",
+          "generic_params": [],
+          "overloads": 4
+        },
+        {
+          "name": "PropertyGridComboBoxItem",
+          "return_type": ", new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "DataMgmtNotificationType.SuccessOrFailure",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "GeneralUIStrings.OnSuccessOrFailure",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Propertys grid combo box item",
+          "generic_params": [],
+          "overloads": 4
+        },
+        {
+          "name": "GetItem",
+          "return_type": "PropertyGridComboBoxItem",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "notificationType",
+              "type": "DataMgmtNotificationType",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets item",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Wpf/DataManagement/ComboBoxLists/DataMgmtNotificationEventComboBoxList.cs"
+    }
+  ],
+  "interfaces": [],
+  "structs": [],
+  "delegates": [],
+  "enums": []
+}

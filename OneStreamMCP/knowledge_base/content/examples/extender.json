@@ -1,0 +1,399 @@
+[
+  {
+    "file": "Business rules/extender_import_templates.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName.BusinessRule.Extender.extender_import_templates",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "Object"
+      },
+      {
+        "name": "args",
+        "type": "ExtenderArgs"
+      }
+    ],
+    "return_type": "Object"
+  },
+  {
+    "file": "Business rules/Extender_folder_migrations.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName.BusinessRule.Extender.extender_folder_migrations",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "Object"
+      },
+      {
+        "name": "args",
+        "type": "ExtenderArgs"
+      }
+    ],
+    "return_type": "Object"
+  },
+  {
+    "file": "Investments/data management/export data/extender_export_data.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName.BusinessRule.Extender.extender_export_data",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "System",
+      "System.Text.RegularExpressions",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "Object"
+      },
+      {
+        "name": "args",
+        "type": "ExtenderArgs"
+      }
+    ],
+    "return_type": "Object"
+  },
+  {
+    "file": "Investments/data management/extensibility rules/extender_solution_helper.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName.BusinessRule.Extender.extender_solution_helper",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "Object"
+      },
+      {
+        "name": "args",
+        "type": "ExtenderArgs"
+      }
+    ],
+    "return_type": "Object"
+  },
+  {
+    "file": "Investments/data management/extensibility rules/extender_sql_migrations.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName.BusinessRule.Extender.extender_sql_migrations",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "Object"
+      },
+      {
+        "name": "args",
+        "type": "ExtenderArgs"
+      }
+    ],
+    "return_type": "Object"
+  },
+  {
+    "file": "Investments/data management/extensibility rules/extender_projections.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName.BusinessRule.Extender.extender_projections",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "Object"
+      },
+      {
+        "name": "args",
+        "type": "ExtenderArgs"
+      }
+    ],
+    "return_type": "Object"
+  },
+  {
+    "file": "Investments/data management/extensibility rules/extender_folder_migrations.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName.BusinessRule.Extender.extender_folder_migrations",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "Object"
+      },
+      {
+        "name": "args",
+        "type": "ExtenderArgs"
+      }
+    ],
+    "return_type": "Object"
+  },
+  {
+    "file": "Investments/data management/import data/extender_import_data.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName.BusinessRule.Extender.extender_import_data",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "Object"
+      },
+      {
+        "name": "args",
+        "type": "ExtenderArgs"
+      }
+    ],
+    "return_type": "Object"
+  },
+  {
+    "file": "Investments/data management/import data/extender_import_templates.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName.BusinessRule.Extender.extender_import_templates",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "Object"
+      },
+      {
+        "name": "args",
+        "type": "ExtenderArgs"
+      }
+    ],
+    "return_type": "Object"
+  }
+]

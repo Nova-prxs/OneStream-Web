@@ -1,0 +1,635 @@
+{
+  "generated": "2026-03-19T18:36:53.449796+00:00",
+  "books": [
+    {
+      "book": "design-reference-guide",
+      "chapter_count": 24,
+      "chapters": [
+        {
+          "title": "Introduction",
+          "file": "design-reference-guide/chapter-01-introduction.md",
+          "book": "design-reference-guide",
+          "chapter": 1,
+          "start_page": 42,
+          "end_page": 42,
+          "word_count": 41,
+          "image_count": 0
+        },
+        {
+          "title": "About the Financial Model",
+          "file": "design-reference-guide/chapter-02-about-the-financial-model.md",
+          "book": "design-reference-guide",
+          "chapter": 2,
+          "start_page": 43,
+          "end_page": 316,
+          "word_count": 46101,
+          "image_count": 90
+        },
+        {
+          "title": "Navigation",
+          "file": "design-reference-guide/chapter-03-navigation.md",
+          "book": "design-reference-guide",
+          "chapter": 3,
+          "start_page": 317,
+          "end_page": 334,
+          "word_count": 2417,
+          "image_count": 31
+        },
+        {
+          "title": "Docking",
+          "file": "design-reference-guide/chapter-04-docking.md",
+          "book": "design-reference-guide",
+          "chapter": 4,
+          "start_page": 335,
+          "end_page": 353,
+          "word_count": 2708,
+          "image_count": 14
+        },
+        {
+          "title": "Filter Runtime Data and Reduce Maintenance with Parameters",
+          "file": "design-reference-guide/chapter-05-filter-runtime-data-and-reduce-maintenance-with-parameters.md",
+          "book": "design-reference-guide",
+          "chapter": 5,
+          "start_page": 354,
+          "end_page": 394,
+          "word_count": 6118,
+          "image_count": 34
+        },
+        {
+          "title": "Presenting Data With Extensible Documents",
+          "file": "design-reference-guide/chapter-06-presenting-data-with-extensible-documents.md",
+          "book": "design-reference-guide",
+          "chapter": 6,
+          "start_page": 395,
+          "end_page": 485,
+          "word_count": 10438,
+          "image_count": 94
+        },
+        {
+          "title": "Implementing Security",
+          "file": "design-reference-guide/chapter-07-implementing-security.md",
+          "book": "design-reference-guide",
+          "chapter": 7,
+          "start_page": 486,
+          "end_page": 533,
+          "word_count": 7716,
+          "image_count": 38
+        },
+        {
+          "title": "Cubes",
+          "file": "design-reference-guide/chapter-08-cubes.md",
+          "book": "design-reference-guide",
+          "chapter": 8,
+          "start_page": 534,
+          "end_page": 785,
+          "word_count": 39987,
+          "image_count": 172
+        },
+        {
+          "title": "Workflow",
+          "file": "design-reference-guide/chapter-09-workflow.md",
+          "book": "design-reference-guide",
+          "chapter": 9,
+          "start_page": 786,
+          "end_page": 871,
+          "word_count": 16072,
+          "image_count": 74
+        },
+        {
+          "title": "Data Collection",
+          "file": "design-reference-guide/chapter-10-data-collection.md",
+          "book": "design-reference-guide",
+          "chapter": 10,
+          "start_page": 872,
+          "end_page": 998,
+          "word_count": 19177,
+          "image_count": 138
+        },
+        {
+          "title": "Journals Overview",
+          "file": "design-reference-guide/chapter-11-journals-overview.md",
+          "book": "design-reference-guide",
+          "chapter": 11,
+          "start_page": 999,
+          "end_page": 1031,
+          "word_count": 5567,
+          "image_count": 39
+        },
+        {
+          "title": "Presenting Data With Books, Cube Views and Dashboards",
+          "file": "design-reference-guide/chapter-12-presenting-data-with-books-cube-views-and-dashboards.md",
+          "book": "design-reference-guide",
+          "chapter": 12,
+          "start_page": 1032,
+          "end_page": 1618,
+          "word_count": 87565,
+          "image_count": 544
+        },
+        {
+          "title": "Application Tools",
+          "file": "design-reference-guide/chapter-13-application-tools.md",
+          "book": "design-reference-guide",
+          "chapter": 13,
+          "start_page": 1619,
+          "end_page": 1768,
+          "word_count": 19509,
+          "image_count": 146
+        },
+        {
+          "title": "User Authentication and Single Sign-On",
+          "file": "design-reference-guide/chapter-14-user-authentication-and-single-sign-on.md",
+          "book": "design-reference-guide",
+          "chapter": 14,
+          "start_page": 1769,
+          "end_page": 1769,
+          "word_count": 151,
+          "image_count": 0
+        },
+        {
+          "title": "How Users are Configured for Authentication",
+          "file": "design-reference-guide/chapter-15-how-users-are-configured-for-authentication.md",
+          "book": "design-reference-guide",
+          "chapter": 15,
+          "start_page": 1770,
+          "end_page": 1770,
+          "word_count": 125,
+          "image_count": 0
+        },
+        {
+          "title": "About Managing Users and Groups",
+          "file": "design-reference-guide/chapter-16-about-managing-users-and-groups.md",
+          "book": "design-reference-guide",
+          "chapter": 16,
+          "start_page": 1771,
+          "end_page": 1790,
+          "word_count": 3430,
+          "image_count": 5
+        },
+        {
+          "title": "System Security Roles",
+          "file": "design-reference-guide/chapter-17-system-security-roles.md",
+          "book": "design-reference-guide",
+          "chapter": 17,
+          "start_page": 1791,
+          "end_page": 1822,
+          "word_count": 4457,
+          "image_count": 26
+        },
+        {
+          "title": "Logging",
+          "file": "design-reference-guide/chapter-18-logging.md",
+          "book": "design-reference-guide",
+          "chapter": 18,
+          "start_page": 1823,
+          "end_page": 1847,
+          "word_count": 4298,
+          "image_count": 33
+        },
+        {
+          "title": "System Tools",
+          "file": "design-reference-guide/chapter-19-system-tools.md",
+          "book": "design-reference-guide",
+          "chapter": 19,
+          "start_page": 1848,
+          "end_page": 1927,
+          "word_count": 9202,
+          "image_count": 77
+        },
+        {
+          "title": "Using OnePlace Workflow",
+          "file": "design-reference-guide/chapter-20-using-oneplace-workflow.md",
+          "book": "design-reference-guide",
+          "chapter": 20,
+          "start_page": 1928,
+          "end_page": 1951,
+          "word_count": 4580,
+          "image_count": 51
+        },
+        {
+          "title": "Using OnePlace Cube Views",
+          "file": "design-reference-guide/chapter-21-using-oneplace-cube-views.md",
+          "book": "design-reference-guide",
+          "chapter": 21,
+          "start_page": 1952,
+          "end_page": 1992,
+          "word_count": 6005,
+          "image_count": 45
+        },
+        {
+          "title": "Using OnePlace Dashboards",
+          "file": "design-reference-guide/chapter-22-using-oneplace-dashboards.md",
+          "book": "design-reference-guide",
+          "chapter": 22,
+          "start_page": 1993,
+          "end_page": 1995,
+          "word_count": 254,
+          "image_count": 6
+        },
+        {
+          "title": "Storing Documents",
+          "file": "design-reference-guide/chapter-23-storing-documents.md",
+          "book": "design-reference-guide",
+          "chapter": 23,
+          "start_page": 1996,
+          "end_page": 1997,
+          "word_count": 192,
+          "image_count": 2
+        },
+        {
+          "title": "Excel Add-In",
+          "file": "design-reference-guide/chapter-24-excel-add-in.md",
+          "book": "design-reference-guide",
+          "chapter": 24,
+          "start_page": 1998,
+          "end_page": 2111,
+          "word_count": 14884,
+          "image_count": 134
+        }
+      ]
+    },
+    {
+      "book": "finance-rules",
+      "chapter_count": 10,
+      "chapters": [
+        {
+          "title": "Chapter 1: Finance Engine Basics",
+          "file": "finance-rules/chapter-01-finance-engine-basics.md",
+          "book": "finance-rules",
+          "chapter": 2,
+          "start_page": 23,
+          "end_page": 54,
+          "word_count": 6974,
+          "image_count": 44
+        },
+        {
+          "title": "Introduction",
+          "file": "finance-rules/chapter-01-introduction.md",
+          "book": "finance-rules",
+          "chapter": 1,
+          "start_page": 19,
+          "end_page": 22,
+          "word_count": 1428,
+          "image_count": 0
+        },
+        {
+          "title": "Chapter 2: Cube Data",
+          "file": "finance-rules/chapter-02-cube-data.md",
+          "book": "finance-rules",
+          "chapter": 3,
+          "start_page": 55,
+          "end_page": 68,
+          "word_count": 3108,
+          "image_count": 25
+        },
+        {
+          "title": "Chapter 3: api.Data.Calculate",
+          "file": "finance-rules/chapter-03-api-data-calculate.md",
+          "book": "finance-rules",
+          "chapter": 4,
+          "start_page": 69,
+          "end_page": 104,
+          "word_count": 8794,
+          "image_count": 88
+        },
+        {
+          "title": "Chapter 4: The Data Buffer Cell Loop",
+          "file": "finance-rules/chapter-04-the-data-buffer-cell-loop.md",
+          "book": "finance-rules",
+          "chapter": 5,
+          "start_page": 105,
+          "end_page": 116,
+          "word_count": 3579,
+          "image_count": 23
+        },
+        {
+          "title": "Chapter 5: Reporting Calculations",
+          "file": "finance-rules/chapter-05-reporting-calculations.md",
+          "book": "finance-rules",
+          "chapter": 6,
+          "start_page": 117,
+          "end_page": 144,
+          "word_count": 4986,
+          "image_count": 54
+        },
+        {
+          "title": "Chapter 6: Managing Calculations",
+          "file": "finance-rules/chapter-06-managing-calculations.md",
+          "book": "finance-rules",
+          "chapter": 7,
+          "start_page": 145,
+          "end_page": 160,
+          "word_count": 3186,
+          "image_count": 32
+        },
+        {
+          "title": "Chapter 7: Troubleshooting and Performance",
+          "file": "finance-rules/chapter-07-troubleshooting-and-performance.md",
+          "book": "finance-rules",
+          "chapter": 8,
+          "start_page": 161,
+          "end_page": 210,
+          "word_count": 10317,
+          "image_count": 129
+        },
+        {
+          "title": "Chapter 8: Common Rule Examples",
+          "file": "finance-rules/chapter-08-common-rule-examples.md",
+          "book": "finance-rules",
+          "chapter": 9,
+          "start_page": 211,
+          "end_page": 272,
+          "word_count": 13037,
+          "image_count": 152
+        },
+        {
+          "title": "Index",
+          "file": "finance-rules/index.md",
+          "book": "finance-rules",
+          "chapter": null,
+          "start_page": 273,
+          "end_page": 282,
+          "word_count": 2514,
+          "image_count": 2
+        }
+      ]
+    },
+    {
+      "book": "foundation-handbook",
+      "chapter_count": 14,
+      "chapters": [
+        {
+          "title": "Chapter 1 - Introduction",
+          "file": "foundation-handbook/chapter-01-introduction.md",
+          "book": "foundation-handbook",
+          "chapter": 1,
+          "start_page": 28,
+          "end_page": 35,
+          "word_count": 4984,
+          "image_count": 1
+        },
+        {
+          "title": "Chapter 2 - Methodology and the Project",
+          "file": "foundation-handbook/chapter-02-methodology-and-the-project.md",
+          "book": "foundation-handbook",
+          "chapter": 2,
+          "start_page": 36,
+          "end_page": 81,
+          "word_count": 23634,
+          "image_count": 5
+        },
+        {
+          "title": "Chapter 3 - Design and Build",
+          "file": "foundation-handbook/chapter-03-design-and-build.md",
+          "book": "foundation-handbook",
+          "chapter": 3,
+          "start_page": 82,
+          "end_page": 115,
+          "word_count": 17271,
+          "image_count": 9
+        },
+        {
+          "title": "Chapter 4 - Consolidation",
+          "file": "foundation-handbook/chapter-04-consolidation.md",
+          "book": "foundation-handbook",
+          "chapter": 4,
+          "start_page": 116,
+          "end_page": 145,
+          "word_count": 10817,
+          "image_count": 39
+        },
+        {
+          "title": "Chapter 5 - Planning",
+          "file": "foundation-handbook/chapter-05-planning.md",
+          "book": "foundation-handbook",
+          "chapter": 5,
+          "start_page": 146,
+          "end_page": 191,
+          "word_count": 18169,
+          "image_count": 57
+        },
+        {
+          "title": "Chapter 6 - Data Integration",
+          "file": "foundation-handbook/chapter-06-data-integration.md",
+          "book": "foundation-handbook",
+          "chapter": 6,
+          "start_page": 192,
+          "end_page": 213,
+          "word_count": 7535,
+          "image_count": 21
+        },
+        {
+          "title": "Chapter 7 - Workflow",
+          "file": "foundation-handbook/chapter-07-workflow.md",
+          "book": "foundation-handbook",
+          "chapter": 7,
+          "start_page": 214,
+          "end_page": 233,
+          "word_count": 10283,
+          "image_count": 11
+        },
+        {
+          "title": "Chapter 8 - Rules and Calculations",
+          "file": "foundation-handbook/chapter-08-rules-and-calculations.md",
+          "book": "foundation-handbook",
+          "chapter": 8,
+          "start_page": 234,
+          "end_page": 275,
+          "word_count": 19175,
+          "image_count": 63
+        },
+        {
+          "title": "Chapter 9 - Security",
+          "file": "foundation-handbook/chapter-09-security.md",
+          "book": "foundation-handbook",
+          "chapter": 9,
+          "start_page": 276,
+          "end_page": 305,
+          "word_count": 10466,
+          "image_count": 68
+        },
+        {
+          "title": "Chapter 10 - Reporting",
+          "file": "foundation-handbook/chapter-10-reporting.md",
+          "book": "foundation-handbook",
+          "chapter": 10,
+          "start_page": 306,
+          "end_page": 327,
+          "word_count": 9874,
+          "image_count": 16
+        },
+        {
+          "title": "Chapter 11 - Excel and Spreadsheet Reporting",
+          "file": "foundation-handbook/chapter-11-excel-and-spreadsheet-reporting.md",
+          "book": "foundation-handbook",
+          "chapter": 11,
+          "start_page": 328,
+          "end_page": 373,
+          "word_count": 13356,
+          "image_count": 72
+        },
+        {
+          "title": "Chapter 12 - Analytic Blend",
+          "file": "foundation-handbook/chapter-12-analytic-blend.md",
+          "book": "foundation-handbook",
+          "chapter": 12,
+          "start_page": 374,
+          "end_page": 391,
+          "word_count": 6683,
+          "image_count": 14
+        },
+        {
+          "title": "Chapter 13 - Introduction to the Solution Exchange",
+          "file": "foundation-handbook/chapter-13-introduction-to-the-solution-exchange.md",
+          "book": "foundation-handbook",
+          "chapter": 13,
+          "start_page": 392,
+          "end_page": 409,
+          "word_count": 7356,
+          "image_count": 15
+        },
+        {
+          "title": "Chapter 14 - Performance Tuning",
+          "file": "foundation-handbook/chapter-14-performance-tuning.md",
+          "book": "foundation-handbook",
+          "chapter": 14,
+          "start_page": 410,
+          "end_page": 451,
+          "word_count": 14219,
+          "image_count": 29
+        }
+      ]
+    },
+    {
+      "book": "workspaces-assemblies",
+      "chapter_count": 12,
+      "chapters": [
+        {
+          "title": "Chapter 1 - Introduction",
+          "file": "workspaces-assemblies/chapter-01-introduction.md",
+          "book": "workspaces-assemblies",
+          "chapter": 1,
+          "start_page": 20,
+          "end_page": 21,
+          "word_count": 673,
+          "image_count": 0
+        },
+        {
+          "title": "Chapter 2 - Understanding Workspaces",
+          "file": "workspaces-assemblies/chapter-02-understanding-workspaces.md",
+          "book": "workspaces-assemblies",
+          "chapter": 2,
+          "start_page": 22,
+          "end_page": 41,
+          "word_count": 6250,
+          "image_count": 22
+        },
+        {
+          "title": "Chapter 3 - Setting Up Your Workspace",
+          "file": "workspaces-assemblies/chapter-03-setting-up-your-workspace.md",
+          "book": "workspaces-assemblies",
+          "chapter": 3,
+          "start_page": 42,
+          "end_page": 57,
+          "word_count": 4746,
+          "image_count": 49
+        },
+        {
+          "title": "Chapter 4 - Components of Workspaces",
+          "file": "workspaces-assemblies/chapter-04-components-of-workspaces.md",
+          "book": "workspaces-assemblies",
+          "chapter": 4,
+          "start_page": 58,
+          "end_page": 117,
+          "word_count": 8381,
+          "image_count": 121
+        },
+        {
+          "title": "Chapter 5 - Understanding Assemblies",
+          "file": "workspaces-assemblies/chapter-05-understanding-assemblies.md",
+          "book": "workspaces-assemblies",
+          "chapter": 5,
+          "start_page": 118,
+          "end_page": 137,
+          "word_count": 5234,
+          "image_count": 41
+        },
+        {
+          "title": "Chapter 6 - Managing Assembly Business Rules",
+          "file": "workspaces-assemblies/chapter-06-managing-assembly-business-rules.md",
+          "book": "workspaces-assemblies",
+          "chapter": 6,
+          "start_page": 138,
+          "end_page": 163,
+          "word_count": 4401,
+          "image_count": 60
+        },
+        {
+          "title": "Chapter 7 - Managing Assembly Services",
+          "file": "workspaces-assemblies/chapter-07-managing-assembly-services.md",
+          "book": "workspaces-assemblies",
+          "chapter": 7,
+          "start_page": 164,
+          "end_page": 191,
+          "word_count": 5359,
+          "image_count": 41
+        },
+        {
+          "title": "Chapter 8 - Intro to Dynamic Dashboards",
+          "file": "workspaces-assemblies/chapter-08-intro-to-dynamic-dashboards.md",
+          "book": "workspaces-assemblies",
+          "chapter": 8,
+          "start_page": 192,
+          "end_page": 225,
+          "word_count": 5101,
+          "image_count": 45
+        },
+        {
+          "title": "Chapter 9 - Sharing and Reusing Workspace Objects",
+          "file": "workspaces-assemblies/chapter-09-sharing-and-reusing-workspace-objects.md",
+          "book": "workspaces-assemblies",
+          "chapter": 9,
+          "start_page": 226,
+          "end_page": 239,
+          "word_count": 2181,
+          "image_count": 27
+        },
+        {
+          "title": "Chapter 10 - End-to-End Workspace Exercise",
+          "file": "workspaces-assemblies/chapter-10-end-to-end-workspace-exercise.md",
+          "book": "workspaces-assemblies",
+          "chapter": 10,
+          "start_page": 240,
+          "end_page": 285,
+          "word_count": 7916,
+          "image_count": 106
+        },
+        {
+          "title": "Chapter 11 - Troubleshooting Workspaces and Assemblies",
+          "file": "workspaces-assemblies/chapter-11-troubleshooting-workspaces-and-assemblies.md",
+          "book": "workspaces-assemblies",
+          "chapter": 11,
+          "start_page": 286,
+          "end_page": 309,
+          "word_count": 3937,
+          "image_count": 45
+        },
+        {
+          "title": "Chapter 12 - The Future of Workspaces in OneStream",
+          "file": "workspaces-assemblies/chapter-12-the-future-of-workspaces-in-onestream.md",
+          "book": "workspaces-assemblies",
+          "chapter": 12,
+          "start_page": 310,
+          "end_page": 331,
+          "word_count": 6363,
+          "image_count": 9
+        }
+      ]
+    }
+  ],
+  "totals": {
+    "books": 4,
+    "chapters": 60,
+    "word_count": 603281,
+    "image_count": 3328
+  }
+}

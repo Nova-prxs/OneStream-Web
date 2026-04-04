@@ -1,0 +1,377 @@
+{
+  "namespace": "OneStream.DependencyInjection",
+  "generated_at": "2025-12-08T19:28:52.054507",
+  "statistics": {
+    "classes": 2,
+    "interfaces": 0,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 0,
+    "total_methods": 15,
+    "total_properties": 3
+  },
+  "classes": [
+    {
+      "name": "IocServicePluginLoader",
+      "namespace": "OneStream.DependencyInjection",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "catch",
+          "type": "",
+          "access": "public",
+          "has_getter": false,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "catch",
+          "type": "",
+          "access": "public",
+          "has_getter": false,
+          "has_setter": false,
+          "is_static": false
+        }
+      ],
+      "methods": [
+        {
+          "name": "Dictionary",
+          "return_type": "Dictionary",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Dictionarys operation",
+          "generic_params": [
+            "string",
+            "Assembly"
+          ],
+          "overloads": 1
+        },
+        {
+          "name": "ConfigureServices",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "services",
+              "type": "IServiceCollection",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Configures services",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "ArgumentNullException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "\"services\"",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Arguments null exception",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "ProcessAssemblies",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "Assembly.GetCallingAssembly(",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Processs assemblies",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "ProcessAssemblies",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "assembly",
+              "type": "Assembly",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Processs assemblies",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "ConfigurePluginServices",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "assembly",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Configures plugin services",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "ProcessAssemblies",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "assembly2",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Processs assemblies",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "ConfigurePluginServices",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "assembly",
+              "type": "Assembly",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Configures plugin services",
+          "generic_params": [],
+          "overloads": 2
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/DependencyInjection/IocServicePluginLoader.cs"
+    },
+    {
+      "name": "ServiceLocator",
+      "namespace": "OneStream.DependencyInjection",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "catch",
+          "type": "",
+          "access": "public",
+          "has_getter": false,
+          "has_setter": false,
+          "is_static": false
+        }
+      ],
+      "methods": [
+        {
+          "name": "SetServiceProvider",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "serviceProvider",
+              "type": "IServiceProvider",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Sets service provider",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetService",
+          "return_type": "TType",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Gets service",
+          "generic_params": [
+            "TType"
+          ],
+          "overloads": 1
+        },
+        {
+          "name": "GetRequiredService",
+          "return_type": "TType",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Gets required service",
+          "generic_params": [
+            "TType"
+          ],
+          "overloads": 1
+        },
+        {
+          "name": "GetServiceProvider",
+          "return_type": "IServiceProvider",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Gets service provider",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "InvalidOperationException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "configured.\"",
+              "type": "\"IocContainer must be",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Invalids operation exception",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetInstance",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "type",
+              "type": "Type",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets instance",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetAllInstances",
+          "return_type": "IEnumerable<object>",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "type",
+              "type": "Type",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets all instances",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/DependencyInjection/ServiceLocator.cs"
+    }
+  ],
+  "interfaces": [],
+  "structs": [],
+  "delegates": [],
+  "enums": []
+}

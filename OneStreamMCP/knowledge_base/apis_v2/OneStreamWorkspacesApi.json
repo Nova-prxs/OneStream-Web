@@ -1,0 +1,502 @@
+{
+  "namespace": "OneStreamWorkspacesApi",
+  "generated_at": "2025-12-08T19:28:52.439064",
+  "statistics": {
+    "classes": 0,
+    "interfaces": 21,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 0,
+    "total_methods": 1,
+    "total_properties": 0
+  },
+  "classes": [],
+  "interfaces": [
+    {
+      "name": "IWsasFinanceMemberLists",
+      "namespace": "OneStreamWorkspacesApi",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IWsAssemblyServiceBase"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStreamWorkspacesApi/IWsasFinanceMemberLists.cs",
+      "source_code": "public interface IWsasFinanceMemberLists : IWsAssemblyServiceBase\n{\n}"
+    },
+    {
+      "name": "IWsasFinanceCustomCalculate",
+      "namespace": "OneStreamWorkspacesApi",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IWsAssemblyServiceBase"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStreamWorkspacesApi/IWsasFinanceCustomCalculate.cs",
+      "source_code": "public interface IWsasFinanceCustomCalculate : IWsAssemblyServiceBase\n{\n}"
+    },
+    {
+      "name": "IWsasDynamicData",
+      "namespace": "OneStreamWorkspacesApi",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IWsAssemblyServiceBase"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStreamWorkspacesApi/IWsasDynamicData.cs",
+      "source_code": "public interface IWsasDynamicData : IWsAssemblyServiceBase\n{\n}"
+    },
+    {
+      "name": "IWsasComponent",
+      "namespace": "OneStreamWorkspacesApi",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IWsAssemblyServiceBase"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStreamWorkspacesApi/IWsasComponent.cs",
+      "source_code": "public interface IWsasComponent : IWsAssemblyServiceBase\n{\n}"
+    },
+    {
+      "name": "IWsasSqlTableEditor",
+      "namespace": "OneStreamWorkspacesApi",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IWsAssemblyServiceBase"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStreamWorkspacesApi/IWsasSqlTableEditor.cs",
+      "source_code": "public interface IWsasSqlTableEditor : IWsAssemblyServiceBase\n{\n}"
+    },
+    {
+      "name": "IWsasDynamicDimensionApi",
+      "namespace": "OneStreamWorkspacesApi",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStreamWorkspacesApi/IWsasDynamicDimensionApi.cs",
+      "source_code": "public interface IWsasDynamicDimensionApi\n{\n}"
+    },
+    {
+      "name": "IWsAssemblyServiceBase",
+      "namespace": "OneStreamWorkspacesApi",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStreamWorkspacesApi/IWsAssemblyServiceBase.cs",
+      "source_code": "public interface IWsAssemblyServiceBase\n{\n}"
+    },
+    {
+      "name": "IWsasDynamicDashboards",
+      "namespace": "OneStreamWorkspacesApi",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IWsAssemblyServiceBase"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStreamWorkspacesApi/IWsasDynamicDashboards.cs",
+      "source_code": "public interface IWsasDynamicDashboards : IWsAssemblyServiceBase\n{\n}"
+    },
+    {
+      "name": "IWsasDashboard",
+      "namespace": "OneStreamWorkspacesApi",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IWsAssemblyServiceBase"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStreamWorkspacesApi/IWsasDashboard.cs",
+      "source_code": "public interface IWsasDashboard : IWsAssemblyServiceBase\n{\n}"
+    },
+    {
+      "name": "IWsasDataSet",
+      "namespace": "OneStreamWorkspacesApi",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IWsAssemblyServiceBase"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStreamWorkspacesApi/IWsasDataSet.cs",
+      "source_code": "public interface IWsasDataSet : IWsAssemblyServiceBase\n{\n}"
+    },
+    {
+      "name": "IWsasDynamicCubeView",
+      "namespace": "OneStreamWorkspacesApi",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IWsAssemblyServiceBase"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStreamWorkspacesApi/IWsasDynamicCubeView.cs",
+      "source_code": "public interface IWsasDynamicCubeView : IWsAssemblyServiceBase\n{\n}"
+    },
+    {
+      "name": "IWsasDynamicCubeViewApi",
+      "namespace": "OneStreamWorkspacesApi",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IBusinessRuleProfilerSettings"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStreamWorkspacesApi/IWsasDynamicCubeViewApi.cs",
+      "source_code": "public interface IWsasDynamicCubeViewApi : IBusinessRuleProfilerSettings\n{\n}"
+    },
+    {
+      "name": "IWsasTableView",
+      "namespace": "OneStreamWorkspacesApi",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IWsAssemblyServiceBase"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStreamWorkspacesApi/IWsasTableView.cs",
+      "source_code": "public interface IWsasTableView : IWsAssemblyServiceBase\n{\n}"
+    },
+    {
+      "name": "IWsasFinanceCore",
+      "namespace": "OneStreamWorkspacesApi",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IWsAssemblyServiceBase"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStreamWorkspacesApi/IWsasFinanceCore.cs",
+      "source_code": "public interface IWsasFinanceCore : IWsAssemblyServiceBase\n{\n}"
+    },
+    {
+      "name": "IWsAssemblyServiceFactory",
+      "namespace": "OneStreamWorkspacesApi",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IWsAssemblyServiceBase"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "CreateWsAssemblyServiceInstance",
+          "return_type": "IWsAssemblyServiceBase",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "brGlobals",
+              "type": "BRGlobals",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "wsAssemblyServiceType",
+              "type": "WsAssemblyServiceType",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "itemName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates ws assembly service instance",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStreamWorkspacesApi/IWsAssemblyServiceFactory.cs",
+      "source_code": "public interface IWsAssemblyServiceFactory : IWsAssemblyServiceBase\n{\n\tIWsAssemblyServiceBase CreateWsAssemblyServiceInstance(SessionInfo si, BRGlobals brGlobals, DashboardWorkspace workspace, WsAssemblyServiceType wsAssemblyServiceType, string itemName);\n}"
+    },
+    {
+      "name": "IWsasDynamicDashboardsApi",
+      "namespace": "OneStreamWorkspacesApi",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IBusinessRuleProfilerSettings"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStreamWorkspacesApi/IWsasDynamicDashboardsApi.cs",
+      "source_code": "public interface IWsasDynamicDashboardsApi : IBusinessRuleProfilerSettings\n{\n}"
+    },
+    {
+      "name": "IWsasDataManagementStep",
+      "namespace": "OneStreamWorkspacesApi",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IWsAssemblyServiceBase"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStreamWorkspacesApi/IWsasDataManagementStep.cs",
+      "source_code": "public interface IWsasDataManagementStep : IWsAssemblyServiceBase\n{\n}"
+    },
+    {
+      "name": "IWsasXFBRString",
+      "namespace": "OneStreamWorkspacesApi",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IWsAssemblyServiceBase"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStreamWorkspacesApi/IWsasXFBRString.cs",
+      "source_code": "public interface IWsasXFBRString : IWsAssemblyServiceBase\n{\n}"
+    },
+    {
+      "name": "IWsasDynamicGrid",
+      "namespace": "OneStreamWorkspacesApi",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IWsAssemblyServiceBase"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStreamWorkspacesApi/IWsasDynamicGrid.cs",
+      "source_code": "public interface IWsasDynamicGrid : IWsAssemblyServiceBase\n{\n}"
+    },
+    {
+      "name": "IWsasFinanceGetDataCell",
+      "namespace": "OneStreamWorkspacesApi",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IWsAssemblyServiceBase"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStreamWorkspacesApi/IWsasFinanceGetDataCell.cs",
+      "source_code": "public interface IWsasFinanceGetDataCell : IWsAssemblyServiceBase\n{\n}"
+    },
+    {
+      "name": "IWsasDynamicDimension",
+      "namespace": "OneStreamWorkspacesApi",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IWsAssemblyServiceBase"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStreamWorkspacesApi/IWsasDynamicDimension.cs",
+      "source_code": "public interface IWsasDynamicDimension : IWsAssemblyServiceBase\n{\n}"
+    }
+  ],
+  "structs": [],
+  "delegates": [],
+  "enums": []
+}

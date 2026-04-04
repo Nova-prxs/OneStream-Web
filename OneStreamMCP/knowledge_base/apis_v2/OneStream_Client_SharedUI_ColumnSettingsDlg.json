@@ -1,0 +1,40 @@
+{
+  "namespace": "OneStream.Client.SharedUI.ColumnSettingsDlg",
+  "generated_at": "2025-12-08T19:28:51.639562",
+  "statistics": {
+    "classes": 0,
+    "interfaces": 0,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 1,
+    "total_methods": 0,
+    "total_properties": 0
+  },
+  "classes": [],
+  "interfaces": [],
+  "structs": [],
+  "delegates": [],
+  "enums": [
+    {
+      "name": "UIUpdateActivity",
+      "namespace": "OneStream.Client.SharedUI.ColumnSettingsDlg",
+      "underlying_type": "int",
+      "is_flags": false,
+      "values": [
+        {
+          "name": "Initialization",
+          "value": 0
+        },
+        {
+          "name": "ChangedDimensionSelection",
+          "value": 1
+        },
+        {
+          "name": "ViewSearchResultsInHierarchy",
+          "value": 2
+        }
+      ],
+      "access": "public"
+    }
+  ]
+}

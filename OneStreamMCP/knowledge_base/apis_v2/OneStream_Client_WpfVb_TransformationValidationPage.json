@@ -1,0 +1,103 @@
+{
+  "namespace": "OneStream.Client.WpfVb.TransformationValidationPage",
+  "generated_at": "2025-12-08T19:28:52.050780",
+  "statistics": {
+    "classes": 1,
+    "interfaces": 0,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 1,
+    "total_methods": 0,
+    "total_properties": 0
+  },
+  "classes": [
+    {
+      "name": "UserStateFinanceDimList",
+      "namespace": "OneStream.Client.WpfVb.TransformationValidationPage",
+      "type": "class",
+      "modifiers": [
+        "private"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "financeDimensionName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "initializeGrid",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [
+        "DesignerGenerated"
+      ],
+      "source_file": "output/types/OneStream/Client/WpfVb/TransformationValidationPage.cs"
+    }
+  ],
+  "interfaces": [],
+  "structs": [],
+  "delegates": [],
+  "enums": [
+    {
+      "name": "TreeNodeTypes",
+      "namespace": "OneStream.Client.WpfVb.TransformationValidationPage",
+      "underlying_type": "int",
+      "is_flags": false,
+      "values": [
+        {
+          "name": "Unknown",
+          "value": -1
+        },
+        {
+          "name": "StatusNode",
+          "value": 0
+        },
+        {
+          "name": "TransformationErrors",
+          "value": 1
+        },
+        {
+          "name": "CheckRuleErrors",
+          "value": 2
+        },
+        {
+          "name": "EventRuleErrors",
+          "value": 3
+        },
+        {
+          "name": "DimensionType",
+          "value": 4
+        },
+        {
+          "name": "InvalidIntersections",
+          "value": 5
+        },
+        {
+          "name": "AllIntersections",
+          "value": 6
+        },
+        {
+          "name": "DashboardItem",
+          "value": 11
+        }
+      ],
+      "access": "public"
+    }
+  ]
+}

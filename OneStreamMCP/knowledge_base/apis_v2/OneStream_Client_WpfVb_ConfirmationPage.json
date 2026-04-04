@@ -1,0 +1,201 @@
+{
+  "namespace": "OneStream.Client.WpfVb.ConfirmationPage",
+  "generated_at": "2025-12-08T19:28:52.048188",
+  "statistics": {
+    "classes": 2,
+    "interfaces": 0,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 1,
+    "total_methods": 0,
+    "total_properties": 0
+  },
+  "classes": [
+    {
+      "name": "RuleSummary",
+      "namespace": "OneStream.Client.WpfVb.ConfirmationPage",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "groupKey",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "ruleStatusImagePath",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "ruleName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "ruleText",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "entitiesTested",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "entityErrorCount",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [
+        "DesignerGenerated"
+      ],
+      "source_file": "output/types/OneStream/Client/WpfVb/ConfirmationPage.cs"
+    },
+    {
+      "name": "RuleDetail",
+      "namespace": "OneStream.Client.WpfVb.ConfirmationPage",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "groupName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "ruleName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "ruleText",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "entityName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "ruleStatusImagePath",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "value",
+              "type": "decimal",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "message",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "info1",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "info2",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "info3",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "info4",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/WpfVb/ConfirmationPage.cs"
+    }
+  ],
+  "interfaces": [],
+  "structs": [],
+  "delegates": [],
+  "enums": [
+    {
+      "name": "TreeNodeTypes",
+      "namespace": "OneStream.Client.WpfVb.ConfirmationPage",
+      "underlying_type": "int",
+      "is_flags": false,
+      "values": [
+        {
+          "name": "Unknown",
+          "value": -1
+        },
+        {
+          "name": "ConfirmationNode",
+          "value": 0
+        },
+        {
+          "name": "GroupNode",
+          "value": 2
+        },
+        {
+          "name": "CubeViewItem",
+          "value": 21
+        },
+        {
+          "name": "DashboardItem",
+          "value": 31
+        }
+      ],
+      "access": "public"
+    }
+  ]
+}

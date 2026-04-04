@@ -1,0 +1,2633 @@
+[
+  {
+    "file": "Business rules/Migrations.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName",
+    "class": "Migrations",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "OneStreamWorkspacesApi",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "OneStreamWorkspacesApi.V800",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": null,
+    "parameters": [],
+    "return_type": null
+  },
+  {
+    "file": "Business rules/Helper_functions.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName",
+    "class": "helper_functions",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "OneStreamWorkspacesApi",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "OneStreamWorkspacesApi.V800",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": null,
+    "parameters": [],
+    "return_type": null
+  },
+  {
+    "file": "Business rules/Tables/master_cashflowforecasting.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName",
+    "class": "master_cashflowforecasting",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "OneStreamWorkspacesApi",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "OneStreamWorkspacesApi.V800",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": null,
+    "parameters": [],
+    "return_type": null
+  },
+  {
+    "file": "Business rules/Tables/raw_cashdebtposition.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName",
+    "class": "raw_cashdebtposition",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "OneStreamWorkspacesApi",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "OneStreamWorkspacesApi.V800",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": null,
+    "parameters": [],
+    "return_type": null
+  },
+  {
+    "file": "Business rules/Tables/master_treasury_monitoring.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName",
+    "class": "master_treasury_monitoring",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "OneStreamWorkspacesApi",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "OneStreamWorkspacesApi.V800",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": null,
+    "parameters": [],
+    "return_type": null
+  },
+  {
+    "file": "Business rules/Tables/aux_date.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName",
+    "class": "aux_date",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "OneStreamWorkspacesApi",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "OneStreamWorkspacesApi.V800",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": null,
+    "parameters": [],
+    "return_type": null
+  },
+  {
+    "file": "Business rules/Tables/raw_cashflowforecasting.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName",
+    "class": "raw_cashflowforecasting",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "OneStreamWorkspacesApi",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "OneStreamWorkspacesApi.V800",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": null,
+    "parameters": [],
+    "return_type": null
+  },
+  {
+    "file": "Business rules/Tables/master_companies.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName",
+    "class": "master_companies",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "OneStreamWorkspacesApi",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "OneStreamWorkspacesApi.V800",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": null,
+    "parameters": [],
+    "return_type": null
+  },
+  {
+    "file": "Business rules/Tables/master_cashdebtposition.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName",
+    "class": "master_cashdebtposition",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "OneStreamWorkspacesApi",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "OneStreamWorkspacesApi.V800",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": null,
+    "parameters": [],
+    "return_type": null
+  },
+  {
+    "file": "Business rules/Backup/TRS_CashDebtPosition_CashFinanceBalance_EOM.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName.BusinessRule.Spreadsheet.TRS_CashDebtPosition_CashFinanceBalance_EOM",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "Object"
+      },
+      {
+        "name": "args",
+        "type": "SpreadsheetArgs"
+      }
+    ],
+    "return_type": "Object"
+  },
+  {
+    "file": "Business rules/Backup/TRS_CashDebtPosition_CashFinanceBalance_EOM_Global.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName.BusinessRule.Spreadsheet.TRS_CashDebtPosition_CashFinanceBalance_EOM_Global",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "Object"
+      },
+      {
+        "name": "args",
+        "type": "SpreadsheetArgs"
+      }
+    ],
+    "return_type": "Object"
+  },
+  {
+    "file": "Business rules/Backup/master_cashdebtposition_old.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName",
+    "class": "master_cashdebtposition",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "OneStreamWorkspacesApi",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "OneStreamWorkspacesApi.V800",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": null,
+    "parameters": [],
+    "return_type": null
+  },
+  {
+    "file": "Business rules/Backup/Helper_functions_old.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName",
+    "class": "helper_functions",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "OneStreamWorkspacesApi",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "OneStreamWorkspacesApi.V800",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": null,
+    "parameters": [],
+    "return_type": null
+  },
+  {
+    "file": "Business rules/Backup/TRS_CashDebtPosition_CashFinanceBalance_Actual.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName.BusinessRule.Spreadsheet.TRS_CashDebtPosition_CashFinanceBalance_Actual",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "Object"
+      },
+      {
+        "name": "args",
+        "type": "SpreadsheetArgs"
+      }
+    ],
+    "return_type": "Object"
+  },
+  {
+    "file": "Business rules/Backup/TRS_CashDebtPosition_CashFinanceBalance_EndWeek.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName.BusinessRule.Spreadsheet.TRS_CashDebtPosition_CashFinanceBalance_EndWeek",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "Object"
+      },
+      {
+        "name": "args",
+        "type": "SpreadsheetArgs"
+      }
+    ],
+    "return_type": "Object"
+  },
+  {
+    "file": "Business rules/Backup/TRS_CashDebtPosition_CashFinanceBalance_EndWeek_Global.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName.BusinessRule.Spreadsheet.TRS_CashDebtPosition_CashFinanceBalance_EndWeek",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "Object"
+      },
+      {
+        "name": "args",
+        "type": "SpreadsheetArgs"
+      }
+    ],
+    "return_type": "Object"
+  },
+  {
+    "file": "Business rules/Backup/TRS_CashDebtPosition_CashFinanceBalance_Actual_Global.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName.BusinessRule.Spreadsheet.TRS_CashDebtPosition_CashFinanciaBalance_Actual_Global",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "Object"
+      },
+      {
+        "name": "args",
+        "type": "SpreadsheetArgs"
+      }
+    ],
+    "return_type": "Object"
+  },
+  {
+    "file": "Business rules/service_factory/Table Views/TRS_CashFlowForecasting_OF_IF_Global_Average.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName.BusinessRule.Spreadsheet.TRS_CashFlowForecasting_OF_IF_Global_Average",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "Object"
+      },
+      {
+        "name": "args",
+        "type": "SpreadsheetArgs"
+      }
+    ],
+    "return_type": "Object"
+  },
+  {
+    "file": "Business rules/service_factory/Table Views/TRS_Treasury_Monitoring_Report.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName.BusinessRule.Spreadsheet.TRS_Treasury_Monitoring_Report",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "Object"
+      },
+      {
+        "name": "args",
+        "type": "SpreadsheetArgs"
+      }
+    ],
+    "return_type": null
+  },
+  {
+    "file": "Business rules/service_factory/Table Views/TRS_CashFlowForecasting_OF_IF_HTD.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName.BusinessRule.Spreadsheet.TRS_CashFlowForecasting_OF_IF_HTD",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "Object"
+      },
+      {
+        "name": "args",
+        "type": "SpreadsheetArgs"
+      }
+    ],
+    "return_type": null
+  },
+  {
+    "file": "Business rules/service_factory/Table Views/TRS_CashDebtPosition_CashFinanceBalance_HTD.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName.BusinessRule.Spreadsheet.TRS_CashDebtPosition_CashFinanceBalance_HTD",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "Object"
+      },
+      {
+        "name": "args",
+        "type": "SpreadsheetArgs"
+      }
+    ],
+    "return_type": null
+  },
+  {
+    "file": "Business rules/service_factory/Table Views/TRS_CashDebtPosition_CashFinancingBalance.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName.BusinessRule.Spreadsheet.TRS_CashDebtPosition_CashFinancingBalance",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "Object"
+      },
+      {
+        "name": "args",
+        "type": "SpreadsheetArgs"
+      }
+    ],
+    "return_type": "Object"
+  },
+  {
+    "file": "Business rules/service_factory/Table Views/TRS_CashDebtPositionHeader.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName.BusinessRule.Spreadsheet.TRS_CashDebtPositionHeader",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "Object"
+      },
+      {
+        "name": "args",
+        "type": "SpreadsheetArgs"
+      }
+    ],
+    "return_type": "Object"
+  },
+  {
+    "file": "Business rules/service_factory/Table Views/TRS_CashDebtPosition_CashFinanceBalance_Global.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName.BusinessRule.Spreadsheet.TRS_CashDebtPosition_CashFinanceBalance_Global",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "Object"
+      },
+      {
+        "name": "args",
+        "type": "SpreadsheetArgs"
+      }
+    ],
+    "return_type": null
+  },
+  {
+    "file": "Business rules/service_factory/Table Views/TRS_CashflowForecasting_HTD_Summary.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName.BusinessRule.Spreadsheet.TRS_CashflowForecasting_HTD_Summary",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "Object"
+      },
+      {
+        "name": "args",
+        "type": "SpreadsheetArgs"
+      }
+    ],
+    "return_type": null
+  },
+  {
+    "file": "Business rules/service_factory/Table Views/TRS_CashFlowForecasting_CF_CB_HTD_Average.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName.BusinessRule.Spreadsheet.TRS_CashFlowForecasting_CF_CB_HTD_Average",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "Object"
+      },
+      {
+        "name": "args",
+        "type": "SpreadsheetArgs"
+      }
+    ],
+    "return_type": null
+  },
+  {
+    "file": "Business rules/service_factory/Table Views/TRS_Treasury_Monitoring.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName.BusinessRule.Spreadsheet.TRS_Treasury_Monitoring",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "Object"
+      },
+      {
+        "name": "args",
+        "type": "SpreadsheetArgs"
+      }
+    ],
+    "return_type": "Object"
+  },
+  {
+    "file": "Business rules/service_factory/Table Views/TRS_CashFlowForecasting_CF_CB_HTD.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName.BusinessRule.Spreadsheet.TRS_CashFlowForecasting_CF_CB_HTD",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "Object"
+      },
+      {
+        "name": "args",
+        "type": "SpreadsheetArgs"
+      }
+    ],
+    "return_type": null
+  },
+  {
+    "file": "Business rules/service_factory/Table Views/TRS_CashFlowForecastingHeader.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName.BusinessRule.Spreadsheet.TRS_CashFlowForecastingHeader",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "Object"
+      },
+      {
+        "name": "args",
+        "type": "SpreadsheetArgs"
+      }
+    ],
+    "return_type": "Object"
+  },
+  {
+    "file": "Business rules/service_factory/Table Views/TRS_CashflowForecasting_Global_Summary.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName.BusinessRule.Spreadsheet.TRS_CashflowForecasting_Global_Summary",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "Object"
+      },
+      {
+        "name": "args",
+        "type": "SpreadsheetArgs"
+      }
+    ],
+    "return_type": null
+  },
+  {
+    "file": "Business rules/service_factory/Table Views/TRS_CashFlowForecasting_CF_CB_Global_Average.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName.BusinessRule.Spreadsheet.TRS_CashFlowForecasting_CF_CB_Global_Average",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "Object"
+      },
+      {
+        "name": "args",
+        "type": "SpreadsheetArgs"
+      }
+    ],
+    "return_type": "Object"
+  },
+  {
+    "file": "Business rules/service_factory/Table Views/TRS_Treasury_Monitoring_Header.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName.BusinessRule.Spreadsheet.TRS_Treasury_Monitoring_Header",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "Object"
+      },
+      {
+        "name": "args",
+        "type": "SpreadsheetArgs"
+      }
+    ],
+    "return_type": "Object"
+  },
+  {
+    "file": "Business rules/service_factory/Table Views/TRS_CashFlowForecasting_OF_IF_HTD_Average.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName.BusinessRule.Spreadsheet.TRS_CashFlowForecasting_OF_IF_HTD_Average",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "Object"
+      },
+      {
+        "name": "args",
+        "type": "SpreadsheetArgs"
+      }
+    ],
+    "return_type": null
+  },
+  {
+    "file": "Investments/service factory/dashboard_string.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName.BusinessRule.DashboardStringFunction.dashboard_string",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "Object"
+      },
+      {
+        "name": "args",
+        "type": "DashboardStringFunctionArgs"
+      }
+    ],
+    "return_type": "Object"
+  },
+  {
+    "file": "Investments/helper functions/helper_functions.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName",
+    "class": "helper_functions",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "OneStreamWorkspacesApi",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "OneStreamWorkspacesApi.V800",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": null,
+    "parameters": [],
+    "return_type": null
+  },
+  {
+    "file": "Investments/sql/migrations.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName",
+    "class": "Migrations",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "OneStreamWorkspacesApi",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "OneStreamWorkspacesApi.V800",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": null,
+    "parameters": [],
+    "return_type": null
+  },
+  {
+    "file": "Investments/sql/tables/inv_aux_project_cash.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName",
+    "class": "inv_aux_project_cash",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "OneStreamWorkspacesApi",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "OneStreamWorkspacesApi.V800",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": null,
+    "parameters": [],
+    "return_type": null
+  },
+  {
+    "file": "Investments/sql/tables/inv_aux_date_dimension.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName",
+    "class": "inv_aux_date_dimension",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "OneStreamWorkspacesApi",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "OneStreamWorkspacesApi.V800",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": null,
+    "parameters": [],
+    "return_type": null
+  },
+  {
+    "file": "Investments/sql/tables/inv_cost_center.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName",
+    "class": "inv_cost_center",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "OneStreamWorkspacesApi",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "OneStreamWorkspacesApi.V800",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": null,
+    "parameters": [],
+    "return_type": null
+  },
+  {
+    "file": "Investments/sql/tables/inv_aux_cost_center_mapping_s4.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName",
+    "class": "inv_aux_cost_center_mapping_s4",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "OneStreamWorkspacesApi",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "OneStreamWorkspacesApi.V800",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": null,
+    "parameters": [],
+    "return_type": null
+  },
+  {
+    "file": "Investments/sql/tables/inv_aux_project_capitalization.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName",
+    "class": "inv_aux_project_capitalization",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "OneStreamWorkspacesApi",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "OneStreamWorkspacesApi.V800",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": null,
+    "parameters": [],
+    "return_type": null
+  },
+  {
+    "file": "Investments/sql/tables/inv_company.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName",
+    "class": "inv_company",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "OneStreamWorkspacesApi",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "OneStreamWorkspacesApi.V800",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": null,
+    "parameters": [],
+    "return_type": null
+  },
+  {
+    "file": "Investments/sql/tables/inv_raw_cost_center_type.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName",
+    "class": "inv_raw_cost_center_type",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "OneStreamWorkspacesApi",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "OneStreamWorkspacesApi.V800",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": null,
+    "parameters": [],
+    "return_type": null
+  },
+  {
+    "file": "Investments/sql/tables/inv_raw_asset_depreciation.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName",
+    "class": "inv_raw_asset_depreciation",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "OneStreamWorkspacesApi",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "OneStreamWorkspacesApi.V800",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": null,
+    "parameters": [],
+    "return_type": null
+  },
+  {
+    "file": "Investments/sql/tables/main_aux_fxrate.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName",
+    "class": "main_aux_fxrate",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "OneStreamWorkspacesApi",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "OneStreamWorkspacesApi.V800",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": null,
+    "parameters": [],
+    "return_type": null
+  },
+  {
+    "file": "Investments/sql/tables/inv_project_capitalization.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName",
+    "class": "inv_project_capitalization",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "OneStreamWorkspacesApi",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "OneStreamWorkspacesApi.V800",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": null,
+    "parameters": [],
+    "return_type": null
+  },
+  {
+    "file": "Investments/sql/tables/inv_company_holiday.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName",
+    "class": "inv_company_holiday",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "OneStreamWorkspacesApi",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "OneStreamWorkspacesApi.V800",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": null,
+    "parameters": [],
+    "return_type": null
+  },
+  {
+    "file": "Investments/sql/tables/inv_aux_comment_gap.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName",
+    "class": "inv_aux_comment_gap",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "OneStreamWorkspacesApi",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "OneStreamWorkspacesApi.V800",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": null,
+    "parameters": [],
+    "return_type": null
+  },
+  {
+    "file": "Investments/sql/tables/inv_aux_budget_2025.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName",
+    "class": "inv_aux_budget_2025",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "OneStreamWorkspacesApi",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "OneStreamWorkspacesApi.V800",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": null,
+    "parameters": [],
+    "return_type": null
+  },
+  {
+    "file": "Investments/sql/tables/inv_raw_cost_center.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName",
+    "class": "inv_raw_cost_center",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "OneStreamWorkspacesApi",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "OneStreamWorkspacesApi.V800",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": null,
+    "parameters": [],
+    "return_type": null
+  },
+  {
+    "file": "Investments/sql/tables/inv_aux_comment.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName",
+    "class": "inv_aux_comment",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "OneStreamWorkspacesApi",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "OneStreamWorkspacesApi.V800",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": null,
+    "parameters": [],
+    "return_type": null
+  },
+  {
+    "file": "Investments/sql/tables/inv_raw_company_holiday.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName",
+    "class": "inv_raw_company_holiday",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "OneStreamWorkspacesApi",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "OneStreamWorkspacesApi.V800",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": null,
+    "parameters": [],
+    "return_type": null
+  },
+  {
+    "file": "Investments/sql/tables/inv_raw_project.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName",
+    "class": "inv_raw_project",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "OneStreamWorkspacesApi",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "OneStreamWorkspacesApi.V800",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": null,
+    "parameters": [],
+    "return_type": null
+  },
+  {
+    "file": "Investments/sql/tables/inv_aux_asset.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName",
+    "class": "inv_aux_asset",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "OneStreamWorkspacesApi",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "OneStreamWorkspacesApi.V800",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": null,
+    "parameters": [],
+    "return_type": null
+  },
+  {
+    "file": "Investments/sql/tables/inv_aux_fictitius_asset.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName",
+    "class": "inv_aux_fictitious_assets",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "OneStreamWorkspacesApi",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "OneStreamWorkspacesApi.V800",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": null,
+    "parameters": [],
+    "return_type": null
+  },
+  {
+    "file": "Investments/sql/tables/inv_aux_confirmed_month.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName",
+    "class": "inv_aux_confirmed_month",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "OneStreamWorkspacesApi",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "OneStreamWorkspacesApi.V800",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": null,
+    "parameters": [],
+    "return_type": null
+  },
+  {
+    "file": "Investments/sql/tables/inv_aux_modified_projection.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName",
+    "class": "inv_aux_modified_projection",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "OneStreamWorkspacesApi",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "OneStreamWorkspacesApi.V800",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": null,
+    "parameters": [],
+    "return_type": null
+  },
+  {
+    "file": "Investments/sql/tables/inv_asset_category.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName",
+    "class": "inv_asset_category",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "OneStream.Shared.Common",
+      "System.IO",
+      "OneStreamWorkspacesApi",
+      "OneStream.Stage.Engine",
+      "OneStream.Stage.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "OneStream.Finance.Database",
+      "OneStreamWorkspacesApi.V800"
+    ],
+    "main_function": null,
+    "parameters": [],
+    "return_type": null
+  },
+  {
+    "file": "Investments/sql/tables/inv_cost_center_type.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName",
+    "class": "inv_cost_center_type",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "OneStreamWorkspacesApi",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "OneStreamWorkspacesApi.V800",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": null,
+    "parameters": [],
+    "return_type": null
+  },
+  {
+    "file": "Investments/sql/tables/main_raw_fxrate.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName",
+    "class": "main_raw_fxrate",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "OneStreamWorkspacesApi",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "OneStreamWorkspacesApi.V800",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": null,
+    "parameters": [],
+    "return_type": null
+  },
+  {
+    "file": "Investments/sql/tables/inv_aux_project.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName",
+    "class": "inv_aux_project",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "OneStreamWorkspacesApi",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "OneStreamWorkspacesApi.V800",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": null,
+    "parameters": [],
+    "return_type": null
+  },
+  {
+    "file": "Investments/sql/tables/inv_cash_sop_percentage.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName",
+    "class": "inv_cash_sop_percentage",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "OneStreamWorkspacesApi",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "OneStreamWorkspacesApi.V800",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": null,
+    "parameters": [],
+    "return_type": null
+  },
+  {
+    "file": "Investments/sql/tables/inv_project_financial_figures.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName",
+    "class": "inv_project_financial_figures",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "OneStreamWorkspacesApi",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "OneStreamWorkspacesApi.V800",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": null,
+    "parameters": [],
+    "return_type": null
+  },
+  {
+    "file": "Investments/sql/tables/inv_raw_comment_gap.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName",
+    "class": "inv_raw_comment_gap",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "OneStreamWorkspacesApi",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "OneStreamWorkspacesApi.V800",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": null,
+    "parameters": [],
+    "return_type": null
+  },
+  {
+    "file": "Investments/sql/tables/inv_aux_confirmed_scenario_year.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName",
+    "class": "inv_aux_confirmed_scenario_year",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "OneStreamWorkspacesApi",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "OneStreamWorkspacesApi.V800",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": null,
+    "parameters": [],
+    "return_type": null
+  },
+  {
+    "file": "Investments/sql/tables/inv_raw_project_cash.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName",
+    "class": "inv_raw_project_cash",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "OneStreamWorkspacesApi",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "OneStreamWorkspacesApi.V800",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": null,
+    "parameters": [],
+    "return_type": null
+  },
+  {
+    "file": "Investments/sql/tables/inv_asset_depreciation.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName",
+    "class": "inv_asset_depreciation",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "OneStreamWorkspacesApi",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "OneStreamWorkspacesApi.V800",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": null,
+    "parameters": [],
+    "return_type": null
+  },
+  {
+    "file": "Investments/sql/tables/inv_project.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName",
+    "class": "inv_project",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "OneStreamWorkspacesApi",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "OneStreamWorkspacesApi.V800",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": null,
+    "parameters": [],
+    "return_type": null
+  },
+  {
+    "file": "Investments/sql/tables/inv_raw_asset.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName",
+    "class": "inv_raw_asset",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "OneStreamWorkspacesApi",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "OneStreamWorkspacesApi.V800",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": null,
+    "parameters": [],
+    "return_type": null
+  },
+  {
+    "file": "Investments/sql/tables/inv_raw_project_capitalization.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName",
+    "class": "inv_raw_project_capitalization",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "OneStreamWorkspacesApi",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "OneStreamWorkspacesApi.V800",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": null,
+    "parameters": [],
+    "return_type": null
+  },
+  {
+    "file": "Investments/sql/tables/inv_asset.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName",
+    "class": "inv_asset",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "OneStreamWorkspacesApi",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "OneStreamWorkspacesApi.V800",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": null,
+    "parameters": [],
+    "return_type": null
+  },
+  {
+    "file": "Investments/sql/tables/inv_project_cash.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName",
+    "class": "inv_project_cash",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "OneStreamWorkspacesApi",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "OneStreamWorkspacesApi.V800",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": null,
+    "parameters": [],
+    "return_type": null
+  },
+  {
+    "file": "Investments/sql/functions/function_translate_amount.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName",
+    "class": "function_translate_amount",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "OneStreamWorkspacesApi",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "OneStreamWorkspacesApi.V800",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": null,
+    "parameters": [],
+    "return_type": null
+  },
+  {
+    "file": "Investments/sql/views/inv_view_project_cash_ytd.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName",
+    "class": "inv_view_project_cash_ytd",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "OneStreamWorkspacesApi",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "OneStreamWorkspacesApi.V800",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": null,
+    "parameters": [],
+    "return_type": null
+  },
+  {
+    "file": "Investments/sql/views/inv_view_asset_depreciation.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName",
+    "class": "inv_view_asset_depreciation",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "OneStreamWorkspacesApi",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "OneStreamWorkspacesApi.V800",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": null,
+    "parameters": [],
+    "return_type": null
+  },
+  {
+    "file": "Investments/sql/views/inv_view_project_financial_figures.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName",
+    "class": "inv_view_project_financial_figures",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "OneStreamWorkspacesApi",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "OneStreamWorkspacesApi.V800",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": null,
+    "parameters": [],
+    "return_type": null
+  },
+  {
+    "file": "Investments/sql/views/inv_view_project_cash.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName",
+    "class": "inv_view_project_cash",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "OneStreamWorkspacesApi",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "OneStreamWorkspacesApi.V800",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": null,
+    "parameters": [],
+    "return_type": null
+  },
+  {
+    "file": "Investments/sql/views/inv_view_project_cash_gap_summary.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName",
+    "class": "inv_view_project_cash_gap_summary",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "OneStreamWorkspacesApi",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "OneStreamWorkspacesApi.V800",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": null,
+    "parameters": [],
+    "return_type": null
+  },
+  {
+    "file": "Investments/sql/views/inv_view_project_capitalization.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName",
+    "class": "inv_view_project_capitalization",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "OneStreamWorkspacesApi",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "OneStreamWorkspacesApi.V800",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": null,
+    "parameters": [],
+    "return_type": null
+  }
+]

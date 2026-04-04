@@ -1,0 +1,86 @@
+{
+  "namespace": "OneStream.Web.Shared.Extensions",
+  "generated_at": "2025-12-08T19:28:52.427256",
+  "statistics": {
+    "classes": 1,
+    "interfaces": 0,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 0,
+    "total_methods": 2,
+    "total_properties": 0
+  },
+  "classes": [
+    {
+      "name": "XFWebSpreadsheetHelper",
+      "namespace": "OneStream.Web.Shared.Extensions",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "GetRefersTo",
+          "return_type": "string",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "selectedCell",
+              "type": "XFWebSelectedCell",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "sheetName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets refers to",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetExcelColumnLetterByIndex",
+          "return_type": "string",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "columnIndex",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets excel column letter by index",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Web/Shared/Extensions/XFWebSpreadsheetHelper.cs"
+    }
+  ],
+  "interfaces": [],
+  "structs": [],
+  "delegates": [],
+  "enums": []
+}

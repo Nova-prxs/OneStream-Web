@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+
+{% block title %}OS-201 Exam Quiz — OneStream Study Guide{% endblock %}
+
+{% block content %}
+<h1>OS-201 Exam Quiz</h1>
+<p>
+  Practice with <strong>{{ total_questions }}</strong> questions across
+  <strong>{{ sections|length }}</strong> exam sections. Each section is weighted
+  according to the official OS-201 certification exam blueprint.
+</p>
+
+<figure>
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Section</th>
+        <th scope="col">Exam Weight</th>
+        <th scope="col">Questions</th>
+        <th scope="col">Progress</th>
+        <th scope="col">Score</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for section in sections %}
+      <tr>
+        <td>{{ section.number }}</td>
+        <td><a href="/exam-prep/quiz/{{ section.slug }}">{{ section.name }}</a></td>
+        <td>{{ section.weight }}%</td>
+        <td>{{ section.question_count }} questions</td>
+        <td id="progress-{{ section.slug }}">—</td>
+        <td id="score-{{ section.slug }}">—</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+    <tfoot>
+      <tr>
+        <td></td>
+        <td><strong>Total</strong></td>
+        <td><strong>100%</strong></td>
+        <td><strong>{{ total_questions }} questions</strong></td>
+        <td id="progress-total"><strong>—</strong></td>
+        <td id="score-total"><strong>—</strong></td>
+      </tr>
+    </tfoot>
+  </table>
+</figure>
+
+<div class="study-tools-links" style="margin-top:1rem">
+  <a href="/exam-prep/exam" role="button" class="outline">Exam Simulation</a>
+  <a href="/exam-prep/review" role="button" class="outline">Review Failed</a>
+  <a href="/exam-prep/objectives" role="button" class="outline">Study by Objectives</a>
+  <a href="/exam-prep/summary" role="button" class="outline">Section Summaries</a>
+  <a href="/exam-prep/glossary" role="button" class="outline">Glossary</a>
+</div>
+
+<script>
+(function() {
+  const sections = {{ sections | tojson }};
+  let totalAnswered = 0;
+  let totalCorrect = 0;
+  let totalQuestions = 0;
+
+  sections.forEach(function(section) {
+    const slug = section.slug;
+    const qCount = section.question_count;
+    totalQuestions += qCount;
+
+    let answeredCount = 0;
+    let correctCount = 0;
+
+    try {
+      const raw = localStorage.getItem('quiz_progress_' + slug);
+      if (raw) {
+        const data = JSON.parse(raw);
+        if (data && data.answered) {
+          const questions = section.questions;
+          for (const idx in data.answered) {
+            answeredCount++;
+            const qIdx = parseInt(idx);
+            if (questions[qIdx] && data.answered[idx] === questions[qIdx].correct_answer) {
+              correctCount++;
+            }
+          }
+        }
+      }
+    } catch (e) {}
+
+    const progressCell = document.getElementById('progress-' + slug);
+    const scoreCell = document.getElementById('score-' + slug);
+
+    if (answeredCount > 0) {
+      progressCell.textContent = answeredCount + ' / ' + qCount + ' answered';
+      const pct = Math.round((correctCount / answeredCount) * 100);
+      scoreCell.textContent = pct + '% correct';
+      scoreCell.className = '';
+      if (pct >= 80) scoreCell.classList.add('score-good');
+      else if (pct >= 50) scoreCell.classList.add('score-ok');
+      else scoreCell.classList.add('score-bad');
+    }
+
+    totalAnswered += answeredCount;
+    totalCorrect += correctCount;
+  });
+
+  const totalProgressCell = document.getElementById('progress-total');
+  const totalScoreCell = document.getElementById('score-total');
+
+  if (totalAnswered > 0) {
+    totalProgressCell.innerHTML = '<strong>' + totalAnswered + ' / ' + totalQuestions + ' answered</strong>';
+    const totalPct = Math.round((totalCorrect / totalAnswered) * 100);
+    totalScoreCell.innerHTML = '<strong>' + totalPct + '% correct</strong>';
+  }
+})();
+</script>
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends "docs_base.html" %}
+
+{% block title %}Search APIs — OneStream Docs{% endblock %}
+
+{% block content %}
+<h1>Search API Documentation</h1>
+
+<form action="/docs/search" method="get" role="search">
+  <div class="grid">
+    <input type="search" name="q" placeholder="Search classes, methods, enums..." value="{{ query }}" autofocus>
+    <button type="submit">Search</button>
+  </div>
+</form>
+
+{% if query %}
+<p>{{ results|length }} result{{ 's' if results|length != 1 }} for <strong>{{ query }}</strong></p>
+
+{% if results %}
+<div class="search-results">
+  {% for r in results %}
+  <article class="search-result">
+    <header>
+      <span class="api-type-badge {{ r.kind }}">{{ r.kind[0]|upper }}</span>
+      <a href="/docs/{{ r.slug }}{% if r.kind == 'method' %}#method-{{ r.name|lower }}{% endif %}">
+        <strong>{{ r.name }}</strong>
+      </a>
+      <small>{{ r.namespace }}</small>
+      <small class="badge-kind">{{ r.kind }}</small>
+    </header>
+    {% if r.snippet %}
+    <p class="search-snippet">{{ r.snippet|safe }}</p>
+    {% endif %}
+  </article>
+  {% endfor %}
+</div>
+{% else %}
+<p>No results found. Try different keywords.</p>
+{% endif %}
+{% endif %}
+{% endblock %}

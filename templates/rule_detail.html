@@ -1,0 +1,54 @@
+{% extends "docs_base.html" %}
+
+{% block title %}{{ rule.name }} — OneStream Docs{% endblock %}
+
+{% block content %}
+<nav aria-label="Breadcrumb" class="breadcrumb">
+  <a href="/docs/rules/">Business Rules</a> &rsaquo;
+  <a href="/docs/rules/{{ rule.type_slug }}">{{ rule.type_name }}</a> &rsaquo;
+  {% if rule.workspace %}
+  <span>{{ rule.workspace }}</span> &rsaquo;
+  {% endif %}
+  <strong>{{ rule.name }}</strong>
+</nav>
+
+<hgroup>
+  <h1>{{ rule.name }}</h1>
+  <p>{{ rule.type_name }}
+    {%- if rule.workspace %} &mdash; {{ rule.workspace }}{% endif %}
+    &mdash; {{ rule.line_count }} lines &mdash; {{ rule.language|upper }}</p>
+</hgroup>
+
+{% if rule.description %}
+<p>{{ rule.description }}</p>
+{% endif %}
+
+{# --- APIs Used --- #}
+{% if rule.apis_used %}
+<h2>APIs Used</h2>
+<div class="api-tags">
+  {% for api in rule.apis_used %}
+  <span class="api-tag">{{ api }}</span>
+  {% endfor %}
+</div>
+{% endif %}
+
+{# --- Namespaces --- #}
+{% if rule.namespaces %}
+<h2>Namespaces</h2>
+<div class="api-tags">
+  {% for ns in rule.namespaces %}
+  <code class="ns-tag">{{ ns }}</code>
+  {% endfor %}
+</div>
+{% endif %}
+
+{# --- Full Source Code --- #}
+<h2>Source Code</h2>
+{% if rule.code_html %}
+<div class="code-block highlighted-code">{{ rule.code_html|safe }}</div>
+{% else %}
+<pre class="code-block"><code class="{{ rule.language }}">{{ rule.code }}</code></pre>
+{% endif %}
+
+{% endblock %}

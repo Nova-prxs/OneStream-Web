@@ -1,0 +1,896 @@
+{
+  "namespace": "OneStream.Client.Api.Abstractions",
+  "generated_at": "2025-12-08T19:28:51.064126",
+  "statistics": {
+    "classes": 0,
+    "interfaces": 38,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 0,
+    "total_methods": 0,
+    "total_properties": 1
+  },
+  "classes": [],
+  "interfaces": [
+    {
+      "name": "ISecurityAdminServiceClientReference",
+      "namespace": "OneStream.Client.Api.Abstractions",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "ISecurityAdminService"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [
+        "GenerateApiClientClass"
+      ],
+      "source_file": "output/types/OneStream/Client/Api/Abstractions/ISecurityAdminServiceClientReference.cs",
+      "source_code": "public interface ISecurityAdminServiceClientReference : ISecurityAdminService\n{\n}"
+    },
+    {
+      "name": "IDashboardsAjaxServiceClientReference",
+      "namespace": "OneStream.Client.Api.Abstractions",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IDashboardsAjaxService"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [
+        "GenerateApiClientClass"
+      ],
+      "source_file": "output/types/OneStream/Client/Api/Abstractions/IDashboardsAjaxServiceClientReference.cs",
+      "source_code": "public interface IDashboardsAjaxServiceClientReference : IDashboardsAjaxService\n{\n}"
+    },
+    {
+      "name": "IAdminGridServiceClientReference",
+      "namespace": "OneStream.Client.Api.Abstractions",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IAdminGridService"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [
+        "GenerateApiClientClass"
+      ],
+      "source_file": "output/types/OneStream/Client/Api/Abstractions/IAdminGridServiceClientReference.cs",
+      "source_code": "public interface IAdminGridServiceClientReference : IAdminGridService\n{\n}"
+    },
+    {
+      "name": "IWorkflowAjaxServiceClientReference",
+      "namespace": "OneStream.Client.Api.Abstractions",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IWorkflowAjaxService"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [
+        "GenerateApiClientClass"
+      ],
+      "source_file": "output/types/OneStream/Client/Api/Abstractions/IWorkflowAjaxServiceClientReference.cs",
+      "source_code": "public interface IWorkflowAjaxServiceClientReference : IWorkflowAjaxService\n{\n}"
+    },
+    {
+      "name": "IDataManagementAjaxServiceClientReference",
+      "namespace": "OneStream.Client.Api.Abstractions",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IDataManagementAjaxService"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [
+        "GenerateApiClientClass"
+      ],
+      "source_file": "output/types/OneStream/Client/Api/Abstractions/IDataManagementAjaxServiceClientReference.cs",
+      "source_code": "public interface IDataManagementAjaxServiceClientReference : IDataManagementAjaxService\n{\n}"
+    },
+    {
+      "name": "IPovServiceClientReference",
+      "namespace": "OneStream.Client.Api.Abstractions",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IPovService"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [
+        "GenerateApiClientClass"
+      ],
+      "source_file": "output/types/OneStream/Client/Api/Abstractions/IPovServiceClientReference.cs",
+      "source_code": "public interface IPovServiceClientReference : IPovService\n{\n}"
+    },
+    {
+      "name": "IUserActivityAjaxServiceClientReference",
+      "namespace": "OneStream.Client.Api.Abstractions",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IUserActivityAjaxService"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [
+        "GenerateApiClientClass"
+      ],
+      "source_file": "output/types/OneStream/Client/Api/Abstractions/IUserActivityAjaxServiceClientReference.cs",
+      "source_code": "public interface IUserActivityAjaxServiceClientReference : IUserActivityAjaxService\n{\n}"
+    },
+    {
+      "name": "IApplicationAdminServiceClientReference",
+      "namespace": "OneStream.Client.Api.Abstractions",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IApplicationAdminService"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [
+        "GenerateApiClientClass"
+      ],
+      "source_file": "output/types/OneStream/Client/Api/Abstractions/IApplicationAdminServiceClientReference.cs",
+      "source_code": "public interface IApplicationAdminServiceClientReference : IApplicationAdminService\n{\n}"
+    },
+    {
+      "name": "IDataProviderServiceClientReference",
+      "namespace": "OneStream.Client.Api.Abstractions",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IDataProviderService"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [
+        "GenerateApiClientClass"
+      ],
+      "source_file": "output/types/OneStream/Client/Api/Abstractions/IDataProviderServiceClientReference.cs",
+      "source_code": "public interface IDataProviderServiceClientReference : IDataProviderService\n{\n}"
+    },
+    {
+      "name": "IMemberSelectionServiceClientReference",
+      "namespace": "OneStream.Client.Api.Abstractions",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IMemberSelectionService"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [
+        "GenerateApiClientClass"
+      ],
+      "source_file": "output/types/OneStream/Client/Api/Abstractions/IMemberSelectionServiceClientReference.cs",
+      "source_code": "public interface IMemberSelectionServiceClientReference : IMemberSelectionService\n{\n}"
+    },
+    {
+      "name": "IClientUpdaterServiceClientReference",
+      "namespace": "OneStream.Client.Api.Abstractions",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientUpdaterService"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [
+        "GenerateApiClientClass"
+      ],
+      "source_file": "output/types/OneStream/Client/Api/Abstractions/IClientUpdaterServiceClientReference.cs",
+      "source_code": "public interface IClientUpdaterServiceClientReference : IClientUpdaterService\n{\n}"
+    },
+    {
+      "name": "ICubeViewsAjaxServiceClientReference",
+      "namespace": "OneStream.Client.Api.Abstractions",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "ICubeViewsAjaxService"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [
+        "GenerateApiClientClass"
+      ],
+      "source_file": "output/types/OneStream/Client/Api/Abstractions/ICubeViewsAjaxServiceClientReference.cs",
+      "source_code": "public interface ICubeViewsAjaxServiceClientReference : ICubeViewsAjaxService\n{\n}"
+    },
+    {
+      "name": "IDataExplorerServiceClientReference",
+      "namespace": "OneStream.Client.Api.Abstractions",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IDataExplorerService"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [
+        "GenerateApiClientClass"
+      ],
+      "source_file": "output/types/OneStream/Client/Api/Abstractions/IDataExplorerServiceClientReference.cs",
+      "source_code": "public interface IDataExplorerServiceClientReference : IDataExplorerService\n{\n}"
+    },
+    {
+      "name": "IAuthenticatedClientDto",
+      "namespace": "OneStream.Client.Api.Abstractions",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IClientDto"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "XfBytes",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Api/Abstractions/IAuthenticatedClientDto.cs",
+      "source_code": "public interface IAuthenticatedClientDto : IClientDto\n{\n\tstring XfBytes { get; }\n}"
+    },
+    {
+      "name": "IXbrlAjaxServiceClientReference",
+      "namespace": "OneStream.Client.Api.Abstractions",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IXbrlAjaxService"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [
+        "GenerateApiClientClass"
+      ],
+      "source_file": "output/types/OneStream/Client/Api/Abstractions/IXbrlAjaxServiceClientReference.cs",
+      "source_code": "public interface IXbrlAjaxServiceClientReference : IXbrlAjaxService\n{\n}"
+    },
+    {
+      "name": "IXmlLoadExtractServiceClientReference",
+      "namespace": "OneStream.Client.Api.Abstractions",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IXmlLoadExtractService"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [
+        "GenerateApiClientClass"
+      ],
+      "source_file": "output/types/OneStream/Client/Api/Abstractions/IXmlLoadExtractServiceClientReference.cs",
+      "source_code": "public interface IXmlLoadExtractServiceClientReference : IXmlLoadExtractService\n{\n}"
+    },
+    {
+      "name": "IWsAssembliesAjaxServiceClientReference",
+      "namespace": "OneStream.Client.Api.Abstractions",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IWsAssembliesAjaxService"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [
+        "GenerateApiClientClass"
+      ],
+      "source_file": "output/types/OneStream/Client/Api/Abstractions/IWsAssembliesAjaxServiceClientReference.cs",
+      "source_code": "public interface IWsAssembliesAjaxServiceClientReference : IWsAssembliesAjaxService\n{\n}"
+    },
+    {
+      "name": "IExcelServiceClientReference",
+      "namespace": "OneStream.Client.Api.Abstractions",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IExcelService"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [
+        "GenerateApiClientClass"
+      ],
+      "source_file": "output/types/OneStream/Client/Api/Abstractions/IExcelServiceClientReference.cs",
+      "source_code": "public interface IExcelServiceClientReference : IExcelService\n{\n}"
+    },
+    {
+      "name": "IJournalsAjaxServiceClientReference",
+      "namespace": "OneStream.Client.Api.Abstractions",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IJournalsAjaxService"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [
+        "GenerateApiClientClass"
+      ],
+      "source_file": "output/types/OneStream/Client/Api/Abstractions/IJournalsAjaxServiceClientReference.cs",
+      "source_code": "public interface IJournalsAjaxServiceClientReference : IJournalsAjaxService\n{\n}"
+    },
+    {
+      "name": "ICubeServiceClientReference",
+      "namespace": "OneStream.Client.Api.Abstractions",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "ICubeService"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [
+        "GenerateApiClientClass"
+      ],
+      "source_file": "output/types/OneStream/Client/Api/Abstractions/ICubeServiceClientReference.cs",
+      "source_code": "public interface ICubeServiceClientReference : ICubeService\n{\n}"
+    },
+    {
+      "name": "IDataQualityAdminServiceClientReference",
+      "namespace": "OneStream.Client.Api.Abstractions",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IDataQualityAdminService"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [
+        "GenerateApiClientClass"
+      ],
+      "source_file": "output/types/OneStream/Client/Api/Abstractions/IDataQualityAdminServiceClientReference.cs",
+      "source_code": "public interface IDataQualityAdminServiceClientReference : IDataQualityAdminService\n{\n}"
+    },
+    {
+      "name": "IXFSqlAjaxServiceClientReference",
+      "namespace": "OneStream.Client.Api.Abstractions",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IXFSqlAjaxService"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [
+        "GenerateApiClientClass"
+      ],
+      "source_file": "output/types/OneStream/Client/Api/Abstractions/IXFSqlAjaxServiceClientReference.cs",
+      "source_code": "public interface IXFSqlAjaxServiceClientReference : IXFSqlAjaxService\n{\n}"
+    },
+    {
+      "name": "IDimensionLibraryServiceClientReference",
+      "namespace": "OneStream.Client.Api.Abstractions",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IDimensionLibraryService"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [
+        "GenerateApiClientClass"
+      ],
+      "source_file": "output/types/OneStream/Client/Api/Abstractions/IDimensionLibraryServiceClientReference.cs",
+      "source_code": "public interface IDimensionLibraryServiceClientReference : IDimensionLibraryService\n{\n}"
+    },
+    {
+      "name": "IClientDto",
+      "namespace": "OneStream.Client.Api.Abstractions",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Api/Abstractions/IClientDto.cs",
+      "source_code": "public interface IClientDto\n{\n}"
+    },
+    {
+      "name": "ISmartIntegrationManagementServiceClientReference",
+      "namespace": "OneStream.Client.Api.Abstractions",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "ISmartIntegrationManagementService"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [
+        "GenerateApiClientClass"
+      ],
+      "source_file": "output/types/OneStream/Client/Api/Abstractions/ISmartIntegrationManagementServiceClientReference.cs",
+      "source_code": "public interface ISmartIntegrationManagementServiceClientReference : ISmartIntegrationManagementService\n{\n}"
+    },
+    {
+      "name": "IFileExplorerServiceClientReference",
+      "namespace": "OneStream.Client.Api.Abstractions",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IFileExplorerService"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [
+        "GenerateApiClientClass"
+      ],
+      "source_file": "output/types/OneStream/Client/Api/Abstractions/IFileExplorerServiceClientReference.cs",
+      "source_code": "public interface IFileExplorerServiceClientReference : IFileExplorerService\n{\n}"
+    },
+    {
+      "name": "IFormsAjaxServiceClientReference",
+      "namespace": "OneStream.Client.Api.Abstractions",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IFormsAjaxService"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [
+        "GenerateApiClientClass"
+      ],
+      "source_file": "output/types/OneStream/Client/Api/Abstractions/IFormsAjaxServiceClientReference.cs",
+      "source_code": "public interface IFormsAjaxServiceClientReference : IFormsAjaxService\n{\n}"
+    },
+    {
+      "name": "IXtraReportViewerAjaxServiceClientReference",
+      "namespace": "OneStream.Client.Api.Abstractions",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IXtraReportViewerAjaxService"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [
+        "GenerateApiClientClass"
+      ],
+      "source_file": "output/types/OneStream/Client/Api/Abstractions/IXtraReportViewerAjaxServiceClientReference.cs",
+      "source_code": "public interface IXtraReportViewerAjaxServiceClientReference : IXtraReportViewerAjaxService\n{\n}"
+    },
+    {
+      "name": "IBusinessRuleServiceClientReference",
+      "namespace": "OneStream.Client.Api.Abstractions",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IBusinessRuleService"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [
+        "GenerateApiClientClass"
+      ],
+      "source_file": "output/types/OneStream/Client/Api/Abstractions/IBusinessRuleServiceClientReference.cs",
+      "source_code": "public interface IBusinessRuleServiceClientReference : IBusinessRuleService\n{\n}"
+    },
+    {
+      "name": "ISystemServiceClientReference",
+      "namespace": "OneStream.Client.Api.Abstractions",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "ISystemService"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [
+        "GenerateApiClientClass"
+      ],
+      "source_file": "output/types/OneStream/Client/Api/Abstractions/ISystemServiceClientReference.cs",
+      "source_code": "public interface ISystemServiceClientReference : ISystemService\n{\n}"
+    },
+    {
+      "name": "IAttachmentsAjaxServiceClientReference",
+      "namespace": "OneStream.Client.Api.Abstractions",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IAttachmentsAjaxService"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [
+        "GenerateApiClientClass"
+      ],
+      "source_file": "output/types/OneStream/Client/Api/Abstractions/IAttachmentsAjaxServiceClientReference.cs",
+      "source_code": "public interface IAttachmentsAjaxServiceClientReference : IAttachmentsAjaxService\n{\n}"
+    },
+    {
+      "name": "ITimeDimProfileServiceClientReference",
+      "namespace": "OneStream.Client.Api.Abstractions",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "ITimeDimProfileService"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [
+        "GenerateApiClientClass"
+      ],
+      "source_file": "output/types/OneStream/Client/Api/Abstractions/ITimeDimProfileServiceClientReference.cs",
+      "source_code": "public interface ITimeDimProfileServiceClientReference : ITimeDimProfileService\n{\n}"
+    },
+    {
+      "name": "IXFEnvironmentAjaxServiceClientReference",
+      "namespace": "OneStream.Client.Api.Abstractions",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IXFEnvironmentAjaxService"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [
+        "GenerateApiClientClass"
+      ],
+      "source_file": "output/types/OneStream/Client/Api/Abstractions/IXFEnvironmentAjaxServiceClientReference.cs",
+      "source_code": "public interface IXFEnvironmentAjaxServiceClientReference : IXFEnvironmentAjaxService\n{\n}"
+    },
+    {
+      "name": "IStageProcessingServiceClientReference",
+      "namespace": "OneStream.Client.Api.Abstractions",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IStageProcessingService"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [
+        "GenerateApiClientClass"
+      ],
+      "source_file": "output/types/OneStream/Client/Api/Abstractions/IStageProcessingServiceClientReference.cs",
+      "source_code": "public interface IStageProcessingServiceClientReference : IStageProcessingService\n{\n}"
+    },
+    {
+      "name": "IFxRatesServiceClientReference",
+      "namespace": "OneStream.Client.Api.Abstractions",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IFxRatesService"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [
+        "GenerateApiClientClass"
+      ],
+      "source_file": "output/types/OneStream/Client/Api/Abstractions/IFxRatesServiceClientReference.cs",
+      "source_code": "public interface IFxRatesServiceClientReference : IFxRatesService\n{\n}"
+    },
+    {
+      "name": "IStageAdminServiceClientReference",
+      "namespace": "OneStream.Client.Api.Abstractions",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IStageAdminService"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [
+        "GenerateApiClientClass"
+      ],
+      "source_file": "output/types/OneStream/Client/Api/Abstractions/IStageAdminServiceClientReference.cs",
+      "source_code": "public interface IStageAdminServiceClientReference : IStageAdminService\n{\n}"
+    },
+    {
+      "name": "IWorkflowAdminServiceClientReference",
+      "namespace": "OneStream.Client.Api.Abstractions",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IWorkflowAdminService"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [
+        "GenerateApiClientClass"
+      ],
+      "source_file": "output/types/OneStream/Client/Api/Abstractions/IWorkflowAdminServiceClientReference.cs",
+      "source_code": "public interface IWorkflowAdminServiceClientReference : IWorkflowAdminService\n{\n}"
+    },
+    {
+      "name": "IDataQualityProcessingServiceClientReference",
+      "namespace": "OneStream.Client.Api.Abstractions",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IDataQualityProcessingService"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [
+        "GenerateApiClientClass"
+      ],
+      "source_file": "output/types/OneStream/Client/Api/Abstractions/IDataQualityProcessingServiceClientReference.cs",
+      "source_code": "public interface IDataQualityProcessingServiceClientReference : IDataQualityProcessingService\n{\n}"
+    }
+  ],
+  "structs": [],
+  "delegates": [],
+  "enums": []
+}

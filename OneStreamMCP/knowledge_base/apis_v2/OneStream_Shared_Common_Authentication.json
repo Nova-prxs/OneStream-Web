@@ -1,0 +1,38 @@
+{
+  "namespace": "OneStream.Shared.Common.Authentication",
+  "generated_at": "2025-12-08T19:28:52.147278",
+  "statistics": {
+    "classes": 1,
+    "interfaces": 0,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 0,
+    "total_methods": 0,
+    "total_properties": 0
+  },
+  "classes": [
+    {
+      "name": "AuthenticationConstants",
+      "namespace": "OneStream.Shared.Common.Authentication",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/Authentication/AuthenticationConstants.cs"
+    }
+  ],
+  "interfaces": [],
+  "structs": [],
+  "delegates": [],
+  "enums": []
+}

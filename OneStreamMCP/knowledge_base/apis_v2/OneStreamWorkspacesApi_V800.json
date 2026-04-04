@@ -1,0 +1,3346 @@
+{
+  "namespace": "OneStreamWorkspacesApi.V800",
+  "generated_at": "2025-12-08T19:28:52.439412",
+  "statistics": {
+    "classes": 0,
+    "interfaces": 19,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 0,
+    "total_methods": 65,
+    "total_properties": 11
+  },
+  "classes": [],
+  "interfaces": [
+    {
+      "name": "IWsasComponentV800",
+      "namespace": "OneStreamWorkspacesApi.V800",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IWsasComponent",
+        "IWsAssemblyServiceBase"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "ProcessComponentSelectionChanged",
+          "return_type": "XFSelectionChangedTaskResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "brGlobals",
+              "type": "BRGlobals",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "args",
+              "type": "DashboardExtenderArgs",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Processs component selection changed",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStreamWorkspacesApi/V800/IWsasComponentV800.cs",
+      "source_code": "public interface IWsasComponentV800 : IWsasComponent, IWsAssemblyServiceBase\n{\n\tXFSelectionChangedTaskResult ProcessComponentSelectionChanged(SessionInfo si, BRGlobals brGlobals, DashboardWorkspace workspace, DashboardExtenderArgs args);\n}"
+    },
+    {
+      "name": "IWsasSqlTableEditorV800",
+      "namespace": "OneStreamWorkspacesApi.V800",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IWsasSqlTableEditor",
+        "IWsAssemblyServiceBase"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "SqlTableEditorSaveData",
+          "return_type": "XFSqlTableEditorSaveDataTaskResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "brGlobals",
+              "type": "BRGlobals",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "args",
+              "type": "DashboardExtenderArgs",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Sqls table editor save data",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStreamWorkspacesApi/V800/IWsasSqlTableEditorV800.cs",
+      "source_code": "public interface IWsasSqlTableEditorV800 : IWsasSqlTableEditor, IWsAssemblyServiceBase\n{\n\tXFSqlTableEditorSaveDataTaskResult SqlTableEditorSaveData(SessionInfo si, BRGlobals brGlobals, DashboardWorkspace workspace, DashboardExtenderArgs args);\n}"
+    },
+    {
+      "name": "IWsasDynamicCubeViewV800",
+      "namespace": "OneStreamWorkspacesApi.V800",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IWsasDynamicCubeView",
+        "IWsAssemblyServiceBase"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "GetDynamicCubeViewItem",
+          "return_type": "CubeViewItem",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "api",
+              "type": "IWsasDynamicCubeViewApiV800",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cubeViewItem",
+              "type": "CubeViewItem",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "args",
+              "type": "DynamicCubeViewArgs",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets dynamic cube view item",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "e",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "XFException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Xs f exception",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStreamWorkspacesApi/V800/IWsasDynamicCubeViewV800.cs",
+      "source_code": "public interface IWsasDynamicCubeViewV800 : IWsasDynamicCubeView, IWsAssemblyServiceBase\n{\n\tCubeViewItem GetDynamicCubeViewItem(SessionInfo si, IWsasDynamicCubeViewApiV800 api, DashboardWorkspace workspace, CubeViewItem cubeViewItem, DynamicCubeViewArgs args)\n\t{\n\t\ttry\n\t\t{\n\t\t\treturn api?.GetDynamicCubeViewItem(si, workspace, cubeViewItem, args);\n\t\t}\n\t\tcatch (Exception e)\n\t\t{\n\t\t\tthrow new XFException(si, e);\n\t\t}\n\t}\n}"
+    },
+    {
+      "name": "IWsasDynamicDataV800",
+      "namespace": "OneStreamWorkspacesApi.V800",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IWsasDynamicData",
+        "IWsAssemblyServiceBase"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "ReadDynamicDataUnitContentTimestamp",
+          "return_type": "DateTime",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "brGlobals",
+              "type": "BRGlobals",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "api",
+              "type": "FinanceRulesApi",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicDataBindingInfo",
+              "type": "DynamicDataBindingInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Reads dynamic data unit content timestamp",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "ReadDynamicDataUnitData",
+          "return_type": "IDynamicDataUnitData",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "brGlobals",
+              "type": "BRGlobals",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "api",
+              "type": "FinanceRulesApi",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicDataBindingInfo",
+              "type": "DynamicDataBindingInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Reads dynamic data unit data",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "SaveDynamicDataCells",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "brGlobals",
+              "type": "BRGlobals",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cube",
+              "type": "Cube",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "scenario",
+              "type": "Member",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicDataBindingInfo",
+              "type": "DynamicDataBindingInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dataCellExs",
+              "type": "List<DataCellEx>",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Saves dynamic data cells",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStreamWorkspacesApi/V800/IWsasDynamicDataV800.cs",
+      "source_code": "public interface IWsasDynamicDataV800 : IWsasDynamicData, IWsAssemblyServiceBase\n{\n\tDateTime ReadDynamicDataUnitContentTimestamp(SessionInfo si, BRGlobals brGlobals, DashboardWorkspace workspace, FinanceRulesApi api, DynamicDataBindingInfo dynamicDataBindingInfo);\n\n\tIDynamicDataUnitData ReadDynamicDataUnitData(SessionInfo si, BRGlobals brGlobals, DashboardWorkspace workspace, FinanceRulesApi api, DynamicDataBindingInfo dynamicDataBindingInfo);\n\n\tvoid SaveDynamicDataCells(SessionInfo si, BRGlobals brGlobals, DashboardWorkspace workspace, Cube cube, Member scenario, DynamicDataBindingInfo dynamicDataBindingInfo, List<DataCellEx> dataCellExs);\n}"
+    },
+    {
+      "name": "IWsasDynamicCubeViewApiV800",
+      "namespace": "OneStreamWorkspacesApi.V800",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IWsasDynamicCubeViewApi",
+        "IBusinessRuleProfilerSettings"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "DbConnFW",
+          "type": "DbConnInfo",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "DbConnAppOrFW",
+          "type": "DbConnInfo",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "BRGlobals",
+          "type": "BRGlobals",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        }
+      ],
+      "methods": [
+        {
+          "name": "GetDynamicCubeViewItem",
+          "return_type": "CubeViewItem",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cubeViewItem",
+              "type": "CubeViewItem",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "args",
+              "type": "DynamicCubeViewArgs",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets dynamic cube view item",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStreamWorkspacesApi/V800/IWsasDynamicCubeViewApiV800.cs",
+      "source_code": "public interface IWsasDynamicCubeViewApiV800 : IWsasDynamicCubeViewApi, IBusinessRuleProfilerSettings\n{\n\tDbConnInfo DbConnFW { get; }\n\n\tDbConnInfo DbConnAppOrFW { get; }\n\n\tBRGlobals BRGlobals { get; }\n\n\tCubeViewItem GetDynamicCubeViewItem(SessionInfo si, DashboardWorkspace workspace, CubeViewItem cubeViewItem, DynamicCubeViewArgs args);\n}"
+    },
+    {
+      "name": "IWsasFinanceCoreV800",
+      "namespace": "OneStreamWorkspacesApi.V800",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IWsasFinanceCore",
+        "IWsAssemblyServiceBase"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "Calculate",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "brGlobals",
+              "type": "BRGlobals",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "api",
+              "type": "FinanceRulesApi",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "args",
+              "type": "FinanceRulesArgs",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Calculates operation",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "Translate",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "brGlobals",
+              "type": "BRGlobals",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "api",
+              "type": "FinanceRulesApi",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "args",
+              "type": "FinanceRulesArgs",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Translates operation",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "ConsolidateShare",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "brGlobals",
+              "type": "BRGlobals",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "api",
+              "type": "FinanceRulesApi",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "args",
+              "type": "FinanceRulesArgs",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Consolidates share",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "ConsolidateElimination",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "brGlobals",
+              "type": "BRGlobals",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "api",
+              "type": "FinanceRulesApi",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "args",
+              "type": "FinanceRulesArgs",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Consolidates elimination",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetCustomFxRate",
+          "return_type": "FxRateResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "brGlobals",
+              "type": "BRGlobals",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "api",
+              "type": "FinanceRulesApi",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "args",
+              "type": "FinanceRulesArgs",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets custom fx rate",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetConditionalInputResult",
+          "return_type": "ConditionalInputResultType",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "brGlobals",
+              "type": "BRGlobals",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "api",
+              "type": "FinanceRulesApi",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "args",
+              "type": "FinanceRulesArgs",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets conditional input result",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStreamWorkspacesApi/V800/IWsasFinanceCoreV800.cs",
+      "source_code": "public interface IWsasFinanceCoreV800 : IWsasFinanceCore, IWsAssemblyServiceBase\n{\n\tvoid Calculate(SessionInfo si, BRGlobals brGlobals, FinanceRulesApi api, FinanceRulesArgs args)\n\t{\n\t}\n\n\tvoid Translate(SessionInfo si, BRGlobals brGlobals, FinanceRulesApi api, FinanceRulesArgs args)\n\t{\n\t}\n\n\tvoid ConsolidateShare(SessionInfo si, BRGlobals brGlobals, FinanceRulesApi api, FinanceRulesArgs args)\n\t{\n\t}\n\n\tvoid ConsolidateElimination(SessionInfo si, BRGlobals brGlobals, FinanceRulesApi api, FinanceRulesArgs args)\n\t{\n\t}\n\n\tFxRateResult GetCustomFxRate(SessionInfo si, BRGlobals brGlobals, FinanceRulesApi api, FinanceRulesArgs args)\n\t{\n\t\treturn null;\n\t}\n\n\tConditionalInputResultType GetConditionalInputResult(SessionInfo si, BRGlobals brGlobals, FinanceRulesApi api, FinanceRulesArgs args)\n\t{\n\t\treturn ConditionalInputResultType.Default;\n\t}\n}"
+    },
+    {
+      "name": "IWsasDashboardV800",
+      "namespace": "OneStreamWorkspacesApi.V800",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IWsasDashboard",
+        "IWsAssemblyServiceBase"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "ProcessLoadDashboardTask",
+          "return_type": "XFLoadDashboardTaskResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "brGlobals",
+              "type": "BRGlobals",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "args",
+              "type": "DashboardExtenderArgs",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Processs load dashboard task",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStreamWorkspacesApi/V800/IWsasDashboardV800.cs",
+      "source_code": "public interface IWsasDashboardV800 : IWsasDashboard, IWsAssemblyServiceBase\n{\n\tXFLoadDashboardTaskResult ProcessLoadDashboardTask(SessionInfo si, BRGlobals brGlobals, DashboardWorkspace workspace, DashboardExtenderArgs args);\n}"
+    },
+    {
+      "name": "IWsasDataManagementStepV800",
+      "namespace": "OneStreamWorkspacesApi.V800",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IWsasDataManagementStep",
+        "IWsAssemblyServiceBase"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "ProcessDataManagementStep",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "brGlobals",
+              "type": "BRGlobals",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "args",
+              "type": "ExtenderArgs",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Processs data management step",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStreamWorkspacesApi/V800/IWsasDataManagementStepV800.cs",
+      "source_code": "public interface IWsasDataManagementStepV800 : IWsasDataManagementStep, IWsAssemblyServiceBase\n{\n\tvoid ProcessDataManagementStep(SessionInfo si, BRGlobals brGlobals, DashboardWorkspace workspace, ExtenderArgs args);\n}"
+    },
+    {
+      "name": "IWsasDynamicGridV800",
+      "namespace": "OneStreamWorkspacesApi.V800",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IWsasDynamicGrid",
+        "IWsAssemblyServiceBase"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "GetDynamicGridData",
+          "return_type": "XFDynamicGridGetDataResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "brGlobals",
+              "type": "BRGlobals",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "args",
+              "type": "DashboardDynamicGridArgs",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets dynamic grid data",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "SaveDynamicGridData",
+          "return_type": "XFDynamicGridSaveDataResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "brGlobals",
+              "type": "BRGlobals",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "args",
+              "type": "DashboardDynamicGridArgs",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Saves dynamic grid data",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStreamWorkspacesApi/V800/IWsasDynamicGridV800.cs",
+      "source_code": "public interface IWsasDynamicGridV800 : IWsasDynamicGrid, IWsAssemblyServiceBase\n{\n\tXFDynamicGridGetDataResult GetDynamicGridData(SessionInfo si, BRGlobals brGlobals, DashboardWorkspace workspace, DashboardDynamicGridArgs args);\n\n\tXFDynamicGridSaveDataResult SaveDynamicGridData(SessionInfo si, BRGlobals brGlobals, DashboardWorkspace workspace, DashboardDynamicGridArgs args);\n}"
+    },
+    {
+      "name": "IWsasFinanceMemberListsV800",
+      "namespace": "OneStreamWorkspacesApi.V800",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IWsasFinanceMemberLists",
+        "IWsAssemblyServiceBase"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "GetMemberList",
+          "return_type": "MemberList",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "brGlobals",
+              "type": "BRGlobals",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "api",
+              "type": "FinanceRulesApi",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "args",
+              "type": "FinanceRulesArgs",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets member list",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStreamWorkspacesApi/V800/IWsasFinanceMemberListsV800.cs",
+      "source_code": "public interface IWsasFinanceMemberListsV800 : IWsasFinanceMemberLists, IWsAssemblyServiceBase\n{\n\tMemberList GetMemberList(SessionInfo si, BRGlobals brGlobals, FinanceRulesApi api, FinanceRulesArgs args);\n}"
+    },
+    {
+      "name": "IWsasDynamicDimensionApiV800",
+      "namespace": "OneStreamWorkspacesApi.V800",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IWsasDynamicDimensionApi",
+        "IBusinessRuleProfilerSettings"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "DbConnFW",
+          "type": "DbConnInfo",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "DbConnApp",
+          "type": "DbConnInfo",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "BRGlobals",
+          "type": "BRGlobals",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "Workspace",
+          "type": "DashboardWorkspace",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        }
+      ],
+      "methods": [
+        {
+          "name": "ReadDynamicDimensionInfo",
+          "return_type": "DynamicDimensionInfo",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "args",
+              "type": "DynamicDimensionArgs",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "contentTimestamp",
+              "type": "DateTime",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "numSecondsBeforeReadingContentTimestamp",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dbConnExt",
+              "type": "DbConnInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectStatement",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dbWheres",
+              "type": "List<DbWhere>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dbOrderBys",
+              "type": "List<DbOrderBy>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "memberNameColumn",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "memberDescriptionColumn",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "externalMemberIdColumn",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "externalMemberNameColumn",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "parentMemberNameColumn",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "parentExternalMemberIdColumn",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "parentExternalMemberNameColumn",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "aggWeightColumn",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "aggWeightIsPercentageNotFraction",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Reads dynamic dimension info",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "CreateAndAddDynamicMembers",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "args",
+              "type": "DynamicDimensionArgs",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dataTable",
+              "type": "DataTable",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "memberNameColumn",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "memberDescriptionColumn",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "externalMemberIdColumn",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "externalMemberNameColumn",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicMembers",
+              "type": "DynamicMemberCollection",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates and add dynamic members",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "CreateAndAddDynamicRelationships",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "args",
+              "type": "DynamicDimensionArgs",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dataTable",
+              "type": "DataTable",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicMembers",
+              "type": "DynamicMemberCollection",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "memberNameColumn",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "externalMemberIdColumn",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "externalMemberNameColumn",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "parentMemberNameColumn",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "parentExternalMemberIdColumn",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "parentExternalMemberNameColumn",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "aggWeightColumn",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "readAggWeightAsPercentageNotFraction",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicRelationships",
+              "type": "DynamicRelationshipCollection",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates and add dynamic relationships",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStreamWorkspacesApi/V800/IWsasDynamicDimensionApiV800.cs",
+      "source_code": "public interface IWsasDynamicDimensionApiV800 : IWsasDynamicDimensionApi, IBusinessRuleProfilerSettings\n{\n\tDbConnInfo DbConnFW { get; }\n\n\tDbConnInfo DbConnApp { get; }\n\n\tBRGlobals BRGlobals { get; }\n\n\tDashboardWorkspace Workspace { get; }\n\n\tDynamicDimensionInfo ReadDynamicDimensionInfo(SessionInfo si, DynamicDimensionArgs args, DateTime contentTimestamp, int numSecondsBeforeReadingContentTimestamp, DbConnInfo dbConnExt, string selectStatement, List<DbWhere> dbWheres, List<DbOrderBy> dbOrderBys, string memberNameColumn, string memberDescriptionColumn, string externalMemberIdColumn, string externalMemberNameColumn, string parentMemberNameColumn, string parentExternalMemberIdColumn, string parentExternalMemberNameColumn, string aggWeightColumn, bool aggWeightIsPercentageNotFraction);\n\n\tvoid CreateAndAddDynamicMembers(SessionInfo si, DynamicDimensionArgs args, DataTable dataTable, string memberNameColumn, string memberDescriptionColumn, string externalMemberIdColumn, string externalMemberNameColumn, DynamicMemberCollection dynamicMembers);\n\n\tvoid CreateAndAddDynamicRelationships(SessionInfo si, DynamicDimensionArgs args, DataTable dataTable, DynamicMemberCollection dynamicMembers, string memberNameColumn, string externalMemberIdColumn, string externalMemberNameColumn, string parentMemberNameColumn, string parentExternalMemberIdColumn, string parentExternalMemberNameColumn, string aggWeightColumn, bool readAggWeightAsPercentageNotFraction, DynamicRelationshipCollection dynamicRelationships);\n}"
+    },
+    {
+      "name": "IWsasDataSetV800",
+      "namespace": "OneStreamWorkspacesApi.V800",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IWsasDataSet",
+        "IWsAssemblyServiceBase"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "GetDataSet",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "brGlobals",
+              "type": "BRGlobals",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "args",
+              "type": "DashboardDataSetArgs",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets data set",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStreamWorkspacesApi/V800/IWsasDataSetV800.cs",
+      "source_code": "public interface IWsasDataSetV800 : IWsasDataSet, IWsAssemblyServiceBase\n{\n\tobject GetDataSet(SessionInfo si, BRGlobals brGlobals, DashboardWorkspace workspace, DashboardDataSetArgs args);\n}"
+    },
+    {
+      "name": "IWsasFinanceGetDataCellV800",
+      "namespace": "OneStreamWorkspacesApi.V800",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IWsasFinanceGetDataCell",
+        "IWsAssemblyServiceBase"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "GetDataCell",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "brGlobals",
+              "type": "BRGlobals",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "api",
+              "type": "FinanceRulesApi",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "args",
+              "type": "FinanceRulesArgs",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets data cell",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStreamWorkspacesApi/V800/IWsasFinanceGetDataCellV800.cs",
+      "source_code": "public interface IWsasFinanceGetDataCellV800 : IWsasFinanceGetDataCell, IWsAssemblyServiceBase\n{\n\tobject GetDataCell(SessionInfo si, BRGlobals brGlobals, FinanceRulesApi api, FinanceRulesArgs args);\n}"
+    },
+    {
+      "name": "IWsasDynamicDashboardsV800",
+      "namespace": "OneStreamWorkspacesApi.V800",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IWsasDynamicDashboards",
+        "IWsAssemblyServiceBase"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "GetEmbeddedDynamicDashboard",
+          "return_type": "WsDynamicDashboardEx",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "api",
+              "type": "IWsasDynamicDashboardsApiV800",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "maintUnit",
+              "type": "DashboardMaintUnit",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "parentDynamicComponentEx",
+              "type": "WsDynamicComponentEx",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "storedDashboard",
+              "type": "Dashboard",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "customSubstVarsAlreadyResolved",
+              "type": "Dictionary<string, string>",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets embedded dynamic dashboard",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "e",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 6
+        },
+        {
+          "name": "XFException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Xs f exception",
+          "generic_params": [],
+          "overloads": 6
+        },
+        {
+          "name": "GetDynamicComponentsForDynamicDashboard",
+          "return_type": "WsDynamicComponentCollection",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "api",
+              "type": "IWsasDynamicDashboardsApiV800",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "maintUnit",
+              "type": "DashboardMaintUnit",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicDashboardEx",
+              "type": "WsDynamicDashboardEx",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "customSubstVarsAlreadyResolved",
+              "type": "Dictionary<string, string>",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets dynamic components for dynamic dashboard",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "e",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 6
+        },
+        {
+          "name": "XFException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Xs f exception",
+          "generic_params": [],
+          "overloads": 6
+        },
+        {
+          "name": "GetDynamicAdaptersForDynamicComponent",
+          "return_type": "WsDynamicAdapterCollection",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "api",
+              "type": "IWsasDynamicDashboardsApiV800",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "maintUnit",
+              "type": "DashboardMaintUnit",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicComponentEx",
+              "type": "WsDynamicComponentEx",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "customSubstVarsAlreadyResolved",
+              "type": "Dictionary<string, string>",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets dynamic adapters for dynamic component",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "e",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 6
+        },
+        {
+          "name": "XFException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Xs f exception",
+          "generic_params": [],
+          "overloads": 6
+        },
+        {
+          "name": "GetDynamicCubeViewForDynamicAdapter",
+          "return_type": "WsDynamicCubeViewEx",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "api",
+              "type": "IWsasDynamicDashboardsApiV800",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "maintUnit",
+              "type": "DashboardMaintUnit",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicAdapterEx",
+              "type": "WsDynamicAdapterEx",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "storedCubeViewItem",
+              "type": "CubeViewItem",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "customSubstVarsAlreadyResolved",
+              "type": "Dictionary<string, string>",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets dynamic cube view for dynamic adapter",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "e",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 6
+        },
+        {
+          "name": "XFException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Xs f exception",
+          "generic_params": [],
+          "overloads": 6
+        },
+        {
+          "name": "GetDynamicParametersForDynamicComponent",
+          "return_type": "WsDynamicParameterCollection",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "api",
+              "type": "IWsasDynamicDashboardsApiV800",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "maintUnit",
+              "type": "DashboardMaintUnit",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicComponentEx",
+              "type": "WsDynamicComponentEx",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "customSubstVarsAlreadyResolved",
+              "type": "Dictionary<string, string>",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets dynamic parameters for dynamic component",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "e",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 6
+        },
+        {
+          "name": "XFException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Xs f exception",
+          "generic_params": [],
+          "overloads": 6
+        },
+        {
+          "name": "GetDynamicCubeViewForDynamicComponent",
+          "return_type": "WsDynamicCubeViewEx",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "api",
+              "type": "IWsasDynamicDashboardsApiV800",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "maintUnit",
+              "type": "DashboardMaintUnit",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicComponentEx",
+              "type": "WsDynamicComponentEx",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "storedCubeViewItem",
+              "type": "CubeViewItem",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "customSubstVarsAlreadyResolved",
+              "type": "Dictionary<string, string>",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets dynamic cube view for dynamic component",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "e",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 6
+        },
+        {
+          "name": "XFException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Xs f exception",
+          "generic_params": [],
+          "overloads": 6
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStreamWorkspacesApi/V800/IWsasDynamicDashboardsV800.cs",
+      "source_code": "public interface IWsasDynamicDashboardsV800 : IWsasDynamicDashboards, IWsAssemblyServiceBase\n{\n\tWsDynamicDashboardEx GetEmbeddedDynamicDashboard(SessionInfo si, IWsasDynamicDashboardsApiV800 api, DashboardWorkspace workspace, DashboardMaintUnit maintUnit, WsDynamicComponentEx parentDynamicComponentEx, Dashboard storedDashboard, Dictionary<string, string> customSubstVarsAlreadyResolved)\n\t{\n\t\ttry\n\t\t{\n\t\t\treturn api?.GetEmbeddedDynamicDashboard(si, workspace, parentDynamicComponentEx, storedDashboard, string.Empty, null, TriStateBool.Unknown, WsDynamicItemStateType.Unknown);\n\t\t}\n\t\tcatch (Exception e)\n\t\t{\n\t\t\tthrow new XFException(si, e);\n\t\t}\n\t}\n\n\tWsDynamicComponentCollection GetDynamicComponentsForDynamicDashboard(SessionInfo si, IWsasDynamicDashboardsApiV800 api, DashboardWorkspace workspace, DashboardMaintUnit maintUnit, WsDynamicDashboardEx dynamicDashboardEx, Dictionary<string, string> customSubstVarsAlreadyResolved)\n\t{\n\t\ttry\n\t\t{\n\t\t\treturn api?.GetDynamicComponentsForDynamicDashboard(si, workspace, dynamicDashboardEx, string.Empty, null, TriStateBool.Unknown, WsDynamicItemStateType.Unknown);\n\t\t}\n\t\tcatch (Exception e)\n\t\t{\n\t\t\tthrow new XFException(si, e);\n\t\t}\n\t}\n\n\tWsDynamicAdapterCollection GetDynamicAdaptersForDynamicComponent(SessionInfo si, IWsasDynamicDashboardsApiV800 api, DashboardWorkspace workspace, DashboardMaintUnit maintUnit, WsDynamicComponentEx dynamicComponentEx, Dictionary<string, string> customSubstVarsAlreadyResolved)\n\t{\n\t\ttry\n\t\t{\n\t\t\treturn api?.GetDynamicAdaptersForDynamicComponent(si, workspace, dynamicComponentEx, string.Empty, null, TriStateBool.Unknown, WsDynamicItemStateType.Unknown);\n\t\t}\n\t\tcatch (Exception e)\n\t\t{\n\t\t\tthrow new XFException(si, e);\n\t\t}\n\t}\n\n\tWsDynamicCubeViewEx GetDynamicCubeViewForDynamicAdapter(SessionInfo si, IWsasDynamicDashboardsApiV800 api, DashboardWorkspace workspace, DashboardMaintUnit maintUnit, WsDynamicAdapterEx dynamicAdapterEx, CubeViewItem storedCubeViewItem, Dictionary<string, string> customSubstVarsAlreadyResolved)\n\t{\n\t\ttry\n\t\t{\n\t\t\treturn api?.GetDynamicCubeViewForDynamicAdapter(si, workspace, dynamicAdapterEx, storedCubeViewItem, string.Empty, null, TriStateBool.Unknown, WsDynamicItemStateType.Unknown);\n\t\t}\n\t\tcatch (Exception e)\n\t\t{\n\t\t\tthrow new XFException(si, e);\n\t\t}\n\t}\n\n\tWsDynamicParameterCollection GetDynamicParametersForDynamicComponent(SessionInfo si, IWsasDynamicDashboardsApiV800 api, DashboardWorkspace workspace, DashboardMaintUnit maintUnit, WsDynamicComponentEx dynamicComponentEx, Dictionary<string, string> customSubstVarsAlreadyResolved)\n\t{\n\t\ttry\n\t\t{\n\t\t\treturn api?.GetDynamicParametersForDynamicComponent(si, workspace, dynamicComponentEx, string.Empty, null, TriStateBool.FalseValue, WsDynamicItemStateType.Unknown);\n\t\t}\n\t\tcatch (Exception e)\n\t\t{\n\t\t\tthrow new XFException(si, e);\n\t\t}\n\t}\n\n\tWsDynamicCubeViewEx GetDynamicCubeViewForDynamicComponent(SessionInfo si, IWsasDynamicDashboardsApiV800 api, DashboardWorkspace workspace, DashboardMaintUnit maintUnit, WsDynamicComponentEx dynamicComponentEx, CubeViewItem storedCubeViewItem, Dictionary<string, string> customSubstVarsAlreadyResolved)\n\t{\n\t\ttry\n\t\t{\n\t\t\treturn api?.GetDynamicCubeViewForDynamicComponent(si, workspace, dynamicComponentEx, storedCubeViewItem, string.Empty, null, TriStateBool.Unknown, WsDynamicItemStateType.Unknown);\n\t\t}\n\t\tcatch (Exception e)\n\t\t{\n\t\t\tthrow new XFException(si, e);\n\t\t}\n\t}\n}"
+    },
+    {
+      "name": "IWsasDynamicDashboardsApiV800",
+      "namespace": "OneStreamWorkspacesApi.V800",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IWsasDynamicDashboardsApi",
+        "IBusinessRuleProfilerSettings"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "DbConnFW",
+          "type": "DbConnInfo",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "DbConnAppOrFW",
+          "type": "DbConnInfo",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "IsSystemLevel",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "BRGlobals",
+          "type": "BRGlobals",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        }
+      ],
+      "methods": [
+        {
+          "name": "GetEmbeddedDynamicDashboard",
+          "return_type": "WsDynamicDashboardEx",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "parentDynamicComponentEx",
+              "type": "WsDynamicComponentEx",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "storedDashboard",
+              "type": "Dashboard",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "nextLevelNameSuffixToAdd",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "nextLevelTemplateSubstVarsToAdd",
+              "type": "Dictionary<string, string>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "convertStoredDashboardToDynamic",
+              "type": "TriStateBool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicItemStateType",
+              "type": "WsDynamicItemStateType",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets embedded dynamic dashboard",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetDynamicComponentsForDynamicDashboard",
+          "return_type": "WsDynamicComponentCollection",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicDashboardEx",
+              "type": "WsDynamicDashboardEx",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "nextLevelNameSuffixToAdd",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "nextLevelTemplateSubstVarsToAdd",
+              "type": "Dictionary<string, string>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "convertStoredComponentsToDynamic",
+              "type": "TriStateBool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicItemStateType",
+              "type": "WsDynamicItemStateType",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets dynamic components for dynamic dashboard",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetDynamicComponentsRepeatedForDynamicDashboard",
+          "return_type": "WsDynamicComponentCollection",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicDashboardEx",
+              "type": "WsDynamicDashboardEx",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "repeatArgsList",
+              "type": "List<WsDynamicComponentRepeatArgs>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "convertStoredComponentsToDynamic",
+              "type": "TriStateBool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicItemStateType",
+              "type": "WsDynamicItemStateType",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets dynamic components repeated for dynamic dashboard",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetDynamicComponentForDynamicDashboard",
+          "return_type": "WsDynamicComponentEx",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicDashboardEx",
+              "type": "WsDynamicDashboardEx",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "storedComponent",
+              "type": "DashboardComponent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "nextLevelNameSuffixToAdd",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "nextLevelTemplateSubstVarsToAdd",
+              "type": "Dictionary<string, string>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "convertStoredComponentToDynamic",
+              "type": "TriStateBool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicItemStateType",
+              "type": "WsDynamicItemStateType",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets dynamic component for dynamic dashboard",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetDynamicAdaptersForDynamicComponent",
+          "return_type": "WsDynamicAdapterCollection",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicComponentEx",
+              "type": "WsDynamicComponentEx",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "nextLevelNameSuffixToAdd",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "nextLevelTemplateSubstVarsToAdd",
+              "type": "Dictionary<string, string>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "convertStoredAdaptersToDynamic",
+              "type": "TriStateBool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicItemStateType",
+              "type": "WsDynamicItemStateType",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets dynamic adapters for dynamic component",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetDynamicAdapterForDynamicComponent",
+          "return_type": "WsDynamicAdapterEx",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicComponentEx",
+              "type": "WsDynamicComponentEx",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "storedAdapter",
+              "type": "DashboardAdapter",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "nextLevelNameSuffixToAdd",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "nextLevelTemplateSubstVarsToAdd",
+              "type": "Dictionary<string, string>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "convertStoredAdapterToDynamic",
+              "type": "TriStateBool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicItemStateType",
+              "type": "WsDynamicItemStateType",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets dynamic adapter for dynamic component",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetDynamicCubeViewForDynamicAdapter",
+          "return_type": "WsDynamicCubeViewEx",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicAdapterEx",
+              "type": "WsDynamicAdapterEx",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "storedCubeViewItem",
+              "type": "CubeViewItem",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "nextLevelNameSuffixToAdd",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "nextLevelTemplateSubstVarsToAdd",
+              "type": "Dictionary<string, string>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "convertStoredCubeViewToDynamic",
+              "type": "TriStateBool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicItemStateType",
+              "type": "WsDynamicItemStateType",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets dynamic cube view for dynamic adapter",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetDynamicCubeViewForDynamicComponent",
+          "return_type": "WsDynamicCubeViewEx",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicComponentEx",
+              "type": "WsDynamicComponentEx",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "storedCubeViewItem",
+              "type": "CubeViewItem",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "nextLevelNameSuffixToAdd",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "nextLevelTemplateSubstVarsToAdd",
+              "type": "Dictionary<string, string>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "convertStoredCubeViewToDynamic",
+              "type": "TriStateBool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicItemStateType",
+              "type": "WsDynamicItemStateType",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets dynamic cube view for dynamic component",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetDynamicParametersForDynamicComponent",
+          "return_type": "WsDynamicParameterCollection",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicComponentEx",
+              "type": "WsDynamicComponentEx",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "nextLevelNameSuffixToAdd",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "nextLevelTemplateSubstVarsToAdd",
+              "type": "Dictionary<string, string>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "convertStoredParametersToDynamic",
+              "type": "TriStateBool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicItemStateType",
+              "type": "WsDynamicItemStateType",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets dynamic parameters for dynamic component",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "SaveDynamicDashboardState",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "parentComponent",
+              "type": "WsDynamicComponent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicDashboardEx",
+              "type": "WsDynamicDashboardEx",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicItemStateType",
+              "type": "WsDynamicItemStateType",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Saves dynamic dashboard state",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "SaveDynamicComponentState",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "parentDashboard",
+              "type": "WsDynamicDashboard",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicComponentEx",
+              "type": "WsDynamicComponentEx",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicItemStateType",
+              "type": "WsDynamicItemStateType",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Saves dynamic component state",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "SaveDynamicAdapterState",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "parentComponent",
+              "type": "WsDynamicComponent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicAdapterEx",
+              "type": "WsDynamicAdapterEx",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicItemStateType",
+              "type": "WsDynamicItemStateType",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Saves dynamic adapter state",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetStoredComponentsForDynamicDashboard",
+          "return_type": "List<DashboardDbrdCompMemberEx>",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicDashboard",
+              "type": "WsDynamicDashboard",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets stored components for dynamic dashboard",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetStoredComponentForDynamicDashboard",
+          "return_type": "DashboardDbrdCompMemberEx",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicDashboard",
+              "type": "WsDynamicDashboard",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "componentName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets stored component for dynamic dashboard",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "GetStoredComponentForDynamicDashboard",
+          "return_type": "DashboardDbrdCompMemberEx",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicDashboard",
+              "type": "WsDynamicDashboard",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "componentID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets stored component for dynamic dashboard",
+          "generic_params": [],
+          "overloads": 2
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStreamWorkspacesApi/V800/IWsasDynamicDashboardsApiV800.cs",
+      "source_code": "public interface IWsasDynamicDashboardsApiV800 : IWsasDynamicDashboardsApi, IBusinessRuleProfilerSettings\n{\n\tDbConnInfo DbConnFW { get; }\n\n\tDbConnInfo DbConnAppOrFW { get; }\n\n\tbool IsSystemLevel { get; }\n\n\tBRGlobals BRGlobals { get; }\n\n\tWsDynamicDashboardEx GetEmbeddedDynamicDashboard(SessionInfo si, DashboardWorkspace workspace, WsDynamicComponentEx parentDynamicComponentEx, Dashboard storedDashboard, string nextLevelNameSuffixToAdd, Dictionary<string, string> nextLevelTemplateSubstVarsToAdd, TriStateBool convertStoredDashboardToDynamic, WsDynamicItemStateType dynamicItemStateType);\n\n\tWsDynamicComponentCollection GetDynamicComponentsForDynamicDashboard(SessionInfo si, DashboardWorkspace workspace, WsDynamicDashboardEx dynamicDashboardEx, string nextLevelNameSuffixToAdd, Dictionary<string, string> nextLevelTemplateSubstVarsToAdd, TriStateBool convertStoredComponentsToDynamic, WsDynamicItemStateType dynamicItemStateType);\n\n\tWsDynamicComponentCollection GetDynamicComponentsRepeatedForDynamicDashboard(SessionInfo si, DashboardWorkspace workspace, WsDynamicDashboardEx dynamicDashboardEx, List<WsDynamicComponentRepeatArgs> repeatArgsList, TriStateBool convertStoredComponentsToDynamic, WsDynamicItemStateType dynamicItemStateType);\n\n\tWsDynamicComponentEx GetDynamicComponentForDynamicDashboard(SessionInfo si, DashboardWorkspace workspace, WsDynamicDashboardEx dynamicDashboardEx, DashboardComponent storedComponent, string nextLevelNameSuffixToAdd, Dictionary<string, string> nextLevelTemplateSubstVarsToAdd, TriStateBool convertStoredComponentToDynamic, WsDynamicItemStateType dynamicItemStateType);\n\n\tWsDynamicAdapterCollection GetDynamicAdaptersForDynamicComponent(SessionInfo si, DashboardWorkspace workspace, WsDynamicComponentEx dynamicComponentEx, string nextLevelNameSuffixToAdd, Dictionary<string, string> nextLevelTemplateSubstVarsToAdd, TriStateBool convertStoredAdaptersToDynamic, WsDynamicItemStateType dynamicItemStateType);\n\n\tWsDynamicAdapterEx GetDynamicAdapterForDynamicComponent(SessionInfo si, DashboardWorkspace workspace, WsDynamicComponentEx dynamicComponentEx, DashboardAdapter storedAdapter, string nextLevelNameSuffixToAdd, Dictionary<string, string> nextLevelTemplateSubstVarsToAdd, TriStateBool convertStoredAdapterToDynamic, WsDynamicItemStateType dynamicItemStateType);\n\n\tWsDynamicCubeViewEx GetDynamicCubeViewForDynamicAdapter(SessionInfo si, DashboardWorkspace workspace, WsDynamicAdapterEx dynamicAdapterEx, CubeViewItem storedCubeViewItem, string nextLevelNameSuffixToAdd, Dictionary<string, string> nextLevelTemplateSubstVarsToAdd, TriStateBool convertStoredCubeViewToDynamic, WsDynamicItemStateType dynamicItemStateType);\n\n\tWsDynamicCubeViewEx GetDynamicCubeViewForDynamicComponent(SessionInfo si, DashboardWorkspace workspace, WsDynamicComponentEx dynamicComponentEx, CubeViewItem storedCubeViewItem, string nextLevelNameSuffixToAdd, Dictionary<string, string> nextLevelTemplateSubstVarsToAdd, TriStateBool convertStoredCubeViewToDynamic, WsDynamicItemStateType dynamicItemStateType);\n\n\tWsDynamicParameterCollection GetDynamicParametersForDynamicComponent(SessionInfo si, DashboardWorkspace workspace, WsDynamicComponentEx dynamicComponentEx, string nextLevelNameSuffixToAdd, Dictionary<string, string> nextLevelTemplateSubstVarsToAdd, TriStateBool convertStoredParametersToDynamic, WsDynamicItemStateType dynamicItemStateType);\n\n\tvoid SaveDynamicDashboardState(SessionInfo si, WsDynamicComponent parentComponent, WsDynamicDashboardEx dynamicDashboardEx, WsDynamicItemStateType dynamicItemStateType);\n\n\tvoid SaveDynamicComponentState(SessionInfo si, WsDynamicDashboard parentDashboard, WsDynamicComponentEx dynamicComponentEx, WsDynamicItemStateType dynamicItemStateType);\n\n\tvoid SaveDynamicAdapterState(SessionInfo si, WsDynamicComponent parentComponent, WsDynamicAdapterEx dynamicAdapterEx, WsDynamicItemStateType dynamicItemStateType);\n\n\tList<DashboardDbrdCompMemberEx> GetStoredComponentsForDynamicDashboard(SessionInfo si, DashboardWorkspace workspace, WsDynamicDashboard dynamicDashboard);\n\n\tDashboardDbrdCompMemberEx GetStoredComponentForDynamicDashboard(SessionInfo si, DashboardWorkspace workspace, WsDynamicDashboard dynamicDashboard, string componentName);\n\n\tDashboardDbrdCompMemberEx GetStoredComponentForDynamicDashboard(SessionInfo si, DashboardWorkspace workspace, WsDynamicDashboard dynamicDashboard, Guid componentID);\n}"
+    },
+    {
+      "name": "IWsasXFBRStringV800",
+      "namespace": "OneStreamWorkspacesApi.V800",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IWsasXFBRString",
+        "IWsAssemblyServiceBase"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "GetXFBRString",
+          "return_type": "string",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "brGlobals",
+              "type": "BRGlobals",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "args",
+              "type": "DashboardStringFunctionArgs",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets x f b r string",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStreamWorkspacesApi/V800/IWsasXFBRStringV800.cs",
+      "source_code": "public interface IWsasXFBRStringV800 : IWsasXFBRString, IWsAssemblyServiceBase\n{\n\tstring GetXFBRString(SessionInfo si, BRGlobals brGlobals, DashboardWorkspace workspace, DashboardStringFunctionArgs args);\n}"
+    },
+    {
+      "name": "IWsasTableViewV800",
+      "namespace": "OneStreamWorkspacesApi.V800",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IWsasTableView",
+        "IWsAssemblyServiceBase"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "TableViewGetCustomSubstVarsInUse",
+          "return_type": "List<string>",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "brGlobals",
+              "type": "BRGlobals",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "tableViewName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "custSubstVarsAlreadyResolved",
+              "type": "Dictionary<string, string>",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Tables view get custom subst vars in use",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetTableView",
+          "return_type": "TableView",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "brGlobals",
+              "type": "BRGlobals",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "tableViewName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "customSubstVars",
+              "type": "Dictionary<string, string>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "nameValuePairs",
+              "type": "Dictionary<string, string>",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets table view",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "SaveTableView",
+          "return_type": "bool",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "brGlobals",
+              "type": "BRGlobals",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "tableViewName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "tableView",
+              "type": "TableView",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Checks table view",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStreamWorkspacesApi/V800/IWsasTableViewV800.cs",
+      "source_code": "public interface IWsasTableViewV800 : IWsasTableView, IWsAssemblyServiceBase\n{\n\tList<string> TableViewGetCustomSubstVarsInUse(SessionInfo si, BRGlobals brGlobals, DashboardWorkspace workspace, string tableViewName, Dictionary<string, string> custSubstVarsAlreadyResolved);\n\n\tTableView GetTableView(SessionInfo si, BRGlobals brGlobals, DashboardWorkspace workspace, string tableViewName, Dictionary<string, string> customSubstVars, Dictionary<string, string> nameValuePairs);\n\n\tbool SaveTableView(SessionInfo si, BRGlobals brGlobals, DashboardWorkspace workspace, string tableViewName, TableView tableView);\n}"
+    },
+    {
+      "name": "IWsasDynamicDimensionV800",
+      "namespace": "OneStreamWorkspacesApi.V800",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IWsasDynamicDimension",
+        "IWsAssemblyServiceBase"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "ReadDynamicDimensionContentTimestamp",
+          "return_type": "DateTime",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "api",
+              "type": "IWsasDynamicDimensionApiV800",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "args",
+              "type": "DynamicDimensionArgs",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Reads dynamic dimension content timestamp",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "ReadDynamicDimensionInfo",
+          "return_type": "DynamicDimensionInfo",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "api",
+              "type": "IWsasDynamicDimensionApiV800",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "args",
+              "type": "DynamicDimensionArgs",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Reads dynamic dimension info",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStreamWorkspacesApi/V800/IWsasDynamicDimensionV800.cs",
+      "source_code": "public interface IWsasDynamicDimensionV800 : IWsasDynamicDimension, IWsAssemblyServiceBase\n{\n\tDateTime ReadDynamicDimensionContentTimestamp(SessionInfo si, IWsasDynamicDimensionApiV800 api, DynamicDimensionArgs args);\n\n\tDynamicDimensionInfo ReadDynamicDimensionInfo(SessionInfo si, IWsasDynamicDimensionApiV800 api, DynamicDimensionArgs args);\n}"
+    },
+    {
+      "name": "IWsasFinanceCustomCalculateV800",
+      "namespace": "OneStreamWorkspacesApi.V800",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IWsasFinanceCustomCalculate",
+        "IWsAssemblyServiceBase"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "CustomCalculate",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "brGlobals",
+              "type": "BRGlobals",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "api",
+              "type": "FinanceRulesApi",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "args",
+              "type": "FinanceRulesArgs",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Customs calculate",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStreamWorkspacesApi/V800/IWsasFinanceCustomCalculateV800.cs",
+      "source_code": "public interface IWsasFinanceCustomCalculateV800 : IWsasFinanceCustomCalculate, IWsAssemblyServiceBase\n{\n\tvoid CustomCalculate(SessionInfo si, BRGlobals brGlobals, FinanceRulesApi api, FinanceRulesArgs args);\n}"
+    }
+  ],
+  "structs": [],
+  "delegates": [],
+  "enums": []
+}

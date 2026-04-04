@@ -1,0 +1,398 @@
+{
+  "namespace": "OneStream.Shared.Common.StageTableFields",
+  "generated_at": "2025-12-08T19:28:52.149779",
+  "statistics": {
+    "classes": 21,
+    "interfaces": 0,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 0,
+    "total_methods": 0,
+    "total_properties": 0
+  },
+  "classes": [
+    {
+      "name": "StageRuleProfiles",
+      "namespace": "OneStream.Shared.Common.StageTableFields",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/StageTableFields.cs"
+    },
+    {
+      "name": "StageRuleProfilesHistory",
+      "namespace": "OneStream.Shared.Common.StageTableFields",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/StageTableFields.cs"
+    },
+    {
+      "name": "StageRuleProfileMembers",
+      "namespace": "OneStream.Shared.Common.StageTableFields",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/StageTableFields.cs"
+    },
+    {
+      "name": "StageRuleProfileMembersHistory",
+      "namespace": "OneStream.Shared.Common.StageTableFields",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/StageTableFields.cs"
+    },
+    {
+      "name": "StageRuleGroups",
+      "namespace": "OneStream.Shared.Common.StageTableFields",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/StageTableFields.cs"
+    },
+    {
+      "name": "StageRuleGroupsHistory",
+      "namespace": "OneStream.Shared.Common.StageTableFields",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/StageTableFields.cs"
+    },
+    {
+      "name": "StageRules",
+      "namespace": "OneStream.Shared.Common.StageTableFields",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/StageTableFields.cs"
+    },
+    {
+      "name": "StageRulesHistory",
+      "namespace": "OneStream.Shared.Common.StageTableFields",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/StageTableFields.cs"
+    },
+    {
+      "name": "StageSourceData",
+      "namespace": "OneStream.Shared.Common.StageTableFields",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/StageTableFields.cs"
+    },
+    {
+      "name": "StageTargetData",
+      "namespace": "OneStream.Shared.Common.StageTableFields",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/StageTableFields.cs"
+    },
+    {
+      "name": "StageAttributeData",
+      "namespace": "OneStream.Shared.Common.StageTableFields",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/StageTableFields.cs"
+    },
+    {
+      "name": "StageSummaryTargetData",
+      "namespace": "OneStream.Shared.Common.StageTableFields",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/StageTableFields.cs"
+    },
+    {
+      "name": "StageIntegrationMaps",
+      "namespace": "OneStream.Shared.Common.StageTableFields",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/StageTableFields.cs"
+    },
+    {
+      "name": "StageArchivesInformation",
+      "namespace": "OneStream.Shared.Common.StageTableFields",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/StageTableFields.cs"
+    },
+    {
+      "name": "StageBiBlendInformation",
+      "namespace": "OneStream.Shared.Common.StageTableFields",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/StageTableFields.cs"
+    },
+    {
+      "name": "StageDirectLoadInformation",
+      "namespace": "OneStream.Shared.Common.StageTableFields",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/StageTableFields.cs"
+    },
+    {
+      "name": "ParserLayouts",
+      "namespace": "OneStream.Shared.Common.StageTableFields",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/StageTableFields.cs"
+    },
+    {
+      "name": "ParserDimensions",
+      "namespace": "OneStream.Shared.Common.StageTableFields",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/StageTableFields.cs"
+    },
+    {
+      "name": "ParserDimensionAttributes",
+      "namespace": "OneStream.Shared.Common.StageTableFields",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/StageTableFields.cs"
+    },
+    {
+      "name": "DerivedColumns",
+      "namespace": "OneStream.Shared.Common.StageTableFields",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/StageTableFields.cs"
+    },
+    {
+      "name": "StageFinanceSharedTableInfo",
+      "namespace": "OneStream.Shared.Common.StageTableFields",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/StageTableFields.cs",
+      "source_code": "public class StageFinanceSharedTableInfo\n\t{\n\t\tpublic const string StageToFinanceLoadResultTableName = \"StageToFinanceLoadResult\";\n\n\t\tpublic const string StageToFinanceValErrTableName = \"StageToFinanceValidationError\";\n\n\t\tpublic const string StageToFinanceValErrKeyFieldName = \"SummaryRowID\";\n\n\t\tpublic const string StageToFinanceValErrMessageFieldName = \"ValidationMessagesXml\";\n\t}"
+    }
+  ],
+  "interfaces": [],
+  "structs": [],
+  "delegates": [],
+  "enums": []
+}

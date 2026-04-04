@@ -1,0 +1,80 @@
+{
+  "namespace": "OneStream.Client.Wpf.ManageFxRateLockingDlg",
+  "generated_at": "2025-12-08T19:28:51.956380",
+  "statistics": {
+    "classes": 1,
+    "interfaces": 0,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 2,
+    "total_methods": 0,
+    "total_properties": 0
+  },
+  "classes": [
+    {
+      "name": "CheckStateImages",
+      "namespace": "OneStream.Client.Wpf.ManageFxRateLockingDlg",
+      "type": "class",
+      "modifiers": [
+        "private"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Wpf/ManageFxRateLockingDlg.cs"
+    }
+  ],
+  "interfaces": [],
+  "structs": [],
+  "delegates": [],
+  "enums": [
+    {
+      "name": "UIUpdateActivity",
+      "namespace": "OneStream.Client.Wpf.ManageFxRateLockingDlg",
+      "underlying_type": "int",
+      "is_flags": false,
+      "values": [
+        {
+          "name": "Initialization",
+          "value": 0
+        },
+        {
+          "name": "ChangedDimensionSelection",
+          "value": 1
+        },
+        {
+          "name": "ViewSearchResultsInHierarchy",
+          "value": 2
+        }
+      ],
+      "access": "public"
+    },
+    {
+      "name": "ChildItemCheckState",
+      "namespace": "OneStream.Client.Wpf.ManageFxRateLockingDlg",
+      "underlying_type": "int",
+      "is_flags": false,
+      "values": [
+        {
+          "name": "AllLocked",
+          "value": 0
+        },
+        {
+          "name": "AllUnlocked",
+          "value": 1
+        },
+        {
+          "name": "MixedLocks",
+          "value": 2
+        }
+      ],
+      "access": "public"
+    }
+  ]
+}

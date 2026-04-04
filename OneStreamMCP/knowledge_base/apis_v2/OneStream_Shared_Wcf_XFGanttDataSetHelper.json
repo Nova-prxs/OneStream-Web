@@ -1,0 +1,95 @@
+{
+  "namespace": "OneStream.Shared.Wcf.XFGanttDataSetHelper",
+  "generated_at": "2025-12-08T19:28:52.407634",
+  "statistics": {
+    "classes": 4,
+    "interfaces": 0,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 0,
+    "total_methods": 0,
+    "total_properties": 0
+  },
+  "classes": [
+    {
+      "name": "TableNames",
+      "namespace": "OneStream.Shared.Wcf.XFGanttDataSetHelper",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/XFGanttDataSetHelper.cs"
+    },
+    {
+      "name": "TaskColumnNames",
+      "namespace": "OneStream.Shared.Wcf.XFGanttDataSetHelper",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/XFGanttDataSetHelper.cs"
+    },
+    {
+      "name": "RelationshipColumnNames",
+      "namespace": "OneStream.Shared.Wcf.XFGanttDataSetHelper",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/XFGanttDataSetHelper.cs"
+    },
+    {
+      "name": "DependencyColumnNames",
+      "namespace": "OneStream.Shared.Wcf.XFGanttDataSetHelper",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/XFGanttDataSetHelper.cs"
+    }
+  ],
+  "interfaces": [],
+  "structs": [],
+  "delegates": [],
+  "enums": []
+}

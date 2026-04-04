@@ -1,0 +1,228 @@
+[
+  {
+    "file": "Business rules/solution_helper.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName.BusinessRule.DashboardExtender.main_solution_helper",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "DocumentFormat.OpenXml",
+      "OneStream.Shared.Common",
+      "System.IO",
+      "OneStream.Shared.Wcf",
+      "OneStream.Finance.Engine",
+      "System.Linq",
+      "System.Collections.Generic",
+      "System.Data",
+      "OneStream.Stage.Database",
+      "DocumentFormat.OpenXml.Packaging",
+      "Microsoft.VisualBasic",
+      "OneStream.Finance.Database",
+      "System.Data.Common",
+      "DocumentFormat.OpenXml.Spreadsheet",
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "OneStream.Stage.Engine",
+      "System",
+      "OneStream.Shared.Database"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "Object"
+      },
+      {
+        "name": "args",
+        "type": "DashboardExtenderArgs"
+      }
+    ],
+    "return_type": null
+  },
+  {
+    "file": "Business rules/main_navigation.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName.BusinessRule.DashboardExtender.main_navigation",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "Object"
+      },
+      {
+        "name": "args",
+        "type": "DashboardExtenderArgs"
+      }
+    ],
+    "return_type": "Object"
+  },
+  {
+    "file": "Business rules/Backup/main_solution_helper_old.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName.BusinessRule.DashboardExtender.main_solution_helper",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "DocumentFormat.OpenXml",
+      "OneStream.Shared.Common",
+      "System.IO",
+      "OneStream.Shared.Wcf",
+      "OneStream.Finance.Engine",
+      "System.Linq",
+      "System.Collections.Generic",
+      "System.Data",
+      "OneStream.Stage.Database",
+      "DocumentFormat.OpenXml.Packaging",
+      "Microsoft.VisualBasic",
+      "OneStream.Finance.Database",
+      "System.Data.Common",
+      "DocumentFormat.OpenXml.Spreadsheet",
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "OneStream.Stage.Engine",
+      "System",
+      "OneStream.Shared.Database"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "Object"
+      },
+      {
+        "name": "args",
+        "type": "DashboardExtenderArgs"
+      }
+    ],
+    "return_type": "Object"
+  },
+  {
+    "file": "Investments/dashboard/navigation helpers/main_navigation.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName.BusinessRule.DashboardExtender.main_navigation",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "Object"
+      },
+      {
+        "name": "args",
+        "type": "DashboardExtenderArgs"
+      }
+    ],
+    "return_type": "Object"
+  },
+  {
+    "file": "Investments/dashboard/solution helpers/main_solution_helper.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName.BusinessRule.DashboardExtender.main_solution_helper",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "Object"
+      },
+      {
+        "name": "args",
+        "type": "DashboardExtenderArgs"
+      }
+    ],
+    "return_type": "Object"
+  }
+]

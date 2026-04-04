@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block title %}OneStream Study Guide — Home{% endblock %}
+
+{% block content %}
+
+{# Quick start card with progress summary #}
+<article class="quick-start" id="quick-start">
+  <header><strong>OS-201 Certification Prep</strong></header>
+  <div class="quick-start-stats">
+    <div class="quick-start-stat">
+      <span class="stat-number">4</span>
+      <span class="stat-label">Books</span>
+    </div>
+    <div class="quick-start-stat">
+      <span class="stat-number">60</span>
+      <span class="stat-label">Chapters</span>
+    </div>
+    <div class="quick-start-stat">
+      <span class="stat-number">618</span>
+      <span class="stat-label">Questions</span>
+    </div>
+    <div class="quick-start-stat">
+      <span class="stat-number" id="home-answered">0</span>
+      <span class="stat-label">Answered</span>
+    </div>
+    <div class="quick-start-stat">
+      <span class="stat-number" id="home-score">—</span>
+      <span class="stat-label">Score</span>
+    </div>
+  </div>
+  <div>
+    <a href="/exam-prep/quiz" role="button">Start Quiz</a>
+    <a href="/exam-prep/exam" role="button" class="outline">Exam Simulation</a>
+  </div>
+</article>
+
+<h2>Reference Books</h2>
+<div class="book-grid">
+  {% for book in books %}
+  <article>
+    <header>
+      <h3><a href="/exam-prep/guide/{{ book.slug }}">{{ book.title }}</a></h3>
+    </header>
+    <p>
+      {% if book.slug == 'design-reference-guide' %}
+        Comprehensive reference covering the full OneStream platform: dimensions, cubes, workflow, dashboards, data integration, and more.
+      {% elif book.slug == 'finance-rules' %}
+        Financial logic engine, calculations, translations, and consolidation rules for OneStream.
+      {% elif book.slug == 'foundation-handbook' %}
+        Core platform concepts: architecture, security, metadata, business rules, and administration.
+      {% elif book.slug == 'workspaces-assemblies' %}
+        Workspaces, assemblies, solution management, and deployment patterns.
+      {% endif %}
+    </p>
+    <footer>
+      <small>{{ book.chapter_count }} chapters</small>
+    </footer>
+  </article>
+  {% endfor %}
+</div>
+
+<script>
+(function() {
+  // Quick progress stats from localStorage
+  var sections = ['cube','workflow','data-collection','presentation','tools','security','administration','rules'];
+  var totalAnswered = 0, totalCorrect = 0;
+  sections.forEach(function(slug) {
+    try {
+      var raw = localStorage.getItem('quiz_progress_' + slug);
+      if (raw) {
+        var data = JSON.parse(raw);
+        if (data && data.answered) {
+          for (var idx in data.answered) {
+            totalAnswered++;
+          }
+        }
+      }
+    } catch(e) {}
+  });
+  document.getElementById('home-answered').textContent = totalAnswered;
+  if (totalAnswered > 0) {
+    // We don't have correct_answer data on this page, just show count
+    document.getElementById('home-score').textContent = totalAnswered + '/618';
+  }
+})();
+</script>
+{% endblock %}

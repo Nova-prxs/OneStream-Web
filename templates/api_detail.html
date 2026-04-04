@@ -1,0 +1,125 @@
+{% extends "docs_base.html" %}
+
+{% block title %}{{ cls.name }} — OneStream API{% endblock %}
+
+{% block content %}
+<nav aria-label="Breadcrumb" class="breadcrumb">
+  <a href="/docs/">API Reference</a> &rsaquo;
+  <span>{{ cls.namespace }}</span> &rsaquo;
+  <strong>{{ cls.name }}</strong>
+</nav>
+
+<hgroup>
+  <h1>
+    <span class="api-type-badge {{ cls.type }}">{{ cls.type }}</span>
+    {{ cls.name }}
+  </h1>
+  <p>Namespace: <code>{{ cls.namespace }}</code>
+    {% if cls.base_class %} &mdash; Inherits: <code>{{ cls.base_class }}</code>{% endif %}
+    {% if cls.interfaces %} &mdash; Implements: {% for i in cls.interfaces %}<code>{{ i }}</code>{% if not loop.last %}, {% endif %}{% endfor %}{% endif %}
+  </p>
+</hgroup>
+
+{% if cls.description %}
+<p>{{ cls.description }}</p>
+{% endif %}
+
+{# --- Methods --- #}
+{% if cls.methods %}
+<h2 id="methods">Methods ({{ cls.methods|length }})</h2>
+<div class="api-methods-table">
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Return Type</th>
+        <th>Parameters</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for m in cls.methods %}
+      <tr id="method-{{ m.name|lower }}">
+        <td>
+          <code>{{ m.name }}</code>
+          {% if m.is_static %}<small class="badge-static">static</small>{% endif %}
+          {% if m.is_async %}<small class="badge-async">async</small>{% endif %}
+        </td>
+        <td><code>{{ m.return_type or 'void' }}</code></td>
+        <td>
+          {% if m.parameters %}
+          <small>
+            {% for p in m.parameters %}
+            {{ p.type }} <em>{{ p.name }}</em>{% if p.optional %} = {{ p.default }}{% endif %}{% if not loop.last %}, {% endif %}
+            {% endfor %}
+          </small>
+          {% else %}
+          <small>none</small>
+          {% endif %}
+        </td>
+        <td><small>{{ m.description or '' }}</small></td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endif %}
+
+{# --- Properties --- #}
+{% if cls.properties %}
+<h2 id="properties">Properties ({{ cls.properties|length }})</h2>
+<table>
+  <thead>
+    <tr><th>Name</th><th>Type</th><th>Access</th></tr>
+  </thead>
+  <tbody>
+    {% for p in cls.properties %}
+    <tr>
+      <td><code>{{ p.name }}</code></td>
+      <td><code>{{ p.return_type or p.type or '' }}</code></td>
+      <td><small>{{ p.access or 'public' }}</small></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endif %}
+
+{# --- Code Example (generated from API metadata) --- #}
+{% if cls.code_example %}
+<h2 id="code-example">Code Example</h2>
+<pre class="code-block"><code class="csharp">{{ cls.code_example }}</code></pre>
+{% endif %}
+
+{# --- Real Usage Examples (from business rules) --- #}
+{% if cls.usage_examples %}
+<h2 id="examples">Real-World Examples</h2>
+<p class="text-muted">Extracted from actual OneStream business rules:</p>
+{% for ex in cls.usage_examples %}
+<article class="usage-example">
+  <header>
+    <strong>{{ ex.rule_name }}</strong>
+    <small>({{ ex.type_name }})</small>
+    <a href="/docs/rules/{{ ex.rule_slug }}" class="outline" role="button" style="font-size:0.8rem; padding:0.2rem 0.6rem; margin-left:auto">View full rule</a>
+  </header>
+  <pre><code class="{{ ex.language }}">{{ ex.code }}</code></pre>
+</article>
+{% endfor %}
+{% endif %}
+
+{# --- Related Business Rules --- #}
+{% if cls.related_rules %}
+<h2 id="rules">Business Rules Using This API ({{ cls.related_rules|length }})</h2>
+<div class="api-class-list" style="max-height:400px; overflow-y:auto;">
+  {% for r in cls.related_rules %}
+  <a href="/docs/rules/{{ r.full_slug }}" class="api-class-item">
+    <span class="api-type-badge rule">R</span>
+    <div class="api-class-info">
+      <strong>{{ r.name }}</strong>
+      <small>{{ r.type_name }}</small>
+    </div>
+  </a>
+  {% endfor %}
+</div>
+{% endif %}
+
+{% endblock %}

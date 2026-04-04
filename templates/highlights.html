@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+{% block title %}My Highlights — OneStream Study Guide{% endblock %}
+{% block content %}
+
+<nav class="breadcrumb">
+  <a href="/">Home</a> &rsaquo;
+  <span>My Highlights</span>
+</nav>
+
+<h1>My Highlights</h1>
+<p>All your highlighted text from chapters, stored in your browser. Export to Markdown or open directly in Obsidian.</p>
+
+<div class="export-toolbar" id="export-toolbar" style="display:none">
+  <button onclick="HL.downloadAllHighlights()">Download as Markdown</button>
+  <button class="outline" onclick="HL.openInObsidian()">Open in Obsidian</button>
+  <button class="outline" onclick="clearAll()" style="margin-left:auto;color:#c62828;border-color:#c62828">Clear All</button>
+</div>
+
+<div id="highlights-container">
+  <div class="highlights-empty" id="highlights-empty">
+    <p><strong>No highlights yet</strong></p>
+    <p>Select text in any chapter to highlight it. Use the color toolbar or Apple Pencil to highlight directly.</p>
+    <p><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>H</kbd> to highlight with keyboard</p>
+  </div>
+</div>
+
+<script src="/static/js/highlights.js"></script>
+<script>
+(function() {
+  var container = document.getElementById('highlights-container');
+  var emptyEl = document.getElementById('highlights-empty');
+  var exportBar = document.getElementById('export-toolbar');
+  var all = HL.getAllHighlights();
+
+  if (all.length === 0) return;
+
+  emptyEl.style.display = 'none';
+  exportBar.style.display = 'flex';
+
+  // Group by book, then chapter
+  var grouped = {};
+  all.forEach(function(h) {
+    var key = h.bookSlug;
+    if (!grouped[key]) grouped[key] = {};
+    if (!grouped[key][h.chapterSlug]) grouped[key][h.chapterSlug] = [];
+    grouped[key][h.chapterSlug].push(h);
+  });
+
+  var html = '';
+  Object.keys(grouped).forEach(function(book) {
+    html += '<div class="highlights-group">';
+    html += '<h2>' + HL.formatSlug(book) + '</h2>';
+
+    Object.keys(grouped[book]).forEach(function(chapter) {
+      var items = grouped[book][chapter];
+      html += '<h3><a href="/exam-prep/guide/' + book + '/' + chapter + '">' + HL.formatSlug(chapter) + '</a> <small>(' + items.length + ')</small></h3>';
+
+      items.forEach(function(h) {
+        var dotClass = 'dot-' + (h.color || 'yellow');
+        var date = h.timestamp ? new Date(h.timestamp).toLocaleDateString() : '';
+        html += '<div class="highlight-entry">';
+        html += '<span class="highlight-color-dot ' + dotClass + '"></span>';
+        html += '<div class="highlight-text">';
+        html += '<div>' + escapeHtml(h.text) + '</div>';
+        if (date) html += '<div class="highlight-meta">' + date + '</div>';
+        html += '</div>';
+        html += '<button class="highlight-delete-btn" onclick="deleteHL(\'' + h.bookSlug + '\',\'' + h.chapterSlug + '\',\'' + h.id + '\',this)" title="Delete">&#10005;</button>';
+        html += '</div>';
+      });
+    });
+
+    html += '</div>';
+  });
+
+  container.innerHTML = html;
+
+  function escapeHtml(str) {
+    var div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
+  }
+})();
+
+function deleteHL(book, chapter, hlId, btn) {
+  HL.deleteHighlightById(book, chapter, hlId);
+  var entry = btn.closest('.highlight-entry');
+  if (entry) entry.remove();
+
+  // Check if page is now empty
+  if (HL.getAllHighlights().length === 0) {
+    document.getElementById('highlights-empty').style.display = '';
+    document.getElementById('export-toolbar').style.display = 'none';
+  }
+}
+
+function clearAll() {
+  if (!confirm('Delete all highlights? This cannot be undone.')) return;
+  HL.clearAllHighlights();
+  location.reload();
+}
+</script>
+{% endblock %}

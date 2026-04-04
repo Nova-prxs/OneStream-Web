@@ -1,0 +1,1442 @@
+{
+  "namespace": "OneStream.Client.Api.ClientUpdaterServiceReference",
+  "generated_at": "2025-12-08T19:28:51.080146",
+  "statistics": {
+    "classes": 3,
+    "interfaces": 1,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 0,
+    "total_methods": 46,
+    "total_properties": 0
+  },
+  "classes": [
+    {
+      "name": "DownloadFileAsStreamCompletedEventArgs",
+      "namespace": "OneStream.Client.Api.ClientUpdaterServiceReference",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "AsyncCompletedEventArgs",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "results",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "exception",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cancelled",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [
+        {
+          "name": "RaiseExceptionIfNecessary",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Raises exception if necessary",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Api/ClientUpdaterServiceReference/DownloadFileAsStreamCompletedEventArgs.cs",
+      "source_code": "public class DownloadFileAsStreamCompletedEventArgs : AsyncCompletedEventArgs\n{\n\tprivate object[] results;\n\n\tpublic Stream Result\n\t{\n\t\tget\n\t\t{\n\t\t\tRaiseExceptionIfNecessary();\n\t\t\treturn (Stream)results[0];\n\t\t}\n\t}\n\n\tpublic DownloadFileAsStreamCompletedEventArgs(object[] results, Exception exception, bool cancelled, object userState)\n\t\t: base(exception, cancelled, userState)\n\t{\n\t\tthis.results = results;\n\t}\n}"
+    },
+    {
+      "name": "DownloadClientBinariesInZipFileAsStreamCompletedEventArgs",
+      "namespace": "OneStream.Client.Api.ClientUpdaterServiceReference",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "AsyncCompletedEventArgs",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "results",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "exception",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cancelled",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [
+        {
+          "name": "RaiseExceptionIfNecessary",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Raises exception if necessary",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Api/ClientUpdaterServiceReference/DownloadClientBinariesInZipFileAsStreamCompletedEventArgs.cs",
+      "source_code": "public class DownloadClientBinariesInZipFileAsStreamCompletedEventArgs : AsyncCompletedEventArgs\n{\n\tprivate object[] results;\n\n\tpublic Stream Result\n\t{\n\t\tget\n\t\t{\n\t\t\tRaiseExceptionIfNecessary();\n\t\t\treturn (Stream)results[0];\n\t\t}\n\t}\n\n\tpublic DownloadClientBinariesInZipFileAsStreamCompletedEventArgs(object[] results, Exception exception, bool cancelled, object userState)\n\t\t: base(exception, cancelled, userState)\n\t{\n\t\tthis.results = results;\n\t}\n}"
+    },
+    {
+      "name": "ClientUpdaterServiceClient",
+      "namespace": "OneStream.Client.Api.ClientUpdaterServiceReference",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "ClientBase<IClientUpdaterServiceClient>",
+      "interfaces": [
+        "IClientUpdaterServiceClient",
+        "IDisposable",
+        "IApiClient"
+      ],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "httpClientFactory",
+              "type": "IAuthenticatedHttpClientFactory",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "baseServerUri",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [
+        {
+          "name": "DownloadClientBinariesInZipFileAsStream",
+          "return_type": "Stream",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Downloads client binaries in zip file as stream",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "SessionInfo",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Sessions info",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "ex",
+              "type": "AggregateException",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "BeginDownloadClientBinariesInZipFileAsStream",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins download client binaries in zip file as stream",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "DownloadClientBinariesInZipFileAsStream",
+          "return_type": ">",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Downloads client binaries in zip file as stream",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "antecedent.Result",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 4
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "OnEndResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 4
+        },
+        {
+          "name": "AsyncOperationContinuation",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "result",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "asyncState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Asyncs operation continuation",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "EndDownloadClientBinariesInZipFileAsStream",
+          "return_type": "Stream",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends download client binaries in zip file as stream",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnBeginDownloadClientBinariesInZipFileAsStream",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "inValues",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            }
+          ],
+          "description": "Ons begin download client binaries in zip file as stream",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnEndDownloadClientBinariesInZipFileAsStream",
+          "return_type": "object[]",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end download client binaries in zip file as stream",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnDownloadClientBinariesInZipFileAsStreamCompleted",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "state",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons download client binaries in zip file as stream completed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "DownloadClientBinariesInZipFileAsStreamCompletedEventArgs",
+          "return_type": "this, new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "e.Results",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Error",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Cancelled",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.UserState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Downloads client binaries in zip file as stream completed event args",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "DownloadClientBinariesInZipFileAsStreamAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Downloads client binaries in zip file as stream async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "DownloadClientBinariesInZipFileAsStreamAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Downloads client binaries in zip file as stream async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "DownloadClientBinariesInZipFileAsStreamAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Downloads client binaries in zip file as stream async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "InvokeAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "onBeginDownloadClientBinariesInZipFileAsStreamDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "}",
+              "type": "new object[1] { si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onEndDownloadClientBinariesInZipFileAsStreamDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onDownloadClientBinariesInZipFileAsStreamCompletedDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "userState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Invokes async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "DownloadFileAsStream",
+          "return_type": "Stream",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "url",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Downloads file as stream",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "SessionInfo",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Sessions info",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "ex",
+              "type": "AggregateException",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "BeginDownloadFileAsStream",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "url",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins download file as stream",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "DownloadFileAsStream",
+          "return_type": ">",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "url",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Downloads file as stream",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "antecedent.Result",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 4
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "OnEndResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 4
+        },
+        {
+          "name": "AsyncOperationContinuation",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "result",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "asyncState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Asyncs operation continuation",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "EndDownloadFileAsStream",
+          "return_type": "Stream",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends download file as stream",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnBeginDownloadFileAsStream",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "inValues",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            }
+          ],
+          "description": "Ons begin download file as stream",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnEndDownloadFileAsStream",
+          "return_type": "object[]",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end download file as stream",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnDownloadFileAsStreamCompleted",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "state",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons download file as stream completed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "DownloadFileAsStreamCompletedEventArgs",
+          "return_type": "this, new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "e.Results",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Error",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Cancelled",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.UserState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Downloads file as stream completed event args",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "DownloadFileAsStreamAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "url",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Downloads file as stream async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "DownloadFileAsStreamAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "url",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Downloads file as stream async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "DownloadFileAsStreamAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "url",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Downloads file as stream async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "InvokeAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "onBeginDownloadFileAsStreamDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "si",
+              "type": "new object[2] {",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "}",
+              "type": "url",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onEndDownloadFileAsStreamDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onDownloadFileAsStreamCompletedDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "userState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Invokes async",
+          "generic_params": [],
+          "overloads": 2
+        }
+      ],
+      "events": [
+        {
+          "name": "DownloadClientBinariesInZipFileAsStreamCompleted",
+          "type": "EventHandler<DownloadClientBinariesInZipFileAsStreamCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "DownloadFileAsStreamCompleted",
+          "type": "EventHandler<DownloadFileAsStreamCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        }
+      ],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Api/ClientUpdaterServiceReference/ClientUpdaterServiceClient.cs"
+    }
+  ],
+  "interfaces": [
+    {
+      "name": "IClientUpdaterServiceClient",
+      "namespace": "OneStream.Client.Api.ClientUpdaterServiceReference",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IDisposable",
+        "IApiClient"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "DownloadClientBinariesInZipFileAsStream",
+          "return_type": "Stream",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Downloads client binaries in zip file as stream",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "BeginDownloadClientBinariesInZipFileAsStream",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins download client binaries in zip file as stream",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EndDownloadClientBinariesInZipFileAsStream",
+          "return_type": "Stream",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends download client binaries in zip file as stream",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "DownloadClientBinariesInZipFileAsStreamAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Downloads client binaries in zip file as stream async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "DownloadClientBinariesInZipFileAsStreamAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Downloads client binaries in zip file as stream async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "DownloadFileAsStream",
+          "return_type": "Stream",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "url",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Downloads file as stream",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "BeginDownloadFileAsStream",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "url",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins download file as stream",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EndDownloadFileAsStream",
+          "return_type": "Stream",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends download file as stream",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "DownloadFileAsStreamAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "url",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Downloads file as stream async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "DownloadFileAsStreamAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "url",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Downloads file as stream async",
+          "generic_params": [],
+          "overloads": 2
+        }
+      ],
+      "events": [
+        {
+          "name": "DownloadClientBinariesInZipFileAsStreamCompleted",
+          "type": "EventHandler<DownloadClientBinariesInZipFileAsStreamCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "DownloadFileAsStreamCompleted",
+          "type": "EventHandler<DownloadFileAsStreamCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        }
+      ],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Api/ClientUpdaterServiceReference/IClientUpdaterServiceClient.cs",
+      "source_code": "public interface IClientUpdaterServiceClient : IDisposable, IApiClient\n{\n\tevent EventHandler<DownloadClientBinariesInZipFileAsStreamCompletedEventArgs> DownloadClientBinariesInZipFileAsStreamCompleted;\n\n\tevent EventHandler<DownloadFileAsStreamCompletedEventArgs> DownloadFileAsStreamCompleted;\n\n\tStream DownloadClientBinariesInZipFileAsStream(SessionInfo si);\n\n\tTask BeginDownloadClientBinariesInZipFileAsStream(SessionInfo si, object callback, object asyncState);\n\n\tStream EndDownloadClientBinariesInZipFileAsStream(OnEndResult result);\n\n\tvoid DownloadClientBinariesInZipFileAsStreamAsync(SessionInfo si);\n\n\tvoid DownloadClientBinariesInZipFileAsStreamAsync(SessionInfo si, object userState);\n\n\tStream DownloadFileAsStream(SessionInfo si, string url);\n\n\tTask BeginDownloadFileAsStream(SessionInfo si, string url, object callback, object asyncState);\n\n\tStream EndDownloadFileAsStream(OnEndResult result);\n\n\tvoid DownloadFileAsStreamAsync(SessionInfo si, string url);\n\n\tvoid DownloadFileAsStreamAsync(SessionInfo si, string url, object userState);\n}"
+    }
+  ],
+  "structs": [],
+  "delegates": [],
+  "enums": []
+}

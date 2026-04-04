@@ -1,0 +1,68 @@
+{
+  "generated": "2026-03-19T18:41:05.817088+00:00",
+  "run_summary": {
+    "books_processed": 4,
+    "chapters_processed": 60,
+    "total_pages_processed": 3070,
+    "total_images_extracted": 3328,
+    "total_tables_detected": 1641,
+    "total_word_count": 603281
+  },
+  "warnings": [
+    {
+      "type": "short_chapter",
+      "book": "design-reference-guide",
+      "file": "chapter-01-introduction.md",
+      "title": "Introduction",
+      "word_count": 41,
+      "threshold": 100,
+      "message": "Chapter has only 41 words (threshold: 100)"
+    },
+    {
+      "type": "no_images",
+      "book": "finance-rules",
+      "file": "chapter-01-introduction.md",
+      "title": "Introduction",
+      "word_count": 1428,
+      "message": "Large chapter (1428 words) has no images — possible extraction gap"
+    }
+  ],
+  "per_book": [
+    {
+      "book": "design-reference-guide",
+      "chapters": 24,
+      "pages": 2070,
+      "images": 1793,
+      "tables": 1373,
+      "words": 310994,
+      "warnings": 1
+    },
+    {
+      "book": "finance-rules",
+      "chapters": 10,
+      "pages": 264,
+      "images": 549,
+      "tables": 0,
+      "words": 57923,
+      "warnings": 1
+    },
+    {
+      "book": "foundation-handbook",
+      "chapters": 14,
+      "pages": 424,
+      "images": 420,
+      "tables": 262,
+      "words": 173822,
+      "warnings": 0
+    },
+    {
+      "book": "workspaces-assemblies",
+      "chapters": 12,
+      "pages": 312,
+      "images": 566,
+      "tables": 6,
+      "words": 60542,
+      "warnings": 0
+    }
+  ]
+}

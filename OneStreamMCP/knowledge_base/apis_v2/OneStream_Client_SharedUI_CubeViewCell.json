@@ -1,0 +1,40 @@
+{
+  "namespace": "OneStream.Client.SharedUI.CubeViewCell",
+  "generated_at": "2025-12-08T19:28:51.641320",
+  "statistics": {
+    "classes": 0,
+    "interfaces": 0,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 1,
+    "total_methods": 0,
+    "total_properties": 0
+  },
+  "classes": [],
+  "interfaces": [],
+  "structs": [],
+  "delegates": [],
+  "enums": [
+    {
+      "name": "CubeViewCellType",
+      "namespace": "OneStream.Client.SharedUI.CubeViewCell",
+      "underlying_type": "int",
+      "is_flags": false,
+      "values": [
+        {
+          "name": "Unknown",
+          "value": -1
+        },
+        {
+          "name": "CubeViewDataCell",
+          "value": 0
+        },
+        {
+          "name": "CubeViewUpperLeftCell",
+          "value": 1
+        }
+      ],
+      "access": "public"
+    }
+  ]
+}

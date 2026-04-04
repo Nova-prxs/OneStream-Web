@@ -1,0 +1,151 @@
+{
+  "integration_patterns": [
+    {
+      "title": "RestFast ETL Connector with Dynamic Variables",
+      "description": "Automated ETL connector that integrates RestFast with a control table to execute REST API requests with dynamic date variables for incremental and full loads",
+      "use_case": "Load data from external REST APIs to OneStream custom tables with automatic date range management",
+      "business_rule_type": "Extender",
+      "code": "Public Shared Function ExecuteRestFastRequest(si As SessionInfo, requestName As String) As String\n    Try\n        BRApi.ErrorLog.LogMessage(si, $\"[INFO] Starting RestFast request: {requestName}\")\n        \n        ' Get RestFast utilities\n        Dim utils As New Workspace.RESTAPIFramework.RESTAPIRequestManager.Utils()\n        \n        ' Query control table for configuration\n        Dim query As String = $\"SELECT EndPoint, TargetTable, ReferenceDate, ReferenceColumn, Enable \n                                FROM XFC_STG_ETL_LOAD_CONTROL \n                                WHERE EndPoint = '{requestName}' AND Enable = 1\"\n        \n        Dim dt As DataTable = BRApi.Database.ExecuteActionQuery(si, query, False)\n        \n        If dt.Rows.Count = 0 Then\n            Throw New Exception($\"No active configuration found for request: {requestName}\")\n        End If\n        \n        Dim row As DataRow = dt.Rows(0)\n        Dim targetTable As String = row(\"TargetTable\").ToString()\n        Dim fromDate As String = row(\"ReferenceDate\").ToString()\n        Dim referenceColumn As String = row(\"ReferenceColumn\").ToString()\n        Dim toDate As String = DateTime.Now.ToString(\"yyyyMMddHHmmss\")\n        \n        ' Default fromDate if empty (beginning of current month)\n        If String.IsNullOrEmpty(fromDate) Then\n            fromDate = New DateTime(DateTime.Now.Year, DateTime.Now.Month, 1).ToString(\"yyyyMMddHHmmss\")\n            BRApi.ErrorLog.LogMessage(si, $\"[INFO] ReferenceDate was empty, using default: {fromDate}\")\n        End If\n        \n        ' Get saved request from RestFast\n        Dim request As Workspace.RESTAPIFramework.RESTAPIRequestManager.Classes.RESTAPIRequest = utils.GetSavedRequest(si, requestName)\n        \n        If request Is Nothing Then\n            Throw New Exception($\"RestFast request '{requestName}' not found\")\n        End If\n        \n        ' Set target table\n        request.tableToPopulate = targetTable\n        \n        ' Build custom variables dictionary\n        Dim customVars As New Dictionary(Of String, String)()\n        \n        ' Add from/to variables based on configuration\n        If Not String.IsNullOrEmpty(referenceColumn) Then\n            ' Incremental load\n            customVars(\"from\") = fromDate\n            customVars(\"to\") = toDate\n            BRApi.ErrorLog.LogMessage(si, $\"[INFO] Incremental load - from: {fromDate}, to: {toDate}\")\n        Else\n            ' Full load - check if endpoint needs date variables\n            If request.endpoint.Contains(\"{{from}}\") OrElse request.endpoint.Contains(\"{{to}}\") Then\n                customVars(\"from\") = fromDate\n                customVars(\"to\") = toDate\n                BRApi.ErrorLog.LogMessage(si, $\"[INFO] Full load with date range - from: {fromDate}, to: {toDate}\")\n            Else\n                BRApi.ErrorLog.LogMessage(si, \"[INFO] Full load without date variables\")\n            End If\n        End If\n        \n        ' Execute and populate table\n        If customVars.Count > 0 Then\n            request.PopulateTable(si, customVars)\n        Else\n            request.PopulateTable(si)\n        End If\n        \n        BRApi.ErrorLog.LogMessage(si, $\"[SUCCESS] Data loaded to table: {targetTable}\")\n        \n        ' Update control table with new ReferenceDate\n        If Not String.IsNullOrEmpty(referenceColumn) Then\n            Dim updateQuery As String = $\"UPDATE XFC_STG_ETL_LOAD_CONTROL \n                                         SET ReferenceDate = '{toDate}' \n                                         WHERE EndPoint = '{requestName}'\"\n            BRApi.Database.ExecuteActionQuery(si, updateQuery, True)\n            BRApi.ErrorLog.LogMessage(si, $\"[INFO] Updated ReferenceDate to: {toDate}\")\n        End If\n        \n        Return $\"SUCCESS: {requestName} executed and loaded to {targetTable}\"\n        \n    Catch ex As Exception\n        BRApi.ErrorLog.LogMessage(si, $\"[ERROR] ExecuteRestFastRequest failed: {ex.Message}\")\n        Throw\n    End Try\nEnd Function",
+      "notes": [
+        "CRITICAL: Never initialize request.variables = New Dictionary() - this overwrites RestFast's predefined configuration",
+        "Always pass custom variables as parameter to PopulateTable(), not by modifying request.variables",
+        "Control table schema: LoadId, EndPoint, TargetTable, ReferenceDate, ReferenceColumn, Enable",
+        "ReferenceDate format: yyyyMMddHHmmss (e.g., 20251116103916)",
+        "If ReferenceColumn is empty, performs full load; if set, performs incremental load",
+        "RestFast request must be pre-configured with endpoint containing {{from}} and {{to}} placeholders"
+      ],
+      "prerequisites": [
+        "RestFast module installed and configured",
+        "Control table XFC_STG_ETL_LOAD_CONTROL created",
+        "Target staging table created in database",
+        "RestFast request configured with OAuth, dataKey, columnMappings"
+      ]
+    },
+    {
+      "title": "Control Table Setup for ETL Connector",
+      "description": "Database table structure to manage automated REST API loads with incremental date tracking",
+      "sql": "CREATE TABLE XFC_STG_ETL_LOAD_CONTROL (\n    LoadId INT PRIMARY KEY,\n    EndPoint VARCHAR(255),      -- Nombre del request en RestFast\n    TargetTable VARCHAR(255),   -- Tabla destino\n    ReferenceDate VARCHAR(14),  -- \u00daltima fecha procesada (yyyyMMddHHmmss)\n    ReferenceColumn VARCHAR(100), -- Columna de referencia para incremental\n    Enable BIT                  -- 1 = activo, 0 = inactivo\n)\n\n-- Ejemplo de configuraci\u00f3n\nINSERT INTO XFC_STG_ETL_LOAD_CONTROL VALUES (\n    1,\n    'FIN_MIX_ONESTREAM',        -- Debe coincidir con nombre del request en RestFast\n    'XFC_STG_FIN_MIX',\n    '20251016150611',           -- Fecha inicial para cargar desde\n    'CreatedDate',              -- Columna del API para filtrar incrementales\n    1                           -- Habilitado\n)",
+      "notes": [
+        "EndPoint must match exactly the saved request name in RestFast dashboard",
+        "ReferenceDate is automatically updated after each successful load",
+        "Empty ReferenceDate defaults to beginning of current month",
+        "ReferenceColumn = NULL means full load every time",
+        "Enable = 0 to temporarily disable a load without deleting configuration"
+      ]
+    },
+    {
+      "title": "Data Management Step Configuration",
+      "description": "How to configure the Data Management Step to execute the ETL connector",
+      "configuration": {
+        "step_type": "Business Rule",
+        "business_rule": "Workspace.ETL_Load_Control.ETL_Load_Control.BusinessRule.Extender.extender_restfast_connector.MainClass",
+        "parameters": "p_function=ExecuteRestFastRequest,p_request_name=FIN_MIX_ONESTREAM"
+      },
+      "notes": [
+        "Replace 'FIN_MIX_ONESTREAM' with your actual RestFast request name",
+        "Can create multiple steps for different endpoints",
+        "Schedule in Data Management Sequences for automation"
+      ]
+    }
+  ],
+  "common_issues": [
+    {
+      "issue": "Invalid URI: The hostname could not be parsed",
+      "cause": "request.variables was initialized with 'New Dictionary()', overwriting RestFast's predefined variables including pagination configuration",
+      "solution": "Never modify request.variables directly. Create a separate Dictionary and pass it as parameter to PopulateTable()",
+      "code_example": "' \u2705 CORRECT\nDim customVars As New Dictionary(Of String, String)()\ncustomVars(\"from\") = fromDate\ncustomVars(\"to\") = toDate\nrequest.PopulateTable(si, customVars)\n\n' \u274c INCORRECT - DO NOT DO THIS\nIf request.variables Is Nothing Then\n    request.variables = New Dictionary(Of String, String)()\nEnd If"
+    },
+    {
+      "issue": "Variables {{from}} and {{to}} not being replaced in endpoint",
+      "cause": "Variables not passed to PopulateTable() or Execute() methods",
+      "solution": "Always pass variables dictionary as parameter when using dynamic variables",
+      "code_example": "Dim vars As New Dictionary(Of String, String) From {{\"from\", \"20251001000000\"}, {\"to\", \"20251116000000\"}}\nrequest.PopulateTable(si, vars)"
+    },
+    {
+      "issue": "Pagination stops after first page despite having more data",
+      "cause": "Invalid nextLink value extracted from JSON response (e.g., '<link>' instead of URL)",
+      "solution": "Validate nextLinkKey configuration in RestFast request. Add validation in UpdateVariables to check for valid URLs",
+      "code_example": "' Validate nextLink before using\nIf Not String.IsNullOrEmpty(nextLink) Then\n    If nextLink.StartsWith(\"<\") OrElse Not (nextLink.StartsWith(\"http://\") OrElse nextLink.StartsWith(\"https://\")) Then\n        nextLink = Nothing  ' Invalid URL, stop pagination\n    End If\nEnd If"
+    },
+    {
+      "issue": "NullReferenceException when updating variables",
+      "cause": "request.variables is Nothing and code tries to add to it without initializing",
+      "solution": "In RestFast UpdateVariables method, initialize variables if Nothing before merging",
+      "code_example": "Private Function UpdateVariables(variables As Dictionary(Of String, String), paramVariables As Dictionary(Of String, String)) As Dictionary(Of String, String)\n    If paramVariables Is Nothing Then Return variables\n    \n    ' Initialize if Nothing\n    If variables Is Nothing Then\n        variables = New Dictionary(Of String, String)()\n    End If\n    \n    For Each paramVariable In paramVariables\n        variables(paramVariable.Key) = paramVariable.Value\n    Next\n        \n    Return variables\nEnd Function"
+    }
+  ],
+  "best_practices": [
+    {
+      "practice": "Always Use Custom Variables Dictionary",
+      "description": "Create a separate Dictionary for runtime variables and pass as parameter. Never modify request.variables directly.",
+      "rationale": "RestFast loads saved requests with predefined configuration (variables, pagination settings, OAuth). Overwriting these breaks the framework's functionality."
+    },
+    {
+      "practice": "Implement Comprehensive Logging",
+      "description": "Log at key points: before/after variable replacement, endpoint construction, HTTP calls, and pagination loops",
+      "rationale": "RestFast makes multiple HTTP calls (OAuth, main request, pagination). Detailed logs help identify which call is failing and why."
+    },
+    {
+      "practice": "Validate Control Table Configuration",
+      "description": "Check that EndPoint name matches RestFast saved request name exactly (case-sensitive)",
+      "rationale": "GetSavedRequest() returns Nothing if name doesn't match, causing downstream errors."
+    },
+    {
+      "practice": "Use Default Date Ranges",
+      "description": "Implement default fromDate (e.g., beginning of month) when ReferenceDate is NULL",
+      "rationale": "Prevents accidental full historical loads that could timeout or overwhelm the API."
+    },
+    {
+      "practice": "Test Request in RestFast Dashboard First",
+      "description": "Always test the request manually in RestFast dashboard before using in connector",
+      "rationale": "Validates endpoint, authentication, variable replacement, pagination, and column mappings work correctly."
+    },
+    {
+      "practice": "Handle Both Full and Incremental Loads",
+      "description": "Check if ReferenceColumn is set to determine load type. Support endpoints with or without date variables.",
+      "rationale": "Provides flexibility for different data sources. Some APIs don't support date filtering."
+    }
+  ],
+  "troubleshooting_steps": [
+    {
+      "step": 1,
+      "action": "Verify RestFast request works in dashboard",
+      "validation": "Click 'Test Request' and verify response with correct data"
+    },
+    {
+      "step": 2,
+      "action": "Check control table configuration",
+      "validation": "Query XFC_STG_ETL_LOAD_CONTROL to ensure EndPoint, TargetTable, and Enable=1"
+    },
+    {
+      "step": 3,
+      "action": "Verify target table exists",
+      "validation": "SELECT * FROM [TargetTable] should work in SQL"
+    },
+    {
+      "step": 4,
+      "action": "Enable detailed logging in connector",
+      "validation": "Add BRApi.ErrorLog.LogMessage at each step to trace execution"
+    },
+    {
+      "step": 5,
+      "action": "Compare successful vs failed logs",
+      "validation": "Look for differences in variable values, endpoint URLs, HTTP status codes"
+    },
+    {
+      "step": 6,
+      "action": "Validate variable replacement",
+      "validation": "Log endpoint before and after variable replacement to ensure {{from}}/{{to}} are replaced"
+    },
+    {
+      "step": 7,
+      "action": "Check OAuth token generation",
+      "validation": "Verify first HTTP call (to token endpoint) returns 200 OK with access_token"
+    },
+    {
+      "step": 8,
+      "action": "Inspect pagination configuration",
+      "validation": "Verify nextLinkKey points to correct JSON path and returns valid URLs"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "namespace": "OneStream.Shared.Common.Finance.Data",
+  "generated_at": "2025-12-08T19:28:52.148071",
+  "statistics": {
+    "classes": 0,
+    "interfaces": 1,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 0,
+    "total_methods": 0,
+    "total_properties": 0
+  },
+  "classes": [],
+  "interfaces": [
+    {
+      "name": "IFinancialCellPk",
+      "namespace": "OneStream.Shared.Common.Finance.Data",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "ICellPk"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/Finance/Data/IFinancialCellPk.cs",
+      "source_code": "public interface IFinancialCellPk : ICellPk\n{\n\tnew int this[int dimTypeId] { get; set; }\n\n\tint this[DimTypeId dimTypeId] { get; set; }\n\n\tint this[string dimTypeName] { get; set; }\n\n\tint this[DimType dimType] { get; set; }\n}"
+    }
+  ],
+  "structs": [],
+  "delegates": [],
+  "enums": []
+}

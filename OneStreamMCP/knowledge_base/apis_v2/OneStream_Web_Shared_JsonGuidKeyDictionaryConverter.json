@@ -1,0 +1,242 @@
+{
+  "namespace": "OneStream.Web.Shared.JsonGuidKeyDictionaryConverter",
+  "generated_at": "2025-12-08T19:28:52.427579",
+  "statistics": {
+    "classes": 1,
+    "interfaces": 0,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 0,
+    "total_methods": 8,
+    "total_properties": 0
+  },
+  "classes": [
+    {
+      "name": "DictionaryGuidConverterInner",
+      "namespace": "OneStream.Web.Shared.JsonGuidKeyDictionaryConverter",
+      "type": "class",
+      "modifiers": [
+        "private"
+      ],
+      "base_class": "JsonConverter<Dictionary<Guid",
+      "interfaces": [
+        "TValue>>"
+      ],
+      "generic_params": [
+        "TValue"
+      ],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "options",
+              "type": "JsonSerializerOptions",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [
+        {
+          "name": "Read",
+          "return_type": "override Dictionary<Guid, TValue>",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "reader",
+              "type": "Utf8JsonReader",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "typeToConvert",
+              "type": "Type",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "options",
+              "type": "JsonSerializerOptions",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Reads operation",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "JsonException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "StartObject.\"",
+              "type": "\"TokenType differs from",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Jsons exception",
+          "generic_params": [],
+          "overloads": 4
+        },
+        {
+          "name": "Dictionary",
+          "return_type": "Dictionary",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Dictionarys operation",
+          "generic_params": [
+            "Guid",
+            "TValue"
+          ],
+          "overloads": 1
+        },
+        {
+          "name": "JsonException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "\\\"{5}\\\".\"",
+              "type": "$\"TokenType differs from",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Jsons exception",
+          "generic_params": [],
+          "overloads": 4
+        },
+        {
+          "name": "JsonException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "Guid.\"",
+              "type": "\"Unable to convert \\\"\" + text + \"\\\" to a",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Jsons exception",
+          "generic_params": [],
+          "overloads": 4
+        },
+        {
+          "name": "typeof",
+          "return_type": "ref reader,",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "TValue",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Typeofs operation",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "JsonException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "JsonGuidKeyDictionaryConverter.\"",
+              "type": "\"Unable to deserialize",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Jsons exception",
+          "generic_params": [],
+          "overloads": 4
+        },
+        {
+          "name": "Write",
+          "return_type": "override void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "writer",
+              "type": "Utf8JsonWriter",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "value",
+              "type": "Dictionary<Guid, TValue>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "options",
+              "type": "JsonSerializerOptions",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Writes operation",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Web/Shared/JsonGuidKeyDictionaryConverter.cs"
+    }
+  ],
+  "interfaces": [],
+  "structs": [],
+  "delegates": [],
+  "enums": []
+}

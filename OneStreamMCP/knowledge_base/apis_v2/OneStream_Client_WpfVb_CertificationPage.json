@@ -1,0 +1,123 @@
+{
+  "namespace": "OneStream.Client.WpfVb.CertificationPage",
+  "generated_at": "2025-12-08T19:28:52.047867",
+  "statistics": {
+    "classes": 1,
+    "interfaces": 0,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 1,
+    "total_methods": 0,
+    "total_properties": 0
+  },
+  "classes": [
+    {
+      "name": "QuestionnaireSummary",
+      "namespace": "OneStream.Client.WpfVb.CertificationPage",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "groupKey",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "questionnaireStatusImagePath",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "name",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "description",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "questionCount",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "unansweredCount",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [
+        "DesignerGenerated"
+      ],
+      "source_file": "output/types/OneStream/Client/WpfVb/CertificationPage.cs"
+    }
+  ],
+  "interfaces": [],
+  "structs": [],
+  "delegates": [],
+  "enums": [
+    {
+      "name": "TreeNodeTypes",
+      "namespace": "OneStream.Client.WpfVb.CertificationPage",
+      "underlying_type": "int",
+      "is_flags": false,
+      "values": [
+        {
+          "name": "Unknown",
+          "value": -1
+        },
+        {
+          "name": "CertificationNode",
+          "value": 0
+        },
+        {
+          "name": "GroupsParentNode",
+          "value": 1
+        },
+        {
+          "name": "GroupNode",
+          "value": 2
+        },
+        {
+          "name": "QuestionNode",
+          "value": 3
+        },
+        {
+          "name": "DependantStatusNode",
+          "value": 4
+        },
+        {
+          "name": "CubeViewItem",
+          "value": 6
+        },
+        {
+          "name": "DashboardNode",
+          "value": 7
+        }
+      ],
+      "access": "public"
+    }
+  ]
+}

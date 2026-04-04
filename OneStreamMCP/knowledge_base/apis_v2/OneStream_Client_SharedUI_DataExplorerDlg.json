@@ -1,0 +1,47 @@
+{
+  "namespace": "OneStream.Client.SharedUI.DataExplorerDlg",
+  "generated_at": "2025-12-08T19:28:51.662267",
+  "statistics": {
+    "classes": 0,
+    "interfaces": 0,
+    "structs": 0,
+    "delegates": 1,
+    "enums": 0,
+    "total_methods": 1,
+    "total_properties": 0
+  },
+  "classes": [],
+  "interfaces": [],
+  "structs": [],
+  "delegates": [
+    {
+      "name": "DataExplorerDlgOnOKDelegate",
+      "namespace": "OneStream.Client.SharedUI.DataExplorerDlg",
+      "type": "delegate",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "Invoke",
+          "return_type": "void",
+          "parameters": [],
+          "access": "public",
+          "is_static": false,
+          "is_async": false,
+          "description": "Delegate invocation method returning void"
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/SharedUI/DataExplorerDlg.cs"
+    }
+  ],
+  "enums": []
+}

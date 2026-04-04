@@ -1,0 +1,85 @@
+{
+  "namespace": "OneStream.Client.WpfVb.WorkflowStatePage",
+  "generated_at": "2025-12-08T19:28:52.051794",
+  "statistics": {
+    "classes": 1,
+    "interfaces": 0,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 1,
+    "total_methods": 0,
+    "total_properties": 0
+  },
+  "classes": [
+    {
+      "name": "UserState",
+      "namespace": "OneStream.Client.WpfVb.WorkflowStatePage",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "scenarioTypeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workflowUnitClusterPk",
+              "type": "WorkflowUnitClusterPk",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "profileKeyToSelect",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [
+        "DesignerGenerated"
+      ],
+      "source_file": "output/types/OneStream/Client/WpfVb/WorkflowStatePage.cs"
+    }
+  ],
+  "interfaces": [],
+  "structs": [],
+  "delegates": [],
+  "enums": [
+    {
+      "name": "TreeNodeTypes",
+      "namespace": "OneStream.Client.WpfVb.WorkflowStatePage",
+      "underlying_type": "int",
+      "is_flags": false,
+      "values": [
+        {
+          "name": "Unknown",
+          "value": -1
+        },
+        {
+          "name": "CubeViews",
+          "value": 20
+        },
+        {
+          "name": "CubeViewItem",
+          "value": 21
+        }
+      ],
+      "access": "public"
+    }
+  ]
+}

@@ -1,0 +1,409 @@
+{
+  "namespace": "OneStream.Client.WpfVb.WorkflowStatusViewer",
+  "generated_at": "2025-12-08T19:28:52.051901",
+  "statistics": {
+    "classes": 2,
+    "interfaces": 0,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 1,
+    "total_methods": 16,
+    "total_properties": 0
+  },
+  "classes": [
+    {
+      "name": "StatusInfo",
+      "namespace": "OneStream.Client.WpfVb.WorkflowStatusViewer",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": []
+        },
+        {
+          "access": "public",
+          "parameters": []
+        },
+        {
+          "access": "public",
+          "parameters": []
+        },
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "profileStatusInfo",
+              "type": "WfControllerProfileStatusInfo",
+              "optional": false,
+              "default": null
+            }
+          ]
+        },
+        {
+          "access": "public",
+          "parameters": []
+        },
+        {
+          "access": "public",
+          "parameters": []
+        }
+      ],
+      "properties": [],
+      "methods": [
+        {
+          "name": "WfControllerProfileStatusInfo",
+          "return_type": "WfControllerProfileStatusInfo",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Wfs controller profile status info",
+          "generic_params": [],
+          "overloads": 4
+        },
+        {
+          "name": "List",
+          "return_type": "List",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Lists operation",
+          "generic_params": [
+            "StatusInfo"
+          ],
+          "overloads": 2
+        },
+        {
+          "name": "WfControllerProfileStatusInfo",
+          "return_type": "WfControllerProfileStatusInfo",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Wfs controller profile status info",
+          "generic_params": [],
+          "overloads": 4
+        },
+        {
+          "name": "WfControllerProfileStatusInfo",
+          "return_type": "WfControllerProfileStatusInfo",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Wfs controller profile status info",
+          "generic_params": [],
+          "overloads": 4
+        },
+        {
+          "name": "List",
+          "return_type": "List",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Lists operation",
+          "generic_params": [
+            "StatusInfo"
+          ],
+          "overloads": 2
+        },
+        {
+          "name": "WfControllerProfileStatusInfo",
+          "return_type": "WfControllerProfileStatusInfo",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Wfs controller profile status info",
+          "generic_params": [],
+          "overloads": 4
+        },
+        {
+          "name": "Equals",
+          "return_type": "override bool",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "other",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Equalss operation",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "Equals",
+          "return_type": "bool",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "other",
+              "type": "StatusInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Equalss operation",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "ex",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "XFException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "innerException",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Xs f exception",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "GetHashCode",
+          "return_type": "override int",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Gets hash code",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "ex",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "XFException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "innerException",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Xs f exception",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "ToString",
+          "return_type": "override string",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Converts to string",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "ex",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "XFException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "innerException",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Xs f exception",
+          "generic_params": [],
+          "overloads": 3
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [
+        "DesignerGenerated"
+      ],
+      "source_file": "output/types/OneStream/Client/WpfVb/WorkflowStatusViewer.cs",
+      "source_code": "public class StatusInfo\n\t{\n\t\tprivate WfControllerProfileStatusInfo m_ProfileStatusInfo;\n\n\t\tprivate string m_WorkflowStatusImagePath;\n\n\t\tprivate string m_WorkflowStatusText;\n\n\t\tprivate string m_LastActivityTime;\n\n\t\tprivate List<StatusInfo> m_Children;\n\n\t\tprivate int m_dependentsNotStartedCount;\n\n\t\tprivate int m_dependentsInprocessCount;\n\n\t\tprivate int m_dependentsErrorCount;\n\n\t\tprivate int m_dependentsCompletedCount;\n\n\t\tpublic WfControllerProfileStatusInfo ProfileStatusInfo\n\t\t{\n\t\t\tget\n\t\t\t{\n\t\t\t\treturn m_ProfileStatusInfo;\n\t\t\t}\n\t\t\tset\n\t\t\t{\n\t\t\t\tm_ProfileStatusInfo = value;\n\t\t\t}\n\t\t}\n\n\t\tpublic string WorkflowStatusImagePath\n\t\t{\n\t\t\tget\n\t\t\t{\n\t\t\t\treturn m_WorkflowStatusImagePath;\n\t\t\t}\n\t\t\tset\n\t\t\t{\n\t\t\t\tm_WorkflowStatusImagePath = value;\n\t\t\t}\n\t\t}\n\n\t\tpublic string WorkflowStatusText\n\t\t{\n\t\t\tget\n\t\t\t{\n\t\t\t\treturn m_WorkflowStatusText;\n\t\t\t}\n\t\t\tset\n\t\t\t{\n\t\t\t\tm_WorkflowStatusText = value;\n\t\t\t}\n\t\t}\n\n\t\tpublic string LastActivityTime\n\t\t{\n\t\t\tget\n\t\t\t{\n\t\t\t\treturn m_LastActivityTime;\n\t\t\t}\n\t\t\tset\n\t\t\t{\n\t\t\t\tm_LastActivityTime = value;\n\t\t\t}\n\t\t}\n\n\t\tpublic List<StatusInfo> Children\n\t\t{\n\t\t\tget\n\t\t\t{\n\t\t\t\treturn m_Children;\n\t\t\t}\n\t\t\tset\n\t\t\t{\n\t\t\t\tm_Children = value;\n\t\t\t}\n\t\t}\n\n\t\tpublic string DependentsNotStartedPercent\n\t\t{\n\t\t\tget\n\t\t\t{\n\t\t\t\tWorkflowProfileTypes type = m_ProfileStatusInfo.ProfileInfo.Type;\n\t\t\t\tif ((uint)(type - 50) <= 2u)\n\t\t\t\t{\n\t\t\t\t\treturn string.Empty;\n\t\t\t\t}\n\t\t\t\treturn m_ProfileStatusInfo.DependentsNotStartedPercent().ToString(\"N0\");\n\t\t\t}\n\t\t}\n\n\t\tpublic string DependentsInprocessPercent\n\t\t{\n\t\t\tget\n\t\t\t{\n\t\t\t\tWorkflowProfileTypes type = m_ProfileStatusInfo.ProfileInfo.Type;\n\t\t\t\tif ((uint)(type - 50) <= 2u)\n\t\t\t\t{\n\t\t\t\t\treturn string.Empty;\n\t\t\t\t}\n\t\t\t\treturn m_ProfileStatusInfo.DependentsInprocessPercent().ToString(\"N0\");\n\t\t\t}\n\t\t}\n\n\t\tpublic string DependentsErrorPercent\n\t\t{\n\t\t\tget\n\t\t\t{\n\t\t\t\tWorkflowProfileTypes type = m_ProfileStatusInfo.ProfileInfo.Type;\n\t\t\t\tif ((uint)(type - 50) <= 2u)\n\t\t\t\t{\n\t\t\t\t\treturn string.Empty;\n\t\t\t\t}\n\t\t\t\treturn m_ProfileStatusInfo.DependentsErrorPercent().ToString(\"N0\");\n\t\t\t}\n\t\t}\n\n\t\tpublic string DependentsCompletedPercent\n\t\t{\n\t\t\tget\n\t\t\t{\n\t\t\t\tWorkflowProfileTypes type = m_ProfileStatusInfo.ProfileInfo.Type;\n\t\t\t\tif ((uint)(type - 50) <= 2u)\n\t\t\t\t{\n\t\t\t\t\treturn string.Empty;\n\t\t\t\t}\n\t\t\t\treturn m_ProfileStatusInfo.DependentsCompletedPercent().ToString(\"N0\");\n\t\t\t}\n\t\t}\n\n\t\tpublic StatusInfo()\n\t\t{\n\t\t\tm_ProfileStatusInfo = new WfControllerProfileStatusInfo();\n\t\t\tm_WorkflowStatusImagePath = string.Empty;\n\t\t\tm_WorkflowStatusText = string.Empty;\n\t\t\tm_LastActivityTime = string.Empty;\n\t\t\tm_Children = new List<StatusInfo>();\n\t\t\tm_dependentsNotStartedCount = 0;\n\t\t\tm_dependentsInprocessCount = 0;\n\t\t\tm_dependentsErrorCount = 0;\n\t\t\tm_dependentsCompletedCount = 0;\n\t\t\tm_ProfileStatusInfo = new WfControllerProfileStatusInfo();\n\t\t}\n\n\t\tpublic StatusInfo(WfControllerProfileStatusInfo profileStatusInfo)\n\t\t{\n\t\t\tm_ProfileStatusInfo = new WfControllerProfileStatusInfo();\n\t\t\tm_WorkflowStatusImagePath = string.Empty;\n\t\t\tm_WorkflowStatusText = string.Empty;\n\t\t\tm_LastActivityTime = string.Empty;\n\t\t\tm_Children = new List<StatusInfo>();\n\t\t\tm_dependentsNotStartedCount = 0;\n\t\t\tm_dependentsInprocessCount = 0;\n\t\t\tm_dependentsErrorCount = 0;\n\t\t\tm_dependentsCompletedCount = 0;\n\t\t\tif (profileStatusInfo != null)\n\t\t\t{\n\t\t\t\tm_ProfileStatusInfo = profileStatusInfo;\n\t\t\t}\n\t\t\telse\n\t\t\t{\n\t\t\t\tm_ProfileStatusInfo = new WfControllerProfileStatusInfo();\n\t\t\t}\n\t\t}\n\n\t\tpublic override bool Equals(object other)\n\t\t{\n\t\t\tStatusInfo other2 = (StatusInfo)other;\n\t\t\treturn Equals(other2);\n\t\t}\n\n\t\tpublic bool Equals(StatusInfo other)\n\t\t{\n\t\t\ttry\n\t\t\t{\n\t\t\t\tif (other == null)\n\t\t\t\t{\n\t\t\t\t\treturn false;\n\t\t\t\t}\n\t\t\t\tif (object.ReferenceEquals(this, other))\n\t\t\t\t{\n\t\t\t\t\treturn true;\n\t\t\t\t}\n\t\t\t\treturn ProfileStatusInfo.ProfileInfo.Equals(other.ProfileStatusInfo.ProfileInfo);\n\t\t\t}\n\t\t\tcatch (Exception ex)\n\t\t\t{\n\t\t\t\tProjectData.SetProjectError(ex);\n\t\t\t\tException innerException = ex;\n\t\t\t\tthrow new XFException(innerException);\n\t\t\t}\n\t\t}\n\n\t\tpublic override int GetHashCode()\n\t\t{\n\t\t\ttry\n\t\t\t{\n\t\t\t\treturn ProfileStatusInfo.ProfileInfo.GetHashCode();\n\t\t\t}\n\t\t\tcatch (Exception ex)\n\t\t\t{\n\t\t\t\tProjectData.SetProjectError(ex);\n\t\t\t\tException innerException = ex;\n\t\t\t\tthrow new XFException(innerException);\n\t\t\t}\n\t\t}\n\n\t\tpublic override string ToString()\n\t\t{\n\t\t\ttry\n\t\t\t{\n\t\t\t\treturn ProfileStatusInfo.ProfileInfo.ToString();\n\t\t\t}\n\t\t\tcatch (Exception ex)\n\t\t\t{\n\t\t\t\tProjectData.SetProjectError(ex);\n\t\t\t\tException innerException = ex;\n\t\t\t\tthrow new XFException(innerException);\n\t\t\t}\n\t\t}\n\t}"
+    },
+    {
+      "name": "UserState",
+      "namespace": "OneStream.Client.WpfVb.WorkflowStatusViewer",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "profileKeyToSelect",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/WpfVb/WorkflowStatusViewer.cs"
+    }
+  ],
+  "interfaces": [],
+  "structs": [],
+  "delegates": [],
+  "enums": [
+    {
+      "name": "MenuItemType",
+      "namespace": "OneStream.Client.WpfVb.WorkflowStatusViewer",
+      "underlying_type": "int",
+      "is_flags": false,
+      "values": [
+        {
+          "name": "StaticMenu",
+          "value": 1
+        },
+        {
+          "name": "DynamicWFChannelLock",
+          "value": 2
+        },
+        {
+          "name": "DynamicWFChannelUnlock",
+          "value": 3
+        }
+      ],
+      "access": "public"
+    }
+  ]
+}

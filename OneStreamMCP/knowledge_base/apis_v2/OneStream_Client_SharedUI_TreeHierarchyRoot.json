@@ -1,0 +1,66 @@
+{
+  "namespace": "OneStream.Client.SharedUI.TreeHierarchyRoot",
+  "generated_at": "2025-12-08T19:28:51.666553",
+  "statistics": {
+    "classes": 1,
+    "interfaces": 0,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 0,
+    "total_methods": 1,
+    "total_properties": 0
+  },
+  "classes": [
+    {
+      "name": "TreeHierarchyRefreshHelper",
+      "namespace": "OneStream.Client.SharedUI.TreeHierarchyRoot",
+      "type": "class",
+      "modifiers": [
+        "private"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IDisposable"
+      ],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "root",
+              "type": "TreeHierarchyRoot",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [
+        {
+          "name": "Dispose",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Disposes operation",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/SharedUI/TreeHierarchyRoot.cs"
+    }
+  ],
+  "interfaces": [],
+  "structs": [],
+  "delegates": [],
+  "enums": []
+}

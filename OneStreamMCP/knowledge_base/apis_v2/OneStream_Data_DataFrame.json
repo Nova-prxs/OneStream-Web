@@ -1,0 +1,3028 @@
+{
+  "namespace": "OneStream.Data.DataFrame",
+  "generated_at": "2025-12-08T19:28:52.052190",
+  "statistics": {
+    "classes": 8,
+    "interfaces": 0,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 0,
+    "total_methods": 99,
+    "total_properties": 3
+  },
+  "classes": [
+    {
+      "name": "DataFrame",
+      "namespace": "OneStream.Data.DataFrame",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IDataFrame"
+      ],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "name",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "columns",
+              "type": "DataFrameColumn[]",
+              "optional": false,
+              "default": null
+            }
+          ]
+        },
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "payload",
+              "type": "DataFramePayload",
+              "optional": false,
+              "default": null
+            }
+          ]
+        },
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "name",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "parquetStream",
+              "type": "Stream",
+              "optional": false,
+              "default": null
+            }
+          ]
+        },
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "table",
+              "type": "DataTable",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "nullable",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            }
+          ]
+        },
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "reader",
+              "type": "IDataReader",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "name",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "nullable",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            }
+          ]
+        },
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "reader",
+              "type": "IDataReader",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "name",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "rowCount",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "nullable",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            }
+          ]
+        },
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "reader",
+              "type": "IDataReader",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "name",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "rowCount",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "compressed",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "nullable",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            }
+          ]
+        },
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "reader",
+              "type": "IDataReader",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "name",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "rowCount",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "compressed",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "bufferLength",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "nullable",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            }
+          ]
+        },
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "reader",
+              "type": "DbDataReader",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "name",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ]
+        },
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "reader",
+              "type": "DbDataReader",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "name",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "rowCount",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ]
+        },
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "reader",
+              "type": "DbDataReader",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "name",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "rowCount",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "compressed",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            }
+          ]
+        },
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "reader",
+              "type": "DbDataReader",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "name",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "rowCount",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "compressed",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "bufferLength",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ]
+        },
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "name",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ]
+        },
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "\"_{i}\"",
+              "type": "Name +",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "array",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Name",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [
+        {
+          "name": "Dictionary",
+          "return_type": "Dictionary",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Dictionarys operation",
+          "generic_params": [
+            "string",
+            "int"
+          ],
+          "overloads": 6
+        },
+        {
+          "name": "GetColumn",
+          "return_type": ">",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "columnIndex",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets column",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "ArgumentNullException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "\"columns\"",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Arguments null exception",
+          "generic_params": [],
+          "overloads": 6
+        },
+        {
+          "name": "Dictionary",
+          "return_type": "Dictionary",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Dictionarys operation",
+          "generic_params": [
+            "string",
+            "int"
+          ],
+          "overloads": 6
+        },
+        {
+          "name": "List",
+          "return_type": "List",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Lists operation",
+          "generic_params": [
+            "string"
+          ],
+          "overloads": 5
+        },
+        {
+          "name": "ArgumentNullException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "\"payload\"",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Arguments null exception",
+          "generic_params": [],
+          "overloads": 6
+        },
+        {
+          "name": "Dictionary",
+          "return_type": "Dictionary",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Dictionarys operation",
+          "generic_params": [
+            "string",
+            "int"
+          ],
+          "overloads": 6
+        },
+        {
+          "name": "MemoryStream",
+          "return_type": "MemoryStream",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "payload.ParquetPayload",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Memorys stream",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "ConstructColumnsFromParquetData",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "parquetData",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Constructs columns from parquet data",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "ArgumentNullException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "\"parquetStream\"",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Arguments null exception",
+          "generic_params": [],
+          "overloads": 6
+        },
+        {
+          "name": "Dictionary",
+          "return_type": "Dictionary",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Dictionarys operation",
+          "generic_params": [
+            "string",
+            "int"
+          ],
+          "overloads": 6
+        },
+        {
+          "name": "ConstructColumnsFromParquetData",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "parquetStream",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Constructs columns from parquet data",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "ArgumentNullException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "\"table\"",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Arguments null exception",
+          "generic_params": [],
+          "overloads": 6
+        },
+        {
+          "name": "using",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "reader",
+              "type": "DataTableReader",
+              "optional": true,
+              "default": "table.CreateDataReader("
+            }
+          ],
+          "description": "Usings operation",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "InitializeFromDbDataReader",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "reader",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "table.TableName",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "table.Rows.Count",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "false",
+              "type": "compressed:",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "1000000",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "nullable",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Initializes from db data reader",
+          "generic_params": [],
+          "overloads": 4
+        },
+        {
+          "name": "InitializeFromDbDataReader",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "reader",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "name",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "rowCount",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "compressed",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "bufferLength",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "nullable",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Initializes from db data reader",
+          "generic_params": [],
+          "overloads": 4
+        },
+        {
+          "name": "InitializeFromDbDataReader",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "reader",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "name",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "rowCount",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "compressed",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "bufferLength",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "false",
+              "type": "nullable:",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Initializes from db data reader",
+          "generic_params": [],
+          "overloads": 4
+        },
+        {
+          "name": "InitializeSchemaFromReader",
+          "return_type": "internal void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "reader",
+              "type": "IDataReader",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "name",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "rowCount",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "compressed",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "nullable",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Initializes schema from reader",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "ArgumentNullException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "\"reader\"",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Arguments null exception",
+          "generic_params": [],
+          "overloads": 6
+        },
+        {
+          "name": "Dictionary",
+          "return_type": "Dictionary",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Dictionarys operation",
+          "generic_params": [
+            "string",
+            "int"
+          ],
+          "overloads": 6
+        },
+        {
+          "name": "CreateColumn",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "reader.GetFieldType(i",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates column",
+          "generic_params": [],
+          "overloads": 8
+        },
+        {
+          "name": "InitializeFromDbDataReader",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "reader",
+              "type": "IDataReader",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "name",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "rowCount",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "compressed",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "bufferLength",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "nullable",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Initializes from db data reader",
+          "generic_params": [],
+          "overloads": 4
+        },
+        {
+          "name": "ArgumentNullException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "\"reader\"",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Arguments null exception",
+          "generic_params": [],
+          "overloads": 6
+        },
+        {
+          "name": "InitializeSchemaFromReader",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "reader",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "name",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "rowCount",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "compressed",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "nullable",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Initializes schema from reader",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "ParallelAddValuesToColumns",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "array",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "num",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Parallels add values to columns",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "ParallelAddValuesToColumns",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "array",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "num",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Parallels add values to columns",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "Optimize",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Optimizes operation",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "AddColumn",
+          "return_type": "int",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "dataFrameColumn",
+              "type": "DataFrameColumn",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Adds column",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "AddColumn",
+          "return_type": "int",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "dataFrameColumn",
+              "type": "DataFrameColumn",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "bypassColumnShrink",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Adds column",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "InvalidOperationException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "dataFrameColumn",
+              "type": "string.Format(GeneralStrings.DataFrameColumnsNotSameLengthDetailArg0Arg1, RowCount,",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Invalids operation exception",
+          "generic_params": [],
+          "overloads": 9
+        },
+        {
+          "name": "CreateColumn",
+          "return_type": "internal void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "columnType",
+              "type": "Type",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "columnOrdinal",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "columnName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "rowCount",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates column",
+          "generic_params": [],
+          "overloads": 8
+        },
+        {
+          "name": "CreateColumn",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "columnType",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "columnOrdinal",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "columnName",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "rowCount",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "false",
+              "type": "compressed:",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "false",
+              "type": "nullable:",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates column",
+          "generic_params": [],
+          "overloads": 8
+        },
+        {
+          "name": "CreateColumn",
+          "return_type": "internal void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "columnType",
+              "type": "Type",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "columnOrdinal",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "columnName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "rowCount",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "compressed",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates column",
+          "generic_params": [],
+          "overloads": 8
+        },
+        {
+          "name": "CreateColumn",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "columnType",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "columnOrdinal",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "columnName",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "rowCount",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "compressed",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "false",
+              "type": "nullable:",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates column",
+          "generic_params": [],
+          "overloads": 8
+        },
+        {
+          "name": "CreateColumn",
+          "return_type": "internal void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "columnType",
+              "type": "Type",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "columnOrdinal",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "columnName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "rowCount",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "compressed",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "data",
+              "type": "Array?",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "nullable",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates column",
+          "generic_params": [],
+          "overloads": 8
+        },
+        {
+          "name": "NotImplementedException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "columnType.FullName",
+              "type": "string.Format(GeneralStrings.DataFrameArg0DataTypeOfArg1NotSupported, columnName,",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Nots implemented exception",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "CreateColumn",
+          "return_type": "DataFrameColumn",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "columnName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "rowCount",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "compressed",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "data",
+              "type": "Array?",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates column",
+          "generic_params": [
+            "T"
+          ],
+          "overloads": 8
+        },
+        {
+          "name": "GetAllColumnsNames",
+          "return_type": "string[]",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Gets all columns names",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetColumn",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "name",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets column",
+          "generic_params": [
+            "T"
+          ],
+          "overloads": 5
+        },
+        {
+          "name": "GetColumn",
+          "return_type": "DataFrameColumn<T>",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "columnOrdinal",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets column",
+          "generic_params": [
+            "T"
+          ],
+          "overloads": 5
+        },
+        {
+          "name": "InvalidOperationException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "columnOrdinal",
+              "type": "string.Format(GeneralStrings.DataFrameOutOfBoundsArg0,",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Invalids operation exception",
+          "generic_params": [],
+          "overloads": 9
+        },
+        {
+          "name": "GetColumn",
+          "return_type": "DataFrameColumn",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "columnOrdinal",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets column",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "InvalidOperationException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "columnOrdinal",
+              "type": "string.Format(GeneralStrings.DataFrameOutOfBoundsArg0,",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Invalids operation exception",
+          "generic_params": [],
+          "overloads": 9
+        },
+        {
+          "name": "GetColumnOrdinal",
+          "return_type": "int",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "name",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets column ordinal",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetCompressedColumn",
+          "return_type": "DataFrameCompressedColumn<T>",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "columnOrdinal",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets compressed column",
+          "generic_params": [
+            "T"
+          ],
+          "overloads": 2
+        },
+        {
+          "name": "InvalidOperationException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "columnOrdinal",
+              "type": "string.Format(GeneralStrings.DataFrameOutOfBoundsArg0,",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Invalids operation exception",
+          "generic_params": [],
+          "overloads": 9
+        },
+        {
+          "name": "GetParquetStreamAsync",
+          "return_type": "async Task<MemoryStream>",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Gets parquet stream async",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "ParquetSchema",
+          "return_type": "ParquetSchema",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "fields",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Parquets schema",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "MemoryStream",
+          "return_type": "MemoryStream",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Memorys stream",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "using",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "writer",
+              "type": "ParquetWriter",
+              "optional": true,
+              "default": "await ParquetWriter.CreateAsync(schema, ms"
+            }
+          ],
+          "description": "Usings operation",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "GetParquetByteArrayAsync",
+          "return_type": ">",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Gets parquet byte array async",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetRowArray",
+          "return_type": "object[]",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "rowIndex",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets row array",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetValue",
+          "return_type": "T",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "columnOrdinal",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "rowIndex",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets value",
+          "generic_params": [
+            "T"
+          ],
+          "overloads": 1
+        },
+        {
+          "name": "GetColumn",
+          "return_type": ">",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "columnOrdinal",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets column",
+          "generic_params": [
+            "T"
+          ],
+          "overloads": 5
+        },
+        {
+          "name": "GetCompressedColumn",
+          "return_type": ">",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "columnOrdinal",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets compressed column",
+          "generic_params": [
+            "T"
+          ],
+          "overloads": 2
+        },
+        {
+          "name": "NotImplementedException",
+          "return_type": "> throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Nots implemented exception",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "GetValueAsObject",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "columnOrdinal",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "rowIndex",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets value as object",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "Optimize",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Optimizes operation",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "ShrinkAllColumns",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Shrinks all columns",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "Peek",
+          "return_type": "string",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "maxRecords",
+              "type": "int",
+              "optional": true,
+              "default": "1000"
+            }
+          ],
+          "description": "Peeks operation",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "StringBuilder",
+          "return_type": "StringBuilder",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Strings builder",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "Dictionary",
+          "return_type": "Dictionary",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Dictionarys operation",
+          "generic_params": [
+            "int",
+            "int"
+          ],
+          "overloads": 6
+        },
+        {
+          "name": "Split",
+          "return_type": "DataFrame[]",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "maxRowsPerDataFrame",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Splits operation",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "delegate",
+          "return_type": "0, num2,",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "i",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Delegates operation",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "ToDataSet",
+          "return_type": "DataSet",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Converts to data set",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "ToDataTable",
+          "return_type": "DataTable",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Converts to data table",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "DataTable",
+          "return_type": "DataTable",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "Name",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Datas table",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "List",
+          "return_type": "List",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Lists operation",
+          "generic_params": [
+            "string"
+          ],
+          "overloads": 5
+        },
+        {
+          "name": "GetNonNullableType",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "type",
+              "type": "Type",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets non nullable type",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "ConstructColumnsFromParquetData",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "parquetData",
+              "type": "Stream",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Constructs columns from parquet data",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "CreateColumn",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "dataField.ClrType",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "value++",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "dataField.Name",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "RowCount",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "false",
+              "type": "compressed:",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "result.Data",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "dataField.IsNullable",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates column",
+          "generic_params": [],
+          "overloads": 8
+        },
+        {
+          "name": "AddRow",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "items",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Adds row",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "InvalidOperationException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "GeneralStrings.DataFrameValueNotProvidedColumns",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Invalids operation exception",
+          "generic_params": [],
+          "overloads": 9
+        },
+        {
+          "name": "AddRowsFromColumnRowArrayAsync",
+          "return_type": "async Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "items",
+              "type": "object[][]",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Adds rows from column row array async",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "InvalidOperationException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "GeneralStrings.DataFrameValueNotProvidedColumns",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Invalids operation exception",
+          "generic_params": [],
+          "overloads": 9
+        },
+        {
+          "name": "Append",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "dataFrame",
+              "type": "IDataFrame",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Appends operation",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "List",
+          "return_type": "List",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Lists operation",
+          "generic_params": [
+            "DataFrameColumn"
+          ],
+          "overloads": 5
+        },
+        {
+          "name": "Optimize",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Optimizes operation",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "InvalidOperationException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "column.Name",
+              "type": "string.Format(GeneralStrings.DataFrameCannotAppendColumnArg0TypeMismatch,",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Invalids operation exception",
+          "generic_params": [],
+          "overloads": 9
+        },
+        {
+          "name": "List",
+          "return_type": "List",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "columns",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Lists operation",
+          "generic_params": [
+            "DataFrameColumn"
+          ],
+          "overloads": 5
+        },
+        {
+          "name": "InvalidOperationException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "GeneralStrings.DataFrameCannotAppendColumnLengthMismatch",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Invalids operation exception",
+          "generic_params": [],
+          "overloads": 9
+        },
+        {
+          "name": "AddColumn",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "item2",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Adds column",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "ParallelAddValuesToColumns",
+          "return_type": "internal void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "bufferArray",
+              "type": "object[][]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "rowCounter",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Parallels add values to columns",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "delegate",
+          "return_type": "0, ColumnsCount,",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "colNumber",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Delegates operation",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "ShrinkAllColumns",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Shrinks all columns",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "InvalidOperationException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "GeneralStrings.DataFrameColumnsNotSameLength",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Invalids operation exception",
+          "generic_params": [],
+          "overloads": 9
+        },
+        {
+          "name": "ToRowsArray",
+          "return_type": "object[][]",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Converts to rows array",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "List",
+          "return_type": "List",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Lists operation",
+          "generic_params": [
+            "string"
+          ],
+          "overloads": 5
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Data/DataFrame/DataFrame.cs"
+    },
+    {
+      "name": "DataFrameTypesHelper",
+      "namespace": "OneStream.Data.DataFrame",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "CastNullToType",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "type",
+              "type": "Type",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "value",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "nullable",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Casts null to type",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "default",
+          "return_type": ">",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "DateTime",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Defaults operation",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Data/DataFrame/DataFrameTypesHelper.cs"
+    },
+    {
+      "name": "SharedDataFrameConstants",
+      "namespace": "OneStream.Data.DataFrame",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Data/DataFrame/SharedDataFrameConstants.cs"
+    },
+    {
+      "name": "DataFrameValue",
+      "namespace": "OneStream.Data.DataFrame",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "abstract"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "IncreaseCount",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Increases count",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "DecreaseCount",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Decreases count",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Data/DataFrame/DataFrameValue.cs"
+    },
+    {
+      "name": "ServiceCollectionExtensions",
+      "namespace": "OneStream.Data.DataFrame",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "AddDataFrame",
+          "return_type": "IServiceCollection",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "services",
+              "type": "this IServiceCollection",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Adds data frame",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [
+        "ExcludeFromCodeCoverage"
+      ],
+      "source_file": "output/types/OneStream/Data/DataFrame/ServiceCollectionExtensions.cs"
+    },
+    {
+      "name": "DataFramePayload",
+      "namespace": "OneStream.Data.DataFrame",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": []
+        },
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "name",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "parquetPayload",
+              "type": "byte[]",
+              "optional": false,
+              "default": null
+            }
+          ]
+        },
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "dataFrame",
+              "type": "DataFrame",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [
+        "DataContract",
+        "JsonObject"
+      ],
+      "source_file": "output/types/OneStream/Data/DataFrame/DataFramePayload.cs"
+    },
+    {
+      "name": "DataFrameCollection",
+      "namespace": "OneStream.Data.DataFrame",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IDataFrameCollection",
+        "IEnumerable<IDataFrame>",
+        "IEnumerable"
+      ],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "reader",
+              "type": "IDataReader",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "name",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "itemSize",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "compressed",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "nullable",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            }
+          ]
+        },
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "dataFrameCollection",
+              "type": "IEnumerable<IDataFrame>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "name",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "itemSize",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "compressed",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "nullable",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "Name",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "ItemSize",
+          "type": "int",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [
+        {
+          "name": "GetDataFramesCollectionFromReader",
+          "return_type": "IEnumerable<IDataFrame>",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "reader",
+              "type": "IDataReader",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "name",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "maxRowsPerItem",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "compressed",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "nullable",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets data frames collection from reader",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "ArgumentNullException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "\"reader\"",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Arguments null exception",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "DataFrame",
+          "return_type": "DataFrame",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "name",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Datas frame",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "DataFrame",
+          "return_type": "DataFrame",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "name",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Datas frame",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "GetEnumerator",
+          "return_type": "IEnumerator<IDataFrame>",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Gets enumerator",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Data/DataFrame/DataFrameCollection.cs"
+    },
+    {
+      "name": "GeneralStrings",
+      "namespace": "OneStream.Data.DataFrame",
+      "type": "class",
+      "modifiers": [
+        "internal"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "internal",
+          "parameters": []
+        }
+      ],
+      "properties": [],
+      "methods": [
+        {
+          "name": "ResourceManager",
+          "return_type": "ResourceManager",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "\"OneStream.Data.DataFrame.Properties.GeneralStrings\"",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "typeof(GeneralStrings",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Resources manager",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [
+        "GeneratedCode",
+        "DebuggerNonUserCode",
+        "CompilerGenerated"
+      ],
+      "source_file": "output/types/OneStream/Data/DataFrame/GeneralStrings.cs"
+    }
+  ],
+  "interfaces": [],
+  "structs": [],
+  "delegates": [],
+  "enums": []
+}

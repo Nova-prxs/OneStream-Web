@@ -1,0 +1,402 @@
+{
+  "namespace": "System.Web.Script.Serialization.is",
+  "generated_at": "2025-12-08T19:28:52.441346",
+  "statistics": {
+    "classes": 1,
+    "interfaces": 0,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 0,
+    "total_methods": 18,
+    "total_properties": 0
+  },
+  "classes": [
+    {
+      "name": "JavaScriptSerializer",
+      "namespace": "System.Web.Script.Serialization.is",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": []
+        }
+      ],
+      "properties": [],
+      "methods": [
+        {
+          "name": "ArgumentOutOfRangeException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "\"value\"",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Arguments out of range exception",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "ArgumentOutOfRangeException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "\"value\"",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Arguments out of range exception",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "GetOptions",
+          "return_type": "JsonSerializerOptions",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Gets options",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "DeserializeObject",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "input",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Deserializes object",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "ArgumentNullException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "\"input\"",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Arguments null exception",
+          "generic_params": [],
+          "overloads": 6
+        },
+        {
+          "name": "GetOptions",
+          "return_type": "input,",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Gets options",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "Deserialize",
+          "return_type": "T",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "input",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Deserializes operation",
+          "generic_params": [
+            "T"
+          ],
+          "overloads": 2
+        },
+        {
+          "name": "ArgumentNullException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "\"input\"",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Arguments null exception",
+          "generic_params": [],
+          "overloads": 6
+        },
+        {
+          "name": "GetOptions",
+          "return_type": "input,",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Gets options",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "Deserialize",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "input",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "targetType",
+              "type": "Type",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Deserializes operation",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "ArgumentNullException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "\"input\"",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Arguments null exception",
+          "generic_params": [],
+          "overloads": 6
+        },
+        {
+          "name": "GetOptions",
+          "return_type": "input, targetType,",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Gets options",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "Serialize",
+          "return_type": "string",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "obj",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Serializes operation",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "GetOptions",
+          "return_type": "obj,",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Gets options",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "ArgumentNullException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "\"obj\"",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Arguments null exception",
+          "generic_params": [],
+          "overloads": 6
+        },
+        {
+          "name": "Serialize",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "obj",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "output",
+              "type": "StringBuilder",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Serializes operation",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "ArgumentNullException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "\"obj\"",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Arguments null exception",
+          "generic_params": [],
+          "overloads": 6
+        },
+        {
+          "name": "ArgumentNullException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "\"output\"",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Arguments null exception",
+          "generic_params": [],
+          "overloads": 6
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [
+        "Obsolete"
+      ],
+      "source_file": "output/types/System/Web/Script/Serialization/JavaScriptSerializer.cs"
+    }
+  ],
+  "interfaces": [],
+  "structs": [],
+  "delegates": [],
+  "enums": []
+}

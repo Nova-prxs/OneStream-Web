@@ -1,0 +1,655 @@
+{
+  "namespace": "OneStream.Shared.Common.SharedConstants",
+  "generated_at": "2025-12-08T19:28:52.148180",
+  "statistics": {
+    "classes": 21,
+    "interfaces": 0,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 0,
+    "total_methods": 11,
+    "total_properties": 0
+  },
+  "classes": [
+    {
+      "name": "General",
+      "namespace": "OneStream.Shared.Common.SharedConstants",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/SharedConstants.cs"
+    },
+    {
+      "name": "DevExpress",
+      "namespace": "OneStream.Shared.Common.SharedConstants",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/SharedConstants.cs"
+    },
+    {
+      "name": "DxFilterOperators",
+      "namespace": "OneStream.Shared.Common.SharedConstants",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/SharedConstants.cs"
+    },
+    {
+      "name": "WorkflowKeys",
+      "namespace": "OneStream.Shared.Common.SharedConstants",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "IsBiBlendWorkflow",
+          "return_type": "bool",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "workflowKey",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Checks if bi blend workflow",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "IsDirectLoadWorkflow",
+          "return_type": "bool",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "workflowKey",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Checks if direct load workflow",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/SharedConstants.cs"
+    },
+    {
+      "name": "Workflows",
+      "namespace": "OneStream.Shared.Common.SharedConstants",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "IsBiBlendWorkflow",
+          "return_type": "bool",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "workflowKey",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Checks if bi blend workflow",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "IsDirectLoadWorkflow",
+          "return_type": "bool",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "workflowKey",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Checks if direct load workflow",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/SharedConstants.cs"
+    },
+    {
+      "name": "Tasks",
+      "namespace": "OneStream.Shared.Common.SharedConstants",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/SharedConstants.cs"
+    },
+    {
+      "name": "Steps",
+      "namespace": "OneStream.Shared.Common.SharedConstants",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/SharedConstants.cs"
+    },
+    {
+      "name": "WorkflowProfileDefaults",
+      "namespace": "OneStream.Shared.Common.SharedConstants",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/SharedConstants.cs"
+    },
+    {
+      "name": "WorkflowStatusAbreviations",
+      "namespace": "OneStream.Shared.Common.SharedConstants",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/SharedConstants.cs"
+    },
+    {
+      "name": "WorkflowSheetLayoutNames",
+      "namespace": "OneStream.Shared.Common.SharedConstants",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/SharedConstants.cs"
+    },
+    {
+      "name": "WorkflowProfileAttributeIndexes",
+      "namespace": "OneStream.Shared.Common.SharedConstants",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": []
+        }
+      ],
+      "properties": [],
+      "methods": [
+        {
+          "name": "Dictionary",
+          "return_type": "Dictionary",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Dictionarys operation",
+          "generic_params": [
+            "int",
+            "string"
+          ],
+          "overloads": 2
+        },
+        {
+          "name": "GetAttributes",
+          "return_type": "Dictionary<int, string>",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "profileType",
+              "type": "WorkflowProfileTypes",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets attributes",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "Dictionary",
+          "return_type": "Dictionary",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Dictionarys operation",
+          "generic_params": [
+            "int",
+            "string"
+          ],
+          "overloads": 2
+        },
+        {
+          "name": "GetAttributeName",
+          "return_type": "string",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "attributeIndex",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets attribute name",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetAttributeIndex",
+          "return_type": "int",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "attributeName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets attribute index",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "AttributeValidForProfileType",
+          "return_type": "bool",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "attributeIndex",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "profileType",
+              "type": "WorkflowProfileTypes",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Attributes valid for profile type",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "DoesAttributeUseScenarioTypeUnknownForDefaultValue",
+          "return_type": "bool",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "attributeIndex",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Doess attribute use scenario type unknown for default value",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/SharedConstants.cs"
+    },
+    {
+      "name": "ContentTypes",
+      "namespace": "OneStream.Shared.Common.SharedConstants",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/SharedConstants.cs"
+    },
+    {
+      "name": "ExcelRangeTokens",
+      "namespace": "OneStream.Shared.Common.SharedConstants",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/SharedConstants.cs"
+    },
+    {
+      "name": "ExcelRangeFieldTypeTokens",
+      "namespace": "OneStream.Shared.Common.SharedConstants",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/SharedConstants.cs"
+    },
+    {
+      "name": "TableLoadMethods",
+      "namespace": "OneStream.Shared.Common.SharedConstants",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/SharedConstants.cs"
+    },
+    {
+      "name": "MethodQueryParameters",
+      "namespace": "OneStream.Shared.Common.SharedConstants",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/SharedConstants.cs"
+    },
+    {
+      "name": "ProcessCubeStepParameters",
+      "namespace": "OneStream.Shared.Common.SharedConstants",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/SharedConstants.cs"
+    },
+    {
+      "name": "OneStreamDomains",
+      "namespace": "OneStream.Shared.Common.SharedConstants",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/SharedConstants.cs"
+    },
+    {
+      "name": "CvdSharingPropertyNames",
+      "namespace": "OneStream.Shared.Common.SharedConstants",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/SharedConstants.cs"
+    },
+    {
+      "name": "CvdFormatPropertyNames",
+      "namespace": "OneStream.Shared.Common.SharedConstants",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/SharedConstants.cs"
+    },
+    {
+      "name": "CvdDataPropertyNames",
+      "namespace": "OneStream.Shared.Common.SharedConstants",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/SharedConstants.cs"
+    }
+  ],
+  "interfaces": [],
+  "structs": [],
+  "delegates": [],
+  "enums": []
+}

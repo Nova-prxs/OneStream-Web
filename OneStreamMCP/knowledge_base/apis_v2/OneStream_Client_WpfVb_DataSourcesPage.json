@@ -1,0 +1,230 @@
+{
+  "namespace": "OneStream.Client.WpfVb.DataSourcesPage",
+  "generated_at": "2025-12-08T19:28:52.048606",
+  "statistics": {
+    "classes": 2,
+    "interfaces": 0,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 3,
+    "total_methods": 0,
+    "total_properties": 0
+  },
+  "classes": [
+    {
+      "name": "UserStateNodeType",
+      "namespace": "OneStream.Client.WpfVb.DataSourcesPage",
+      "type": "class",
+      "modifiers": [
+        "private"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "nodeType",
+              "type": "TreeNodeTypes",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "objProps",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/WpfVb/DataSourcesPage.cs"
+    },
+    {
+      "name": "UserStateGetNode",
+      "namespace": "OneStream.Client.WpfVb.DataSourcesPage",
+      "type": "class",
+      "modifiers": [
+        "private"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "addToTree",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "layoutKeyToSelect",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dimensionKeyToSelect",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            }
+          ]
+        },
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "addToTree",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "layoutKeyToSelect",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dimensionKeyToSelect",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "expandForLoadOnDemand",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/WpfVb/DataSourcesPage.cs"
+    }
+  ],
+  "interfaces": [],
+  "structs": [],
+  "delegates": [],
+  "enums": [
+    {
+      "name": "TreeNodeTypes",
+      "namespace": "OneStream.Client.WpfVb.DataSourcesPage",
+      "underlying_type": "int",
+      "is_flags": false,
+      "values": [
+        {
+          "name": "Unknown",
+          "value": -1
+        },
+        {
+          "name": "FixedLayout",
+          "value": 1
+        },
+        {
+          "name": "DelimitedLayout",
+          "value": 2
+        },
+        {
+          "name": "ConnectorLayout",
+          "value": 3
+        },
+        {
+          "name": "DataMgmtExportSeqLayout",
+          "value": 4
+        },
+        {
+          "name": "FixedLayoutParent",
+          "value": 101
+        },
+        {
+          "name": "DelimitedLayoutParent",
+          "value": 102
+        },
+        {
+          "name": "ConnectorLayoutParent",
+          "value": 103
+        },
+        {
+          "name": "DataMgmtExportSeqLayoutParent",
+          "value": 104
+        },
+        {
+          "name": "Dimension",
+          "value": 200
+        }
+      ],
+      "access": "public"
+    },
+    {
+      "name": "PropertyObjectTypes",
+      "namespace": "OneStream.Client.WpfVb.DataSourcesPage",
+      "underlying_type": "int",
+      "is_flags": false,
+      "values": [
+        {
+          "name": "Unknown",
+          "value": -1
+        },
+        {
+          "name": "Layout",
+          "value": 1
+        },
+        {
+          "name": "Dimension",
+          "value": 2
+        }
+      ],
+      "access": "public"
+    },
+    {
+      "name": "NumericIndicatorTypes",
+      "namespace": "OneStream.Client.WpfVb.DataSourcesPage",
+      "underlying_type": "int",
+      "is_flags": false,
+      "values": [
+        {
+          "name": "CurrencyIndicator",
+          "value": 1
+        },
+        {
+          "name": "ThousandsIndicator",
+          "value": 2
+        },
+        {
+          "name": "DecimalIndicator",
+          "value": 3
+        },
+        {
+          "name": "PositiveIndicator",
+          "value": 4
+        },
+        {
+          "name": "NegativeIndicator",
+          "value": 5
+        },
+        {
+          "name": "NumericMarker",
+          "value": 6
+        }
+      ],
+      "access": "public"
+    }
+  ]
+}

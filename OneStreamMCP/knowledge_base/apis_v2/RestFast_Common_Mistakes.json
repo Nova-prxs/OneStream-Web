@@ -1,0 +1,182 @@
+{
+  "title": "RestFast Common Mistakes and Correct Usage",
+  "purpose": "Prevent common coding errors and hallucinations when using RestFast",
+  "critical_mistakes": [
+    {
+      "mistake_number": 1,
+      "error": "Calling GetDataTable() or PopulateTable() directly on Utils",
+      "wrong_code": "Dim utils As New Utils()\nDim dt As DataTable = utils.GetDataTable(si, \"GetCustomers\") ' \u274c WRONG",
+      "why_wrong": "Utils class does NOT have GetDataTable() or PopulateTable() methods. These methods belong ONLY to RESTAPIRequest class.",
+      "correct_code": "Dim utils As New Utils()\nDim request As RESTAPIRequest = utils.GetSavedRequest(si, \"GetCustomers\")\nDim dt As DataTable = request.GetDataTable() ' \u2705 CORRECT",
+      "rule": "NEVER call GetDataTable() or PopulateTable() on Utils. Always get the RESTAPIRequest object first."
+    },
+    {
+      "mistake_number": 2,
+      "error": "Passing table name as parameter to PopulateTable()",
+      "wrong_code": "request.PopulateTable(si, \"GetCustomers\", \"XFC_MyTable\") ' \u274c WRONG",
+      "why_wrong": "PopulateTable() does NOT accept table name as parameter. Table name is configured in the saved request (tableToPopulate property).",
+      "correct_code": "' Table is already configured in the saved request\nrequest.PopulateTable(si) ' \u2705 CORRECT\n\n' Or with custom variables:\nDim vars As New Dictionary(Of String, String) From {{\"key\", \"value\"}}\nrequest.PopulateTable(si, vars) ' \u2705 CORRECT",
+      "rule": "PopulateTable() signature: PopulateTable(si As SessionInfo, Optional paramVariables As Dictionary(Of String, String) = Nothing)"
+    },
+    {
+      "mistake_number": 3,
+      "error": "Passing request name as parameter to GetDataTable()",
+      "wrong_code": "Dim dt As DataTable = utils.GetDataTable(si, \"GetCustomers\") ' \u274c WRONG",
+      "why_wrong": "GetDataTable() is called on a RESTAPIRequest object, not Utils. It doesn't take request name as parameter.",
+      "correct_code": "Dim request As RESTAPIRequest = utils.GetSavedRequest(si, \"GetCustomers\")\nDim dt As DataTable = request.GetDataTable(limit:=3) ' \u2705 CORRECT",
+      "rule": "GetDataTable() signature: GetDataTable(Optional limit As Integer = 0, Optional paramVariables As Dictionary(Of String, String) = Nothing)"
+    },
+    {
+      "mistake_number": 4,
+      "error": "Confusing Utils methods with RESTAPIRequest methods",
+      "utils_methods_only": [
+        "ExecuteRequest()",
+        "ExecuteSavedRequest()",
+        "GetSavedRequest()",
+        "GetSavedRequestInfo()",
+        "GetSavedRequestParams()",
+        "GetSavedRequestHeaders()",
+        "GetSavedRequestVariables()",
+        "GetSavedRequestBody()",
+        "GetSavedRequestAuthCredentials()",
+        "GetSavedRequestColumnMappings()"
+      ],
+      "request_methods_only": [
+        "Execute()",
+        "GetDataTable()",
+        "PopulateTable()"
+      ],
+      "rule": "Utils = helper functions to GET requests. RESTAPIRequest = execute and process requests."
+    }
+  ],
+  "correct_patterns": [
+    {
+      "pattern_name": "Execute a saved request and get HttpResult",
+      "correct_code": "Dim utils As New Workspace.RESTAPIFramework.RESTAPIRequestManager.Utils()\nDim result As HttpResult = utils.ExecuteSavedRequest(si, \"GetCustomers\")\nIf result.StatusCode = HttpStatusCode.OK Then\n    ' Process result.Content\nEnd If",
+      "when_to_use": "When you want raw HTTP response to process manually"
+    },
+    {
+      "pattern_name": "Get DataTable from saved request with pagination",
+      "correct_code": "Dim utils As New Utils()\nDim request As RESTAPIRequest = utils.GetSavedRequest(si, \"GetCustomers\")\nDim dt As DataTable = request.GetDataTable(limit:=3)\n\nFor Each row As DataRow In dt.Rows\n    Dim id As String = row(\"id\").ToString()\n    ' Process...\nNext",
+      "when_to_use": "When you want to process data programmatically in your Business Rule"
+    },
+    {
+      "pattern_name": "Populate custom table directly",
+      "correct_code": "Dim utils As New Utils()\nDim request As RESTAPIRequest = utils.GetSavedRequest(si, \"GetProducts\")\n\n' Simple - uses default variables\nrequest.PopulateTable(si)\n\n' Or with custom variables\nDim vars As New Dictionary(Of String, String) From {{\"category\", \"electronics\"}}\nrequest.PopulateTable(si, vars)",
+      "when_to_use": "When you want to load data directly into OneStream custom table (simplest option)",
+      "note": "Table name must be pre-configured in the saved request (tableToPopulate property)"
+    },
+    {
+      "pattern_name": "Create request programmatically (no saved request)",
+      "correct_code": "Dim request As New RESTAPIRequest()\nrequest.method = \"GET\"\nrequest.endpoint = \"https://api.example.com/data\"\nrequest.headers = New Dictionary(Of String, String) From {{\"Accept\", \"application/json\"}}\nrequest.authCredentials = New BearerTokenAuthCredentials(\"token\")\n\nDim result As HttpResult = request.Execute()",
+      "when_to_use": "When you need dynamic request configuration that can't be pre-saved"
+    }
+  ],
+  "validation_rules": [
+    {
+      "rule": "If you see utils.GetDataTable() \u2192 WRONG, should be request.GetDataTable()",
+      "check": "GetDataTable() called on wrong object"
+    },
+    {
+      "rule": "If you see utils.PopulateTable() \u2192 WRONG, should be request.PopulateTable()",
+      "check": "PopulateTable() called on wrong object"
+    },
+    {
+      "rule": "If you see PopulateTable(si, requestName, tableName) \u2192 WRONG signature",
+      "check": "PopulateTable() signature is: PopulateTable(si, Optional paramVariables)"
+    },
+    {
+      "rule": "If you see GetDataTable(si, requestName) \u2192 WRONG signature",
+      "check": "GetDataTable() signature is: GetDataTable(Optional limit, Optional paramVariables)"
+    },
+    {
+      "rule": "Always: Utils.GetSavedRequest() returns RESTAPIRequest object",
+      "check": "Type safety - ensure variable is RESTAPIRequest type"
+    }
+  ],
+  "class_hierarchy": {
+    "Utils": {
+      "purpose": "Helper class to retrieve and execute saved requests",
+      "has_methods": [
+        "ExecuteRequest",
+        "ExecuteSavedRequest",
+        "GetSavedRequest",
+        "GetSavedRequest*"
+      ],
+      "does_NOT_have": [
+        "GetDataTable",
+        "PopulateTable",
+        "Execute"
+      ],
+      "returns": "HttpResult or RESTAPIRequest objects"
+    },
+    "RESTAPIRequest": {
+      "purpose": "Main class representing a REST API request configuration",
+      "has_methods": [
+        "Execute",
+        "GetDataTable",
+        "PopulateTable"
+      ],
+      "does_NOT_have": [
+        "ExecuteSavedRequest",
+        "GetSavedRequest"
+      ],
+      "note": "Get instances using Utils.GetSavedRequest() or create with New RESTAPIRequest()"
+    },
+    "HttpResult": {
+      "purpose": "Contains HTTP response data",
+      "has_properties": [
+        "StatusCode",
+        "Content",
+        "Headers",
+        "Err"
+      ],
+      "has_methods": [
+        "GetFormattedHeaders",
+        "GetStatusCode"
+      ],
+      "returned_by": [
+        "Utils.ExecuteRequest()",
+        "Utils.ExecuteSavedRequest()",
+        "RESTAPIRequest.Execute()"
+      ]
+    }
+  },
+  "method_ownership_table": {
+    "Execute": "RESTAPIRequest only",
+    "GetDataTable": "RESTAPIRequest only",
+    "PopulateTable": "RESTAPIRequest only",
+    "ExecuteRequest": "Utils only",
+    "ExecuteSavedRequest": "Utils only",
+    "GetSavedRequest": "Utils only",
+    "GetSavedRequestInfo": "Utils only",
+    "GetSavedRequestParams": "Utils only",
+    "GetSavedRequestHeaders": "Utils only",
+    "GetSavedRequestVariables": "Utils only",
+    "GetSavedRequestBody": "Utils only",
+    "GetSavedRequestAuthCredentials": "Utils only",
+    "GetSavedRequestColumnMappings": "Utils only"
+  },
+  "quick_reference": [
+    {
+      "i_want_to": "Execute a saved request and get raw response",
+      "use": "Utils.ExecuteSavedRequest(si, requestName) \u2192 HttpResult"
+    },
+    {
+      "i_want_to": "Get a saved request object to work with",
+      "use": "Utils.GetSavedRequest(si, requestName) \u2192 RESTAPIRequest"
+    },
+    {
+      "i_want_to": "Execute request and get DataTable with data",
+      "use": "request.GetDataTable(limit) \u2192 DataTable (request from Utils.GetSavedRequest)"
+    },
+    {
+      "i_want_to": "Populate OneStream custom table automatically",
+      "use": "request.PopulateTable(si, vars) (request from Utils.GetSavedRequest)"
+    },
+    {
+      "i_want_to": "Execute request programmatically with full control",
+      "use": "Utils.ExecuteRequest(method, endpoint, params...) \u2192 HttpResult"
+    }
+  ]
+}

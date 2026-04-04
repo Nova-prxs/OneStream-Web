@@ -1,0 +1,123 @@
+{
+  "namespace": "OneStream.Shared.Common.BaseStringConstants",
+  "generated_at": "2025-12-08T19:28:52.147525",
+  "statistics": {
+    "classes": 1,
+    "interfaces": 0,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 0,
+    "total_methods": 4,
+    "total_properties": 0
+  },
+  "classes": [
+    {
+      "name": "BooleanTextValues",
+      "namespace": "OneStream.Shared.Common.BaseStringConstants",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "IsTrueValue",
+          "return_type": "bool",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "booleanText",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Checks if true value",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "IsTrueValueExcludingMinusOne",
+          "return_type": "bool",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "booleanText",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Checks if true value excluding minus one",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "IsFalseValue",
+          "return_type": "bool",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "booleanText",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Checks if false value",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "IsBooleanText",
+          "return_type": "bool",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "booleanText",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Checks if boolean text",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/BaseStringConstants.cs"
+    }
+  ],
+  "interfaces": [],
+  "structs": [],
+  "delegates": [],
+  "enums": []
+}

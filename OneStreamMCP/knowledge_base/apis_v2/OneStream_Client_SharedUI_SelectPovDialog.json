@@ -1,0 +1,48 @@
+{
+  "namespace": "OneStream.Client.SharedUI.SelectPovDialog",
+  "generated_at": "2025-12-08T19:28:51.665810",
+  "statistics": {
+    "classes": 0,
+    "interfaces": 0,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 1,
+    "total_methods": 0,
+    "total_properties": 0
+  },
+  "classes": [],
+  "interfaces": [],
+  "structs": [],
+  "delegates": [],
+  "enums": [
+    {
+      "name": "UIUpdateActivity",
+      "namespace": "OneStream.Client.SharedUI.SelectPovDialog",
+      "underlying_type": "int",
+      "is_flags": false,
+      "values": [
+        {
+          "name": "Initialization",
+          "value": 0
+        },
+        {
+          "name": "ChangedCubeSelection",
+          "value": 1
+        },
+        {
+          "name": "ChangedDimensionSelection",
+          "value": 2
+        },
+        {
+          "name": "ChangedFilter",
+          "value": 3
+        },
+        {
+          "name": "ViewSearchResultsInHierarchy",
+          "value": 4
+        }
+      ],
+      "access": "public"
+    }
+  ]
+}

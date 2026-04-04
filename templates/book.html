@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}{{ book.title }} — OneStream Study Guide{% endblock %}
+
+{% block content %}
+<nav class="breadcrumb">
+  <a href="/">Home</a> <span>&rsaquo;</span> <span>{{ book.title }}</span>
+</nav>
+
+<h1>{{ book.title }}</h1>
+
+<table role="grid">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Chapter</th>
+      <th scope="col">Words</th>
+      <th scope="col">Images</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for ch in book.chapters %}
+    <tr>
+      <td>{{ loop.index }}</td>
+      <td>
+        <a href="/exam-prep/guide/{{ book.slug }}/{{ ch.file | chapter_slug }}">{{ ch.title }}</a>
+      </td>
+      <td class="chapter-meta">{{ "{:,}".format(ch.word_count) }}</td>
+      <td class="chapter-meta">{{ ch.image_count }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

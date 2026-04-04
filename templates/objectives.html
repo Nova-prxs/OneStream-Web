@@ -1,0 +1,166 @@
+{% extends "base.html" %}
+{% block title %}Study by Objectives — OneStream Study Guide{% endblock %}
+{% block content %}
+
+<nav class="breadcrumb">
+  <a href="/">Home</a> &rsaquo;
+  <a href="/exam-prep/quiz">Quiz</a> &rsaquo;
+  <span>Study by Objectives</span>
+</nav>
+
+<h1>Study by Objectives</h1>
+<p>Track your mastery of each certification objective. The exam tests specific objectives — study them one by one for complete coverage.</p>
+
+{# Concept Map — #8 interactive overview #}
+<article class="concept-map-card">
+  <header><strong>OneStream Platform Concept Map</strong></header>
+  <div class="concept-map" id="concept-map">
+    <div class="concept-node concept-root">
+      <span class="concept-label">OneStream Platform</span>
+      <div class="concept-children">
+        {% for section in sections %}
+        <div class="concept-node concept-section">
+          <a href="/exam-prep/quiz/{{ section.slug }}" class="concept-label concept-link">
+            {{ section.name }} <small>({{ section.weight }}%)</small>
+          </a>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <small>Click a section to practice its questions. Percentages show exam weight.</small>
+</article>
+
+{# Overall objective completion #}
+<div class="objectives-summary" id="obj-summary">
+  <strong>Objectives mastered:</strong> <span id="obj-mastered">0</span> / {{ objectives|length }}
+  <progress id="obj-progress" value="0" max="{{ objectives|length }}"></progress>
+</div>
+
+{# Section filter #}
+<div class="quiz-filters">
+  <label>Section:</label>
+  <span class="filter-chip active" data-filter="obj-section" data-value="all" onclick="filterObjectives('all',this)">All ({{ objectives|length }})</span>
+  {% for section in sections %}
+  <span class="filter-chip" data-filter="obj-section" data-value="{{ section.slug }}" onclick="filterObjectives('{{ section.slug }}',this)">{{ section.name }}</span>
+  {% endfor %}
+</div>
+
+{# Objectives list #}
+<div id="objectives-list">
+  {% for obj in objectives %}
+  <article class="objective-card" data-section="{{ obj.section_slug }}" data-code="{{ obj.code }}">
+    <header>
+      <div class="objective-header">
+        <strong>{{ obj.code }}</strong>
+        <span class="objective-section-badge">{{ obj.section_name }}</span>
+        <span class="objective-status" id="obj-status-{{ obj.code | replace('.', '-') }}">—</span>
+      </div>
+    </header>
+    <div class="objective-stats">
+      <small>{{ obj.questions|length }} questions</small>
+      <span class="objective-bar" id="obj-bar-{{ obj.code | replace('.', '-') }}"></span>
+      <small id="obj-score-{{ obj.code | replace('.', '-') }}"></small>
+    </div>
+    <details>
+      <summary>View questions</summary>
+      <ol class="objective-questions">
+        {% for q in obj.questions %}
+        <li class="obj-q" data-correct="{{ q.correct_answer }}">
+          <span>{{ q.text }}</span>
+          <small class="obj-q-diff {{ q.difficulty | lower }}">{{ q.difficulty }}</small>
+        </li>
+        {% endfor %}
+      </ol>
+    </details>
+  </article>
+  {% endfor %}
+</div>
+
+<script>
+const sections = {{ sections | tojson }};
+const objectivesData = {{ objectives | tojson }};
+
+function getProgress(slug) {
+  try {
+    var raw = localStorage.getItem('quiz_progress_' + slug);
+    if (raw) return JSON.parse(raw);
+  } catch(e) {}
+  return { answered: {} };
+}
+
+function computeObjectiveStats() {
+  // Build a map of question text -> answered status
+  var answeredMap = {};
+  sections.forEach(function(section) {
+    var progress = getProgress(section.slug);
+    section.questions.forEach(function(q, idx) {
+      if (progress.answered[idx] !== undefined) {
+        answeredMap[q.text] = {
+          selected: progress.answered[idx],
+          correct: progress.answered[idx] === q.correct_answer
+        };
+      }
+    });
+  });
+
+  var mastered = 0;
+  objectivesData.forEach(function(obj) {
+    var total = obj.questions.length;
+    var answered = 0, correct = 0;
+    obj.questions.forEach(function(q) {
+      var a = answeredMap[q.text];
+      if (a) { answered++; if (a.correct) correct++; }
+    });
+
+    var code = obj.code.replace(/\./g, '-');
+    var statusEl = document.getElementById('obj-status-' + code);
+    var barEl = document.getElementById('obj-bar-' + code);
+    var scoreEl = document.getElementById('obj-score-' + code);
+
+    if (answered === 0) {
+      if (statusEl) statusEl.textContent = 'Not started';
+      if (statusEl) statusEl.className = 'objective-status not-started';
+      if (barEl) barEl.innerHTML = '';
+      if (scoreEl) scoreEl.textContent = '';
+    } else {
+      var pct = Math.round(correct / answered * 100);
+      var allDone = answered === total;
+      if (pct >= 80 && allDone) {
+        if (statusEl) { statusEl.textContent = 'Mastered'; statusEl.className = 'objective-status mastered'; }
+        mastered++;
+      } else if (pct >= 70) {
+        if (statusEl) { statusEl.textContent = pct + '%'; statusEl.className = 'objective-status good'; }
+      } else {
+        if (statusEl) { statusEl.textContent = pct + '%'; statusEl.className = 'objective-status needs-work'; }
+      }
+      var correctPct = (correct / total * 100).toFixed(1);
+      var incorrectPct = ((answered - correct) / total * 100).toFixed(1);
+      if (barEl) {
+        barEl.innerHTML = '<div class="section-bar-correct" style="width:' + correctPct + '%"></div>' +
+          '<div class="section-bar-incorrect" style="width:' + incorrectPct + '%"></div>';
+      }
+      if (scoreEl) scoreEl.textContent = correct + '/' + total + ' correct';
+    }
+  });
+
+  document.getElementById('obj-mastered').textContent = mastered;
+  document.getElementById('obj-progress').value = mastered;
+}
+
+function filterObjectives(value, el) {
+  document.querySelectorAll('.filter-chip[data-filter="obj-section"]').forEach(function(c) {
+    c.classList.toggle('active', c.dataset.value === value);
+  });
+  document.querySelectorAll('.objective-card').forEach(function(card) {
+    if (value === 'all' || card.dataset.section === value) {
+      card.style.display = '';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+
+computeObjectiveStats();
+</script>
+{% endblock %}

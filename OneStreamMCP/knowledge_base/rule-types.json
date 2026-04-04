@@ -1,0 +1,366 @@
+{
+    "version": "8.x-9.x",
+    "ruleTypes": {
+        "Finance": {
+            "description": "Financial calculations, consolidation logic, and custom calc routines",
+            "xmlFile": "FinanceRules.xml",
+            "entryPoint": {
+                "cs": "public object Main(SessionInfo si, BRGlobals globals, FinanceRulesApi api, FinanceRulesArgs args)"
+            },
+            "namespace": "OneStream.BusinessRule.Finance.{RuleName}",
+            "argsClass": "FinanceRulesArgs",
+            "argsProperties": {
+                "FunctionType": "FinanceFunctionType enum - determines which function to execute",
+                "CustomCalculateName": "Name of custom calculate when FunctionType is CustomCalculate",
+                "MemberListName": "Name of member list when FunctionType is CustomMemberList"
+            },
+            "apiClass": "FinanceRulesApi",
+            "apiProperties": {
+                "Data": "Data operations (GetDataCell, SetDataCell, GetDataBuffer, etc.)",
+                "Members": "Member operations (GetMember, GetMemberId, GetDescendants, etc.)",
+                "Pov": "Current Point of View (Entity, Account, Time, Scenario, etc.)",
+                "LogMessage": "Log a message for debugging"
+            },
+            "functionTypes": [
+                "Calculate", "CustomCalculate", "Consolidate", "Validate", "NoInput",
+                "ConditionalInput", "Confirmation", "FxRate", "CustomMemberList",
+                "DataCellDetail", "MemberListHeaders", "MemberList", "ReadSourceDataRecords"
+            ],
+            "commonMethods": [
+                "api.Data.GetDataCell()", "api.Data.SetCalculatedCell()", "api.Data.GetDataBufferUsingFormula()",
+                "api.Data.SetDataCell()", "api.Data.GetDataBuffer()", "api.Data.Calculate()",
+                "api.Data.ConvertDataBufferExtendedMembers()", "api.Data.GetExpressionDestinationInfo()",
+                "api.Members.GetMemberId()", "api.Members.GetMember()", "api.Members.GetDescendants()",
+                "api.Members.GetChildren()", "api.Members.GetBaseMembers()",
+                "api.Pov.Account.Name", "api.Pov.Entity.Name", "api.Pov.Time.Name",
+                "api.LogMessage()", "globals.DataCache",
+                "BRApi.Database.ExecuteSql()", "BRApi.ErrorLog.LogMessage()"
+            ],
+            "codeTemplate": "if (args.FunctionType == FinanceFunctionType.Calculate)\n{\n    string accountName = api.Pov.Account.Name;\n    // Your calculation logic here\n    api.Data.SetCalculatedCell(result);\n}"
+        },
+        "Extender": {
+            "description": "Data management, validation, and business process automation",
+            "xmlFile": "ExtensibilityRules.xml",
+            "entryPoint": {
+                "cs": "public object Main(SessionInfo si, BRGlobals globals, object api, ExtenderArgs args)"
+            },
+            "namespace": "OneStream.BusinessRule.Extender.{RuleName}",
+            "argsClass": "ExtenderArgs",
+            "argsProperties": {
+                "FunctionName": "String identifying the function to execute (custom per rule)",
+                "NameValuePairs": "Dictionary<string,string> of parameters passed to the rule",
+                "Api": "Object reference to the calling API"
+            },
+            "apiClass": "Object (untyped - use BRApi directly)",
+            "apiProperties": {},
+            "functionTypes": ["Custom (determined by FunctionName string parameter)"],
+            "commonMethods": [
+                "BRApi.Database.ExecuteSql()", "BRApi.Database.CreateApplicationDbConnInfo()",
+                "BRApi.Database.CreateFrameworkDbConnInfo()", "BRApi.ErrorLog.LogMessage()",
+                "BRApi.Finance.Data.GetDataCell()", "BRApi.Finance.Members.GetMember()",
+                "BRApi.Security.Authorization.GetUser()", "BRApi.Workflow.General.GetWorkflowUnitInfo()",
+                "args.NameValuePairs[\"key\"]", "args.FunctionName"
+            ],
+            "codeTemplate": "string funcName = args.FunctionName;\nvar nvPairs = args.NameValuePairs;\n\nswitch (funcName)\n{\n    case \"MyFunction\":\n        // Your logic here\n        break;\n}\n\nreturn null;"
+        },
+        "Connector": {
+            "description": "Data source connections for external systems and databases",
+            "xmlFile": "DataSources.xml",
+            "entryPoint": {
+                "cs": "public object Main(SessionInfo si, BRGlobals globals, object api, ConnectorArgs args)"
+            },
+            "namespace": "OneStream.BusinessRule.Connector.{RuleName}",
+            "argsClass": "ConnectorArgs",
+            "argsProperties": {
+                "ActionType": "ConnectorActionTypes enum (GetData, SetData, GetFieldList)",
+                "NameValuePairs": "Dictionary of parameters",
+                "DataTable": "DataTable for SetData operations"
+            },
+            "apiClass": "Object",
+            "apiProperties": {},
+            "functionTypes": ["GetData", "SetData", "GetFieldList", "QueryInterface", "Initialize"],
+            "commonMethods": [
+                "BRApi.Database.ExecuteSql()", "BRApi.Database.CreateApplicationDbConnInfo()",
+                "BRApi.ErrorLog.LogMessage()", "args.ActionType", "args.NameValuePairs"
+            ],
+            "codeTemplate": "switch (args.ActionType)\n{\n    case ConnectorActionTypes.GetData:\n        // Return DataTable with data\n        var dt = new DataTable();\n        return dt;\n    case ConnectorActionTypes.GetFieldList:\n        // Return field definitions\n        return null;\n}"
+        },
+        "Parser": {
+            "description": "Custom data parsing and transformation logic for data integration",
+            "xmlFile": "DataSources.xml",
+            "entryPoint": {
+                "cs": "public object Main(SessionInfo si, BRGlobals globals, object api, ParserArgs args)"
+            },
+            "namespace": "OneStream.BusinessRule.Parser.{RuleName}",
+            "argsClass": "ParserArgs",
+            "argsProperties": {
+                "Value": "The source value to parse/transform",
+                "ColumnName": "Name of the column being parsed",
+                "RowValues": "Dictionary of all values in the current row"
+            },
+            "apiClass": "Object",
+            "apiProperties": {},
+            "functionTypes": ["ParseRecord", "GetFieldList", "Initialize"],
+            "commonMethods": [
+                "args.Value", "args.ColumnName", "args.RowValues",
+                "BRApi.ErrorLog.LogMessage()"
+            ],
+            "codeTemplate": "string sourceValue = args.Value;\nstring transformedValue = string.Empty;\n\nif (!string.IsNullOrEmpty(sourceValue))\n{\n    transformedValue = sourceValue.Replace(\"-\", \"\").Trim();\n}\n\nreturn transformedValue;"
+        },
+        "DashboardExtender": {
+            "description": "Dashboard event handlers for button clicks and control interactions",
+            "xmlFile": "ApplicationWorkspaces.xml",
+            "entryPoint": {
+                "cs": "public object Main(SessionInfo si, BRGlobals globals, object api, DashboardExtenderArgs args)"
+            },
+            "namespace": "OneStream.BusinessRule.DashboardExtender.{RuleName}",
+            "argsClass": "DashboardExtenderArgs",
+            "argsProperties": {
+                "FunctionType": "DashboardExtenderFunctionType enum",
+                "FunctionName": "Custom function name string",
+                "NameValuePairs": "Dictionary of dashboard parameters",
+                "DashboardName": "Name of the current dashboard"
+            },
+            "apiClass": "Object",
+            "apiProperties": {},
+            "functionTypes": ["LoadDashboard", "ComponentSelectionChanged", "SqlTableEditorSaveData", "Custom"],
+            "commonMethods": [
+                "args.FunctionType", "args.FunctionName", "args.NameValuePairs",
+                "BRApi.Database.ExecuteSql()", "BRApi.ErrorLog.LogMessage()",
+                "BRApi.Dashboards.Dashboards.GetDashboard()",
+                "New XFLoadDashboardTaskResult()", "New XFSelectionChangedTaskResult()"
+            ],
+            "codeTemplate": "if (args.FunctionType == DashboardExtenderFunctionType.LoadDashboard)\n{\n    var taskResult = new XFLoadDashboardTaskResult();\n    // Configure dashboard on load\n    return taskResult;\n}"
+        },
+        "DashboardDataSet": {
+            "description": "Dashboard data queries and data table population logic",
+            "xmlFile": "ApplicationWorkspaces.xml",
+            "entryPoint": {
+                "cs": "public object Main(SessionInfo si, BRGlobals globals, object api, DashboardDataSetArgs args)"
+            },
+            "namespace": "OneStream.BusinessRule.DashboardDataSet.{RuleName}",
+            "argsClass": "DashboardDataSetArgs",
+            "argsProperties": {
+                "NameValuePairs": "Dictionary of parameters from dashboard",
+                "DataSetName": "Name of the dataset being requested"
+            },
+            "apiClass": "Object",
+            "apiProperties": {},
+            "functionTypes": ["GetDataSet", "GetAdHocDataSet"],
+            "commonMethods": [
+                "BRApi.Database.ExecuteSql()", "BRApi.Database.CreateApplicationDbConnInfo()",
+                "BRApi.ErrorLog.LogMessage()", "args.NameValuePairs",
+                "New DataTable()", "dt.Columns.Add()", "dt.Rows.Add()"
+            ],
+            "codeTemplate": "var dt = new DataTable();\ndt.Columns.Add(\"Account\", typeof(string));\ndt.Columns.Add(\"Amount\", typeof(decimal));\n\n// Populate from SQL or BRApi\nstring sql = \"SELECT Account, Amount FROM MyTable\";\ndt = BRApi.Database.ExecuteSql(si, sql, true);\n\nreturn dt;"
+        },
+        "DashboardStringFunction": {
+            "description": "Dashboard parameter generation and dynamic string values",
+            "xmlFile": "ApplicationWorkspaces.xml",
+            "entryPoint": {
+                "cs": "public object Main(SessionInfo si, BRGlobals globals, object api, DashboardStringFunctionArgs args)"
+            },
+            "namespace": "OneStream.BusinessRule.DashboardStringFunction.{RuleName}",
+            "argsClass": "DashboardStringFunctionArgs",
+            "argsProperties": {
+                "FunctionName": "Name of the string function requested",
+                "NameValuePairs": "Dictionary of dashboard parameters"
+            },
+            "apiClass": "Object",
+            "apiProperties": {},
+            "functionTypes": ["GetString"],
+            "commonMethods": [
+                "args.FunctionName", "args.NameValuePairs",
+                "BRApi.Database.ExecuteSql()", "BRApi.ErrorLog.LogMessage()"
+            ],
+            "codeTemplate": "string result = string.Empty;\n\nswitch (args.FunctionName)\n{\n    case \"GetEntityList\":\n        result = \"Entity1,Entity2,Entity3\";\n        break;\n    case \"GetTimeFilter\":\n        result = \"2024M1:2024M12\";\n        break;\n}\n\nreturn result;"
+        },
+        "SmartIntegrationFunction": {
+            "description": "Smart Integration custom functions for data workflows",
+            "xmlFile": "SmartIntegration.xml",
+            "entryPoint": {
+                "cs": "public object Main(SessionInfo si, BRGlobals globals, object api, SmartIntegrationFunctionArgs args)"
+            },
+            "namespace": "OneStream.BusinessRule.SmartIntegrationFunction.{RuleName}",
+            "argsClass": "SmartIntegrationFunctionArgs",
+            "argsProperties": {
+                "FunctionName": "Name of the integration function",
+                "NameValuePairs": "Dictionary of parameters"
+            },
+            "apiClass": "Object",
+            "apiProperties": {},
+            "functionTypes": ["GetSourceData", "TransformData", "ValidateData"],
+            "commonMethods": [
+                "BRApi.Database.ExecuteSql()", "BRApi.ErrorLog.LogMessage()",
+                "args.FunctionName", "args.NameValuePairs"
+            ],
+            "codeTemplate": "switch (args.FunctionName)\n{\n    case \"GetSourceData\":\n        // Return DataTable with source data\n        return BRApi.Database.ExecuteSql(si, \"SELECT * FROM SourceTable\", true);\n}\nreturn null;"
+        },
+        "CubeViewExtender": {
+            "description": "Cube view formatting and display logic customization",
+            "xmlFile": "CubeViews.xml",
+            "entryPoint": {
+                "cs": "public object Main(SessionInfo si, BRGlobals globals, object api, CubeViewExtenderArgs args)"
+            },
+            "namespace": "OneStream.BusinessRule.CubeViewExtender.{RuleName}",
+            "argsClass": "CubeViewExtenderArgs",
+            "argsProperties": {
+                "FunctionName": "Name of the function to execute",
+                "CubeViewName": "Name of the cube view"
+            },
+            "apiClass": "Object",
+            "apiProperties": {},
+            "functionTypes": ["Custom"],
+            "commonMethods": [
+                "BRApi.Finance.Data.GetDataCell()", "BRApi.ErrorLog.LogMessage()",
+                "args.FunctionName", "args.CubeViewName"
+            ],
+            "codeTemplate": "// Cube view extender logic\nreturn null;"
+        },
+        "ConditionalRule": {
+            "description": "Conditional mapping logic for data transformation",
+            "xmlFile": "TransformationRules.xml",
+            "entryPoint": {
+                "cs": "public object Main(SessionInfo si, BRGlobals globals, object api, ConditionalRuleArgs args)"
+            },
+            "namespace": "OneStream.BusinessRule.ConditionalRule.{RuleName}",
+            "argsClass": "ConditionalRuleArgs",
+            "argsProperties": {
+                "SourceValue": "The source value to evaluate",
+                "ColumnName": "The column being mapped"
+            },
+            "apiClass": "Object",
+            "apiProperties": {},
+            "functionTypes": ["Evaluate"],
+            "commonMethods": [
+                "args.SourceValue", "args.ColumnName",
+                "BRApi.ErrorLog.LogMessage()"
+            ],
+            "codeTemplate": "string sourceVal = args.SourceValue;\nstring result = string.Empty;\n\n// Map source values to target\nswitch (sourceVal)\n{\n    case \"SRC1\": result = \"TGT1\"; break;\n    case \"SRC2\": result = \"TGT2\"; break;\n    default: result = sourceVal; break;\n}\n\nreturn result;"
+        },
+        "TransformationRule": {
+            "description": "Data transformation and mapping rules",
+            "xmlFile": "TransformationRules.xml",
+            "entryPoint": {
+                "cs": "public object Main(SessionInfo si, BRGlobals globals, object api, TransformationRuleArgs args)"
+            },
+            "namespace": "OneStream.BusinessRule.TransformationRule.{RuleName}",
+            "argsClass": "TransformationRuleArgs",
+            "argsProperties": {},
+            "apiClass": "Object",
+            "apiProperties": {},
+            "functionTypes": ["Transform"],
+            "commonMethods": [
+                "BRApi.Database.ExecuteSql()", "BRApi.ErrorLog.LogMessage()"
+            ],
+            "codeTemplate": "// Transformation rule logic\nreturn null;"
+        },
+        "DataQualityEventHandler": {
+            "description": "Data quality workflow event handlers",
+            "xmlFile": "ExtensibilityRules.xml",
+            "entryPoint": {
+                "cs": "public object Main(SessionInfo si, BRGlobals globals, object api, DataQualityEventHandlerArgs args)"
+            },
+            "namespace": "OneStream.BusinessRule.DataQualityEventHandler.{RuleName}",
+            "argsClass": "DataQualityEventHandlerArgs",
+            "argsProperties": {
+                "OperationType": "The data quality operation being performed"
+            },
+            "apiClass": "Object",
+            "apiProperties": {},
+            "functionTypes": ["Custom"],
+            "commonMethods": [
+                "BRApi.ErrorLog.LogMessage()", "BRApi.Database.ExecuteSql()"
+            ],
+            "codeTemplate": "// Data quality event handler logic\nreturn null;"
+        },
+        "TransformationEventHandler": {
+            "description": "Transformation process event handlers",
+            "xmlFile": "ExtensibilityRules.xml",
+            "entryPoint": {
+                "cs": "public object Main(SessionInfo si, BRGlobals globals, object api, TransformationEventHandlerArgs args)"
+            },
+            "namespace": "OneStream.BusinessRule.TransformationEventHandler.{RuleName}",
+            "argsClass": "TransformationEventHandlerArgs",
+            "argsProperties": {},
+            "apiClass": "Object",
+            "apiProperties": {},
+            "functionTypes": ["Custom"],
+            "commonMethods": [
+                "BRApi.ErrorLog.LogMessage()", "BRApi.Database.ExecuteSql()"
+            ],
+            "codeTemplate": "// Transformation event handler logic\nreturn null;"
+        },
+        "DataManagementEventHandler": {
+            "description": "Data management step event handlers",
+            "xmlFile": "ExtensibilityRules.xml",
+            "entryPoint": {
+                "cs": "public object Main(SessionInfo si, BRGlobals globals, object api, DataManagementEventHandlerArgs args)"
+            },
+            "namespace": "OneStream.BusinessRule.DataManagementEventHandler.{RuleName}",
+            "argsClass": "DataManagementEventHandlerArgs",
+            "argsProperties": {
+                "OperationType": "DataManagementOperationType enum (ExportData, ClearData, CopyData, etc.)"
+            },
+            "apiClass": "Object",
+            "apiProperties": {},
+            "functionTypes": ["Custom"],
+            "commonMethods": [
+                "args.OperationType", "BRApi.ErrorLog.LogMessage()", "BRApi.Database.ExecuteSql()"
+            ],
+            "codeTemplate": "switch (args.OperationType)\n{\n    case DataManagementOperationType.ExportData:\n        // Handle export\n        break;\n    case DataManagementOperationType.ClearData:\n        // Handle clear\n        break;\n}\nreturn null;"
+        },
+        "FormsEventHandler": {
+            "description": "Form workflow and submission event handlers",
+            "xmlFile": "ExtensibilityRules.xml",
+            "entryPoint": {
+                "cs": "public object Main(SessionInfo si, BRGlobals globals, object api, FormsEventHandlerArgs args)"
+            },
+            "namespace": "OneStream.BusinessRule.FormsEventHandler.{RuleName}",
+            "argsClass": "FormsEventHandlerArgs",
+            "argsProperties": {},
+            "apiClass": "Object",
+            "apiProperties": {},
+            "functionTypes": ["Custom"],
+            "commonMethods": [
+                "BRApi.ErrorLog.LogMessage()", "BRApi.Database.ExecuteSql()"
+            ],
+            "codeTemplate": "// Forms event handler logic\nreturn null;"
+        },
+        "WcfEventHandler": {
+            "description": "WCF service event handlers for external integrations",
+            "xmlFile": "ExtensibilityRules.xml",
+            "entryPoint": {
+                "cs": "public object Main(SessionInfo si, BRGlobals globals, object api, WcfEventHandlerArgs args)"
+            },
+            "namespace": "OneStream.BusinessRule.WcfEventHandler.{RuleName}",
+            "argsClass": "WcfEventHandlerArgs",
+            "argsProperties": {},
+            "apiClass": "Object",
+            "apiProperties": {},
+            "functionTypes": ["Custom"],
+            "commonMethods": [
+                "BRApi.ErrorLog.LogMessage()", "BRApi.Database.ExecuteSql()"
+            ],
+            "codeTemplate": "// WCF event handler logic\nreturn null;"
+        },
+        "Spreadsheet": {
+            "description": "Spreadsheet table views and data display logic",
+            "xmlFile": "ApplicationWorkspaces.xml",
+            "entryPoint": {
+                "cs": "public object Main(SessionInfo si, BRGlobals globals, object api, SpreadsheetArgs args)"
+            },
+            "namespace": "OneStream.BusinessRule.Spreadsheet.{RuleName}",
+            "argsClass": "SpreadsheetArgs",
+            "argsProperties": {},
+            "apiClass": "Object",
+            "apiProperties": {},
+            "functionTypes": ["Custom"],
+            "commonMethods": [
+                "BRApi.Database.ExecuteSql()", "BRApi.ErrorLog.LogMessage()",
+                "New DataTable()"
+            ],
+            "codeTemplate": "// Spreadsheet rule logic\nvar dt = new DataTable();\nreturn dt;"
+        }
+    }
+}

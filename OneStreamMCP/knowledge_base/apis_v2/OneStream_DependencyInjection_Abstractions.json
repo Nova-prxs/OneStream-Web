@@ -1,0 +1,94 @@
+{
+  "namespace": "OneStream.DependencyInjection.Abstractions",
+  "generated_at": "2025-12-08T19:28:52.054780",
+  "statistics": {
+    "classes": 0,
+    "interfaces": 2,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 0,
+    "total_methods": 2,
+    "total_properties": 0
+  },
+  "classes": [],
+  "interfaces": [
+    {
+      "name": "IIocServicePlugin",
+      "namespace": "OneStream.DependencyInjection.Abstractions",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "ConfigureServices",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "services",
+              "type": "IServiceCollection",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Configures services",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/DependencyInjection/Abstractions/IIocServicePlugin.cs",
+      "source_code": "public interface IIocServicePlugin\n{\n\tvoid ConfigureServices(IServiceCollection services);\n}"
+    },
+    {
+      "name": "IServiceProviderResolver",
+      "namespace": "OneStream.DependencyInjection.Abstractions",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "GetServiceProvider",
+          "return_type": "IServiceProvider",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Gets service provider",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/DependencyInjection/Abstractions/IServiceProviderResolver.cs",
+      "source_code": "public interface IServiceProviderResolver\n{\n\tIServiceProvider GetServiceProvider();\n}"
+    }
+  ],
+  "structs": [],
+  "delegates": [],
+  "enums": []
+}

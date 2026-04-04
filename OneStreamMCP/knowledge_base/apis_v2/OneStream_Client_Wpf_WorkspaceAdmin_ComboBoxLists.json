@@ -1,0 +1,197 @@
+{
+  "namespace": "OneStream.Client.Wpf.WorkspaceAdmin.ComboBoxLists",
+  "generated_at": "2025-12-08T19:28:51.957634",
+  "statistics": {
+    "classes": 1,
+    "interfaces": 0,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 0,
+    "total_methods": 7,
+    "total_properties": 0
+  },
+  "classes": [
+    {
+      "name": "ScrollPositionOptionComboBoxList",
+      "namespace": "OneStream.Client.Wpf.WorkspaceAdmin.ComboBoxLists",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "GetItems",
+          "return_type": "List<PropertyGridComboBoxItem>",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Gets items",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "PropertyGridComboBoxItem",
+          "return_type": "PropertyGridComboBoxItem",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "ScrollPositionOptions.Default",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "GeneralUIStrings.DefaultBeginning",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Propertys grid combo box item",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "PropertyGridComboBoxItem",
+          "return_type": ", new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "ScrollPositionOptions.End",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "GeneralUIStrings.End",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Propertys grid combo box item",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "PropertyGridComboBoxItem",
+          "return_type": ", new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "ScrollPositionOptions.SaveCurrentPosition",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "GeneralUIStrings.SaveCurrentPosition",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Propertys grid combo box item",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "GetItem",
+          "return_type": "PropertyGridComboBoxItem",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "scrollPositionOption",
+              "type": "ScrollPositionOptions",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets item",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "innerException",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "XFException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "innerException",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Xs f exception",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Wpf/WorkspaceAdmin/ComboBoxLists/ScrollPositionOptionComboBoxList.cs"
+    }
+  ],
+  "interfaces": [],
+  "structs": [],
+  "delegates": [],
+  "enums": []
+}

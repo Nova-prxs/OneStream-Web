@@ -1,0 +1,76 @@
+{
+  "namespace": "OneStream.Shared.Wcf.XFMenuDataSetHelper",
+  "generated_at": "2025-12-08T19:28:52.407879",
+  "statistics": {
+    "classes": 3,
+    "interfaces": 0,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 0,
+    "total_methods": 0,
+    "total_properties": 0
+  },
+  "classes": [
+    {
+      "name": "TableNames",
+      "namespace": "OneStream.Shared.Wcf.XFMenuDataSetHelper",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/XFMenuDataSetHelper.cs"
+    },
+    {
+      "name": "MenuItemColumnNames",
+      "namespace": "OneStream.Shared.Wcf.XFMenuDataSetHelper",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/XFMenuDataSetHelper.cs"
+    },
+    {
+      "name": "RelationshipColumnNames",
+      "namespace": "OneStream.Shared.Wcf.XFMenuDataSetHelper",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/XFMenuDataSetHelper.cs"
+    }
+  ],
+  "interfaces": [],
+  "structs": [],
+  "delegates": [],
+  "enums": []
+}

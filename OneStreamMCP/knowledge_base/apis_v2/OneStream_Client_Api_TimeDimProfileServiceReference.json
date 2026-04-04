@@ -1,0 +1,5080 @@
+{
+  "namespace": "OneStream.Client.Api.TimeDimProfileServiceReference",
+  "generated_at": "2025-12-08T19:28:51.327201",
+  "statistics": {
+    "classes": 7,
+    "interfaces": 1,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 0,
+    "total_methods": 161,
+    "total_properties": 0
+  },
+  "classes": [
+    {
+      "name": "GetTimeDimProfileSummaryInfosCompletedEventArgs",
+      "namespace": "OneStream.Client.Api.TimeDimProfileServiceReference",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "AsyncCompletedEventArgs",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "results",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "exception",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cancelled",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [
+        {
+          "name": "RaiseExceptionIfNecessary",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Raises exception if necessary",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Api/TimeDimProfileServiceReference/GetTimeDimProfileSummaryInfosCompletedEventArgs.cs",
+      "source_code": "public class GetTimeDimProfileSummaryInfosCompletedEventArgs : AsyncCompletedEventArgs\n{\n\tprivate object[] results;\n\n\tpublic List<XFObject> Result\n\t{\n\t\tget\n\t\t{\n\t\t\tRaiseExceptionIfNecessary();\n\t\t\treturn (List<XFObject>)results[0];\n\t\t}\n\t}\n\n\tpublic GetTimeDimProfileSummaryInfosCompletedEventArgs(object[] results, Exception exception, bool cancelled, object userState)\n\t\t: base(exception, cancelled, userState)\n\t{\n\t\tthis.results = results;\n\t}\n}"
+    },
+    {
+      "name": "GetTimeDimProfileUsingNameCompletedEventArgs",
+      "namespace": "OneStream.Client.Api.TimeDimProfileServiceReference",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "AsyncCompletedEventArgs",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "results",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "exception",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cancelled",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [
+        {
+          "name": "RaiseExceptionIfNecessary",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Raises exception if necessary",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Api/TimeDimProfileServiceReference/GetTimeDimProfileUsingNameCompletedEventArgs.cs",
+      "source_code": "public class GetTimeDimProfileUsingNameCompletedEventArgs : AsyncCompletedEventArgs\n{\n\tprivate object[] results;\n\n\tpublic TimeDimProfile Result\n\t{\n\t\tget\n\t\t{\n\t\t\tRaiseExceptionIfNecessary();\n\t\t\treturn (TimeDimProfile)results[0];\n\t\t}\n\t}\n\n\tpublic GetTimeDimProfileUsingNameCompletedEventArgs(object[] results, Exception exception, bool cancelled, object userState)\n\t\t: base(exception, cancelled, userState)\n\t{\n\t\tthis.results = results;\n\t}\n}"
+    },
+    {
+      "name": "GetTimeDimProfileCompletedEventArgs",
+      "namespace": "OneStream.Client.Api.TimeDimProfileServiceReference",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "AsyncCompletedEventArgs",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "results",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "exception",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cancelled",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [
+        {
+          "name": "RaiseExceptionIfNecessary",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Raises exception if necessary",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Api/TimeDimProfileServiceReference/GetTimeDimProfileCompletedEventArgs.cs",
+      "source_code": "public class GetTimeDimProfileCompletedEventArgs : AsyncCompletedEventArgs\n{\n\tprivate object[] results;\n\n\tpublic TimeDimProfile Result\n\t{\n\t\tget\n\t\t{\n\t\t\tRaiseExceptionIfNecessary();\n\t\t\treturn (TimeDimProfile)results[0];\n\t\t}\n\t}\n\n\tpublic GetTimeDimProfileCompletedEventArgs(object[] results, Exception exception, bool cancelled, object userState)\n\t\t: base(exception, cancelled, userState)\n\t{\n\t\tthis.results = results;\n\t}\n}"
+    },
+    {
+      "name": "SaveTimeDimProfileCompletedEventArgs",
+      "namespace": "OneStream.Client.Api.TimeDimProfileServiceReference",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "AsyncCompletedEventArgs",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "results",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "exception",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cancelled",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [
+        {
+          "name": "RaiseExceptionIfNecessary",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Raises exception if necessary",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Api/TimeDimProfileServiceReference/SaveTimeDimProfileCompletedEventArgs.cs",
+      "source_code": "public class SaveTimeDimProfileCompletedEventArgs : AsyncCompletedEventArgs\n{\n\tprivate object[] results;\n\n\tpublic Guid Result\n\t{\n\t\tget\n\t\t{\n\t\t\tRaiseExceptionIfNecessary();\n\t\t\treturn (Guid)results[0];\n\t\t}\n\t}\n\n\tpublic SaveTimeDimProfileCompletedEventArgs(object[] results, Exception exception, bool cancelled, object userState)\n\t\t: base(exception, cancelled, userState)\n\t{\n\t\tthis.results = results;\n\t}\n}"
+    },
+    {
+      "name": "RenameTimeDimProfileCompletedEventArgs",
+      "namespace": "OneStream.Client.Api.TimeDimProfileServiceReference",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "AsyncCompletedEventArgs",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "results",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "exception",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cancelled",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [
+        {
+          "name": "RaiseExceptionIfNecessary",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Raises exception if necessary",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Api/TimeDimProfileServiceReference/RenameTimeDimProfileCompletedEventArgs.cs",
+      "source_code": "public class RenameTimeDimProfileCompletedEventArgs : AsyncCompletedEventArgs\n{\n\tprivate object[] results;\n\n\tpublic XFObject Result\n\t{\n\t\tget\n\t\t{\n\t\t\tRaiseExceptionIfNecessary();\n\t\t\treturn (XFObject)results[0];\n\t\t}\n\t}\n\n\tpublic RenameTimeDimProfileCompletedEventArgs(object[] results, Exception exception, bool cancelled, object userState)\n\t\t: base(exception, cancelled, userState)\n\t{\n\t\tthis.results = results;\n\t}\n}"
+    },
+    {
+      "name": "GetTimeDimProfilesInitInfoCompletedEventArgs",
+      "namespace": "OneStream.Client.Api.TimeDimProfileServiceReference",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "AsyncCompletedEventArgs",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "results",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "exception",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cancelled",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [
+        {
+          "name": "RaiseExceptionIfNecessary",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Raises exception if necessary",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Api/TimeDimProfileServiceReference/GetTimeDimProfilesInitInfoCompletedEventArgs.cs",
+      "source_code": "public class GetTimeDimProfilesInitInfoCompletedEventArgs : AsyncCompletedEventArgs\n{\n\tprivate object[] results;\n\n\tpublic TimeDimProfilesInitInfo Result\n\t{\n\t\tget\n\t\t{\n\t\t\tRaiseExceptionIfNecessary();\n\t\t\treturn (TimeDimProfilesInitInfo)results[0];\n\t\t}\n\t}\n\n\tpublic GetTimeDimProfilesInitInfoCompletedEventArgs(object[] results, Exception exception, bool cancelled, object userState)\n\t\t: base(exception, cancelled, userState)\n\t{\n\t\tthis.results = results;\n\t}\n}"
+    },
+    {
+      "name": "TimeDimProfileServiceClient",
+      "namespace": "OneStream.Client.Api.TimeDimProfileServiceReference",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "ClientBase<ITimeDimProfileServiceClient>",
+      "interfaces": [
+        "ITimeDimProfileServiceClient",
+        "IDisposable",
+        "IApiClient"
+      ],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "httpClientFactory",
+              "type": "IAuthenticatedHttpClientFactory",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "baseServerUri",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [
+        {
+          "name": "GetTimeDimProfilesInitInfo",
+          "return_type": "TimeDimProfilesInitInfo",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "timeDimProfileNameToSelect",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets time dim profiles init info",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "SessionInfo",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Sessions info",
+          "generic_params": [],
+          "overloads": 7
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "ex",
+              "type": "AggregateException",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 7
+        },
+        {
+          "name": "BeginGetTimeDimProfilesInitInfo",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "timeDimProfileNameToSelect",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins get time dim profiles init info",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetTimeDimProfilesInitInfo",
+          "return_type": ">",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "timeDimProfileNameToSelect",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets time dim profiles init info",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "antecedent.Result",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 13
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "OnEndResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 13
+        },
+        {
+          "name": "AsyncOperationContinuation",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "result",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "asyncState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Asyncs operation continuation",
+          "generic_params": [],
+          "overloads": 7
+        },
+        {
+          "name": "EndGetTimeDimProfilesInitInfo",
+          "return_type": "TimeDimProfilesInitInfo",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends get time dim profiles init info",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnBeginGetTimeDimProfilesInitInfo",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "inValues",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            }
+          ],
+          "description": "Ons begin get time dim profiles init info",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnEndGetTimeDimProfilesInitInfo",
+          "return_type": "object[]",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end get time dim profiles init info",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnGetTimeDimProfilesInitInfoCompleted",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "state",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons get time dim profiles init info completed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetTimeDimProfilesInitInfoCompletedEventArgs",
+          "return_type": "this, new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "e.Results",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Error",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Cancelled",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.UserState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets time dim profiles init info completed event args",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetTimeDimProfilesInitInfoAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "timeDimProfileNameToSelect",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets time dim profiles init info async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "GetTimeDimProfilesInitInfoAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "timeDimProfileNameToSelect",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets time dim profiles init info async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "GetTimeDimProfilesInitInfoAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "timeDimProfileNameToSelect",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets time dim profiles init info async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "InvokeAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "onBeginGetTimeDimProfilesInitInfoDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "si",
+              "type": "new object[2] {",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "}",
+              "type": "timeDimProfileNameToSelect",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onEndGetTimeDimProfilesInitInfoDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onGetTimeDimProfilesInitInfoCompletedDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "userState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Invokes async",
+          "generic_params": [],
+          "overloads": 7
+        },
+        {
+          "name": "SaveTimeDimProfile",
+          "return_type": "Guid",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "timeDimProfile",
+              "type": "TimeDimProfile",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "isNew",
+              "type": "TriStateBool",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Saves time dim profile",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "SessionInfo",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Sessions info",
+          "generic_params": [],
+          "overloads": 7
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "ex",
+              "type": "AggregateException",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 7
+        },
+        {
+          "name": "BeginSaveTimeDimProfile",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "timeDimProfile",
+              "type": "TimeDimProfile",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "isNew",
+              "type": "TriStateBool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins save time dim profile",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "SaveTimeDimProfile",
+          "return_type": ">",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "timeDimProfile",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "isNew",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Saves time dim profile",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "antecedent.Result",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 13
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "OnEndResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 13
+        },
+        {
+          "name": "AsyncOperationContinuation",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "result",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "asyncState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Asyncs operation continuation",
+          "generic_params": [],
+          "overloads": 7
+        },
+        {
+          "name": "EndSaveTimeDimProfile",
+          "return_type": "Guid",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends save time dim profile",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnBeginSaveTimeDimProfile",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "inValues",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            }
+          ],
+          "description": "Ons begin save time dim profile",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnEndSaveTimeDimProfile",
+          "return_type": "object[]",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end save time dim profile",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnSaveTimeDimProfileCompleted",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "state",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons save time dim profile completed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "SaveTimeDimProfileCompletedEventArgs",
+          "return_type": "this, new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "e.Results",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Error",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Cancelled",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.UserState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Saves time dim profile completed event args",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "SaveTimeDimProfileAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "timeDimProfile",
+              "type": "TimeDimProfile",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "isNew",
+              "type": "TriStateBool",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Saves time dim profile async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "SaveTimeDimProfileAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "timeDimProfile",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "isNew",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Saves time dim profile async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "SaveTimeDimProfileAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "timeDimProfile",
+              "type": "TimeDimProfile",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "isNew",
+              "type": "TriStateBool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Saves time dim profile async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "InvokeAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "onBeginSaveTimeDimProfileDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "si",
+              "type": "new object[3] {",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "timeDimProfile",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "}",
+              "type": "isNew",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onEndSaveTimeDimProfileDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onSaveTimeDimProfileCompletedDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "userState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Invokes async",
+          "generic_params": [],
+          "overloads": 7
+        },
+        {
+          "name": "DeleteTimeDimProfile",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "uniqueID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Deletes time dim profile",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "SessionInfo",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Sessions info",
+          "generic_params": [],
+          "overloads": 7
+        },
+        {
+          "name": "PostAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "\"DeleteTimeDimProfile\"",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "requestDto",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Posts async",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "ex",
+              "type": "AggregateException",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 7
+        },
+        {
+          "name": "BeginDeleteTimeDimProfile",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "uniqueID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins delete time dim profile",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "DeleteTimeDimProfile",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "uniqueID",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Deletes time dim profile",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "OnEndResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 13
+        },
+        {
+          "name": "AsyncOperationContinuation",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "result",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "asyncState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Asyncs operation continuation",
+          "generic_params": [],
+          "overloads": 7
+        },
+        {
+          "name": "EndDeleteTimeDimProfile",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends delete time dim profile",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnBeginDeleteTimeDimProfile",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "inValues",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            }
+          ],
+          "description": "Ons begin delete time dim profile",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnEndDeleteTimeDimProfile",
+          "return_type": "object[]",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end delete time dim profile",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EndDeleteTimeDimProfile",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "result",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends delete time dim profile",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnDeleteTimeDimProfileCompleted",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "state",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons delete time dim profile completed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "AsyncCompletedEventArgs",
+          "return_type": "this, new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "e.Error",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Cancelled",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.UserState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Asyncs completed event args",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "DeleteTimeDimProfileAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "uniqueID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Deletes time dim profile async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "DeleteTimeDimProfileAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "uniqueID",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Deletes time dim profile async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "DeleteTimeDimProfileAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "uniqueID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Deletes time dim profile async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "InvokeAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "onBeginDeleteTimeDimProfileDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "si",
+              "type": "new object[2] {",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "}",
+              "type": "uniqueID",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onEndDeleteTimeDimProfileDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onDeleteTimeDimProfileCompletedDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "userState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Invokes async",
+          "generic_params": [],
+          "overloads": 7
+        },
+        {
+          "name": "RenameTimeDimProfile",
+          "return_type": "XFObject",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "uniqueID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "newName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Renames time dim profile",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "SessionInfo",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Sessions info",
+          "generic_params": [],
+          "overloads": 7
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "ex",
+              "type": "AggregateException",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 7
+        },
+        {
+          "name": "BeginRenameTimeDimProfile",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "uniqueID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "newName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins rename time dim profile",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "RenameTimeDimProfile",
+          "return_type": ">",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "uniqueID",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "newName",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Renames time dim profile",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "antecedent.Result",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 13
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "OnEndResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 13
+        },
+        {
+          "name": "AsyncOperationContinuation",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "result",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "asyncState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Asyncs operation continuation",
+          "generic_params": [],
+          "overloads": 7
+        },
+        {
+          "name": "EndRenameTimeDimProfile",
+          "return_type": "XFObject",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends rename time dim profile",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnBeginRenameTimeDimProfile",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "inValues",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            }
+          ],
+          "description": "Ons begin rename time dim profile",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnEndRenameTimeDimProfile",
+          "return_type": "object[]",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end rename time dim profile",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnRenameTimeDimProfileCompleted",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "state",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons rename time dim profile completed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "RenameTimeDimProfileCompletedEventArgs",
+          "return_type": "this, new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "e.Results",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Error",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Cancelled",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.UserState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Renames time dim profile completed event args",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "RenameTimeDimProfileAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "uniqueID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "newName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Renames time dim profile async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "RenameTimeDimProfileAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "uniqueID",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "newName",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Renames time dim profile async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "RenameTimeDimProfileAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "uniqueID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "newName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Renames time dim profile async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "InvokeAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "onBeginRenameTimeDimProfileDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "si",
+              "type": "new object[3] {",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "uniqueID",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "}",
+              "type": "newName",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onEndRenameTimeDimProfileDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onRenameTimeDimProfileCompletedDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "userState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Invokes async",
+          "generic_params": [],
+          "overloads": 7
+        },
+        {
+          "name": "GetTimeDimProfileSummaryInfos",
+          "return_type": "List<XFObject>",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets time dim profile summary infos",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "SessionInfo",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Sessions info",
+          "generic_params": [],
+          "overloads": 7
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "ex",
+              "type": "AggregateException",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 7
+        },
+        {
+          "name": "BeginGetTimeDimProfileSummaryInfos",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins get time dim profile summary infos",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetTimeDimProfileSummaryInfos",
+          "return_type": ">",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets time dim profile summary infos",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "antecedent.Result",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 13
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "OnEndResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 13
+        },
+        {
+          "name": "AsyncOperationContinuation",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "result",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "asyncState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Asyncs operation continuation",
+          "generic_params": [],
+          "overloads": 7
+        },
+        {
+          "name": "EndGetTimeDimProfileSummaryInfos",
+          "return_type": "List<XFObject>",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends get time dim profile summary infos",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnBeginGetTimeDimProfileSummaryInfos",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "inValues",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            }
+          ],
+          "description": "Ons begin get time dim profile summary infos",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnEndGetTimeDimProfileSummaryInfos",
+          "return_type": "object[]",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end get time dim profile summary infos",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnGetTimeDimProfileSummaryInfosCompleted",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "state",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons get time dim profile summary infos completed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetTimeDimProfileSummaryInfosCompletedEventArgs",
+          "return_type": "this, new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "e.Results",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Error",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Cancelled",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.UserState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets time dim profile summary infos completed event args",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetTimeDimProfileSummaryInfosAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets time dim profile summary infos async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "GetTimeDimProfileSummaryInfosAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets time dim profile summary infos async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "GetTimeDimProfileSummaryInfosAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets time dim profile summary infos async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "InvokeAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "onBeginGetTimeDimProfileSummaryInfosDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "}",
+              "type": "new object[1] { si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onEndGetTimeDimProfileSummaryInfosDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onGetTimeDimProfileSummaryInfosCompletedDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "userState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Invokes async",
+          "generic_params": [],
+          "overloads": 7
+        },
+        {
+          "name": "GetTimeDimProfile",
+          "return_type": "TimeDimProfile",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "uniqueID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets time dim profile",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "SessionInfo",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Sessions info",
+          "generic_params": [],
+          "overloads": 7
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "ex",
+              "type": "AggregateException",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 7
+        },
+        {
+          "name": "BeginGetTimeDimProfile",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "uniqueID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins get time dim profile",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetTimeDimProfile",
+          "return_type": ">",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "uniqueID",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets time dim profile",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "antecedent.Result",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 13
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "OnEndResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 13
+        },
+        {
+          "name": "AsyncOperationContinuation",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "result",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "asyncState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Asyncs operation continuation",
+          "generic_params": [],
+          "overloads": 7
+        },
+        {
+          "name": "EndGetTimeDimProfile",
+          "return_type": "TimeDimProfile",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends get time dim profile",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnBeginGetTimeDimProfile",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "inValues",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            }
+          ],
+          "description": "Ons begin get time dim profile",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnEndGetTimeDimProfile",
+          "return_type": "object[]",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end get time dim profile",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnGetTimeDimProfileCompleted",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "state",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons get time dim profile completed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetTimeDimProfileCompletedEventArgs",
+          "return_type": "this, new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "e.Results",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Error",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Cancelled",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.UserState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets time dim profile completed event args",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetTimeDimProfileAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "uniqueID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets time dim profile async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "GetTimeDimProfileAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "uniqueID",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets time dim profile async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "GetTimeDimProfileAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "uniqueID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets time dim profile async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "InvokeAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "onBeginGetTimeDimProfileDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "si",
+              "type": "new object[2] {",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "}",
+              "type": "uniqueID",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onEndGetTimeDimProfileDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onGetTimeDimProfileCompletedDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "userState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Invokes async",
+          "generic_params": [],
+          "overloads": 7
+        },
+        {
+          "name": "GetTimeDimProfileUsingName",
+          "return_type": "TimeDimProfile",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "name",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets time dim profile using name",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "SessionInfo",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Sessions info",
+          "generic_params": [],
+          "overloads": 7
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "ex",
+              "type": "AggregateException",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 7
+        },
+        {
+          "name": "BeginGetTimeDimProfileUsingName",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "name",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins get time dim profile using name",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetTimeDimProfileUsingName",
+          "return_type": ">",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "name",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets time dim profile using name",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "antecedent.Result",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 13
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "OnEndResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 13
+        },
+        {
+          "name": "AsyncOperationContinuation",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "result",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "asyncState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Asyncs operation continuation",
+          "generic_params": [],
+          "overloads": 7
+        },
+        {
+          "name": "EndGetTimeDimProfileUsingName",
+          "return_type": "TimeDimProfile",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends get time dim profile using name",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnBeginGetTimeDimProfileUsingName",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "inValues",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            }
+          ],
+          "description": "Ons begin get time dim profile using name",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnEndGetTimeDimProfileUsingName",
+          "return_type": "object[]",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end get time dim profile using name",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnGetTimeDimProfileUsingNameCompleted",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "state",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons get time dim profile using name completed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetTimeDimProfileUsingNameCompletedEventArgs",
+          "return_type": "this, new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "e.Results",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Error",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Cancelled",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.UserState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets time dim profile using name completed event args",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetTimeDimProfileUsingNameAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "name",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets time dim profile using name async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "GetTimeDimProfileUsingNameAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "name",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets time dim profile using name async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "GetTimeDimProfileUsingNameAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "name",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets time dim profile using name async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "InvokeAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "onBeginGetTimeDimProfileUsingNameDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "si",
+              "type": "new object[2] {",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "}",
+              "type": "name",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onEndGetTimeDimProfileUsingNameDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onGetTimeDimProfileUsingNameCompletedDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "userState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Invokes async",
+          "generic_params": [],
+          "overloads": 7
+        }
+      ],
+      "events": [
+        {
+          "name": "GetTimeDimProfilesInitInfoCompleted",
+          "type": "EventHandler<GetTimeDimProfilesInitInfoCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "SaveTimeDimProfileCompleted",
+          "type": "EventHandler<SaveTimeDimProfileCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "DeleteTimeDimProfileCompleted",
+          "type": "EventHandler<AsyncCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "RenameTimeDimProfileCompleted",
+          "type": "EventHandler<RenameTimeDimProfileCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "GetTimeDimProfileSummaryInfosCompleted",
+          "type": "EventHandler<GetTimeDimProfileSummaryInfosCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "GetTimeDimProfileCompleted",
+          "type": "EventHandler<GetTimeDimProfileCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "GetTimeDimProfileUsingNameCompleted",
+          "type": "EventHandler<GetTimeDimProfileUsingNameCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        }
+      ],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Api/TimeDimProfileServiceReference/TimeDimProfileServiceClient.cs"
+    }
+  ],
+  "interfaces": [
+    {
+      "name": "ITimeDimProfileServiceClient",
+      "namespace": "OneStream.Client.Api.TimeDimProfileServiceReference",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IDisposable",
+        "IApiClient"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "GetTimeDimProfilesInitInfo",
+          "return_type": "TimeDimProfilesInitInfo",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "timeDimProfileNameToSelect",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets time dim profiles init info",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "BeginGetTimeDimProfilesInitInfo",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "timeDimProfileNameToSelect",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins get time dim profiles init info",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EndGetTimeDimProfilesInitInfo",
+          "return_type": "TimeDimProfilesInitInfo",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends get time dim profiles init info",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetTimeDimProfilesInitInfoAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "timeDimProfileNameToSelect",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets time dim profiles init info async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "GetTimeDimProfilesInitInfoAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "timeDimProfileNameToSelect",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets time dim profiles init info async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "SaveTimeDimProfile",
+          "return_type": "Guid",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "timeDimProfile",
+              "type": "TimeDimProfile",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "isNew",
+              "type": "TriStateBool",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Saves time dim profile",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "BeginSaveTimeDimProfile",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "timeDimProfile",
+              "type": "TimeDimProfile",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "isNew",
+              "type": "TriStateBool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins save time dim profile",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EndSaveTimeDimProfile",
+          "return_type": "Guid",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends save time dim profile",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "SaveTimeDimProfileAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "timeDimProfile",
+              "type": "TimeDimProfile",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "isNew",
+              "type": "TriStateBool",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Saves time dim profile async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "SaveTimeDimProfileAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "timeDimProfile",
+              "type": "TimeDimProfile",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "isNew",
+              "type": "TriStateBool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Saves time dim profile async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "DeleteTimeDimProfile",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "uniqueID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Deletes time dim profile",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "BeginDeleteTimeDimProfile",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "uniqueID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins delete time dim profile",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EndDeleteTimeDimProfile",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends delete time dim profile",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "DeleteTimeDimProfileAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "uniqueID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Deletes time dim profile async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "DeleteTimeDimProfileAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "uniqueID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Deletes time dim profile async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "RenameTimeDimProfile",
+          "return_type": "XFObject",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "uniqueID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "newName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Renames time dim profile",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "BeginRenameTimeDimProfile",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "uniqueID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "newName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins rename time dim profile",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EndRenameTimeDimProfile",
+          "return_type": "XFObject",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends rename time dim profile",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "RenameTimeDimProfileAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "uniqueID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "newName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Renames time dim profile async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "RenameTimeDimProfileAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "uniqueID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "newName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Renames time dim profile async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "GetTimeDimProfileSummaryInfos",
+          "return_type": "List<XFObject>",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets time dim profile summary infos",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "BeginGetTimeDimProfileSummaryInfos",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins get time dim profile summary infos",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EndGetTimeDimProfileSummaryInfos",
+          "return_type": "List<XFObject>",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends get time dim profile summary infos",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetTimeDimProfileSummaryInfosAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets time dim profile summary infos async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "GetTimeDimProfileSummaryInfosAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets time dim profile summary infos async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "GetTimeDimProfile",
+          "return_type": "TimeDimProfile",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "uniqueID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets time dim profile",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "BeginGetTimeDimProfile",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "uniqueID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins get time dim profile",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EndGetTimeDimProfile",
+          "return_type": "TimeDimProfile",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends get time dim profile",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetTimeDimProfileAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "uniqueID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets time dim profile async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "GetTimeDimProfileAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "uniqueID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets time dim profile async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "GetTimeDimProfileUsingName",
+          "return_type": "TimeDimProfile",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "name",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets time dim profile using name",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "BeginGetTimeDimProfileUsingName",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "name",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins get time dim profile using name",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EndGetTimeDimProfileUsingName",
+          "return_type": "TimeDimProfile",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends get time dim profile using name",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetTimeDimProfileUsingNameAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "name",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets time dim profile using name async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "GetTimeDimProfileUsingNameAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "name",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets time dim profile using name async",
+          "generic_params": [],
+          "overloads": 2
+        }
+      ],
+      "events": [
+        {
+          "name": "GetTimeDimProfilesInitInfoCompleted",
+          "type": "EventHandler<GetTimeDimProfilesInitInfoCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "SaveTimeDimProfileCompleted",
+          "type": "EventHandler<SaveTimeDimProfileCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "DeleteTimeDimProfileCompleted",
+          "type": "EventHandler<AsyncCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "RenameTimeDimProfileCompleted",
+          "type": "EventHandler<RenameTimeDimProfileCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "GetTimeDimProfileSummaryInfosCompleted",
+          "type": "EventHandler<GetTimeDimProfileSummaryInfosCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "GetTimeDimProfileCompleted",
+          "type": "EventHandler<GetTimeDimProfileCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "GetTimeDimProfileUsingNameCompleted",
+          "type": "EventHandler<GetTimeDimProfileUsingNameCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        }
+      ],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Api/TimeDimProfileServiceReference/ITimeDimProfileServiceClient.cs",
+      "source_code": "public interface ITimeDimProfileServiceClient : IDisposable, IApiClient\n{\n\tevent EventHandler<GetTimeDimProfilesInitInfoCompletedEventArgs> GetTimeDimProfilesInitInfoCompleted;\n\n\tevent EventHandler<SaveTimeDimProfileCompletedEventArgs> SaveTimeDimProfileCompleted;\n\n\tevent EventHandler<AsyncCompletedEventArgs> DeleteTimeDimProfileCompleted;\n\n\tevent EventHandler<RenameTimeDimProfileCompletedEventArgs> RenameTimeDimProfileCompleted;\n\n\tevent EventHandler<GetTimeDimProfileSummaryInfosCompletedEventArgs> GetTimeDimProfileSummaryInfosCompleted;\n\n\tevent EventHandler<GetTimeDimProfileCompletedEventArgs> GetTimeDimProfileCompleted;\n\n\tevent EventHandler<GetTimeDimProfileUsingNameCompletedEventArgs> GetTimeDimProfileUsingNameCompleted;\n\n\tTimeDimProfilesInitInfo GetTimeDimProfilesInitInfo(SessionInfo si, string timeDimProfileNameToSelect);\n\n\tTask BeginGetTimeDimProfilesInitInfo(SessionInfo si, string timeDimProfileNameToSelect, object callback, object asyncState);\n\n\tTimeDimProfilesInitInfo EndGetTimeDimProfilesInitInfo(OnEndResult result);\n\n\tvoid GetTimeDimProfilesInitInfoAsync(SessionInfo si, string timeDimProfileNameToSelect);\n\n\tvoid GetTimeDimProfilesInitInfoAsync(SessionInfo si, string timeDimProfileNameToSelect, object userState);\n\n\tGuid SaveTimeDimProfile(SessionInfo si, TimeDimProfile timeDimProfile, TriStateBool isNew);\n\n\tTask BeginSaveTimeDimProfile(SessionInfo si, TimeDimProfile timeDimProfile, TriStateBool isNew, object callback, object asyncState);\n\n\tGuid EndSaveTimeDimProfile(OnEndResult result);\n\n\tvoid SaveTimeDimProfileAsync(SessionInfo si, TimeDimProfile timeDimProfile, TriStateBool isNew);\n\n\tvoid SaveTimeDimProfileAsync(SessionInfo si, TimeDimProfile timeDimProfile, TriStateBool isNew, object userState);\n\n\tvoid DeleteTimeDimProfile(SessionInfo si, Guid uniqueID);\n\n\tTask BeginDeleteTimeDimProfile(SessionInfo si, Guid uniqueID, object callback, object asyncState);\n\n\tvoid EndDeleteTimeDimProfile(OnEndResult result);\n\n\tvoid DeleteTimeDimProfileAsync(SessionInfo si, Guid uniqueID);\n\n\tvoid DeleteTimeDimProfileAsync(SessionInfo si, Guid uniqueID, object userState);\n\n\tXFObject RenameTimeDimProfile(SessionInfo si, Guid uniqueID, string newName);\n\n\tTask BeginRenameTimeDimProfile(SessionInfo si, Guid uniqueID, string newName, object callback, object asyncState);\n\n\tXFObject EndRenameTimeDimProfile(OnEndResult result);\n\n\tvoid RenameTimeDimProfileAsync(SessionInfo si, Guid uniqueID, string newName);\n\n\tvoid RenameTimeDimProfileAsync(SessionInfo si, Guid uniqueID, string newName, object userState);\n\n\tList<XFObject> GetTimeDimProfileSummaryInfos(SessionInfo si);\n\n\tTask BeginGetTimeDimProfileSummaryInfos(SessionInfo si, object callback, object asyncState);\n\n\tList<XFObject> EndGetTimeDimProfileSummaryInfos(OnEndResult result);\n\n\tvoid GetTimeDimProfileSummaryInfosAsync(SessionInfo si);\n\n\tvoid GetTimeDimProfileSummaryInfosAsync(SessionInfo si, object userState);\n\n\tTimeDimProfile GetTimeDimProfile(SessionInfo si, Guid uniqueID);\n\n\tTask BeginGetTimeDimProfile(SessionInfo si, Guid uniqueID, object callback, object asyncState);\n\n\tTimeDimProfile EndGetTimeDimProfile(OnEndResult result);\n\n\tvoid GetTimeDimProfileAsync(SessionInfo si, Guid uniqueID);\n\n\tvoid GetTimeDimProfileAsync(SessionInfo si, Guid uniqueID, object userState);\n\n\tTimeDimProfile GetTimeDimProfileUsingName(SessionInfo si, string name);\n\n\tTask BeginGetTimeDimProfileUsingName(SessionInfo si, string name, object callback, object asyncState);\n\n\tTimeDimProfile EndGetTimeDimProfileUsingName(OnEndResult result);\n\n\tvoid GetTimeDimProfileUsingNameAsync(SessionInfo si, string name);\n\n\tvoid GetTimeDimProfileUsingNameAsync(SessionInfo si, string name, object userState);\n}"
+    }
+  ],
+  "structs": [],
+  "delegates": [],
+  "enums": []
+}

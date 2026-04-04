@@ -1,0 +1,65 @@
+{
+  "namespace": "OneStream.Client.SharedUI.XFClientImageCacheHelper",
+  "generated_at": "2025-12-08T19:28:51.667007",
+  "statistics": {
+    "classes": 0,
+    "interfaces": 0,
+    "structs": 0,
+    "delegates": 1,
+    "enums": 1,
+    "total_methods": 1,
+    "total_properties": 0
+  },
+  "classes": [],
+  "interfaces": [],
+  "structs": [],
+  "delegates": [
+    {
+      "name": "OnAfterCreateCacheItemIfNecessaryDelegate",
+      "namespace": "OneStream.Client.SharedUI.XFClientImageCacheHelper",
+      "type": "delegate",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "Invoke",
+          "return_type": "void",
+          "parameters": [],
+          "access": "public",
+          "is_static": false,
+          "is_async": false,
+          "description": "Delegate invocation method returning void"
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/SharedUI/XFClientImageCacheHelper.cs"
+    }
+  ],
+  "enums": [
+    {
+      "name": "AjaxClientType",
+      "namespace": "OneStream.Client.SharedUI.XFClientImageCacheHelper",
+      "underlying_type": "int",
+      "is_flags": false,
+      "values": [
+        {
+          "name": "SystemServiceClient",
+          "value": 0
+        },
+        {
+          "name": "DashboardsAjaxService",
+          "value": 1
+        }
+      ],
+      "access": "public"
+    }
+  ]
+}

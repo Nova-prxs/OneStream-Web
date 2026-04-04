@@ -1,0 +1,52 @@
+{% extends "docs_base.html" %}
+
+{% block title %}Extension Guide — OneStream Docs{% endblock %}
+
+{% block content %}
+<hgroup>
+  <h1>Extension Guide</h1>
+  <p>Complete documentation for the OneStream AI Helper VS Code extension and MCP server</p>
+</hgroup>
+
+{% if categories.get('guide') %}
+<h2>Getting Started</h2>
+<div class="ext-card-grid">
+  {% for page in categories['guide'] %}
+  <a href="/docs/extension/{{ page.slug }}" class="ext-card">
+    <i class="ph ph-book-open"></i>
+    <span>{{ page.meta_title }}</span>
+    <i class="ph ph-arrow-right ext-card-arrow"></i>
+  </a>
+  {% endfor %}
+</div>
+{% endif %}
+
+{% if categories.get('features') %}
+<h2>Features</h2>
+<p>{{ stats.feature_count }} features for OneStream development inside VS Code.</p>
+<div class="ext-card-grid">
+  {% for page in categories['features'] %}
+  <a href="/docs/extension/{{ page.slug }}" class="ext-card">
+    <i class="ph ph-lightning"></i>
+    <span>{{ page.meta_title }}</span>
+    <i class="ph ph-arrow-right ext-card-arrow"></i>
+  </a>
+  {% endfor %}
+</div>
+{% endif %}
+
+{% if categories.get('mcp') %}
+<h2>MCP Server</h2>
+<p>{{ stats.mcp_tool_count }} tool categories for AI assistant integration.</p>
+<div class="ext-card-grid">
+  {% for page in categories['mcp'] %}
+  <a href="/docs/extension/{{ page.slug }}" class="ext-card">
+    <i class="ph ph-plug"></i>
+    <span>{{ page.meta_title }}</span>
+    <i class="ph ph-arrow-right ext-card-arrow"></i>
+  </a>
+  {% endfor %}
+</div>
+{% endif %}
+
+{% endblock %}

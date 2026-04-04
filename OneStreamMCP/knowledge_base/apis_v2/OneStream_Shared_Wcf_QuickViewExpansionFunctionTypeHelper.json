@@ -1,0 +1,93 @@
+{
+  "namespace": "OneStream.Shared.Wcf.QuickViewExpansionFunctionTypeHelper",
+  "generated_at": "2025-12-08T19:28:52.398866",
+  "statistics": {
+    "classes": 1,
+    "interfaces": 0,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 0,
+    "total_methods": 2,
+    "total_properties": 0
+  },
+  "classes": [
+    {
+      "name": "ExpansionItem",
+      "namespace": "OneStream.Shared.Wcf.QuickViewExpansionFunctionTypeHelper",
+      "type": "class",
+      "modifiers": [
+        "private"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "memberNameWithBrackets",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "indentLevel",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [
+        {
+          "name": "List",
+          "return_type": "List",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Lists operation",
+          "generic_params": [
+            "ExpansionItem"
+          ],
+          "overloads": 1
+        },
+        {
+          "name": "AddChildItemThatNeedsToBeExpandedIfNotInList",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "expansionItemToAdd",
+              "type": "ExpansionItem",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Adds child item that needs to be expanded if not in list",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/QuickViewExpansionFunctionTypeHelper.cs"
+    }
+  ],
+  "interfaces": [],
+  "structs": [],
+  "delegates": [],
+  "enums": []
+}

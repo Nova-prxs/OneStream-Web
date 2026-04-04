@@ -1,0 +1,4656 @@
+{
+  "namespace": "OneStream.Stage.Engine",
+  "generated_at": "2025-12-08T19:28:52.409383",
+  "statistics": {
+    "classes": 15,
+    "interfaces": 2,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 0,
+    "total_methods": 125,
+    "total_properties": 96
+  },
+  "classes": [
+    {
+      "name": "ParserArgs",
+      "namespace": "OneStream.Stage.Engine",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "BusinessRuleArgsBase",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "private",
+          "parameters": []
+        }
+      ],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Stage/Engine/ParserArgs.cs",
+      "source_code": "public class ParserArgs : BusinessRuleArgsBase\n{\n\tpublic string Value => string.Empty;\n\n\tpublic string Line => string.Empty;\n\n\tprivate ParserArgs()\n\t{\n\t}\n}"
+    },
+    {
+      "name": "ConditionalRuleArgs",
+      "namespace": "OneStream.Stage.Engine",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "BusinessRuleArgsBase",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "private",
+          "parameters": []
+        }
+      ],
+      "properties": [],
+      "methods": [
+        {
+          "name": "GetSource",
+          "return_type": "string",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "dimensionToken",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets source",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetTarget",
+          "return_type": "string",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "dimensionToken",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets target",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Stage/Engine/ConditionalRuleArgs.cs",
+      "source_code": "public class ConditionalRuleArgs : BusinessRuleArgsBase\n{\n\tpublic string DimensionName => string.Empty;\n\n\tpublic Guid RuleID => Guid.Empty;\n\n\tpublic string RuleName => string.Empty;\n\n\tpublic TransformRuleTypes RuleType => TransformRuleTypes.Unknown;\n\n\tpublic string RuleExpression => string.Empty;\n\n\tpublic bool FlipSign => false;\n\n\tpublic string OutputValue => string.Empty;\n\n\tprivate ConditionalRuleArgs()\n\t{\n\t}\n\n\tpublic string GetSource(string dimensionToken)\n\t{\n\t\treturn string.Empty;\n\t}\n\n\tpublic string GetTarget(string dimensionToken)\n\t{\n\t\treturn string.Empty;\n\t}\n}"
+    },
+    {
+      "name": "DataPoint",
+      "namespace": "OneStream.Stage.Engine",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IDataPoint"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "Aggregate",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "other",
+              "type": "IDataPoint",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Aggregates operation",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetAggregateAverage",
+          "return_type": "decimal",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Gets aggregate average",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetAggregateCount",
+          "return_type": "decimal",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Gets aggregate count",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "MatchesForDateInterval",
+          "return_type": "bool",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "dateInterval",
+              "type": "DateInterval",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "other",
+              "type": "IDataPoint",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Matchess for date interval",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "SetValues",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "other",
+              "type": "IDataPoint",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Sets values",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Stage/Engine/DataPoint.cs"
+    },
+    {
+      "name": "DerivativeRuleBiBlendArgs",
+      "namespace": "OneStream.Stage.Engine",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "private",
+          "parameters": []
+        }
+      ],
+      "properties": [],
+      "methods": [
+        {
+          "name": "GetMathBufferValue",
+          "return_type": "DecimalAndNoData",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "mathBufferName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets math buffer value",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "GetMathBufferValue",
+          "return_type": "DecimalAndNoData",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "mathBufferName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "columnIndex",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets math buffer value",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "GetMathBufferValue",
+          "return_type": "DecimalAndNoData",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "mathBufferName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "columnName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets math buffer value",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "GetStatDataSeries",
+          "return_type": "DataSeries",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "columnIndex",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets stat data series",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetStatCount",
+          "return_type": "int",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "columnIndex",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets stat count",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetStatFirst",
+          "return_type": "decimal",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "columnIndex",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets stat first",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetStatLast",
+          "return_type": "decimal",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "columnIndex",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets stat last",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetStatMinimum",
+          "return_type": "decimal",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "columnIndex",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets stat minimum",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetStatMaximum",
+          "return_type": "decimal",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "columnIndex",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets stat maximum",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetStatAverage",
+          "return_type": "decimal",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "columnIndex",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets stat average",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetStatMedian",
+          "return_type": "decimal",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "columnIndex",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets stat median",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetStatMode",
+          "return_type": "decimal",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "columnIndex",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets stat mode",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetStatStdDev",
+          "return_type": "decimal",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "columnIndex",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets stat std dev",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetLagDateInterval",
+          "return_type": "decimal",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "columnIndex",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "interval",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "lag",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets lag date interval",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetLagChangeDateInterval",
+          "return_type": "decimal",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "columnIndex",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "interval",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "lag",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets lag change date interval",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetLagStepBack",
+          "return_type": "decimal",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "columnIndex",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "lag",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets lag step back",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetLagChangeStepBack",
+          "return_type": "decimal",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "columnIndex",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "lag",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets lag change step back",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetFirstMatchingDataPoint",
+          "return_type": "DataPoint",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "columnIndex",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "timeStamp",
+              "type": "DateTime",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "interval",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "sortDescending",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets first matching data point",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetSumOfMatchingDataPoint",
+          "return_type": "DataPoint",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "columnIndex",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "timeStamp",
+              "type": "DateTime",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "interval",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "sortDescending",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets sum of matching data point",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetMatchingDataPoints",
+          "return_type": "List<IDataPoint>",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "columnIndex",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "timeStamp",
+              "type": "DateTime",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "interval",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "sortDescending",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets matching data points",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Stage/Engine/DerivativeRuleBiBlendArgs.cs",
+      "source_code": "public class DerivativeRuleBiBlendArgs\n{\n\tpublic BiBlendTimeHelper TimeHelper => null;\n\n\tpublic bool IsUserDefinedMeasure => false;\n\n\tpublic Dictionary<string, string> NameValuePairs => null;\n\n\tpublic string MathBufferKey => string.Empty;\n\n\tprivate DerivativeRuleBiBlendArgs()\n\t{\n\t}\n\n\tpublic DecimalAndNoData GetMathBufferValue(string mathBufferName)\n\t{\n\t\treturn new DecimalAndNoData(0.0m, isNoData: false);\n\t}\n\n\tpublic DecimalAndNoData GetMathBufferValue(string mathBufferName, int columnIndex)\n\t{\n\t\treturn new DecimalAndNoData(0.0m, isNoData: false);\n\t}\n\n\tpublic DecimalAndNoData GetMathBufferValue(string mathBufferName, string columnName)\n\t{\n\t\treturn new DecimalAndNoData(0.0m, isNoData: false);\n\t}\n\n\tpublic DataSeries GetStatDataSeries(int columnIndex)\n\t{\n\t\treturn null;\n\t}\n\n\tpublic int GetStatCount(int columnIndex)\n\t{\n\t\treturn 0;\n\t}\n\n\tpublic decimal GetStatFirst(int columnIndex)\n\t{\n\t\treturn 0m;\n\t}\n\n\tpublic decimal GetStatLast(int columnIndex)\n\t{\n\t\treturn 0m;\n\t}\n\n\tpublic decimal GetStatMinimum(int columnIndex)\n\t{\n\t\treturn 0m;\n\t}\n\n\tpublic decimal GetStatMaximum(int columnIndex)\n\t{\n\t\treturn 0m;\n\t}\n\n\tpublic decimal GetStatAverage(int columnIndex)\n\t{\n\t\treturn 0m;\n\t}\n\n\tpublic decimal GetStatMedian(int columnIndex)\n\t{\n\t\treturn 0m;\n\t}\n\n\tpublic decimal GetStatMode(int columnIndex)\n\t{\n\t\treturn 0m;\n\t}\n\n\tpublic decimal GetStatStdDev(int columnIndex)\n\t{\n\t\treturn 0m;\n\t}\n\n\tpublic decimal GetLagDateInterval(int columnIndex, int interval, int lag)\n\t{\n\t\treturn 0m;\n\t}\n\n\tpublic decimal GetLagChangeDateInterval(int columnIndex, int interval, int lag)\n\t{\n\t\treturn 0m;\n\t}\n\n\tpublic decimal GetLagStepBack(int columnIndex, int lag)\n\t{\n\t\treturn 0m;\n\t}\n\n\tpublic decimal GetLagChangeStepBack(int columnIndex, int lag)\n\t{\n\t\treturn 0m;\n\t}\n\n\tpublic DataPoint GetFirstMatchingDataPoint(int columnIndex, DateTime timeStamp, int interval, bool sortDescending)\n\t{\n\t\treturn null;\n\t}\n\n\tpublic DataPoint GetSumOfMatchingDataPoint(int columnIndex, DateTime timeStamp, int interval, bool sortDescending)\n\t{\n\t\treturn null;\n\t}\n\n\tpublic List<IDataPoint> GetMatchingDataPoints(int columnIndex, DateTime timeStamp, int interval, bool sortDescending)\n\t{\n\t\treturn null;\n\t}\n}"
+    },
+    {
+      "name": "TransformDataCache",
+      "namespace": "OneStream.Stage.Engine",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [
+        "XFApiDoc"
+      ],
+      "source_file": "output/types/OneStream/Stage/Engine/TransformDataCache.cs"
+    },
+    {
+      "name": "DataSeries",
+      "namespace": "OneStream.Stage.Engine",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IDataSeries"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "List",
+          "return_type": "> new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Lists operation",
+          "generic_params": [
+            "IDataPoint"
+          ],
+          "overloads": 1
+        },
+        {
+          "name": "AddDataPoint",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "dataPoint",
+              "type": "IDataPoint",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Adds data point",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetAverage",
+          "return_type": "decimal",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Gets average",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetFirst",
+          "return_type": "decimal",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Gets first",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetFirstMatchingDataPoint",
+          "return_type": "IDataPoint",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "dataPointToMatch",
+              "type": "IDataPoint",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "interval",
+              "type": "DateInterval",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "sortDescending",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets first matching data point",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetLagChangeDateInterval",
+          "return_type": "decimal",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "dateInterval",
+              "type": "DateInterval",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "lag",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets lag change date interval",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetLagChangeStepBack",
+          "return_type": "decimal",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "lag",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets lag change step back",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetLagDateInterval",
+          "return_type": "decimal",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "dateInterval",
+              "type": "DateInterval",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "lag",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets lag date interval",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetLagStepBack",
+          "return_type": "decimal",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "lag",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets lag step back",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetLast",
+          "return_type": "decimal",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Gets last",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetMatchingDataPoints",
+          "return_type": "List<IDataPoint>",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "dataPointToMatch",
+              "type": "IDataPoint",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "interval",
+              "type": "DateInterval",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "sortDescending",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets matching data points",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetMaximum",
+          "return_type": "decimal",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Gets maximum",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetMedian",
+          "return_type": "decimal",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Gets median",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetMinimum",
+          "return_type": "decimal",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Gets minimum",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetMode",
+          "return_type": "decimal",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Gets mode",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetStandardDeviation",
+          "return_type": "decimal",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Gets standard deviation",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetSumOfMatchingDataPoints",
+          "return_type": "IDataPoint",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "dataPointToMatch",
+              "type": "IDataPoint",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "interval",
+              "type": "DateInterval",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "sortDescending",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets sum of matching data points",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Stage/Engine/DataSeries.cs"
+    },
+    {
+      "name": "BiBlendReportingHelper",
+      "namespace": "OneStream.Stage.Engine",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "biBlendWarehouseConnectionName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ]
+        },
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "biBlendWarehouseConnectionName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "viewColumnName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "accountTypeColumnName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "accountColumnName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [
+        {
+          "name": "Query12PeriodTable",
+          "return_type": "DataTable",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "biBlendTableName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "year",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "period",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "view",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "criteria",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "orderBy",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "topX",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "pivotMeasureColName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "pivotColName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "pivotMembers",
+              "type": "List<string>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "showAllTimeMeasures",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Querys period table",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "Query12PeriodTable",
+          "return_type": "DataTable",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "biBlendTableName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "year",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "period",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "view",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dimensionColumnNames",
+              "type": "List<string>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "criteria",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "orderBy",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "topX",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "pivotMeasureColName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "pivotColName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "pivotMembers",
+              "type": "List<string>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "showAllTimeMeasures",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Querys period table",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "Prepare12PeriodTable",
+          "return_type": "DataTable",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dt",
+              "type": "DataTable",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "year",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "period",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "view",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "orderBy",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "topX",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "pivotMeasureColName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "pivotColName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "pivotMembers",
+              "type": "List<string>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "showAllTimeMeasures",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Prepares period table",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "FilterDataTable",
+          "return_type": "DataTable",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dt",
+              "type": "DataTable",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "filterExpression",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Filters data table",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "PivotDataTable",
+          "return_type": "DataTable",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dt",
+              "type": "DataTable",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "measureColName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "pivotColName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "pivotMembers",
+              "type": "List<string>",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Pivots data table",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "AddCalculatedColumnToDataTable",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dt",
+              "type": "DataTable",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "columnName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "columnExpression",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Adds calculated column to data table",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "MergeDataTables",
+          "return_type": "DataTable",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "year",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "period",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "view",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dt1",
+              "type": "DataTable",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dt2",
+              "type": "DataTable",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "orderBy",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "topX",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "pivotMeasureColName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "pivotColName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "pivotMembers",
+              "type": "List<string>",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Merges data tables",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetAllDimensionColumnNames",
+          "return_type": "List<string>",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "biBlendTableName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets all dimension column names",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetStandardMeasureColumnNames",
+          "return_type": "List<string>",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "biBlendTableName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets standard measure column names",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetUserDefinedMeasureColumnNames",
+          "return_type": "List<string>",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "biBlendTableName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets user defined measure column names",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetColIndex",
+          "return_type": "int",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dt",
+              "type": "DataTable",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "colName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets col index",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [
+        "XFApiDoc"
+      ],
+      "source_file": "output/types/OneStream/Stage/Engine/BiBlendReportingHelper.cs"
+    },
+    {
+      "name": "BiBlendTimeHelper",
+      "namespace": "OneStream.Stage.Engine",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "private",
+          "parameters": []
+        }
+      ],
+      "properties": [],
+      "methods": [
+        {
+          "name": "GetPeriodicValue",
+          "return_type": "DecimalAndNoData",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "timeName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets periodic value",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "GetPeriodicValue",
+          "return_type": "DecimalAndNoData",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "month",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "year",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets periodic value",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "GetYtdValue",
+          "return_type": "DecimalAndNoData",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "timeName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets ytd value",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "GetYtdValue",
+          "return_type": "DecimalAndNoData",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "month",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "year",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets ytd value",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "SetPeriodicRowBuffer",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Sets periodic row buffer",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetPeriodicRowBufferValue",
+          "return_type": "DecimalAndNoData",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "timeName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets periodic row buffer value",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "SetYtdRowBuffer",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Sets ytd row buffer",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetYtdRowBufferValue",
+          "return_type": "DecimalAndNoData",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "timeName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets ytd row buffer value",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetMonthNumFromTimeName",
+          "return_type": "int",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "timeName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets month num from time name",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetYearNumFromTimeName",
+          "return_type": "int",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "timeName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets year num from time name",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [
+        "XFApiDoc"
+      ],
+      "source_file": "output/types/OneStream/Stage/Engine/BiBlendTimeHelper.cs"
+    },
+    {
+      "name": "Parser",
+      "namespace": "OneStream.Stage.Engine",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "Name",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "Type",
+          "type": "DataSourceTypes",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "DataStructureType",
+          "type": "DataStructureTypes",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "ConnectorBusinessRuleName",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "ConnectorUsesFile",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "AllowDynamicExcelLoads",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "TextValueRowViewMember",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "MatrixHeaderLineNo",
+          "type": "int",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "ParseProcessType",
+          "type": "ParseProcessTypes",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "Delimiter",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "DelimiterQuoteCharacter",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "DelimitedParsedValues",
+          "type": "List<string>",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "ParseDuration",
+          "type": "int",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [
+        {
+          "name": "Parsed",
+          "return_type": "delegate void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "parserDimensions",
+              "type": "SortedDictionary<string, ParserDimension>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "currentLine",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Parseds operation",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "ProcessTextFile",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "strFilePath",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "processInfo",
+              "type": "LoadTransformProcessInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "parentTaskActivityStep",
+              "type": "TaskActivityStepWrapperItem",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Processs text file",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "ProcessText",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "textToParse",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Processs text",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "ProcessDataMgmtExportFile",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "strFilePath",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "processInfo",
+              "type": "LoadTransformProcessInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "parentTaskActivityStep",
+              "type": "TaskActivityStepWrapperItem",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Processs data mgmt export file",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "ProcessIndexValueList",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dataList",
+              "type": "SortedDictionary<int, SortedDictionary<int, string>>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "processInfo",
+              "type": "LoadTransformProcessInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Processs index value list",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "ProcessNameValueList",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dataList",
+              "type": "List<Dictionary<string, string>>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "clearBRGlobals",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "processInfo",
+              "type": "LoadTransformProcessInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Processs name value list",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "ProcessDataTable",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "adoDataTable",
+              "type": "DataTable",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "clearBRGlobals",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "processInfo",
+              "type": "LoadTransformProcessInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Processs data table",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "ProcessSQLQuery",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "providerType",
+              "type": "DbProviderType",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "connectionStringOrName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "isNamedConnection",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "sqlSelectStatement",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "useCommandTimeoutLarge",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "processInfo",
+              "type": "LoadTransformProcessInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Processs s q l query",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "ProcessMultipleSources",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "providerType",
+              "type": "DbProviderType",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "connectionStringOrName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "isNamedConnection",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "sqlSelectStatements",
+              "type": "List<string>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "adoDataTables",
+              "type": "List<DataTable>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "useCommandTimeoutLarge",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "processInfo",
+              "type": "LoadTransformProcessInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Processs multiple sources",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetXFDataTableForSQLQuery",
+          "return_type": "XFDataTable",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "providerType",
+              "type": "DbProviderType",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "connectionStringOrName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "isNamedConnection",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "sqlSelectStatement",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "useCommandTimeoutLarge",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "pageSize",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "pageNumber",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets x f data table for s q l query",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetFieldNameListForSQLQuery",
+          "return_type": "List<string>",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "providerType",
+              "type": "DbProviderType",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "connectionStringOrName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "isNamedConnection",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "sqlSelectStatement",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "useCommandTimeoutLarge",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets field name list for s q l query",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetFieldValuesForSourceDataRow",
+          "return_type": "Dictionary<string, object>",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "rowID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets field values for source data row",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "GetFieldValuesForSourceDataRow",
+          "return_type": "Dictionary<string, object>",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "wfClusterPkOrNull",
+              "type": "WorkflowUnitClusterPk",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "rowID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets field values for source data row",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "ClearLineCounters",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Clears line counters",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "ClearCumulativeLineCounters",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Clears cumulative line counters",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "AddDimension",
+          "return_type": "ParserDimension",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dimensionUniqueID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "strDimensionName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "lngDimensionOrdinalPosition",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "lngDimensionDataType",
+              "type": "DimensionDataTypes",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Adds dimension",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "RemoveDimension",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "strDimensionName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "lngDimensionOrdinalPosition",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "lngDimensionDataType",
+              "type": "DimensionDataTypes",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Removes dimension",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "ClearDimensions",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Clears dimensions",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetDimension",
+          "return_type": "ParserDimension",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "strDimensionName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "lngDimensionOrdinalPosition",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "lngDimensionDataType",
+              "type": "DimensionDataTypes",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets dimension",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "AddMatrixDimension",
+          "return_type": "ParserDimension",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dimensionUniqueID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "strDimensionName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "lngDimensionOrdinalPosition",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "lngDimensionDataType",
+              "type": "DimensionDataTypes",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Adds matrix dimension",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "ClearMatrixDimensions",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Clears matrix dimensions",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [
+        "XFApiDoc"
+      ],
+      "source_file": "output/types/OneStream/Stage/Engine/Parser.cs"
+    },
+    {
+      "name": "TransformRuleCache",
+      "namespace": "OneStream.Stage.Engine",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [
+        "XFApiDoc"
+      ],
+      "source_file": "output/types/OneStream/Stage/Engine/TransformRuleCache.cs"
+    },
+    {
+      "name": "ConnectorArgs",
+      "namespace": "OneStream.Stage.Engine",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "BusinessRuleArgsBase",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "private",
+          "parameters": []
+        }
+      ],
+      "properties": [],
+      "methods": [
+        {
+          "name": "GetSourceRowValue",
+          "return_type": "string",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "fieldName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets source row value",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Stage/Engine/ConnectorArgs.cs",
+      "source_code": "public class ConnectorArgs : BusinessRuleArgsBase\n{\n\tpublic ConnectorActionTypes ActionType => ConnectorActionTypes.GetData;\n\n\tpublic Guid RowID => Guid.Empty;\n\n\tpublic string ClientSortRequest => string.Empty;\n\n\tpublic string ClientFilterRequest => string.Empty;\n\n\tpublic int PageSize => 0;\n\n\tpublic int PageNumber => 0;\n\n\tpublic DrillBackTypeInfo DrillBackType => null;\n\n\tpublic string DrillCode => string.Empty;\n\n\tpublic XFDataTable SourceRowDataTable => null;\n\n\tpublic string DataSourceName => string.Empty;\n\n\tprivate ConnectorArgs()\n\t{\n\t}\n\n\tpublic string GetSourceRowValue(string fieldName)\n\t{\n\t\treturn string.Empty;\n\t}\n}"
+    },
+    {
+      "name": "Transformer",
+      "namespace": "OneStream.Stage.Engine",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "WorkflowUnitPk",
+          "type": "WorkflowUnitPk",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "WorkflowUnitDescription",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "WorkflowUnitTimeInfo",
+          "type": "WorkflowUnitTimeInfo",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "WorkflowUnitTrackingFrequency",
+          "type": "WorkflowTrackingFrequency",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "ScenarioTypeID",
+          "type": "int",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "WorkflowProfile",
+          "type": "WorkflowProfileInfo",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "CubeName",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "DataSourceKey",
+          "type": "Guid",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "TransformationProfileKey",
+          "type": "Guid",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "CachePageSize",
+          "type": "int",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "CachePagesInMemoryLimit",
+          "type": "int",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "ParallelTransformationBatchCount",
+          "type": "int",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "ParallelWriteBatchCount",
+          "type": "int",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "UseBulkLoad",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "LoadMethod",
+          "type": "TransformLoadMethodTypes",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "FileInfo",
+          "type": "StageArchiveInfo",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "LogBuffer",
+          "type": "StringBuilder",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "UseGlobalDataClusterKey",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "GlobalDataClusterKey",
+          "type": "DataClusterKey",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "CurrentDataClusterKey",
+          "type": "DataClusterKey",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "CanLoadBeforeCurrentDataClusterYear",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "CanLoadBeyondCurrentDataClusterYear",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "DataClusterCache",
+          "type": "Dictionary<TwoInts, DataClusterKey>",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "BypassDetailLogLines",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [
+        {
+          "name": "QueryDataCache",
+          "return_type": "DataTable",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "whereClause",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "importPagesOnly",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "derivedPagesOnly",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Querys data cache",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetTrackingWFUnitPksFromDataClusterCache",
+          "return_type": "List<WorkflowUnitPk>",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets tracking w f unit pks from data cluster cache",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [
+        "XFApiDoc"
+      ],
+      "source_file": "output/types/OneStream/Stage/Engine/Transformer.cs"
+    },
+    {
+      "name": "DerivativeRuleArgs",
+      "namespace": "OneStream.Stage.Engine",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "BusinessRuleArgsBase",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "private",
+          "parameters": []
+        }
+      ],
+      "properties": [],
+      "methods": [
+        {
+          "name": "GetSource",
+          "return_type": "string",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "dimensionToken",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets source",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetDimensionValue",
+          "return_type": "string",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "dimensionToken",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets dimension value",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetDimensionValueUsingColName",
+          "return_type": "string",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "columnName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets dimension value using col name",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetDateTimeDimensionValue",
+          "return_type": "DateTime",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "dimensionToken",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets date time dimension value",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetDateTimeDimensionValueUsingColName",
+          "return_type": "DateTime",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "columnName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets date time dimension value using col name",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetNumericValue",
+          "return_type": "decimal",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "measureToken",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets numeric value",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetNumericValueUsingColName",
+          "return_type": "decimal",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "columnName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets numeric value using col name",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetGrandTotalValue",
+          "return_type": "decimal",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "measureToken",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets grand total value",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetGrandTotalValueUsingColName",
+          "return_type": "decimal",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "columnName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets grand total value using col name",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Stage/Engine/DerivativeRuleArgs.cs",
+      "source_code": "public class DerivativeRuleArgs : BusinessRuleArgsBase\n{\n\tpublic Guid RuleID => Guid.Empty;\n\n\tpublic string RuleName => string.Empty;\n\n\tpublic string RuleExpression => string.Empty;\n\n\tpublic SourceRowTypes DerivativeType => SourceRowTypes.Unknown;\n\n\tpublic string DerivativeDescription => string.Empty;\n\n\tpublic string CheckRuleMessage\n\t{\n\t\tget\n\t\t{\n\t\t\treturn string.Empty;\n\t\t}\n\t\tset\n\t\t{\n\t\t}\n\t}\n\n\tpublic string ColumnName => string.Empty;\n\n\tpublic int ColumnIndex => 0;\n\n\tpublic decimal ColumnValue => 0m;\n\n\tpublic bool IsFirstColumn => false;\n\n\tpublic bool IsLastColumn => false;\n\n\tpublic DerivativeRuleBiBlendArgs BiBlend => null;\n\n\tprivate DerivativeRuleArgs()\n\t{\n\t}\n\n\tpublic string GetSource(string dimensionToken)\n\t{\n\t\treturn string.Empty;\n\t}\n\n\tpublic string GetDimensionValue(string dimensionToken)\n\t{\n\t\treturn string.Empty;\n\t}\n\n\tpublic string GetDimensionValueUsingColName(string columnName)\n\t{\n\t\treturn string.Empty;\n\t}\n\n\tpublic DateTime GetDateTimeDimensionValue(string dimensionToken)\n\t{\n\t\treturn SharedConstants.DateTimeMinValue;\n\t}\n\n\tpublic DateTime GetDateTimeDimensionValueUsingColName(string columnName)\n\t{\n\t\treturn SharedConstants.DateTimeMinValue;\n\t}\n\n\tpublic decimal GetNumericValue(string measureToken)\n\t{\n\t\treturn 0m;\n\t}\n\n\tpublic decimal GetNumericValueUsingColName(string columnName)\n\t{\n\t\treturn 0m;\n\t}\n\n\tpublic decimal GetGrandTotalValue(string measureToken)\n\t{\n\t\treturn 0m;\n\t}\n\n\tpublic decimal GetGrandTotalValueUsingColName(string columnName)\n\t{\n\t\treturn 0m;\n\t}\n}"
+    },
+    {
+      "name": "TransformerDimension",
+      "namespace": "OneStream.Stage.Engine",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Stage/Engine/TransformerDimension.cs"
+    },
+    {
+      "name": "ParserDimension",
+      "namespace": "OneStream.Stage.Engine",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "UniqueID",
+          "type": "Guid",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "DimensionKey",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "DimensionName",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "DimensionDataType",
+          "type": "DimensionDataTypes",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "DimensionOrdinalPosition",
+          "type": "int",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "DimensionDelimiter",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "DimensionQuoteCharacter",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "DimensionDelimitedPosition",
+          "type": "int",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "DimensionStartPosition",
+          "type": "int",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "DimensionLength",
+          "type": "int",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "DimensionConnectorSourceFieldName",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "LogicalOperator",
+          "type": "RuleLogicalOperatorTypes",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "LogicalExpression",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "RuleNumericThousandsSeparator",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "RuleNumericDecimalSeparator",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "RuleNumericCurrencyIndicator",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "RuleNumericSignPositiveIndicator",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "RuleNumericSignNegativeIndicator",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "RuleNumericSignDebitCreditPosition",
+          "type": "int",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "RuleNumericFactor",
+          "type": "decimal",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "RuleNumericPrecion",
+          "type": "int",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "RuleNumericZeroSuppress",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "RuleNumericValueMarker",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "RuleTextStaticValue",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "RuleTextLeadFill",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "RuleTextTrailFill",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "RuleStoredTextBypass",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "RuleStoredTextSingleLineNo",
+          "type": "int",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "RuleSubstituteOldString",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "RuleSubstituteNewString",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "BypassType",
+          "type": "LineBypassTypes",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "BypassValue",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "Value",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "StoredValue",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "ValueIsnumeric",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "ValueIsZeroSuppressed",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "ValueIsNotMarked",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "Bypassed",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "Blank",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "CurrentLineNo",
+          "type": "int",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "RowGuid",
+          "type": "Guid",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "MatrixHeaderLineNo",
+          "type": "int",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "MatrixPlaceHolderDimensionKey",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "MatrixPlaceHolderValueKey",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [
+        {
+          "name": "ParseText",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "textToParse",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "delimitedParsedValues",
+              "type": "List<string>",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Parses text",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "ParseExcel",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "indexValueListToParse",
+              "type": "SortedDictionary<int, string>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "parseBlankLine",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Parses excel",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "ParseNameValueList",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "nameValueListToParse",
+              "type": "Dictionary<string, string>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "delimitedTextLine",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Parses name value list",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "LoadAndCompileFormulaAssembly",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Loads and compile formula assembly",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "LoadAndCompileBusinessRule",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Loads and compile business rule",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "SetBusinessRuleGlobalsReference",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "businessRuleGlobals",
+              "type": "BRGlobals",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Sets business rule globals reference",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Stage/Engine/ParserDimension.cs"
+    }
+  ],
+  "interfaces": [
+    {
+      "name": "IDataSeries",
+      "namespace": "OneStream.Stage.Engine",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "Count",
+          "type": "int",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "DataPoints",
+          "type": "List<IDataPoint>",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        }
+      ],
+      "methods": [
+        {
+          "name": "AddDataPoint",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "dataPoint",
+              "type": "IDataPoint",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Adds data point",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetAverage",
+          "return_type": "decimal",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Gets average",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetFirst",
+          "return_type": "decimal",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Gets first",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetFirstMatchingDataPoint",
+          "return_type": "IDataPoint",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "dataPointToMatch",
+              "type": "IDataPoint",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "interval",
+              "type": "DateInterval",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "sortDescending",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets first matching data point",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetLagChangeDateInterval",
+          "return_type": "decimal",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "dateInterval",
+              "type": "DateInterval",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "lag",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets lag change date interval",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetLagDateInterval",
+          "return_type": "decimal",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "dateInterval",
+              "type": "DateInterval",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "lag",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets lag date interval",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetLagChangeStepBack",
+          "return_type": "decimal",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "lag",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets lag change step back",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetLagStepBack",
+          "return_type": "decimal",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "lag",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets lag step back",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetLast",
+          "return_type": "decimal",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Gets last",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetMatchingDataPoints",
+          "return_type": "List<IDataPoint>",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "dataPointToMatch",
+              "type": "IDataPoint",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "interval",
+              "type": "DateInterval",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "sortDescending",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets matching data points",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetMaximum",
+          "return_type": "decimal",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Gets maximum",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetMedian",
+          "return_type": "decimal",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Gets median",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetMinimum",
+          "return_type": "decimal",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Gets minimum",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetMode",
+          "return_type": "decimal",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Gets mode",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetStandardDeviation",
+          "return_type": "decimal",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Gets standard deviation",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetSumOfMatchingDataPoints",
+          "return_type": "IDataPoint",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "dataPointToMatch",
+              "type": "IDataPoint",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "interval",
+              "type": "DateInterval",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "sortDescending",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets sum of matching data points",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Stage/Engine/IDataSeries.cs",
+      "source_code": "public interface IDataSeries\n{\n\tint Count { get; }\n\n\tList<IDataPoint> DataPoints { get; }\n\n\tvoid AddDataPoint(IDataPoint dataPoint);\n\n\tdecimal GetAverage();\n\n\tdecimal GetFirst();\n\n\tIDataPoint GetFirstMatchingDataPoint(IDataPoint dataPointToMatch, DateInterval interval, bool sortDescending);\n\n\tdecimal GetLagChangeDateInterval(DateInterval dateInterval, int lag);\n\n\tdecimal GetLagDateInterval(DateInterval dateInterval, int lag);\n\n\tdecimal GetLagChangeStepBack(int lag);\n\n\tdecimal GetLagStepBack(int lag);\n\n\tdecimal GetLast();\n\n\tList<IDataPoint> GetMatchingDataPoints(IDataPoint dataPointToMatch, DateInterval interval, bool sortDescending);\n\n\tdecimal GetMaximum();\n\n\tdecimal GetMedian();\n\n\tdecimal GetMinimum();\n\n\tdecimal GetMode();\n\n\tdecimal GetStandardDeviation();\n\n\tIDataPoint GetSumOfMatchingDataPoints(IDataPoint dataPointToMatch, DateInterval interval, bool sortDescending);\n}"
+    },
+    {
+      "name": "IDataPoint",
+      "namespace": "OneStream.Stage.Engine",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "DayOfMonth",
+          "type": "int",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "DayOfWeek",
+          "type": "int",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "DayOfYear",
+          "type": "int",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "Year",
+          "type": "int",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "Quarter",
+          "type": "int",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "Month",
+          "type": "int",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "Day",
+          "type": "int",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "Hour",
+          "type": "int",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "Minute",
+          "type": "int",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "Second",
+          "type": "int",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "WeekOfYear",
+          "type": "int",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "TimeStamp",
+          "type": "DateTime",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "Value",
+          "type": "decimal",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        }
+      ],
+      "methods": [
+        {
+          "name": "MatchesForDateInterval",
+          "return_type": "bool",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "dateInterval",
+              "type": "DateInterval",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "other",
+              "type": "IDataPoint",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Checks for date interval",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "Aggregate",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "other",
+              "type": "IDataPoint",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Aggregates operation",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetAggregateAverage",
+          "return_type": "decimal",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Gets aggregate average",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetAggregateCount",
+          "return_type": "decimal",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Gets aggregate count",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "SetValues",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "other",
+              "type": "IDataPoint",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Sets values",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Stage/Engine/IDataPoint.cs",
+      "source_code": "public interface IDataPoint\n{\n\tint DayOfMonth { get; }\n\n\tint DayOfWeek { get; }\n\n\tint DayOfYear { get; }\n\n\tint Year { get; }\n\n\tint Quarter { get; }\n\n\tint Month { get; }\n\n\tint Day { get; }\n\n\tint Hour { get; }\n\n\tint Minute { get; }\n\n\tint Second { get; }\n\n\tint WeekOfYear { get; }\n\n\tDateTime TimeStamp { get; }\n\n\tdecimal Value { get; }\n\n\tbool MatchesForDateInterval(DateInterval dateInterval, IDataPoint other);\n\n\tvoid Aggregate(IDataPoint other);\n\n\tdecimal GetAggregateAverage();\n\n\tdecimal GetAggregateCount();\n\n\tvoid SetValues(IDataPoint other);\n}"
+    }
+  ],
+  "structs": [],
+  "delegates": [],
+  "enums": []
+}

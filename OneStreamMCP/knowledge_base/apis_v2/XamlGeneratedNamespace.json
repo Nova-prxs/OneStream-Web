@@ -1,0 +1,210 @@
+{
+  "namespace": "XamlGeneratedNamespace",
+  "generated_at": "2025-12-08T19:28:52.441611",
+  "statistics": {
+    "classes": 1,
+    "interfaces": 0,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 0,
+    "total_methods": 5,
+    "total_properties": 0
+  },
+  "classes": [
+    {
+      "name": "GeneratedInternalTypeHelper",
+      "namespace": "XamlGeneratedNamespace",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "InternalTypeHelper"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "CreateInstance",
+          "return_type": "protected override object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "type",
+              "type": "Type",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "culture",
+              "type": "CultureInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates instance",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetPropertyValue",
+          "return_type": "protected override object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "propertyInfo",
+              "type": "PropertyInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "target",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "culture",
+              "type": "CultureInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets property value",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "SetPropertyValue",
+          "return_type": "protected override void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "propertyInfo",
+              "type": "PropertyInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "target",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "value",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "culture",
+              "type": "CultureInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Sets property value",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "CreateDelegate",
+          "return_type": "protected override Delegate",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "delegateType",
+              "type": "Type",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "target",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "handler",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates delegate",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "AddEventHandler",
+          "return_type": "protected override void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "eventInfo",
+              "type": "EventInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "target",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "handler",
+              "type": "Delegate",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Adds event handler",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [
+        "DebuggerNonUserCode",
+        "GeneratedCode",
+        "EditorBrowsable"
+      ],
+      "source_file": "output/types/XamlGeneratedNamespace/GeneratedInternalTypeHelper.cs"
+    }
+  ],
+  "interfaces": [],
+  "structs": [],
+  "delegates": [],
+  "enums": []
+}

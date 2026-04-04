@@ -1,0 +1,362 @@
+{
+  "namespace": "OneStream.Shared.Wcf.BREventOperationType",
+  "generated_at": "2025-12-08T19:28:52.379385",
+  "statistics": {
+    "classes": 18,
+    "interfaces": 0,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 0,
+    "total_methods": 0,
+    "total_properties": 0
+  },
+  "classes": [
+    {
+      "name": "Transformation",
+      "namespace": "OneStream.Shared.Wcf.BREventOperationType",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/BREventOperationType.cs"
+    },
+    {
+      "name": "ParseAndTrans",
+      "namespace": "OneStream.Shared.Wcf.BREventOperationType",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/BREventOperationType.cs"
+    },
+    {
+      "name": "BiBlend",
+      "namespace": "OneStream.Shared.Wcf.BREventOperationType",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/BREventOperationType.cs"
+    },
+    {
+      "name": "DirectLoad",
+      "namespace": "OneStream.Shared.Wcf.BREventOperationType",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/BREventOperationType.cs"
+    },
+    {
+      "name": "ValTrans",
+      "namespace": "OneStream.Shared.Wcf.BREventOperationType",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/BREventOperationType.cs"
+    },
+    {
+      "name": "ValIntersect",
+      "namespace": "OneStream.Shared.Wcf.BREventOperationType",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/BREventOperationType.cs"
+    },
+    {
+      "name": "LoadIntersect",
+      "namespace": "OneStream.Shared.Wcf.BREventOperationType",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/BREventOperationType.cs"
+    },
+    {
+      "name": "Journals",
+      "namespace": "OneStream.Shared.Wcf.BREventOperationType",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/BREventOperationType.cs"
+    },
+    {
+      "name": "Forms",
+      "namespace": "OneStream.Shared.Wcf.BREventOperationType",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/BREventOperationType.cs"
+    },
+    {
+      "name": "DataQuality",
+      "namespace": "OneStream.Shared.Wcf.BREventOperationType",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/BREventOperationType.cs"
+    },
+    {
+      "name": "ProcessCube",
+      "namespace": "OneStream.Shared.Wcf.BREventOperationType",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/BREventOperationType.cs"
+    },
+    {
+      "name": "PrepareICMatch",
+      "namespace": "OneStream.Shared.Wcf.BREventOperationType",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/BREventOperationType.cs"
+    },
+    {
+      "name": "ICTransStatus",
+      "namespace": "OneStream.Shared.Wcf.BREventOperationType",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/BREventOperationType.cs",
+      "source_code": "public static class ICTransStatus\n\t\t{\n\t\t\tpublic const string AddICTransactionStatus = \"AddICTransactionStatus\";\n\n\t\t\tpublic const string FinalizeAddICTransactionStatus = \"FinalizeAddICTransactionStatus\";\n\t\t}"
+    },
+    {
+      "name": "Confirm",
+      "namespace": "OneStream.Shared.Wcf.BREventOperationType",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/BREventOperationType.cs"
+    },
+    {
+      "name": "Certify",
+      "namespace": "OneStream.Shared.Wcf.BREventOperationType",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/BREventOperationType.cs"
+    },
+    {
+      "name": "DataManagement",
+      "namespace": "OneStream.Shared.Wcf.BREventOperationType",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/BREventOperationType.cs"
+    },
+    {
+      "name": "SaveData",
+      "namespace": "OneStream.Shared.Wcf.BREventOperationType",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/BREventOperationType.cs"
+    },
+    {
+      "name": "Workflow",
+      "namespace": "OneStream.Shared.Wcf.BREventOperationType",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/BREventOperationType.cs"
+    }
+  ],
+  "interfaces": [],
+  "structs": [],
+  "delegates": [],
+  "enums": []
+}

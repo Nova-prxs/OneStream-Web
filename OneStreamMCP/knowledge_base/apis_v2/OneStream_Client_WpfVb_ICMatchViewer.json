@@ -1,0 +1,2020 @@
+{
+  "namespace": "OneStream.Client.WpfVb.ICMatchViewer",
+  "generated_at": "2025-12-08T19:28:52.048910",
+  "statistics": {
+    "classes": 6,
+    "interfaces": 0,
+    "structs": 0,
+    "delegates": 3,
+    "enums": 0,
+    "total_methods": 73,
+    "total_properties": 0
+  },
+  "classes": [
+    {
+      "name": "ICStatus",
+      "namespace": "OneStream.Client.WpfVb.ICMatchViewer",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "entityICStatusImagePath",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "entityName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "time",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "entityBalance",
+              "type": "decimal",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "partnersWithActivity",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "pairings",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "pairingsUnbalanced",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [
+        "DesignerGenerated"
+      ],
+      "source_file": "output/types/OneStream/Client/WpfVb/ICMatchViewer.cs",
+      "source_code": "public class ICStatus\n\t{\n\t\tprivate string m_EntityICStatusImagePath;\n\n\t\tprivate string m_EntityName;\n\n\t\tprivate string m_Time;\n\n\t\tprivate decimal m_EntityBalance;\n\n\t\tprivate int m_PartnersWithActivity;\n\n\t\tprivate int m_Pairings;\n\n\t\tprivate int m_PairingsUnbalanced;\n\n\t\tpublic string EntityICStatusImagePath\n\t\t{\n\t\t\tget\n\t\t\t{\n\t\t\t\treturn m_EntityICStatusImagePath;\n\t\t\t}\n\t\t\tset\n\t\t\t{\n\t\t\t\tm_EntityICStatusImagePath = value;\n\t\t\t}\n\t\t}\n\n\t\tpublic string EntityName\n\t\t{\n\t\t\tget\n\t\t\t{\n\t\t\t\treturn m_EntityName;\n\t\t\t}\n\t\t\tset\n\t\t\t{\n\t\t\t\tm_EntityName = value;\n\t\t\t}\n\t\t}\n\n\t\tpublic string Time\n\t\t{\n\t\t\tget\n\t\t\t{\n\t\t\t\treturn m_Time;\n\t\t\t}\n\t\t\tset\n\t\t\t{\n\t\t\t\tm_Time = value;\n\t\t\t}\n\t\t}\n\n\t\tpublic decimal EntityBalance\n\t\t{\n\t\t\tget\n\t\t\t{\n\t\t\t\treturn m_EntityBalance;\n\t\t\t}\n\t\t\tset\n\t\t\t{\n\t\t\t\tm_EntityBalance = value;\n\t\t\t}\n\t\t}\n\n\t\tpublic int PartnersWithActivity\n\t\t{\n\t\t\tget\n\t\t\t{\n\t\t\t\treturn m_PartnersWithActivity;\n\t\t\t}\n\t\t\tset\n\t\t\t{\n\t\t\t\tm_PartnersWithActivity = value;\n\t\t\t}\n\t\t}\n\n\t\tpublic int Pairings\n\t\t{\n\t\t\tget\n\t\t\t{\n\t\t\t\treturn m_Pairings;\n\t\t\t}\n\t\t\tset\n\t\t\t{\n\t\t\t\tm_Pairings = value;\n\t\t\t}\n\t\t}\n\n\t\tpublic int PairingsBalanced\n\t\t{\n\t\t\tget\n\t\t\t{\n\t\t\t\tif (m_Pairings > 0)\n\t\t\t\t{\n\t\t\t\t\treturn checked(m_Pairings - m_PairingsUnbalanced);\n\t\t\t\t}\n\t\t\t\treturn 0;\n\t\t\t}\n\t\t}\n\n\t\tpublic int PairingsUnbalanced\n\t\t{\n\t\t\tget\n\t\t\t{\n\t\t\t\treturn m_PairingsUnbalanced;\n\t\t\t}\n\t\t\tset\n\t\t\t{\n\t\t\t\tm_PairingsUnbalanced = value;\n\t\t\t}\n\t\t}\n\n\t\tpublic ICStatus(string entityICStatusImagePath, string entityName, string time, decimal entityBalance, int partnersWithActivity, int pairings, int pairingsUnbalanced)\n\t\t{\n\t\t\tm_EntityICStatusImagePath = string.Empty;\n\t\t\tm_EntityName = string.Empty;\n\t\t\tm_Time = string.Empty;\n\t\t\tm_EntityBalance = default(decimal);\n\t\t\tm_PartnersWithActivity = 0;\n\t\t\tm_Pairings = 0;\n\t\t\tm_PairingsUnbalanced = 0;\n\t\t\tm_EntityICStatusImagePath = entityICStatusImagePath;\n\t\t\tm_EntityName = entityName;\n\t\t\tm_Time = time;\n\t\t\tm_EntityBalance = entityBalance;\n\t\t\tm_PartnersWithActivity = partnersWithActivity;\n\t\t\tm_Pairings = pairings;\n\t\t\tm_PairingsUnbalanced = pairingsUnbalanced;\n\t\t}\n\t}"
+    },
+    {
+      "name": "ICDetail",
+      "namespace": "OneStream.Client.WpfVb.ICMatchViewer",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "dataCellPk",
+              "type": "DataCellPk",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "icTransaction",
+              "type": "ICMatchTransaction",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "isPrimaryEntity",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "isExpOrAsset",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "isDifference",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "entityName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "partnerName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "partnerId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "account",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "plugAccount",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "reportCurvalue",
+              "type": "decimal",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "reportCurLabel",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "entityCurValue",
+              "type": "decimal",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "entityCurLabel",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "partnerCurValue",
+              "type": "decimal",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "partnerCurLabel",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "partnerBalance",
+              "type": "decimal",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "tolerance",
+              "type": "decimal",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "numberFormat",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "isReportDerived",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "isEntityDerived",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "isPartnerDerived",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/WpfVb/ICMatchViewer.cs",
+      "source_code": "public class ICDetail\n\t{\n\t\tprivate readonly DataCellPk m_DataCellPk;\n\n\t\tprivate readonly ICMatchTransaction m_ICTransaction;\n\n\t\tprivate readonly bool m_IsPrimaryEntity;\n\n\t\tprivate readonly bool m_IsExpOrAsset;\n\n\t\tprivate readonly bool m_IsDifference;\n\n\t\tprivate string m_EntityName;\n\n\t\tprivate string m_PartnerName;\n\n\t\tprivate int m_PartnerId;\n\n\t\tprivate string m_Account;\n\n\t\tprivate string m_DimensionDetails;\n\n\t\tprivate decimal m_ReportCurValue;\n\n\t\tprivate readonly bool m_ReportCurValueIsDerived;\n\n\t\tprivate string m_ReportCurLabel;\n\n\t\tprivate decimal m_EntityCurValue;\n\n\t\tprivate readonly bool m_EntityCurValueIsDerived;\n\n\t\tprivate string m_EntityCurLabel;\n\n\t\tprivate decimal m_PartnerCurValue;\n\n\t\tprivate readonly bool m_PartnerCurValueIsDerived;\n\n\t\tprivate string m_PartnerCurLabel;\n\n\t\tprivate readonly decimal m_PartnerBalance;\n\n\t\tprivate readonly decimal m_Tolerance;\n\n\t\tprivate readonly string m_NumberFormat;\n\n\t\tpublic DataCellPk DataCellPk => m_DataCellPk;\n\n\t\tpublic ICMatchTransaction ICTransaction => m_ICTransaction;\n\n\t\tpublic bool IsDifference => m_IsDifference;\n\n\t\tpublic bool ReportValueDerived => m_ReportCurValueIsDerived;\n\n\t\tpublic bool EntityValueDerived => m_EntityCurValueIsDerived;\n\n\t\tpublic bool PartnerValueDerived => m_PartnerCurValueIsDerived;\n\n\t\tpublic bool ShowDynamicDetaIndicatorForReportingCurrency\n\t\t{\n\t\t\tget\n\t\t\t{\n\t\t\t\tif (m_ReportCurValueIsDerived)\n\t\t\t\t{\n\t\t\t\t\treturn !m_IsDifference;\n\t\t\t\t}\n\t\t\t\treturn false;\n\t\t\t}\n\t\t}\n\n\t\tpublic bool ShowDynamicDetaIndicatorForEntityCurrency\n\t\t{\n\t\t\tget\n\t\t\t{\n\t\t\t\tif (m_EntityCurValueIsDerived)\n\t\t\t\t{\n\t\t\t\t\treturn !m_IsDifference;\n\t\t\t\t}\n\t\t\t\treturn false;\n\t\t\t}\n\t\t}\n\n\t\tpublic bool ShowDynamicDetaIndicatorForPartnerCurrency\n\t\t{\n\t\t\tget\n\t\t\t{\n\t\t\t\tif (PartnerValueDerived)\n\t\t\t\t{\n\t\t\t\t\treturn !m_IsDifference;\n\t\t\t\t}\n\t\t\t\treturn false;\n\t\t\t}\n\t\t}\n\n\t\tpublic bool CanSetStatus\n\t\t{\n\t\t\tget\n\t\t\t{\n\t\t\t\tif (IsDifference)\n\t\t\t\t{\n\t\t\t\t\treturn false;\n\t\t\t\t}\n\t\t\t\tif (m_IsPrimaryEntity)\n\t\t\t\t{\n\t\t\t\t\treturn true;\n\t\t\t\t}\n\t\t\t\treturn false;\n\t\t\t}\n\t\t}\n\n\t\tpublic string PairingGroup\n\t\t{\n\t\t\tget\n\t\t\t{\n\t\t\t\tif (IsDifference)\n\t\t\t\t{\n\t\t\t\t\treturn string.Empty;\n\t\t\t\t}\n\t\t\t\tif (m_IsPrimaryEntity)\n\t\t\t\t{\n\t\t\t\t\treturn m_EntityName + \" - \" + m_PartnerName;\n\t\t\t\t}\n\t\t\t\treturn m_PartnerName + \" - \" + m_EntityName;\n\t\t\t}\n\t\t}\n\n\t\tpublic string EntityName\n\t\t{\n\t\t\tget\n\t\t\t{\n\t\t\t\treturn m_EntityName;\n\t\t\t}\n\t\t\tset\n\t\t\t{\n\t\t\t\tm_EntityName = value;\n\t\t\t}\n\t\t}\n\n\t\tpublic string PartnerName\n\t\t{\n\t\t\tget\n\t\t\t{\n\t\t\t\treturn m_PartnerName;\n\t\t\t}\n\t\t\tset\n\t\t\t{\n\t\t\t\tm_PartnerName = value;\n\t\t\t}\n\t\t}\n\n\t\tpublic int PartnerId\n\t\t{\n\t\t\tget\n\t\t\t{\n\t\t\t\treturn m_PartnerId;\n\t\t\t}\n\t\t\tset\n\t\t\t{\n\t\t\t\tm_PartnerId = value;\n\t\t\t}\n\t\t}\n\n\t\tpublic string Account\n\t\t{\n\t\t\tget\n\t\t\t{\n\t\t\t\treturn m_Account;\n\t\t\t}\n\t\t\tset\n\t\t\t{\n\t\t\t\tm_Account = value;\n\t\t\t}\n\t\t}\n\n\t\tpublic string DimensionDetails\n\t\t{\n\t\t\tget\n\t\t\t{\n\t\t\t\treturn m_DimensionDetails;\n\t\t\t}\n\t\t\tset\n\t\t\t{\n\t\t\t\tm_DimensionDetails = value;\n\t\t\t}\n\t\t}\n\n\t\tpublic string ReportCurValue => m_ReportCurValue.ToString(m_NumberFormat);\n\n\t\tpublic string ReportCurLabel\n\t\t{\n\t\t\tget\n\t\t\t{\n\t\t\t\treturn m_ReportCurLabel;\n\t\t\t}\n\t\t\tset\n\t\t\t{\n\t\t\t\tm_ReportCurLabel = value;\n\t\t\t}\n\t\t}\n\n\t\tpublic string EntityCurValue => m_EntityCurValue.ToString(m_NumberFormat);\n\n\t\tpublic string EntityCurLabel\n\t\t{\n\t\t\tget\n\t\t\t{\n\t\t\t\treturn m_EntityCurLabel;\n\t\t\t}\n\t\t\tset\n\t\t\t{\n\t\t\t\tm_EntityCurLabel = value;\n\t\t\t}\n\t\t}\n\n\t\tpublic string PartnerCurValue => m_PartnerCurValue.ToString(m_NumberFormat);\n\n\t\tpublic string PartnerCurLabel\n\t\t{\n\t\t\tget\n\t\t\t{\n\t\t\t\treturn m_PartnerCurLabel;\n\t\t\t}\n\t\t\tset\n\t\t\t{\n\t\t\t\tm_PartnerCurLabel = value;\n\t\t\t}\n\t\t}\n\n\t\tpublic string PartnerBalanceHeader\n\t\t{\n\t\t\tget\n\t\t\t{\n\t\t\t\tif (IsPartnerBalanced)\n\t\t\t\t{\n\t\t\t\t\treturn m_PartnerName;\n\t\t\t\t}\n\t\t\t\tstring[] obj = new string[5] { m_PartnerName, \"    \", null, null, null };\n\t\t\t\tdecimal partnerBalance = m_PartnerBalance;\n\t\t\t\tobj[2] = partnerBalance.ToString(m_NumberFormat);\n\t\t\t\tobj[3] = \" \";\n\t\t\t\tobj[4] = ReportCurLabel;\n\t\t\t\treturn string.Concat(obj);\n\t\t\t}\n\t\t}\n\n\t\tpublic bool IsPartnerBalanced\n\t\t{\n\t\t\tget\n\t\t\t{\n\t\t\t\tif (decimal.Compare(Math.Abs(m_PartnerBalance), Math.Abs(m_Tolerance)) > 0)\n\t\t\t\t{\n\t\t\t\t\treturn false;\n\t\t\t\t}\n\t\t\t\treturn true;\n\t\t\t}\n\t\t}\n\n\t\tpublic decimal PartnerBalance => m_PartnerBalance;\n\n\t\tpublic ICDetail(DataCellPk dataCellPk, ICMatchTransaction icTransaction, bool isPrimaryEntity, bool isExpOrAsset, bool isDifference, string entityName, string partnerName, int partnerId, string account, string plugAccount, decimal reportCurvalue, string reportCurLabel, decimal entityCurValue, string entityCurLabel, decimal partnerCurValue, string partnerCurLabel, decimal partnerBalance, decimal tolerance, string numberFormat, bool isReportDerived, bool isEntityDerived, bool isPartnerDerived)\n\t\t{\n\t\t\tm_DataCellPk = null;\n\t\t\tm_ICTransaction = null;\n\t\t\tm_IsPrimaryEntity = false;\n\t\t\tm_IsExpOrAsset = false;\n\t\t\tm_EntityName = string.Empty;\n\t\t\tm_PartnerName = string.Empty;\n\t\t\tm_PartnerId = -1;\n\t\t\tm_Account = string.Empty;\n\t\t\tm_DimensionDetails = string.Empty;\n\t\t\tm_ReportCurValue = default(decimal);\n\t\t\tm_ReportCurValueIsDerived = false;\n\t\t\tm_ReportCurLabel = string.Empty;\n\t\t\tm_EntityCurValue = default(decimal);\n\t\t\tm_EntityCurValueIsDerived = false;\n\t\t\tm_EntityCurLabel = string.Empty;\n\t\t\tm_PartnerCurValue = default(decimal);\n\t\t\tm_PartnerCurValueIsDerived = false;\n\t\t\tm_PartnerCurLabel = string.Empty;\n\t\t\tm_PartnerBalance = default(decimal);\n\t\t\tm_Tolerance = default(decimal);\n\t\t\tm_NumberFormat = \"N2\";\n\t\t\tm_DataCellPk = dataCellPk;\n\t\t\tm_ICTransaction = icTransaction;\n\t\t\tm_IsPrimaryEntity = isPrimaryEntity;\n\t\t\tm_IsExpOrAsset = isExpOrAsset;\n\t\t\tm_IsDifference = isDifference;\n\t\t\tm_EntityName = entityName;\n\t\t\tm_PartnerName = partnerName;\n\t\t\tm_PartnerId = partnerId;\n\t\t\tm_Account = account;\n\t\t\tm_DimensionDetails = plugAccount;\n\t\t\tm_ReportCurValue = reportCurvalue;\n\t\t\tm_ReportCurValueIsDerived = isReportDerived;\n\t\t\tm_ReportCurLabel = reportCurLabel;\n\t\t\tm_EntityCurValue = entityCurValue;\n\t\t\tm_EntityCurValueIsDerived = isEntityDerived;\n\t\t\tm_EntityCurLabel = entityCurLabel;\n\t\t\tm_PartnerCurValue = partnerCurValue;\n\t\t\tm_PartnerCurValueIsDerived = isPartnerDerived;\n\t\t\tm_PartnerCurLabel = partnerCurLabel;\n\t\t\tm_PartnerBalance = partnerBalance;\n\t\t\tm_Tolerance = tolerance;\n\t\t\tm_NumberFormat = numberFormat;\n\t\t}\n\t}"
+    },
+    {
+      "name": "StyleSelectorCurrencyLabel",
+      "namespace": "OneStream.Client.WpfVb.ICMatchViewer",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "StyleSelector",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "SelectStyle",
+          "return_type": "override Style",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "item",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "container",
+              "type": "DependencyObject",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Selects style",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "type",
+          "return_type": "Unknown result",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "references",
+              "type": "might be due to invalid IL or missing",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Types operation",
+          "generic_params": [],
+          "overloads": 15
+        },
+        {
+          "name": "type",
+          "return_type": "Unknown result",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "references",
+              "type": "might be due to invalid IL or missing",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Types operation",
+          "generic_params": [],
+          "overloads": 15
+        },
+        {
+          "name": "type",
+          "return_type": "Unknown result",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "references",
+              "type": "might be due to invalid IL or missing",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Types operation",
+          "generic_params": [],
+          "overloads": 15
+        },
+        {
+          "name": "type",
+          "return_type": "Unknown result",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "references",
+              "type": "might be due to invalid IL or missing",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Types operation",
+          "generic_params": [],
+          "overloads": 15
+        },
+        {
+          "name": "type",
+          "return_type": "Unknown result",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "references",
+              "type": "might be due to invalid IL or missing",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Types operation",
+          "generic_params": [],
+          "overloads": 15
+        },
+        {
+          "name": "type",
+          "return_type": "Unknown result",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "references",
+              "type": "might be due to invalid IL or missing",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Types operation",
+          "generic_params": [],
+          "overloads": 15
+        },
+        {
+          "name": "type",
+          "return_type": "Unknown result",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "references",
+              "type": "might be due to invalid IL or missing",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Types operation",
+          "generic_params": [],
+          "overloads": 15
+        },
+        {
+          "name": "type",
+          "return_type": "Unknown result",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "references",
+              "type": "might be due to invalid IL or missing",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Types operation",
+          "generic_params": [],
+          "overloads": 15
+        },
+        {
+          "name": "type",
+          "return_type": "Unknown result",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "references",
+              "type": "might be due to invalid IL or missing",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Types operation",
+          "generic_params": [],
+          "overloads": 15
+        },
+        {
+          "name": "type",
+          "return_type": "Unknown result",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "references",
+              "type": "might be due to invalid IL or missing",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Types operation",
+          "generic_params": [],
+          "overloads": 15
+        },
+        {
+          "name": "type",
+          "return_type": "Unknown result",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "references",
+              "type": "might be due to invalid IL or missing",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Types operation",
+          "generic_params": [],
+          "overloads": 15
+        },
+        {
+          "name": "type",
+          "return_type": "Unknown result",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "references",
+              "type": "might be due to invalid IL or missing",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Types operation",
+          "generic_params": [],
+          "overloads": 15
+        },
+        {
+          "name": "type",
+          "return_type": "Unknown result",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "references",
+              "type": "might be due to invalid IL or missing",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Types operation",
+          "generic_params": [],
+          "overloads": 15
+        },
+        {
+          "name": "type",
+          "return_type": "Unknown result",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "references",
+              "type": "might be due to invalid IL or missing",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Types operation",
+          "generic_params": [],
+          "overloads": 15
+        },
+        {
+          "name": "type",
+          "return_type": "Unknown result",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "references",
+              "type": "might be due to invalid IL or missing",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Types operation",
+          "generic_params": [],
+          "overloads": 15
+        },
+        {
+          "name": "Style",
+          "return_type": "Style",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "typeof(GridViewCell",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Styles operation",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "Setter",
+          "return_type": "Setter",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "Control.BackgroundProperty",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "(object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Setters operation",
+          "generic_params": [],
+          "overloads": 8
+        },
+        {
+          "name": "Setter",
+          "return_type": "Setter",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "Control.ForegroundProperty",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "(object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Setters operation",
+          "generic_params": [],
+          "overloads": 8
+        },
+        {
+          "name": "Setter",
+          "return_type": "Setter",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "Control.FontWeightProperty",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "(object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Setters operation",
+          "generic_params": [],
+          "overloads": 8
+        },
+        {
+          "name": "Setter",
+          "return_type": "Setter",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "Control.FontSizeProperty",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "(object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Setters operation",
+          "generic_params": [],
+          "overloads": 8
+        },
+        {
+          "name": "Setter",
+          "return_type": "Setter",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "Control.BackgroundProperty",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "(object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Setters operation",
+          "generic_params": [],
+          "overloads": 8
+        },
+        {
+          "name": "Setter",
+          "return_type": "Setter",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "Control.ForegroundProperty",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "(object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Setters operation",
+          "generic_params": [],
+          "overloads": 8
+        },
+        {
+          "name": "Setter",
+          "return_type": "Setter",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "Control.FontWeightProperty",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "(object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Setters operation",
+          "generic_params": [],
+          "overloads": 8
+        },
+        {
+          "name": "Setter",
+          "return_type": "Setter",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "Control.FontSizeProperty",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "(object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Setters operation",
+          "generic_params": [],
+          "overloads": 8
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/WpfVb/ICMatchViewer.cs"
+    },
+    {
+      "name": "StyleSelectorShadedDifference",
+      "namespace": "OneStream.Client.WpfVb.ICMatchViewer",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "StyleSelector",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "SelectStyle",
+          "return_type": "override Style",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "item",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "container",
+              "type": "DependencyObject",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Selects style",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "type",
+          "return_type": "Unknown result",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "references",
+              "type": "might be due to invalid IL or missing",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Types operation",
+          "generic_params": [],
+          "overloads": 13
+        },
+        {
+          "name": "type",
+          "return_type": "Unknown result",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "references",
+              "type": "might be due to invalid IL or missing",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Types operation",
+          "generic_params": [],
+          "overloads": 13
+        },
+        {
+          "name": "type",
+          "return_type": "Unknown result",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "references",
+              "type": "might be due to invalid IL or missing",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Types operation",
+          "generic_params": [],
+          "overloads": 13
+        },
+        {
+          "name": "type",
+          "return_type": "Unknown result",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "references",
+              "type": "might be due to invalid IL or missing",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Types operation",
+          "generic_params": [],
+          "overloads": 13
+        },
+        {
+          "name": "type",
+          "return_type": "Unknown result",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "references",
+              "type": "might be due to invalid IL or missing",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Types operation",
+          "generic_params": [],
+          "overloads": 13
+        },
+        {
+          "name": "type",
+          "return_type": "Unknown result",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "references",
+              "type": "might be due to invalid IL or missing",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Types operation",
+          "generic_params": [],
+          "overloads": 13
+        },
+        {
+          "name": "type",
+          "return_type": "Unknown result",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "references",
+              "type": "might be due to invalid IL or missing",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Types operation",
+          "generic_params": [],
+          "overloads": 13
+        },
+        {
+          "name": "type",
+          "return_type": "Unknown result",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "references",
+              "type": "might be due to invalid IL or missing",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Types operation",
+          "generic_params": [],
+          "overloads": 13
+        },
+        {
+          "name": "type",
+          "return_type": "Unknown result",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "references",
+              "type": "might be due to invalid IL or missing",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Types operation",
+          "generic_params": [],
+          "overloads": 13
+        },
+        {
+          "name": "type",
+          "return_type": "Unknown result",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "references",
+              "type": "might be due to invalid IL or missing",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Types operation",
+          "generic_params": [],
+          "overloads": 13
+        },
+        {
+          "name": "type",
+          "return_type": "Unknown result",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "references",
+              "type": "might be due to invalid IL or missing",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Types operation",
+          "generic_params": [],
+          "overloads": 13
+        },
+        {
+          "name": "type",
+          "return_type": "Unknown result",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "references",
+              "type": "might be due to invalid IL or missing",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Types operation",
+          "generic_params": [],
+          "overloads": 13
+        },
+        {
+          "name": "type",
+          "return_type": "Unknown result",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "references",
+              "type": "might be due to invalid IL or missing",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Types operation",
+          "generic_params": [],
+          "overloads": 13
+        },
+        {
+          "name": "Style",
+          "return_type": "Style",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "typeof(GridViewCell",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Styles operation",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "Setter",
+          "return_type": "Setter",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "Control.BackgroundProperty",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "(object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Setters operation",
+          "generic_params": [],
+          "overloads": 6
+        },
+        {
+          "name": "Setter",
+          "return_type": "Setter",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "Control.ForegroundProperty",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "(object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Setters operation",
+          "generic_params": [],
+          "overloads": 6
+        },
+        {
+          "name": "Setter",
+          "return_type": "Setter",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "Control.FontWeightProperty",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "(object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Setters operation",
+          "generic_params": [],
+          "overloads": 6
+        },
+        {
+          "name": "Setter",
+          "return_type": "Setter",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "Control.BackgroundProperty",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "(object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Setters operation",
+          "generic_params": [],
+          "overloads": 6
+        },
+        {
+          "name": "Setter",
+          "return_type": "Setter",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "Control.ForegroundProperty",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "(object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Setters operation",
+          "generic_params": [],
+          "overloads": 6
+        },
+        {
+          "name": "Setter",
+          "return_type": "Setter",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "Control.FontWeightProperty",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "(object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Setters operation",
+          "generic_params": [],
+          "overloads": 6
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/WpfVb/ICMatchViewer.cs"
+    },
+    {
+      "name": "StyleSelectorGeneral",
+      "namespace": "OneStream.Client.WpfVb.ICMatchViewer",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "StyleSelector",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "SelectStyle",
+          "return_type": "override Style",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "item",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "container",
+              "type": "DependencyObject",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Selects style",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "type",
+          "return_type": "Unknown result",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "references",
+              "type": "might be due to invalid IL or missing",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Types operation",
+          "generic_params": [],
+          "overloads": 9
+        },
+        {
+          "name": "type",
+          "return_type": "Unknown result",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "references",
+              "type": "might be due to invalid IL or missing",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Types operation",
+          "generic_params": [],
+          "overloads": 9
+        },
+        {
+          "name": "type",
+          "return_type": "Unknown result",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "references",
+              "type": "might be due to invalid IL or missing",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Types operation",
+          "generic_params": [],
+          "overloads": 9
+        },
+        {
+          "name": "type",
+          "return_type": "Unknown result",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "references",
+              "type": "might be due to invalid IL or missing",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Types operation",
+          "generic_params": [],
+          "overloads": 9
+        },
+        {
+          "name": "type",
+          "return_type": "Unknown result",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "references",
+              "type": "might be due to invalid IL or missing",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Types operation",
+          "generic_params": [],
+          "overloads": 9
+        },
+        {
+          "name": "type",
+          "return_type": "Unknown result",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "references",
+              "type": "might be due to invalid IL or missing",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Types operation",
+          "generic_params": [],
+          "overloads": 9
+        },
+        {
+          "name": "type",
+          "return_type": "Unknown result",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "references",
+              "type": "might be due to invalid IL or missing",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Types operation",
+          "generic_params": [],
+          "overloads": 9
+        },
+        {
+          "name": "type",
+          "return_type": "Unknown result",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "references",
+              "type": "might be due to invalid IL or missing",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Types operation",
+          "generic_params": [],
+          "overloads": 9
+        },
+        {
+          "name": "type",
+          "return_type": "Unknown result",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "references",
+              "type": "might be due to invalid IL or missing",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Types operation",
+          "generic_params": [],
+          "overloads": 9
+        },
+        {
+          "name": "Style",
+          "return_type": "Style",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "typeof(GridViewCell",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Styles operation",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "Setter",
+          "return_type": "Setter",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "Control.ForegroundProperty",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "(object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Setters operation",
+          "generic_params": [],
+          "overloads": 4
+        },
+        {
+          "name": "Setter",
+          "return_type": "Setter",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "Control.FontWeightProperty",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "(object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Setters operation",
+          "generic_params": [],
+          "overloads": 4
+        },
+        {
+          "name": "Setter",
+          "return_type": "Setter",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "Control.ForegroundProperty",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "(object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Setters operation",
+          "generic_params": [],
+          "overloads": 4
+        },
+        {
+          "name": "Setter",
+          "return_type": "Setter",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "Control.FontWeightProperty",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "(object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Setters operation",
+          "generic_params": [],
+          "overloads": 4
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/WpfVb/ICMatchViewer.cs"
+    },
+    {
+      "name": "StyleSelectorGroupHeader",
+      "namespace": "OneStream.Client.WpfVb.ICMatchViewer",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "StyleSelector",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "SelectStyle",
+          "return_type": "override Style",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "item",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "container",
+              "type": "DependencyObject",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Selects style",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "type",
+          "return_type": "Unknown result",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "references",
+              "type": "might be due to invalid IL or missing",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Types operation",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "type",
+          "return_type": "Unknown result",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "references",
+              "type": "might be due to invalid IL or missing",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Types operation",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "type",
+          "return_type": "Unknown result",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "references",
+              "type": "might be due to invalid IL or missing",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Types operation",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "type",
+          "return_type": "Unknown result",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "references",
+              "type": "might be due to invalid IL or missing",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Types operation",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "type",
+          "return_type": "Unknown result",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "references",
+              "type": "might be due to invalid IL or missing",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Types operation",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "Style",
+          "return_type": "Style",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "typeof(GridViewGroupRow",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Styles operation",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "Setter",
+          "return_type": "Setter",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "Control.BackgroundProperty",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "(object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Setters operation",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "Setter",
+          "return_type": "Setter",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "Control.BackgroundProperty",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "(object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Setters operation",
+          "generic_params": [],
+          "overloads": 2
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/WpfVb/ICMatchViewer.cs"
+    }
+  ],
+  "interfaces": [],
+  "structs": [],
+  "delegates": [
+    {
+      "name": "ICMatchingStartedEventHandler",
+      "namespace": "OneStream.Client.WpfVb.ICMatchViewer",
+      "type": "delegate",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "Invoke",
+          "return_type": "void",
+          "parameters": [],
+          "access": "public",
+          "is_static": false,
+          "is_async": false,
+          "description": "Delegate invocation method returning void"
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/WpfVb/ICMatchViewer.cs"
+    },
+    {
+      "name": "ICMatchingCompletedEventHandler",
+      "namespace": "OneStream.Client.WpfVb.ICMatchViewer",
+      "type": "delegate",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "Invoke",
+          "return_type": "void",
+          "parameters": [],
+          "access": "public",
+          "is_static": false,
+          "is_async": false,
+          "description": "Delegate invocation method returning void"
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/WpfVb/ICMatchViewer.cs"
+    },
+    {
+      "name": "ICTransactionSelectedEventHandler",
+      "namespace": "OneStream.Client.WpfVb.ICMatchViewer",
+      "type": "delegate",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "Invoke",
+          "return_type": "void",
+          "parameters": [],
+          "access": "public",
+          "is_static": false,
+          "is_async": false,
+          "description": "Delegate invocation method returning void"
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/WpfVb/ICMatchViewer.cs"
+    }
+  ],
+  "enums": []
+}

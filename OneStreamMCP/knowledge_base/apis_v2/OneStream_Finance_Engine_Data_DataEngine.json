@@ -1,0 +1,135 @@
+{
+  "namespace": "OneStream.Finance.Engine.Data.DataEngine",
+  "dll_source": "Unknown",
+  "extraction_timestamp": "2025-11-30T19:45:50.508766",
+  "statistics": {
+    "property_count": 0,
+    "enum_count": 0,
+    "classes": 1,
+    "total_methods": 4
+  },
+  "classes": [
+    {
+      "name": "DynamicDataCustomOperationConfig",
+      "namespace": "OneStream.Finance.Engine.Data.DataEngine",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IDynamicDataConfiguration<T> where T : INumber<T>"
+      ],
+      "generic_params": [
+        "T"
+      ],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "left",
+              "type": "IDynamicDataConfiguration<T>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "right",
+              "type": "IDynamicDataConfiguration<T>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cell",
+              "type": "Func<(ICellPk cellPk, ICell<T>",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [
+        {
+          "name": "CreateDataOperation",
+          "return_type": "IDynamicDataOperation<T>",
+          "access": "public",
+          "is_static": false,
+          "is_async": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "parameters": [
+            {
+              "name": "FinanceApi",
+              "type": "FinanceRulesApi",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates data operation",
+          "overloads": 1,
+          "generic_params": []
+        },
+        {
+          "name": "NotImplementedException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_async": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "parameters": [],
+          "description": "Nots implemented exception",
+          "overloads": 2,
+          "generic_params": []
+        },
+        {
+          "name": "IsValidForDataUnit",
+          "return_type": "bool",
+          "access": "public",
+          "is_static": false,
+          "is_async": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "parameters": [
+            {
+              "name": "CubeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "DataUnitMembers",
+              "type": "Dictionary<DimType, int>",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Checks if valid for data unit",
+          "overloads": 1,
+          "generic_params": []
+        },
+        {
+          "name": "NotImplementedException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_async": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "parameters": [],
+          "description": "Nots implemented exception",
+          "overloads": 2,
+          "generic_params": []
+        }
+      ],
+      "events": [],
+      "nested_types": []
+    }
+  ],
+  "enums": []
+}

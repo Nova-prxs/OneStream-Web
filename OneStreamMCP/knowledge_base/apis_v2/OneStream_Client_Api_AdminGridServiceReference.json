@@ -1,0 +1,4565 @@
+{
+  "namespace": "OneStream.Client.Api.AdminGridServiceReference",
+  "generated_at": "2025-12-08T19:28:51.064561",
+  "statistics": {
+    "classes": 6,
+    "interfaces": 1,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 0,
+    "total_methods": 115,
+    "total_properties": 0
+  },
+  "classes": [
+    {
+      "name": "AdminGridServiceClient",
+      "namespace": "OneStream.Client.Api.AdminGridServiceReference",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "ClientBase<IAdminGridServiceClient>",
+      "interfaces": [
+        "IAdminGridServiceClient",
+        "IDisposable",
+        "IApiClient"
+      ],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "httpClientFactory",
+              "type": "IAuthenticatedHttpClientFactory",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "baseServerUri",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [
+        {
+          "name": "GetSheetLayout",
+          "return_type": "AjaxSheetLayoutInfo",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "layoutName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "sheetName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "substitutionVariables",
+              "type": "Dictionary<string, string>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "includeCubeColumnList",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "wfProfileIDHint",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "scenarioIdHint",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "summaryRowIDForCubeColumns",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets sheet layout",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "SessionInfo",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Sessions info",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "ex",
+              "type": "AggregateException",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "BeginGetSheetLayout",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "layoutName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "sheetName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "substitutionVariables",
+              "type": "Dictionary<string, string>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "includeCubeColumnList",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "wfProfileIDHint",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "scenarioIdHint",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "summaryRowIDForCubeColumns",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins get sheet layout",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetSheetLayout",
+          "return_type": ">",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "layoutName",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "sheetName",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "substitutionVariables",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "includeCubeColumnList",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "wfProfileIDHint",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "scenarioIdHint",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "summaryRowIDForCubeColumns",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets sheet layout",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "antecedent.Result",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 10
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "OnEndResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 10
+        },
+        {
+          "name": "AsyncOperationContinuation",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "result",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "asyncState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Asyncs operation continuation",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "EndGetSheetLayout",
+          "return_type": "AjaxSheetLayoutInfo",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends get sheet layout",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnBeginGetSheetLayout",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "inValues",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            }
+          ],
+          "description": "Ons begin get sheet layout",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnEndGetSheetLayout",
+          "return_type": "object[]",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end get sheet layout",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnGetSheetLayoutCompleted",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "state",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons get sheet layout completed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetSheetLayoutCompletedEventArgs",
+          "return_type": "this, new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "e.Results",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Error",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Cancelled",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.UserState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets sheet layout completed event args",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetSheetLayoutAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "layoutName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "sheetName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "substitutionVariables",
+              "type": "Dictionary<string, string>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "includeCubeColumnList",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "wfProfileIDHint",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "scenarioIdHint",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "summaryRowIDForCubeColumns",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets sheet layout async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "GetSheetLayoutAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "layoutName",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "sheetName",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "substitutionVariables",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "includeCubeColumnList",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "wfProfileIDHint",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "scenarioIdHint",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "summaryRowIDForCubeColumns",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets sheet layout async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "GetSheetLayoutAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "layoutName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "sheetName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "substitutionVariables",
+              "type": "Dictionary<string, string>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "includeCubeColumnList",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "wfProfileIDHint",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "scenarioIdHint",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "summaryRowIDForCubeColumns",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets sheet layout async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "InvokeAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "onBeginGetSheetLayoutDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "si",
+              "type": "new object[8] {",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "layoutName",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "sheetName",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "substitutionVariables",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "includeCubeColumnList",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "wfProfileIDHint",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "scenarioIdHint",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "}",
+              "type": "summaryRowIDForCubeColumns",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onEndGetSheetLayoutDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onGetSheetLayoutCompletedDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "userState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Invokes async",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "GetSheetLayoutCompressed",
+          "return_type": "CompressionResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "layoutName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "sheetName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "substitutionVariables",
+              "type": "Dictionary<string, string>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "includeCubeColumnList",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "wfProfileIDHint",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "scenarioIdHint",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "summaryRowIDForCubeColumns",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets sheet layout compressed",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "SessionInfo",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Sessions info",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "ex",
+              "type": "AggregateException",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "BeginGetSheetLayoutCompressed",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "layoutName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "sheetName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "substitutionVariables",
+              "type": "Dictionary<string, string>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "includeCubeColumnList",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "wfProfileIDHint",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "scenarioIdHint",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "summaryRowIDForCubeColumns",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins get sheet layout compressed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetSheetLayoutCompressed",
+          "return_type": ">",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "layoutName",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "sheetName",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "substitutionVariables",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "includeCubeColumnList",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "wfProfileIDHint",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "scenarioIdHint",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "summaryRowIDForCubeColumns",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets sheet layout compressed",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "antecedent.Result",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 10
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "OnEndResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 10
+        },
+        {
+          "name": "AsyncOperationContinuation",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "result",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "asyncState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Asyncs operation continuation",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "EndGetSheetLayoutCompressed",
+          "return_type": "CompressionResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends get sheet layout compressed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnBeginGetSheetLayoutCompressed",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "inValues",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            }
+          ],
+          "description": "Ons begin get sheet layout compressed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnEndGetSheetLayoutCompressed",
+          "return_type": "object[]",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end get sheet layout compressed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnGetSheetLayoutCompressedCompleted",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "state",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons get sheet layout compressed completed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetSheetLayoutCompressedCompletedEventArgs",
+          "return_type": "this, new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "e.Results",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Error",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Cancelled",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.UserState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets sheet layout compressed completed event args",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetSheetLayoutCompressedAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "layoutName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "sheetName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "substitutionVariables",
+              "type": "Dictionary<string, string>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "includeCubeColumnList",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "wfProfileIDHint",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "scenarioIdHint",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "summaryRowIDForCubeColumns",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets sheet layout compressed async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "GetSheetLayoutCompressedAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "layoutName",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "sheetName",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "substitutionVariables",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "includeCubeColumnList",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "wfProfileIDHint",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "scenarioIdHint",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "summaryRowIDForCubeColumns",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets sheet layout compressed async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "GetSheetLayoutCompressedAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "layoutName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "sheetName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "substitutionVariables",
+              "type": "Dictionary<string, string>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "includeCubeColumnList",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "wfProfileIDHint",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "scenarioIdHint",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "summaryRowIDForCubeColumns",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets sheet layout compressed async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "InvokeAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "onBeginGetSheetLayoutCompressedDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "si",
+              "type": "new object[8] {",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "layoutName",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "sheetName",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "substitutionVariables",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "includeCubeColumnList",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "wfProfileIDHint",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "scenarioIdHint",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "}",
+              "type": "summaryRowIDForCubeColumns",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onEndGetSheetLayoutCompressedDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onGetSheetLayoutCompressedCompletedDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "userState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Invokes async",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "ExecuteAjaxPagedQuery",
+          "return_type": "AjaxPagedQueryInfo",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "ajaxPageQuery",
+              "type": "AjaxPagedQueryInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Executes ajax paged query",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "SessionInfo",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Sessions info",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "ex",
+              "type": "AggregateException",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "BeginExecuteAjaxPagedQuery",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "ajaxPageQuery",
+              "type": "AjaxPagedQueryInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins execute ajax paged query",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "ExecuteAjaxPagedQuery",
+          "return_type": ">",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "ajaxPageQuery",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Executes ajax paged query",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "antecedent.Result",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 10
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "OnEndResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 10
+        },
+        {
+          "name": "AsyncOperationContinuation",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "result",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "asyncState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Asyncs operation continuation",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "EndExecuteAjaxPagedQuery",
+          "return_type": "AjaxPagedQueryInfo",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends execute ajax paged query",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnBeginExecuteAjaxPagedQuery",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "inValues",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            }
+          ],
+          "description": "Ons begin execute ajax paged query",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnEndExecuteAjaxPagedQuery",
+          "return_type": "object[]",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end execute ajax paged query",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnExecuteAjaxPagedQueryCompleted",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "state",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons execute ajax paged query completed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "ExecuteAjaxPagedQueryCompletedEventArgs",
+          "return_type": "this, new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "e.Results",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Error",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Cancelled",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.UserState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Executes ajax paged query completed event args",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "ExecuteAjaxPagedQueryAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "ajaxPageQuery",
+              "type": "AjaxPagedQueryInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Executes ajax paged query async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "ExecuteAjaxPagedQueryAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "ajaxPageQuery",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Executes ajax paged query async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "ExecuteAjaxPagedQueryAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "ajaxPageQuery",
+              "type": "AjaxPagedQueryInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Executes ajax paged query async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "InvokeAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "onBeginExecuteAjaxPagedQueryDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "si",
+              "type": "new object[2] {",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "}",
+              "type": "ajaxPageQuery",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onEndExecuteAjaxPagedQueryDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onExecuteAjaxPagedQueryCompletedDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "userState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Invokes async",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "ExecuteAjaxPagedQueryCompressed",
+          "return_type": "CompressionResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "ajaxPageQuery",
+              "type": "AjaxPagedQueryInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Executes ajax paged query compressed",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "SessionInfo",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Sessions info",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "ex",
+              "type": "AggregateException",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "BeginExecuteAjaxPagedQueryCompressed",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "ajaxPageQuery",
+              "type": "AjaxPagedQueryInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins execute ajax paged query compressed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "ExecuteAjaxPagedQueryCompressed",
+          "return_type": ">",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "ajaxPageQuery",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Executes ajax paged query compressed",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "antecedent.Result",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 10
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "OnEndResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 10
+        },
+        {
+          "name": "AsyncOperationContinuation",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "result",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "asyncState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Asyncs operation continuation",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "EndExecuteAjaxPagedQueryCompressed",
+          "return_type": "CompressionResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends execute ajax paged query compressed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnBeginExecuteAjaxPagedQueryCompressed",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "inValues",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            }
+          ],
+          "description": "Ons begin execute ajax paged query compressed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnEndExecuteAjaxPagedQueryCompressed",
+          "return_type": "object[]",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end execute ajax paged query compressed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnExecuteAjaxPagedQueryCompressedCompleted",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "state",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons execute ajax paged query compressed completed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "ExecuteAjaxPagedQueryCompressedCompletedEventArgs",
+          "return_type": "this, new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "e.Results",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Error",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Cancelled",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.UserState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Executes ajax paged query compressed completed event args",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "ExecuteAjaxPagedQueryCompressedAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "ajaxPageQuery",
+              "type": "AjaxPagedQueryInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Executes ajax paged query compressed async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "ExecuteAjaxPagedQueryCompressedAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "ajaxPageQuery",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Executes ajax paged query compressed async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "ExecuteAjaxPagedQueryCompressedAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "ajaxPageQuery",
+              "type": "AjaxPagedQueryInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Executes ajax paged query compressed async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "InvokeAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "onBeginExecuteAjaxPagedQueryCompressedDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "si",
+              "type": "new object[2] {",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "}",
+              "type": "ajaxPageQuery",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onEndExecuteAjaxPagedQueryCompressedDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onExecuteAjaxPagedQueryCompressedCompletedDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "userState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Invokes async",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "GetActiveCubeDimensions",
+          "return_type": "ObservableCollection<AjaxListItem>",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "wfProfileIDHint",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "scenarioIdHint",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "summaryRowIDForCubeColumns",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets active cube dimensions",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "SessionInfo",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Sessions info",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "ex",
+              "type": "AggregateException",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "BeginGetActiveCubeDimensions",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "wfProfileIDHint",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "scenarioIdHint",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "summaryRowIDForCubeColumns",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins get active cube dimensions",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetActiveCubeDimensions",
+          "return_type": ">",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "wfProfileIDHint",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "scenarioIdHint",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "summaryRowIDForCubeColumns",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets active cube dimensions",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "antecedent.Result",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 10
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "OnEndResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 10
+        },
+        {
+          "name": "AsyncOperationContinuation",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "result",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "asyncState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Asyncs operation continuation",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "EndGetActiveCubeDimensions",
+          "return_type": "ObservableCollection<AjaxListItem>",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends get active cube dimensions",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnBeginGetActiveCubeDimensions",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "inValues",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            }
+          ],
+          "description": "Ons begin get active cube dimensions",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnEndGetActiveCubeDimensions",
+          "return_type": "object[]",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end get active cube dimensions",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnGetActiveCubeDimensionsCompleted",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "state",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons get active cube dimensions completed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetActiveCubeDimensionsCompletedEventArgs",
+          "return_type": "this, new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "e.Results",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Error",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Cancelled",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.UserState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets active cube dimensions completed event args",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetActiveCubeDimensionsAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "wfProfileIDHint",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "scenarioIdHint",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "summaryRowIDForCubeColumns",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets active cube dimensions async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "GetActiveCubeDimensionsAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "wfProfileIDHint",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "scenarioIdHint",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "summaryRowIDForCubeColumns",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets active cube dimensions async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "GetActiveCubeDimensionsAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "wfProfileIDHint",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "scenarioIdHint",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "summaryRowIDForCubeColumns",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets active cube dimensions async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "InvokeAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "onBeginGetActiveCubeDimensionsDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "si",
+              "type": "new object[4] {",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "wfProfileIDHint",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "scenarioIdHint",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "}",
+              "type": "summaryRowIDForCubeColumns",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onEndGetActiveCubeDimensionsDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onGetActiveCubeDimensionsCompletedDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "userState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Invokes async",
+          "generic_params": [],
+          "overloads": 5
+        }
+      ],
+      "events": [
+        {
+          "name": "GetSheetLayoutCompleted",
+          "type": "EventHandler<GetSheetLayoutCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "GetSheetLayoutCompressedCompleted",
+          "type": "EventHandler<GetSheetLayoutCompressedCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "ExecuteAjaxPagedQueryCompleted",
+          "type": "EventHandler<ExecuteAjaxPagedQueryCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "ExecuteAjaxPagedQueryCompressedCompleted",
+          "type": "EventHandler<ExecuteAjaxPagedQueryCompressedCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "GetActiveCubeDimensionsCompleted",
+          "type": "EventHandler<GetActiveCubeDimensionsCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        }
+      ],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Api/AdminGridServiceReference/AdminGridServiceClient.cs"
+    },
+    {
+      "name": "ExecuteAjaxPagedQueryCompressedCompletedEventArgs",
+      "namespace": "OneStream.Client.Api.AdminGridServiceReference",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "AsyncCompletedEventArgs",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "results",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "exception",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cancelled",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [
+        {
+          "name": "RaiseExceptionIfNecessary",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Raises exception if necessary",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Api/AdminGridServiceReference/ExecuteAjaxPagedQueryCompressedCompletedEventArgs.cs",
+      "source_code": "public class ExecuteAjaxPagedQueryCompressedCompletedEventArgs : AsyncCompletedEventArgs\n{\n\tprivate object[] results;\n\n\tpublic CompressionResult Result\n\t{\n\t\tget\n\t\t{\n\t\t\tRaiseExceptionIfNecessary();\n\t\t\treturn (CompressionResult)results[0];\n\t\t}\n\t}\n\n\tpublic ExecuteAjaxPagedQueryCompressedCompletedEventArgs(object[] results, Exception exception, bool cancelled, object userState)\n\t\t: base(exception, cancelled, userState)\n\t{\n\t\tthis.results = results;\n\t}\n}"
+    },
+    {
+      "name": "GetActiveCubeDimensionsCompletedEventArgs",
+      "namespace": "OneStream.Client.Api.AdminGridServiceReference",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "AsyncCompletedEventArgs",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "results",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "exception",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cancelled",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [
+        {
+          "name": "RaiseExceptionIfNecessary",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Raises exception if necessary",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Api/AdminGridServiceReference/GetActiveCubeDimensionsCompletedEventArgs.cs",
+      "source_code": "public class GetActiveCubeDimensionsCompletedEventArgs : AsyncCompletedEventArgs\n{\n\tprivate object[] results;\n\n\tpublic ObservableCollection<AjaxListItem> Result\n\t{\n\t\tget\n\t\t{\n\t\t\tRaiseExceptionIfNecessary();\n\t\t\treturn (ObservableCollection<AjaxListItem>)results[0];\n\t\t}\n\t}\n\n\tpublic GetActiveCubeDimensionsCompletedEventArgs(object[] results, Exception exception, bool cancelled, object userState)\n\t\t: base(exception, cancelled, userState)\n\t{\n\t\tthis.results = results;\n\t}\n}"
+    },
+    {
+      "name": "GetSheetLayoutCompressedCompletedEventArgs",
+      "namespace": "OneStream.Client.Api.AdminGridServiceReference",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "AsyncCompletedEventArgs",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "results",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "exception",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cancelled",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [
+        {
+          "name": "RaiseExceptionIfNecessary",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Raises exception if necessary",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Api/AdminGridServiceReference/GetSheetLayoutCompressedCompletedEventArgs.cs",
+      "source_code": "public class GetSheetLayoutCompressedCompletedEventArgs : AsyncCompletedEventArgs\n{\n\tprivate object[] results;\n\n\tpublic CompressionResult Result\n\t{\n\t\tget\n\t\t{\n\t\t\tRaiseExceptionIfNecessary();\n\t\t\treturn (CompressionResult)results[0];\n\t\t}\n\t}\n\n\tpublic GetSheetLayoutCompressedCompletedEventArgs(object[] results, Exception exception, bool cancelled, object userState)\n\t\t: base(exception, cancelled, userState)\n\t{\n\t\tthis.results = results;\n\t}\n}"
+    },
+    {
+      "name": "GetSheetLayoutCompletedEventArgs",
+      "namespace": "OneStream.Client.Api.AdminGridServiceReference",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "AsyncCompletedEventArgs",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "results",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "exception",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cancelled",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [
+        {
+          "name": "RaiseExceptionIfNecessary",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Raises exception if necessary",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Api/AdminGridServiceReference/GetSheetLayoutCompletedEventArgs.cs",
+      "source_code": "public class GetSheetLayoutCompletedEventArgs : AsyncCompletedEventArgs\n{\n\tprivate object[] results;\n\n\tpublic AjaxSheetLayoutInfo Result\n\t{\n\t\tget\n\t\t{\n\t\t\tRaiseExceptionIfNecessary();\n\t\t\treturn (AjaxSheetLayoutInfo)results[0];\n\t\t}\n\t}\n\n\tpublic GetSheetLayoutCompletedEventArgs(object[] results, Exception exception, bool cancelled, object userState)\n\t\t: base(exception, cancelled, userState)\n\t{\n\t\tthis.results = results;\n\t}\n}"
+    },
+    {
+      "name": "ExecuteAjaxPagedQueryCompletedEventArgs",
+      "namespace": "OneStream.Client.Api.AdminGridServiceReference",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "AsyncCompletedEventArgs",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "results",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "exception",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cancelled",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [
+        {
+          "name": "RaiseExceptionIfNecessary",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Raises exception if necessary",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Api/AdminGridServiceReference/ExecuteAjaxPagedQueryCompletedEventArgs.cs",
+      "source_code": "public class ExecuteAjaxPagedQueryCompletedEventArgs : AsyncCompletedEventArgs\n{\n\tprivate object[] results;\n\n\tpublic AjaxPagedQueryInfo Result\n\t{\n\t\tget\n\t\t{\n\t\t\tRaiseExceptionIfNecessary();\n\t\t\treturn (AjaxPagedQueryInfo)results[0];\n\t\t}\n\t}\n\n\tpublic ExecuteAjaxPagedQueryCompletedEventArgs(object[] results, Exception exception, bool cancelled, object userState)\n\t\t: base(exception, cancelled, userState)\n\t{\n\t\tthis.results = results;\n\t}\n}"
+    }
+  ],
+  "interfaces": [
+    {
+      "name": "IAdminGridServiceClient",
+      "namespace": "OneStream.Client.Api.AdminGridServiceReference",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IDisposable",
+        "IApiClient"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "GetSheetLayout",
+          "return_type": "AjaxSheetLayoutInfo",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "layoutName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "sheetName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "substitutionVariables",
+              "type": "Dictionary<string, string>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "includeCubeColumnList",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "wfProfileIDHint",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "scenarioIdHint",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "summaryRowIDForCubeColumns",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets sheet layout",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "BeginGetSheetLayout",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "layoutName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "sheetName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "substitutionVariables",
+              "type": "Dictionary<string, string>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "includeCubeColumnList",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "wfProfileIDHint",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "scenarioIdHint",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "summaryRowIDForCubeColumns",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins get sheet layout",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EndGetSheetLayout",
+          "return_type": "AjaxSheetLayoutInfo",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends get sheet layout",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetSheetLayoutAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "layoutName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "sheetName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "substitutionVariables",
+              "type": "Dictionary<string, string>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "includeCubeColumnList",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "wfProfileIDHint",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "scenarioIdHint",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "summaryRowIDForCubeColumns",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets sheet layout async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "GetSheetLayoutAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "layoutName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "sheetName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "substitutionVariables",
+              "type": "Dictionary<string, string>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "includeCubeColumnList",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "wfProfileIDHint",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "scenarioIdHint",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "summaryRowIDForCubeColumns",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets sheet layout async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "GetSheetLayoutCompressed",
+          "return_type": "CompressionResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "layoutName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "sheetName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "substitutionVariables",
+              "type": "Dictionary<string, string>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "includeCubeColumnList",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "wfProfileIDHint",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "scenarioIdHint",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "summaryRowIDForCubeColumns",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets sheet layout compressed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "BeginGetSheetLayoutCompressed",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "layoutName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "sheetName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "substitutionVariables",
+              "type": "Dictionary<string, string>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "includeCubeColumnList",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "wfProfileIDHint",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "scenarioIdHint",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "summaryRowIDForCubeColumns",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins get sheet layout compressed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EndGetSheetLayoutCompressed",
+          "return_type": "CompressionResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends get sheet layout compressed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetSheetLayoutCompressedAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "layoutName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "sheetName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "substitutionVariables",
+              "type": "Dictionary<string, string>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "includeCubeColumnList",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "wfProfileIDHint",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "scenarioIdHint",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "summaryRowIDForCubeColumns",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets sheet layout compressed async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "GetSheetLayoutCompressedAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "layoutName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "sheetName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "substitutionVariables",
+              "type": "Dictionary<string, string>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "includeCubeColumnList",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "wfProfileIDHint",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "scenarioIdHint",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "summaryRowIDForCubeColumns",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets sheet layout compressed async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "ExecuteAjaxPagedQuery",
+          "return_type": "AjaxPagedQueryInfo",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "ajaxPageQuery",
+              "type": "AjaxPagedQueryInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Executes ajax paged query",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "BeginExecuteAjaxPagedQuery",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "ajaxPageQuery",
+              "type": "AjaxPagedQueryInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins execute ajax paged query",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EndExecuteAjaxPagedQuery",
+          "return_type": "AjaxPagedQueryInfo",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends execute ajax paged query",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "ExecuteAjaxPagedQueryAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "ajaxPageQuery",
+              "type": "AjaxPagedQueryInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Executes ajax paged query async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "ExecuteAjaxPagedQueryAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "ajaxPageQuery",
+              "type": "AjaxPagedQueryInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Executes ajax paged query async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "ExecuteAjaxPagedQueryCompressed",
+          "return_type": "CompressionResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "ajaxPageQuery",
+              "type": "AjaxPagedQueryInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Executes ajax paged query compressed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "BeginExecuteAjaxPagedQueryCompressed",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "ajaxPageQuery",
+              "type": "AjaxPagedQueryInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins execute ajax paged query compressed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EndExecuteAjaxPagedQueryCompressed",
+          "return_type": "CompressionResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends execute ajax paged query compressed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "ExecuteAjaxPagedQueryCompressedAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "ajaxPageQuery",
+              "type": "AjaxPagedQueryInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Executes ajax paged query compressed async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "ExecuteAjaxPagedQueryCompressedAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "ajaxPageQuery",
+              "type": "AjaxPagedQueryInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Executes ajax paged query compressed async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "GetActiveCubeDimensions",
+          "return_type": "ObservableCollection<AjaxListItem>",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "wfProfileIDHint",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "scenarioIdHint",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "summaryRowIDForCubeColumns",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets active cube dimensions",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "BeginGetActiveCubeDimensions",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "wfProfileIDHint",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "scenarioIdHint",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "summaryRowIDForCubeColumns",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins get active cube dimensions",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EndGetActiveCubeDimensions",
+          "return_type": "ObservableCollection<AjaxListItem>",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends get active cube dimensions",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetActiveCubeDimensionsAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "wfProfileIDHint",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "scenarioIdHint",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "summaryRowIDForCubeColumns",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets active cube dimensions async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "GetActiveCubeDimensionsAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "wfProfileIDHint",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "scenarioIdHint",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "summaryRowIDForCubeColumns",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets active cube dimensions async",
+          "generic_params": [],
+          "overloads": 2
+        }
+      ],
+      "events": [
+        {
+          "name": "GetSheetLayoutCompleted",
+          "type": "EventHandler<GetSheetLayoutCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "GetSheetLayoutCompressedCompleted",
+          "type": "EventHandler<GetSheetLayoutCompressedCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "ExecuteAjaxPagedQueryCompleted",
+          "type": "EventHandler<ExecuteAjaxPagedQueryCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "ExecuteAjaxPagedQueryCompressedCompleted",
+          "type": "EventHandler<ExecuteAjaxPagedQueryCompressedCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "GetActiveCubeDimensionsCompleted",
+          "type": "EventHandler<GetActiveCubeDimensionsCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        }
+      ],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Api/AdminGridServiceReference/IAdminGridServiceClient.cs",
+      "source_code": "public interface IAdminGridServiceClient : IDisposable, IApiClient\n{\n\tevent EventHandler<GetSheetLayoutCompletedEventArgs> GetSheetLayoutCompleted;\n\n\tevent EventHandler<GetSheetLayoutCompressedCompletedEventArgs> GetSheetLayoutCompressedCompleted;\n\n\tevent EventHandler<ExecuteAjaxPagedQueryCompletedEventArgs> ExecuteAjaxPagedQueryCompleted;\n\n\tevent EventHandler<ExecuteAjaxPagedQueryCompressedCompletedEventArgs> ExecuteAjaxPagedQueryCompressedCompleted;\n\n\tevent EventHandler<GetActiveCubeDimensionsCompletedEventArgs> GetActiveCubeDimensionsCompleted;\n\n\tAjaxSheetLayoutInfo GetSheetLayout(SessionInfo si, string layoutName, string sheetName, Dictionary<string, string> substitutionVariables, bool includeCubeColumnList, Guid wfProfileIDHint, int scenarioIdHint, Guid summaryRowIDForCubeColumns);\n\n\tTask BeginGetSheetLayout(SessionInfo si, string layoutName, string sheetName, Dictionary<string, string> substitutionVariables, bool includeCubeColumnList, Guid wfProfileIDHint, int scenarioIdHint, Guid summaryRowIDForCubeColumns, object callback, object asyncState);\n\n\tAjaxSheetLayoutInfo EndGetSheetLayout(OnEndResult result);\n\n\tvoid GetSheetLayoutAsync(SessionInfo si, string layoutName, string sheetName, Dictionary<string, string> substitutionVariables, bool includeCubeColumnList, Guid wfProfileIDHint, int scenarioIdHint, Guid summaryRowIDForCubeColumns);\n\n\tvoid GetSheetLayoutAsync(SessionInfo si, string layoutName, string sheetName, Dictionary<string, string> substitutionVariables, bool includeCubeColumnList, Guid wfProfileIDHint, int scenarioIdHint, Guid summaryRowIDForCubeColumns, object userState);\n\n\tCompressionResult GetSheetLayoutCompressed(SessionInfo si, string layoutName, string sheetName, Dictionary<string, string> substitutionVariables, bool includeCubeColumnList, Guid wfProfileIDHint, int scenarioIdHint, Guid summaryRowIDForCubeColumns);\n\n\tTask BeginGetSheetLayoutCompressed(SessionInfo si, string layoutName, string sheetName, Dictionary<string, string> substitutionVariables, bool includeCubeColumnList, Guid wfProfileIDHint, int scenarioIdHint, Guid summaryRowIDForCubeColumns, object callback, object asyncState);\n\n\tCompressionResult EndGetSheetLayoutCompressed(OnEndResult result);\n\n\tvoid GetSheetLayoutCompressedAsync(SessionInfo si, string layoutName, string sheetName, Dictionary<string, string> substitutionVariables, bool includeCubeColumnList, Guid wfProfileIDHint, int scenarioIdHint, Guid summaryRowIDForCubeColumns);\n\n\tvoid GetSheetLayoutCompressedAsync(SessionInfo si, string layoutName, string sheetName, Dictionary<string, string> substitutionVariables, bool includeCubeColumnList, Guid wfProfileIDHint, int scenarioIdHint, Guid summaryRowIDForCubeColumns, object userState);\n\n\tAjaxPagedQueryInfo ExecuteAjaxPagedQuery(SessionInfo si, AjaxPagedQueryInfo ajaxPageQuery);\n\n\tTask BeginExecuteAjaxPagedQuery(SessionInfo si, AjaxPagedQueryInfo ajaxPageQuery, object callback, object asyncState);\n\n\tAjaxPagedQueryInfo EndExecuteAjaxPagedQuery(OnEndResult result);\n\n\tvoid ExecuteAjaxPagedQueryAsync(SessionInfo si, AjaxPagedQueryInfo ajaxPageQuery);\n\n\tvoid ExecuteAjaxPagedQueryAsync(SessionInfo si, AjaxPagedQueryInfo ajaxPageQuery, object userState);\n\n\tCompressionResult ExecuteAjaxPagedQueryCompressed(SessionInfo si, AjaxPagedQueryInfo ajaxPageQuery);\n\n\tTask BeginExecuteAjaxPagedQueryCompressed(SessionInfo si, AjaxPagedQueryInfo ajaxPageQuery, object callback, object asyncState);\n\n\tCompressionResult EndExecuteAjaxPagedQueryCompressed(OnEndResult result);\n\n\tvoid ExecuteAjaxPagedQueryCompressedAsync(SessionInfo si, AjaxPagedQueryInfo ajaxPageQuery);\n\n\tvoid ExecuteAjaxPagedQueryCompressedAsync(SessionInfo si, AjaxPagedQueryInfo ajaxPageQuery, object userState);\n\n\tObservableCollection<AjaxListItem> GetActiveCubeDimensions(SessionInfo si, Guid wfProfileIDHint, int scenarioIdHint, Guid summaryRowIDForCubeColumns);\n\n\tTask BeginGetActiveCubeDimensions(SessionInfo si, Guid wfProfileIDHint, int scenarioIdHint, Guid summaryRowIDForCubeColumns, object callback, object asyncState);\n\n\tObservableCollection<AjaxListItem> EndGetActiveCubeDimensions(OnEndResult result);\n\n\tvoid GetActiveCubeDimensionsAsync(SessionInfo si, Guid wfProfileIDHint, int scenarioIdHint, Guid summaryRowIDForCubeColumns);\n\n\tvoid GetActiveCubeDimensionsAsync(SessionInfo si, Guid wfProfileIDHint, int scenarioIdHint, Guid summaryRowIDForCubeColumns, object userState);\n}"
+    }
+  ],
+  "structs": [],
+  "delegates": [],
+  "enums": []
+}

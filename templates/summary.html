@@ -1,0 +1,116 @@
+{% extends "base.html" %}
+{% block title %}Section Summaries — OneStream Study Guide{% endblock %}
+{% block content %}
+
+<nav class="breadcrumb">
+  <a href="/">Home</a> &rsaquo;
+  <a href="/exam-prep/quiz">Quiz</a> &rsaquo;
+  <span>Section Summaries</span>
+</nav>
+
+<h1>Section Summaries <small>— Cheat Sheets</small></h1>
+<p>Condensed key facts per exam section, extracted from quiz questions and explanations. Use these for quick review before the exam.</p>
+
+{# Section tabs #}
+<div class="quiz-filters">
+  <label>Section:</label>
+  {% for s in sections %}
+  <span class="filter-chip {% if loop.first %}active{% endif %}" data-filter="summary-section" data-value="{{ s.slug }}" onclick="showSummarySection('{{ s.slug }}',this)">{{ s.name }} ({{ s.weight }}%)</span>
+  {% endfor %}
+</div>
+
+{% for section in sections %}
+<div class="summary-section" id="summary-{{ section.slug }}" {% if not loop.first %}style="display:none"{% endif %}>
+  <article>
+    <header>
+      <strong>{{ section.name }}</strong> — {{ section.weight }}% of exam — {{ section.question_count }} questions
+    </header>
+
+    {# Key facts grouped by objective #}
+    <div class="summary-content" id="summary-content-{{ section.slug }}"></div>
+
+    <footer>
+      <a href="/exam-prep/quiz/{{ section.slug }}" role="button" class="outline">Practice {{ section.name }} Quiz</a>
+    </footer>
+  </article>
+</div>
+{% endfor %}
+
+<script>
+const allSections = {{ sections | tojson }};
+
+function showSummarySection(slug, el) {
+  document.querySelectorAll('.summary-section').forEach(function(s) { s.style.display = 'none'; });
+  document.getElementById('summary-' + slug).style.display = 'block';
+  document.querySelectorAll('.filter-chip[data-filter="summary-section"]').forEach(function(c) {
+    c.classList.toggle('active', c.dataset.value === slug);
+  });
+}
+
+function buildSummaries() {
+  allSections.forEach(function(section) {
+    var container = document.getElementById('summary-content-' + section.slug);
+    if (!container) return;
+
+    // Group questions by objective
+    var objectives = {};
+    section.questions.forEach(function(q) {
+      var obj = q.objective || 'General';
+      if (!objectives[obj]) objectives[obj] = [];
+      objectives[obj].push(q);
+    });
+
+    var html = '';
+    var sortedKeys = Object.keys(objectives).sort();
+    sortedKeys.forEach(function(objCode) {
+      var questions = objectives[objCode];
+      html += '<div class="summary-objective">';
+      html += '<h4>Objective ' + objCode + ' <small>(' + questions.length + ' questions)</small></h4>';
+      html += '<div class="summary-facts">';
+
+      // Extract key facts from correct answers + explanations
+      var facts = new Set();
+      questions.forEach(function(q) {
+        // The correct answer text is a key fact
+        var correctOpt = q.options.find(function(o) { return o.letter === q.correct_answer; });
+        if (correctOpt) {
+          facts.add('<strong>Q:</strong> ' + truncate(q.text, 120) + ' &rarr; <strong>' + q.correct_answer + ')</strong> ' + correctOpt.text);
+        }
+      });
+
+      facts.forEach(function(fact) {
+        html += '<div class="summary-fact">' + fact + '</div>';
+      });
+
+      // Show one explanation as a "key concept"
+      var bestExplanation = '';
+      questions.forEach(function(q) {
+        if (q.explanation && q.explanation.length > bestExplanation.length) {
+          bestExplanation = q.explanation;
+        }
+      });
+      if (bestExplanation) {
+        html += '<details class="summary-detail"><summary>Key concept</summary><p>' + escapeHtml(bestExplanation) + '</p></details>';
+      }
+
+      html += '</div></div>';
+    });
+
+    container.innerHTML = html;
+  });
+}
+
+function truncate(str, max) {
+  if (str.length <= max) return escapeHtml(str);
+  return escapeHtml(str.substring(0, max)) + '&hellip;';
+}
+
+function escapeHtml(str) {
+  var div = document.createElement('div');
+  div.textContent = str;
+  return div.innerHTML;
+}
+
+buildSummaries();
+</script>
+{% endblock %}

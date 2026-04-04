@@ -1,0 +1,2613 @@
+{
+  "namespace": "OneStream.Client.SharedUI.Converters",
+  "generated_at": "2025-12-08T19:28:51.639850",
+  "statistics": {
+    "classes": 18,
+    "interfaces": 0,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 0,
+    "total_methods": 86,
+    "total_properties": 1
+  },
+  "classes": [
+    {
+      "name": "StringConverter",
+      "namespace": "OneStream.Client.SharedUI.Converters",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "TypeConverter",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "CanConvertFrom",
+          "return_type": "override bool",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "context",
+              "type": "ITypeDescriptorContext",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "sourceType",
+              "type": "Type",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Checks if can convert from",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "ConvertFrom",
+          "return_type": "override object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "context",
+              "type": "ITypeDescriptorContext",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "culture",
+              "type": "CultureInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "value",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Converts from",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/SharedUI/Converters/StringConverter.cs"
+    },
+    {
+      "name": "DoubleConverter",
+      "namespace": "OneStream.Client.SharedUI.Converters",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "BaseNumberConverter",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "typeof",
+          "return_type": ">",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "double",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Typeofs operation",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "FromString",
+          "return_type": "internal override object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "value",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "culture",
+              "type": "CultureInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates from string",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "FromString",
+          "return_type": "internal override object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "value",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "formatInfo",
+              "type": "NumberFormatInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates from string",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "FromString",
+          "return_type": "internal override object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "value",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "radix",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates from string",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "ToString",
+          "return_type": "internal override string",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "value",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "formatInfo",
+              "type": "NumberFormatInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Converts to string",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/SharedUI/Converters/DoubleConverter.cs"
+    },
+    {
+      "name": "DecimalConverter",
+      "namespace": "OneStream.Client.SharedUI.Converters",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "BaseNumberConverter",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "typeof",
+          "return_type": ">",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "decimal",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Typeofs operation",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "FromString",
+          "return_type": "internal override object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "value",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "culture",
+              "type": "CultureInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates from string",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "FromString",
+          "return_type": "internal override object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "value",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "formatInfo",
+              "type": "NumberFormatInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates from string",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "FromString",
+          "return_type": "internal override object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "value",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "radix",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates from string",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "ToString",
+          "return_type": "internal override string",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "value",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "formatInfo",
+              "type": "NumberFormatInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Converts to string",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/SharedUI/Converters/DecimalConverter.cs"
+    },
+    {
+      "name": "UInt16Converter",
+      "namespace": "OneStream.Client.SharedUI.Converters",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "BaseNumberConverter",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "typeof",
+          "return_type": ">",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "ushort",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Typeofs operation",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "FromString",
+          "return_type": "internal override object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "value",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "culture",
+              "type": "CultureInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates from string",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "FromString",
+          "return_type": "internal override object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "value",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "formatInfo",
+              "type": "NumberFormatInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates from string",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "FromString",
+          "return_type": "internal override object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "value",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "radix",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates from string",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "ToString",
+          "return_type": "internal override string",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "value",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "formatInfo",
+              "type": "NumberFormatInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Converts to string",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/SharedUI/Converters/UInt16Converter.cs"
+    },
+    {
+      "name": "TypeConverterHelper",
+      "namespace": "OneStream.Client.SharedUI.Converters",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "GetConverter",
+          "return_type": "TypeConverter",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "type",
+              "type": "Type",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets converter",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetCoreConverterFromCoreType",
+          "return_type": "TypeConverter",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "type",
+              "type": "Type",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets core converter from core type",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetCoreConverterFromCustomType",
+          "return_type": "TypeConverter",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "type",
+              "type": "Type",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets core converter from custom type",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/SharedUI/Converters/TypeConverterHelper.cs"
+    },
+    {
+      "name": "BaseNumberConverter",
+      "namespace": "OneStream.Client.SharedUI.Converters",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "abstract"
+      ],
+      "base_class": "TypeConverter",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "TargetType",
+          "type": "abstract",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        }
+      ],
+      "methods": [
+        {
+          "name": "CanConvertFrom",
+          "return_type": "override bool",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "context",
+              "type": "ITypeDescriptorContext",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "sourceType",
+              "type": "Type",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Checks if can convert from",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "CanConvertTo",
+          "return_type": "override bool",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "context",
+              "type": "ITypeDescriptorContext",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "t",
+              "type": "Type",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Checks if can convert to",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "ConvertFrom",
+          "return_type": "override object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "context",
+              "type": "ITypeDescriptorContext",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "culture",
+              "type": "CultureInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "value",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Converts from",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "innerException",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "FromStringError",
+          "return_type": "throw",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "text",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "innerException",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates from string error",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "ConvertTo",
+          "return_type": "override object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "context",
+              "type": "ITypeDescriptorContext",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "culture",
+              "type": "CultureInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "value",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "destinationType",
+              "type": "Type",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Converts to",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "ArgumentNullException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "\"destinationType\"",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Arguments null exception",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "FromString",
+          "return_type": "internal abstract object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "value",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "culture",
+              "type": "CultureInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates from string",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "FromString",
+          "return_type": "internal abstract object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "value",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "formatInfo",
+              "type": "NumberFormatInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates from string",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "FromString",
+          "return_type": "internal abstract object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "value",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "radix",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates from string",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "FromStringError",
+          "return_type": "internal virtual Exception",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "failedText",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "innerException",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates from string error",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "ToString",
+          "return_type": "internal abstract string",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "value",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "formatInfo",
+              "type": "NumberFormatInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Converts to string",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/SharedUI/Converters/BaseNumberConverter.cs"
+    },
+    {
+      "name": "TimeSpanConverter",
+      "namespace": "OneStream.Client.SharedUI.Converters",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "TypeConverter",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "CanConvertFrom",
+          "return_type": "override bool",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "context",
+              "type": "ITypeDescriptorContext",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "sourceType",
+              "type": "Type",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Checks if can convert from",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "ConvertFrom",
+          "return_type": "override object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "context",
+              "type": "ITypeDescriptorContext",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "culture",
+              "type": "CultureInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "value",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Converts from",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "FormatException",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "FormatException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Formats exception",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/SharedUI/Converters/TimeSpanConverter.cs"
+    },
+    {
+      "name": "Int64Converter",
+      "namespace": "OneStream.Client.SharedUI.Converters",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "BaseNumberConverter",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "typeof",
+          "return_type": ">",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "long",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Typeofs operation",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "FromString",
+          "return_type": "internal override object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "value",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "culture",
+              "type": "CultureInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates from string",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "FromString",
+          "return_type": "internal override object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "value",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "formatInfo",
+              "type": "NumberFormatInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates from string",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "FromString",
+          "return_type": "internal override object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "value",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "radix",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates from string",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "ToString",
+          "return_type": "internal override string",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "value",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "formatInfo",
+              "type": "NumberFormatInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Converts to string",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/SharedUI/Converters/Int64Converter.cs"
+    },
+    {
+      "name": "UInt32Converter",
+      "namespace": "OneStream.Client.SharedUI.Converters",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "BaseNumberConverter",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "typeof",
+          "return_type": ">",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "uint",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Typeofs operation",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "FromString",
+          "return_type": "internal override object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "value",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "culture",
+              "type": "CultureInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates from string",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "FromString",
+          "return_type": "internal override object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "value",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "formatInfo",
+              "type": "NumberFormatInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates from string",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "FromString",
+          "return_type": "internal override object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "value",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "radix",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates from string",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "ToString",
+          "return_type": "internal override string",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "value",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "formatInfo",
+              "type": "NumberFormatInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Converts to string",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/SharedUI/Converters/UInt32Converter.cs"
+    },
+    {
+      "name": "SByteConverter",
+      "namespace": "OneStream.Client.SharedUI.Converters",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "BaseNumberConverter",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "typeof",
+          "return_type": ">",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "sbyte",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Typeofs operation",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "FromString",
+          "return_type": "internal override object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "value",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "culture",
+              "type": "CultureInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates from string",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "FromString",
+          "return_type": "internal override object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "value",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "formatInfo",
+              "type": "NumberFormatInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates from string",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "FromString",
+          "return_type": "internal override object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "value",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "radix",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates from string",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "ToString",
+          "return_type": "internal override string",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "value",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "formatInfo",
+              "type": "NumberFormatInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Converts to string",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/SharedUI/Converters/SByteConverter.cs"
+    },
+    {
+      "name": "ByteConverter",
+      "namespace": "OneStream.Client.SharedUI.Converters",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "BaseNumberConverter",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "typeof",
+          "return_type": ">",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "byte",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Typeofs operation",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "FromString",
+          "return_type": "internal override object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "value",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "culture",
+              "type": "CultureInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates from string",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "FromString",
+          "return_type": "internal override object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "value",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "formatInfo",
+              "type": "NumberFormatInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates from string",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "FromString",
+          "return_type": "internal override object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "value",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "radix",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates from string",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "ToString",
+          "return_type": "internal override string",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "value",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "formatInfo",
+              "type": "NumberFormatInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Converts to string",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/SharedUI/Converters/ByteConverter.cs"
+    },
+    {
+      "name": "SingleConverter",
+      "namespace": "OneStream.Client.SharedUI.Converters",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "BaseNumberConverter",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "typeof",
+          "return_type": ">",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "float",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Typeofs operation",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "FromString",
+          "return_type": "internal override object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "value",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "culture",
+              "type": "CultureInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates from string",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "FromString",
+          "return_type": "internal override object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "value",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "formatInfo",
+              "type": "NumberFormatInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates from string",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "FromString",
+          "return_type": "internal override object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "value",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "radix",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates from string",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "ToString",
+          "return_type": "internal override string",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "value",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "formatInfo",
+              "type": "NumberFormatInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Converts to string",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/SharedUI/Converters/SingleConverter.cs"
+    },
+    {
+      "name": "CharConverter",
+      "namespace": "OneStream.Client.SharedUI.Converters",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "TypeConverter",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "CanConvertFrom",
+          "return_type": "override bool",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "context",
+              "type": "ITypeDescriptorContext",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "sourceType",
+              "type": "Type",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Checks if can convert from",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "ConvertFrom",
+          "return_type": "override object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "context",
+              "type": "ITypeDescriptorContext",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "culture",
+              "type": "CultureInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "value",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Converts from",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "FormatException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Formats exception",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "ConvertTo",
+          "return_type": "override object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "context",
+              "type": "ITypeDescriptorContext",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "culture",
+              "type": "CultureInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "value",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "destinationType",
+              "type": "Type",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Converts to",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/SharedUI/Converters/CharConverter.cs"
+    },
+    {
+      "name": "BooleanConverter",
+      "namespace": "OneStream.Client.SharedUI.Converters",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "TypeConverter",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "CanConvertFrom",
+          "return_type": "override bool",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "context",
+              "type": "ITypeDescriptorContext",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "sourceType",
+              "type": "Type",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Checks if can convert from",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "ConvertFrom",
+          "return_type": "override object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "context",
+              "type": "ITypeDescriptorContext",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "culture",
+              "type": "CultureInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "value",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Converts from",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "innerException",
+              "type": "FormatException",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "FormatException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "(string",
+              "type": "string.Format(GeneralMsgStrings.ErrorConvertingFromArg0ToArg1,",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Formats exception",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/SharedUI/Converters/BooleanConverter.cs"
+    },
+    {
+      "name": "Int16Converter",
+      "namespace": "OneStream.Client.SharedUI.Converters",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "BaseNumberConverter",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "typeof",
+          "return_type": ">",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "short",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Typeofs operation",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "FromString",
+          "return_type": "internal override object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "value",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "culture",
+              "type": "CultureInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates from string",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "FromString",
+          "return_type": "internal override object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "value",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "formatInfo",
+              "type": "NumberFormatInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates from string",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "FromString",
+          "return_type": "internal override object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "value",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "radix",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates from string",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "ToString",
+          "return_type": "internal override string",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "value",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "formatInfo",
+              "type": "NumberFormatInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Converts to string",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/SharedUI/Converters/Int16Converter.cs"
+    },
+    {
+      "name": "GuidConverter",
+      "namespace": "OneStream.Client.SharedUI.Converters",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "TypeConverter",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "CanConvertFrom",
+          "return_type": "override bool",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "context",
+              "type": "ITypeDescriptorContext",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "sourceType",
+              "type": "Type",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Checks if can convert from",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "ConvertFrom",
+          "return_type": "override object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "context",
+              "type": "ITypeDescriptorContext",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "culture",
+              "type": "CultureInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "value",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Converts from",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/SharedUI/Converters/GuidConverter.cs"
+    },
+    {
+      "name": "UInt64Converter",
+      "namespace": "OneStream.Client.SharedUI.Converters",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "BaseNumberConverter",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "typeof",
+          "return_type": ">",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "ulong",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Typeofs operation",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "FromString",
+          "return_type": "internal override object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "value",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "culture",
+              "type": "CultureInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates from string",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "FromString",
+          "return_type": "internal override object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "value",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "formatInfo",
+              "type": "NumberFormatInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates from string",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "FromString",
+          "return_type": "internal override object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "value",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "radix",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates from string",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "ToString",
+          "return_type": "internal override string",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "value",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "formatInfo",
+              "type": "NumberFormatInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Converts to string",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/SharedUI/Converters/UInt64Converter.cs"
+    },
+    {
+      "name": "Int32Converter",
+      "namespace": "OneStream.Client.SharedUI.Converters",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "BaseNumberConverter",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "typeof",
+          "return_type": ">",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Typeofs operation",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "FromString",
+          "return_type": "internal override object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "value",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "culture",
+              "type": "CultureInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates from string",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "FromString",
+          "return_type": "internal override object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "value",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "formatInfo",
+              "type": "NumberFormatInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates from string",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "FromString",
+          "return_type": "internal override object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "value",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "radix",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates from string",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "ToString",
+          "return_type": "internal override string",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "value",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "formatInfo",
+              "type": "NumberFormatInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Converts to string",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/SharedUI/Converters/Int32Converter.cs"
+    }
+  ],
+  "interfaces": [],
+  "structs": [],
+  "delegates": [],
+  "enums": []
+}

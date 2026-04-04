@@ -1,0 +1,2432 @@
+{
+  "namespace": "OneStream.Client.Api.XtraReportViewerAjaxServiceReference",
+  "generated_at": "2025-12-08T19:28:51.395365",
+  "statistics": {
+    "classes": 3,
+    "interfaces": 1,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 0,
+    "total_methods": 46,
+    "total_properties": 0
+  },
+  "classes": [
+    {
+      "name": "GetReportDisplayInfoCompressedCompletedEventArgs",
+      "namespace": "OneStream.Client.Api.XtraReportViewerAjaxServiceReference",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "AsyncCompletedEventArgs",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "results",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "exception",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cancelled",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [
+        {
+          "name": "RaiseExceptionIfNecessary",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Raises exception if necessary",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Api/XtraReportViewerAjaxServiceReference/GetReportDisplayInfoCompressedCompletedEventArgs.cs",
+      "source_code": "public class GetReportDisplayInfoCompressedCompletedEventArgs : AsyncCompletedEventArgs\n{\n\tprivate object[] results;\n\n\tpublic CompressionResult Result\n\t{\n\t\tget\n\t\t{\n\t\t\tRaiseExceptionIfNecessary();\n\t\t\treturn (CompressionResult)results[0];\n\t\t}\n\t}\n\n\tpublic GetReportDisplayInfoCompressedCompletedEventArgs(object[] results, Exception exception, bool cancelled, object userState)\n\t\t: base(exception, cancelled, userState)\n\t{\n\t\tthis.results = results;\n\t}\n}"
+    },
+    {
+      "name": "XtraReportViewerAjaxServiceClient",
+      "namespace": "OneStream.Client.Api.XtraReportViewerAjaxServiceReference",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "ClientBase<IXtraReportViewerAjaxServiceClient>",
+      "interfaces": [
+        "IXtraReportViewerAjaxServiceClient",
+        "IDisposable",
+        "IApiClient"
+      ],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "httpClientFactory",
+              "type": "IAuthenticatedHttpClientFactory",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "baseServerUri",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [
+        {
+          "name": "StartGetReportDisplayInfoCompressed",
+          "return_type": "XFCallStateResultEx",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "reportViewerType",
+              "type": "ReportViewerType",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dashboardID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dashboardComponentID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "isSystemLevel",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspaceID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cubeViewName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "reportName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "substVars",
+              "type": "NameValueDictionary",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Starts get report display info compressed",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "SessionInfo",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Sessions info",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "ex",
+              "type": "AggregateException",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "BeginStartGetReportDisplayInfoCompressed",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "reportViewerType",
+              "type": "ReportViewerType",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dashboardID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dashboardComponentID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "isSystemLevel",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspaceID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cubeViewName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "reportName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "substVars",
+              "type": "NameValueDictionary",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins start get report display info compressed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "StartGetReportDisplayInfoCompressed",
+          "return_type": ">",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "reportViewerType",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "dashboardID",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "dashboardComponentID",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "isSystemLevel",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "workspaceID",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "cubeViewName",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "reportName",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "substVars",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Starts get report display info compressed",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "antecedent.Result",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 4
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "OnEndResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 4
+        },
+        {
+          "name": "AsyncOperationContinuation",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "result",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "asyncState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Asyncs operation continuation",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "EndStartGetReportDisplayInfoCompressed",
+          "return_type": "XFCallStateResultEx",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends start get report display info compressed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnBeginStartGetReportDisplayInfoCompressed",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "inValues",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            }
+          ],
+          "description": "Ons begin start get report display info compressed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnEndStartGetReportDisplayInfoCompressed",
+          "return_type": "object[]",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end start get report display info compressed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnStartGetReportDisplayInfoCompressedCompleted",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "state",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons start get report display info compressed completed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "StartGetReportDisplayInfoCompressedCompletedEventArgs",
+          "return_type": "this, new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "e.Results",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Error",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Cancelled",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.UserState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Starts get report display info compressed completed event args",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "StartGetReportDisplayInfoCompressedAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "reportViewerType",
+              "type": "ReportViewerType",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dashboardID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dashboardComponentID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "isSystemLevel",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspaceID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cubeViewName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "reportName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "substVars",
+              "type": "NameValueDictionary",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Starts get report display info compressed async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "StartGetReportDisplayInfoCompressedAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "reportViewerType",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "dashboardID",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "dashboardComponentID",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "isSystemLevel",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "workspaceID",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "cubeViewName",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "reportName",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "substVars",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Starts get report display info compressed async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "StartGetReportDisplayInfoCompressedAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "reportViewerType",
+              "type": "ReportViewerType",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dashboardID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dashboardComponentID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "isSystemLevel",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspaceID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cubeViewName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "reportName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "substVars",
+              "type": "NameValueDictionary",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Starts get report display info compressed async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "InvokeAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "onBeginStartGetReportDisplayInfoCompressedDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "si",
+              "type": "new object[9] {",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "reportViewerType",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "dashboardID",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "dashboardComponentID",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "isSystemLevel",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "workspaceID",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "cubeViewName",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "reportName",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "}",
+              "type": "substVars",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onEndStartGetReportDisplayInfoCompressedDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onStartGetReportDisplayInfoCompressedCompletedDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "userState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Invokes async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "GetReportDisplayInfoCompressed",
+          "return_type": "CompressionResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "reportViewerType",
+              "type": "ReportViewerType",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dashboardID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dashboardComponentID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "isSystemLevel",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspaceID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cubeViewName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "reportName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "substVars",
+              "type": "NameValueDictionary",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets report display info compressed",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "SessionInfo",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Sessions info",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "ex",
+              "type": "AggregateException",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "BeginGetReportDisplayInfoCompressed",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "reportViewerType",
+              "type": "ReportViewerType",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dashboardID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dashboardComponentID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "isSystemLevel",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspaceID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cubeViewName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "reportName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "substVars",
+              "type": "NameValueDictionary",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins get report display info compressed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetReportDisplayInfoCompressed",
+          "return_type": ">",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "reportViewerType",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "dashboardID",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "dashboardComponentID",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "isSystemLevel",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "workspaceID",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "cubeViewName",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "reportName",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "substVars",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets report display info compressed",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "antecedent.Result",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 4
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "OnEndResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 4
+        },
+        {
+          "name": "AsyncOperationContinuation",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "result",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "asyncState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Asyncs operation continuation",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "EndGetReportDisplayInfoCompressed",
+          "return_type": "CompressionResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends get report display info compressed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnBeginGetReportDisplayInfoCompressed",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "inValues",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            }
+          ],
+          "description": "Ons begin get report display info compressed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnEndGetReportDisplayInfoCompressed",
+          "return_type": "object[]",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end get report display info compressed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnGetReportDisplayInfoCompressedCompleted",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "state",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons get report display info compressed completed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetReportDisplayInfoCompressedCompletedEventArgs",
+          "return_type": "this, new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "e.Results",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Error",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Cancelled",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.UserState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets report display info compressed completed event args",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetReportDisplayInfoCompressedAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "reportViewerType",
+              "type": "ReportViewerType",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dashboardID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dashboardComponentID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "isSystemLevel",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspaceID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cubeViewName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "reportName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "substVars",
+              "type": "NameValueDictionary",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets report display info compressed async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "GetReportDisplayInfoCompressedAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "reportViewerType",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "dashboardID",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "dashboardComponentID",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "isSystemLevel",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "workspaceID",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "cubeViewName",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "reportName",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "substVars",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets report display info compressed async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "GetReportDisplayInfoCompressedAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "reportViewerType",
+              "type": "ReportViewerType",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dashboardID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dashboardComponentID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "isSystemLevel",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspaceID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cubeViewName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "reportName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "substVars",
+              "type": "NameValueDictionary",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets report display info compressed async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "InvokeAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "onBeginGetReportDisplayInfoCompressedDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "si",
+              "type": "new object[9] {",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "reportViewerType",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "dashboardID",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "dashboardComponentID",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "isSystemLevel",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "workspaceID",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "cubeViewName",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "reportName",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "}",
+              "type": "substVars",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onEndGetReportDisplayInfoCompressedDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onGetReportDisplayInfoCompressedCompletedDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "userState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Invokes async",
+          "generic_params": [],
+          "overloads": 2
+        }
+      ],
+      "events": [
+        {
+          "name": "StartGetReportDisplayInfoCompressedCompleted",
+          "type": "EventHandler<StartGetReportDisplayInfoCompressedCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "GetReportDisplayInfoCompressedCompleted",
+          "type": "EventHandler<GetReportDisplayInfoCompressedCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        }
+      ],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Api/XtraReportViewerAjaxServiceReference/XtraReportViewerAjaxServiceClient.cs"
+    },
+    {
+      "name": "StartGetReportDisplayInfoCompressedCompletedEventArgs",
+      "namespace": "OneStream.Client.Api.XtraReportViewerAjaxServiceReference",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "AsyncCompletedEventArgs",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "results",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "exception",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cancelled",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [
+        {
+          "name": "RaiseExceptionIfNecessary",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Raises exception if necessary",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Api/XtraReportViewerAjaxServiceReference/StartGetReportDisplayInfoCompressedCompletedEventArgs.cs",
+      "source_code": "public class StartGetReportDisplayInfoCompressedCompletedEventArgs : AsyncCompletedEventArgs\n{\n\tprivate object[] results;\n\n\tpublic XFCallStateResultEx Result\n\t{\n\t\tget\n\t\t{\n\t\t\tRaiseExceptionIfNecessary();\n\t\t\treturn (XFCallStateResultEx)results[0];\n\t\t}\n\t}\n\n\tpublic StartGetReportDisplayInfoCompressedCompletedEventArgs(object[] results, Exception exception, bool cancelled, object userState)\n\t\t: base(exception, cancelled, userState)\n\t{\n\t\tthis.results = results;\n\t}\n}"
+    }
+  ],
+  "interfaces": [
+    {
+      "name": "IXtraReportViewerAjaxServiceClient",
+      "namespace": "OneStream.Client.Api.XtraReportViewerAjaxServiceReference",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IDisposable",
+        "IApiClient"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "StartGetReportDisplayInfoCompressed",
+          "return_type": "XFCallStateResultEx",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "reportViewerType",
+              "type": "ReportViewerType",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dashboardID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dashboardComponentID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "isSystemLevel",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspaceID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cubeViewName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "reportName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "substVars",
+              "type": "NameValueDictionary",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Starts get report display info compressed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "BeginStartGetReportDisplayInfoCompressed",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "reportViewerType",
+              "type": "ReportViewerType",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dashboardID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dashboardComponentID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "isSystemLevel",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspaceID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cubeViewName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "reportName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "substVars",
+              "type": "NameValueDictionary",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins start get report display info compressed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EndStartGetReportDisplayInfoCompressed",
+          "return_type": "XFCallStateResultEx",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends start get report display info compressed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "StartGetReportDisplayInfoCompressedAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "reportViewerType",
+              "type": "ReportViewerType",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dashboardID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dashboardComponentID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "isSystemLevel",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspaceID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cubeViewName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "reportName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "substVars",
+              "type": "NameValueDictionary",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Starts get report display info compressed async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "StartGetReportDisplayInfoCompressedAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "reportViewerType",
+              "type": "ReportViewerType",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dashboardID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dashboardComponentID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "isSystemLevel",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspaceID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cubeViewName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "reportName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "substVars",
+              "type": "NameValueDictionary",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Starts get report display info compressed async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "GetReportDisplayInfoCompressed",
+          "return_type": "CompressionResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "reportViewerType",
+              "type": "ReportViewerType",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dashboardID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dashboardComponentID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "isSystemLevel",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspaceID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cubeViewName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "reportName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "substVars",
+              "type": "NameValueDictionary",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets report display info compressed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "BeginGetReportDisplayInfoCompressed",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "reportViewerType",
+              "type": "ReportViewerType",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dashboardID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dashboardComponentID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "isSystemLevel",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspaceID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cubeViewName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "reportName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "substVars",
+              "type": "NameValueDictionary",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins get report display info compressed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EndGetReportDisplayInfoCompressed",
+          "return_type": "CompressionResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends get report display info compressed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetReportDisplayInfoCompressedAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "reportViewerType",
+              "type": "ReportViewerType",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dashboardID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dashboardComponentID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "isSystemLevel",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspaceID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cubeViewName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "reportName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "substVars",
+              "type": "NameValueDictionary",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets report display info compressed async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "GetReportDisplayInfoCompressedAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "reportViewerType",
+              "type": "ReportViewerType",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dashboardID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dashboardComponentID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "isSystemLevel",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspaceID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cubeViewName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "reportName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "substVars",
+              "type": "NameValueDictionary",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets report display info compressed async",
+          "generic_params": [],
+          "overloads": 2
+        }
+      ],
+      "events": [
+        {
+          "name": "StartGetReportDisplayInfoCompressedCompleted",
+          "type": "EventHandler<StartGetReportDisplayInfoCompressedCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "GetReportDisplayInfoCompressedCompleted",
+          "type": "EventHandler<GetReportDisplayInfoCompressedCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        }
+      ],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Api/XtraReportViewerAjaxServiceReference/IXtraReportViewerAjaxServiceClient.cs",
+      "source_code": "public interface IXtraReportViewerAjaxServiceClient : IDisposable, IApiClient\n{\n\tevent EventHandler<StartGetReportDisplayInfoCompressedCompletedEventArgs> StartGetReportDisplayInfoCompressedCompleted;\n\n\tevent EventHandler<GetReportDisplayInfoCompressedCompletedEventArgs> GetReportDisplayInfoCompressedCompleted;\n\n\tXFCallStateResultEx StartGetReportDisplayInfoCompressed(SessionInfo si, ReportViewerType reportViewerType, Guid dashboardID, Guid dashboardComponentID, bool isSystemLevel, Guid workspaceID, string cubeViewName, string reportName, NameValueDictionary substVars);\n\n\tTask BeginStartGetReportDisplayInfoCompressed(SessionInfo si, ReportViewerType reportViewerType, Guid dashboardID, Guid dashboardComponentID, bool isSystemLevel, Guid workspaceID, string cubeViewName, string reportName, NameValueDictionary substVars, object callback, object asyncState);\n\n\tXFCallStateResultEx EndStartGetReportDisplayInfoCompressed(OnEndResult result);\n\n\tvoid StartGetReportDisplayInfoCompressedAsync(SessionInfo si, ReportViewerType reportViewerType, Guid dashboardID, Guid dashboardComponentID, bool isSystemLevel, Guid workspaceID, string cubeViewName, string reportName, NameValueDictionary substVars);\n\n\tvoid StartGetReportDisplayInfoCompressedAsync(SessionInfo si, ReportViewerType reportViewerType, Guid dashboardID, Guid dashboardComponentID, bool isSystemLevel, Guid workspaceID, string cubeViewName, string reportName, NameValueDictionary substVars, object userState);\n\n\tCompressionResult GetReportDisplayInfoCompressed(SessionInfo si, ReportViewerType reportViewerType, Guid dashboardID, Guid dashboardComponentID, bool isSystemLevel, Guid workspaceID, string cubeViewName, string reportName, NameValueDictionary substVars);\n\n\tTask BeginGetReportDisplayInfoCompressed(SessionInfo si, ReportViewerType reportViewerType, Guid dashboardID, Guid dashboardComponentID, bool isSystemLevel, Guid workspaceID, string cubeViewName, string reportName, NameValueDictionary substVars, object callback, object asyncState);\n\n\tCompressionResult EndGetReportDisplayInfoCompressed(OnEndResult result);\n\n\tvoid GetReportDisplayInfoCompressedAsync(SessionInfo si, ReportViewerType reportViewerType, Guid dashboardID, Guid dashboardComponentID, bool isSystemLevel, Guid workspaceID, string cubeViewName, string reportName, NameValueDictionary substVars);\n\n\tvoid GetReportDisplayInfoCompressedAsync(SessionInfo si, ReportViewerType reportViewerType, Guid dashboardID, Guid dashboardComponentID, bool isSystemLevel, Guid workspaceID, string cubeViewName, string reportName, NameValueDictionary substVars, object userState);\n}"
+    }
+  ],
+  "structs": [],
+  "delegates": [],
+  "enums": []
+}

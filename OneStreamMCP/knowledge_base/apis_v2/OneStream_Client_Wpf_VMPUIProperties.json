@@ -1,0 +1,68 @@
+{
+  "namespace": "OneStream.Client.Wpf.VMPUIProperties",
+  "generated_at": "2025-12-08T19:28:51.957469",
+  "statistics": {
+    "classes": 0,
+    "interfaces": 0,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 1,
+    "total_methods": 0,
+    "total_properties": 0
+  },
+  "classes": [],
+  "interfaces": [],
+  "structs": [],
+  "delegates": [],
+  "enums": [
+    {
+      "name": "UIPropertyDisplayType",
+      "namespace": "OneStream.Client.Wpf.VMPUIProperties",
+      "underlying_type": "int",
+      "is_flags": false,
+      "values": [
+        {
+          "name": "TriStateBool",
+          "value": 0
+        },
+        {
+          "name": "MemberInfo",
+          "value": 1
+        },
+        {
+          "name": "Text",
+          "value": 2
+        },
+        {
+          "name": "Decimal",
+          "value": 3
+        },
+        {
+          "name": "Formula",
+          "value": 4
+        },
+        {
+          "name": "AutoTranslationCurrencies",
+          "value": 5
+        },
+        {
+          "name": "ConsolSiblingCalcPassType",
+          "value": 6
+        },
+        {
+          "name": "Frequency",
+          "value": 7
+        },
+        {
+          "name": "AdjustmentType",
+          "value": 8
+        },
+        {
+          "name": "OwnershipType",
+          "value": 9
+        }
+      ],
+      "access": "public"
+    }
+  ]
+}

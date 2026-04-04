@@ -1,0 +1,103 @@
+{
+  "namespace": "OneStream.Client.SharedUI.PropertyGrid",
+  "generated_at": "2025-12-08T19:28:51.665020",
+  "statistics": {
+    "classes": 0,
+    "interfaces": 0,
+    "structs": 0,
+    "delegates": 3,
+    "enums": 0,
+    "total_methods": 3,
+    "total_properties": 0
+  },
+  "classes": [],
+  "interfaces": [],
+  "structs": [],
+  "delegates": [
+    {
+      "name": "ToggleCategoryVisibleDelegate",
+      "namespace": "OneStream.Client.SharedUI.PropertyGrid",
+      "type": "delegate",
+      "modifiers": [
+        "private"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "Invoke",
+          "return_type": "void",
+          "parameters": [],
+          "access": "private",
+          "is_static": false,
+          "is_async": false,
+          "description": "Delegate invocation method returning void"
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/SharedUI/PropertyGrid.cs"
+    },
+    {
+      "name": "GetPropertyGridCategoryDisplayNameDelegate",
+      "namespace": "OneStream.Client.SharedUI.PropertyGrid",
+      "type": "delegate",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "Invoke",
+          "return_type": "string",
+          "parameters": [],
+          "access": "public",
+          "is_static": false,
+          "is_async": false,
+          "description": "Delegate invocation method returning string"
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/SharedUI/PropertyGrid.cs"
+    },
+    {
+      "name": "GetPropertyGridSubCategoryDisplayNameDelegate",
+      "namespace": "OneStream.Client.SharedUI.PropertyGrid",
+      "type": "delegate",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "Invoke",
+          "return_type": "string",
+          "parameters": [],
+          "access": "public",
+          "is_static": false,
+          "is_async": false,
+          "description": "Delegate invocation method returning string"
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/SharedUI/PropertyGrid.cs"
+    }
+  ],
+  "enums": []
+}

@@ -1,0 +1,242 @@
+{
+  "namespace": "OneStream.Client.WpfVb.TransformationRulesPage",
+  "generated_at": "2025-12-08T19:28:52.050603",
+  "statistics": {
+    "classes": 3,
+    "interfaces": 0,
+    "structs": 0,
+    "delegates": 1,
+    "enums": 3,
+    "total_methods": 1,
+    "total_properties": 0
+  },
+  "classes": [
+    {
+      "name": "UserStateNodeType",
+      "namespace": "OneStream.Client.WpfVb.TransformationRulesPage",
+      "type": "class",
+      "modifiers": [
+        "private"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "nodeType",
+              "type": "TreeNodeTypes",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "objProps",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/WpfVb/TransformationRulesPage.cs"
+    },
+    {
+      "name": "UserStateNodeActions",
+      "namespace": "OneStream.Client.WpfVb.TransformationRulesPage",
+      "type": "class",
+      "modifiers": [
+        "private"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "addToTree",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "expandNode",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/WpfVb/TransformationRulesPage.cs"
+    },
+    {
+      "name": "UserStateFinanceDimList",
+      "namespace": "OneStream.Client.WpfVb.TransformationRulesPage",
+      "type": "class",
+      "modifiers": [
+        "private"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "dimensionName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "initializeGrid",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "ruleType",
+              "type": "TransformRuleTypes",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/WpfVb/TransformationRulesPage.cs"
+    }
+  ],
+  "interfaces": [],
+  "structs": [],
+  "delegates": [
+    {
+      "name": "OnPageChangedEventHandler",
+      "namespace": "OneStream.Client.WpfVb.TransformationRulesPage",
+      "type": "delegate",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "Invoke",
+          "return_type": "void",
+          "parameters": [],
+          "access": "public",
+          "is_static": false,
+          "is_async": false,
+          "description": "Delegate invocation method returning void"
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/WpfVb/TransformationRulesPage.cs"
+    }
+  ],
+  "enums": [
+    {
+      "name": "PageModeTypes",
+      "namespace": "OneStream.Client.WpfVb.TransformationRulesPage",
+      "underlying_type": "int",
+      "is_flags": false,
+      "values": [
+        {
+          "name": "Library",
+          "value": 0
+        },
+        {
+          "name": "DrillDownRules",
+          "value": 1
+        },
+        {
+          "name": "WorkflowUnitRules",
+          "value": 2
+        }
+      ],
+      "access": "public"
+    },
+    {
+      "name": "TreeNodeTypes",
+      "namespace": "OneStream.Client.WpfVb.TransformationRulesPage",
+      "underlying_type": "int",
+      "is_flags": false,
+      "values": [
+        {
+          "name": "Unknown",
+          "value": -1
+        },
+        {
+          "name": "GroupParent",
+          "value": 101
+        },
+        {
+          "name": "GroupDimType",
+          "value": 105
+        },
+        {
+          "name": "ProfileParent",
+          "value": 110
+        },
+        {
+          "name": "Group",
+          "value": 200
+        },
+        {
+          "name": "Profile",
+          "value": 300
+        },
+        {
+          "name": "ProfileMember",
+          "value": 301
+        }
+      ],
+      "access": "public"
+    },
+    {
+      "name": "PropertyObjectTypes",
+      "namespace": "OneStream.Client.WpfVb.TransformationRulesPage",
+      "underlying_type": "int",
+      "is_flags": false,
+      "values": [
+        {
+          "name": "Unknown",
+          "value": -1
+        },
+        {
+          "name": "RuleGroup",
+          "value": 1
+        },
+        {
+          "name": "RuleProfile",
+          "value": 2
+        }
+      ],
+      "access": "public"
+    }
+  ]
+}

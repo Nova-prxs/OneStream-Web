@@ -1,0 +1,144 @@
+{
+  "namespace": "OneStream.Client.WpfVb.WorkflowProfilesPage",
+  "generated_at": "2025-12-08T19:28:52.051674",
+  "statistics": {
+    "classes": 2,
+    "interfaces": 0,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 2,
+    "total_methods": 0,
+    "total_properties": 0
+  },
+  "classes": [
+    {
+      "name": "profileRelativeUserState",
+      "namespace": "OneStream.Client.WpfVb.WorkflowProfilesPage",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "relativeType",
+              "type": "WorkflowProfileRelativeTypes",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectedPropertyItem",
+              "type": "IPropertyItem",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [
+        "DesignerGenerated"
+      ],
+      "source_file": "output/types/OneStream/Client/WpfVb/WorkflowProfilesPage.cs"
+    },
+    {
+      "name": "WorkflowProfileComboBoxItem",
+      "namespace": "OneStream.Client.WpfVb.WorkflowProfilesPage",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "name",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "profileInfo",
+              "type": "WorkflowProfileInfo",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/WpfVb/WorkflowProfilesPage.cs"
+    }
+  ],
+  "interfaces": [],
+  "structs": [],
+  "delegates": [],
+  "enums": [
+    {
+      "name": "tabTypes",
+      "namespace": "OneStream.Client.WpfVb.WorkflowProfilesPage",
+      "underlying_type": "int",
+      "is_flags": false,
+      "values": [
+        {
+          "name": "tabProperties",
+          "value": 0
+        },
+        {
+          "name": "tabEntityCalcs",
+          "value": 1
+        },
+        {
+          "name": "tabEntities",
+          "value": 2
+        },
+        {
+          "name": "tabCubeRootEntities",
+          "value": 3
+        },
+        {
+          "name": "tabGridView",
+          "value": 4
+        }
+      ],
+      "access": "public"
+    },
+    {
+      "name": "EntityFilterTypes",
+      "namespace": "OneStream.Client.WpfVb.WorkflowProfilesPage",
+      "underlying_type": "int",
+      "is_flags": false,
+      "values": [
+        {
+          "name": "All",
+          "value": 0
+        },
+        {
+          "name": "Base",
+          "value": 1
+        },
+        {
+          "name": "Parent",
+          "value": 2
+        }
+      ],
+      "access": "public"
+    }
+  ]
+}

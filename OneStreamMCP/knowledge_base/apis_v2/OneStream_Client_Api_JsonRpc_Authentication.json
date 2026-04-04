@@ -1,0 +1,243 @@
+{
+  "namespace": "OneStream.Client.Api.JsonRpc.Authentication",
+  "generated_at": "2025-12-08T19:28:51.262746",
+  "statistics": {
+    "classes": 4,
+    "interfaces": 0,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 0,
+    "total_methods": 4,
+    "total_properties": 7
+  },
+  "classes": [
+    {
+      "name": "PlatformAuthenticationHeaderHandlerOptions",
+      "namespace": "OneStream.Client.Api.JsonRpc.Authentication",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "AppTokenPropertyName",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "AuthTokenPropertyName",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "AppTokenHeaderName",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "AuthTokenHeaderName",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "TokenSerializer",
+          "type": "IHandlerTokenSerializer",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [
+        {
+          "name": "JsonTokenSerializer",
+          "return_type": "JsonTokenSerializer",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Jsons token serializer",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Api/JsonRpc/Authentication/PlatformAuthenticationHeaderHandlerOptions.cs"
+    },
+    {
+      "name": "ProxyAuthenticationOptions",
+      "namespace": "OneStream.Client.Api.JsonRpc.Authentication",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "ProxyCredentials",
+          "type": "ICredentials",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "UseDefaultCredentials",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Api/JsonRpc/Authentication/ProxyAuthenticationOptions.cs"
+    },
+    {
+      "name": "ServiceCollectionExtensions",
+      "namespace": "OneStream.Client.Api.JsonRpc.Authentication",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "AddAuthenticatedHttpClient",
+          "return_type": "IServiceCollection",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "services",
+              "type": "this IServiceCollection",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userAgent",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Adds authenticated http client",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "PlatformAuthenticationHeaderHandler",
+          "return_type": "> new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "PlatformAuthenticationHeaderHandlerOptions(",
+              "type": "Options.Create(new",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Platforms authentication header handler",
+          "generic_params": [
+            "ApplicationToken",
+            "AuthenticationToken"
+          ],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Api/JsonRpc/Authentication/ServiceCollectionExtensions.cs"
+    },
+    {
+      "name": "JsonTokenSerializer",
+      "namespace": "OneStream.Client.Api.JsonRpc.Authentication",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IHandlerTokenSerializer"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "Serialize",
+          "return_type": "string",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "token",
+              "type": "T",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Serializes operation",
+          "generic_params": [
+            "T"
+          ],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Api/JsonRpc/Authentication/JsonTokenSerializer.cs"
+    }
+  ],
+  "interfaces": [],
+  "structs": [],
+  "delegates": [],
+  "enums": []
+}

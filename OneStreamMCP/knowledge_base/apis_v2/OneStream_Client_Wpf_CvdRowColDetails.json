@@ -1,0 +1,52 @@
+{
+  "namespace": "OneStream.Client.Wpf.CvdRowColDetails",
+  "generated_at": "2025-12-08T19:28:51.955103",
+  "statistics": {
+    "classes": 0,
+    "interfaces": 0,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 1,
+    "total_methods": 0,
+    "total_properties": 0
+  },
+  "classes": [],
+  "interfaces": [],
+  "structs": [],
+  "delegates": [],
+  "enums": [
+    {
+      "name": "CvdRowColDetailsTabType",
+      "namespace": "OneStream.Client.Wpf.CvdRowColDetails",
+      "underlying_type": "int",
+      "is_flags": false,
+      "values": [
+        {
+          "name": "MemberFilter",
+          "value": 0
+        },
+        {
+          "name": "Formatting",
+          "value": 1
+        },
+        {
+          "name": "Data",
+          "value": 2
+        },
+        {
+          "name": "Sharing",
+          "value": 3
+        },
+        {
+          "name": "RowOverrides",
+          "value": 4
+        },
+        {
+          "name": "ColOverrides",
+          "value": 5
+        }
+      ],
+      "access": "public"
+    }
+  ]
+}

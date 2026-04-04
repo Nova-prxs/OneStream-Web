@@ -1,0 +1,76 @@
+{
+  "namespace": "OneStream.Web.Shared.XFWebTreeDataSetHelper",
+  "generated_at": "2025-12-08T19:28:52.427902",
+  "statistics": {
+    "classes": 3,
+    "interfaces": 0,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 0,
+    "total_methods": 0,
+    "total_properties": 0
+  },
+  "classes": [
+    {
+      "name": "TableNames",
+      "namespace": "OneStream.Web.Shared.XFWebTreeDataSetHelper",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Web/Shared/XFWebTreeDataSetHelper.cs"
+    },
+    {
+      "name": "TreeItemColumnNames",
+      "namespace": "OneStream.Web.Shared.XFWebTreeDataSetHelper",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Web/Shared/XFWebTreeDataSetHelper.cs"
+    },
+    {
+      "name": "RelationshipColumnNames",
+      "namespace": "OneStream.Web.Shared.XFWebTreeDataSetHelper",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Web/Shared/XFWebTreeDataSetHelper.cs"
+    }
+  ],
+  "interfaces": [],
+  "structs": [],
+  "delegates": [],
+  "enums": []
+}

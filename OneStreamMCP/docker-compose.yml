@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  onestream-mcp:
+    build: .
+    ports:
+      - "3000:3000"
+    env_file: .env
+    volumes:
+      # Mount your OneStream repositories (read-only)
+      # - /path/to/your/repos:/repos:ro
+      - ./knowledge_base:/app/knowledge_base:ro
+    restart: unless-stopped

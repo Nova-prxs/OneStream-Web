@@ -1,0 +1,1006 @@
+{
+  "namespace": "OneStream.Shared.Common.StageConstants",
+  "generated_at": "2025-12-08T19:28:52.149272",
+  "statistics": {
+    "classes": 20,
+    "interfaces": 0,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 0,
+    "total_methods": 28,
+    "total_properties": 0
+  },
+  "classes": [
+    {
+      "name": "TransformationGeneral",
+      "namespace": "OneStream.Shared.Common.StageConstants",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "GetPreservedScenarioId",
+          "return_type": "int",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "scenarioId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets preserved scenario id",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/StageConstants.cs"
+    },
+    {
+      "name": "TransformationColumnIncrements",
+      "namespace": "OneStream.Shared.Common.StageConstants",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/StageConstants.cs"
+    },
+    {
+      "name": "TransformationColumnPositions",
+      "namespace": "OneStream.Shared.Common.StageConstants",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/StageConstants.cs"
+    },
+    {
+      "name": "MasterKeyNames",
+      "namespace": "OneStream.Shared.Common.StageConstants",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/StageConstants.cs"
+    },
+    {
+      "name": "MasterDimensionNames",
+      "namespace": "OneStream.Shared.Common.StageConstants",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": []
+        }
+      ],
+      "properties": [],
+      "methods": [
+        {
+          "name": "Dictionary",
+          "return_type": "Dictionary",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "XFStringComparer.InvariantCultureIgnoreCase",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Dictionarys operation",
+          "generic_params": [
+            "string",
+            "string"
+          ],
+          "overloads": 2
+        },
+        {
+          "name": "Dictionary",
+          "return_type": "Dictionary",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "XFStringComparer.InvariantCultureIgnoreCase",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Dictionarys operation",
+          "generic_params": [
+            "string",
+            "string"
+          ],
+          "overloads": 2
+        },
+        {
+          "name": "GetDimensionLongName",
+          "return_type": "string",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "dimensionName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets dimension long name",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetDimensionName",
+          "return_type": "string",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "dimensionLongName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets dimension name",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "GetDimensionName",
+          "return_type": "string",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "financeDimTypeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets dimension name",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "GetFinanceDimensionTypeId",
+          "return_type": "int",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "dimensionName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets finance dimension type id",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetRequiredDimensions",
+          "return_type": "List<string>",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Gets required dimensions",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "List",
+          "return_type": "List",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Lists operation",
+          "generic_params": [
+            "string"
+          ],
+          "overloads": 1
+        },
+        {
+          "name": "IsRequired",
+          "return_type": "bool",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "dimensionName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Checks if required",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "IsNameValid",
+          "return_type": "bool",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "dimensionName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Checks if name valid",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "IsDateTimeDimension",
+          "return_type": "bool",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "dimensionName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Checks if date time dimension",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/StageConstants.cs"
+    },
+    {
+      "name": "MasterDimensionLongNames",
+      "namespace": "OneStream.Shared.Common.StageConstants",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/StageConstants.cs"
+    },
+    {
+      "name": "MasterDimensionSequence",
+      "namespace": "OneStream.Shared.Common.StageConstants",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/StageConstants.cs"
+    },
+    {
+      "name": "MasterDimensionTokens",
+      "namespace": "OneStream.Shared.Common.StageConstants",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": []
+        }
+      ],
+      "properties": [],
+      "methods": [
+        {
+          "name": "Dictionary",
+          "return_type": "Dictionary",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "XFStringComparer.InvariantCultureIgnoreCase",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Dictionarys operation",
+          "generic_params": [
+            "string",
+            "string"
+          ],
+          "overloads": 1
+        },
+        {
+          "name": "GetDimensionName",
+          "return_type": "string",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "masterDimensionToken",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets dimension name",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetDimensionToken",
+          "return_type": "string",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "masterDimensionName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets dimension token",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetTokenParts",
+          "return_type": "StageTokenParts",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "masterDimensionToken",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets token parts",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "StageTokenParts",
+          "return_type": "StageTokenParts",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "masterDimensionToken",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Stages token parts",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/StageConstants.cs"
+    },
+    {
+      "name": "DataMgmtExportDimensions",
+      "namespace": "OneStream.Shared.Common.StageConstants",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": []
+        }
+      ],
+      "properties": [],
+      "methods": [
+        {
+          "name": "List",
+          "return_type": "List",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Lists operation",
+          "generic_params": [
+            "string"
+          ],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [
+        "0",
+        "1",
+        "0"
+      ],
+      "source_file": "output/types/OneStream/Shared/Common/StageConstants.cs"
+    },
+    {
+      "name": "DimensionSuffixes",
+      "namespace": "OneStream.Shared.Common.StageConstants",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/StageConstants.cs"
+    },
+    {
+      "name": "ParserDefaults",
+      "namespace": "OneStream.Shared.Common.StageConstants",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/StageConstants.cs"
+    },
+    {
+      "name": "DimensionAttributeIndexes",
+      "namespace": "OneStream.Shared.Common.StageConstants",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": []
+        }
+      ],
+      "properties": [],
+      "methods": [
+        {
+          "name": "Dictionary",
+          "return_type": "Dictionary",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Dictionarys operation",
+          "generic_params": [
+            "int",
+            "string"
+          ],
+          "overloads": 1
+        },
+        {
+          "name": "GetAttributeName",
+          "return_type": "string",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "attributeIndex",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets attribute name",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetAttributeIndex",
+          "return_type": "int",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "attributeName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets attribute index",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/StageConstants.cs"
+    },
+    {
+      "name": "BiBlendSettings",
+      "namespace": "OneStream.Shared.Common.StageConstants",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/StageConstants.cs"
+    },
+    {
+      "name": "BiBlendDisplayInfo",
+      "namespace": "OneStream.Shared.Common.StageConstants",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/StageConstants.cs",
+      "source_code": "public static class BiBlendDisplayInfo\n\t{\n\t\tpublic const string DisplayInfoGroup = \"DisplayInfo\";\n\n\t\tpublic const string ViewColIndex = \"ViewColIndex\";\n\n\t\tpublic const string AccountTypeColIndex = \"AccountTypeColIndex\";\n\n\t\tpublic const string FirstUDMeasureColIndex = \"FirstUDMeasureColIndex\";\n\n\t\tpublic const string FirstTimeMeasureColIndex = \"FirstTimeMeasureColIndex\";\n\n\t\tpublic const string TimeHas12MonhtlyPeriods = \"TimeHas12MonhtlyPeriods\";\n\t}"
+    },
+    {
+      "name": "BiBlendDefaults",
+      "namespace": "OneStream.Shared.Common.StageConstants",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/StageConstants.cs"
+    },
+    {
+      "name": "BiBlendLimits",
+      "namespace": "OneStream.Shared.Common.StageConstants",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/StageConstants.cs"
+    },
+    {
+      "name": "DirectLoadSettings",
+      "namespace": "OneStream.Shared.Common.StageConstants",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/StageConstants.cs"
+    },
+    {
+      "name": "DirectLoadLimits",
+      "namespace": "OneStream.Shared.Common.StageConstants",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/StageConstants.cs"
+    },
+    {
+      "name": "DerivativeDateTimeSubstVars",
+      "namespace": "OneStream.Shared.Common.StageConstants",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/StageConstants.cs"
+    },
+    {
+      "name": "DerivativeLogicalOperatorTypeCheck",
+      "namespace": "OneStream.Shared.Common.StageConstants",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "IsBusinessRule",
+          "return_type": "bool",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "operatorType",
+              "type": "RuleLogicalOperatorTypes",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Checks if business rule",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "IsComplexExpression",
+          "return_type": "bool",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "operatorType",
+              "type": "RuleLogicalOperatorTypes",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Checks if complex expression",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "IsMathematical",
+          "return_type": "bool",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "operatorType",
+              "type": "RuleLogicalOperatorTypes",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Checks if mathematical",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "IsStatistical",
+          "return_type": "bool",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "operatorType",
+              "type": "RuleLogicalOperatorTypes",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Checks if statistical",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "RequiresInputParameter",
+          "return_type": "bool",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "operatorType",
+              "type": "RuleLogicalOperatorTypes",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Requiress input parameter",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "SupportsBufferMath",
+          "return_type": "bool",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "operatorType",
+              "type": "RuleLogicalOperatorTypes",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Supportss buffer math",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "SupportsDateColumnMath",
+          "return_type": "bool",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "operatorType",
+              "type": "RuleLogicalOperatorTypes",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Supportss date column math",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/StageConstants.cs"
+    }
+  ],
+  "interfaces": [],
+  "structs": [],
+  "delegates": [],
+  "enums": []
+}

@@ -1,0 +1,3145 @@
+{
+  "namespace": "OneStream.Shared.Interfaces",
+  "dll_source": "Extended.APIs",
+  "extraction_timestamp": "2025-11-30T19:47:18.326905",
+  "statistics": {
+    "classes": 26,
+    "total_methods": 87
+  },
+  "classes": [
+    {
+      "name": "IWsasDynamicDimensionApiV800",
+      "namespace": "OneStream.Shared.Interfaces",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "ReadDynamicDimensionInfo",
+          "return_type": "DynamicDimensionInfo",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "args",
+              "type": "DynamicDimensionArgs",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "contentTimestamp",
+              "type": "DateTime",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "numSecondsBeforeReadingContentTimestamp",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dbConnExt",
+              "type": "DbConnInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "selectStatement",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dbWheres",
+              "type": "List<DbWhere>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dbOrderBys",
+              "type": "List<DbOrderBy>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "memberNameColumn",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "memberDescriptionColumn",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "externalMemberIdColumn",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "externalMemberNameColumn",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "parentMemberNameColumn",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "parentExternalMemberIdColumn",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "parentExternalMemberNameColumn",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "aggWeightColumn",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "aggWeightIsPercentageNotFraction",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IWsasDynamicDimensionApiV800",
+          "overloads": 1
+        },
+        {
+          "name": "CreateAndAddDynamicMembers",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "args",
+              "type": "DynamicDimensionArgs",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dataTable",
+              "type": "DataTable",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "memberNameColumn",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "memberDescriptionColumn",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "externalMemberIdColumn",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "externalMemberNameColumn",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicMembers",
+              "type": "DynamicMemberCollection",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IWsasDynamicDimensionApiV800",
+          "overloads": 1
+        },
+        {
+          "name": "CreateAndAddDynamicRelationships",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "args",
+              "type": "DynamicDimensionArgs",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dataTable",
+              "type": "DataTable",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicMembers",
+              "type": "DynamicMemberCollection",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "memberNameColumn",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "externalMemberIdColumn",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "externalMemberNameColumn",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "parentMemberNameColumn",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "parentExternalMemberIdColumn",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "parentExternalMemberNameColumn",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "aggWeightColumn",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "readAggWeightAsPercentageNotFraction",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicRelationships",
+              "type": "DynamicRelationshipCollection",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IWsasDynamicDimensionApiV800",
+          "overloads": 1
+        }
+      ],
+      "events": []
+    },
+    {
+      "name": "IWsasDynamicDimensionV800",
+      "namespace": "OneStream.Shared.Interfaces",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "ReadDynamicDimensionContentTimestamp",
+          "return_type": "DateTime",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "api",
+              "type": "IWsasDynamicDimensionApiV800",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "args",
+              "type": "DynamicDimensionArgs",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IWsasDynamicDimensionV800",
+          "overloads": 1
+        },
+        {
+          "name": "ReadDynamicDimensionInfo",
+          "return_type": "DynamicDimensionInfo",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "api",
+              "type": "IWsasDynamicDimensionApiV800",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "args",
+              "type": "DynamicDimensionArgs",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IWsasDynamicDimensionV800",
+          "overloads": 1
+        }
+      ],
+      "events": []
+    },
+    {
+      "name": "IWsasDynamicDataV800",
+      "namespace": "OneStream.Shared.Interfaces",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "ReadDynamicDataUnitContentTimestamp",
+          "return_type": "DateTime",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "brGlobals",
+              "type": "BRGlobals",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "api",
+              "type": "FinanceRulesApi",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicDataBindingInfo",
+              "type": "DynamicDataBindingInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IWsasDynamicDataV800",
+          "overloads": 1
+        },
+        {
+          "name": "ReadDynamicDataUnitData",
+          "return_type": "IDynamicDataUnitData",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "brGlobals",
+              "type": "BRGlobals",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "api",
+              "type": "FinanceRulesApi",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicDataBindingInfo",
+              "type": "DynamicDataBindingInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IWsasDynamicDataV800",
+          "overloads": 1
+        },
+        {
+          "name": "SaveDynamicDataCells",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "brGlobals",
+              "type": "BRGlobals",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cube",
+              "type": "Cube",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "scenario",
+              "type": "Member",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicDataBindingInfo",
+              "type": "DynamicDataBindingInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dataCellExs",
+              "type": "List<DataCellEx>",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IWsasDynamicDataV800",
+          "overloads": 1
+        }
+      ],
+      "events": []
+    },
+    {
+      "name": "IWsasFinanceCoreV800",
+      "namespace": "OneStream.Shared.Interfaces",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "Calculate",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "brGlobals",
+              "type": "BRGlobals",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "api",
+              "type": "FinanceRulesApi",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "args",
+              "type": "FinanceRulesArgs",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IWsasFinanceCoreV800",
+          "overloads": 1
+        },
+        {
+          "name": "Translate",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "brGlobals",
+              "type": "BRGlobals",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "api",
+              "type": "FinanceRulesApi",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "args",
+              "type": "FinanceRulesArgs",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IWsasFinanceCoreV800",
+          "overloads": 1
+        },
+        {
+          "name": "ConsolidateShare",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "brGlobals",
+              "type": "BRGlobals",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "api",
+              "type": "FinanceRulesApi",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "args",
+              "type": "FinanceRulesArgs",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IWsasFinanceCoreV800",
+          "overloads": 1
+        },
+        {
+          "name": "ConsolidateElimination",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "brGlobals",
+              "type": "BRGlobals",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "api",
+              "type": "FinanceRulesApi",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "args",
+              "type": "FinanceRulesArgs",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IWsasFinanceCoreV800",
+          "overloads": 1
+        },
+        {
+          "name": "GetCustomFxRate",
+          "return_type": "FxRateResult",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "brGlobals",
+              "type": "BRGlobals",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "api",
+              "type": "FinanceRulesApi",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "args",
+              "type": "FinanceRulesArgs",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IWsasFinanceCoreV800",
+          "overloads": 1
+        },
+        {
+          "name": "GetConditionalInputResult",
+          "return_type": "ConditionalInputResultType",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "brGlobals",
+              "type": "BRGlobals",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "api",
+              "type": "FinanceRulesApi",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "args",
+              "type": "FinanceRulesArgs",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IWsasFinanceCoreV800",
+          "overloads": 1
+        }
+      ],
+      "events": []
+    },
+    {
+      "name": "IWsasFinanceCustomCalculateV800",
+      "namespace": "OneStream.Shared.Interfaces",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "CustomCalculate",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "brGlobals",
+              "type": "BRGlobals",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "api",
+              "type": "FinanceRulesApi",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "args",
+              "type": "FinanceRulesArgs",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IWsasFinanceCustomCalculateV800",
+          "overloads": 1
+        }
+      ],
+      "events": []
+    },
+    {
+      "name": "IWsasFinanceGetDataCellV800",
+      "namespace": "OneStream.Shared.Interfaces",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "GetDataCell",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "brGlobals",
+              "type": "BRGlobals",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "api",
+              "type": "FinanceRulesApi",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "args",
+              "type": "FinanceRulesArgs",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IWsasFinanceGetDataCellV800",
+          "overloads": 1
+        }
+      ],
+      "events": []
+    },
+    {
+      "name": "IWsasFinanceMemberListsV800",
+      "namespace": "OneStream.Shared.Interfaces",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "GetMemberList",
+          "return_type": "MemberList",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "brGlobals",
+              "type": "BRGlobals",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "api",
+              "type": "FinanceRulesApi",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "args",
+              "type": "FinanceRulesArgs",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IWsasFinanceMemberListsV800",
+          "overloads": 1
+        }
+      ],
+      "events": []
+    },
+    {
+      "name": "IWsasDynamicCubeViewApiV800",
+      "namespace": "OneStream.Shared.Interfaces",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "GetDynamicCubeViewItem",
+          "return_type": "CubeViewItem",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cubeViewItem",
+              "type": "CubeViewItem",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "args",
+              "type": "DynamicCubeViewArgs",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IWsasDynamicCubeViewApiV800",
+          "overloads": 1
+        }
+      ],
+      "events": []
+    },
+    {
+      "name": "IWsasDynamicDashboardsApiV800",
+      "namespace": "OneStream.Shared.Interfaces",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "GetEmbeddedDynamicDashboard",
+          "return_type": "WsDynamicDashboardEx",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "parentDynamicComponentEx",
+              "type": "WsDynamicComponentEx",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "storedDashboard",
+              "type": "Dashboard",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "nextLevelNameSuffixToAdd",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "nextLevelTemplateSubstVarsToAdd",
+              "type": "Dictionary<string, string>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "convertStoredDashboardToDynamic",
+              "type": "TriStateBool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicItemStateType",
+              "type": "WsDynamicItemStateType",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IWsasDynamicDashboardsApiV800",
+          "overloads": 1
+        },
+        {
+          "name": "GetDynamicComponentsForDynamicDashboard",
+          "return_type": "WsDynamicComponentCollection",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicDashboardEx",
+              "type": "WsDynamicDashboardEx",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "nextLevelNameSuffixToAdd",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "nextLevelTemplateSubstVarsToAdd",
+              "type": "Dictionary<string, string>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "convertStoredComponentsToDynamic",
+              "type": "TriStateBool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicItemStateType",
+              "type": "WsDynamicItemStateType",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IWsasDynamicDashboardsApiV800",
+          "overloads": 1
+        },
+        {
+          "name": "GetDynamicComponentsRepeatedForDynamicDashboard",
+          "return_type": "WsDynamicComponentCollection",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicDashboardEx",
+              "type": "WsDynamicDashboardEx",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "repeatArgsList",
+              "type": "List<WsDynamicComponentRepeatArgs>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "convertStoredComponentsToDynamic",
+              "type": "TriStateBool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicItemStateType",
+              "type": "WsDynamicItemStateType",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IWsasDynamicDashboardsApiV800",
+          "overloads": 1
+        },
+        {
+          "name": "GetDynamicComponentForDynamicDashboard",
+          "return_type": "WsDynamicComponentEx",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicDashboardEx",
+              "type": "WsDynamicDashboardEx",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "storedComponent",
+              "type": "DashboardComponent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "nextLevelNameSuffixToAdd",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "nextLevelTemplateSubstVarsToAdd",
+              "type": "Dictionary<string, string>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "convertStoredComponentToDynamic",
+              "type": "TriStateBool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicItemStateType",
+              "type": "WsDynamicItemStateType",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IWsasDynamicDashboardsApiV800",
+          "overloads": 1
+        },
+        {
+          "name": "GetDynamicAdaptersForDynamicComponent",
+          "return_type": "WsDynamicAdapterCollection",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicComponentEx",
+              "type": "WsDynamicComponentEx",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "nextLevelNameSuffixToAdd",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "nextLevelTemplateSubstVarsToAdd",
+              "type": "Dictionary<string, string>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "convertStoredAdaptersToDynamic",
+              "type": "TriStateBool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicItemStateType",
+              "type": "WsDynamicItemStateType",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IWsasDynamicDashboardsApiV800",
+          "overloads": 1
+        },
+        {
+          "name": "GetDynamicAdapterForDynamicComponent",
+          "return_type": "WsDynamicAdapterEx",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicComponentEx",
+              "type": "WsDynamicComponentEx",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "storedAdapter",
+              "type": "DashboardAdapter",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "nextLevelNameSuffixToAdd",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "nextLevelTemplateSubstVarsToAdd",
+              "type": "Dictionary<string, string>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "convertStoredAdapterToDynamic",
+              "type": "TriStateBool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicItemStateType",
+              "type": "WsDynamicItemStateType",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IWsasDynamicDashboardsApiV800",
+          "overloads": 1
+        },
+        {
+          "name": "GetDynamicCubeViewForDynamicAdapter",
+          "return_type": "WsDynamicCubeViewEx",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicAdapterEx",
+              "type": "WsDynamicAdapterEx",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "storedCubeViewItem",
+              "type": "CubeViewItem",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "nextLevelNameSuffixToAdd",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "nextLevelTemplateSubstVarsToAdd",
+              "type": "Dictionary<string, string>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "convertStoredCubeViewToDynamic",
+              "type": "TriStateBool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicItemStateType",
+              "type": "WsDynamicItemStateType",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IWsasDynamicDashboardsApiV800",
+          "overloads": 1
+        },
+        {
+          "name": "GetDynamicCubeViewForDynamicComponent",
+          "return_type": "WsDynamicCubeViewEx",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicComponentEx",
+              "type": "WsDynamicComponentEx",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "storedCubeViewItem",
+              "type": "CubeViewItem",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "nextLevelNameSuffixToAdd",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "nextLevelTemplateSubstVarsToAdd",
+              "type": "Dictionary<string, string>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "convertStoredCubeViewToDynamic",
+              "type": "TriStateBool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicItemStateType",
+              "type": "WsDynamicItemStateType",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IWsasDynamicDashboardsApiV800",
+          "overloads": 1
+        },
+        {
+          "name": "GetDynamicParametersForDynamicComponent",
+          "return_type": "WsDynamicParameterCollection",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicComponentEx",
+              "type": "WsDynamicComponentEx",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "nextLevelNameSuffixToAdd",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "nextLevelTemplateSubstVarsToAdd",
+              "type": "Dictionary<string, string>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "convertStoredParametersToDynamic",
+              "type": "TriStateBool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicItemStateType",
+              "type": "WsDynamicItemStateType",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IWsasDynamicDashboardsApiV800",
+          "overloads": 1
+        },
+        {
+          "name": "SaveDynamicDashboardState",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "parentComponent",
+              "type": "WsDynamicComponent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicDashboardEx",
+              "type": "WsDynamicDashboardEx",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicItemStateType",
+              "type": "WsDynamicItemStateType",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IWsasDynamicDashboardsApiV800",
+          "overloads": 1
+        },
+        {
+          "name": "SaveDynamicComponentState",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "parentDashboard",
+              "type": "WsDynamicDashboard",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicComponentEx",
+              "type": "WsDynamicComponentEx",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicItemStateType",
+              "type": "WsDynamicItemStateType",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IWsasDynamicDashboardsApiV800",
+          "overloads": 1
+        },
+        {
+          "name": "SaveDynamicAdapterState",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "parentComponent",
+              "type": "WsDynamicComponent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicAdapterEx",
+              "type": "WsDynamicAdapterEx",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicItemStateType",
+              "type": "WsDynamicItemStateType",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IWsasDynamicDashboardsApiV800",
+          "overloads": 1
+        },
+        {
+          "name": "GetStoredComponentsForDynamicDashboard",
+          "return_type": "List<DashboardDbrdCompMemberEx>",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicDashboard",
+              "type": "WsDynamicDashboard",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IWsasDynamicDashboardsApiV800",
+          "overloads": 1
+        },
+        {
+          "name": "GetStoredComponentForDynamicDashboard",
+          "return_type": "DashboardDbrdCompMemberEx",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicDashboard",
+              "type": "WsDynamicDashboard",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "componentName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IWsasDynamicDashboardsApiV800",
+          "overloads": 1
+        },
+        {
+          "name": "GetStoredComponentForDynamicDashboard",
+          "return_type": "DashboardDbrdCompMemberEx",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicDashboard",
+              "type": "WsDynamicDashboard",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "componentID",
+              "type": "Guid",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IWsasDynamicDashboardsApiV800",
+          "overloads": 1
+        }
+      ],
+      "events": []
+    },
+    {
+      "name": "IWsasDataManagementStepV800",
+      "namespace": "OneStream.Shared.Interfaces",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "ProcessDataManagementStep",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "brGlobals",
+              "type": "BRGlobals",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "args",
+              "type": "ExtenderArgs",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IWsasDataManagementStepV800",
+          "overloads": 1
+        }
+      ],
+      "events": []
+    },
+    {
+      "name": "IWsasDynamicCubeViewV800",
+      "namespace": "OneStream.Shared.Interfaces",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "GetDynamicCubeViewItem",
+          "return_type": "CubeViewItem",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "api",
+              "type": "IWsasDynamicCubeViewApiV800",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cubeViewItem",
+              "type": "CubeViewItem",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "args",
+              "type": "DynamicCubeViewArgs",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IWsasDynamicCubeViewV800",
+          "overloads": 1
+        }
+      ],
+      "events": []
+    },
+    {
+      "name": "IWsasDynamicDashboardsV800",
+      "namespace": "OneStream.Shared.Interfaces",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "GetEmbeddedDynamicDashboard",
+          "return_type": "WsDynamicDashboardEx",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "api",
+              "type": "IWsasDynamicDashboardsApiV800",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "maintUnit",
+              "type": "DashboardMaintUnit",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "parentDynamicComponentEx",
+              "type": "WsDynamicComponentEx",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "storedDashboard",
+              "type": "Dashboard",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "customSubstVarsAlreadyResolved",
+              "type": "Dictionary<string, string>",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IWsasDynamicDashboardsV800",
+          "overloads": 1
+        },
+        {
+          "name": "GetDynamicComponentsForDynamicDashboard",
+          "return_type": "WsDynamicComponentCollection",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "api",
+              "type": "IWsasDynamicDashboardsApiV800",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "maintUnit",
+              "type": "DashboardMaintUnit",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicDashboardEx",
+              "type": "WsDynamicDashboardEx",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "customSubstVarsAlreadyResolved",
+              "type": "Dictionary<string, string>",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IWsasDynamicDashboardsV800",
+          "overloads": 1
+        },
+        {
+          "name": "GetDynamicAdaptersForDynamicComponent",
+          "return_type": "WsDynamicAdapterCollection",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "api",
+              "type": "IWsasDynamicDashboardsApiV800",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "maintUnit",
+              "type": "DashboardMaintUnit",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicComponentEx",
+              "type": "WsDynamicComponentEx",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "customSubstVarsAlreadyResolved",
+              "type": "Dictionary<string, string>",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IWsasDynamicDashboardsV800",
+          "overloads": 1
+        },
+        {
+          "name": "GetDynamicCubeViewForDynamicAdapter",
+          "return_type": "WsDynamicCubeViewEx",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "api",
+              "type": "IWsasDynamicDashboardsApiV800",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "maintUnit",
+              "type": "DashboardMaintUnit",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicAdapterEx",
+              "type": "WsDynamicAdapterEx",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "storedCubeViewItem",
+              "type": "CubeViewItem",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "customSubstVarsAlreadyResolved",
+              "type": "Dictionary<string, string>",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IWsasDynamicDashboardsV800",
+          "overloads": 1
+        },
+        {
+          "name": "GetDynamicParametersForDynamicComponent",
+          "return_type": "WsDynamicParameterCollection",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "api",
+              "type": "IWsasDynamicDashboardsApiV800",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "maintUnit",
+              "type": "DashboardMaintUnit",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicComponentEx",
+              "type": "WsDynamicComponentEx",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "customSubstVarsAlreadyResolved",
+              "type": "Dictionary<string, string>",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IWsasDynamicDashboardsV800",
+          "overloads": 1
+        },
+        {
+          "name": "GetDynamicCubeViewForDynamicComponent",
+          "return_type": "WsDynamicCubeViewEx",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "api",
+              "type": "IWsasDynamicDashboardsApiV800",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "maintUnit",
+              "type": "DashboardMaintUnit",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dynamicComponentEx",
+              "type": "WsDynamicComponentEx",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "storedCubeViewItem",
+              "type": "CubeViewItem",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "customSubstVarsAlreadyResolved",
+              "type": "Dictionary<string, string>",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IWsasDynamicDashboardsV800",
+          "overloads": 1
+        }
+      ],
+      "events": []
+    },
+    {
+      "name": "IWsasDynamicGridV800",
+      "namespace": "OneStream.Shared.Interfaces",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "GetDynamicGridData",
+          "return_type": "XFDynamicGridGetDataResult",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "brGlobals",
+              "type": "BRGlobals",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "args",
+              "type": "DashboardDynamicGridArgs",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IWsasDynamicGridV800",
+          "overloads": 1
+        },
+        {
+          "name": "SaveDynamicGridData",
+          "return_type": "XFDynamicGridSaveDataResult",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "brGlobals",
+              "type": "BRGlobals",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "args",
+              "type": "DashboardDynamicGridArgs",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IWsasDynamicGridV800",
+          "overloads": 1
+        }
+      ],
+      "events": []
+    },
+    {
+      "name": "IWsasXFBRStringV800",
+      "namespace": "OneStream.Shared.Interfaces",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "GetXFBRString",
+          "return_type": "string",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "brGlobals",
+              "type": "BRGlobals",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "args",
+              "type": "DashboardStringFunctionArgs",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IWsasXFBRStringV800",
+          "overloads": 1
+        }
+      ],
+      "events": []
+    },
+    {
+      "name": "IWsasDataSetV800",
+      "namespace": "OneStream.Shared.Interfaces",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "GetDataSet",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "brGlobals",
+              "type": "BRGlobals",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "args",
+              "type": "DashboardDataSetArgs",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IWsasDataSetV800",
+          "overloads": 1
+        }
+      ],
+      "events": []
+    },
+    {
+      "name": "IWsasDashboardV800",
+      "namespace": "OneStream.Shared.Interfaces",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "ProcessLoadDashboardTask",
+          "return_type": "XFLoadDashboardTaskResult",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "brGlobals",
+              "type": "BRGlobals",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "args",
+              "type": "DashboardExtenderArgs",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IWsasDashboardV800",
+          "overloads": 1
+        }
+      ],
+      "events": []
+    },
+    {
+      "name": "IWsasComponentV800",
+      "namespace": "OneStream.Shared.Interfaces",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "ProcessComponentSelectionChanged",
+          "return_type": "XFSelectionChangedTaskResult",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "brGlobals",
+              "type": "BRGlobals",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "args",
+              "type": "DashboardExtenderArgs",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IWsasComponentV800",
+          "overloads": 1
+        }
+      ],
+      "events": []
+    },
+    {
+      "name": "IWsasTableViewV800",
+      "namespace": "OneStream.Shared.Interfaces",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "TableViewGetCustomSubstVarsInUse",
+          "return_type": "List<string>",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "brGlobals",
+              "type": "BRGlobals",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "tableViewName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "custSubstVarsAlreadyResolved",
+              "type": "Dictionary<string, string>",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IWsasTableViewV800",
+          "overloads": 1
+        },
+        {
+          "name": "GetTableView",
+          "return_type": "TableView",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "brGlobals",
+              "type": "BRGlobals",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "tableViewName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "customSubstVars",
+              "type": "Dictionary<string, string>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "nameValuePairs",
+              "type": "Dictionary<string, string>",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IWsasTableViewV800",
+          "overloads": 1
+        },
+        {
+          "name": "SaveTableView",
+          "return_type": "bool",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "brGlobals",
+              "type": "BRGlobals",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "tableViewName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "tableView",
+              "type": "TableView",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IWsasTableViewV800",
+          "overloads": 1
+        }
+      ],
+      "events": []
+    },
+    {
+      "name": "IWsasSqlTableEditorV800",
+      "namespace": "OneStream.Shared.Interfaces",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "SqlTableEditorSaveData",
+          "return_type": "XFSqlTableEditorSaveDataTaskResult",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "brGlobals",
+              "type": "BRGlobals",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "workspace",
+              "type": "DashboardWorkspace",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "args",
+              "type": "DashboardExtenderArgs",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IWsasSqlTableEditorV800",
+          "overloads": 1
+        }
+      ],
+      "events": []
+    },
+    {
+      "name": "IDataPoint",
+      "namespace": "OneStream.Shared.Interfaces",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "MatchesForDateInterval",
+          "return_type": "bool",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "dateInterval",
+              "type": "DateInterval",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "other",
+              "type": "IDataPoint",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IDataPoint",
+          "overloads": 1
+        },
+        {
+          "name": "Aggregate",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "other",
+              "type": "IDataPoint",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IDataPoint",
+          "overloads": 1
+        },
+        {
+          "name": "GetAggregateAverage",
+          "return_type": "decimal",
+          "access": "public",
+          "is_static": false,
+          "parameters": [],
+          "description": "Method from IDataPoint",
+          "overloads": 1
+        },
+        {
+          "name": "GetAggregateCount",
+          "return_type": "decimal",
+          "access": "public",
+          "is_static": false,
+          "parameters": [],
+          "description": "Method from IDataPoint",
+          "overloads": 1
+        },
+        {
+          "name": "SetValues",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "other",
+              "type": "IDataPoint",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IDataPoint",
+          "overloads": 1
+        }
+      ],
+      "events": []
+    },
+    {
+      "name": "IDataSeries",
+      "namespace": "OneStream.Shared.Interfaces",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "AddDataPoint",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "dataPoint",
+              "type": "IDataPoint",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IDataSeries",
+          "overloads": 1
+        },
+        {
+          "name": "GetAverage",
+          "return_type": "decimal",
+          "access": "public",
+          "is_static": false,
+          "parameters": [],
+          "description": "Method from IDataSeries",
+          "overloads": 1
+        },
+        {
+          "name": "GetFirst",
+          "return_type": "decimal",
+          "access": "public",
+          "is_static": false,
+          "parameters": [],
+          "description": "Method from IDataSeries",
+          "overloads": 1
+        },
+        {
+          "name": "GetFirstMatchingDataPoint",
+          "return_type": "IDataPoint",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "dataPointToMatch",
+              "type": "IDataPoint",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "interval",
+              "type": "DateInterval",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "sortDescending",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IDataSeries",
+          "overloads": 1
+        },
+        {
+          "name": "GetLagChangeDateInterval",
+          "return_type": "decimal",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "dateInterval",
+              "type": "DateInterval",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "lag",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IDataSeries",
+          "overloads": 1
+        },
+        {
+          "name": "GetLagDateInterval",
+          "return_type": "decimal",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "dateInterval",
+              "type": "DateInterval",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "lag",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IDataSeries",
+          "overloads": 1
+        },
+        {
+          "name": "GetLagChangeStepBack",
+          "return_type": "decimal",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "lag",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IDataSeries",
+          "overloads": 1
+        },
+        {
+          "name": "GetLagStepBack",
+          "return_type": "decimal",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "lag",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IDataSeries",
+          "overloads": 1
+        },
+        {
+          "name": "GetLast",
+          "return_type": "decimal",
+          "access": "public",
+          "is_static": false,
+          "parameters": [],
+          "description": "Method from IDataSeries",
+          "overloads": 1
+        },
+        {
+          "name": "GetMatchingDataPoints",
+          "return_type": "List<IDataPoint>",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "dataPointToMatch",
+              "type": "IDataPoint",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "interval",
+              "type": "DateInterval",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "sortDescending",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IDataSeries",
+          "overloads": 1
+        },
+        {
+          "name": "GetMaximum",
+          "return_type": "decimal",
+          "access": "public",
+          "is_static": false,
+          "parameters": [],
+          "description": "Method from IDataSeries",
+          "overloads": 1
+        },
+        {
+          "name": "GetMedian",
+          "return_type": "decimal",
+          "access": "public",
+          "is_static": false,
+          "parameters": [],
+          "description": "Method from IDataSeries",
+          "overloads": 1
+        },
+        {
+          "name": "GetMinimum",
+          "return_type": "decimal",
+          "access": "public",
+          "is_static": false,
+          "parameters": [],
+          "description": "Method from IDataSeries",
+          "overloads": 1
+        },
+        {
+          "name": "GetMode",
+          "return_type": "decimal",
+          "access": "public",
+          "is_static": false,
+          "parameters": [],
+          "description": "Method from IDataSeries",
+          "overloads": 1
+        },
+        {
+          "name": "GetStandardDeviation",
+          "return_type": "decimal",
+          "access": "public",
+          "is_static": false,
+          "parameters": [],
+          "description": "Method from IDataSeries",
+          "overloads": 1
+        },
+        {
+          "name": "GetSumOfMatchingDataPoints",
+          "return_type": "IDataPoint",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "dataPointToMatch",
+              "type": "IDataPoint",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "interval",
+              "type": "DateInterval",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "sortDescending",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IDataSeries",
+          "overloads": 1
+        }
+      ],
+      "events": []
+    },
+    {
+      "name": "IDynamicData",
+      "namespace": "OneStream.Shared.Interfaces",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "GetCommonMemberIds",
+          "return_type": "int?[]",
+          "access": "public",
+          "is_static": false,
+          "parameters": [],
+          "description": "Method from IDynamicData",
+          "overloads": 1
+        }
+      ],
+      "events": []
+    },
+    {
+      "name": "IDynamicDataConfiguration",
+      "namespace": "OneStream.Shared.Interfaces",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "CreateDataOperation",
+          "return_type": "IDynamicDataOperation<T>",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "FinanceApi",
+              "type": "FinanceRulesApi",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IDynamicDataConfiguration",
+          "overloads": 1
+        },
+        {
+          "name": "IsValidForDataUnit",
+          "return_type": "bool",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "CubeId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "DataUnitMembers",
+              "type": "Dictionary<DimType, int>",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IDynamicDataConfiguration",
+          "overloads": 1
+        }
+      ],
+      "events": []
+    },
+    {
+      "name": "IDynamicDataFactory",
+      "namespace": "OneStream.Shared.Interfaces",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "GetOperationForDataUnit",
+          "return_type": "IDynamicDataOperation<decimal>",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "api",
+              "type": "FinanceRulesApi",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "configName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IDynamicDataFactory",
+          "overloads": 1
+        },
+        {
+          "name": "AddConfiguration",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "operationConfig",
+              "type": "IDynamicDataConfiguration<decimal>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "configurationKey",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IDynamicDataFactory",
+          "overloads": 1
+        },
+        {
+          "name": "ClearConfigurations",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "parameters": [],
+          "description": "Method from IDynamicDataFactory",
+          "overloads": 1
+        },
+        {
+          "name": "TryRemoveConfiguration",
+          "return_type": "bool",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "configKey",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "config",
+              "type": "out IDynamicDataConfiguration<decimal>",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IDynamicDataFactory",
+          "overloads": 1
+        },
+        {
+          "name": "GetConfigurationLoadTimestamp",
+          "return_type": "DateTime",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "configKey",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IDynamicDataFactory",
+          "overloads": 1
+        }
+      ],
+      "events": []
+    },
+    {
+      "name": "IDynamicDataOperation",
+      "namespace": "OneStream.Shared.Interfaces",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "ClearCache",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "parameters": [],
+          "description": "Method from IDynamicDataOperation",
+          "overloads": 1
+        },
+        {
+          "name": "Execute",
+          "return_type": "IDynamicData<T>",
+          "access": "public",
+          "is_static": false,
+          "parameters": [],
+          "description": "Method from IDynamicDataOperation",
+          "overloads": 1
+        },
+        {
+          "name": "ExecuteAndTrace",
+          "return_type": "IDynamicDataOperationInfo<T>",
+          "access": "public",
+          "is_static": false,
+          "parameters": [],
+          "description": "Method from IDynamicDataOperation",
+          "overloads": 1
+        },
+        {
+          "name": "GetCacheInvalidationTimeStamp",
+          "return_type": "DateTime",
+          "access": "public",
+          "is_static": false,
+          "parameters": [],
+          "description": "Method from IDynamicDataOperation",
+          "overloads": 1
+        }
+      ],
+      "events": []
+    },
+    {
+      "name": "IDynamicDataWriter",
+      "namespace": "OneStream.Shared.Interfaces",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "Write",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "cells",
+              "type": "List<DataCellEx>",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IDynamicDataWriter",
+          "overloads": 1
+        },
+        {
+          "name": "DynamicCell",
+          "return_type": "public",
+          "access": "public",
+          "is_static": false,
+          "parameters": [],
+          "description": "Method from IDynamicDataWriter",
+          "overloads": 1
+        },
+        {
+          "name": "DynamicCell",
+          "return_type": "public",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "cellAmount",
+              "type": "T",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Method from IDynamicDataWriter",
+          "overloads": 1
+        }
+      ],
+      "events": []
+    }
+  ],
+  "enums": []
+}

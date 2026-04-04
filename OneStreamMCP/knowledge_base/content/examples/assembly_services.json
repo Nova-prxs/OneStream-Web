@@ -1,0 +1,335 @@
+[
+  {
+    "file": "Business rules/xfbr_service.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName",
+    "class": "xfbr_service",
+    "implements": "IWsasXFBRStringV800",
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "OneStreamWorkspacesApi",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "OneStreamWorkspacesApi.V800",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": "GetXFBRString",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "workspace",
+        "type": "DashboardWorkspace"
+      },
+      {
+        "name": "_\n\t\t\t args",
+        "type": "DashboardStringFunctionArgs"
+      }
+    ],
+    "return_type": "String"
+  },
+  {
+    "file": "Business rules/service_factory/service_factory.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName",
+    "class": "service_factory",
+    "implements": "IWsAssemblyServiceFactory",
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "OneStreamWorkspacesApi",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "OneStreamWorkspacesApi.V800",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": null,
+    "parameters": [],
+    "return_type": null
+  },
+  {
+    "file": "Business rules/service_factory/dynamic_dashboard_service.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName",
+    "class": "dynamic_dahboards_service",
+    "implements": "IWsasDynamicDashboardsV800",
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "OneStreamWorkspacesApi",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "OneStreamWorkspacesApi.V800",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": null,
+    "parameters": [],
+    "return_type": null
+  },
+  {
+    "file": "Business rules/service_factory/table_view_service.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName",
+    "class": "table_view_service",
+    "implements": "IWsasTableViewV800",
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "OneStreamWorkspacesApi",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "OneStreamWorkspacesApi.V800",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": "GetTableView",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "workspace",
+        "type": "DashboardWorkspace"
+      },
+      {
+        "name": "_\n\t\t\t tableViewName",
+        "type": "String"
+      },
+      {
+        "name": "custSubstVarsAlreadyResolved",
+        "type": "Dictionary(Of String"
+      }
+    ],
+    "return_type": "TableView"
+  },
+  {
+    "file": "Investments/service factory/finance_member_lists_service.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName",
+    "class": "finance_member_lists_service",
+    "implements": "IWsasFinanceMemberListsV800",
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "OneStreamWorkspacesApi",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "OneStreamWorkspacesApi.V800",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": null,
+    "parameters": [],
+    "return_type": null
+  },
+  {
+    "file": "Investments/service factory/xfbr_main_service.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName",
+    "class": "xfbr_main_service",
+    "implements": "IWsasXFBRStringV800",
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "OneStreamWorkspacesApi",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "OneStreamWorkspacesApi.V800",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": "GetXFBRString",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "workspace",
+        "type": "DashboardWorkspace"
+      },
+      {
+        "name": "_\n\t\t\t args",
+        "type": "DashboardStringFunctionArgs"
+      }
+    ],
+    "return_type": "String"
+  },
+  {
+    "file": "Investments/service factory/service_factory.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName",
+    "class": "service_factory",
+    "implements": "IWsAssemblyServiceFactory",
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "OneStreamWorkspacesApi",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "OneStreamWorkspacesApi.V800",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": null,
+    "parameters": [],
+    "return_type": null
+  },
+  {
+    "file": "Investments/service factory/dynamic_dashboard_main_service.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName",
+    "class": "dynamic_dashboard_main_service",
+    "implements": "IWsasDynamicDashboardsV800",
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "OneStreamWorkspacesApi",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "OneStreamWorkspacesApi.V800",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": null,
+    "parameters": [],
+    "return_type": null
+  },
+  {
+    "file": "Investments/service factory/finance_custom_calculate.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName",
+    "class": "finance_custom_calculate",
+    "implements": "IWsasFinanceCustomCalculateV800",
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "OneStreamWorkspacesApi",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "OneStreamWorkspacesApi.V800",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": "CustomCalculate",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "brGlobals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "FinanceRulesApi"
+      },
+      {
+        "name": "args",
+        "type": "FinanceRulesArgs"
+      }
+    ],
+    "return_type": "String"
+  }
+]

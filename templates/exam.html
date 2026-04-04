@@ -1,0 +1,284 @@
+{% extends "base.html" %}
+{% block title %}Exam Simulation — OneStream Study Guide{% endblock %}
+{% block content %}
+
+<h1>Exam Simulation</h1>
+
+{# Pre-exam setup #}
+<div id="exam-setup">
+  <article>
+    <header><strong>OS-201 Practice Exam</strong></header>
+    <p>Simulate the real certification exam experience:</p>
+    <ul>
+      <li><strong>60 questions</strong> randomly selected, weighted by exam section</li>
+      <li><strong>90 minutes</strong> time limit</li>
+      <li><strong>70%</strong> passing score</li>
+    </ul>
+    <p>Questions are drawn proportionally from each section according to official exam weights.</p>
+    <button onclick="startExam()">Start Exam</button>
+  </article>
+</div>
+
+{# Active exam UI (hidden until started) #}
+<div id="exam-active" style="display:none">
+  <div class="quiz-nav">
+    <div class="exam-timer" id="exam-timer">90:00</div>
+    <span id="exam-counter">Question 1 of 60</span>
+    <div class="quiz-nav-controls">
+      <button id="exam-prev" onclick="examPrev()" disabled>&#8592; Prev</button>
+      <select id="exam-select" onchange="examGo(parseInt(this.value))"></select>
+      <button id="exam-next" onclick="examNext()">Next &#8594;</button>
+    </div>
+  </div>
+
+  <div class="quiz-progress-bar">
+    <div class="quiz-progress-bar-inner quiz-progress-correct" id="exam-bar" style="width:0"></div>
+  </div>
+
+  <article id="exam-question-card">
+    <header>
+      <small id="exam-meta"></small>
+    </header>
+    <p id="exam-text"></p>
+    <div id="exam-options"></div>
+  </article>
+
+  <div class="section-summary">
+    <strong>Answered:</strong> <span id="exam-answered">0</span> / 60
+    <button class="outline" style="margin-left:1rem;padding:0.3rem 0.8rem;font-size:0.85rem" onclick="finishExam()">Finish Exam</button>
+  </div>
+</div>
+
+{# Results (hidden until finished) #}
+<div id="exam-results" style="display:none">
+  <article class="exam-results">
+    <header><strong>Exam Results</strong></header>
+    <div class="big-score" id="result-score"></div>
+    <p id="result-verdict"></p>
+    <p id="result-time"></p>
+  </article>
+
+  <h3>Section Breakdown</h3>
+  <figure>
+    <table>
+      <thead>
+        <tr>
+          <th>Section</th>
+          <th>Weight</th>
+          <th>Questions</th>
+          <th>Correct</th>
+          <th>Score</th>
+        </tr>
+      </thead>
+      <tbody id="result-sections"></tbody>
+    </table>
+  </figure>
+
+  <button onclick="location.reload()">Try Again</button>
+  <a href="/exam-prep/progress" role="button" class="outline">View Progress</a>
+</div>
+
+<script>
+const allSections = {{ sections | tojson }};
+let examQuestions = [];
+let examAnswers = {};
+let examCurrent = 0;
+let examTimer = null;
+let examTimeLeft = 90 * 60; // seconds
+let examStartTime = null;
+
+function buildExam() {
+  // Select questions proportionally by weight
+  examQuestions = [];
+  const totalQ = 60;
+  allSections.forEach(function(section) {
+    const count = Math.round(totalQ * section.weight / 100);
+    // Shuffle section questions and pick count
+    const shuffled = section.questions.slice().sort(function() { return Math.random() - 0.5; });
+    const picked = shuffled.slice(0, count);
+    picked.forEach(function(q) {
+      examQuestions.push({
+        question: q,
+        sectionName: section.name,
+        sectionSlug: section.slug,
+        sectionWeight: section.weight
+      });
+    });
+  });
+  // Shuffle final selection
+  examQuestions.sort(function() { return Math.random() - 0.5; });
+  // Trim to exactly 60 if rounding gave more
+  if (examQuestions.length > 60) examQuestions = examQuestions.slice(0, 60);
+}
+
+function startExam() {
+  buildExam();
+  examAnswers = {};
+  examCurrent = 0;
+  examTimeLeft = 90 * 60;
+  examStartTime = Date.now();
+
+  document.getElementById('exam-setup').style.display = 'none';
+  document.getElementById('exam-active').style.display = 'block';
+
+  // Build selector
+  const sel = document.getElementById('exam-select');
+  sel.innerHTML = '';
+  for (let i = 0; i < examQuestions.length; i++) {
+    const opt = document.createElement('option');
+    opt.value = i;
+    opt.textContent = 'Q' + (i + 1);
+    sel.appendChild(opt);
+  }
+
+  renderExamQuestion(0);
+  examTimer = setInterval(tickTimer, 1000);
+}
+
+function tickTimer() {
+  examTimeLeft--;
+  if (examTimeLeft <= 0) {
+    clearInterval(examTimer);
+    finishExam();
+    return;
+  }
+  var m = Math.floor(examTimeLeft / 60);
+  var s = examTimeLeft % 60;
+  var timerEl = document.getElementById('exam-timer');
+  timerEl.textContent = m + ':' + (s < 10 ? '0' : '') + s;
+  timerEl.className = 'exam-timer';
+  if (examTimeLeft <= 300) timerEl.classList.add('danger');
+  else if (examTimeLeft <= 900) timerEl.classList.add('warning');
+}
+
+function renderExamQuestion(idx) {
+  examCurrent = idx;
+  var eq = examQuestions[idx];
+  var q = eq.question;
+
+  document.getElementById('exam-counter').textContent = 'Question ' + (idx + 1) + ' of ' + examQuestions.length;
+  document.getElementById('exam-meta').textContent = eq.sectionName + ' | ' + q.difficulty;
+  document.getElementById('exam-text').textContent = q.text;
+
+  var container = document.getElementById('exam-options');
+  container.innerHTML = '';
+  q.options.forEach(function(opt) {
+    var btn = document.createElement('button');
+    btn.className = 'option-btn';
+    if (examAnswers[idx] === opt.letter) {
+      btn.style.borderColor = 'var(--pico-primary)';
+      btn.style.borderWidth = '3px';
+    }
+    btn.innerHTML = '<strong>' + opt.letter + ')</strong> ' + opt.text;
+    btn.onclick = function() {
+      examAnswers[idx] = opt.letter;
+      renderExamQuestion(idx);
+    };
+    container.appendChild(btn);
+  });
+
+  document.getElementById('exam-prev').disabled = idx === 0;
+  document.getElementById('exam-next').disabled = idx === examQuestions.length - 1;
+  document.getElementById('exam-select').value = idx;
+
+  // Count answered
+  var count = Object.keys(examAnswers).length;
+  document.getElementById('exam-answered').textContent = count;
+  document.getElementById('exam-bar').style.width = (count / examQuestions.length * 100) + '%';
+}
+
+function examPrev() { if (examCurrent > 0) renderExamQuestion(examCurrent - 1); }
+function examNext() { if (examCurrent < examQuestions.length - 1) renderExamQuestion(examCurrent + 1); }
+function examGo(idx) { renderExamQuestion(idx); }
+
+function finishExam() {
+  clearInterval(examTimer);
+  var elapsed = Math.round((Date.now() - examStartTime) / 1000);
+  var minutes = Math.floor(elapsed / 60);
+  var seconds = elapsed % 60;
+
+  // Calculate results
+  var correct = 0;
+  var sectionStats = {};
+  allSections.forEach(function(s) {
+    sectionStats[s.slug] = { name: s.name, weight: s.weight, total: 0, correct: 0 };
+  });
+
+  examQuestions.forEach(function(eq, idx) {
+    var slug = eq.sectionSlug;
+    sectionStats[slug].total++;
+    if (examAnswers[idx] === eq.question.correct_answer) {
+      correct++;
+      sectionStats[slug].correct++;
+    }
+  });
+
+  var score = Math.round(correct / examQuestions.length * 100);
+  var passed = score >= 70;
+
+  // Show results
+  document.getElementById('exam-active').style.display = 'none';
+  document.getElementById('exam-results').style.display = 'block';
+
+  // Save exam result to history (#9)
+  try {
+    var history = JSON.parse(localStorage.getItem('exam_history') || '[]');
+    var examResult = {
+      date: new Date().toISOString(),
+      score: score,
+      passed: passed,
+      timeElapsed: minutes + 'm ' + seconds + 's',
+      totalQuestions: examQuestions.length,
+      correct: correct,
+      sections: {}
+    };
+    allSections.forEach(function(s) {
+      var st = sectionStats[s.slug];
+      if (st.total > 0) {
+        examResult.sections[s.slug] = { name: st.name, total: st.total, correct: st.correct };
+      }
+    });
+    history.push(examResult);
+    if (history.length > 50) history = history.slice(-50);
+    localStorage.setItem('exam_history', JSON.stringify(history));
+  } catch(e) {}
+
+  var scoreEl = document.getElementById('result-score');
+  scoreEl.textContent = score + '%';
+  scoreEl.className = 'big-score ' + (passed ? 'pass' : 'fail');
+
+  document.getElementById('result-verdict').textContent = passed
+    ? 'PASS — Congratulations!'
+    : 'NEEDS IMPROVEMENT — 70% required to pass';
+
+  document.getElementById('result-time').textContent = 'Time: ' + minutes + 'm ' + seconds + 's';
+
+  // Section breakdown
+  var tbody = document.getElementById('result-sections');
+  tbody.innerHTML = '';
+  allSections.forEach(function(s) {
+    var st = sectionStats[s.slug];
+    if (st.total === 0) return;
+    var pct = Math.round(st.correct / st.total * 100);
+    var tr = document.createElement('tr');
+    tr.innerHTML = '<td>' + st.name + '</td><td>' + st.weight + '%</td><td>' + st.total + '</td><td>' + st.correct + '</td><td class="' + (pct >= 70 ? 'score-good' : pct >= 50 ? 'score-ok' : 'score-bad') + '">' + pct + '%</td>';
+    tbody.appendChild(tr);
+  });
+}
+
+// Keyboard shortcuts for exam
+document.addEventListener('keydown', function(e) {
+  if (document.getElementById('exam-active').style.display === 'none') return;
+  if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.tagName === 'SELECT') return;
+  switch(e.key) {
+    case 'ArrowLeft': e.preventDefault(); examPrev(); break;
+    case 'ArrowRight': e.preventDefault(); examNext(); break;
+    case 'a': case 'A': case '1': examAnswers[examCurrent] = 'A'; renderExamQuestion(examCurrent); break;
+    case 'b': case 'B': case '2': examAnswers[examCurrent] = 'B'; renderExamQuestion(examCurrent); break;
+    case 'c': case 'C': case '3': examAnswers[examCurrent] = 'C'; renderExamQuestion(examCurrent); break;
+    case 'd': case 'D': case '4': examAnswers[examCurrent] = 'D'; renderExamQuestion(examCurrent); break;
+  }
+});
+</script>
+
+{% endblock %}

@@ -1,0 +1,1915 @@
+{
+  "namespace": "OneStream.Client.Api.JsonRpc.Clients",
+  "generated_at": "2025-12-08T19:28:51.262950",
+  "statistics": {
+    "classes": 1,
+    "interfaces": 1,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 0,
+    "total_methods": 70,
+    "total_properties": 0
+  },
+  "classes": [
+    {
+      "name": "FileUploadServiceClient",
+      "namespace": "OneStream.Client.Api.JsonRpc.Clients",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "ClientBase<IFileUploadServiceClient>",
+      "interfaces": [
+        "IFileUploadServiceClient",
+        "IDisposable",
+        "IApiClient"
+      ],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "httpClientFactory",
+              "type": "IAuthenticatedHttpClientFactory",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "baseServerUrl",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [
+        {
+          "name": "object",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Objects operation",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "UploadFileFromStream",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "request",
+              "type": "XFFileTransferRequest",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Uploads file from stream",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "SendTo",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "request",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "\"UploadFileFromStream\"",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Sends to",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "BeginUploadFileFromStream",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "request",
+              "type": "XFFileTransferRequest",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins upload file from stream",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "UploadFileFromStream",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "request",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Uploads file from stream",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "OnEndResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 4
+        },
+        {
+          "name": "AsyncOperationContinuation",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "result",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "asyncState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Asyncs operation continuation",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "EndUploadFileFromStream",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends upload file from stream",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "UploadFileFromStreamAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "request",
+              "type": "XFFileTransferRequest",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Uploads file from stream async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "UploadFileFromStreamAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "request",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Uploads file from stream async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "UploadFileFromStreamAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "request",
+              "type": "XFFileTransferRequest",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Uploads file from stream async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "InvokeAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "beginOperationDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "}",
+              "type": "new object[1] { request",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "endOperationDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "operationCompletedCallback",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "userState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Invokes async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "InsertOrUpdateFileFromStream",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "request",
+              "type": "XFFileTransferRequest",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Inserts or update file from stream",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "SendTo",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "request",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "\"InsertOrUpdateFileFromStream\"",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Sends to",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "BeginInsertOrUpdateFileFromStream",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "request",
+              "type": "XFFileTransferRequest",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins insert or update file from stream",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "InsertOrUpdateFileFromStream",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "request",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Inserts or update file from stream",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "OnEndResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 4
+        },
+        {
+          "name": "AsyncOperationContinuation",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "result",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "asyncState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Asyncs operation continuation",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "EndInsertOrUpdateFileFromStream",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends insert or update file from stream",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "InsertOrUpdateFileFromStreamAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "request",
+              "type": "XFFileTransferRequest",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Inserts or update file from stream async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "InsertOrUpdateFileFromStreamAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "request",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Inserts or update file from stream async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "InsertOrUpdateFileFromStreamAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "request",
+              "type": "XFFileTransferRequest",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Inserts or update file from stream async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "InvokeAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "beginOperationDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "}",
+              "type": "new object[1] { request",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "endOperationDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "operationCompletedCallback",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "userState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Invokes async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "InsertOrUpdateFileFromStreamAndGetResult",
+          "return_type": "XFFileTransferResponse",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "request",
+              "type": "XFFileTransferRequest",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Inserts or update file from stream and get result",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "BeginInsertOrUpdateFileFromStreamAndGetResult",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "request",
+              "type": "XFFileTransferRequest",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins insert or update file from stream and get result",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "InsertOrUpdateFileFromStreamAndGetResult",
+          "return_type": ">",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "request",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Inserts or update file from stream and get result",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "antecedent.Result",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 4
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "OnEndResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 4
+        },
+        {
+          "name": "AsyncOperationContinuation",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "result",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "asyncState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Asyncs operation continuation",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "EndInsertOrUpdateFileFromStreamAndGetResult",
+          "return_type": "XFFileTransferResponse",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends insert or update file from stream and get result",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "InsertOrUpdateFileFromStreamAndGetResultAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "request",
+              "type": "XFFileTransferRequest",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Inserts or update file from stream and get result async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "InsertOrUpdateFileFromStreamAndGetResultAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "request",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Inserts or update file from stream and get result async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "InsertOrUpdateFileFromStreamAndGetResultAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "request",
+              "type": "XFFileTransferRequest",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Inserts or update file from stream and get result async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "InvokeAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "beginOperationDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "}",
+              "type": "new object[1] { request",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "endOperationDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "operationCompletedCallback",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "userState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Invokes async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "OnInsertOrUpdateFileFromStreamCompleted",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "state",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons insert or update file from stream completed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnBeginUploadFileFromStream",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "inValues",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            }
+          ],
+          "description": "Ons begin upload file from stream",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnEndUploadFileFromStream",
+          "return_type": "object[]",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end upload file from stream",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EndUploadFileFromStream",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "result",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends upload file from stream",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnUploadFileFromStreamCompleted",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "state",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons upload file from stream completed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "AsyncCompletedEventArgs",
+          "return_type": "this, new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "e.Error",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Cancelled",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.UserState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Asyncs completed event args",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnBeginInsertOrUpdateFileFromStream",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "inValues",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            }
+          ],
+          "description": "Ons begin insert or update file from stream",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnEndInsertOrUpdateFileFromStream",
+          "return_type": "object[]",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end insert or update file from stream",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EndInsertOrUpdateFileFromStream",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "result",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends insert or update file from stream",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnBeginInsertOrUpdateFileFromStreamAndGetResult",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "inValues",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            }
+          ],
+          "description": "Ons begin insert or update file from stream and get result",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnEndInsertOrUpdateFileFromStreamAndGetResult",
+          "return_type": "object[]",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end insert or update file from stream and get result",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnInsertOrUpdateFileFromStreamAndGetResultCompleted",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "state",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons insert or update file from stream and get result completed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "InsertOrUpdateFileFromStreamAndGetResultCompletedEventArgs",
+          "return_type": "this, new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "e.Results",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Error",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Cancelled",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.UserState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Inserts or update file from stream and get result completed event args",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "SendTo",
+          "return_type": "HttpResponseMessage",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "request",
+              "type": "XFFileTransferRequest",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "endpointName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Sends to",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "HttpRequestMessage",
+          "return_type": "HttpRequestMessage",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "HttpMethod.Post",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "BuildApiEndpointUri(endpointName",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Https request message",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EncodeXFFileTransferRequest",
+          "return_type": ",",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "request",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Encodes x f file transfer request",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "StreamContent",
+          "return_type": "StreamContent",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "request.FileDataStream",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Streams content",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GZipStreamContent",
+          "return_type": "GZipStreamContent",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "request.FileDataStream",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "request.XFFileInfo.Name",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gs zip stream content",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "SendMessageAsync",
+          "return_type": "> await",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "httpRequestMessage",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "false",
+              "type": "isLogoffRequest:",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Sends message async",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "ex",
+              "type": "AggregateException",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EncodeXFFileTransferRequest",
+          "return_type": "string",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "request",
+              "type": "XFFileTransferRequest",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Encodes x f file transfer request",
+          "generic_params": [],
+          "overloads": 2
+        }
+      ],
+      "events": [
+        {
+          "name": "UploadFileFromStreamCompleted",
+          "type": "EventHandler<AsyncCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "InsertOrUpdateFileFromStreamAndGetResultCompleted",
+          "type": "EventHandler<InsertOrUpdateFileFromStreamAndGetResultCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        }
+      ],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Api/JsonRpc/Clients/FileUploadServiceClient.cs"
+    }
+  ],
+  "interfaces": [
+    {
+      "name": "IFileUploadServiceClient",
+      "namespace": "OneStream.Client.Api.JsonRpc.Clients",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IDisposable",
+        "IApiClient"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "UploadFileFromStream",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "request",
+              "type": "XFFileTransferRequest",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Uploads file from stream",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "BeginUploadFileFromStream",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "request",
+              "type": "XFFileTransferRequest",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins upload file from stream",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EndUploadFileFromStream",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends upload file from stream",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "UploadFileFromStreamAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "request",
+              "type": "XFFileTransferRequest",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Uploads file from stream async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "UploadFileFromStreamAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "request",
+              "type": "XFFileTransferRequest",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Uploads file from stream async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "InsertOrUpdateFileFromStream",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "request",
+              "type": "XFFileTransferRequest",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Inserts or update file from stream",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "BeginInsertOrUpdateFileFromStream",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "request",
+              "type": "XFFileTransferRequest",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins insert or update file from stream",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EndInsertOrUpdateFileFromStream",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends insert or update file from stream",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "InsertOrUpdateFileFromStreamAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "request",
+              "type": "XFFileTransferRequest",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Inserts or update file from stream async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "InsertOrUpdateFileFromStreamAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "request",
+              "type": "XFFileTransferRequest",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Inserts or update file from stream async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "InsertOrUpdateFileFromStreamAndGetResult",
+          "return_type": "XFFileTransferResponse",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "request",
+              "type": "XFFileTransferRequest",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Inserts or update file from stream and get result",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "BeginInsertOrUpdateFileFromStreamAndGetResult",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "request",
+              "type": "XFFileTransferRequest",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins insert or update file from stream and get result",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EndInsertOrUpdateFileFromStreamAndGetResult",
+          "return_type": "XFFileTransferResponse",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends insert or update file from stream and get result",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "InsertOrUpdateFileFromStreamAndGetResultAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "request",
+              "type": "XFFileTransferRequest",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Inserts or update file from stream and get result async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "InsertOrUpdateFileFromStreamAndGetResultAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "request",
+              "type": "XFFileTransferRequest",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Inserts or update file from stream and get result async",
+          "generic_params": [],
+          "overloads": 2
+        }
+      ],
+      "events": [
+        {
+          "name": "UploadFileFromStreamCompleted",
+          "type": "EventHandler<AsyncCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "InsertOrUpdateFileFromStreamAndGetResultCompleted",
+          "type": "EventHandler<InsertOrUpdateFileFromStreamAndGetResultCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        }
+      ],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Api/JsonRpc/Clients/IFileUploadServiceClient.cs",
+      "source_code": "public interface IFileUploadServiceClient : IDisposable, IApiClient\n{\n\tevent EventHandler<AsyncCompletedEventArgs> UploadFileFromStreamCompleted;\n\n\tevent EventHandler<InsertOrUpdateFileFromStreamAndGetResultCompletedEventArgs> InsertOrUpdateFileFromStreamAndGetResultCompleted;\n\n\tvoid UploadFileFromStream(XFFileTransferRequest request);\n\n\tTask BeginUploadFileFromStream(XFFileTransferRequest request, object callback, object asyncState);\n\n\tvoid EndUploadFileFromStream(OnEndResult result);\n\n\tvoid UploadFileFromStreamAsync(XFFileTransferRequest request);\n\n\tvoid UploadFileFromStreamAsync(XFFileTransferRequest request, object userState);\n\n\tvoid InsertOrUpdateFileFromStream(XFFileTransferRequest request);\n\n\tTask BeginInsertOrUpdateFileFromStream(XFFileTransferRequest request, object callback, object asyncState);\n\n\tvoid EndInsertOrUpdateFileFromStream(OnEndResult result);\n\n\tvoid InsertOrUpdateFileFromStreamAsync(XFFileTransferRequest request);\n\n\tvoid InsertOrUpdateFileFromStreamAsync(XFFileTransferRequest request, object userState);\n\n\tXFFileTransferResponse InsertOrUpdateFileFromStreamAndGetResult(XFFileTransferRequest request);\n\n\tTask BeginInsertOrUpdateFileFromStreamAndGetResult(XFFileTransferRequest request, object callback, object asyncState);\n\n\tXFFileTransferResponse EndInsertOrUpdateFileFromStreamAndGetResult(OnEndResult result);\n\n\tvoid InsertOrUpdateFileFromStreamAndGetResultAsync(XFFileTransferRequest request);\n\n\tvoid InsertOrUpdateFileFromStreamAndGetResultAsync(XFFileTransferRequest request, object userState);\n}"
+    }
+  ],
+  "structs": [],
+  "delegates": [],
+  "enums": []
+}

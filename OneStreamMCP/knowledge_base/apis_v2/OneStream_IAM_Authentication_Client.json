@@ -1,0 +1,714 @@
+{
+  "namespace": "OneStream.IAM.Authentication.Client",
+  "generated_at": "2025-12-08T19:28:52.061065",
+  "statistics": {
+    "classes": 6,
+    "interfaces": 3,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 0,
+    "total_methods": 20,
+    "total_properties": 11
+  },
+  "classes": [
+    {
+      "name": "HttpClientFactoryExtensions",
+      "namespace": "OneStream.IAM.Authentication.Client",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "AddDPoPHandler",
+          "return_type": "IServiceCollection",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "services",
+              "type": "this IServiceCollection",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Adds d po p handler",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "AddDPoPHandler",
+          "return_type": "IServiceCollection",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "services",
+              "type": "this IServiceCollection",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "configureOptions",
+              "type": "Action<DPoPHandlerHttpClientFactoryOptions>",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Adds d po p handler",
+          "generic_params": [],
+          "overloads": 2
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/IAM/Authentication/Client/HttpClientFactoryExtensions.cs"
+    },
+    {
+      "name": "UserTokenCacheItem",
+      "namespace": "OneStream.IAM.Authentication.Client",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "ResourceScope",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "ProofKey",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "IdToken",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "AccessToken",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "RefreshToken",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "Expiration",
+          "type": "DateTimeOffset",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "HttpHandler",
+          "type": "HttpMessageHandler",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/IAM/Authentication/Client/UserTokenCacheItem.cs"
+    },
+    {
+      "name": "DPoPHandlerHttpClientFactoryOptions",
+      "namespace": "OneStream.IAM.Authentication.Client",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "HttpClientFactoryOptions",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "DefaultScope",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "InnerHandler",
+          "type": "Func<DelegatingHandler>",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "ClientTimeout",
+          "type": "TimeSpan",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/IAM/Authentication/Client/DPoPHandlerHttpClientFactoryOptions.cs"
+    },
+    {
+      "name": "DPoPHandlerHttpClientFactory",
+      "namespace": "OneStream.IAM.Authentication.Client",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IAuthenticatedHttpClientFactory",
+        "IHttpClientFactory"
+      ],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "httpClientFactory",
+              "type": "IHttpClientFactory",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "messageHandlerFactory",
+              "type": "IHttpMessageHandlerFactory",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cache",
+              "type": "IUserTokenCache",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "logger",
+              "type": "ILogger<DPoPHandlerHttpClientFactory>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "options",
+              "type": "IOptions<DPoPHandlerHttpClientFactoryOptions>",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "catch",
+          "type": "",
+          "access": "public",
+          "has_getter": false,
+          "has_setter": false,
+          "is_static": false
+        }
+      ],
+      "methods": [
+        {
+          "name": "ConcurrentDictionary",
+          "return_type": "ConcurrentDictionary",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Concurrents dictionary",
+          "generic_params": [
+            "string",
+            "HttpClient"
+          ],
+          "overloads": 1
+        },
+        {
+          "name": "CreateClient",
+          "return_type": "HttpClient",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Creates client",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "ClearCache",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Clears cache",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "CreateClient",
+          "return_type": "virtual HttpClient",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "name",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates client",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "HttpClient",
+          "return_type": "HttpClient",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "httpHandler",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Https client",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "httpClientAction",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "value",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Https client action",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/IAM/Authentication/Client/DPoPHandlerHttpClientFactory.cs"
+    },
+    {
+      "name": "JsonTokenSerializer",
+      "namespace": "OneStream.IAM.Authentication.Client",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IHandlerTokenSerializer"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "Serialize",
+          "return_type": "string",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "token",
+              "type": "T",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Serializes operation",
+          "generic_params": [
+            "T"
+          ],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/IAM/Authentication/Client/JsonTokenSerializer.cs"
+    },
+    {
+      "name": "InMemoryUserTokenCache",
+      "namespace": "OneStream.IAM.Authentication.Client",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IUserTokenCache"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "ConcurrentDictionary",
+          "return_type": "ConcurrentDictionary",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Concurrents dictionary",
+          "generic_params": [
+            "string",
+            "UserTokenCacheItem"
+          ],
+          "overloads": 1
+        },
+        {
+          "name": "Get",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "resourceScope",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets operation",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "Add",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "resourceScope",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cacheItem",
+              "type": "UserTokenCacheItem",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Adds operation",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "Count",
+          "return_type": "int",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Counts operation",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "ClearCache",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Clears cache",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/IAM/Authentication/Client/InMemoryUserTokenCache.cs"
+    }
+  ],
+  "interfaces": [
+    {
+      "name": "IUserTokenCache",
+      "namespace": "OneStream.IAM.Authentication.Client",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "Add",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "resourceScope",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cacheItem",
+              "type": "UserTokenCacheItem",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Adds operation",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "Get",
+          "return_type": "UserTokenCacheItem?",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "resourceScope",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets operation",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "ClearCache",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Clears cache",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "Count",
+          "return_type": "int",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Counts operation",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/IAM/Authentication/Client/IUserTokenCache.cs",
+      "source_code": "public interface IUserTokenCache\n{\n\tvoid Add(string resourceScope, UserTokenCacheItem cacheItem);\n\n\tUserTokenCacheItem? Get(string resourceScope);\n\n\tvoid ClearCache();\n\n\tint Count();\n}"
+    },
+    {
+      "name": "IAuthenticatedHttpClientFactory",
+      "namespace": "OneStream.IAM.Authentication.Client",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IHttpClientFactory"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "ClearCache",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Clears cache",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/IAM/Authentication/Client/IAuthenticatedHttpClientFactory.cs",
+      "source_code": "public interface IAuthenticatedHttpClientFactory : IHttpClientFactory\n{\n\tvoid ClearCache();\n}"
+    },
+    {
+      "name": "IHandlerTokenSerializer",
+      "namespace": "OneStream.IAM.Authentication.Client",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "Serialize",
+          "return_type": "string",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "token",
+              "type": "T",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Serializes operation",
+          "generic_params": [
+            "T"
+          ],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/IAM/Authentication/Client/IHandlerTokenSerializer.cs",
+      "source_code": "public interface IHandlerTokenSerializer\n{\n\tstring Serialize<T>(T token);\n}"
+    }
+  ],
+  "structs": [],
+  "delegates": [],
+  "enums": []
+}

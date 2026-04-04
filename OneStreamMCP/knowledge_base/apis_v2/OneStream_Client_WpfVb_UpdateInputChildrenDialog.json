@@ -1,0 +1,47 @@
+{
+  "namespace": "OneStream.Client.WpfVb.UpdateInputChildrenDialog",
+  "generated_at": "2025-12-08T19:28:52.050894",
+  "statistics": {
+    "classes": 0,
+    "interfaces": 0,
+    "structs": 0,
+    "delegates": 1,
+    "enums": 0,
+    "total_methods": 1,
+    "total_properties": 0
+  },
+  "classes": [],
+  "interfaces": [],
+  "structs": [],
+  "delegates": [
+    {
+      "name": "OnCallbacksCompletedEventHandler",
+      "namespace": "OneStream.Client.WpfVb.UpdateInputChildrenDialog",
+      "type": "delegate",
+      "modifiers": [
+        "private"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "Invoke",
+          "return_type": "void",
+          "parameters": [],
+          "access": "private",
+          "is_static": false,
+          "is_async": false,
+          "description": "Delegate invocation method returning void"
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/WpfVb/UpdateInputChildrenDialog.cs"
+    }
+  ],
+  "enums": []
+}

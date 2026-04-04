@@ -1,0 +1,234 @@
+{% extends "base.html" %}
+{% block title %}Review Failed Questions — OneStream Study Guide{% endblock %}
+{% block content %}
+
+<nav class="breadcrumb">
+  <a href="/">Home</a> &rsaquo;
+  <a href="/exam-prep/quiz">Quiz</a> &rsaquo;
+  <span>Review Failed</span>
+</nav>
+
+<h1>Review Failed Questions</h1>
+<p>Practice the questions you got wrong across all sections. Mastering your mistakes is the fastest path to passing.</p>
+
+<div class="quiz-filters">
+  <label>Section:</label>
+  <span class="filter-chip active" data-filter="section" data-value="all" onclick="setSectionFilter('all',this)">All</span>
+  {% for s in sections %}
+  <span class="filter-chip" data-filter="section" data-value="{{ s.slug }}" onclick="setSectionFilter('{{ s.slug }}',this)">{{ s.name }}</span>
+  {% endfor %}
+</div>
+
+<div id="no-failed" style="display:none">
+  <article class="review-empty">
+    <header><strong>No failed questions!</strong></header>
+    <p>You haven't answered any questions incorrectly yet. Start practicing in the <a href="/exam-prep/quiz">Quiz</a> section first.</p>
+  </article>
+</div>
+
+<div id="review-active" style="display:none">
+  <div class="quiz-nav">
+    <span id="review-counter">Question 1 of 0</span>
+    <div class="quiz-nav-controls">
+      <button id="review-prev" onclick="reviewPrev()" disabled>&#8592; Prev</button>
+      <select id="review-select" onchange="reviewGo(parseInt(this.value))"></select>
+      <button id="review-next" onclick="reviewNext()">Next &#8594;</button>
+    </div>
+  </div>
+
+  <article id="review-card">
+    <header>
+      <small id="review-meta"></small>
+    </header>
+    <p id="review-text"></p>
+    <div id="review-options"></div>
+    <div id="review-feedback" class="feedback hidden">
+      <p id="review-result"></p>
+      <p id="review-explanation"></p>
+      <p id="review-link" class="feedback-link"></p>
+    </div>
+  </article>
+
+  <div class="section-summary">
+    <strong>Reviewed:</strong> <span id="review-answered">0</span> / <span id="review-total">0</span>
+    | <strong>Now correct:</strong> <span id="review-correct">0</span>
+    (<span id="review-pct">0</span>%)
+  </div>
+</div>
+
+<script>
+const allSections = {{ sections | tojson }};
+let failedQuestions = [];
+let reviewAnswers = {};
+let reviewCurrent = 0;
+let sectionFilter = 'all';
+
+function loadFailedQuestions() {
+  failedQuestions = [];
+  allSections.forEach(function(section) {
+    try {
+      var raw = localStorage.getItem('quiz_progress_' + section.slug);
+      if (!raw) return;
+      var data = JSON.parse(raw);
+      if (!data || !data.answered) return;
+      for (var idx in data.answered) {
+        var qIdx = parseInt(idx);
+        var q = section.questions[qIdx];
+        if (q && data.answered[idx] !== q.correct_answer) {
+          failedQuestions.push({
+            question: q,
+            sectionName: section.name,
+            sectionSlug: section.slug,
+            originalIndex: qIdx
+          });
+        }
+      }
+    } catch(e) {}
+  });
+}
+
+function getFilteredFailed() {
+  if (sectionFilter === 'all') return failedQuestions;
+  return failedQuestions.filter(function(fq) { return fq.sectionSlug === sectionFilter; });
+}
+
+function setSectionFilter(value, el) {
+  sectionFilter = value;
+  document.querySelectorAll('.filter-chip[data-filter="section"]').forEach(function(c) {
+    c.classList.toggle('active', c.dataset.value === value);
+  });
+  reviewAnswers = {};
+  reviewCurrent = 0;
+  renderReview();
+}
+
+function renderReview() {
+  var filtered = getFilteredFailed();
+  if (filtered.length === 0) {
+    document.getElementById('no-failed').style.display = 'block';
+    document.getElementById('review-active').style.display = 'none';
+    return;
+  }
+  document.getElementById('no-failed').style.display = 'none';
+  document.getElementById('review-active').style.display = 'block';
+
+  var sel = document.getElementById('review-select');
+  sel.innerHTML = '';
+  filtered.forEach(function(fq, i) {
+    var opt = document.createElement('option');
+    opt.value = i;
+    opt.textContent = 'Q' + (i+1) + ' (' + fq.sectionName + ')';
+    sel.appendChild(opt);
+  });
+  document.getElementById('review-total').textContent = filtered.length;
+  renderReviewQuestion(0);
+}
+
+function renderReviewQuestion(idx) {
+  var filtered = getFilteredFailed();
+  if (idx < 0 || idx >= filtered.length) return;
+  reviewCurrent = idx;
+  var fq = filtered[idx];
+  var q = fq.question;
+
+  document.getElementById('review-counter').textContent =
+    'Question ' + (idx+1) + ' of ' + filtered.length;
+  document.getElementById('review-meta').textContent =
+    fq.sectionName + ' | Objective: ' + q.objective + ' | ' + q.difficulty;
+  document.getElementById('review-text').textContent = q.text;
+
+  var container = document.getElementById('review-options');
+  container.innerHTML = '';
+  q.options.forEach(function(opt) {
+    var btn = document.createElement('button');
+    btn.className = 'option-btn';
+    btn.innerHTML = '<strong>' + opt.letter + ')</strong> ' + opt.text;
+    btn.onclick = function() { selectReviewAnswer(opt.letter, idx); };
+    if (reviewAnswers[idx] !== undefined) {
+      btn.disabled = true;
+      if (opt.letter === q.correct_answer) btn.classList.add('correct');
+      else if (opt.letter === reviewAnswers[idx]) btn.classList.add('incorrect');
+    }
+    container.appendChild(btn);
+  });
+
+  var feedback = document.getElementById('review-feedback');
+  if (reviewAnswers[idx] !== undefined) {
+    var isCorrect = reviewAnswers[idx] === q.correct_answer;
+    document.getElementById('review-result').innerHTML =
+      isCorrect ? '&#10003; Correct this time!' : '&#10007; Still incorrect — correct answer: <strong>' + q.correct_answer + ')</strong>';
+    document.getElementById('review-result').className =
+      isCorrect ? 'feedback-correct' : 'feedback-incorrect';
+    document.getElementById('review-explanation').textContent = q.explanation;
+    var linkEl = document.getElementById('review-link');
+    if (q.related_chapter) {
+      var rc = q.related_chapter;
+      linkEl.innerHTML = 'Read more: <a href="/exam-prep/guide/' + rc.book_slug + '/' + rc.chapter_slug + '">' + rc.title + '</a>';
+    } else { linkEl.innerHTML = ''; }
+    feedback.classList.remove('hidden');
+    requestAnimationFrame(function() { feedback.classList.add('visible'); });
+  } else {
+    feedback.classList.remove('visible');
+    feedback.classList.add('hidden');
+  }
+
+  document.getElementById('review-prev').disabled = idx === 0;
+  document.getElementById('review-next').disabled = idx === filtered.length - 1;
+  document.getElementById('review-select').value = idx;
+  updateReviewSummary();
+}
+
+function selectReviewAnswer(letter, idx) {
+  if (reviewAnswers[idx] !== undefined) return;
+  reviewAnswers[idx] = letter;
+  // Also update the original quiz progress if now correct
+  var filtered = getFilteredFailed();
+  var fq = filtered[idx];
+  if (letter === fq.question.correct_answer) {
+    try {
+      var raw = localStorage.getItem('quiz_progress_' + fq.sectionSlug);
+      if (raw) {
+        var data = JSON.parse(raw);
+        data.answered[fq.originalIndex] = letter;
+        localStorage.setItem('quiz_progress_' + fq.sectionSlug, JSON.stringify(data));
+      }
+    } catch(e) {}
+  }
+  renderReviewQuestion(idx);
+}
+
+function updateReviewSummary() {
+  var filtered = getFilteredFailed();
+  var answered = 0, correct = 0;
+  for (var i = 0; i < filtered.length; i++) {
+    if (reviewAnswers[i] !== undefined) {
+      answered++;
+      if (reviewAnswers[i] === filtered[i].question.correct_answer) correct++;
+    }
+  }
+  document.getElementById('review-answered').textContent = answered;
+  document.getElementById('review-correct').textContent = correct;
+  document.getElementById('review-pct').textContent = answered > 0 ? Math.round(correct/answered*100) : 0;
+}
+
+function reviewPrev() { if (reviewCurrent > 0) renderReviewQuestion(reviewCurrent - 1); }
+function reviewNext() { var f = getFilteredFailed(); if (reviewCurrent < f.length - 1) renderReviewQuestion(reviewCurrent + 1); }
+function reviewGo(idx) { renderReviewQuestion(idx); }
+
+document.addEventListener('keydown', function(e) {
+  if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.tagName === 'SELECT') return;
+  var filtered = getFilteredFailed();
+  switch(e.key) {
+    case 'ArrowLeft': e.preventDefault(); reviewPrev(); break;
+    case 'ArrowRight': e.preventDefault(); reviewNext(); break;
+    case 'a': case 'A': case '1': if (reviewAnswers[reviewCurrent] === undefined) selectReviewAnswer('A', reviewCurrent); break;
+    case 'b': case 'B': case '2': if (reviewAnswers[reviewCurrent] === undefined) selectReviewAnswer('B', reviewCurrent); break;
+    case 'c': case 'C': case '3': if (reviewAnswers[reviewCurrent] === undefined) selectReviewAnswer('C', reviewCurrent); break;
+    case 'd': case 'D': case '4': if (reviewAnswers[reviewCurrent] === undefined) selectReviewAnswer('D', reviewCurrent); break;
+  }
+});
+
+loadFailedQuestions();
+renderReview();
+</script>
+{% endblock %}

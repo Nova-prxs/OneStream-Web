@@ -1,0 +1,150 @@
+{
+  "type": "examples",
+  "source": "RestFast",
+  "count": 13,
+  "examples": [
+    {
+      "name": "Basic GET Request - Execute Saved Request",
+      "description": "Execute a saved request and process the response",
+      "code": "' Reference the assembly\nImports Workspace.RESTAPIFramework.RESTAPIRequestManager.Classes\n\nNamespace OneStream.BusinessRule.Finance.MyRule\n\tPublic Class MainClass\n\t\tPublic Function Main(ByVal si As SessionInfo, ByVal globals As BRGlobals, ByVal api As FinanceRulesApi, ByVal args As FinanceRulesArgs) As Object\n\t\t\tTry\n\t\t\t\t' Get the saved request\n\t\t\t\tDim utils As New Workspace.RESTAPIFramework.RESTAPIRequestManager.Utils()\n\t\t\t\tDim result As HttpResult = utils.ExecuteSavedRequest(si, \"GetCustomers\")\n\t\t\t\t\n\t\t\t\t' Check response\n\t\t\t\tIf result.StatusCode = HttpStatusCode.OK Then\n\t\t\t\t\tBRApi.ErrorLog.LogMessage(si, $\"Success: {result.Content}\")\n\t\t\t\tElse\n\t\t\t\t\tThrow New Exception($\"Request failed: {result.StatusCode} - {result.Err}\")\n\t\t\t\tEnd If\n\t\t\t\t\n\t\t\t\tReturn Nothing\n\t\t\tCatch ex As Exception\n\t\t\t\tThrow ErrorHandler.LogWrite(si, New XFException(si, ex))\n\t\t\tEnd Try\n\t\tEnd Function\n\tEnd Class\nEnd Namespace",
+      "category": "RestFast.Example",
+      "tags": [
+        "Requires reference to: Workspace.RESTAPIFramework.RESTAPIRequestManager",
+        "Request must be pre-configured in RESTFAST dashboard"
+      ]
+    },
+    {
+      "name": "GET Request with Custom Variables",
+      "description": "Override variables when executing a saved request",
+      "code": "Imports Workspace.RESTAPIFramework.RESTAPIRequestManager.Classes\n\nDim utils As New Workspace.RESTAPIFramework.RESTAPIRequestManager.Utils()\nDim request As RESTAPIRequest = utils.GetSavedRequest(si, \"GetProducts\")\n\n' Override variables\nDim customVars As New Dictionary(Of String, String) From {\n\t{\"category\", \"electronics\"},\n\t{\"limit\", \"50\"},\n\t{\"page\", \"1\"}\n}\n\n' Execute with custom variables\nDim result As HttpResult = request.Execute(customVars)\n\nIf result.StatusCode = HttpStatusCode.OK Then\n\tBRApi.ErrorLog.LogMessage(si, $\"Retrieved {result.Content.Length} bytes\")\nEnd If",
+      "category": "RestFast.Example",
+      "tags": [
+        "Variables use {{key}} pattern in endpoint/params/headers/body",
+        "Custom variables override default request variables"
+      ]
+    },
+    {
+      "name": "Get DataTable with Pagination",
+      "description": "Retrieve all data from paginated API into DataTable",
+      "code": "Imports Workspace.RESTAPIFramework.RESTAPIRequestManager.Classes\n\nDim utils As New Workspace.RESTAPIFramework.RESTAPIRequestManager.Utils()\nDim request As RESTAPIRequest = utils.GetSavedRequest(si, \"GetAllOrders\")\n\n' Get all data with pagination (limit = 3 means max 3 API calls)\nDim dt As DataTable = request.GetDataTable(limit:=3)\n\nBRApi.ErrorLog.LogMessage(si, $\"Loaded {dt.Rows.Count} rows, {dt.Columns.Count} columns\")\n\n' Process the data\nFor Each row As DataRow In dt.Rows\n\tDim orderId As String = row(\"OrderID\").ToString()\n\tDim amount As Decimal = Convert.ToDecimal(row(\"Amount\"))\n\t' ... process data\nNext",
+      "category": "RestFast.Example",
+      "tags": [
+        "Request must have dataKey configured (e.g., 'results->data')",
+        "Handles pagination via nextLinkKey or manual top/skip params",
+        "limit=0 means unlimited pagination (use with caution)",
+        "columnMappings automatically applied to DataTable"
+      ]
+    },
+    {
+      "name": "Populate Custom Table Directly",
+      "description": "Load API data directly into OneStream custom table",
+      "code": "Imports Workspace.RESTAPIFramework.RESTAPIRequestManager.Classes\n\nDim utils As New Workspace.RESTAPIFramework.RESTAPIRequestManager.Utils()\nDim request As RESTAPIRequest = utils.GetSavedRequest(si, \"GetInventory\")\n\n' Override variables if needed\nDim vars As New Dictionary(Of String, String) From {\n\t{\"warehouse\", \"WH01\"},\n\t{\"date\", DateTime.Now.ToString(\"yyyy-MM-dd\")}\n}\n\n' Populate table with data\nrequest.PopulateTable(si, vars)\n\nBRApi.ErrorLog.LogMessage(si, $\"Custom table '{request.tableToPopulate}' populated successfully\")",
+      "category": "RestFast.Example",
+      "tags": [
+        "Request must have tableToPopulate configured",
+        "Table must exist in OneStream database",
+        "columnMappings must map all target table columns",
+        "First call uses 'replace' mode, subsequent use 'merge'",
+        "Handles pagination automatically"
+      ]
+    },
+    {
+      "name": "Manual Request Configuration",
+      "description": "Create and configure a request programmatically without using saved requests",
+      "code": "Imports Workspace.RESTAPIFramework.RESTAPIRequestManager.Classes\nImports System.Net\n\n' Create new request\nDim request As New RESTAPIRequest()\n\n' Configure request\nrequest.method = \"GET\"\nrequest.endpoint = \"https://api.example.com/v1/data\"\nrequest.urlParams = New Dictionary(Of String, String) From {\n\t{\"page\", \"1\"},\n\t{\"limit\", \"100\"}\n}\nrequest.headers = New Dictionary(Of String, String) From {\n\t{\"Accept\", \"application/json\"},\n\t{\"User-Agent\", \"OneStream/1.0\"}\n}\nrequest.bodyType = \"none\"\nrequest.body = Nothing\n\n' Configure authentication\nrequest.authCredentials = New ApiKeyAuthCredentials(\"YOUR_API_KEY\", \"header\")\n\n' Configure data retrieval\nrequest.dataKey = \"results->items\"\nrequest.nextLinkKey = \"pagination->next\"\n\n' Execute\nDim result As HttpResult = request.Execute()\n\nIf result.StatusCode = HttpStatusCode.OK Then\n\tBRApi.ErrorLog.LogMessage(si, \"Request successful\")\nEnd If",
+      "category": "RestFast.Example",
+      "tags": [
+        "Useful for dynamic request creation",
+        "No need for saved request in dashboard",
+        "More verbose but offers complete control"
+      ]
+    },
+    {
+      "name": "POST Request with JSON Body",
+      "description": "Send JSON data to an API",
+      "code": "Imports Workspace.RESTAPIFramework.RESTAPIRequestManager.Classes\n\nDim utils As New Workspace.RESTAPIFramework.RESTAPIRequestManager.Utils()\n\n' Create request\nDim request As New RESTAPIRequest()\nrequest.method = \"POST\"\nrequest.endpoint = \"https://api.example.com/orders\"\nrequest.headers = New Dictionary(Of String, String) From {\n\t{\"Content-Type\", \"application/json\"},\n\t{\"Accept\", \"application/json\"}\n}\nrequest.bodyType = \"application/json\"\nrequest.body = \"{ \"\"customerId\"\": \"\"C123\"\", \"\"amount\"\": 500.00, \"\"currency\"\": \"\"USD\"\" }\"\n\n' Add Bearer token auth\nrequest.authCredentials = New BearerTokenAuthCredentials(\"your_token_here\")\n\n' Execute\nDim result As HttpResult = request.Execute()\n\nIf result.StatusCode = HttpStatusCode.Created OrElse result.StatusCode = HttpStatusCode.OK Then\n\tBRApi.ErrorLog.LogMessage(si, $\"Order created: {result.Content}\")\nElse\n\tThrow New Exception($\"Order creation failed: {result.StatusCode}\")\nEnd If",
+      "category": "RestFast.Example",
+      "tags": [
+        "body can be String (JSON) or Dictionary(Of String, String)",
+        "Use variables for dynamic values: {{customerId}}, {{amount}}, etc."
+      ]
+    },
+    {
+      "name": "OAuth 2.0 Client Credentials Flow",
+      "description": "Authenticate with OAuth 2.0 and make API requests",
+      "code": "Imports Workspace.RESTAPIFramework.RESTAPIRequestManager.Classes\n\n' Configure OAuth credentials\nDim oauth As New OAuthCredentials With {\n\t.GrantType = OAuthCredentials.GrantTypes.ClientCredentials,\n\t.ClientId = \"your_client_id\",\n\t.ClientSecret = \"your_client_secret\",\n\t.TokenUrl = \"https://auth.example.com/oauth/token\",\n\t.Scope = \"read write\"\n}\n\n' Create API request\nDim request As New RESTAPIRequest()\nrequest.method = \"GET\"\nrequest.endpoint = \"https://api.example.com/protected/data\"\nrequest.authCredentials = oauth  ' OAuth will auto-refresh token if expired\n\n' Execute request\nDim result As HttpResult = request.Execute()\n\nIf result.StatusCode = HttpStatusCode.OK Then\n\tBRApi.ErrorLog.LogMessage(si, \"Authenticated request successful\")\nEnd If",
+      "category": "RestFast.Example",
+      "tags": [
+        "OAuth credentials automatically refresh expired tokens",
+        "Access token is added as Bearer token in Authorization header",
+        "Supports multiple grant types: ClientCredentials, Password, AuthorizationCode, RefreshToken"
+      ]
+    },
+    {
+      "name": "Basic Authentication",
+      "description": "Use Basic Auth (username/password) for API requests",
+      "code": "Imports Workspace.RESTAPIFramework.RESTAPIRequestManager.Classes\n\nDim request As New RESTAPIRequest()\nrequest.method = \"GET\"\nrequest.endpoint = \"https://api.example.com/data\"\n\n' Configure Basic Auth\nrequest.authCredentials = New BasicAuthCredentials(\"username\", \"password\")\n\n' Execute\nDim result As HttpResult = request.Execute()\n\nIf result.StatusCode = HttpStatusCode.OK Then\n\tBRApi.ErrorLog.LogMessage(si, \"Authenticated successfully\")\nEnd If",
+      "category": "RestFast.Example",
+      "tags": [
+        "Credentials are Base64 encoded automatically",
+        "Added as Authorization: Basic {encoded} header"
+      ]
+    },
+    {
+      "name": "Data Management Step - Simple",
+      "description": "Configure DM Step to populate custom table from saved request",
+      "code": "",
+      "category": "RestFast.Example",
+      "tags": [
+        "Request must be pre-configured in RESTFAST dashboard",
+        "Request must have tableToPopulate and columnMappings set",
+        "No coding required"
+      ]
+    },
+    {
+      "name": "Data Management Step - With Variables",
+      "description": "Configure DM Step with custom variable overrides",
+      "code": "",
+      "category": "RestFast.Example",
+      "tags": [
+        "Variables format: [key1]=[value1],[key2]=[value2]",
+        "Variables override default values in saved request",
+        "Use for dynamic filtering based on POV or workflow"
+      ]
+    },
+    {
+      "name": "Processing API Response in Business Rule",
+      "description": "Parse JSON response and process data programmatically",
+      "code": "Imports Workspace.RESTAPIFramework.RESTAPIRequestManager.Classes\nImports Newtonsoft.Json.Linq\n\nDim utils As New Workspace.RESTAPIFramework.RESTAPIRequestManager.Utils()\nDim result As HttpResult = utils.ExecuteSavedRequest(si, \"GetExchangeRates\")\n\nIf result.StatusCode = HttpStatusCode.OK Then\n\t' Parse JSON response\n\tDim jsonData As JObject = JObject.Parse(result.Content)\n\t\n\t' Extract specific values\n\tDim rates As JObject = jsonData(\"rates\")\n\tDim eurRate As Decimal = rates(\"EUR\").Value(Of Decimal)()\n\tDim gbpRate As Decimal = rates(\"GBP\").Value(Of Decimal)()\n\t\n\tBRApi.ErrorLog.LogMessage(si, $\"EUR Rate: {eurRate}, GBP Rate: {gbpRate}\")\n\t\n\t' Use rates in calculations\n\tDim amount As Decimal = 1000\n\tDim convertedAmount As Decimal = amount * eurRate\n\t\n\t' Write to data buffer, etc.\nEnd If",
+      "category": "RestFast.Example",
+      "tags": [
+        "Newtonsoft.Json.Linq available in OneStream",
+        "Use JObject for JSON parsing",
+        "Useful when you need custom processing beyond DataTable"
+      ]
+    },
+    {
+      "name": "Error Handling and Retry Logic",
+      "description": "Handle API errors and implement retry logic",
+      "code": "Imports Workspace.RESTAPIFramework.RESTAPIRequestManager.Classes\n\nDim maxRetries As Integer = 3\nDim retryCount As Integer = 0\nDim success As Boolean = False\nDim result As HttpResult = Nothing\n\nDim utils As New Workspace.RESTAPIFramework.RESTAPIRequestManager.Utils()\n\nWhile retryCount < maxRetries AndAlso Not success\n\tTry\n\t\tresult = utils.ExecuteSavedRequest(si, \"GetData\")\n\t\t\n\t\tIf result.StatusCode = HttpStatusCode.OK Then\n\t\t\tsuccess = True\n\t\t\tBRApi.ErrorLog.LogMessage(si, \"Request successful\")\n\t\tElseIf result.StatusCode = HttpStatusCode.TooManyRequests Then\n\t\t\t' Rate limited - wait and retry\n\t\t\tSystem.Threading.Thread.Sleep(5000) ' Wait 5 seconds\n\t\t\tretryCount += 1\n\t\t\tBRApi.ErrorLog.LogMessage(si, $\"Rate limited. Retry {retryCount}/{maxRetries}\")\n\t\tElse\n\t\t\tThrow New Exception($\"Request failed: {result.StatusCode} - {result.Err}\")\n\t\tEnd If\n\tCatch ex As Exception\n\t\tretryCount += 1\n\t\tIf retryCount >= maxRetries Then\n\t\t\tThrow ErrorHandler.LogWrite(si, New XFException(si, ex))\n\t\tEnd If\n\t\tSystem.Threading.Thread.Sleep(2000)\n\tEnd Try\nEnd While",
+      "category": "RestFast.Example",
+      "tags": [
+        "Handle common HTTP status codes: 429 (Too Many Requests), 500 (Server Error)",
+        "Implement exponential backoff for production use",
+        "Log all retry attempts for debugging"
+      ]
+    },
+    {
+      "name": "Merge API Data into Dimension Table",
+      "description": "Use custom table as staging, then merge into dimension",
+      "code": "Imports Workspace.RESTAPIFramework.RESTAPIRequestManager.Classes\n\n' Step 1: Populate staging custom table\nDim utils As New Workspace.RESTAPIFramework.RESTAPIRequestManager.Utils()\nDim request As RESTAPIRequest = utils.GetSavedRequest(si, \"GetCustomers\")\nrequest.PopulateTable(si)\n\nBRApi.ErrorLog.LogMessage(si, \"Staging table populated\")\n\n' Step 2: Read from staging table\nDim sql As String = \"SELECT CustomerID, CustomerName, Region FROM CustomTable_Customers\"\nDim dt As DataTable = BRApi.Database.SQLSelect(si, sql)\n\nBRApi.ErrorLog.LogMessage(si, $\"Retrieved {dt.Rows.Count} customers from staging\")\n\n' Step 3: Process and load into dimension\nFor Each row As DataRow In dt.Rows\n\tDim customerId As String = row(\"CustomerID\").ToString()\n\tDim customerName As String = row(\"CustomerName\").ToString()\n\tDim region As String = row(\"Region\").ToString()\n\t\n\t' Create/update dimension member\n\t' ... your dimension loading logic here ...\nNext\n\nBRApi.ErrorLog.LogMessage(si, \"Dimension updated successfully\")",
+      "category": "RestFast.Example",
+      "tags": [
+        "Custom table acts as staging area",
+        "Allows data transformation before loading",
+        "Can validate data before dimension update",
+        "Use in Data Management workflow"
+      ]
+    }
+  ]
+}

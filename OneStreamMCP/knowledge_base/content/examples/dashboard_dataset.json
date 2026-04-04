@@ -1,0 +1,178 @@
+[
+  {
+    "file": "Business rules/data_adater_solution_helper.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName.BusinessRule.DashboardDataSet.data_adapter_solution_helper",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "Object"
+      },
+      {
+        "name": "args",
+        "type": "DashboardDataSetArgs"
+      }
+    ],
+    "return_type": "Object"
+  },
+  {
+    "file": "Business rules/cubeViewGraphs.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName.BusinessRule.DashboardDataSet.CubeViewGraphs",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "Object"
+      },
+      {
+        "name": "args",
+        "type": "DashboardDataSetArgs"
+      }
+    ],
+    "return_type": "Object"
+  },
+  {
+    "file": "Business rules/dataAdapterGraphs.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName.BusinessRule.DashboardDataSet.DataAdapterGraphs",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "Object"
+      },
+      {
+        "name": "args",
+        "type": "DashboardDataSetArgs"
+      }
+    ],
+    "return_type": "Object"
+  },
+  {
+    "file": "Investments/dashboard/solution helpers/data_adapter_solution_helper.vb",
+    "namespace": "Workspace.__WsNamespacePrefix.__WsAssemblyName.BusinessRule.DashboardDataSet.data_adapter_solution_helper",
+    "class": "MainClass",
+    "implements": null,
+    "imports": [
+      "OneStream.Shared.Engine",
+      "System.Globalization",
+      "System.IO",
+      "OneStream.Shared.Common",
+      "OneStream.Stage.Engine",
+      "System",
+      "OneStream.Stage.Database",
+      "OneStream.Finance.Database",
+      "OneStream.Shared.Database",
+      "OneStream.Shared.Wcf",
+      "Microsoft.VisualBasic",
+      "System.Linq",
+      "OneStream.Finance.Engine",
+      "System.Collections.Generic",
+      "System.Data.Common",
+      "System.Data"
+    ],
+    "main_function": "Main",
+    "parameters": [
+      {
+        "name": "si",
+        "type": "SessionInfo"
+      },
+      {
+        "name": "globals",
+        "type": "BRGlobals"
+      },
+      {
+        "name": "api",
+        "type": "Object"
+      },
+      {
+        "name": "args",
+        "type": "DashboardDataSetArgs"
+      }
+    ],
+    "return_type": "Object"
+  }
+]

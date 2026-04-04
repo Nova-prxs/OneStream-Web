@@ -1,0 +1,103 @@
+{
+  "namespace": "OneStream.Web.Shared.ClientAuthenticationService",
+  "generated_at": "2025-12-08T19:28:52.427036",
+  "statistics": {
+    "classes": 1,
+    "interfaces": 0,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 0,
+    "total_methods": 0,
+    "total_properties": 8
+  },
+  "classes": [
+    {
+      "name": "AuthNZInfo",
+      "namespace": "OneStream.Web.Shared.ClientAuthenticationService",
+      "type": "class",
+      "modifiers": [
+        "private"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "SessionInfo",
+          "type": "SessionInfo",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "CanChangePassword",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "InAdministratorsGroup",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "AccessToSystemRoles",
+          "type": "Dictionary<RoleTypeId, bool>",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "UserPreferences",
+          "type": "UserPreferences",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "Result",
+          "type": "AuthenticationResult",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "ServerErrorMessage",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "ServerErrorDetailedMessage",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Web/Shared/ClientAuthenticationService.cs",
+      "source_code": "private class AuthNZInfo\n\t{\n\t\tpublic SessionInfo? SessionInfo { get; set; }\n\n\t\tpublic bool CanChangePassword { get; set; }\n\n\t\tpublic bool InAdministratorsGroup { get; set; }\n\n\t\tpublic Dictionary<RoleTypeId, bool>? AccessToSystemRoles { get; set; }\n\n\t\tpublic UserPreferences? UserPreferences { get; set; }\n\n\t\tpublic AuthenticationResult Result { get; set; } = AuthenticationResult.UnknownError;\n\n\t\tpublic string ServerErrorMessage { get; set; } = string.Empty;\n\n\t\tpublic string ServerErrorDetailedMessage { get; set; } = string.Empty;\n\t}"
+    }
+  ],
+  "interfaces": [],
+  "structs": [],
+  "delegates": [],
+  "enums": []
+}

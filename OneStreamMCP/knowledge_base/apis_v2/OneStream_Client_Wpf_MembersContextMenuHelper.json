@@ -1,0 +1,55 @@
+{
+  "namespace": "OneStream.Client.Wpf.MembersContextMenuHelper",
+  "generated_at": "2025-12-08T19:28:51.956596",
+  "statistics": {
+    "classes": 1,
+    "interfaces": 0,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 0,
+    "total_methods": 0,
+    "total_properties": 0
+  },
+  "classes": [
+    {
+      "name": "MemberAndParentId",
+      "namespace": "OneStream.Client.Wpf.MembersContextMenuHelper",
+      "type": "class",
+      "modifiers": [
+        "private"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "member",
+              "type": "Member",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "parentId",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Wpf/MembersContextMenuHelper.cs"
+    }
+  ],
+  "interfaces": [],
+  "structs": [],
+  "delegates": [],
+  "enums": []
+}

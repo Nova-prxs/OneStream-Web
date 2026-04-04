@@ -1,0 +1,47 @@
+{
+  "namespace": "Global",
+  "generated_at": "2025-12-08T19:28:51.062704",
+  "statistics": {
+    "classes": 1,
+    "interfaces": 0,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 0,
+    "total_methods": 0,
+    "total_properties": 0
+  },
+  "classes": [
+    {
+      "name": "MySettings",
+      "namespace": "",
+      "type": "class",
+      "modifiers": [
+        "internal",
+        "sealed"
+      ],
+      "base_class": "ApplicationSettingsBase",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": []
+        }
+      ],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [
+        "CompilerGenerated",
+        "GeneratedCode",
+        "EditorBrowsable"
+      ],
+      "source_file": "output/types/_Global/MySettings.cs"
+    }
+  ],
+  "interfaces": [],
+  "structs": [],
+  "delegates": [],
+  "enums": []
+}

@@ -1,0 +1,4005 @@
+{
+  "namespace": "OneStream.Client.Api.XbrlAjaxServiceReference",
+  "generated_at": "2025-12-08T19:28:51.388288",
+  "statistics": {
+    "classes": 4,
+    "interfaces": 1,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 0,
+    "total_methods": 115,
+    "total_properties": 0
+  },
+  "classes": [
+    {
+      "name": "EnumChildXbrlTreeItemsCompletedEventArgs",
+      "namespace": "OneStream.Client.Api.XbrlAjaxServiceReference",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "AsyncCompletedEventArgs",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "results",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "exception",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cancelled",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [
+        {
+          "name": "RaiseExceptionIfNecessary",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Raises exception if necessary",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Api/XbrlAjaxServiceReference/EnumChildXbrlTreeItemsCompletedEventArgs.cs",
+      "source_code": "public class EnumChildXbrlTreeItemsCompletedEventArgs : AsyncCompletedEventArgs\n{\n\tprivate object[] results;\n\n\tpublic ObservableCollection<AjaxXbrlTreeItem> Result\n\t{\n\t\tget\n\t\t{\n\t\t\tRaiseExceptionIfNecessary();\n\t\t\treturn (ObservableCollection<AjaxXbrlTreeItem>)results[0];\n\t\t}\n\t}\n\n\tpublic EnumChildXbrlTreeItemsCompletedEventArgs(object[] results, Exception exception, bool cancelled, object userState)\n\t\t: base(exception, cancelled, userState)\n\t{\n\t\tthis.results = results;\n\t}\n}"
+    },
+    {
+      "name": "GetXbrlItemCompletedEventArgs",
+      "namespace": "OneStream.Client.Api.XbrlAjaxServiceReference",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "AsyncCompletedEventArgs",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "results",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "exception",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cancelled",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [
+        {
+          "name": "RaiseExceptionIfNecessary",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Raises exception if necessary",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Api/XbrlAjaxServiceReference/GetXbrlItemCompletedEventArgs.cs",
+      "source_code": "public class GetXbrlItemCompletedEventArgs : AsyncCompletedEventArgs\n{\n\tprivate object[] results;\n\n\tpublic AjaxXbrlItem Result\n\t{\n\t\tget\n\t\t{\n\t\t\tRaiseExceptionIfNecessary();\n\t\t\treturn (AjaxXbrlItem)results[0];\n\t\t}\n\t}\n\n\tpublic GetXbrlItemCompletedEventArgs(object[] results, Exception exception, bool cancelled, object userState)\n\t\t: base(exception, cancelled, userState)\n\t{\n\t\tthis.results = results;\n\t}\n}"
+    },
+    {
+      "name": "GetXbrlTaxonomiesHierarchyCompletedEventArgs",
+      "namespace": "OneStream.Client.Api.XbrlAjaxServiceReference",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "AsyncCompletedEventArgs",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "results",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "exception",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cancelled",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [
+        {
+          "name": "RaiseExceptionIfNecessary",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Raises exception if necessary",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Api/XbrlAjaxServiceReference/GetXbrlTaxonomiesHierarchyCompletedEventArgs.cs",
+      "source_code": "public class GetXbrlTaxonomiesHierarchyCompletedEventArgs : AsyncCompletedEventArgs\n{\n\tprivate object[] results;\n\n\tpublic AjaxFileAndFolderHierarchy Result\n\t{\n\t\tget\n\t\t{\n\t\t\tRaiseExceptionIfNecessary();\n\t\t\treturn (AjaxFileAndFolderHierarchy)results[0];\n\t\t}\n\t}\n\n\tpublic GetXbrlTaxonomiesHierarchyCompletedEventArgs(object[] results, Exception exception, bool cancelled, object userState)\n\t\t: base(exception, cancelled, userState)\n\t{\n\t\tthis.results = results;\n\t}\n}"
+    },
+    {
+      "name": "XbrlAjaxServiceClient",
+      "namespace": "OneStream.Client.Api.XbrlAjaxServiceReference",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": "ClientBase<IXbrlAjaxServiceClient>",
+      "interfaces": [
+        "IXbrlAjaxServiceClient",
+        "IDisposable",
+        "IApiClient"
+      ],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "httpClientFactory",
+              "type": "IAuthenticatedHttpClientFactory",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "baseServerUri",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [
+        {
+          "name": "LoadXbrlTaxonomyZipFile",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "fileName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "bytes",
+              "type": "byte[]",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Loads xbrl taxonomy zip file",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "SessionInfo",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Sessions info",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "PostAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "\"LoadXbrlTaxonomyZipFile\"",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "requestDto",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Posts async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "ex",
+              "type": "AggregateException",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "BeginLoadXbrlTaxonomyZipFile",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "fileName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "bytes",
+              "type": "byte[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins load xbrl taxonomy zip file",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "LoadXbrlTaxonomyZipFile",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "fileName",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "bytes",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Loads xbrl taxonomy zip file",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "OnEndResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 8
+        },
+        {
+          "name": "AsyncOperationContinuation",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "result",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "asyncState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Asyncs operation continuation",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "EndLoadXbrlTaxonomyZipFile",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends load xbrl taxonomy zip file",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnBeginLoadXbrlTaxonomyZipFile",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "inValues",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            }
+          ],
+          "description": "Ons begin load xbrl taxonomy zip file",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnEndLoadXbrlTaxonomyZipFile",
+          "return_type": "object[]",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end load xbrl taxonomy zip file",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EndLoadXbrlTaxonomyZipFile",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "result",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends load xbrl taxonomy zip file",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnLoadXbrlTaxonomyZipFileCompleted",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "state",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons load xbrl taxonomy zip file completed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "AsyncCompletedEventArgs",
+          "return_type": "this, new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "e.Error",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Cancelled",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.UserState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Asyncs completed event args",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "LoadXbrlTaxonomyZipFileAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "fileName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "bytes",
+              "type": "byte[]",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Loads xbrl taxonomy zip file async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "LoadXbrlTaxonomyZipFileAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "fileName",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "bytes",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Loads xbrl taxonomy zip file async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "LoadXbrlTaxonomyZipFileAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "fileName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "bytes",
+              "type": "byte[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Loads xbrl taxonomy zip file async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "InvokeAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "onBeginLoadXbrlTaxonomyZipFileDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "si",
+              "type": "new object[3] {",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "fileName",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "}",
+              "type": "bytes",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onEndLoadXbrlTaxonomyZipFileDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onLoadXbrlTaxonomyZipFileCompletedDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "userState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Invokes async",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "CreateXbrlTaxonomyEntryPoint",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "xfEntryPointFolderFullName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "xfEntryPointFileName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "taxonomyZipFileName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "taxonomyXsdFileName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates xbrl taxonomy entry point",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "SessionInfo",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Sessions info",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "PostAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "\"CreateXbrlTaxonomyEntryPoint\"",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "requestDto",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Posts async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "ex",
+              "type": "AggregateException",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "BeginCreateXbrlTaxonomyEntryPoint",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "xfEntryPointFolderFullName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "xfEntryPointFileName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "taxonomyZipFileName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "taxonomyXsdFileName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins create xbrl taxonomy entry point",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "CreateXbrlTaxonomyEntryPoint",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "xfEntryPointFolderFullName",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "xfEntryPointFileName",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "taxonomyZipFileName",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "taxonomyXsdFileName",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates xbrl taxonomy entry point",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "OnEndResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 8
+        },
+        {
+          "name": "AsyncOperationContinuation",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "result",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "asyncState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Asyncs operation continuation",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "EndCreateXbrlTaxonomyEntryPoint",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends create xbrl taxonomy entry point",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnBeginCreateXbrlTaxonomyEntryPoint",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "inValues",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            }
+          ],
+          "description": "Ons begin create xbrl taxonomy entry point",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnEndCreateXbrlTaxonomyEntryPoint",
+          "return_type": "object[]",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end create xbrl taxonomy entry point",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EndCreateXbrlTaxonomyEntryPoint",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "result",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends create xbrl taxonomy entry point",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnCreateXbrlTaxonomyEntryPointCompleted",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "state",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons create xbrl taxonomy entry point completed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "AsyncCompletedEventArgs",
+          "return_type": "this, new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "e.Error",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Cancelled",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.UserState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Asyncs completed event args",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "CreateXbrlTaxonomyEntryPointAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "xfEntryPointFolderFullName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "xfEntryPointFileName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "taxonomyZipFileName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "taxonomyXsdFileName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates xbrl taxonomy entry point async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "CreateXbrlTaxonomyEntryPointAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "xfEntryPointFolderFullName",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "xfEntryPointFileName",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "taxonomyZipFileName",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "taxonomyXsdFileName",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates xbrl taxonomy entry point async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "CreateXbrlTaxonomyEntryPointAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "xfEntryPointFolderFullName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "xfEntryPointFileName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "taxonomyZipFileName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "taxonomyXsdFileName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates xbrl taxonomy entry point async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "InvokeAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "onBeginCreateXbrlTaxonomyEntryPointDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "si",
+              "type": "new object[5] {",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "xfEntryPointFolderFullName",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "xfEntryPointFileName",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "taxonomyZipFileName",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "}",
+              "type": "taxonomyXsdFileName",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onEndCreateXbrlTaxonomyEntryPointDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onCreateXbrlTaxonomyEntryPointCompletedDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "userState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Invokes async",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "GetXbrlTaxonomiesHierarchy",
+          "return_type": "AjaxFileAndFolderHierarchy",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets xbrl taxonomies hierarchy",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "SessionInfo",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Sessions info",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "ex",
+              "type": "AggregateException",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "BeginGetXbrlTaxonomiesHierarchy",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins get xbrl taxonomies hierarchy",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetXbrlTaxonomiesHierarchy",
+          "return_type": ">",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets xbrl taxonomies hierarchy",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "antecedent.Result",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 8
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "OnEndResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 8
+        },
+        {
+          "name": "AsyncOperationContinuation",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "result",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "asyncState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Asyncs operation continuation",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "EndGetXbrlTaxonomiesHierarchy",
+          "return_type": "AjaxFileAndFolderHierarchy",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends get xbrl taxonomies hierarchy",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnBeginGetXbrlTaxonomiesHierarchy",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "inValues",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            }
+          ],
+          "description": "Ons begin get xbrl taxonomies hierarchy",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnEndGetXbrlTaxonomiesHierarchy",
+          "return_type": "object[]",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end get xbrl taxonomies hierarchy",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnGetXbrlTaxonomiesHierarchyCompleted",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "state",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons get xbrl taxonomies hierarchy completed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetXbrlTaxonomiesHierarchyCompletedEventArgs",
+          "return_type": "this, new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "e.Results",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Error",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Cancelled",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.UserState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets xbrl taxonomies hierarchy completed event args",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetXbrlTaxonomiesHierarchyAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets xbrl taxonomies hierarchy async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "GetXbrlTaxonomiesHierarchyAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets xbrl taxonomies hierarchy async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "GetXbrlTaxonomiesHierarchyAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets xbrl taxonomies hierarchy async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "InvokeAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "onBeginGetXbrlTaxonomiesHierarchyDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "}",
+              "type": "new object[1] { si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onEndGetXbrlTaxonomiesHierarchyDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onGetXbrlTaxonomiesHierarchyCompletedDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "userState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Invokes async",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "EnumChildXbrlTreeItems",
+          "return_type": "ObservableCollection<AjaxXbrlTreeItem>",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "taxonomyInfoFileName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "ajaxLinkTypeFilter",
+              "type": "AjaxXbrlLinkType",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "displayAllRoleTypes",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "ajaxParentTreeItem",
+              "type": "AjaxXbrlTreeItem",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Enums child xbrl tree items",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "SessionInfo",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Sessions info",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "ex",
+              "type": "AggregateException",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "BeginEnumChildXbrlTreeItems",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "taxonomyInfoFileName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "ajaxLinkTypeFilter",
+              "type": "AjaxXbrlLinkType",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "displayAllRoleTypes",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "ajaxParentTreeItem",
+              "type": "AjaxXbrlTreeItem",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins enum child xbrl tree items",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EnumChildXbrlTreeItems",
+          "return_type": ">",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "taxonomyInfoFileName",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "ajaxLinkTypeFilter",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "displayAllRoleTypes",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "ajaxParentTreeItem",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Enums child xbrl tree items",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "antecedent.Result",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 8
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "OnEndResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 8
+        },
+        {
+          "name": "AsyncOperationContinuation",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "result",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "asyncState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Asyncs operation continuation",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "EndEnumChildXbrlTreeItems",
+          "return_type": "ObservableCollection<AjaxXbrlTreeItem>",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends enum child xbrl tree items",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnBeginEnumChildXbrlTreeItems",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "inValues",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            }
+          ],
+          "description": "Ons begin enum child xbrl tree items",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnEndEnumChildXbrlTreeItems",
+          "return_type": "object[]",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end enum child xbrl tree items",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnEnumChildXbrlTreeItemsCompleted",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "state",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons enum child xbrl tree items completed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EnumChildXbrlTreeItemsCompletedEventArgs",
+          "return_type": "this, new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "e.Results",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Error",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Cancelled",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.UserState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Enums child xbrl tree items completed event args",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EnumChildXbrlTreeItemsAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "taxonomyInfoFileName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "ajaxLinkTypeFilter",
+              "type": "AjaxXbrlLinkType",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "displayAllRoleTypes",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "ajaxParentTreeItem",
+              "type": "AjaxXbrlTreeItem",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Enums child xbrl tree items async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "EnumChildXbrlTreeItemsAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "taxonomyInfoFileName",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "ajaxLinkTypeFilter",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "displayAllRoleTypes",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "ajaxParentTreeItem",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Enums child xbrl tree items async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "EnumChildXbrlTreeItemsAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "taxonomyInfoFileName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "ajaxLinkTypeFilter",
+              "type": "AjaxXbrlLinkType",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "displayAllRoleTypes",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "ajaxParentTreeItem",
+              "type": "AjaxXbrlTreeItem",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Enums child xbrl tree items async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "InvokeAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "onBeginEnumChildXbrlTreeItemsDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "si",
+              "type": "new object[5] {",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "taxonomyInfoFileName",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "ajaxLinkTypeFilter",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "displayAllRoleTypes",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "}",
+              "type": "ajaxParentTreeItem",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onEndEnumChildXbrlTreeItemsDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onEnumChildXbrlTreeItemsCompletedDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "userState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Invokes async",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "GetXbrlItem",
+          "return_type": "AjaxXbrlItem",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "taxonomyInfoFileName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "ajaxXbrlTreeItem",
+              "type": "AjaxXbrlTreeItem",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets xbrl item",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "SessionInfo",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Sessions info",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "ex",
+              "type": "AggregateException",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "BeginGetXbrlItem",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "taxonomyInfoFileName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "ajaxXbrlTreeItem",
+              "type": "AjaxXbrlTreeItem",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins get xbrl item",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetXbrlItem",
+          "return_type": ">",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "taxonomyInfoFileName",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "ajaxXbrlTreeItem",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets xbrl item",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "antecedent.Result",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 8
+        },
+        {
+          "name": "OnEndResult",
+          "return_type": "OnEndResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "antecedent",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end result",
+          "generic_params": [],
+          "overloads": 8
+        },
+        {
+          "name": "AsyncOperationContinuation",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "result",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "asyncState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Asyncs operation continuation",
+          "generic_params": [],
+          "overloads": 5
+        },
+        {
+          "name": "EndGetXbrlItem",
+          "return_type": "AjaxXbrlItem",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends get xbrl item",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnBeginGetXbrlItem",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "inValues",
+              "type": "object[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            }
+          ],
+          "description": "Ons begin get xbrl item",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnEndGetXbrlItem",
+          "return_type": "object[]",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons end get xbrl item",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "OnGetXbrlItemCompleted",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "state",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ons get xbrl item completed",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetXbrlItemCompletedEventArgs",
+          "return_type": "this, new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "e.Results",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Error",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.Cancelled",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "e.UserState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets xbrl item completed event args",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetXbrlItemAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "taxonomyInfoFileName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "ajaxXbrlTreeItem",
+              "type": "AjaxXbrlTreeItem",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets xbrl item async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "GetXbrlItemAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "taxonomyInfoFileName",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "ajaxXbrlTreeItem",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets xbrl item async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "GetXbrlItemAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "taxonomyInfoFileName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "ajaxXbrlTreeItem",
+              "type": "AjaxXbrlTreeItem",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets xbrl item async",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "InvokeAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "onBeginGetXbrlItemDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "si",
+              "type": "new object[3] {",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "taxonomyInfoFileName",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "}",
+              "type": "ajaxXbrlTreeItem",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onEndGetXbrlItemDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "onGetXbrlItemCompletedDelegate",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "userState",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Invokes async",
+          "generic_params": [],
+          "overloads": 5
+        }
+      ],
+      "events": [
+        {
+          "name": "LoadXbrlTaxonomyZipFileCompleted",
+          "type": "EventHandler<AsyncCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "CreateXbrlTaxonomyEntryPointCompleted",
+          "type": "EventHandler<AsyncCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "GetXbrlTaxonomiesHierarchyCompleted",
+          "type": "EventHandler<GetXbrlTaxonomiesHierarchyCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "EnumChildXbrlTreeItemsCompleted",
+          "type": "EventHandler<EnumChildXbrlTreeItemsCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "GetXbrlItemCompleted",
+          "type": "EventHandler<GetXbrlItemCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        }
+      ],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Api/XbrlAjaxServiceReference/XbrlAjaxServiceClient.cs"
+    }
+  ],
+  "interfaces": [
+    {
+      "name": "IXbrlAjaxServiceClient",
+      "namespace": "OneStream.Client.Api.XbrlAjaxServiceReference",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IDisposable",
+        "IApiClient"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "LoadXbrlTaxonomyZipFile",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "fileName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "bytes",
+              "type": "byte[]",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Loads xbrl taxonomy zip file",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "BeginLoadXbrlTaxonomyZipFile",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "fileName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "bytes",
+              "type": "byte[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins load xbrl taxonomy zip file",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EndLoadXbrlTaxonomyZipFile",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends load xbrl taxonomy zip file",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "LoadXbrlTaxonomyZipFileAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "fileName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "bytes",
+              "type": "byte[]",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Loads xbrl taxonomy zip file async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "LoadXbrlTaxonomyZipFileAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "fileName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "bytes",
+              "type": "byte[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Loads xbrl taxonomy zip file async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "CreateXbrlTaxonomyEntryPoint",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "xfEntryPointFolderFullName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "xfEntryPointFileName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "taxonomyZipFileName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "taxonomyXsdFileName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates xbrl taxonomy entry point",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "BeginCreateXbrlTaxonomyEntryPoint",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "xfEntryPointFolderFullName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "xfEntryPointFileName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "taxonomyZipFileName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "taxonomyXsdFileName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins create xbrl taxonomy entry point",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EndCreateXbrlTaxonomyEntryPoint",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends create xbrl taxonomy entry point",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "CreateXbrlTaxonomyEntryPointAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "xfEntryPointFolderFullName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "xfEntryPointFileName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "taxonomyZipFileName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "taxonomyXsdFileName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates xbrl taxonomy entry point async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "CreateXbrlTaxonomyEntryPointAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "xfEntryPointFolderFullName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "xfEntryPointFileName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "taxonomyZipFileName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "taxonomyXsdFileName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates xbrl taxonomy entry point async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "GetXbrlTaxonomiesHierarchy",
+          "return_type": "AjaxFileAndFolderHierarchy",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets xbrl taxonomies hierarchy",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "BeginGetXbrlTaxonomiesHierarchy",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins get xbrl taxonomies hierarchy",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EndGetXbrlTaxonomiesHierarchy",
+          "return_type": "AjaxFileAndFolderHierarchy",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends get xbrl taxonomies hierarchy",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetXbrlTaxonomiesHierarchyAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets xbrl taxonomies hierarchy async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "GetXbrlTaxonomiesHierarchyAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets xbrl taxonomies hierarchy async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "EnumChildXbrlTreeItems",
+          "return_type": "ObservableCollection<AjaxXbrlTreeItem>",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "taxonomyInfoFileName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "ajaxLinkTypeFilter",
+              "type": "AjaxXbrlLinkType",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "displayAllRoleTypes",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "ajaxParentTreeItem",
+              "type": "AjaxXbrlTreeItem",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Enums child xbrl tree items",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "BeginEnumChildXbrlTreeItems",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "taxonomyInfoFileName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "ajaxLinkTypeFilter",
+              "type": "AjaxXbrlLinkType",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "displayAllRoleTypes",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "ajaxParentTreeItem",
+              "type": "AjaxXbrlTreeItem",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins enum child xbrl tree items",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EndEnumChildXbrlTreeItems",
+          "return_type": "ObservableCollection<AjaxXbrlTreeItem>",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends enum child xbrl tree items",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EnumChildXbrlTreeItemsAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "taxonomyInfoFileName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "ajaxLinkTypeFilter",
+              "type": "AjaxXbrlLinkType",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "displayAllRoleTypes",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "ajaxParentTreeItem",
+              "type": "AjaxXbrlTreeItem",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Enums child xbrl tree items async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "EnumChildXbrlTreeItemsAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "taxonomyInfoFileName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "ajaxLinkTypeFilter",
+              "type": "AjaxXbrlLinkType",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "displayAllRoleTypes",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "ajaxParentTreeItem",
+              "type": "AjaxXbrlTreeItem",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Enums child xbrl tree items async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "GetXbrlItem",
+          "return_type": "AjaxXbrlItem",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "taxonomyInfoFileName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "ajaxXbrlTreeItem",
+              "type": "AjaxXbrlTreeItem",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets xbrl item",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "BeginGetXbrlItem",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "taxonomyInfoFileName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "ajaxXbrlTreeItem",
+              "type": "AjaxXbrlTreeItem",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "asyncState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Begins get xbrl item",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "EndGetXbrlItem",
+          "return_type": "AjaxXbrlItem",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "result",
+              "type": "OnEndResult",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Ends get xbrl item",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "GetXbrlItemAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "taxonomyInfoFileName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "ajaxXbrlTreeItem",
+              "type": "AjaxXbrlTreeItem",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets xbrl item async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "GetXbrlItemAsync",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "taxonomyInfoFileName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "ajaxXbrlTreeItem",
+              "type": "AjaxXbrlTreeItem",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "userState",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets xbrl item async",
+          "generic_params": [],
+          "overloads": 2
+        }
+      ],
+      "events": [
+        {
+          "name": "LoadXbrlTaxonomyZipFileCompleted",
+          "type": "EventHandler<AsyncCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "CreateXbrlTaxonomyEntryPointCompleted",
+          "type": "EventHandler<AsyncCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "GetXbrlTaxonomiesHierarchyCompleted",
+          "type": "EventHandler<GetXbrlTaxonomiesHierarchyCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "EnumChildXbrlTreeItemsCompleted",
+          "type": "EventHandler<EnumChildXbrlTreeItemsCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "GetXbrlItemCompleted",
+          "type": "EventHandler<GetXbrlItemCompletedEventArgs>",
+          "access": "public",
+          "is_static": false
+        }
+      ],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/Api/XbrlAjaxServiceReference/IXbrlAjaxServiceClient.cs",
+      "source_code": "public interface IXbrlAjaxServiceClient : IDisposable, IApiClient\n{\n\tevent EventHandler<AsyncCompletedEventArgs> LoadXbrlTaxonomyZipFileCompleted;\n\n\tevent EventHandler<AsyncCompletedEventArgs> CreateXbrlTaxonomyEntryPointCompleted;\n\n\tevent EventHandler<GetXbrlTaxonomiesHierarchyCompletedEventArgs> GetXbrlTaxonomiesHierarchyCompleted;\n\n\tevent EventHandler<EnumChildXbrlTreeItemsCompletedEventArgs> EnumChildXbrlTreeItemsCompleted;\n\n\tevent EventHandler<GetXbrlItemCompletedEventArgs> GetXbrlItemCompleted;\n\n\tvoid LoadXbrlTaxonomyZipFile(SessionInfo si, string fileName, byte[] bytes);\n\n\tTask BeginLoadXbrlTaxonomyZipFile(SessionInfo si, string fileName, byte[] bytes, object callback, object asyncState);\n\n\tvoid EndLoadXbrlTaxonomyZipFile(OnEndResult result);\n\n\tvoid LoadXbrlTaxonomyZipFileAsync(SessionInfo si, string fileName, byte[] bytes);\n\n\tvoid LoadXbrlTaxonomyZipFileAsync(SessionInfo si, string fileName, byte[] bytes, object userState);\n\n\tvoid CreateXbrlTaxonomyEntryPoint(SessionInfo si, string xfEntryPointFolderFullName, string xfEntryPointFileName, string taxonomyZipFileName, string taxonomyXsdFileName);\n\n\tTask BeginCreateXbrlTaxonomyEntryPoint(SessionInfo si, string xfEntryPointFolderFullName, string xfEntryPointFileName, string taxonomyZipFileName, string taxonomyXsdFileName, object callback, object asyncState);\n\n\tvoid EndCreateXbrlTaxonomyEntryPoint(OnEndResult result);\n\n\tvoid CreateXbrlTaxonomyEntryPointAsync(SessionInfo si, string xfEntryPointFolderFullName, string xfEntryPointFileName, string taxonomyZipFileName, string taxonomyXsdFileName);\n\n\tvoid CreateXbrlTaxonomyEntryPointAsync(SessionInfo si, string xfEntryPointFolderFullName, string xfEntryPointFileName, string taxonomyZipFileName, string taxonomyXsdFileName, object userState);\n\n\tAjaxFileAndFolderHierarchy GetXbrlTaxonomiesHierarchy(SessionInfo si);\n\n\tTask BeginGetXbrlTaxonomiesHierarchy(SessionInfo si, object callback, object asyncState);\n\n\tAjaxFileAndFolderHierarchy EndGetXbrlTaxonomiesHierarchy(OnEndResult result);\n\n\tvoid GetXbrlTaxonomiesHierarchyAsync(SessionInfo si);\n\n\tvoid GetXbrlTaxonomiesHierarchyAsync(SessionInfo si, object userState);\n\n\tObservableCollection<AjaxXbrlTreeItem> EnumChildXbrlTreeItems(SessionInfo si, string taxonomyInfoFileName, AjaxXbrlLinkType ajaxLinkTypeFilter, bool displayAllRoleTypes, AjaxXbrlTreeItem ajaxParentTreeItem);\n\n\tTask BeginEnumChildXbrlTreeItems(SessionInfo si, string taxonomyInfoFileName, AjaxXbrlLinkType ajaxLinkTypeFilter, bool displayAllRoleTypes, AjaxXbrlTreeItem ajaxParentTreeItem, object callback, object asyncState);\n\n\tObservableCollection<AjaxXbrlTreeItem> EndEnumChildXbrlTreeItems(OnEndResult result);\n\n\tvoid EnumChildXbrlTreeItemsAsync(SessionInfo si, string taxonomyInfoFileName, AjaxXbrlLinkType ajaxLinkTypeFilter, bool displayAllRoleTypes, AjaxXbrlTreeItem ajaxParentTreeItem);\n\n\tvoid EnumChildXbrlTreeItemsAsync(SessionInfo si, string taxonomyInfoFileName, AjaxXbrlLinkType ajaxLinkTypeFilter, bool displayAllRoleTypes, AjaxXbrlTreeItem ajaxParentTreeItem, object userState);\n\n\tAjaxXbrlItem GetXbrlItem(SessionInfo si, string taxonomyInfoFileName, AjaxXbrlTreeItem ajaxXbrlTreeItem);\n\n\tTask BeginGetXbrlItem(SessionInfo si, string taxonomyInfoFileName, AjaxXbrlTreeItem ajaxXbrlTreeItem, object callback, object asyncState);\n\n\tAjaxXbrlItem EndGetXbrlItem(OnEndResult result);\n\n\tvoid GetXbrlItemAsync(SessionInfo si, string taxonomyInfoFileName, AjaxXbrlTreeItem ajaxXbrlTreeItem);\n\n\tvoid GetXbrlItemAsync(SessionInfo si, string taxonomyInfoFileName, AjaxXbrlTreeItem ajaxXbrlTreeItem, object userState);\n}"
+    }
+  ],
+  "structs": [],
+  "delegates": [],
+  "enums": []
+}

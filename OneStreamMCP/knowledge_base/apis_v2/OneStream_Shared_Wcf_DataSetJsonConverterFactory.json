@@ -1,0 +1,229 @@
+{
+  "namespace": "OneStream.Shared.Wcf.DataSetJsonConverterFactory",
+  "generated_at": "2025-12-08T19:28:52.392301",
+  "statistics": {
+    "classes": 1,
+    "interfaces": 0,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 0,
+    "total_methods": 8,
+    "total_properties": 0
+  },
+  "classes": [
+    {
+      "name": "DataSetJsonConverter",
+      "namespace": "OneStream.Shared.Wcf.DataSetJsonConverterFactory",
+      "type": "class",
+      "modifiers": [
+        "private"
+      ],
+      "base_class": "JsonConverter<DataSet>",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "Read",
+          "return_type": "override DataSet",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "reader",
+              "type": "Utf8JsonReader",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "typeToConvert",
+              "type": "Type",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "options",
+              "type": "JsonSerializerOptions",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Reads operation",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "MemoryStream",
+          "return_type": "MemoryStream",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "array",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Memorys stream",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "DeflateStream",
+          "return_type": "DeflateStream",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "stream",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "CompressionMode.Decompress",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Deflates stream",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "DataSet",
+          "return_type": "DataSet",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Datas set",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "using",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "stream3",
+              "type": "Stream",
+              "optional": true,
+              "default": "stream2.CreateReadExStreamAdapter("
+            }
+          ],
+          "description": "Usings operation",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "Write",
+          "return_type": "override void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "writer",
+              "type": "Utf8JsonWriter",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dataSet",
+              "type": "DataSet",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "options",
+              "type": "JsonSerializerOptions",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Writes operation",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "using",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "memoryStream",
+              "type": "MemoryStream",
+              "optional": true,
+              "default": "new MemoryStream("
+            }
+          ],
+          "description": "Usings operation",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "using",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "stream",
+              "type": "DeflateStream",
+              "optional": true,
+              "default": "new DeflateStream(memoryStream, CompressionMode.Compress, leaveOpen: true"
+            }
+          ],
+          "description": "Usings operation",
+          "generic_params": [],
+          "overloads": 3
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Wcf/DataSetJsonConverterFactory.cs"
+    }
+  ],
+  "interfaces": [],
+  "structs": [],
+  "delegates": [],
+  "enums": []
+}

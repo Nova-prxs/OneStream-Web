@@ -1,0 +1,300 @@
+{% extends "base.html" %}
+
+{% block title %}Progress Dashboard — OneStream Study Guide{% endblock %}
+
+{% block content %}
+<h1>Progress Dashboard</h1>
+
+{# Overall summary card #}
+<article class="progress-summary">
+  <header>
+    <strong>Overall Progress</strong>
+  </header>
+  <p>
+    <span id="overall-answered" class="progress-big">0</span>
+    / <span id="overall-total">0</span> questions answered
+    — <span id="overall-pct">0</span>% correct
+  </p>
+  <progress id="overall-bar" value="0" max="100">0%</progress>
+  <p class="pass-estimate unknown" id="pass-estimate">Answer some questions to see your estimated exam result</p>
+</article>
+
+{# Weak sections recommendation #}
+<div class="weak-sections" id="weak-sections" style="display:none">
+  <strong>Focus areas:</strong> <span id="weak-list"></span>
+</div>
+
+{# Per-section breakdown table #}
+<figure>
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">Section</th>
+        <th scope="col">Weight</th>
+        <th scope="col">Progress</th>
+        <th scope="col">Answered</th>
+        <th scope="col">Correct</th>
+        <th scope="col">Score</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody id="progress-body">
+      {% for section in sections %}
+      <tr id="row-{{ section.slug }}">
+        <td><a href="/exam-prep/quiz/{{ section.slug }}">{{ section.name }}</a></td>
+        <td>{{ section.weight }}%</td>
+        <td><div class="section-bar" id="bar-{{ section.slug }}"></div></td>
+        <td id="answered-{{ section.slug }}">—</td>
+        <td id="correct-{{ section.slug }}">—</td>
+        <td id="score-{{ section.slug }}">—</td>
+        <td>
+          <button class="reset-btn outline secondary" onclick="resetSection('{{ section.slug }}', '{{ section.name }}')">
+            Reset
+          </button>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</figure>
+
+{# Exam History Chart — #9 #}
+<article class="exam-history" id="exam-history-section" style="display:none">
+  <header><strong>Exam Simulation History</strong></header>
+  <div class="exam-history-chart" id="exam-history-chart"></div>
+  <div class="exam-history-list" id="exam-history-list"></div>
+  <button class="outline reset-btn" onclick="clearExamHistory()">Clear History</button>
+</article>
+
+{# Study Tools quick links #}
+<div class="study-tools-links">
+  <a href="/exam-prep/review" role="button" class="outline">Review Failed Questions</a>
+  <a href="/exam-prep/objectives" role="button" class="outline">Study by Objectives</a>
+  <a href="/exam-prep/summary" role="button" class="outline">Section Summaries</a>
+  <a href="/exam-prep/glossary" role="button" class="outline">Glossary</a>
+</div>
+
+<div class="export-import-btns">
+  <button class="reset-all contrast" onclick="resetAll()">Reset All Progress</button>
+  <button class="outline" onclick="exportProgress()">Export Progress</button>
+  <button class="outline" onclick="document.getElementById('import-file').click()">Import Progress</button>
+  <input type="file" id="import-file" accept=".json" style="display:none" onchange="importProgress(this)">
+</div>
+
+<script>
+(function() {
+  const sections = {{ sections | tojson }};
+
+  function getStats(slug, questions) {
+    let answeredCount = 0, correctCount = 0;
+    try {
+      const raw = localStorage.getItem('quiz_progress_' + slug);
+      if (raw) {
+        const data = JSON.parse(raw);
+        if (data && data.answered) {
+          for (const idx in data.answered) {
+            answeredCount++;
+            const qIdx = parseInt(idx);
+            if (questions[qIdx] && data.answered[idx] === questions[qIdx].correct_answer) {
+              correctCount++;
+            }
+          }
+        }
+      }
+    } catch (e) {}
+    return { answered: answeredCount, correct: correctCount };
+  }
+
+  function refreshDisplay() {
+    let totalAnswered = 0, totalCorrect = 0, totalQuestions = 0;
+    let weightedScore = 0, weightedTotal = 0;
+    const weakSections = [];
+
+    sections.forEach(function(section) {
+      const stats = getStats(section.slug, section.questions);
+      const qCount = section.question_count;
+      totalQuestions += qCount;
+      totalAnswered += stats.answered;
+      totalCorrect += stats.correct;
+
+      const answeredCell = document.getElementById('answered-' + section.slug);
+      const correctCell = document.getElementById('correct-' + section.slug);
+      const scoreCell = document.getElementById('score-' + section.slug);
+      const barEl = document.getElementById('bar-' + section.slug);
+
+      if (stats.answered > 0) {
+        answeredCell.textContent = stats.answered + ' / ' + qCount;
+        correctCell.textContent = stats.correct + ' / ' + stats.answered;
+        const pct = Math.round((stats.correct / stats.answered) * 100);
+        scoreCell.textContent = pct + '%';
+        scoreCell.className = '';
+        if (pct >= 80) scoreCell.classList.add('score-good');
+        else if (pct >= 50) scoreCell.classList.add('score-ok');
+        else scoreCell.classList.add('score-bad');
+
+        // Weighted score calc
+        weightedScore += (stats.correct / stats.answered) * section.weight;
+        weightedTotal += section.weight;
+
+        // Track weak sections
+        if (pct < 70) weakSections.push(section.name + ' (' + pct + '%)');
+
+        // Visual bar
+        const correctPct = (stats.correct / qCount * 100).toFixed(1);
+        const incorrectPct = ((stats.answered - stats.correct) / qCount * 100).toFixed(1);
+        barEl.innerHTML = '<div class="section-bar-correct" style="width:' + correctPct + '%"></div>' +
+          '<div class="section-bar-incorrect" style="width:' + incorrectPct + '%"></div>';
+      } else {
+        answeredCell.textContent = '0 / ' + qCount;
+        correctCell.textContent = '—';
+        scoreCell.textContent = '—';
+        scoreCell.className = '';
+        barEl.innerHTML = '';
+      }
+    });
+
+    // Overall
+    document.getElementById('overall-answered').textContent = totalAnswered;
+    document.getElementById('overall-total').textContent = totalQuestions;
+    const overallPct = totalAnswered > 0 ? Math.round((totalCorrect / totalAnswered) * 100) : 0;
+    document.getElementById('overall-pct').textContent = overallPct;
+    const barPct = totalQuestions > 0 ? Math.round((totalAnswered / totalQuestions) * 100) : 0;
+    document.getElementById('overall-bar').value = barPct;
+
+    // Pass estimate (weighted by exam section weights)
+    const estimateEl = document.getElementById('pass-estimate');
+    if (totalAnswered >= 20) {
+      const examScore = weightedTotal > 0 ? Math.round(weightedScore / weightedTotal * 100) : 0;
+      if (examScore >= 70) {
+        estimateEl.textContent = 'Estimated exam score: ' + examScore + '% — PASS';
+        estimateEl.className = 'pass-estimate pass';
+      } else {
+        estimateEl.textContent = 'Estimated exam score: ' + examScore + '% — needs improvement (70% to pass)';
+        estimateEl.className = 'pass-estimate fail';
+      }
+    } else {
+      estimateEl.textContent = 'Answer at least 20 questions to see your estimated exam score';
+      estimateEl.className = 'pass-estimate unknown';
+    }
+
+    // Weak sections
+    const weakEl = document.getElementById('weak-sections');
+    if (weakSections.length > 0) {
+      document.getElementById('weak-list').textContent = weakSections.join(', ');
+      weakEl.style.display = 'block';
+    } else {
+      weakEl.style.display = 'none';
+    }
+  }
+
+  window.resetSection = function(slug, name) {
+    if (!confirm('Reset progress for ' + name + '?')) return;
+    localStorage.removeItem('quiz_progress_' + slug);
+    refreshDisplay();
+  };
+
+  window.resetAll = function() {
+    if (!confirm('Reset ALL quiz progress? This cannot be undone.')) return;
+    sections.forEach(function(section) {
+      localStorage.removeItem('quiz_progress_' + section.slug);
+    });
+    refreshDisplay();
+  };
+
+  window.exportProgress = function() {
+    const data = {};
+    sections.forEach(function(section) {
+      const raw = localStorage.getItem('quiz_progress_' + section.slug);
+      if (raw) data[section.slug] = JSON.parse(raw);
+    });
+    // Also export notes
+    for (let i = 0; i < localStorage.length; i++) {
+      const key = localStorage.key(i);
+      if (key.startsWith('notes_')) data[key] = localStorage.getItem(key);
+    }
+    const blob = new Blob([JSON.stringify(data, null, 2)], {type: 'application/json'});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'onestream-progress-' + new Date().toISOString().slice(0,10) + '.json';
+    a.click();
+    URL.revokeObjectURL(url);
+  };
+
+  window.importProgress = function(input) {
+    const file = input.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      try {
+        const data = JSON.parse(e.target.result);
+        for (const key in data) {
+          if (key.startsWith('notes_')) {
+            localStorage.setItem(key, data[key]);
+          } else {
+            localStorage.setItem('quiz_progress_' + key, JSON.stringify(data[key]));
+          }
+        }
+        refreshDisplay();
+        alert('Progress imported successfully!');
+      } catch(err) {
+        alert('Invalid progress file.');
+      }
+    };
+    reader.readAsText(file);
+    input.value = '';
+  };
+
+  // --- Exam History (#9) ---
+  function renderExamHistory() {
+    var historyEl = document.getElementById('exam-history-section');
+    try {
+      var history = JSON.parse(localStorage.getItem('exam_history') || '[]');
+      if (history.length === 0) { historyEl.style.display = 'none'; return; }
+      historyEl.style.display = 'block';
+
+      // Chart: bar chart of scores
+      var chartEl = document.getElementById('exam-history-chart');
+      var maxBars = Math.min(history.length, 20);
+      var recent = history.slice(-maxBars);
+      var chartHtml = '<div class="history-bars">';
+      recent.forEach(function(h, i) {
+        var barClass = h.score >= 70 ? 'history-bar-pass' : 'history-bar-fail';
+        var date = new Date(h.date);
+        var label = (date.getMonth()+1) + '/' + date.getDate();
+        chartHtml += '<div class="history-bar-wrapper">';
+        chartHtml += '<div class="history-bar ' + barClass + '" style="height:' + h.score + '%"></div>';
+        chartHtml += '<small class="history-bar-score">' + h.score + '%</small>';
+        chartHtml += '<small class="history-bar-date">' + label + '</small>';
+        chartHtml += '</div>';
+      });
+      chartHtml += '</div>';
+      chartHtml += '<div class="history-pass-line" style="bottom:70%"><small>70% pass</small></div>';
+      chartEl.innerHTML = chartHtml;
+
+      // List
+      var listEl = document.getElementById('exam-history-list');
+      var listHtml = '<table><thead><tr><th>Date</th><th>Score</th><th>Result</th><th>Time</th></tr></thead><tbody>';
+      history.slice().reverse().forEach(function(h) {
+        var date = new Date(h.date);
+        var dateStr = date.toLocaleDateString() + ' ' + date.toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'});
+        var scoreClass = h.passed ? 'score-good' : 'score-bad';
+        listHtml += '<tr><td>' + dateStr + '</td><td class="' + scoreClass + '">' + h.score + '%</td>';
+        listHtml += '<td>' + (h.passed ? 'PASS' : 'FAIL') + '</td><td>' + h.timeElapsed + '</td></tr>';
+      });
+      listHtml += '</tbody></table>';
+      listEl.innerHTML = listHtml;
+    } catch(e) { historyEl.style.display = 'none'; }
+  }
+
+  window.clearExamHistory = function() {
+    if (!confirm('Clear all exam history?')) return;
+    localStorage.removeItem('exam_history');
+    renderExamHistory();
+  };
+
+  refreshDisplay();
+  renderExamHistory();
+})();
+</script>
+{% endblock %}

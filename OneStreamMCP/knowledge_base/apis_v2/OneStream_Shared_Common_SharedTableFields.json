@@ -1,0 +1,683 @@
+{
+  "namespace": "OneStream.Shared.Common.SharedTableFields",
+  "generated_at": "2025-12-08T19:28:52.148544",
+  "statistics": {
+    "classes": 35,
+    "interfaces": 0,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 0,
+    "total_methods": 0,
+    "total_properties": 0
+  },
+  "classes": [
+    {
+      "name": "StandardKeyFields",
+      "namespace": "OneStream.Shared.Common.SharedTableFields",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/SharedTableFields.cs"
+    },
+    {
+      "name": "TaskflowStepInstances",
+      "namespace": "OneStream.Shared.Common.SharedTableFields",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/SharedTableFields.cs"
+    },
+    {
+      "name": "TaskflowStepLog",
+      "namespace": "OneStream.Shared.Common.SharedTableFields",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/SharedTableFields.cs"
+    },
+    {
+      "name": "WorkflowProfileHierarchy",
+      "namespace": "OneStream.Shared.Common.SharedTableFields",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/SharedTableFields.cs"
+    },
+    {
+      "name": "WorkflowProfileHierarchyHistory",
+      "namespace": "OneStream.Shared.Common.SharedTableFields",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/SharedTableFields.cs"
+    },
+    {
+      "name": "WorkflowProfileAttributes",
+      "namespace": "OneStream.Shared.Common.SharedTableFields",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/SharedTableFields.cs"
+    },
+    {
+      "name": "WorkflowProfileAttributesHistory",
+      "namespace": "OneStream.Shared.Common.SharedTableFields",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/SharedTableFields.cs"
+    },
+    {
+      "name": "WorkflowProfileEntities",
+      "namespace": "OneStream.Shared.Common.SharedTableFields",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/SharedTableFields.cs"
+    },
+    {
+      "name": "WorkflowProfileEntitiesHistory",
+      "namespace": "OneStream.Shared.Common.SharedTableFields",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/SharedTableFields.cs"
+    },
+    {
+      "name": "WorkflowProfileEntityCalcs",
+      "namespace": "OneStream.Shared.Common.SharedTableFields",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/SharedTableFields.cs"
+    },
+    {
+      "name": "WorkflowProfileEntityCalcsHistory",
+      "namespace": "OneStream.Shared.Common.SharedTableFields",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/SharedTableFields.cs"
+    },
+    {
+      "name": "WorkflowUnitTimeStamp",
+      "namespace": "OneStream.Shared.Common.SharedTableFields",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/SharedTableFields.cs"
+    },
+    {
+      "name": "WorkflowUnitLockStatus",
+      "namespace": "OneStream.Shared.Common.SharedTableFields",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/SharedTableFields.cs"
+    },
+    {
+      "name": "ConfirmProfiles",
+      "namespace": "OneStream.Shared.Common.SharedTableFields",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/SharedTableFields.cs"
+    },
+    {
+      "name": "ConfirmProfilesHistory",
+      "namespace": "OneStream.Shared.Common.SharedTableFields",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/SharedTableFields.cs"
+    },
+    {
+      "name": "ConfirmProfileMembers",
+      "namespace": "OneStream.Shared.Common.SharedTableFields",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/SharedTableFields.cs"
+    },
+    {
+      "name": "ConfirmProfileMembersHistory",
+      "namespace": "OneStream.Shared.Common.SharedTableFields",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/SharedTableFields.cs"
+    },
+    {
+      "name": "ConfirmGroups",
+      "namespace": "OneStream.Shared.Common.SharedTableFields",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/SharedTableFields.cs"
+    },
+    {
+      "name": "ConfirmGroupsHistory",
+      "namespace": "OneStream.Shared.Common.SharedTableFields",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/SharedTableFields.cs"
+    },
+    {
+      "name": "ConfirmRules",
+      "namespace": "OneStream.Shared.Common.SharedTableFields",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/SharedTableFields.cs"
+    },
+    {
+      "name": "ConfirmRulesHistory",
+      "namespace": "OneStream.Shared.Common.SharedTableFields",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/SharedTableFields.cs"
+    },
+    {
+      "name": "ConfirmRuleInstances",
+      "namespace": "OneStream.Shared.Common.SharedTableFields",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/SharedTableFields.cs"
+    },
+    {
+      "name": "CertifyProfiles",
+      "namespace": "OneStream.Shared.Common.SharedTableFields",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/SharedTableFields.cs"
+    },
+    {
+      "name": "CertifyProfilesHistory",
+      "namespace": "OneStream.Shared.Common.SharedTableFields",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/SharedTableFields.cs"
+    },
+    {
+      "name": "CertifyProfileMembers",
+      "namespace": "OneStream.Shared.Common.SharedTableFields",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/SharedTableFields.cs"
+    },
+    {
+      "name": "CertifyProfileMembersHistory",
+      "namespace": "OneStream.Shared.Common.SharedTableFields",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/SharedTableFields.cs"
+    },
+    {
+      "name": "CertifyGroups",
+      "namespace": "OneStream.Shared.Common.SharedTableFields",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/SharedTableFields.cs"
+    },
+    {
+      "name": "CertifyGroupsHistory",
+      "namespace": "OneStream.Shared.Common.SharedTableFields",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/SharedTableFields.cs"
+    },
+    {
+      "name": "CertifyQuestions",
+      "namespace": "OneStream.Shared.Common.SharedTableFields",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/SharedTableFields.cs"
+    },
+    {
+      "name": "CertifyQuestionsHistory",
+      "namespace": "OneStream.Shared.Common.SharedTableFields",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/SharedTableFields.cs"
+    },
+    {
+      "name": "CertifyQuestionInstances",
+      "namespace": "OneStream.Shared.Common.SharedTableFields",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/SharedTableFields.cs"
+    },
+    {
+      "name": "CertifySignOffInstances",
+      "namespace": "OneStream.Shared.Common.SharedTableFields",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/SharedTableFields.cs"
+    },
+    {
+      "name": "ICMatchingStatus",
+      "namespace": "OneStream.Shared.Common.SharedTableFields",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/SharedTableFields.cs",
+      "source_code": "public static class ICMatchingStatus\n\t{\n\t\tpublic const string UniqueID = \"UniqueID\";\n\n\t\tpublic const string WorkflowProfileKey = \"Wfk\";\n\n\t\tpublic const string WorkflowScenarioKey = \"Wsk\";\n\n\t\tpublic const string WorkflowTimeKey = \"Wtk\";\n\n\t\tpublic const string WorkflowCubeId = \"WfCubeId\";\n\n\t\tpublic const string EntityId = \"EntityId\";\n\n\t\tpublic const string PartnerId = \"PartnerId\";\n\n\t\tpublic const string AccountId = \"AccountId\";\n\n\t\tpublic const string PlugAccountId = \"PlugAccountId\";\n\n\t\tpublic const string FlowId = \"FlowId\";\n\n\t\tpublic const string OriginId = \"OriginId\";\n\n\t\tpublic const string UD1Id = \"UD1Id\";\n\n\t\tpublic const string UD2Id = \"UD2Id\";\n\n\t\tpublic const string UD3Id = \"UD3Id\";\n\n\t\tpublic const string UD4Id = \"UD4Id\";\n\n\t\tpublic const string UD5Id = \"UD5Id\";\n\n\t\tpublic const string UD6Id = \"UD6Id\";\n\n\t\tpublic const string UD7Id = \"UD7Id\";\n\n\t\tpublic const string UD8Id = \"UD8Id\";\n\n\t\tpublic const string TransactionState = \"TransactionState\";\n\n\t\tpublic const string StatusTimeStamp = \"StatusTimeStamp\";\n\n\t\tpublic const string StatusUserKey = \"StatusUserKey\";\n\n\t\tpublic const string StatusComments = \"StatusComments\";\n\t}"
+    },
+    {
+      "name": "GridSheetLayouts",
+      "namespace": "OneStream.Shared.Common.SharedTableFields",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/SharedTableFields.cs"
+    },
+    {
+      "name": "GridColumnLayouts",
+      "namespace": "OneStream.Shared.Common.SharedTableFields",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/SharedTableFields.cs"
+    }
+  ],
+  "interfaces": [],
+  "structs": [],
+  "delegates": [],
+  "enums": []
+}

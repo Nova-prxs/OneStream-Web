@@ -1,0 +1,44 @@
+{% extends "docs_base.html" %}
+
+{% block title %}{{ page.meta_title }} — Extension Guide{% endblock %}
+
+{% block content %}
+<nav class="breadcrumb">
+  <a href="/docs/extension/">Extension Guide</a> <span>&rsaquo;</span>
+  <span>{{ page.meta_title }}</span>
+</nav>
+
+<div class="chapter-layout">
+  {% if page.toc %}
+  <aside class="toc-sidebar">
+    <details open>
+      <summary><strong>On this page</strong></summary>
+      <nav class="toc">
+        {{ page.toc | safe }}
+      </nav>
+    </details>
+  </aside>
+  {% endif %}
+
+  <div class="chapter-content">
+    {{ page.html | safe }}
+  </div>
+</div>
+
+{# Prev/Next navigation #}
+{% set ns = namespace(prev=none, next=none, found=false) %}
+{% for s in sections %}
+  {% if ns.found and ns.next is none %}
+    {% if s.slug in page_lookup %}
+      {% set ns.next = s %}
+    {% endif %}
+  {% endif %}
+  {% if s.slug == page.slug %}
+    {% set ns.found = true %}
+  {% endif %}
+  {% if not ns.found and s.slug in page_lookup %}
+    {% set ns.prev = s %}
+  {% endif %}
+{% endfor %}
+
+{% endblock %}

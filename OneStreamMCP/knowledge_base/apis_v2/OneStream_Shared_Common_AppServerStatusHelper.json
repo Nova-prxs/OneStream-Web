@@ -1,0 +1,488 @@
+{
+  "namespace": "OneStream.Shared.Common.AppServerStatusHelper",
+  "generated_at": "2025-12-08T19:28:52.146897",
+  "statistics": {
+    "classes": 2,
+    "interfaces": 0,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 0,
+    "total_methods": 12,
+    "total_properties": 5
+  },
+  "classes": [
+    {
+      "name": "AppServerStatusResult",
+      "namespace": "OneStream.Shared.Common.AppServerStatusHelper",
+      "type": "class",
+      "modifiers": [
+        "internal"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "Status",
+          "type": "AppServerStatusType",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        },
+        {
+          "name": "ExceptionFromLastTest",
+          "type": "Exception",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/AppServerStatusHelper.cs"
+    },
+    {
+      "name": "AppServerStatusItem",
+      "namespace": "OneStream.Shared.Common.AppServerStatusHelper",
+      "type": "class",
+      "modifiers": [
+        "internal"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "internal",
+          "parameters": [
+            {
+              "name": "serverStatusConnection",
+              "type": "IServerStatusConnection",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "configSettings",
+              "type": "WebServerConfigSettings",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "catch",
+          "type": "",
+          "access": "public",
+          "has_getter": false,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "catch",
+          "type": "",
+          "access": "public",
+          "has_getter": false,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "catch",
+          "type": "",
+          "access": "public",
+          "has_getter": false,
+          "has_setter": false,
+          "is_static": false
+        }
+      ],
+      "methods": [
+        {
+          "name": "ThreadSafeLong",
+          "return_type": "ThreadSafeLong",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "SharedConstants.DateTimeMinValue.Ticks",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Threads safe long",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "ThreadSafeInteger",
+          "return_type": "ThreadSafeInteger",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "-1",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Threads safe integer",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "ThreadSafeObject",
+          "return_type": "ThreadSafeObject",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Threads safe object",
+          "generic_params": [
+            "Exception"
+          ],
+          "overloads": 1
+        },
+        {
+          "name": "GetAppServerStatus",
+          "return_type": "internal AppServerStatusResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "appServerIndex",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "appServerSettings",
+              "type": "WebServerAppServer",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "forceAppServerTestIfNotAlreadyError",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets app server status",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "NullReferenceException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Nulls reference exception",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "AppServerStatusResult",
+          "return_type": "AppServerStatusResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Apps server status result",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "UpdateServerStatus",
+          "return_type": ">",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "appServerSettings",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "appServerIndex",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "initialStatus",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Updates server status",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "private",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "AppServerStatusType",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Privates operation",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "InsertErrorLogItemSafely",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "configSettings",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "appServerIndex",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "appServerSettings",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "true",
+              "type": "isSuccessNotFailure:",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "null",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Inserts error log item safely",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "ex",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "InsertErrorLogItemSafely",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "si",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "configSettings",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "appServerIndex",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "appServerSettings",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "false",
+              "type": "isSuccessNotFailure:",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "ex",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Inserts error log item safely",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "InsertErrorLogItemSafely",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "configSettings",
+              "type": "WebServerConfigSettings",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "indexForAppServerToLog",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "settingsForAppServerToLog",
+              "type": "WebServerAppServer",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "isSuccessNotFailure",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "exForFailedAppServerTest",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Inserts error log item safely",
+          "generic_params": [],
+          "overloads": 3
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/AppServerStatusHelper.cs"
+    }
+  ],
+  "interfaces": [],
+  "structs": [],
+  "delegates": [],
+  "enums": []
+}

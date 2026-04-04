@@ -1,0 +1,271 @@
+{
+  "namespace": "RestFast",
+  "dll_source": "RestFast.Module",
+  "extraction_timestamp": "2025-11-30T19:47:18.320970",
+  "statistics": {
+    "classes": 7,
+    "total_methods": 8
+  },
+  "classes": [
+    {
+      "name": "HttpResult",
+      "namespace": "Workspace.RESTAPIFramework.RESTAPIRequestManager.Classes",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "GetFormattedHeaders",
+          "return_type": "String",
+          "access": "public",
+          "is_static": false,
+          "parameters": [],
+          "description": "Returns all headers formatted as 'Key: Value' strings",
+          "example_code": null,
+          "overloads": 1
+        },
+        {
+          "name": "GetStatusCode",
+          "return_type": "Integer",
+          "access": "public",
+          "is_static": false,
+          "parameters": [],
+          "description": "Returns integer representation of status code",
+          "example_code": null,
+          "overloads": 1
+        }
+      ],
+      "events": []
+    },
+    {
+      "name": "RESTAPIRequest",
+      "namespace": "Workspace.RESTAPIFramework.RESTAPIRequestManager.Classes",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "Execute",
+          "return_type": "HttpResult",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "paramVariables",
+              "type": "Dictionary(Of String, String)",
+              "optional": true,
+              "default": null
+            }
+          ],
+          "description": "Executes the HTTP request and returns HttpResult",
+          "example_code": "Dim request As New RESTAPIRequest()\nrequest.method = \"GET\"\nrequest.endpoint = \"https://api.example.com/data\"\nDim result As HttpResult = request.Execute()",
+          "overloads": 1
+        },
+        {
+          "name": "GetDataTable",
+          "return_type": "DataTable",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "limit",
+              "type": "Integer",
+              "optional": true,
+              "default": 0
+            },
+            {
+              "name": "paramVariables",
+              "type": "Dictionary(Of String, String)",
+              "optional": true,
+              "default": null
+            }
+          ],
+          "description": "Executes request(s) with pagination and returns all data as DataTable",
+          "example_code": "Dim request As RESTAPIRequest = Utils.GetSavedRequest(si, \"GetCustomers\")\nDim dt As DataTable = request.GetDataTable(3) ' Max 3 pagination loops\nBRApi.ErrorLog.LogMessage(si, $\"Loaded {dt.Rows.Count} rows\")",
+          "overloads": 1
+        },
+        {
+          "name": "PopulateTable",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "si",
+              "type": "SessionInfo",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "paramVariables",
+              "type": "Dictionary(Of String, String)",
+              "optional": true,
+              "default": null
+            }
+          ],
+          "description": "Executes request(s) and loads data directly into custom table",
+          "example_code": "Dim request As RESTAPIRequest = Utils.GetSavedRequest(si, \"GetProducts\")\nDim vars As New Dictionary(Of String, String) From {{\"category\", \"electronics\"}}\nrequest.PopulateTable(si, vars)",
+          "overloads": 1
+        }
+      ],
+      "events": []
+    },
+    {
+      "name": "AuthCredentials",
+      "namespace": "Workspace.RESTAPIFramework.RESTAPIRequestManager.Classes",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "ApplyAuthCredentials",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "headers",
+              "type": "Dictionary(Of String, String)",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "urlParams",
+              "type": "Dictionary(Of String, String)",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "variables",
+              "type": "Dictionary(Of String, String)",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Abstract method to apply authentication to request",
+          "example_code": null,
+          "overloads": 1
+        }
+      ],
+      "events": []
+    },
+    {
+      "name": "BasicAuthCredentials",
+      "namespace": "Workspace.RESTAPIFramework.RESTAPIRequestManager.Classes",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": []
+    },
+    {
+      "name": "ApiKeyAuthCredentials",
+      "namespace": "Workspace.RESTAPIFramework.RESTAPIRequestManager.Classes",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": []
+    },
+    {
+      "name": "BearerTokenAuthCredentials",
+      "namespace": "Workspace.RESTAPIFramework.RESTAPIRequestManager.Classes",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": []
+    },
+    {
+      "name": "OAuthCredentials",
+      "namespace": "Workspace.RESTAPIFramework.RESTAPIRequestManager.Classes",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "RefreshAccessToken",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "parameters": [],
+          "description": "Refreshes expired access token automatically",
+          "example_code": null,
+          "overloads": 1
+        },
+        {
+          "name": "BuildAuthorizationUrl",
+          "return_type": "String",
+          "access": "public",
+          "is_static": false,
+          "parameters": [
+            {
+              "name": "authorizationEndpoint",
+              "type": "String",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "redirectUri",
+              "type": "String",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "scopes",
+              "type": "String",
+              "optional": true,
+              "default": null
+            },
+            {
+              "name": "state",
+              "type": "String",
+              "optional": true,
+              "default": null
+            }
+          ],
+          "description": "Constructs OAuth authorization URL for code flow",
+          "example_code": null,
+          "overloads": 1
+        }
+      ],
+      "events": []
+    }
+  ],
+  "enums": []
+}

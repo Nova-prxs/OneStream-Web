@@ -1,0 +1,135 @@
+{
+  "namespace": "OneStream.Client.WpfVb.TextSelector",
+  "generated_at": "2025-12-08T19:28:52.050470",
+  "statistics": {
+    "classes": 2,
+    "interfaces": 0,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 1,
+    "total_methods": 0,
+    "total_properties": 0
+  },
+  "classes": [
+    {
+      "name": "Row",
+      "namespace": "OneStream.Client.WpfVb.TextSelector",
+      "type": "class",
+      "modifiers": [
+        "private"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "rowNumber",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "rowContent",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "pageRowNumber",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [
+        "DesignerGenerated"
+      ],
+      "source_file": "output/types/OneStream/Client/WpfVb/TextSelector.cs"
+    },
+    {
+      "name": "Cell",
+      "namespace": "OneStream.Client.WpfVb.TextSelector",
+      "type": "class",
+      "modifiers": [
+        "private"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "rowNumber",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "colNumber",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "absoluteColNumber",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cellContent",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "rowRef",
+              "type": "Row",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/WpfVb/TextSelector.cs"
+    }
+  ],
+  "interfaces": [],
+  "structs": [],
+  "delegates": [],
+  "enums": [
+    {
+      "name": "SelectionModeTypes",
+      "namespace": "OneStream.Client.WpfVb.TextSelector",
+      "underlying_type": "int",
+      "is_flags": false,
+      "values": [
+        {
+          "name": "SetSelection",
+          "value": 1
+        },
+        {
+          "name": "EraseSelection",
+          "value": 2
+        }
+      ],
+      "access": "public"
+    }
+  ]
+}

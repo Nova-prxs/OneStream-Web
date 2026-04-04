@@ -1,0 +1,3208 @@
+{
+  "namespace": "OneStream.Shared.PortBridge",
+  "generated_at": "2025-12-08T19:28:52.150958",
+  "statistics": {
+    "classes": 11,
+    "interfaces": 3,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 0,
+    "total_methods": 117,
+    "total_properties": 8
+  },
+  "classes": [
+    {
+      "name": "IPRange",
+      "namespace": "OneStream.Shared.PortBridge",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "ipAddress",
+              "type": "IPAddress",
+              "optional": false,
+              "default": null
+            }
+          ]
+        },
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "ipAddressBegin",
+              "type": "IPAddress",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "ipAddressEnd",
+              "type": "IPAddress",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [
+        {
+          "name": "ArgumentException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "permitted.\"",
+              "type": "\"Only IPv4 addresses",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "\"address\"",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Arguments exception",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "ArgumentException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "permitted.\"",
+              "type": "\"Only IPv4 addresses",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "\"begin\"",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Arguments exception",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "ArgumentException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "permitted.\"",
+              "type": "\"Only IPv4 addresses",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "\"end\"",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Arguments exception",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "IsInRange",
+          "return_type": "bool",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "address",
+              "type": "IPAddress",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Checks if in range",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "IPAddressToLong",
+          "return_type": "long",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "address",
+              "type": "IPAddress",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Is p address to long",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/PortBridge/IPRange.cs",
+      "source_code": "public class IPRange\n{\n\tprivate readonly long ipAddressBeginAsLong;\n\n\tprivate readonly long ipAddressEndAsLong;\n\n\tpublic IPRange(IPAddress ipAddress)\n\t{\n\t\tif (ipAddress.AddressFamily != AddressFamily.InterNetwork)\n\t\t{\n\t\t\tthrow new ArgumentException(\"Only IPv4 addresses permitted.\", \"address\");\n\t\t}\n\t\tipAddressBeginAsLong = IPAddressToLong(ipAddress);\n\t\tipAddressEndAsLong = IPAddressToLong(ipAddress);\n\t}\n\n\tpublic IPRange(IPAddress ipAddressBegin, IPAddress ipAddressEnd)\n\t{\n\t\tif (ipAddressBegin.AddressFamily != AddressFamily.InterNetwork)\n\t\t{\n\t\t\tthrow new ArgumentException(\"Only IPv4 addresses permitted.\", \"begin\");\n\t\t}\n\t\tif (ipAddressEnd.AddressFamily != AddressFamily.InterNetwork)\n\t\t{\n\t\t\tthrow new ArgumentException(\"Only IPv4 addresses permitted.\", \"end\");\n\t\t}\n\t\tipAddressBeginAsLong = IPAddressToLong(ipAddressBegin);\n\t\tipAddressEndAsLong = IPAddressToLong(ipAddressEnd);\n\t}\n\n\tpublic bool IsInRange(IPAddress address)\n\t{\n\t\tlong num = IPAddressToLong(address);\n\t\tif (ipAddressBeginAsLong <= num)\n\t\t{\n\t\t\treturn ipAddressEndAsLong >= num;\n\t\t}\n\t\treturn false;\n\t}\n\n\tprivate long IPAddressToLong(IPAddress address)\n\t{\n\t\tlong result = 0L;\n\t\tbyte[] addressBytes = address.GetAddressBytes();\n\t\tif (addressBytes != null && addressBytes.Length != 0)\n\t\t{\n\t\t\tresult = (long)(((ulong)addressBytes[0] << 24) + ((ulong)addressBytes[1] << 16) + ((ulong)addressBytes[2] << 8) + addressBytes[3]);\n\t\t}\n\t\treturn result;\n\t}\n}"
+    },
+    {
+      "name": "OneStreamRelayPortBridgeLoggingConstants",
+      "namespace": "OneStream.Shared.PortBridge",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/PortBridge/OneStreamRelayPortBridgeLoggingConstants.cs"
+    },
+    {
+      "name": "PortBridgeExtensions",
+      "namespace": "OneStream.Shared.PortBridge",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "IsFatal",
+          "return_type": "bool",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "exception",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Checks if fatal",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/PortBridge/PortBridgeExtensions.cs"
+    },
+    {
+      "name": "TaskExtensions",
+      "namespace": "OneStream.Shared.PortBridge",
+      "type": "class",
+      "modifiers": [
+        "internal",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "Fork",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "thisTask",
+              "type": "this Task",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "source",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Forks operation",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "Fork",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "thisTask",
+              "type": "this Task",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Forks operation",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "FromAsync",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "begin",
+              "type": "Func<AsyncCallback, object, IAsyncResult>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "end",
+              "type": "Action<IAsyncResult>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "state",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates from async",
+          "generic_params": [],
+          "overloads": 8
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "exception",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 8
+        },
+        {
+          "name": "FromAsync",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "begin",
+              "type": "Func<TArg1, AsyncCallback, object, IAsyncResult>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "end",
+              "type": "Action<IAsyncResult>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "arg1",
+              "type": "TArg1",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "state",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates from async",
+          "generic_params": [
+            "TArg1"
+          ],
+          "overloads": 8
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "exception",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 8
+        },
+        {
+          "name": "FromAsync",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "begin",
+              "type": "Func<TArg1, TArg2, AsyncCallback, object, IAsyncResult>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "end",
+              "type": "Action<IAsyncResult>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "arg1",
+              "type": "TArg1",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "arg2",
+              "type": "TArg2",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "state",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates from async",
+          "generic_params": [
+            "TArg1",
+            "TArg2"
+          ],
+          "overloads": 8
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "exception",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 8
+        },
+        {
+          "name": "FromAsync",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "begin",
+              "type": "Func<TArg1, TArg2, TArg3, AsyncCallback, object, IAsyncResult>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "end",
+              "type": "Action<IAsyncResult>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "arg1",
+              "type": "TArg1",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "arg2",
+              "type": "TArg2",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "arg3",
+              "type": "TArg3",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "state",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates from async",
+          "generic_params": [
+            "TArg1",
+            "TArg2",
+            "TArg3"
+          ],
+          "overloads": 8
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "exception",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 8
+        },
+        {
+          "name": "FromAsync",
+          "return_type": "Task<TResult>",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "begin",
+              "type": "Func<AsyncCallback, object, IAsyncResult>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "end",
+              "type": "Func<IAsyncResult, TResult>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "state",
+              "type": "object",
+              "optional": true,
+              "default": "null"
+            }
+          ],
+          "description": "Creates from async",
+          "generic_params": [
+            "TResult"
+          ],
+          "overloads": 8
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "exception",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 8
+        },
+        {
+          "name": "FromAsync",
+          "return_type": "Task<TResult>",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "begin",
+              "type": "Func<TArg1, AsyncCallback, object, IAsyncResult>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "end",
+              "type": "Func<IAsyncResult, TResult>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "arg1",
+              "type": "TArg1",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "state",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates from async",
+          "generic_params": [
+            "TArg1",
+            "TResult"
+          ],
+          "overloads": 8
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "exception",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 8
+        },
+        {
+          "name": "FromAsync",
+          "return_type": "Task<TResult>",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "begin",
+              "type": "Func<TArg1, TArg2, AsyncCallback, object, IAsyncResult>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "end",
+              "type": "Func<IAsyncResult, TResult>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "arg1",
+              "type": "TArg1",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "arg2",
+              "type": "TArg2",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "state",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates from async",
+          "generic_params": [
+            "TArg1",
+            "TArg2",
+            "TResult"
+          ],
+          "overloads": 8
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "exception",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 8
+        },
+        {
+          "name": "FromAsync",
+          "return_type": "Task<TResult>",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "begin",
+              "type": "Func<TArg1, TArg2, TArg3, AsyncCallback, object, IAsyncResult>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "end",
+              "type": "Func<IAsyncResult, TResult>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "arg1",
+              "type": "TArg1",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "arg2",
+              "type": "TArg2",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "arg3",
+              "type": "TArg3",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "state",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates from async",
+          "generic_params": [
+            "TArg1",
+            "TArg2",
+            "TArg3",
+            "TResult"
+          ],
+          "overloads": 8
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "exception",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 8
+        },
+        {
+          "name": "FromException",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "exception",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates from exception",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "FromException",
+          "return_type": "Task<TResult>",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "exception",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates from exception",
+          "generic_params": [
+            "TResult"
+          ],
+          "overloads": 2
+        },
+        {
+          "name": "ArgumentNullException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "\"exception\"",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "exception\"",
+              "type": "\"task",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Arguments null exception",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "TaskCompletionSource",
+          "return_type": "TaskCompletionSource",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Tasks completion source",
+          "generic_params": [
+            "TResult"
+          ],
+          "overloads": 3
+        },
+        {
+          "name": "ToAsyncResult",
+          "return_type": "IAsyncResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "task",
+              "type": "this Task",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "AsyncCallback",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "state",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "executeSynchronously",
+              "type": "bool",
+              "optional": true,
+              "default": "false"
+            }
+          ],
+          "description": "Converts to async result",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "callback",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "task",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Callbacks operation",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "TaskCompletionSource",
+          "return_type": "TaskCompletionSource",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "state",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Tasks completion source",
+          "generic_params": [
+            "object"
+          ],
+          "overloads": 3
+        },
+        {
+          "name": "ToAsyncResult",
+          "return_type": "IAsyncResult",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "task",
+              "type": "this Task<TResult>",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "callback",
+              "type": "AsyncCallback",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "state",
+              "type": "object",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "executeSynchronously",
+              "type": "bool",
+              "optional": true,
+              "default": "false"
+            }
+          ],
+          "description": "Converts to async result",
+          "generic_params": [
+            "TResult"
+          ],
+          "overloads": 2
+        },
+        {
+          "name": "callback",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "task",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Callbacks operation",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "TaskCompletionSource",
+          "return_type": "TaskCompletionSource",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "state",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Tasks completion source",
+          "generic_params": [
+            "TResult"
+          ],
+          "overloads": 3
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/PortBridge/TaskExtensions.cs"
+    },
+    {
+      "name": "AzureRelayConstants",
+      "namespace": "OneStream.Shared.PortBridge",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/PortBridge/AzureRelayConstants.cs"
+    },
+    {
+      "name": "TCPExtensions",
+      "namespace": "OneStream.Shared.PortBridge",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "GetState",
+          "return_type": "TcpState",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "tcpClient",
+              "type": "this TcpClient",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Gets state",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/PortBridge/TCPExtensions.cs"
+    },
+    {
+      "name": "TcpLocalForwardBridge",
+      "namespace": "OneStream.Shared.PortBridge",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IDisposable"
+      ],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "relayConfig",
+              "type": "AzureRelayDetails",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "portName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ]
+        },
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "param",
+              "type": "relayConfig",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "portName",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "PortName",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        }
+      ],
+      "methods": [
+        {
+          "name": "CancellationTokenSource",
+          "return_type": "CancellationTokenSource",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Cancellations token source",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "HybridConnectionClient",
+          "return_type": "HybridConnectionClient",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "RelayConnectionStringBuilder\n\t\t{\n\t\t\tSharedAccessKey",
+              "type": "new",
+              "optional": true,
+              "default": "relayConfig.Key"
+            },
+            {
+              "name": "param",
+              "type": "SharedAccessKeyName",
+              "optional": true,
+              "default": "relayConfig.SASAccessName"
+            },
+            {
+              "name": "param",
+              "type": "EntityPath",
+              "optional": true,
+              "default": "relayConfig.Name"
+            },
+            {
+              "name": "param",
+              "type": "Endpoint",
+              "optional": true,
+              "default": "new Uri(\"sb://\" + relayConfig.NameSpace"
+            }
+          ],
+          "description": "Hybrids connection client",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "FromConnectionString",
+          "return_type": "TcpLocalForwardBridge",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "relayConfig",
+              "type": "AzureRelayDetails",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "portName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates from connection string",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "Close",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Closes operation",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "value",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 6
+        },
+        {
+          "name": "Dispose",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Disposes operation",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "Close",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Closes operation",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "GetIpEndPointInfo",
+          "return_type": "string",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Gets ip end point info",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "Run",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "listenEndpoint",
+              "type": "IPEndPoint",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Runs operation",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "InvalidOperationException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Invalids operation exception",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "TcpListener",
+          "return_type": "TcpListener",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "listenEndpoint",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Tcps listener",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "ex",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 6
+        },
+        {
+          "name": "AcceptSocketLoopAsync",
+          "return_type": "async Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Accepts socket loop async",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "ObjectDisposedException",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 6
+        },
+        {
+          "name": "BridgeSocketConnectionAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "socket",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Bridges socket connection async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "ex2",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 6
+        },
+        {
+          "name": "AcceptSocketLoopFaulted",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "t",
+              "type": "Task<Task>",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Accepts socket loop faulted",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "Close",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Closes operation",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "BridgeSocketConnectionAsync",
+          "return_type": "async Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "tcpClient",
+              "type": "TcpClient",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Bridges socket connection async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "LingerOption",
+          "return_type": "LingerOption",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "true",
+              "type": "enable:",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "1",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Lingers option",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "CancellationTokenSource",
+          "return_type": "CancellationTokenSource",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Cancellations token source",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "CancellationTokenSource",
+          "return_type": "CancellationTokenSource",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "TimeSpan.FromMinutes(1.0",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Cancellations token source",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "TaskCanceledException",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 6
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "value",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 6
+        }
+      ],
+      "events": [
+        {
+          "name": "NotifyException",
+          "type": "EventHandler",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "OnDataArrived",
+          "type": "Action",
+          "access": "public",
+          "is_static": false
+        }
+      ],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/PortBridge/TcpLocalForwardBridge.cs"
+    },
+    {
+      "name": "RemoteForwardBridge",
+      "namespace": "OneStream.Shared.PortBridge",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IDisposable"
+      ],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "relayConfig",
+              "type": "AzureRelayDetails",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "remoteForwarders",
+              "type": "IDictionary<string, IRemoteForwarder>",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "IsOpen",
+          "type": "bool",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": true,
+          "is_static": false
+        }
+      ],
+      "methods": [
+        {
+          "name": "CancellationTokenSource",
+          "return_type": "CancellationTokenSource",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Cancellations token source",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "Random",
+          "return_type": "Random",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Randoms operation",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "Close",
+          "return_type": "async void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Closes operation",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "InvalidOperationException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Invalids operation exception",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "Dispose",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Disposes operation",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "Open",
+          "return_type": "async Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Opens operation",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "InvalidOperationException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Invalids operation exception",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "RelayConnectionStringBuilder",
+          "return_type": "RelayConnectionStringBuilder",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Relays connection string builder",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "Uri",
+          "return_type": "Uri",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "RelayConfiguration.NameSpace",
+              "type": "\"sb://\" +",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Uris operation",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "HybridConnectionListener",
+          "return_type": "HybridConnectionListener",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "relayConnectionStringBuilder.ToString(",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Hybrids connection listener",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "ForwarderEventArgs",
+          "return_type": "ForwarderEventArgs",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "RelayConfiguration.Name",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "RelayConfiguration.NameSpace",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Forwarders event args",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "AcceptLoopAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Accepts loop async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "AcceptLoopAsync",
+          "return_type": "async Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Accepts loop async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "HandleRelayConnectionAsync",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "hybridConnectionStream",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Handles relay connection async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "ex",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "HandleRelayConnectionAsync",
+          "return_type": "async Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "hybridConnectionStream",
+              "type": "HybridConnectionStream",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Handles relay connection async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "using",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "hybridConnectionStream",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Usings operation",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "CloseConnection",
+          "return_type": "await",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "hybridConnectionStream",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Closes connection",
+          "generic_params": [],
+          "overloads": 4
+        },
+        {
+          "name": "CloseConnection",
+          "return_type": "await",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "hybridConnectionStream",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Closes connection",
+          "generic_params": [],
+          "overloads": 4
+        },
+        {
+          "name": "CloseConnection",
+          "return_type": "await",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "hybridConnectionStream",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Closes connection",
+          "generic_params": [],
+          "overloads": 4
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "TaskCanceledException",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "ex2",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "CloseConnection",
+          "return_type": "async Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "hybridConnectionStream",
+              "type": "HybridConnectionStream",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Closes connection",
+          "generic_params": [],
+          "overloads": 4
+        },
+        {
+          "name": "CancellationTokenSource",
+          "return_type": "CancellationTokenSource",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "TimeSpan.FromMinutes(1.0",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Cancellations token source",
+          "generic_params": [],
+          "overloads": 2
+        }
+      ],
+      "events": [
+        {
+          "name": "Connecting",
+          "type": "EventHandler",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "Offline",
+          "type": "EventHandler",
+          "access": "public",
+          "is_static": false
+        },
+        {
+          "name": "Online",
+          "type": "EventHandler",
+          "access": "public",
+          "is_static": false
+        }
+      ],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/PortBridge/RemoteForwardBridge.cs"
+    },
+    {
+      "name": "StreamPump",
+      "namespace": "OneStream.Shared.PortBridge",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "catch",
+          "type": "",
+          "access": "public",
+          "has_getter": false,
+          "has_setter": false,
+          "is_static": false
+        }
+      ],
+      "methods": [
+        {
+          "name": "RunAsync",
+          "return_type": "async Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "source",
+              "type": "Stream",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "target",
+              "type": "Stream",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "shutdownAction",
+              "type": "Action",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "cancellationToken",
+              "type": "CancellationToken",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "dataArrived",
+              "type": "Action",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "remoteEndPoint",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Runs async",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "InvalidOperationException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "writable\"",
+              "type": "\"Target Stream is not",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Invalids operation exception",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "InvalidOperationException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "readable\"",
+              "type": "\"Source Stream is not",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Invalids operation exception",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "OperationCanceledException",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "ex2",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 2
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/PortBridge/StreamPump.cs"
+    },
+    {
+      "name": "TcpRemoteForwarder",
+      "namespace": "OneStream.Shared.PortBridge",
+      "type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IRemoteRequestForwarder",
+        "IRemoteForwarder"
+      ],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "relayConfig",
+              "type": "AzureRelayDetails",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "relayName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "portName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "targetServer",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "targetPort",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "targetPath",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "isHttpForwarder",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "httpUseTLS",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "PortName",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "catch",
+          "type": "",
+          "access": "public",
+          "has_getter": false,
+          "has_setter": false,
+          "is_static": false
+        }
+      ],
+      "methods": [
+        {
+          "name": "HttpClientHandler",
+          "return_type": "HttpClientHandler",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Https client handler",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "HttpClient",
+          "return_type": "HttpClient",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "httpClientHandler",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Https client",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "UriBuilder",
+          "return_type": "UriBuilder",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "portName",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "targetServer",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "targetPort",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "targetPath",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Uris builder",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "HandleConnectionAsync",
+          "return_type": "async Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "hybridConnectionStream",
+              "type": "HybridConnectionStream",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Handles connection async",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "TcpClient",
+          "return_type": "TcpClient",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Tcps client",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "CancellationTokenSource",
+          "return_type": "CancellationTokenSource",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Cancellations token source",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "HandleRequest",
+          "return_type": "async Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "ctx",
+              "type": "RelayedHttpListenerContext",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Handles request",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "ArgumentNullException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "\"httpClient\"",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Arguments null exception",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "SendResponseAsync",
+          "return_type": "await",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "ctx",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "httpClient.SendAsync(request",
+              "type": "await",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Sends response async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "ex",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "SendErrorResponse",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "ex",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "ctx",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Sends error response",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "StringBuilder",
+          "return_type": "StringBuilder",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Strings builder",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "CreateHttpRequestMessage",
+          "return_type": "HttpRequestMessage",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "context",
+              "type": "RelayedHttpListenerContext",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Creates http request message",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "ArgumentNullException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "\"httpClient\"",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Arguments null exception",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "ArgumentNullException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "\"BaseAddress\"",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Arguments null exception",
+          "generic_params": [],
+          "overloads": 3
+        },
+        {
+          "name": "HttpRequestMessage",
+          "return_type": "HttpRequestMessage",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Https request message",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "StreamContent",
+          "return_type": "StreamContent",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "context.Request.InputStream",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Streams content",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "MediaTypeHeaderValue",
+          "return_type": "MediaTypeHeaderValue",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "text",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Medias type header value",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "Uri",
+          "return_type": "Uri",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "httpClient.BaseAddress",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "param",
+              "type": "text2",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Uris operation",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "HttpMethod",
+          "return_type": "HttpMethod",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "context.Request.HttpMethod",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Https method",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "SendResponseAsync",
+          "return_type": "async Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "context",
+              "type": "RelayedHttpListenerContext",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "responseMessage",
+              "type": "HttpResponseMessage",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Sends response async",
+          "generic_params": [],
+          "overloads": 2
+        },
+        {
+          "name": "await",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "responseMessage.Content.ReadAsStreamAsync(",
+              "type": "await",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Awaits operation",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "SendErrorResponse",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "e",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "context",
+              "type": "RelayedHttpListenerContext",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Sends error response",
+          "generic_params": [],
+          "overloads": 2
+        }
+      ],
+      "events": [
+        {
+          "name": "OnDataArrived",
+          "type": "Action",
+          "access": "public",
+          "is_static": false
+        }
+      ],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/PortBridge/TcpRemoteForwarder.cs"
+    },
+    {
+      "name": "ForwarderEventArgs",
+      "namespace": "OneStream.Shared.PortBridge",
+      "type": "class",
+      "modifiers": [
+        "public",
+        "sealed"
+      ],
+      "base_class": "EventArgs",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "relayName",
+              "type": "string",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "RelayNameSpace",
+              "type": "string",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "RelayNameSpace",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        },
+        {
+          "name": "RelayName",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/PortBridge/ForwarderEventArgs.cs",
+      "source_code": "public sealed class ForwarderEventArgs : EventArgs\n{\n\tpublic string RelayNameSpace { get; } = string.Empty;\n\n\tpublic string RelayName { get; } = string.Empty;\n\n\tpublic ForwarderEventArgs(string relayName, string RelayNameSpace)\n\t{\n\t\tRelayName = relayName;\n\t\tthis.RelayNameSpace = RelayNameSpace;\n\t}\n}"
+    }
+  ],
+  "interfaces": [
+    {
+      "name": "IClientConnectionForwarder",
+      "namespace": "OneStream.Shared.PortBridge",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "Close",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Closes operation",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "Open",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Opens operation",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "Dispose",
+          "return_type": "void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Disposes operation",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/PortBridge/IClientConnectionForwarder.cs",
+      "source_code": "public interface IClientConnectionForwarder\n{\n\tvoid Close();\n\n\tvoid Open();\n\n\tvoid Dispose();\n}"
+    },
+    {
+      "name": "IRemoteRequestForwarder",
+      "namespace": "OneStream.Shared.PortBridge",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [
+        "IRemoteForwarder"
+      ],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [],
+      "methods": [
+        {
+          "name": "HandleRequest",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "ctx",
+              "type": "RelayedHttpListenerContext",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Handles request",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/PortBridge/IRemoteRequestForwarder.cs",
+      "source_code": "public interface IRemoteRequestForwarder : IRemoteForwarder\n{\n\tTask HandleRequest(RelayedHttpListenerContext ctx);\n}"
+    },
+    {
+      "name": "IRemoteForwarder",
+      "namespace": "OneStream.Shared.PortBridge",
+      "type": "interface",
+      "modifiers": [
+        "public"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [],
+      "properties": [
+        {
+          "name": "PortName",
+          "type": "string",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        }
+      ],
+      "methods": [
+        {
+          "name": "HandleConnectionAsync",
+          "return_type": "Task",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "hybridConnectionStream",
+              "type": "HybridConnectionStream",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Handles connection async",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/PortBridge/IRemoteForwarder.cs",
+      "source_code": "public interface IRemoteForwarder\n{\n\tstring PortName { get; }\n\n\tTask HandleConnectionAsync(HybridConnectionStream hybridConnectionStream);\n}"
+    }
+  ],
+  "structs": [],
+  "delegates": [],
+  "enums": []
+}

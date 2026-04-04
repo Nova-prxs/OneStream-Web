@@ -1,0 +1,148 @@
+{
+  "namespace": "OneStream.Client.WpfVb.ConfirmationRulesPage",
+  "generated_at": "2025-12-08T19:28:52.048373",
+  "statistics": {
+    "classes": 2,
+    "interfaces": 0,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 2,
+    "total_methods": 0,
+    "total_properties": 0
+  },
+  "classes": [
+    {
+      "name": "UserStateNodeType",
+      "namespace": "OneStream.Client.WpfVb.ConfirmationRulesPage",
+      "type": "class",
+      "modifiers": [
+        "private"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "nodeType",
+              "type": "TreeNodeTypes",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "objProps",
+              "type": "object",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [
+        "DesignerGenerated"
+      ],
+      "source_file": "output/types/OneStream/Client/WpfVb/ConfirmationRulesPage.cs"
+    },
+    {
+      "name": "UserStateNodeActions",
+      "namespace": "OneStream.Client.WpfVb.ConfirmationRulesPage",
+      "type": "class",
+      "modifiers": [
+        "private"
+      ],
+      "base_class": null,
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "addToTree",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "expandNode",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [],
+      "methods": [],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Client/WpfVb/ConfirmationRulesPage.cs"
+    }
+  ],
+  "interfaces": [],
+  "structs": [],
+  "delegates": [],
+  "enums": [
+    {
+      "name": "TreeNodeTypes",
+      "namespace": "OneStream.Client.WpfVb.ConfirmationRulesPage",
+      "underlying_type": "int",
+      "is_flags": false,
+      "values": [
+        {
+          "name": "Unknown",
+          "value": -1
+        },
+        {
+          "name": "GroupParent",
+          "value": 101
+        },
+        {
+          "name": "ProfileParent",
+          "value": 110
+        },
+        {
+          "name": "Group",
+          "value": 200
+        },
+        {
+          "name": "Profile",
+          "value": 300
+        },
+        {
+          "name": "ProfileMember",
+          "value": 301
+        }
+      ],
+      "access": "public"
+    },
+    {
+      "name": "PropertyObjectTypes",
+      "namespace": "OneStream.Client.WpfVb.ConfirmationRulesPage",
+      "underlying_type": "int",
+      "is_flags": false,
+      "values": [
+        {
+          "name": "Unknown",
+          "value": -1
+        },
+        {
+          "name": "RuleGroup",
+          "value": 1
+        },
+        {
+          "name": "RuleProfile",
+          "value": 2
+        }
+      ],
+      "access": "public"
+    }
+  ]
+}

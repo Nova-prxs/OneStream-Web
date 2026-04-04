@@ -1,0 +1,376 @@
+{
+  "namespace": "OneStream.Shared.Common.ZipExtensions",
+  "generated_at": "2025-12-08T19:28:52.150383",
+  "statistics": {
+    "classes": 1,
+    "interfaces": 0,
+    "structs": 0,
+    "delegates": 0,
+    "enums": 0,
+    "total_methods": 15,
+    "total_properties": 1
+  },
+  "classes": [
+    {
+      "name": "MaxLengthStream",
+      "namespace": "OneStream.Shared.Common.ZipExtensions",
+      "type": "class",
+      "modifiers": [
+        "internal",
+        "sealed"
+      ],
+      "base_class": "Stream",
+      "interfaces": [],
+      "generic_params": [],
+      "constructors": [
+        {
+          "access": "public",
+          "parameters": [
+            {
+              "name": "stream",
+              "type": "Stream",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "maxLength",
+              "type": "long",
+              "optional": false,
+              "default": null
+            }
+          ]
+        }
+      ],
+      "properties": [
+        {
+          "name": "MaxLength",
+          "type": "long",
+          "access": "public",
+          "has_getter": true,
+          "has_setter": false,
+          "is_static": false
+        }
+      ],
+      "methods": [
+        {
+          "name": "XFException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "NotSupportedException(",
+              "type": "new",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Xs f exception",
+          "generic_params": [],
+          "overloads": 4
+        },
+        {
+          "name": "XFException",
+          "return_type": "object",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "ArgumentNullException(\"stream\"",
+              "type": "new",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Xs f exception",
+          "generic_params": [],
+          "overloads": 4
+        },
+        {
+          "name": "Read",
+          "return_type": "override int",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "buffer",
+              "type": "byte[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "offset",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "count",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Reads operation",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "XFException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "GeneralStrings.StreamTooLarge",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Xs f exception",
+          "generic_params": [],
+          "overloads": 4
+        },
+        {
+          "name": "catch",
+          "return_type": "",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "innerException",
+              "type": "Exception",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Catchs operation",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "XFException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "param",
+              "type": "innerException",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Xs f exception",
+          "generic_params": [],
+          "overloads": 4
+        },
+        {
+          "name": "Flush",
+          "return_type": "override void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Flushs operation",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "NotSupportedException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Nots supported exception",
+          "generic_params": [],
+          "overloads": 4
+        },
+        {
+          "name": "Seek",
+          "return_type": "override long",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "offset",
+              "type": "long",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "origin",
+              "type": "SeekOrigin",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Seeks operation",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "NotSupportedException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Nots supported exception",
+          "generic_params": [],
+          "overloads": 4
+        },
+        {
+          "name": "SetLength",
+          "return_type": "override void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "value",
+              "type": "long",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Sets length",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "NotSupportedException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Nots supported exception",
+          "generic_params": [],
+          "overloads": 4
+        },
+        {
+          "name": "Write",
+          "return_type": "override void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "buffer",
+              "type": "byte[]",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "offset",
+              "type": "int",
+              "optional": false,
+              "default": null
+            },
+            {
+              "name": "count",
+              "type": "int",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Writes operation",
+          "generic_params": [],
+          "overloads": 1
+        },
+        {
+          "name": "NotSupportedException",
+          "return_type": "throw new",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [],
+          "description": "Nots supported exception",
+          "generic_params": [],
+          "overloads": 4
+        },
+        {
+          "name": "Dispose",
+          "return_type": "protected override void",
+          "access": "public",
+          "is_static": false,
+          "is_virtual": false,
+          "is_override": false,
+          "is_abstract": false,
+          "is_async": false,
+          "parameters": [
+            {
+              "name": "disposing",
+              "type": "bool",
+              "optional": false,
+              "default": null
+            }
+          ],
+          "description": "Disposes operation",
+          "generic_params": [],
+          "overloads": 1
+        }
+      ],
+      "events": [],
+      "nested_types": [],
+      "attributes": [],
+      "source_file": "output/types/OneStream/Shared/Common/ZipExtensions.cs"
+    }
+  ],
+  "interfaces": [],
+  "structs": [],
+  "delegates": [],
+  "enums": []
+}

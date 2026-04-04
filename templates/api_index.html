@@ -1,0 +1,51 @@
+{% extends "docs_base.html" %}
+
+{% block title %}API Reference — OneStream Docs{% endblock %}
+
+{% block content %}
+<hgroup>
+  <h1>OneStream API Reference</h1>
+  <p>{{ classes | length }} classes across {{ namespaces | length }} namespaces</p>
+</hgroup>
+
+<div class="api-filter-bar">
+  <input type="text" id="class-filter" placeholder="Filter classes..." oninput="filterClasses()" autofocus>
+  <select id="ns-filter" onchange="filterClasses()">
+    <option value="">All namespaces</option>
+    {% for ns in namespaces %}
+    <option value="{{ ns.slug }}">{{ ns.name }} ({{ ns.class_count }})</option>
+    {% endfor %}
+  </select>
+</div>
+
+<div class="api-class-list" id="class-list">
+  {% for cls in classes %}
+  <a href="/docs/{{ cls.slug }}" class="api-class-item" data-name="{{ cls.name|lower }}" data-ns="{{ cls.namespace|lower }}">
+    <span class="api-type-badge {{ cls.type }}">{{ cls.type[0]|upper }}</span>
+    <div class="api-class-info">
+      <strong>{{ cls.name }}</strong>
+      <small>{{ cls.namespace }}</small>
+    </div>
+    <div class="api-class-counts">
+      {% if cls.method_count %}<span title="Methods">{{ cls.method_count }}m</span>{% endif %}
+      {% if cls.property_count %}<span title="Properties">{{ cls.property_count }}p</span>{% endif %}
+    </div>
+  </a>
+  {% endfor %}
+</div>
+
+<script>
+var items = document.querySelectorAll('.api-class-item');
+function filterClasses() {
+  var text = document.getElementById('class-filter').value.toLowerCase();
+  var ns = document.getElementById('ns-filter').value.toLowerCase();
+  var shown = 0;
+  items.forEach(function(el) {
+    var nameMatch = !text || el.dataset.name.indexOf(text) !== -1;
+    var nsMatch = !ns || el.dataset.ns.indexOf(ns) !== -1;
+    el.style.display = (nameMatch && nsMatch) ? '' : 'none';
+    if (nameMatch && nsMatch) shown++;
+  });
+}
+</script>
+{% endblock %}
