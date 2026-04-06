@@ -10,6 +10,6 @@ COPY . .
 ENV HOST=0.0.0.0
 ENV FLASK_DEBUG=0
 
-EXPOSE 5000
+EXPOSE 5001
 
 CMD ["python", "app.py"]

@@ -1,0 +1,11 @@
+services:
+  web:
+    build: .
+    ports:
+      - "5001:5001"
+    environment:
+      HOST: "0.0.0.0"
+      FLASK_DEBUG: "0"
+    volumes:
+      - .:/app
+    restart: unless-stopped
