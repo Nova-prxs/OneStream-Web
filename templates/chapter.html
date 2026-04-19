@@ -3,26 +3,19 @@
 {% block title %}{{ chapter.metadata.title }} — {{ chapter.book_title }}{% endblock %}
 
 {% block content %}
-<nav class="breadcrumb">
-  <a href="/">Home</a>
-  <span>&rsaquo;</span>
-  <a href="/exam-prep/guide/{{ chapter.book_slug }}">{{ chapter.book_title }}</a>
-  <span>&rsaquo;</span>
-  <span>{{ chapter.metadata.title }}</span>
+<nav class="nv-crumb">
+  <a href="/">Portal</a><span class="sep">/</span>
+  <a href="/exam-prep/guide/">Study Books</a><span class="sep">/</span>
+  <a href="/exam-prep/guide/{{ chapter.book_slug }}">{{ chapter.book_title }}</a><span class="sep">/</span>
+  <span class="current">{{ chapter.metadata.title }}</span>
 </nav>
 
-<h1>{{ chapter.metadata.title }}</h1>
+<section class="nv-hero" style="margin-bottom: 16px;">
+  <span class="nv-eyebrow">{{ chapter.book_title }}</span>
+  <h1>{{ chapter.metadata.title }}</h1>
+</section>
 
 <div class="chapter-layout">
-  <aside class="toc-sidebar">
-    <details open>
-      <summary><strong>Table of Contents</strong></summary>
-      <nav class="toc">
-        {{ chapter.toc | safe }}
-      </nav>
-    </details>
-  </aside>
-
   <div class="chapter-content">
     {{ chapter.html | safe }}
 
@@ -30,7 +23,7 @@
     {% if mini_quiz %}
     <div class="mini-quiz" id="mini-quiz">
       <h3>Test Your Understanding</h3>
-      <p><small>{{ mini_quiz|length }} questions related to this chapter</small></p>
+      <p>{{ mini_quiz|length }} questions related to this chapter</p>
       {% for q in mini_quiz %}
       {% set qi = loop.index0 %}
       <div class="mini-quiz-question" id="mq-{{ qi }}">
@@ -53,28 +46,37 @@
     {# User notes section #}
     <div class="chapter-notes">
       <details>
-        <summary><strong>My Notes</strong></summary>
+        <summary>My Notes</summary>
         <textarea id="chapter-notes" placeholder="Add your study notes here..." oninput="saveNotes()"></textarea>
-        <small class="notes-saved" id="notes-saved">Saved</small>
-        <div style="margin-top: 0.5rem">
-          <button class="outline" style="margin:0;padding:0.3rem 0.6rem;font-size:0.8rem" onclick="HL.downloadChapterHighlights('{{ chapter.book_slug }}', '{{ chapter.metadata.file | chapter_slug }}')">Export chapter to MD</button>
-          <button class="outline" style="margin:0;padding:0.3rem 0.6rem;font-size:0.8rem" onclick="HL.openInObsidian('{{ chapter.book_slug }}', '{{ chapter.metadata.file | chapter_slug }}')">Open in Obsidian</button>
+        <div><small class="notes-saved" id="notes-saved">Saved</small></div>
+        <div style="display: flex; gap: 8px; margin-top: 12px;">
+          <button class="nv-btn nv-btn--ghost nv-btn--small" onclick="HL.downloadChapterHighlights('{{ chapter.book_slug }}', '{{ chapter.metadata.file | chapter_slug }}')">Export to MD</button>
+          <button class="nv-btn nv-btn--ghost nv-btn--small" onclick="HL.openInObsidian('{{ chapter.book_slug }}', '{{ chapter.metadata.file | chapter_slug }}')">Open in Obsidian</button>
         </div>
       </details>
       <p class="pen-mode-hint">Tip: Use Apple Pencil to highlight text directly — just select with the pen.</p>
     </div>
   </div>
+
+  <aside class="toc-sidebar">
+    <details open>
+      <summary>Table of Contents</summary>
+      <nav class="toc">
+        {{ chapter.toc | safe }}
+      </nav>
+    </details>
+  </aside>
 </div>
 
 <nav class="chapter-nav">
   <div>
     {% if prev_chapter %}
-    <a href="/exam-prep/guide/{{ chapter.book_slug }}/{{ prev_chapter.file | chapter_slug }}">&larr; Previous: {{ prev_chapter.title }}</a>
+    <a href="/exam-prep/guide/{{ chapter.book_slug }}/{{ prev_chapter.file | chapter_slug }}">&larr; {{ prev_chapter.title }}</a>
     {% endif %}
   </div>
   <div>
     {% if next_chapter %}
-    <a href="/exam-prep/guide/{{ chapter.book_slug }}/{{ next_chapter.file | chapter_slug }}">Next: {{ next_chapter.title }} &rarr;</a>
+    <a href="/exam-prep/guide/{{ chapter.book_slug }}/{{ next_chapter.file | chapter_slug }}">{{ next_chapter.title }} &rarr;</a>
     {% endif %}
   </div>
 </nav>
