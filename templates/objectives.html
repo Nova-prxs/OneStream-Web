@@ -2,33 +2,35 @@
 {% block title %}{{ exam.name }} Study by Objectives — OneStream Study Guide{% endblock %}
 {% block content %}
 
-<nav class="breadcrumb">
-  <a href="/">Home</a> &rsaquo;
-  <a href="/exam-prep/{{ exam_id }}/quiz">Quiz</a> &rsaquo;
-  <span>Study by Objectives</span>
+<nav class="nv-crumb">
+  <a href="/">Portal</a><span class="sep">/</span>
+  <a href="/exam-prep/{{ exam_id }}/quiz">{{ exam.name }} Quiz</a><span class="sep">/</span>
+  <span class="current">Study by Objectives</span>
 </nav>
 
-<h1>{{ exam.name }} — Study by Objectives</h1>
-<p>Track your mastery of each certification objective. The exam tests specific objectives — study them one by one for complete coverage.</p>
+<section class="nv-hero" style="margin-bottom: 16px;">
+  <span class="nv-eyebrow">{{ objectives|length }} certification objectives</span>
+  <h1>Study by <span style="color: var(--nova-coral);">objective</span></h1>
+  <p>Track your mastery per certification objective. The exam targets specific objectives — study them one by one for complete coverage.</p>
+</section>
 
 {# Concept Map — #8 interactive overview #}
 <article class="concept-map-card">
   <header><strong>OneStream Platform Concept Map</strong></header>
   <div class="concept-map" id="concept-map">
     <div class="concept-node concept-root">
-      <span class="concept-label">OneStream Platform</span>
+      <span class="concept-label">Platform sections</span>
       <div class="concept-children">
         {% for section in sections %}
         <div class="concept-node concept-section">
           <a href="/exam-prep/{{ exam_id }}/quiz/{{ section.slug }}" class="concept-label concept-link">
-            {{ section.name }} <small>({{ section.weight }}%)</small>
+            {{ section.name }} <small>{{ section.weight }}% of exam</small>
           </a>
         </div>
         {% endfor %}
       </div>
     </div>
   </div>
-  <small>Click a section to practice its questions. Percentages show exam weight.</small>
 </article>
 
 {# Overall objective completion #}
