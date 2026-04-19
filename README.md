@@ -29,12 +29,23 @@ Self-contained web application for **OS-201 OneStream Core Platform Architect** 
 ## Tech Stack
 
 - **Backend**: Python / Flask
-- **Frontend**: Pico CSS + custom Nova Praxis theme (light/dark mode)
+- **Frontend**: Nova Design System (custom CSS, no framework) with light/dark theme
 - **Search**: SQLite FTS5 (in-memory)
 - **Icons**: Phosphor Icons
 - **Fonts**: Inter + JetBrains Mono
 
 No build step, no npm, no external APIs. Single `python app.py` command.
+
+### Nova Design System
+
+The portal UI uses a custom design system (`Nova`). All styling lives in:
+
+- `static/css/nova-tokens.css` — design tokens (colors, spacing, typography, radii, shadows)
+- `static/css/nova-app.css` — components and layout (sidebar, cards, pillars, tables, code blocks, etc.)
+- `static/css/pygments.css` — Pygments default light styles (dark-mode tokens overridden in `nova-app.css`)
+- `static/css/style.css` — runtime-only highlight classes injected by `static/js/highlights.js`
+
+Brand assets in `static/img/`: `nova-logo.png` (sidebar mark), `bg-coral.jpg`, `bg-teal.jpg`, `bg-dark.png` (hero card grain). The `design_handoff_onestream_nova_portal/` directory contains the original handoff reference (do not load at runtime).
 
 ## Quick Start
 
@@ -59,15 +70,35 @@ docker run -d -p 5050:5001 --restart unless-stopped --name onestream-prep onestr
 ## Project Structure
 
 ```
-app.py              # Flask application (routes, caching, API)
-lib/                # Backend modules (search, API docs, rules, extensions)
-templates/          # Jinja2 templates
-static/             # CSS, JS, icons
-output/             # Rendered book chapters and images
-content/            # Extension guide markdown
-Business Rule/      # VB.NET business rule source files
-OneStreamMCP/       # MCP server knowledge base
+app.py                                  # Flask application (routes, caching, API)
+lib/                                    # Backend modules (search, API docs, rules, extensions)
+templates/                              # Jinja2 templates (extend base.html / docs_base.html)
+static/css/                             # Nova Design System stylesheets
+static/js/                              # highlights.js (text highlighting), theme-toggle.js
+static/img/                             # Brand assets (nova-logo.png, hero textures)
+output/                                 # Rendered book chapters and images
+content/                                # Extension guide markdown
+Business Rule/                          # VB.NET business rule source files
+OneStreamMCP/                           # MCP server knowledge base
+design_handoff_onestream_nova_portal/   # Original Nova design handoff (reference only)
 ```
+
+## Routes
+
+| Path | Purpose |
+|---|---|
+| `/` | Portal landing page |
+| `/tools/pomodoro` | Pomodoro timer |
+| `/exam-prep/<exam>/quiz` | Quiz selector / quiz runner |
+| `/exam-prep/<exam>/exam` | Timed 60-question exam simulation |
+| `/exam-prep/<exam>/progress` | Per-section progress tracking |
+| `/exam-prep/<exam>/flashcards` | Flashcards |
+| `/books/<book>/<chapter>` | Reference book chapter viewer |
+| `/glossary`, `/highlights` | Glossary and saved highlights |
+| `/docs/api/`, `/docs/api/<class>` | API reference index + class detail |
+| `/docs/rules/`, `/docs/rules/<type>/<rule>` | Business rules browser + source viewer |
+| `/docs/extension/` | VS Code extension + MCP server guide |
+| `/search` | Full-text search across chapters |
 
 ## License
 
