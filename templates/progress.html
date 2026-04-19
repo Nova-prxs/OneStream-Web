@@ -3,20 +3,26 @@
 {% block title %}{{ exam.name }} Progress Dashboard — OneStream Study Guide{% endblock %}
 
 {% block content %}
-<h1>{{ exam.name }} Progress Dashboard</h1>
+<nav class="nv-crumb">
+  <a href="/">Portal</a><span class="sep">/</span>
+  <a href="/exam-prep/{{ exam_id }}/quiz">{{ exam.name }} Quiz</a><span class="sep">/</span>
+  <span class="current">Progress</span>
+</nav>
+
+<section class="nv-hero" style="margin-bottom: 24px;">
+  <span class="nv-eyebrow">Performance dashboard</span>
+  <h1>{{ exam.name }} <span style="color: var(--nova-coral);">progress</span></h1>
+</section>
 
 {# Overall summary card #}
 <article class="progress-summary">
-  <header>
-    <strong>Overall Progress</strong>
-  </header>
+  <header>Overall Progress</header>
   <p>
     <span id="overall-answered" class="progress-big">0</span>
-    / <span id="overall-total">0</span> questions answered
-    — <span id="overall-pct">0</span>% correct
   </p>
+  <p>of <span id="overall-total">0</span> questions answered · <strong id="overall-pct">0</strong>% correct</p>
   <progress id="overall-bar" value="0" max="100">0%</progress>
-  <p class="pass-estimate unknown" id="pass-estimate">Answer some questions to see your estimated exam result</p>
+  <p style="text-align: center; margin-top: 16px;"><span class="pass-estimate unknown" id="pass-estimate">Answer some questions to see your estimated exam result</span></p>
 </article>
 
 {# Weak sections recommendation #}
@@ -25,7 +31,7 @@
 </div>
 
 {# Per-section breakdown table #}
-<figure>
+<div class="nv-card nv-card--table" style="margin-top: 24px;">
   <table>
     <thead>
       <tr>
@@ -41,14 +47,14 @@
     <tbody id="progress-body">
       {% for section in sections %}
       <tr id="row-{{ section.slug }}">
-        <td><a href="/exam-prep/{{ exam_id }}/quiz/{{ section.slug }}">{{ section.name }}</a></td>
+        <td><a href="/exam-prep/{{ exam_id }}/quiz/{{ section.slug }}" style="color: var(--nova-coral); font-weight: 600;">{{ section.name }}</a></td>
         <td>{{ section.weight }}%</td>
         <td><div class="section-bar" id="bar-{{ section.slug }}"></div></td>
         <td id="answered-{{ section.slug }}">—</td>
         <td id="correct-{{ section.slug }}">—</td>
         <td id="score-{{ section.slug }}">—</td>
         <td>
-          <button class="reset-btn outline secondary" onclick="resetSection('{{ section.slug }}', '{{ section.name }}')">
+          <button class="reset-btn" onclick="resetSection('{{ section.slug }}', '{{ section.name }}')">
             Reset
           </button>
         </td>
@@ -56,28 +62,28 @@
       {% endfor %}
     </tbody>
   </table>
-</figure>
+</div>
 
 {# Exam History Chart — #9 #}
 <article class="exam-history" id="exam-history-section" style="display:none">
-  <header><strong>Exam Simulation History</strong></header>
+  <header>Exam Simulation History</header>
   <div class="exam-history-chart" id="exam-history-chart"></div>
   <div class="exam-history-list" id="exam-history-list"></div>
-  <button class="outline reset-btn" onclick="clearExamHistory()">Clear History</button>
+  <button class="reset-btn" style="margin-top: 16px !important;" onclick="clearExamHistory()">Clear History</button>
 </article>
 
 {# Study Tools quick links #}
 <div class="study-tools-links">
-  <a href="/exam-prep/{{ exam_id }}/review" role="button" class="outline">Review Failed Questions</a>
-  <a href="/exam-prep/{{ exam_id }}/objectives" role="button" class="outline">Study by Objectives</a>
-  <a href="/exam-prep/{{ exam_id }}/summary" role="button" class="outline">Section Summaries</a>
-  <a href="/exam-prep/{{ exam_id }}/glossary" role="button" class="outline">Glossary</a>
+  <a href="/exam-prep/{{ exam_id }}/review" class="nv-btn nv-btn--ghost">Review Failed Questions</a>
+  <a href="/exam-prep/{{ exam_id }}/objectives" class="nv-btn nv-btn--ghost">Study by Objectives</a>
+  <a href="/exam-prep/{{ exam_id }}/summary" class="nv-btn nv-btn--ghost">Section Summaries</a>
+  <a href="/exam-prep/{{ exam_id }}/glossary" class="nv-btn nv-btn--ghost">Glossary</a>
 </div>
 
 <div class="export-import-btns">
-  <button class="reset-all contrast" onclick="resetAll()">Reset All Progress</button>
-  <button class="outline" onclick="exportProgress()">Export Progress</button>
-  <button class="outline" onclick="document.getElementById('import-file').click()">Import Progress</button>
+  <button class="reset-all" onclick="resetAll()">Reset All Progress</button>
+  <button onclick="exportProgress()">Export Progress</button>
+  <button onclick="document.getElementById('import-file').click()">Import Progress</button>
   <input type="file" id="import-file" accept=".json" style="display:none" onchange="importProgress(this)">
 </div>
 
