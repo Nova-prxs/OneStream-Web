@@ -1437,6 +1437,94 @@ kbd {
   color: var(--color-text-3);
 }
 
+/* -------------------- Glossary -------------------- */
+
+.glossary-search {
+  width: 100%;
+  height: 44px;
+  padding: 0 16px;
+  border: 1px solid var(--nova-line);
+  background: var(--nova-paper);
+  color: var(--color-text);
+  border-radius: var(--r-md);
+  font-size: 14px;
+  margin: 16px 0;
+  transition: border-color 140ms;
+}
+.glossary-search:focus {
+  outline: 0;
+  border-color: var(--nova-coral);
+  box-shadow: 0 0 0 3px rgba(255, 89, 72, 0.15);
+}
+
+.glossary-alpha {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 16px 0;
+}
+.alpha-link {
+  display: inline-grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--r-sm);
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  border: 1px solid var(--nova-line);
+  background: var(--nova-paper);
+  color: var(--color-text);
+  transition: background 140ms, border-color 140ms, color 140ms;
+}
+.alpha-link:hover {
+  background: var(--nova-coral);
+  color: #FFFFFF;
+  border-color: var(--nova-coral);
+}
+.alpha-disabled,
+.alpha-disabled:hover {
+  opacity: 0.3;
+  cursor: default;
+  background: transparent;
+  color: var(--color-text-3);
+  border-color: var(--nova-line);
+}
+
+#glossary-count {
+  margin: 12px 0;
+  color: var(--color-text-3);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+}
+
+.glossary-list {
+  columns: 2;
+  column-gap: 32px;
+  margin-top: 16px;
+}
+@media (max-width: 768px) {
+  .glossary-list { columns: 1; }
+}
+.glossary-entry {
+  break-inside: avoid;
+  margin-bottom: 8px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--nova-line-soft);
+}
+.glossary-term a {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-text);
+  text-decoration: none;
+}
+.glossary-term a:hover { color: var(--nova-coral); }
+.glossary-source {
+  margin-top: 4px;
+  font-size: 12px;
+  color: var(--color-text-3);
+}
+
 /* -------------------- Utility -------------------- */
 .stack-4  > * + * { margin-top: 4px; }
 .stack-8  > * + * { margin-top: 8px; }
