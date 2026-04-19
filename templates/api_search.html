@@ -3,13 +3,20 @@
 {% block title %}Search APIs — OneStream Docs{% endblock %}
 
 {% block content %}
-<h1>Search API Documentation</h1>
+<nav class="nv-crumb">
+  <a href="/">Portal</a><span class="sep">/</span>
+  <a href="/docs/">API Reference</a><span class="sep">/</span>
+  <span class="current">Search</span>
+</nav>
 
-<form action="/docs/search" method="get" role="search">
-  <div class="grid">
-    <input type="search" name="q" placeholder="Search classes, methods, enums..." value="{{ query }}" autofocus>
-    <button type="submit">Search</button>
-  </div>
+<section class="nv-hero" style="margin-bottom: 16px;">
+  <span class="nv-eyebrow">Full-text · classes, methods, enums</span>
+  <h1>Search the <span style="color: var(--nova-coral);">API</span></h1>
+</section>
+
+<form action="/docs/search" method="get" role="search" style="display: flex; gap: 12px; margin-bottom: 24px;">
+  <input type="search" name="q" placeholder="Search classes, methods, enums..." value="{{ query }}" autofocus class="glossary-search" style="flex: 1; margin: 0;">
+  <button type="submit" class="nv-btn nv-btn--primary">Search</button>
 </form>
 
 {% if query %}

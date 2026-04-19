@@ -3,10 +3,15 @@
 {% block title %}API Reference — OneStream Docs{% endblock %}
 
 {% block content %}
-<hgroup>
-  <h1>OneStream API Reference</h1>
-  <p>{{ classes | length }} classes across {{ namespaces | length }} namespaces</p>
-</hgroup>
+<nav class="nv-crumb">
+  <a href="/">Portal</a><span class="sep">/</span>
+  <span class="current">API Reference</span>
+</nav>
+
+<section class="nv-hero" style="margin-bottom: 8px;">
+  <span class="nv-eyebrow">{{ classes | length }} classes · {{ namespaces | length }} namespaces</span>
+  <h1>OneStream <span style="color: var(--nova-coral);">API</span></h1>
+</section>
 
 <div class="api-filter-bar">
   <input type="text" id="class-filter" placeholder="Filter classes..." oninput="filterClasses()" autofocus>
