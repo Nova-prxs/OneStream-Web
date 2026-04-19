@@ -1666,6 +1666,90 @@ kbd {
 }
 .objective-questions li { margin-bottom: 8px; line-height: 1.5; }
 
+/* -------------------- Summary (cheat sheets) -------------------- */
+
+.summary-section article header {
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-text-3);
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--nova-line-soft);
+  margin-bottom: 24px;
+}
+.summary-section article header strong {
+  font-size: 18px;
+  text-transform: none;
+  letter-spacing: -0.01em;
+  color: var(--color-text);
+  font-weight: 700;
+  margin-right: 8px;
+}
+.summary-section article footer {
+  border-top: 1px solid var(--nova-line-soft);
+  padding-top: 20px;
+  margin-top: 24px;
+}
+
+.summary-objective {
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--nova-line-soft);
+}
+.summary-objective:last-child {
+  border-bottom: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.summary-objective h4 {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--color-text);
+  margin: 0 0 14px;
+  padding: 0;
+  border: 0;
+}
+.summary-objective h4 small {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-3);
+  margin-left: 8px;
+}
+.summary-facts { font-size: 14px; line-height: 1.6; }
+.summary-fact {
+  padding: 10px 14px;
+  margin-bottom: 6px;
+  background: var(--nova-line-soft);
+  border-radius: 10px;
+  color: var(--color-text);
+}
+.summary-fact strong { color: var(--nova-coral); }
+.summary-detail { margin-top: 12px; }
+.summary-detail summary {
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--nova-teal);
+  list-style: none;
+  padding: 4px 0;
+}
+.summary-detail summary::-webkit-details-marker { display: none; }
+[data-theme="dark"] .summary-detail summary { color: var(--nova-aqua); }
+.summary-detail p {
+  margin-top: 8px;
+  padding: 12px 14px;
+  background: var(--nova-aqua-soft);
+  border-left: 3px solid var(--nova-teal);
+  border-radius: 8px;
+  font-size: 13px;
+  color: var(--color-text);
+  line-height: 1.55;
+}
+
 /* -------------------- Utility -------------------- */
 .stack-4  > * + * { margin-top: 4px; }
 .stack-8  > * + * { margin-top: 8px; }

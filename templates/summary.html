@@ -2,20 +2,23 @@
 {% block title %}{{ exam.name }} Section Summaries — OneStream Study Guide{% endblock %}
 {% block content %}
 
-<nav class="breadcrumb">
-  <a href="/">Home</a> &rsaquo;
-  <a href="/exam-prep/{{ exam_id }}/quiz">Quiz</a> &rsaquo;
-  <span>Section Summaries</span>
+<nav class="nv-crumb">
+  <a href="/">Portal</a><span class="sep">/</span>
+  <a href="/exam-prep/{{ exam_id }}/quiz">{{ exam.name }} Quiz</a><span class="sep">/</span>
+  <span class="current">Section Summaries</span>
 </nav>
 
-<h1>{{ exam.name }} Section Summaries <small>— Cheat Sheets</small></h1>
-<p>Condensed key facts per exam section, extracted from quiz questions and explanations. Use these for quick review before the exam.</p>
+<section class="nv-hero" style="margin-bottom: 16px;">
+  <span class="nv-eyebrow">Cheat sheets · {{ sections|length }} sections</span>
+  <h1>Section <span style="color: var(--nova-coral);">summaries</span></h1>
+  <p>Condensed key facts per exam section, extracted from quiz questions and explanations. Use these for a quick review before the exam.</p>
+</section>
 
 {# Section tabs #}
 <div class="quiz-filters">
-  <label>Section:</label>
+  <label>Section</label>
   {% for s in sections %}
-  <span class="filter-chip {% if loop.first %}active{% endif %}" data-filter="summary-section" data-value="{{ s.slug }}" onclick="showSummarySection('{{ s.slug }}',this)">{{ s.name }} ({{ s.weight }}%)</span>
+  <span class="filter-chip {% if loop.first %}active{% endif %}" data-filter="summary-section" data-value="{{ s.slug }}" onclick="showSummarySection('{{ s.slug }}',this)">{{ s.name }} · {{ s.weight }}%</span>
   {% endfor %}
 </div>
 
@@ -23,14 +26,14 @@
 <div class="summary-section" id="summary-{{ section.slug }}" {% if not loop.first %}style="display:none"{% endif %}>
   <article>
     <header>
-      <strong>{{ section.name }}</strong> — {{ section.weight }}% of exam — {{ section.question_count }} questions
+      <strong>{{ section.name }}</strong> {{ section.weight }}% of exam · {{ section.question_count }} questions
     </header>
 
     {# Key facts grouped by objective #}
     <div class="summary-content" id="summary-content-{{ section.slug }}"></div>
 
     <footer>
-      <a href="/exam-prep/{{ exam_id }}/quiz/{{ section.slug }}" role="button" class="outline">Practice {{ section.name }} Quiz</a>
+      <a href="/exam-prep/{{ exam_id }}/quiz/{{ section.slug }}" class="nv-btn nv-btn--primary">Practice {{ section.name }} quiz</a>
     </footer>
   </article>
 </div>
