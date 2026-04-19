@@ -3,20 +3,25 @@
 {% block title %}{{ exam.name }} Exam Quiz — OneStream Study Guide{% endblock %}
 
 {% block content %}
-<h1>{{ exam.name }} Exam Quiz</h1>
-<p>
-  Practice with <strong>{{ total_questions }}</strong> questions across
-  <strong>{{ sections|length }}</strong> exam sections. Each section is weighted
-  according to the official {{ exam.name }} certification exam blueprint.
-</p>
+<nav class="nv-crumb">
+  <a href="/">Portal</a><span class="sep">/</span>
+  <a href="/exam-prep/">Exam Prep</a><span class="sep">/</span>
+  <span class="current">{{ exam.name }} Quiz</span>
+</nav>
 
-<figure>
+<section class="nv-hero">
+  <span class="nv-eyebrow">{{ sections|length }} sections · {{ total_questions }} questions</span>
+  <h1>{{ exam.name }} <span style="color: var(--nova-coral);">quiz</span></h1>
+  <p>Practice with <strong>{{ total_questions }}</strong> questions across <strong>{{ sections|length }}</strong> exam sections, weighted by the official {{ exam.name }} certification blueprint.</p>
+</section>
+
+<div class="nv-card nv-card--table" style="margin-top: 32px;">
   <table>
     <thead>
       <tr>
         <th scope="col">#</th>
         <th scope="col">Section</th>
-        <th scope="col">Exam Weight</th>
+        <th scope="col">Weight</th>
         <th scope="col">Questions</th>
         <th scope="col">Progress</th>
         <th scope="col">Score</th>
@@ -26,7 +31,7 @@
       {% for section in sections %}
       <tr>
         <td>{{ section.number }}</td>
-        <td><a href="/exam-prep/{{ exam_id }}/quiz/{{ section.slug }}">{{ section.name }}</a></td>
+        <td><a href="/exam-prep/{{ exam_id }}/quiz/{{ section.slug }}" style="color: var(--nova-coral); font-weight: 600;">{{ section.name }}</a></td>
         <td>{{ section.weight }}%</td>
         <td>{{ section.question_count }} questions</td>
         <td id="progress-{{ section.slug }}">—</td>
@@ -45,14 +50,14 @@
       </tr>
     </tfoot>
   </table>
-</figure>
+</div>
 
-<div class="study-tools-links" style="margin-top:1rem">
-  <a href="/exam-prep/{{ exam_id }}/exam" role="button" class="outline">Exam Simulation</a>
-  <a href="/exam-prep/{{ exam_id }}/review" role="button" class="outline">Review Failed</a>
-  <a href="/exam-prep/{{ exam_id }}/objectives" role="button" class="outline">Study by Objectives</a>
-  <a href="/exam-prep/{{ exam_id }}/summary" role="button" class="outline">Section Summaries</a>
-  <a href="/exam-prep/{{ exam_id }}/glossary" role="button" class="outline">Glossary</a>
+<div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px;">
+  <a href="/exam-prep/{{ exam_id }}/exam" class="nv-btn nv-btn--ghost">Exam Simulation</a>
+  <a href="/exam-prep/{{ exam_id }}/review" class="nv-btn nv-btn--ghost">Review Failed</a>
+  <a href="/exam-prep/{{ exam_id }}/objectives" class="nv-btn nv-btn--ghost">Study by Objectives</a>
+  <a href="/exam-prep/{{ exam_id }}/summary" class="nv-btn nv-btn--ghost">Section Summaries</a>
+  <a href="/exam-prep/{{ exam_id }}/glossary" class="nv-btn nv-btn--ghost">Glossary</a>
 </div>
 
 <script>

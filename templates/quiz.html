@@ -2,14 +2,16 @@
 {% block title %}Quiz: {{ section.name }} — OneStream Study Guide{% endblock %}
 {% block content %}
 
-{# Breadcrumb: Home > Quiz > Section Name #}
-<nav aria-label="breadcrumb" class="breadcrumb">
-  <a href="/">Home</a> &rsaquo;
-  <a href="/exam-prep/{{ exam_id }}/quiz">Quiz</a> &rsaquo;
-  <span>{{ section.name }}</span>
+<nav class="nv-crumb">
+  <a href="/">Portal</a><span class="sep">/</span>
+  <a href="/exam-prep/{{ exam_id }}/quiz">{{ exam.name }} Quiz</a><span class="sep">/</span>
+  <span class="current">{{ section.name }}</span>
 </nav>
 
-<h1>{{ section.name }} <small>({{ section.weight }}% of exam)</small></h1>
+<section class="nv-hero" style="margin-bottom: 16px;">
+  <span class="nv-eyebrow">{{ section.weight }}% of exam · {{ section.question_count }} questions</span>
+  <h1>{{ section.name }}</h1>
+</section>
 
 {# Progress bar #}
 <div class="quiz-progress-bar" id="progress-bar">
@@ -18,13 +20,13 @@
 
 {# Filters #}
 <div class="quiz-filters">
-  <label>Difficulty:</label>
+  <label>Difficulty</label>
   <span class="filter-chip active" data-filter="diff" data-value="all" onclick="setFilter('diff','all',this)">All</span>
   <span class="filter-chip" data-filter="diff" data-value="Easy" onclick="setFilter('diff','Easy',this)">Easy</span>
   <span class="filter-chip" data-filter="diff" data-value="Medium" onclick="setFilter('diff','Medium',this)">Medium</span>
   <span class="filter-chip" data-filter="diff" data-value="Hard" onclick="setFilter('diff','Hard',this)">Hard</span>
 
-  <label style="margin-left:0.5rem">Status:</label>
+  <label style="margin-left:12px">Status</label>
   <span class="filter-chip active" data-filter="status" data-value="all" onclick="setFilter('status','all',this)">All</span>
   <span class="filter-chip" data-filter="status" data-value="unanswered" onclick="setFilter('status','unanswered',this)">Unanswered</span>
   <span class="filter-chip" data-filter="status" data-value="correct" onclick="setFilter('status','correct',this)">Correct</span>
@@ -33,7 +35,7 @@
 
 {# Question counter and navigation bar #}
 <div class="quiz-nav">
-  <span id="question-counter">Question 1 of {{ section.question_count }}</span>
+  <span id="question-counter" style="font-size: 13px; color: var(--color-text-2); font-weight: 600;">Question 1 of {{ section.question_count }}</span>
   <div class="quiz-nav-controls">
     <button id="btn-prev" onclick="prevQuestion()" disabled>&#8592; Prev <span class="kbd-hint"><kbd>&#8592;</kbd></span></button>
     <select id="question-select" onchange="goToQuestion(parseInt(this.value))">
@@ -42,7 +44,7 @@
       {% endfor %}
     </select>
     <button id="btn-next" onclick="nextQuestion()">Next &#8594; <span class="kbd-hint"><kbd>&#8594;</kbd></span></button>
-    <button id="btn-next-unanswered" class="btn-next-unanswered outline" onclick="nextUnanswered()">Skip to unanswered</button>
+    <button id="btn-next-unanswered" class="btn-next-unanswered" onclick="nextUnanswered()">Skip to unanswered</button>
   </div>
 </div>
 
