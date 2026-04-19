@@ -2,17 +2,21 @@
 {% block title %}{{ exam.name }} Flashcards — OneStream Study Guide{% endblock %}
 {% block content %}
 
-<nav class="breadcrumb">
-  <a href="/">Home</a> &rsaquo;
-  <span>Flashcards</span>
+<nav class="nv-crumb">
+  <a href="/">Portal</a><span class="sep">/</span>
+  <a href="/exam-prep/{{ exam_id }}/quiz">{{ exam.name }} Quiz</a><span class="sep">/</span>
+  <span class="current">Flashcards</span>
 </nav>
 
-<h1>{{ exam.name }} Flashcards <small>— Spaced Repetition</small></h1>
-<p>Cards you get wrong appear more often. Cards you know well come back less frequently. Based on the SM-2 algorithm.</p>
+<section class="nv-hero" style="margin-bottom: 16px;">
+  <span class="nv-eyebrow">Spaced repetition · SM-2 algorithm</span>
+  <h1>{{ exam.name }} <span style="color: var(--nova-coral);">flashcards</span></h1>
+  <p>Cards you get wrong come back more often. Cards you know well drift further apart.</p>
+</section>
 
 {# Section filter #}
 <div class="quiz-filters">
-  <label>Section:</label>
+  <label>Section</label>
   <span class="filter-chip active" data-filter="fc-section" data-value="all" onclick="setFCSection('all',this)">All</span>
   {% for s in sections %}
   <span class="filter-chip" data-filter="fc-section" data-value="{{ s.slug }}" onclick="setFCSection('{{ s.slug }}',this)">{{ s.name }}</span>
@@ -21,18 +25,19 @@
 
 {# Stats bar #}
 <div class="fc-stats" id="fc-stats">
-  <span>Due today: <strong id="fc-due">0</strong></span>
-  <span>Total cards: <strong id="fc-total">0</strong></span>
-  <span>Mastered: <strong id="fc-mastered">0</strong></span>
-  <button class="outline fc-reset-btn" onclick="resetFlashcards()">Reset Progress</button>
+  <span>Due today <strong id="fc-due">0</strong></span>
+  <span>Total cards <strong id="fc-total">0</strong></span>
+  <span>Mastered <strong id="fc-mastered">0</strong></span>
+  <button class="fc-reset-btn" onclick="resetFlashcards()">Reset Progress</button>
 </div>
 
 {# Card area #}
-<div id="fc-empty" style="display:none">
-  <article>
-    <header><strong>All caught up!</strong></header>
-    <p>No cards due for review right now. Come back later or select a different section.</p>
-    <button onclick="startNewCards()">Study new cards</button>
+<div id="fc-empty" style="display:none; max-width: 560px; margin: 32px auto;">
+  <article style="text-align: center;">
+    <header style="font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-text-3); margin-bottom: 12px;">Caught up</header>
+    <h3 style="margin: 0 0 12px;">All clear for now.</h3>
+    <p style="color: var(--color-text-2); margin: 0 0 24px;">No cards due for review. Come back later or pick a different section.</p>
+    <button class="nv-btn nv-btn--primary" onclick="startNewCards()">Study new cards</button>
   </article>
 </div>
 
