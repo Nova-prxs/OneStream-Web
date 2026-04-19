@@ -3,26 +3,32 @@
 {% block title %}{{ page.meta_title }} — Extension Guide{% endblock %}
 
 {% block content %}
-<nav class="breadcrumb">
-  <a href="/docs/extension/">Extension Guide</a> <span>&rsaquo;</span>
-  <span>{{ page.meta_title }}</span>
+<nav class="nv-crumb">
+  <a href="/">Portal</a><span class="sep">/</span>
+  <a href="/docs/extension/">Extension Guide</a><span class="sep">/</span>
+  <span class="current">{{ page.meta_title }}</span>
 </nav>
 
+<section class="nv-hero" style="margin-bottom: 16px;">
+  <span class="nv-eyebrow">Extension Guide</span>
+  <h1>{{ page.meta_title }}</h1>
+</section>
+
 <div class="chapter-layout">
+  <div class="chapter-content">
+    {{ page.html | safe }}
+  </div>
+
   {% if page.toc %}
   <aside class="toc-sidebar">
     <details open>
-      <summary><strong>On this page</strong></summary>
+      <summary>On this page</summary>
       <nav class="toc">
         {{ page.toc | safe }}
       </nav>
     </details>
   </aside>
   {% endif %}
-
-  <div class="chapter-content">
-    {{ page.html | safe }}
-  </div>
 </div>
 
 {# Prev/Next navigation #}
