@@ -624,21 +624,25 @@ input, textarea, select { font-family: inherit; color: inherit; }
 .quiz-nav-controls select option.q-incorrect { color: var(--nova-coral); }
 .quiz-nav-controls select option.q-unanswered { color: var(--color-text-3); }
 
-#question-card {
+#question-card,
+#review-card {
   margin: 16px 0 24px;
 }
-#question-card header {
+#question-card header,
+#review-card header {
   padding-bottom: 12px;
   border-bottom: 1px solid var(--nova-line-soft);
   margin-bottom: 16px;
 }
-#question-meta {
+#question-meta,
+#review-meta {
   font-size: 11px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--color-text-3);
 }
-#question-text {
+#question-text,
+#review-text {
   font-size: 18px;
   line-height: 1.55;
   color: var(--color-text);
