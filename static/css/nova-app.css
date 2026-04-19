@@ -2698,53 +2698,11 @@ kbd {
 ::-webkit-scrollbar-thumb { background: var(--nova-line); border-radius: 10px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--color-text-3); }
 
-/* -------------------- Pico CSS variable bridge --------------------
-   Maps Pico tokens to Nova tokens so existing Pico-based component
-   styles in style.css inherit the new palette without rewrites. */
-:root,
-:root[data-theme="light"] {
-  --pico-background-color: var(--color-bg);
-  --pico-color: var(--color-text);
-  --pico-muted-color: var(--color-text-3);
-  --pico-muted-border-color: var(--nova-line);
-  --pico-primary: var(--nova-coral);
-  --pico-primary-hover: var(--nova-coral-ink);
-  --pico-primary-focus: rgba(255, 89, 72, 0.18);
-  --pico-primary-inverse: #FFFFFF;
-  --pico-secondary: var(--nova-teal);
-  --pico-secondary-hover: var(--nova-teal-ink);
-  --pico-secondary-focus: rgba(26, 138, 127, 0.18);
-  --pico-secondary-inverse: #FFFFFF;
-  --pico-secondary-background: var(--nova-teal);
-  --pico-secondary-border: var(--nova-teal);
-  --pico-card-background-color: var(--nova-paper);
-  --pico-card-sectioning-background-color: var(--nova-line-soft);
-  --pico-table-border-color: var(--nova-line);
-  --pico-form-element-background-color: var(--nova-paper);
-  --pico-form-element-border-color: var(--nova-line);
-  --pico-form-element-focus-color: var(--nova-coral);
-  --pico-code-background-color: var(--nova-line-soft);
-  --pico-h1-color: var(--color-text);
-  --pico-h2-color: var(--color-text);
-  --pico-h3-color: var(--color-text);
-  --pico-h4-color: var(--color-text);
-  --pico-font-family: var(--font-sans);
-  --pico-font-family-monospace: var(--font-mono);
-  --pico-border-radius: var(--r-md);
-}
-:root[data-theme="dark"] {
-  --pico-background-color: var(--color-bg);
-  --pico-color: var(--color-text);
-  --pico-muted-color: var(--color-text-3);
-  --pico-muted-border-color: var(--color-line);
-  --pico-card-background-color: var(--nova-paper);
-  --pico-card-sectioning-background-color: var(--nova-line-soft);
-  --pico-table-border-color: var(--color-line);
-  --pico-form-element-background-color: var(--nova-paper);
-  --pico-form-element-border-color: var(--color-line);
-  --pico-code-background-color: #1A2226;
-  --pico-h1-color: var(--color-text);
-  --pico-h2-color: var(--color-text);
-  --pico-h3-color: var(--color-text);
-  --pico-h4-color: var(--color-text);
+/* -------------------- Pygments dark-mode override --------------------
+   pygments.css ships with hardcoded #f8f8f8 light bg. Override only for
+   .highlight wrappers (used by chapter markdown). The .highlighted-code
+   wrapper used by rule_detail already has its own Nova-tokened block. */
+[data-theme="dark"] .highlight {
+  background: #1A2226;
+  color: var(--color-text);
 }
