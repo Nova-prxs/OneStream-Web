@@ -625,24 +625,28 @@ input, textarea, select { font-family: inherit; color: inherit; }
 .quiz-nav-controls select option.q-unanswered { color: var(--color-text-3); }
 
 #question-card,
-#review-card {
+#review-card,
+#exam-question-card {
   margin: 16px 0 24px;
 }
 #question-card header,
-#review-card header {
+#review-card header,
+#exam-question-card header {
   padding-bottom: 12px;
   border-bottom: 1px solid var(--nova-line-soft);
   margin-bottom: 16px;
 }
 #question-meta,
-#review-meta {
+#review-meta,
+#exam-meta {
   font-size: 11px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--color-text-3);
 }
 #question-text,
-#review-text {
+#review-text,
+#exam-text {
   font-size: 18px;
   line-height: 1.55;
   color: var(--color-text);
@@ -1752,6 +1756,141 @@ kbd {
   font-size: 13px;
   color: var(--color-text);
   line-height: 1.55;
+}
+
+/* -------------------- Exam simulation --------------------
+   Setup screen, big countdown timer, in-exam UI (reuses
+   question/quiz-nav/section-summary skins), and results screen
+   with big score + section breakdown. Class names .exam-timer
+   (.warning/.danger), .exam-results .big-score (.pass/.fail) are
+   preserved for the JS that toggles them. */
+
+#exam-setup article header {
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-text-3);
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--nova-line-soft);
+}
+#exam-setup article header strong {
+  font-size: 22px;
+  text-transform: none;
+  letter-spacing: -0.01em;
+  color: var(--color-text);
+}
+#exam-setup ul {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0;
+  display: grid;
+  gap: 8px;
+}
+#exam-setup ul li {
+  padding: 14px 18px;
+  background: var(--nova-line-soft);
+  border-radius: 12px;
+  font-size: 14px;
+  color: var(--color-text-2);
+}
+#exam-setup ul li strong { color: var(--color-text); }
+#exam-setup button {
+  margin-top: 16px !important;
+  height: 44px !important;
+  padding: 0 24px !important;
+  background: var(--nova-coral) !important;
+  color: #FFFFFF !important;
+  border: 0 !important;
+  border-radius: 999px !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  cursor: pointer;
+}
+#exam-setup button:hover { background: var(--nova-coral-ink) !important; }
+
+.exam-timer {
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  font-variant-numeric: tabular-nums;
+  text-align: center;
+  padding: 16px 24px;
+  background: var(--nova-paper);
+  border: 1px solid var(--nova-line);
+  border-radius: var(--r-md);
+  color: var(--color-text);
+  line-height: 1;
+  margin: 0 0 16px;
+  transition: color 240ms, border-color 240ms;
+}
+.exam-timer.warning { color: var(--nova-amber); border-color: var(--nova-amber); }
+.exam-timer.danger  { color: var(--nova-coral); border-color: var(--nova-coral); }
+
+#exam-active #exam-counter {
+  font-size: 13px;
+  color: var(--color-text-2);
+  font-weight: 600;
+}
+
+.section-summary button {
+  margin: 0 0 0 auto !important;
+  padding: 0 14px !important;
+  height: 32px !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  border-radius: var(--r-sm) !important;
+  border: 1px solid var(--nova-coral) !important;
+  background: transparent !important;
+  color: var(--nova-coral) !important;
+  cursor: pointer;
+  display: inline-flex !important;
+  align-items: center;
+}
+.section-summary button:hover {
+  background: var(--nova-coral) !important;
+  color: #FFFFFF !important;
+}
+.section-summary { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+
+.exam-results {
+  text-align: center;
+  padding: 48px 32px;
+}
+.exam-results header {
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-text-3);
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--nova-line-soft);
+  padding-bottom: 16px;
+}
+.exam-results .big-score {
+  font-size: 88px;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  margin: 16px 0;
+}
+.exam-results .big-score.pass { color: var(--nova-teal); }
+.exam-results .big-score.fail { color: var(--nova-coral); }
+[data-theme="dark"] .exam-results .big-score.pass { color: var(--nova-aqua); }
+.exam-results > p { color: var(--color-text-2); margin: 8px 0; }
+#result-verdict {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+#exam-results h3 { margin-top: 32px; }
+#exam-results > button,
+#exam-results > a[role="button"],
+#exam-results > a.nv-btn {
+  margin-top: 16px;
+  margin-right: 12px;
 }
 
 /* -------------------- Utility -------------------- */

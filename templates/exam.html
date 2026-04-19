@@ -1,28 +1,37 @@
 {% extends "base.html" %}
 {% block title %}{{ exam.name }} Exam Simulation — OneStream Study Guide{% endblock %}
 {% block content %}
+<nav class="nv-crumb">
+  <a href="/">Portal</a><span class="sep">/</span>
+  <a href="/exam-prep/{{ exam_id }}/quiz">{{ exam.name }} Quiz</a><span class="sep">/</span>
+  <span class="current">Exam Simulation</span>
+</nav>
 
-<h1>{{ exam.name }} Exam Simulation</h1>
+<section class="nv-hero" style="margin-bottom: 24px;">
+  <span class="nv-eyebrow">Timed simulation · {{ exam.name }}</span>
+  <h1>Exam <span style="color: var(--nova-coral);">simulation</span></h1>
+</section>
 
 {# Pre-exam setup #}
 <div id="exam-setup">
   <article>
     <header><strong>{{ exam.name }} Practice Exam</strong></header>
-    <p>Simulate the real certification exam experience:</p>
+    <p style="color: var(--color-text-2);">Simulate the real certification exam experience:</p>
     <ul>
       <li><strong>60 questions</strong> randomly selected, weighted by exam section</li>
       <li><strong>90 minutes</strong> time limit</li>
       <li><strong>70%</strong> passing score</li>
     </ul>
-    <p>Questions are drawn proportionally from each section according to official exam weights.</p>
+    <p style="color: var(--color-text-3); font-size: 13px;">Questions are drawn proportionally from each section according to official exam weights.</p>
     <button onclick="startExam()">Start Exam</button>
   </article>
 </div>
 
 {# Active exam UI (hidden until started) #}
 <div id="exam-active" style="display:none">
+  <div class="exam-timer" id="exam-timer">90:00</div>
+
   <div class="quiz-nav">
-    <div class="exam-timer" id="exam-timer">90:00</div>
     <span id="exam-counter">Question 1 of 60</span>
     <div class="quiz-nav-controls">
       <button id="exam-prev" onclick="examPrev()" disabled>&#8592; Prev</button>
@@ -45,21 +54,21 @@
 
   <div class="section-summary">
     <strong>Answered:</strong> <span id="exam-answered">0</span> / 60
-    <button class="outline" style="margin-left:1rem;padding:0.3rem 0.8rem;font-size:0.85rem" onclick="finishExam()">Finish Exam</button>
+    <button onclick="finishExam()">Finish Exam</button>
   </div>
 </div>
 
 {# Results (hidden until finished) #}
 <div id="exam-results" style="display:none">
   <article class="exam-results">
-    <header><strong>Exam Results</strong></header>
+    <header>Exam Results</header>
     <div class="big-score" id="result-score"></div>
     <p id="result-verdict"></p>
     <p id="result-time"></p>
   </article>
 
-  <h3>Section Breakdown</h3>
-  <figure>
+  <h3 style="margin-top: 32px;">Section breakdown</h3>
+  <div class="nv-card nv-card--table" style="margin-top: 16px;">
     <table>
       <thead>
         <tr>
@@ -72,10 +81,12 @@
       </thead>
       <tbody id="result-sections"></tbody>
     </table>
-  </figure>
+  </div>
 
-  <button onclick="location.reload()">Try Again</button>
-  <a href="/exam-prep/{{ exam_id }}/progress" role="button" class="outline">View Progress</a>
+  <div style="display: flex; gap: 12px; margin-top: 24px;">
+    <button class="nv-btn nv-btn--primary" onclick="location.reload()">Try again</button>
+    <a href="/exam-prep/{{ exam_id }}/progress" class="nv-btn nv-btn--ghost">View progress</a>
+  </div>
 </div>
 
 <script>
