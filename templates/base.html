@@ -7,9 +7,10 @@
   <link rel="icon" type="image/svg+xml" href="/static/nova-icon.svg">
 
   <link rel="stylesheet" href="/static/css/nova-tokens.css">
-  <link rel="stylesheet" href="/static/css/nova-app.css">
   <link rel="stylesheet" href="/static/css/pygments.css">
   <link rel="stylesheet" href="/static/css/style.css?v=5">
+  {# nova-app.css MUST load last so Nova rules win the cascade over legacy style.css #}
+  <link rel="stylesheet" href="/static/css/nova-app.css">
 
   {# Phosphor Icons (still used by extension/business-rules templates) #}
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
