@@ -1,68 +1,8 @@
 /* ==========================================================================
-   OneStream Study Guide — Custom styles (complement Pico CSS)
+   OneStream Study Guide — Component styles (Nova design system)
+   Uses tokens from nova-tokens.css and bridge variables in nova-app.css.
+   Site nav now lives in the Nova sidebar (base.html); legacy nav styles removed.
    ========================================================================== */
-
-/* ---------------------------------------------------------------------------
-   Site navigation — Responsive header nav
-   --------------------------------------------------------------------------- */
-
-.site-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  padding: 0.75rem 0;
-}
-
-.nav-brand a {
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  flex-wrap: nowrap;
-}
-
-.nav-links a {
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-/* Constrain search input inside nav */
-.nav-links .search-form input[type="search"] {
-  width: 12rem;
-}
-
-@media (max-width: 576px) {
-  .site-nav {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0.75rem;
-  }
-
-  .nav-brand {
-    text-align: center;
-  }
-
-  .nav-links {
-    justify-content: center;
-    gap: 0.75rem;
-    flex-wrap: wrap;
-  }
-
-  .nav-links .search-form {
-    flex: 1;
-    min-width: 0;
-  }
-
-  .nav-links .search-form input[type="search"] {
-    width: 100%;
-  }
-}
 
 /* ---------------------------------------------------------------------------
    Book grid — Home page
@@ -361,13 +301,13 @@ a.site-title {
 }
 
 .option-btn.correct {
-  border-color: #2e7d32 !important;
+  border-color: var(--nova-teal) !important;
   background-color: rgba(46, 125, 50, 0.1) !important;
   color: var(--pico-color) !important;
 }
 
 .option-btn.incorrect {
-  border-color: #c62828 !important;
+  border-color: var(--nova-coral) !important;
   background-color: rgba(198, 40, 40, 0.1) !important;
   color: var(--pico-color) !important;
 }
@@ -375,12 +315,12 @@ a.site-title {
 /* Feedback area — see animated version below */
 
 .feedback-correct {
-  color: #2e7d32;
+  color: var(--nova-teal);
   font-weight: bold;
 }
 
 .feedback-incorrect {
-  color: #c62828;
+  color: var(--nova-coral);
   font-weight: bold;
 }
 
@@ -474,17 +414,17 @@ a.site-title {
 }
 
 .score-good {
-  color: #2e7d32;
+  color: var(--nova-teal);
   font-weight: bold;
 }
 
 .score-ok {
-  color: #f57f17;
+  color: var(--nova-amber);
   font-weight: bold;
 }
 
 .score-bad {
-  color: #c62828;
+  color: var(--nova-coral);
   font-weight: bold;
 }
 
@@ -596,21 +536,21 @@ a.site-title {
 }
 
 .quiz-progress-correct {
-  background: #2e7d32;
+  background: var(--nova-teal);
 }
 
 .quiz-progress-incorrect {
-  background: #c62828;
+  background: var(--nova-coral);
 }
 
 /* ── Color-coded Question Selector ────────────────────── */
 
 .quiz-nav-controls select option.q-correct {
-  color: #2e7d32;
+  color: var(--nova-teal);
 }
 
 .quiz-nav-controls select option.q-incorrect {
-  color: #c62828;
+  color: var(--nova-coral);
 }
 
 .quiz-nav-controls select option.q-unanswered {
@@ -709,11 +649,11 @@ kbd {
 }
 
 .pass-estimate.pass {
-  color: #2e7d32;
+  color: var(--nova-teal);
 }
 
 .pass-estimate.fail {
-  color: #c62828;
+  color: var(--nova-coral);
 }
 
 .pass-estimate.unknown {
@@ -724,13 +664,13 @@ kbd {
   margin-top: 1rem;
   padding: 0.75rem 1rem;
   background: rgba(198, 40, 40, 0.05);
-  border-left: 3px solid #c62828;
+  border-left: 3px solid var(--nova-coral);
   border-radius: 0 var(--pico-border-radius) var(--pico-border-radius) 0;
   font-size: 0.9rem;
 }
 
 .weak-sections strong {
-  color: #c62828;
+  color: var(--nova-coral);
 }
 
 .section-bar {
@@ -743,11 +683,11 @@ kbd {
 }
 
 .section-bar-correct {
-  background: #2e7d32;
+  background: var(--nova-teal);
 }
 
 .section-bar-incorrect {
-  background: #c62828;
+  background: var(--nova-coral);
 }
 
 /* ── Exam Simulation ──────────────────────────────────── */
@@ -763,13 +703,13 @@ kbd {
 }
 
 .exam-timer.warning {
-  color: #f57f17;
-  border-color: #f57f17;
+  color: var(--nova-amber);
+  border-color: var(--nova-amber);
 }
 
 .exam-timer.danger {
-  color: #c62828;
-  border-color: #c62828;
+  color: var(--nova-coral);
+  border-color: var(--nova-coral);
 }
 
 .exam-results {
@@ -782,8 +722,8 @@ kbd {
   font-weight: bold;
 }
 
-.exam-results .big-score.pass { color: #2e7d32; }
-.exam-results .big-score.fail { color: #c62828; }
+.exam-results .big-score.pass { color: var(--nova-teal); }
+.exam-results .big-score.fail { color: var(--nova-coral); }
 
 /* ── Notes ────────────────────────────────────────────── */
 
@@ -800,7 +740,7 @@ kbd {
 }
 
 .notes-saved {
-  color: #2e7d32;
+  color: var(--nova-teal);
   font-size: 0.85rem;
   opacity: 0;
   transition: opacity 0.3s;
@@ -936,7 +876,7 @@ kbd {
 .fc-answer-text {
   font-size: 1.2rem;
   font-weight: bold;
-  color: #2e7d32;
+  color: var(--nova-teal);
 }
 
 .fc-explanation {
@@ -977,9 +917,9 @@ kbd {
   color: var(--pico-muted-color);
 }
 
-.fc-rate-again { border-color: #c62828; color: #c62828; --pico-background-color: var(--pico-card-background-color); --pico-color: #c62828; }
-.fc-rate-hard { border-color: #f57f17; color: #f57f17; --pico-background-color: var(--pico-card-background-color); --pico-color: #f57f17; }
-.fc-rate-good { border-color: #2e7d32; color: #2e7d32; --pico-background-color: var(--pico-card-background-color); --pico-color: #2e7d32; }
+.fc-rate-again { border-color: var(--nova-coral); color: var(--nova-coral); --pico-background-color: var(--pico-card-background-color); --pico-color: var(--nova-coral); }
+.fc-rate-hard { border-color: var(--nova-amber); color: var(--nova-amber); --pico-background-color: var(--pico-card-background-color); --pico-color: var(--nova-amber); }
+.fc-rate-good { border-color: var(--nova-teal); color: var(--nova-teal); --pico-background-color: var(--pico-card-background-color); --pico-color: var(--nova-teal); }
 .fc-rate-easy { border-color: #1565c0; color: #1565c0; --pico-background-color: var(--pico-card-background-color); --pico-color: #1565c0; }
 
 .fc-progress {
@@ -992,12 +932,12 @@ kbd {
    ========================================================================== */
 
 .feedback-selected {
-  color: #c62828;
+  color: var(--nova-coral);
   font-size: 0.9rem;
 }
 
 .feedback-correct-opt {
-  color: #2e7d32;
+  color: var(--nova-teal);
   font-size: 0.9rem;
 }
 
@@ -1006,81 +946,7 @@ kbd {
   margin-top: 0.5rem;
 }
 
-/* ==========================================================================
-   #6 — Pomodoro Timer Widget
-   ========================================================================== */
-
-.pomodoro-widget {
-  position: fixed;
-  bottom: 1.5rem;
-  right: 1.5rem;
-  z-index: 1000;
-}
-
-.pomodoro-toggle {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  border: 2px solid var(--pico-primary);
-  background: var(--pico-card-background-color);
-  font-size: 1.3rem;
-  cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  --pico-background-color: var(--pico-card-background-color);
-  --pico-border-color: var(--pico-primary);
-}
-
-.pomodoro-panel {
-  position: absolute;
-  bottom: 56px;
-  right: 0;
-  width: 220px;
-  background: var(--pico-card-background-color);
-  border: 1px solid var(--pico-muted-border-color);
-  border-radius: var(--pico-border-radius);
-  padding: 1rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  text-align: center;
-}
-
-.pomodoro-display {
-  font-size: 2rem;
-  font-weight: bold;
-  font-variant-numeric: tabular-nums;
-  margin-bottom: 0.25rem;
-}
-
-.pomodoro-display.pomo-break {
-  color: #2e7d32;
-}
-
-.pomodoro-label {
-  font-size: 0.85rem;
-  color: var(--pico-muted-color);
-  margin-bottom: 0.5rem;
-}
-
-.pomodoro-controls {
-  display: flex;
-  gap: 0.25rem;
-  justify-content: center;
-}
-
-.pomodoro-controls button {
-  margin: 0;
-  padding: 0.3rem 0.6rem;
-  font-size: 0.8rem;
-}
-
-.pomodoro-sessions {
-  margin-top: 0.5rem;
-  font-size: 0.8rem;
-}
+/* Old .pomodoro-widget styles removed — replaced by .nv-pomo in nova-app.css */
 
 /* ==========================================================================
    #7 — Mini-Quiz in Chapters
@@ -1230,9 +1096,9 @@ kbd {
   margin-left: auto;
 }
 
-.objective-status.mastered { color: #2e7d32; }
-.objective-status.good { color: #f57f17; }
-.objective-status.needs-work { color: #c62828; }
+.objective-status.mastered { color: var(--nova-teal); }
+.objective-status.good { color: var(--nova-amber); }
+.objective-status.needs-work { color: var(--nova-coral); }
 .objective-status.not-started { color: var(--pico-muted-color); }
 
 .objective-stats {
@@ -1268,9 +1134,9 @@ kbd {
   font-weight: bold;
 }
 
-.obj-q-diff.easy { background: rgba(46,125,50,0.1); color: #2e7d32; }
-.obj-q-diff.medium { background: rgba(245,127,23,0.1); color: #f57f17; }
-.obj-q-diff.hard { background: rgba(198,40,40,0.1); color: #c62828; }
+.obj-q-diff.easy { background: rgba(46,125,50,0.1); color: var(--nova-teal); }
+.obj-q-diff.medium { background: rgba(245,127,23,0.1); color: var(--nova-amber); }
+.obj-q-diff.hard { background: rgba(198,40,40,0.1); color: var(--nova-coral); }
 
 /* ==========================================================================
    #9 — Exam History
@@ -1312,8 +1178,8 @@ kbd {
   transition: height 0.3s;
 }
 
-.history-bar-pass { background: #2e7d32; }
-.history-bar-fail { background: #c62828; }
+.history-bar-pass { background: var(--nova-teal); }
+.history-bar-fail { background: var(--nova-coral); }
 
 .history-bar-score {
   font-size: 0.7rem;
@@ -1330,7 +1196,7 @@ kbd {
   position: absolute;
   left: 0;
   right: 0;
-  border-top: 2px dashed #f57f17;
+  border-top: 2px dashed var(--nova-amber);
   pointer-events: none;
 }
 
@@ -1339,7 +1205,7 @@ kbd {
   right: 0;
   top: -1rem;
   font-size: 0.7rem;
-  color: #f57f17;
+  color: var(--nova-amber);
 }
 
 .exam-history-list table {
@@ -1556,7 +1422,7 @@ kbd {
 .hl-btn.hl-green  { color: #4caf50; }
 .hl-btn.hl-blue   { color: #42a5f5; }
 .hl-btn.hl-pink   { color: #ec407a; }
-.hl-btn.hl-remove { color: #c62828; font-size: 0.85rem; }
+.hl-btn.hl-remove { color: var(--nova-coral); font-size: 0.85rem; }
 
 /* ── Highlights Summary Page ─────────────────────────── */
 
@@ -1615,7 +1481,7 @@ kbd {
 .highlight-delete-btn {
   background: none;
   border: none;
-  color: #c62828;
+  color: var(--nova-coral);
   cursor: pointer;
   font-size: 0.85rem;
   padding: 0.25rem;
@@ -1717,59 +1583,7 @@ kbd {
   }
 }
 
-/* ==========================================================================
-   Portal landing page
-   ========================================================================== */
-
-.portal-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2rem;
-  margin: 2rem 0;
-}
-
-.portal-card {
-  text-align: center;
-}
-
-.portal-card header h2 {
-  margin-bottom: 0;
-}
-
-.portal-stats {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin: 1.5rem 0;
-}
-
-.portal-stat {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.portal-stat .stat-number {
-  font-size: 1.8rem;
-  font-weight: bold;
-}
-
-.portal-stat .stat-label {
-  font-size: 0.85rem;
-  opacity: 0.7;
-}
-
-/* Nav separator */
-.nav-sep {
-  opacity: 0.3;
-  user-select: none;
-}
-
-.nav-links a.active {
-  font-weight: bold;
-  text-decoration: underline;
-  text-underline-offset: 4px;
-}
+/* Portal landing styles now provided by .nv-pillar / .nv-grid / .nv-stats in nova-app.css */
 
 /* ==========================================================================
    API Documentation styles

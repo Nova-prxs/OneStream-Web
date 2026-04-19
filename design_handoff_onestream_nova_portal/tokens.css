@@ -1,0 +1,184 @@
+/* ==========================================================================
+   Nova — Design Tokens
+   Single source of truth. Import once in any page: <link href="/tokens.css">.
+   ========================================================================== */
+
+/* -------------------- 1. Fonts -------------------- */
+@font-face {
+  font-family: "Gilroy";
+  src: url("./fonts/Gilroy-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("./fonts/Gilroy-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("./fonts/Gilroy-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* -------------------- 2. Tokens -------------------- */
+:root {
+  /* — Color — brand core */
+  --nova-coral:       #FF5948;  /* primary. Pantone-ish warm red */
+  --nova-coral-ink:   #E84636;  /* pressed / focused */
+  --nova-coral-soft:  #FFE8E4;  /* tints, surfaces */
+
+  --nova-teal:        #1A8A7F;  /* secondary. Deep, confident */
+  --nova-teal-ink:    #147168;
+  --nova-teal-soft:   #D6EDEA;
+
+  --nova-aqua:        #A7E8E4;  /* supporting. Calm, aerated */
+  --nova-aqua-soft:   #E7F7F6;
+
+  --nova-ink:         #2E3A40;  /* primary text / dark surfaces */
+  --nova-ink-2:       #4B5761;  /* secondary text */
+  --nova-ink-3:       #7A8690;  /* tertiary / muted */
+
+  --nova-bone:        #F4F2EE;  /* off-white page surface */
+  --nova-paper:       #FFFFFF;
+  --nova-line:        #E4E4E4;  /* hairlines, dividers */
+  --nova-line-soft:   #EFEDE8;
+
+  /* — Semantic aliases — */
+  --color-bg:         var(--nova-bone);
+  --color-surface:    var(--nova-paper);
+  --color-text:       var(--nova-ink);
+  --color-text-2:     var(--nova-ink-2);
+  --color-text-3:     var(--nova-ink-3);
+  --color-primary:    var(--nova-coral);
+  --color-accent:     var(--nova-teal);
+  --color-line:       var(--nova-line);
+
+  /* — Type — */
+  --font-sans: "Gilroy", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  /* fluid-ish scale. Use for desktop / marketing; mobile overrides below. */
+  --fs-display: 88px;   /* hero */
+  --fs-h1:      56px;
+  --fs-h2:      40px;
+  --fs-h3:      28px;
+  --fs-h4:      20px;
+  --fs-body-l:  18px;
+  --fs-body:    16px;
+  --fs-small:   14px;
+  --fs-micro:   12px;
+
+  --lh-tight:   1.05;
+  --lh-snug:    1.2;
+  --lh-body:    1.5;
+  --lh-loose:   1.65;
+
+  --tracking-tight:   -0.02em;
+  --tracking-normal:  0;
+  --tracking-wide:    0.08em;
+  --tracking-wider:   0.16em;
+
+  /* — Space scale (4px base) — */
+  --s-0:   0;
+  --s-1:   4px;
+  --s-2:   8px;
+  --s-3:   12px;
+  --s-4:   16px;
+  --s-5:   24px;
+  --s-6:   32px;
+  --s-7:   48px;
+  --s-8:   64px;
+  --s-9:   96px;
+  --s-10: 128px;
+  --s-11: 192px;
+
+  /* — Radius — */
+  --r-xs:  4px;
+  --r-sm:  8px;
+  --r-md:  14px;
+  --r-lg:  24px;
+  --r-xl:  40px;
+  --r-pill: 999px;
+
+  /* — Elevation. Shadows are quiet; the brand prefers flat + color. — */
+  --shadow-1: 0 1px 2px rgba(46, 58, 64, 0.04), 0 1px 1px rgba(46, 58, 64, 0.03);
+  --shadow-2: 0 6px 16px rgba(46, 58, 64, 0.06), 0 2px 4px rgba(46, 58, 64, 0.04);
+  --shadow-3: 0 20px 48px rgba(46, 58, 64, 0.10), 0 6px 12px rgba(46, 58, 64, 0.05);
+  --shadow-coral: 0 14px 34px rgba(255, 89, 72, 0.28);
+
+  /* — Motion — */
+  --dur-1: 120ms;
+  --dur-2: 220ms;
+  --dur-3: 360ms;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+
+  /* — Grain. A subtle noise layer used on full-bleed color fills. — */
+  --grain:
+    radial-gradient(rgba(0,0,0,0.04) 1px, transparent 1px) 0 0 / 3px 3px,
+    radial-gradient(rgba(255,255,255,0.03) 1px, transparent 1px) 1px 1px / 3px 3px;
+}
+
+/* -------------------- 3. Base reset-ish -------------------- */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--color-text);
+  background: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  text-wrap: pretty;
+}
+
+/* -------------------- 4. Type utilities -------------------- */
+.display  { font-size: var(--fs-display); line-height: var(--lh-tight); letter-spacing: var(--tracking-tight); font-weight: 700; }
+.h1       { font-size: var(--fs-h1);      line-height: var(--lh-tight); letter-spacing: var(--tracking-tight); font-weight: 700; }
+.h2       { font-size: var(--fs-h2);      line-height: var(--lh-snug);  letter-spacing: var(--tracking-tight); font-weight: 700; }
+.h3       { font-size: var(--fs-h3);      line-height: var(--lh-snug);  font-weight: 700; }
+.h4       { font-size: var(--fs-h4);      line-height: var(--lh-snug);  font-weight: 700; }
+.body-l   { font-size: var(--fs-body-l);  line-height: var(--lh-body); }
+.body     { font-size: var(--fs-body);    line-height: var(--lh-body); }
+.small    { font-size: var(--fs-small);   line-height: var(--lh-body); }
+.micro    { font-size: var(--fs-micro);   line-height: var(--lh-body); }
+.eyebrow  {
+  font-size: var(--fs-micro);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--color-text-2);
+}
+.mono     { font-family: var(--font-mono); }
+
+/* -------------------- 5. Surface utilities -------------------- */
+.surface-bone  { background: var(--nova-bone);  color: var(--nova-ink); }
+.surface-paper { background: var(--nova-paper); color: var(--nova-ink); }
+.surface-coral { background: var(--nova-coral); color: var(--nova-paper); }
+.surface-teal  { background: var(--nova-teal);  color: var(--nova-paper); }
+.surface-aqua  { background: var(--nova-aqua);  color: var(--nova-ink); }
+.surface-ink   { background: var(--nova-ink);   color: var(--nova-paper); }
+
+/* Grain overlay helper — add on full-bleed color fills */
+.has-grain { position: relative; isolation: isolate; }
+.has-grain::after {
+  content: "";
+  position: absolute; inset: 0;
+  background-image: var(--grain);
+  opacity: .35;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  z-index: 0;
+}
+.has-grain > * { position: relative; z-index: 1; }

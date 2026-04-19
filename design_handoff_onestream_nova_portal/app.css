@@ -1,0 +1,370 @@
+/* ===========================================================
+   OneStream Portal — Nova Design System application layer
+   Built on top of tokens.css
+   =========================================================== */
+
+/* -------------------- Theme: Dark mode overrides -------------------- */
+:root[data-theme="dark"] {
+  --color-bg: var(--nova-ink);
+  --color-surface: #39464C;
+  --color-text: var(--nova-paper);
+  --color-text-2: #C7CDD1;
+  --color-text-3: #8A949B;
+  --color-line: #4B5761;
+  --nova-line: #3C474D;
+  --nova-line-soft: #354048;
+  --nova-bone: var(--nova-ink);
+  --nova-paper: #39464C;
+}
+
+/* -------------------- Reset & base -------------------- */
+html, body { min-height: 100%; }
+body {
+  font-family: var(--font-sans);
+  background: var(--color-bg);
+  color: var(--color-text);
+  transition: background 320ms var(--ease-out), color 320ms var(--ease-out);
+  min-height: 100vh;
+}
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; border: 0; background: none; color: inherit; }
+input, textarea, select { font-family: inherit; color: inherit; }
+* { box-sizing: border-box; }
+
+/* -------------------- Shell layout -------------------- */
+.nv-shell {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  min-height: 100vh;
+}
+
+/* -------------------- Sidebar -------------------- */
+.nv-sidebar {
+  background: var(--nova-paper);
+  border-right: 1px solid var(--nova-line);
+  padding: 24px 16px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.nv-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px 20px;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: -0.01em;
+}
+.nv-brand-mark {
+  width: 32px; height: 32px;
+  border-radius: 8px;
+  background: var(--nova-coral);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+.nv-brand-mark svg { width: 20px; height: 20px; }
+.nv-brand-name small {
+  display: block;
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--color-text-3);
+  letter-spacing: 0.02em;
+  margin-top: 2px;
+}
+.nv-nav-group {
+  margin-top: 16px;
+}
+.nv-nav-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-text-3);
+  padding: 8px 12px 6px;
+}
+.nv-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text-2);
+  transition: all 140ms var(--ease-out);
+  cursor: pointer;
+}
+.nv-nav-item:hover {
+  background: var(--nova-line-soft);
+  color: var(--color-text);
+}
+.nv-nav-item.active {
+  background: var(--nova-ink);
+  color: var(--nova-paper);
+}
+:root[data-theme="dark"] .nv-nav-item.active {
+  background: var(--nova-coral);
+  color: var(--nova-paper);
+}
+.nv-nav-item .glyph {
+  width: 18px; height: 18px;
+  flex-shrink: 0;
+}
+.nv-nav-item .badge {
+  margin-left: auto;
+  background: var(--nova-coral-soft);
+  color: var(--nova-coral-ink);
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+.nv-nav-item.active .badge {
+  background: rgba(255,255,255,0.15);
+  color: var(--nova-paper);
+}
+
+.nv-sidebar-footer {
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid var(--nova-line);
+}
+
+/* -------------------- Top bar (in content) -------------------- */
+.nv-topbar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 40px;
+  border-bottom: 1px solid var(--nova-line);
+  background: var(--color-bg);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(8px);
+  background: color-mix(in oklab, var(--color-bg) 92%, transparent);
+}
+.nv-search {
+  flex: 1;
+  max-width: 480px;
+  position: relative;
+}
+.nv-search input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid var(--nova-line);
+  background: var(--nova-paper);
+  border-radius: var(--r-md);
+  padding: 0 14px 0 40px;
+  font-size: 14px;
+  transition: border-color 140ms;
+}
+.nv-search input:focus {
+  outline: none;
+  border-color: var(--nova-coral);
+}
+.nv-search-icon {
+  position: absolute;
+  left: 14px; top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-3);
+  pointer-events: none;
+}
+.nv-search kbd {
+  position: absolute;
+  right: 10px; top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--color-text-3);
+  background: var(--nova-line-soft);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+.nv-topbar-actions { display: flex; align-items: center; gap: 8px; margin-left: auto; }
+.nv-icon-btn {
+  width: 40px; height: 40px;
+  border-radius: var(--r-md);
+  border: 1px solid var(--nova-line);
+  background: var(--nova-paper);
+  display: grid;
+  place-items: center;
+  transition: all 140ms;
+}
+.nv-icon-btn:hover {
+  border-color: var(--nova-ink);
+  transform: translateY(-1px);
+}
+
+/* -------------------- Content -------------------- */
+.nv-main { min-width: 0; }
+.nv-page { padding: 40px; max-width: 1280px; margin: 0 auto; }
+.nv-page-narrow { max-width: 900px; }
+
+/* -------------------- Breadcrumb -------------------- */
+.nv-crumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--color-text-3);
+  margin-bottom: 20px;
+}
+.nv-crumb a { color: var(--color-text-3); transition: color 140ms; }
+.nv-crumb a:hover { color: var(--nova-coral); }
+.nv-crumb .sep { opacity: 0.5; }
+.nv-crumb .current { color: var(--color-text); font-weight: 500; }
+
+/* -------------------- Buttons -------------------- */
+.nv-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 44px;
+  padding: 0 20px;
+  border-radius: var(--r-pill);
+  font-weight: 600;
+  font-size: 14px;
+  transition: transform 140ms var(--ease-out), box-shadow 220ms, background 140ms;
+}
+.nv-btn--primary {
+  background: var(--nova-coral);
+  color: var(--nova-paper);
+}
+.nv-btn--primary:hover {
+  background: var(--nova-coral-ink);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-coral);
+}
+.nv-btn--ghost {
+  border: 1.5px solid var(--nova-ink);
+  color: var(--nova-ink);
+}
+:root[data-theme="dark"] .nv-btn--ghost {
+  border-color: var(--nova-paper);
+  color: var(--nova-paper);
+}
+.nv-btn--ghost:hover { background: var(--nova-ink); color: var(--nova-paper); }
+.nv-btn--teal { background: var(--nova-teal); color: var(--nova-paper); }
+.nv-btn--teal:hover { background: var(--nova-teal-ink); }
+
+/* -------------------- Cards -------------------- */
+.nv-card {
+  background: var(--nova-paper);
+  border: 1px solid var(--nova-line);
+  border-radius: var(--r-lg);
+  padding: 28px;
+  transition: border-color 220ms, transform 220ms var(--ease-out);
+}
+.nv-card:hover {
+  border-color: var(--nova-ink);
+  transform: translateY(-2px);
+}
+.nv-card h3 { margin: 0 0 8px; font-size: 22px; font-weight: 700; letter-spacing: -0.01em; }
+.nv-card p { margin: 0; color: var(--color-text-2); font-size: 14px; line-height: 1.55; }
+
+/* -------------------- Eyebrow -------------------- */
+.nv-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--color-text-2);
+}
+
+/* -------------------- Pomodoro widget -------------------- */
+.nv-pomo {
+  position: fixed;
+  right: 24px; bottom: 24px;
+  z-index: 100;
+}
+.nv-pomo-fab {
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  background: var(--nova-ink);
+  color: var(--nova-paper);
+  box-shadow: var(--shadow-3);
+  display: grid;
+  place-items: center;
+  transition: transform 220ms var(--ease-out);
+}
+.nv-pomo-fab:hover { transform: scale(1.05); }
+.nv-pomo-fab.running { background: var(--nova-coral); }
+.nv-pomo-panel {
+  position: absolute;
+  bottom: 72px; right: 0;
+  width: 280px;
+  background: var(--nova-paper);
+  border: 1px solid var(--nova-line);
+  border-radius: var(--r-lg);
+  padding: 24px;
+  box-shadow: var(--shadow-3);
+  display: none;
+}
+.nv-pomo-panel.open { display: block; }
+.nv-pomo-time {
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  text-align: center;
+  line-height: 1;
+  margin-bottom: 4px;
+  font-variant-numeric: tabular-nums;
+}
+.nv-pomo-time.break { color: var(--nova-teal); }
+.nv-pomo-label {
+  text-align: center;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-text-3);
+  margin-bottom: 16px;
+}
+.nv-pomo-btns { display: flex; gap: 8px; }
+.nv-pomo-btns button {
+  flex: 1;
+  height: 36px;
+  border-radius: var(--r-sm);
+  font-weight: 600;
+  font-size: 13px;
+  transition: all 140ms;
+}
+.nv-pomo-btns .start { background: var(--nova-coral); color: var(--nova-paper); }
+.nv-pomo-btns .start:hover { background: var(--nova-coral-ink); }
+.nv-pomo-btns .reset { border: 1px solid var(--nova-line); }
+
+/* -------------------- Utility -------------------- */
+.stack-4 > * + * { margin-top: 4px; }
+.stack-8 > * + * { margin-top: 8px; }
+.stack-16 > * + * { margin-top: 16px; }
+.stack-24 > * + * { margin-top: 24px; }
+.row { display: flex; align-items: center; gap: 12px; }
+
+/* Subtle fade-in */
+.fade-in {
+  animation: fadeIn 360ms var(--ease-out) both;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Nova glyph decorations */
+.glyph-bg {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0.08;
+  z-index: 0;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--nova-line); border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-text-3); }

@@ -1,89 +1,9 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="light">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% block title %}OneStream API Docs{% endblock %}</title>
-  <link rel="icon" type="image/svg+xml" href="/static/nova-icon.svg">
+{% extends "base.html" %}
+{# docs_base.html now simply re-exports base.html so all reference pages
+   share the Nova sidebar shell. The custom search field for /docs/search
+   is offered as an inline override block below. #}
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-
-  <!-- Phosphor Icons -->
-  <script src="https://unpkg.com/@phosphor-icons/web"></script>
-
-  <!-- Pico CSS (base for inner page components) + custom overrides -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
-  <link rel="stylesheet" href="/static/css/pygments.css">
-  <link rel="stylesheet" href="/static/css/nova-theme.css">
-  <link rel="stylesheet" href="/static/css/style.css?v=4">
-
-  <script>
-    (function() {
-      var t = localStorage.getItem('theme') || 'light';
-      document.documentElement.setAttribute('data-theme', t);
-    })();
-  </script>
-</head>
-<body>
-  <!-- Animated background blobs -->
-  <div class="nova-blobs">
-    <div class="nova-blob-1"></div>
-    <div class="nova-blob-2"></div>
-    <div class="nova-blob-3"></div>
-  </div>
-
-  <header class="container">
-    <nav class="site-nav">
-      <div class="nav-brand">
-        <a href="/" class="site-title" style="display:flex;align-items:center;gap:0.5rem;">
-          <img src="/static/nova-icon.svg" alt="Nova" style="width:28px;height:28px;border-radius:6px;">
-          <strong>OneStream Portal</strong>
-        </a>
-      </div>
-      <div class="nav-links">
-        <a href="/exam-prep/">Exam Prep</a>
-        <a href="/docs/" class="{% if request.path == '/docs/' %}active{% endif %}">API Reference</a>
-        <a href="/docs/rules/" class="{% if '/docs/rules' in request.path %}active{% endif %}">Business Rules</a>
-        <a href="/docs/extension/" class="{% if '/docs/extension' in request.path %}active{% endif %}">Extension</a>
-        <form action="/docs/search" method="get" role="search" class="search-form">
-          <input type="search" name="q" placeholder="Search APIs..." aria-label="Search APIs" value="{{ request.args.get('q', '') }}">
-        </form>
-        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode" id="theme-btn">
-          <i class="ph ph-moon" id="icon-moon"></i>
-          <i class="ph ph-sun" id="icon-sun" style="display:none"></i>
-        </button>
-      </div>
-    </nav>
-  </header>
-
-  <main class="container">
-    {% block content %}{% endblock %}
-  </main>
-
-  <footer class="container">
-    <small>OneStream API Documentation &mdash; <a href="/">Portal</a></small>
-  </footer>
-
-  <script>
-    function toggleTheme() {
-      var html = document.documentElement;
-      var current = html.getAttribute('data-theme');
-      var next = current === 'dark' ? 'light' : 'dark';
-      html.setAttribute('data-theme', next);
-      localStorage.setItem('theme', next);
-      updateThemeIcon();
-    }
-    function updateThemeIcon() {
-      var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-      var moon = document.getElementById('icon-moon');
-      var sun = document.getElementById('icon-sun');
-      if (moon) moon.style.display = isDark ? 'none' : '';
-      if (sun) sun.style.display = isDark ? '' : 'none';
-    }
-    updateThemeIcon();
-  </script>
-</body>
-</html>
+{% block extra_head %}
+  {# extension point for docs-specific head content if needed #}
+  {{ super() if super is defined }}
+{% endblock %}

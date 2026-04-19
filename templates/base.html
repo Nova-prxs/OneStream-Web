@@ -3,22 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% block title %}OneStream Study Guide{% endblock %}</title>
+  <title>{% block title %}OneStream Nova Portal{% endblock %}</title>
   <link rel="icon" type="image/svg+xml" href="/static/nova-icon.svg">
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-
-  <!-- Phosphor Icons -->
-  <script src="https://unpkg.com/@phosphor-icons/web"></script>
-
-  <!-- Pico CSS (base for inner page components) + custom overrides -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <link rel="stylesheet" href="/static/css/nova-tokens.css">
+  <link rel="stylesheet" href="/static/css/nova-app.css">
   <link rel="stylesheet" href="/static/css/pygments.css">
-  <link rel="stylesheet" href="/static/css/nova-theme.css">
-  <link rel="stylesheet" href="/static/css/style.css?v=4">
+  <link rel="stylesheet" href="/static/css/style.css?v=5">
+
+  {# Phosphor Icons (still used by extension/business-rules templates) #}
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  {% block extra_head %}{% endblock %}
 
   <script>
     (function() {
@@ -29,87 +24,148 @@
   <script src="/static/js/theme-toggle.js" defer></script>
 </head>
 <body>
-  <!-- Animated background blobs -->
-  <div class="nova-blobs">
-    <div class="nova-blob-1"></div>
-    <div class="nova-blob-2"></div>
-    <div class="nova-blob-3"></div>
-  </div>
+  {% set _exam = exam_id if exam_id is defined and exam_id else 'os-201' %}
+  {% set _path = request.path %}
+  {% set _is_quiz = '/quiz' in _path %}
+  {% set _is_exam_sim = _path.endswith('/exam') or '/exam-prep/' in _path and _path.endswith('exam') %}
+  {% set _is_books = '/exam-prep/guide' in _path %}
+  {% set _is_certs_landing = _path == '/exam-prep/' %}
 
-  <header class="container">
-    <nav class="site-nav">
-      <div class="nav-brand">
-        <a href="/" class="site-title" style="display:flex;align-items:center;gap:0.5rem;">
-          <img src="/static/nova-icon.svg" alt="Nova" style="width:28px;height:28px;border-radius:6px;">
-          <strong>OneStream Portal</strong>
+  <div class="nv-shell" id="nv-shell">
+    <aside class="nv-sidebar">
+      <a href="/" class="nv-brand">
+        <span class="nv-brand-mark" aria-hidden="true"></span>
+        <span class="nv-brand-name">
+          OneStream
+          <small>Nova Portal</small>
+        </span>
+      </a>
+
+      <div class="nv-nav-group">
+        <div class="nv-nav-label">Overview</div>
+        <a href="/" class="nv-nav-item {% if _path == '/' %}active{% endif %}">
+          <svg class="nv-glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8v10a2 2 0 01-2 2h-4v-6h-6v6H5a2 2 0 01-2-2V11z"/></svg>
+          <span>Portal</span>
         </a>
       </div>
-      <div class="nav-links">
-        <a href="/docs/">API Reference</a>
-        <span class="nav-sep">|</span>
-        {% if exam_id is defined and exam_id %}
-        <form action="/exam-prep/{{ exam_id }}/search" method="get" role="search" class="search-form">
-          <input type="search" name="q" placeholder="Search chapters..." aria-label="Search" value="{{ request.args.get('q', '') }}">
-        </form>
-        <a href="/exam-prep/{{ exam_id }}/quiz">Quiz</a>
-        <a href="/exam-prep/{{ exam_id }}/exam">Exam</a>
-        <a href="/exam-prep/{{ exam_id }}/flashcards">Flashcards</a>
-        <a href="/exam-prep/{{ exam_id }}/highlights">Highlights</a>
-        <a href="/exam-prep/{{ exam_id }}/progress">Progress</a>
-        {% else %}
-        <form action="/exam-prep/search" method="get" role="search" class="search-form">
-          <input type="search" name="q" placeholder="Search chapters..." aria-label="Search" value="{{ request.args.get('q', '') }}">
-        </form>
-        <a href="/exam-prep/">Exam Prep</a>
-        {% endif %}
-        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode" id="theme-btn">
-          <i class="ph ph-moon" id="icon-moon"></i>
-          <i class="ph ph-sun" id="icon-sun" style="display:none"></i>
+
+      <div class="nv-nav-group">
+        <div class="nv-nav-label">Exam Prep</div>
+        <a href="/exam-prep/" class="nv-nav-item {% if _is_certs_landing %}active{% endif %}">
+          <svg class="nv-glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3 8-8M3 12a9 9 0 1015 6.7"/></svg>
+          <span>Certifications</span>
+        </a>
+        <a href="/exam-prep/guide/" class="nv-nav-item {% if _is_books %}active{% endif %}">
+          <svg class="nv-glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h5a3 3 0 013 3v14a2 2 0 00-2-2H4V4zm16 0h-5a3 3 0 00-3 3v14a2 2 0 012-2h6V4z"/></svg>
+          <span>Study Books</span>
+        </a>
+        <a href="/exam-prep/{{ _exam }}/quiz" class="nv-nav-item {% if _is_quiz %}active{% endif %}">
+          <svg class="nv-glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 17v.01M12 7a3 3 0 013 3c0 2-3 2.5-3 4"/></svg>
+          <span>Quiz</span>
+        </a>
+        <a href="/exam-prep/{{ _exam }}/exam" class="nv-nav-item {% if _is_exam_sim and not _is_quiz %}active{% endif %}">
+          <svg class="nv-glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4h10a2 2 0 012 2v14l-7-3-7 3V6a2 2 0 012-2z"/></svg>
+          <span>Exam Sim</span>
+        </a>
+        <a href="/exam-prep/{{ _exam }}/flashcards" class="nv-nav-item {% if '/flashcards' in _path %}active{% endif %}">
+          <svg class="nv-glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="12" height="12" rx="1"/><path d="M9 4h12v12"/></svg>
+          <span>Flashcards</span>
+        </a>
+        <a href="/exam-prep/{{ _exam }}/progress" class="nv-nav-item {% if '/progress' in _path %}active{% endif %}">
+          <svg class="nv-glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l4-6 4 4 6-9 4 5"/></svg>
+          <span>Progress</span>
+        </a>
+        <a href="/exam-prep/{{ _exam }}/glossary" class="nv-nav-item {% if '/glossary' in _path %}active{% endif %}">
+          <svg class="nv-glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h12a4 4 0 014 4v12a2 2 0 00-2-2H4V4zm4 6h8M8 14h5"/></svg>
+          <span>Glossary</span>
+        </a>
+        <a href="/exam-prep/{{ _exam }}/highlights" class="nv-nav-item {% if '/highlights' in _path %}active{% endif %}">
+          <svg class="nv-glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l2-5 10-10 3 3-10 10-5 2zM13 5l3 3"/></svg>
+          <span>Highlights</span>
+        </a>
+      </div>
+
+      <div class="nv-nav-group">
+        <div class="nv-nav-label">Reference</div>
+        <a href="/docs/" class="nv-nav-item {% if _path.startswith('/docs/') and '/rules' not in _path and '/extension' not in _path %}active{% endif %}">
+          <svg class="nv-glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M8 5l-5 7 5 7m8-14l5 7-5 7m-4-14l-4 14"/></svg>
+          <span>API Reference</span>
+        </a>
+        <a href="/docs/rules/" class="nv-nav-item {% if '/docs/rules' in _path %}active{% endif %}">
+          <svg class="nv-glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5h18M3 12h18M3 19h18"/></svg>
+          <span>Business Rules</span>
+        </a>
+        <a href="/docs/extension/" class="nv-nav-item {% if '/docs/extension' in _path %}active{% endif %}">
+          <svg class="nv-glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 4v10l-9 4-9-4V7l9-4zm0 0v18m9-14l-9 4-9-4"/></svg>
+          <span>Extension Guide</span>
+        </a>
+      </div>
+
+      <div class="nv-sidebar-footer">
+        OS-201 Certification<br>
+        v2.0 · Nova Design System
+      </div>
+    </aside>
+
+    <div class="nv-main">
+      <header class="nv-topbar">
+        <button class="nv-topbar-toggle" type="button" onclick="document.getElementById('nv-shell').classList.toggle('sidebar-open')" aria-label="Toggle navigation">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
         </button>
-      </div>
-    </nav>
-  </header>
 
-  <main class="container">
-    {% block content %}{% endblock %}
-  </main>
+        <form class="nv-search" action="{% if exam_id is defined and exam_id %}/exam-prep/{{ exam_id }}/search{% else %}/exam-prep/search{% endif %}" method="get" role="search">
+          <span class="nv-search-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="7"/><path d="M21 21l-6-6"/></svg>
+          </span>
+          <input type="search" name="q" placeholder="Search chapters, rules, APIs…" value="{{ request.args.get('q', '') }}">
+        </form>
 
-  {# Pomodoro Timer Widget #}
-  <div class="pomodoro-widget" id="pomodoro-widget">
-    <button class="pomodoro-toggle" onclick="togglePomodoro()" aria-label="Study timer" id="pomodoro-btn">&#9201;</button>
-    <div class="pomodoro-panel" id="pomodoro-panel" style="display:none">
-      <div class="pomodoro-display" id="pomodoro-display">25:00</div>
-      <div class="pomodoro-label" id="pomodoro-label">Study</div>
-      <div class="pomodoro-controls">
-        <button onclick="startPomodoro()" id="pomo-start">Start</button>
-        <button onclick="pausePomodoro()" id="pomo-pause" style="display:none">Pause</button>
-        <button onclick="resetPomodoro()" class="outline">Reset</button>
-      </div>
-      <div class="pomodoro-sessions">
-        <small>Sessions today: <strong id="pomo-sessions">0</strong> (<span id="pomo-total-time">0</span> min)</small>
-      </div>
+        <div class="nv-topbar-actions">
+          <button class="nv-icon-btn" type="button" onclick="toggleTheme()" aria-label="Toggle theme" id="theme-btn">
+            <svg id="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 13a9 9 0 01-11.3-11A9 9 0 1021 13z"/></svg>
+            <svg id="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="display:none"><circle cx="12" cy="12" r="4"/><path d="M12 4v2m0 12v2m8-8h-2M6 12H4m13.5-5.5L16 8m-8 8l-1.5 1.5m11 0L16 16m-8-8L6.5 6.5"/></svg>
+          </button>
+        </div>
+      </header>
+
+      <main class="nv-page">
+        {% block content %}{% endblock %}
+      </main>
+
+      <footer style="padding: 24px 40px; border-top: 1px solid var(--nova-line); font-size: 13px; color: var(--color-text-3); text-align: center;">
+        {% if exam is defined and exam %}{{ exam.name }}{% else %}OneStream{% endif %} Certification Prep — Nova Design System
+      </footer>
     </div>
   </div>
 
-  <footer class="container">
-    <small>{% if exam is defined and exam %}{{ exam.name }}{% else %}OneStream{% endif %} Certification Prep — <kbd>?</kbd> for keyboard shortcuts</small>
-  </footer>
+  {# Pomodoro FAB #}
+  <div class="nv-pomo" id="pomodoro-widget">
+    <div class="nv-pomo-panel" id="pomodoro-panel">
+      <div class="nv-pomo-time" id="pomodoro-display">25:00</div>
+      <div class="nv-pomo-label" id="pomodoro-label">Focus Session</div>
+      <div class="nv-pomo-btns">
+        <button class="start" type="button" onclick="startPomodoro()" id="pomo-start">Start</button>
+        <button class="start" type="button" onclick="pausePomodoro()" id="pomo-pause" style="display:none">Pause</button>
+        <button class="reset" type="button" onclick="resetPomodoro()">Reset</button>
+      </div>
+      <div class="nv-pomo-sessions">
+        Sessions today: <strong id="pomo-sessions">0</strong> · <span id="pomo-total-time">0</span> min
+      </div>
+    </div>
+    <button class="nv-pomo-fab" type="button" onclick="togglePomodoro()" aria-label="Pomodoro timer" id="pomodoro-btn">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8v4l3 2m-3 6a8 8 0 100-16 8 8 0 000 16zM9 2h6"/></svg>
+    </button>
+  </div>
 
   <script>
-    // theme-toggle.js handles toggleTheme() globally
-
-    // --- Pomodoro Timer ---
     var pomoState = 'stopped';
     var pomoSeconds = 25 * 60;
     var pomoMode = 'study';
     var pomoInterval = null;
-    var pomoTodayKey = 'pomodoro_' + new Date().toISOString().slice(0,10);
+    var pomoTodayKey = 'pomodoro_' + new Date().toISOString().slice(0, 10);
 
     function loadPomoSessions() {
-      try {
-        var raw = localStorage.getItem(pomoTodayKey);
-        if (raw) return JSON.parse(raw);
-      } catch(e) {}
+      try { var raw = localStorage.getItem(pomoTodayKey); if (raw) return JSON.parse(raw); } catch (e) {}
       return { count: 0, minutes: 0 };
     }
     function savePomoSession() {
@@ -123,23 +179,26 @@
       var m = Math.floor(pomoSeconds / 60);
       var s = pomoSeconds % 60;
       document.getElementById('pomodoro-display').textContent = m + ':' + (s < 10 ? '0' : '') + s;
-      document.getElementById('pomodoro-label').textContent = pomoMode === 'study' ? 'Study' : 'Break';
+      document.getElementById('pomodoro-label').textContent = pomoMode === 'study' ? 'Focus Session' : 'Break';
       var sessions = loadPomoSessions();
       document.getElementById('pomo-sessions').textContent = sessions.count;
       document.getElementById('pomo-total-time').textContent = sessions.minutes;
       var display = document.getElementById('pomodoro-display');
-      display.className = 'pomodoro-display' + (pomoMode === 'break' ? ' pomo-break' : '');
+      display.className = 'nv-pomo-time' + (pomoMode === 'break' ? ' break' : '');
+      var fab = document.getElementById('pomodoro-btn');
+      fab.classList.toggle('running', pomoState === 'running');
     }
     function togglePomodoro() {
       var panel = document.getElementById('pomodoro-panel');
-      panel.style.display = panel.style.display === 'none' ? 'block' : 'none';
+      panel.classList.toggle('open');
       updatePomoDisplay();
     }
     function startPomodoro() {
       pomoState = 'running';
       document.getElementById('pomo-start').style.display = 'none';
       document.getElementById('pomo-pause').style.display = '';
-      pomoInterval = setInterval(function() {
+      updatePomoDisplay();
+      pomoInterval = setInterval(function () {
         pomoSeconds--;
         updatePomoDisplay();
         if (pomoSeconds <= 0) {
@@ -149,7 +208,6 @@
             pomoMode = 'break';
             pomoSeconds = 5 * 60;
             updatePomoDisplay();
-            try { new Audio('data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQ==').play(); } catch(e) {}
             alert('Study session complete! Take a 5-minute break.');
             startPomodoro();
           } else {
@@ -171,6 +229,7 @@
         document.getElementById('pomo-start').style.display = '';
         document.getElementById('pomo-pause').style.display = 'none';
         document.getElementById('pomo-start').textContent = 'Resume';
+        updatePomoDisplay();
       }
     }
     function resetPomodoro() {
@@ -185,5 +244,7 @@
     }
     updatePomoDisplay();
   </script>
+
+  {% block extra_scripts %}{% endblock %}
 </body>
 </html>

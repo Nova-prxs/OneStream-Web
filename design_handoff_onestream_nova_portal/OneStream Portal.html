@@ -1,0 +1,2486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OneStream — Nova Portal</title>
+<style>
+/* ==========================================================================
+   Nova — Design Tokens
+   Single source of truth. Import once in any page: <link href="/tokens.css">.
+   ========================================================================== */
+
+/* -------------------- 1. Fonts -------------------- */
+@font-face {
+  font-family: "Gilroy";
+  src: url("./fonts/Gilroy-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("./fonts/Gilroy-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("./fonts/Gilroy-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* -------------------- 2. Tokens -------------------- */
+:root {
+  /* — Color — brand core */
+  --nova-coral:       #FF5948;  /* primary. Pantone-ish warm red */
+  --nova-coral-ink:   #E84636;  /* pressed / focused */
+  --nova-coral-soft:  #FFE8E4;  /* tints, surfaces */
+
+  --nova-teal:        #1A8A7F;  /* secondary. Deep, confident */
+  --nova-teal-ink:    #147168;
+  --nova-teal-soft:   #D6EDEA;
+
+  --nova-aqua:        #A7E8E4;  /* supporting. Calm, aerated */
+  --nova-aqua-soft:   #E7F7F6;
+
+  --nova-ink:         #2E3A40;  /* primary text / dark surfaces */
+  --nova-ink-2:       #4B5761;  /* secondary text */
+  --nova-ink-3:       #7A8690;  /* tertiary / muted */
+
+  --nova-bone:        #F4F2EE;  /* off-white page surface */
+  --nova-paper:       #FFFFFF;
+  --nova-line:        #E4E4E4;  /* hairlines, dividers */
+  --nova-line-soft:   #EFEDE8;
+
+  /* — Semantic aliases — */
+  --color-bg:         var(--nova-bone);
+  --color-surface:    var(--nova-paper);
+  --color-text:       var(--nova-ink);
+  --color-text-2:     var(--nova-ink-2);
+  --color-text-3:     var(--nova-ink-3);
+  --color-primary:    var(--nova-coral);
+  --color-accent:     var(--nova-teal);
+  --color-line:       var(--nova-line);
+
+  /* — Type — */
+  --font-sans: "Gilroy", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  /* fluid-ish scale. Use for desktop / marketing; mobile overrides below. */
+  --fs-display: 88px;   /* hero */
+  --fs-h1:      56px;
+  --fs-h2:      40px;
+  --fs-h3:      28px;
+  --fs-h4:      20px;
+  --fs-body-l:  18px;
+  --fs-body:    16px;
+  --fs-small:   14px;
+  --fs-micro:   12px;
+
+  --lh-tight:   1.05;
+  --lh-snug:    1.2;
+  --lh-body:    1.5;
+  --lh-loose:   1.65;
+
+  --tracking-tight:   -0.02em;
+  --tracking-normal:  0;
+  --tracking-wide:    0.08em;
+  --tracking-wider:   0.16em;
+
+  /* — Space scale (4px base) — */
+  --s-0:   0;
+  --s-1:   4px;
+  --s-2:   8px;
+  --s-3:   12px;
+  --s-4:   16px;
+  --s-5:   24px;
+  --s-6:   32px;
+  --s-7:   48px;
+  --s-8:   64px;
+  --s-9:   96px;
+  --s-10: 128px;
+  --s-11: 192px;
+
+  /* — Radius — */
+  --r-xs:  4px;
+  --r-sm:  8px;
+  --r-md:  14px;
+  --r-lg:  24px;
+  --r-xl:  40px;
+  --r-pill: 999px;
+
+  /* — Elevation. Shadows are quiet; the brand prefers flat + color. — */
+  --shadow-1: 0 1px 2px rgba(46, 58, 64, 0.04), 0 1px 1px rgba(46, 58, 64, 0.03);
+  --shadow-2: 0 6px 16px rgba(46, 58, 64, 0.06), 0 2px 4px rgba(46, 58, 64, 0.04);
+  --shadow-3: 0 20px 48px rgba(46, 58, 64, 0.10), 0 6px 12px rgba(46, 58, 64, 0.05);
+  --shadow-coral: 0 14px 34px rgba(255, 89, 72, 0.28);
+
+  /* — Motion — */
+  --dur-1: 120ms;
+  --dur-2: 220ms;
+  --dur-3: 360ms;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+
+  /* — Grain. A subtle noise layer used on full-bleed color fills. — */
+  --grain:
+    radial-gradient(rgba(0,0,0,0.04) 1px, transparent 1px) 0 0 / 3px 3px,
+    radial-gradient(rgba(255,255,255,0.03) 1px, transparent 1px) 1px 1px / 3px 3px;
+}
+
+/* -------------------- 3. Base reset-ish -------------------- */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--color-text);
+  background: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  text-wrap: pretty;
+}
+
+/* -------------------- 4. Type utilities -------------------- */
+.display  { font-size: var(--fs-display); line-height: var(--lh-tight); letter-spacing: var(--tracking-tight); font-weight: 700; }
+.h1       { font-size: var(--fs-h1);      line-height: var(--lh-tight); letter-spacing: var(--tracking-tight); font-weight: 700; }
+.h2       { font-size: var(--fs-h2);      line-height: var(--lh-snug);  letter-spacing: var(--tracking-tight); font-weight: 700; }
+.h3       { font-size: var(--fs-h3);      line-height: var(--lh-snug);  font-weight: 700; }
+.h4       { font-size: var(--fs-h4);      line-height: var(--lh-snug);  font-weight: 700; }
+.body-l   { font-size: var(--fs-body-l);  line-height: var(--lh-body); }
+.body     { font-size: var(--fs-body);    line-height: var(--lh-body); }
+.small    { font-size: var(--fs-small);   line-height: var(--lh-body); }
+.micro    { font-size: var(--fs-micro);   line-height: var(--lh-body); }
+.eyebrow  {
+  font-size: var(--fs-micro);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--color-text-2);
+}
+.mono     { font-family: var(--font-mono); }
+
+/* -------------------- 5. Surface utilities -------------------- */
+.surface-bone  { background: var(--nova-bone);  color: var(--nova-ink); }
+.surface-paper { background: var(--nova-paper); color: var(--nova-ink); }
+.surface-coral { background: var(--nova-coral); color: var(--nova-paper); }
+.surface-teal  { background: var(--nova-teal);  color: var(--nova-paper); }
+.surface-aqua  { background: var(--nova-aqua);  color: var(--nova-ink); }
+.surface-ink   { background: var(--nova-ink);   color: var(--nova-paper); }
+
+/* Grain overlay helper — add on full-bleed color fills */
+.has-grain { position: relative; isolation: isolate; }
+.has-grain::after {
+  content: "";
+  position: absolute; inset: 0;
+  background-image: var(--grain);
+  opacity: .35;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  z-index: 0;
+}
+.has-grain > * { position: relative; z-index: 1; }
+
+</style>
+<style>
+/* ===========================================================
+   OneStream Portal — Nova Design System application layer
+   Built on top of tokens.css
+   =========================================================== */
+
+/* -------------------- Theme: Dark mode overrides -------------------- */
+:root[data-theme="dark"] {
+  --color-bg: var(--nova-ink);
+  --color-surface: #39464C;
+  --color-text: #F5E7D8;
+  --color-text-2: #C7CDD1;
+  --color-text-3: #8A949B;
+  --color-line: #4B5761;
+  --nova-line: #3C474D;
+  --nova-line-soft: #354048;
+  --nova-bone: var(--nova-ink);
+  --nova-paper: #39464C;
+  --nova-paper-2: #2F3A40;
+}
+
+/* -------------------- Reset & base -------------------- */
+html, body { min-height: 100%; }
+body {
+  font-family: var(--font-sans);
+  background: var(--color-bg);
+  color: var(--color-text);
+  transition: background 320ms var(--ease-out), color 320ms var(--ease-out);
+  min-height: 100vh;
+}
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; border: 0; background: none; color: inherit; }
+input, textarea, select { font-family: inherit; color: inherit; }
+* { box-sizing: border-box; }
+
+/* -------------------- Shell layout -------------------- */
+.nv-shell {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  min-height: 100vh;
+}
+
+/* -------------------- Sidebar -------------------- */
+.nv-sidebar {
+  background: var(--nova-paper);
+  border-right: 1px solid var(--nova-line);
+  padding: 24px 16px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.nv-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px 20px;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: -0.01em;
+}
+.nv-brand-mark {
+  width: 36px; height: 36px;
+  border-radius: 8px;
+  background: var(--nova-coral);
+  flex-shrink: 0;
+  overflow: hidden;
+  position: relative;
+}
+.nv-brand-mark img { display: none; }
+.nv-brand-mark::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--nova-aqua);
+  -webkit-mask-image: var(--nv-logo-mask);
+  mask-image: var(--nv-logo-mask);
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+.nv-brand-mark svg { width: 20px; height: 20px; }
+.nv-brand-name small {
+  display: block;
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--color-text-3);
+  letter-spacing: 0.02em;
+  margin-top: 2px;
+}
+.nv-nav-group {
+  margin-top: 16px;
+}
+.nv-nav-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-text-3);
+  padding: 8px 12px 6px;
+}
+.nv-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text-2);
+  transition: all 140ms var(--ease-out);
+  cursor: pointer;
+}
+.nv-nav-item:hover {
+  background: var(--nova-line-soft);
+  color: var(--color-text);
+}
+.nv-nav-item.active {
+  background: var(--nova-ink);
+  color: var(--nova-paper);
+}
+:root[data-theme="dark"] .nv-nav-item.active {
+  background: var(--nova-coral);
+  color: #fff;
+}
+.nv-nav-item .glyph {
+  width: 18px; height: 18px;
+  flex-shrink: 0;
+}
+.nv-nav-item .badge {
+  margin-left: auto;
+  background: var(--nova-coral-soft);
+  color: var(--nova-coral-ink);
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+.nv-nav-item.active .badge {
+  background: rgba(255,255,255,0.15);
+  color: var(--nova-paper);
+}
+
+.nv-sidebar-footer {
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid var(--nova-line);
+}
+
+/* -------------------- Top bar (in content) -------------------- */
+.nv-topbar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 40px;
+  border-bottom: 1px solid var(--nova-line);
+  background: var(--color-bg);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(8px);
+  background: color-mix(in oklab, var(--color-bg) 92%, transparent);
+}
+.nv-search {
+  flex: 1;
+  max-width: 480px;
+  position: relative;
+}
+.nv-search input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid var(--nova-line);
+  background: var(--nova-paper);
+  border-radius: var(--r-md);
+  padding: 0 14px 0 40px;
+  font-size: 14px;
+  transition: border-color 140ms;
+}
+.nv-search input:focus {
+  outline: none;
+  border-color: var(--nova-coral);
+}
+.nv-search-icon {
+  position: absolute;
+  left: 14px; top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-3);
+  pointer-events: none;
+}
+.nv-search kbd {
+  position: absolute;
+  right: 10px; top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--color-text-3);
+  background: var(--nova-line-soft);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+.nv-topbar-actions { display: flex; align-items: center; gap: 8px; margin-left: auto; }
+.nv-icon-btn {
+  width: 40px; height: 40px;
+  border-radius: var(--r-md);
+  border: 1px solid var(--nova-line);
+  background: var(--nova-paper);
+  display: grid;
+  place-items: center;
+  transition: all 140ms;
+}
+.nv-icon-btn:hover {
+  border-color: var(--nova-ink);
+  transform: translateY(-1px);
+}
+
+/* -------------------- Content -------------------- */
+.nv-main { min-width: 0; }
+.nv-page { padding: 40px; max-width: 1280px; margin: 0 auto; }
+.nv-page-narrow { max-width: 900px; }
+
+/* -------------------- Breadcrumb -------------------- */
+.nv-crumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--color-text-3);
+  margin-bottom: 20px;
+}
+.nv-crumb a { color: var(--color-text-3); transition: color 140ms; }
+.nv-crumb a:hover { color: var(--nova-coral); }
+.nv-crumb .sep { opacity: 0.5; }
+.nv-crumb .current { color: var(--color-text); font-weight: 500; }
+
+/* -------------------- Buttons -------------------- */
+.nv-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 44px;
+  padding: 0 20px;
+  border-radius: var(--r-pill);
+  font-weight: 600;
+  font-size: 14px;
+  transition: transform 140ms var(--ease-out), box-shadow 220ms, background 140ms;
+}
+.nv-btn--primary {
+  background: var(--nova-coral);
+  color: var(--nova-paper);
+}
+.nv-btn--primary:hover {
+  background: var(--nova-coral-ink);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-coral);
+}
+.nv-btn--ghost {
+  border: 1.5px solid var(--nova-ink);
+  color: var(--nova-ink);
+}
+:root[data-theme="dark"] .nv-btn--ghost {
+  border-color: #F5E7D8;
+  color: #F5E7D8;
+}
+.nv-btn--ghost:hover { background: var(--nova-ink); color: var(--nova-paper); }
+.nv-btn--teal { background: var(--nova-teal); color: var(--nova-paper); }
+.nv-btn--teal:hover { background: var(--nova-teal-ink); }
+
+/* -------------------- Cards -------------------- */
+.nv-card {
+  background: var(--nova-paper);
+  border: 1px solid var(--nova-line);
+  border-radius: var(--r-lg);
+  padding: 28px;
+  transition: border-color 220ms, transform 220ms var(--ease-out);
+}
+.nv-card:hover {
+  border-color: var(--nova-ink);
+  transform: translateY(-2px);
+}
+.nv-card h3 { margin: 0 0 8px; font-size: 22px; font-weight: 700; letter-spacing: -0.01em; }
+.nv-card p { margin: 0; color: var(--color-text-2); font-size: 14px; line-height: 1.55; }
+
+/* -------------------- Eyebrow -------------------- */
+.nv-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--color-text-2);
+}
+
+/* -------------------- Pomodoro widget -------------------- */
+.nv-pomo {
+  position: fixed;
+  right: 24px; bottom: 24px;
+  z-index: 100;
+}
+.nv-pomo-fab {
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  background: var(--nova-ink);
+  color: var(--nova-paper);
+  box-shadow: var(--shadow-3);
+  display: grid;
+  place-items: center;
+  transition: transform 220ms var(--ease-out);
+}
+.nv-pomo-fab:hover { transform: scale(1.05); }
+.nv-pomo-fab.running { background: var(--nova-coral); }
+.nv-pomo-panel {
+  position: absolute;
+  bottom: 72px; right: 0;
+  width: 280px;
+  background: var(--nova-paper);
+  border: 1px solid var(--nova-line);
+  border-radius: var(--r-lg);
+  padding: 24px;
+  box-shadow: var(--shadow-3);
+  display: none;
+}
+.nv-pomo-panel.open { display: block; }
+.nv-pomo-time {
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  text-align: center;
+  line-height: 1;
+  margin-bottom: 4px;
+  font-variant-numeric: tabular-nums;
+}
+.nv-pomo-time.break { color: var(--nova-teal); }
+.nv-pomo-label {
+  text-align: center;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-text-3);
+  margin-bottom: 16px;
+}
+.nv-pomo-btns { display: flex; gap: 8px; }
+.nv-pomo-btns button {
+  flex: 1;
+  height: 36px;
+  border-radius: var(--r-sm);
+  font-weight: 600;
+  font-size: 13px;
+  transition: all 140ms;
+}
+.nv-pomo-btns .start { background: var(--nova-coral); color: var(--nova-paper); }
+.nv-pomo-btns .start:hover { background: var(--nova-coral-ink); }
+.nv-pomo-btns .reset { border: 1px solid var(--nova-line); }
+
+/* -------------------- Utility -------------------- */
+.stack-4 > * + * { margin-top: 4px; }
+.stack-8 > * + * { margin-top: 8px; }
+.stack-16 > * + * { margin-top: 16px; }
+.stack-24 > * + * { margin-top: 24px; }
+.row { display: flex; align-items: center; gap: 12px; }
+
+/* Subtle fade-in */
+.fade-in {
+  animation: fadeIn 360ms var(--ease-out) both;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideIn {
+  from { transform: translateX(40px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+/* Nova glyph decorations */
+.glyph-bg {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0.08;
+  z-index: 0;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--nova-line); border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-text-3); }
+
+</style>
+<style>
+  /* Tweaks panel */
+  .tweaks-panel {
+    position: fixed; right: 24px; top: 24px;
+    width: 300px; z-index: 200;
+    background: var(--nova-paper);
+    border: 1px solid var(--nova-line);
+    border-radius: 20px; padding: 20px;
+    box-shadow: var(--shadow-3);
+    display: none;
+  }
+  .tweaks-panel.open { display: block; }
+  .tweaks-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-top: 1px solid var(--nova-line); }
+  .tweaks-row:first-of-type { border-top: 0; }
+  .tweaks-row label { font-size: 13px; font-weight: 500; color: var(--color-text-2); }
+  .tweaks-btns { display: flex; gap: 4px; }
+  .tweaks-btns button {
+    padding: 5px 10px; font-size: 11px; font-weight: 600;
+    border-radius: 999px; background: var(--nova-line-soft);
+    color: var(--color-text-2); border: 1px solid transparent;
+  }
+  .tweaks-btns button.on { background: var(--nova-ink); color: #fff; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <filter id="nv-to-aqua" color-interpolation-filters="sRGB">
+      <!-- Map coral pixels to aqua (#C8F4F2 = 0.784, 0.957, 0.949). Alpha preserved. -->
+      <feColorMatrix type="matrix" values="
+        0 0 0 0 0.784
+        0 0 0 0 0.957
+        0 0 0 0 0.949
+        0 0 0 1 0"/>
+    </filter>
+  </defs>
+</svg>
+
+<!-- Speaker notes ignored, no speaker notes for this prototype -->
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script>
+window.__novaLogoSrc = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAACMsAAAjLCAYAAABJ18gRAAAACXBIWXMAABcRAAAXEQHKJvM/AAAgAElEQVR4nOzaQQEAIACEMLV/5zMIWwW+3G0HAAAAAAAAAAAKnsoAAAAAAAAAAFSYZQAAAAAAAAAAyDDLAAAAAAAAAACQYZYBAAAAAAAAACDDLAMAAAAAAAAAQIZZBgAAAAAAAACADLMMAAAAAAAAAAAZZhkAAAAAAAAAADLMMgAAAAAAAAAAZJhlAAAAAAAAAADIMMsAAAAAAAAAAJBhlgEAAAAAAAAAIMMsAwAAAAAAAABAhlkGAAAAAAAAAIAMswwAAAAAAAAAABlmGQAAAAAAAAAAMswyAAAAAAAAAABkmGUAAAAAAAAAAMgwywAAAAAAAAAAkGGWAQAAAAAAAAAgwywDAAAAAAAAAECGWQYAAAAAAAAAgAyzDAAAAAAAAAAAGWYZAAAAAAAAAAAyzDIAAAAAAAAAAGSYZQAAAAAAAAAAyDDLAAAAAAAAAACQYZYBAAAAAAAAACDDLAMAAAAAAAAAQIZZBgAAAAAAAACADLMMAAAAAAAAAAAZZhkAAAAAAAAAADLMMgAAAAAAAAAAZJhlAAAAAAAAAADIMMsAAAAAAAAAAJBhlgEAAAAAAAAAIMMsAwAAAAAAAABAhlkGAAAAAAAAAIAMswwAAAAAAAAAABlmGQAAAAAAAAAAMswyAAAAAAAAAABkmGUAAAAAAAAAAMgwywAAAAAAAAAAkGGWAQAAAAAAAAAgwywDAAAAAAAAAECGWQYAAAAAAAAAgAyzDAAAAAAAAAAAGWYZAAAAAAAAAAAyzDIAAAAAAAAAAGSYZQAAAAAAAAAAyDDLAAAAAAAAAACQYZYBAAAAAAAAACDDLAMAAAAAAAAAQIZZBgAAAAAAAACADLMMAAAAAAAAAAAZZhkAAAAAAAAAADLMMgAAAAAAAAAAZJhlAAAAAAAAAADIMMsAAAAAAAAAAJBhlgEAAAAAAAAAIMMsAwAAAAAAAABAhlkGAAAAAAAAAIAMswwAAAAAAAAAABlmGQAAAAAAAAAAMswyAAAAAAAAAABkmGUAAAAAAAAAAMgwywAAAAAAAAAAkGGWAQAAAAAAAAAgwywDAAAAAAAAAECGWQYAAAAAAAAAgAyzDAAAAAAAAAAAGWYZAAAAAAAAAAAyzDIAAAAAAAAAAGSYZQAAAAAAAAAAyDDLAAAAAAAAAACQYZYBAAAAAAAAACDDLAMAAAAAAAAAQIZZBgAAAAAAAACADLMMAAAAAAAAAAAZZhkAAAAAAAAAADLMMgAAAAAAAAAAZJhlAAAAAAAAAADIMMsAAAAAAAAAAJBhlgEAAAAAAAAAIMMsAwAAAAAAAABAhlkGAAAAAAAAAIAMswwAAAAAAAAAABlmGQAAAAAAAAAAMswyAAAAAAAAAABkmGUAAAAAAAAAAMgwywAAAAAAAAAAkGGWAQAAAAAAAAAgwywDAAAAAAAAAECGWQYAAAAAAAAAgAyzDAAAAAAAAAAAGWYZAAAAAAAAAAAyzDIAAAAAAAAAAGSYZQAAAAAAAAAAyDDLAAAAAAAAAACQYZYBAAAAAAAAACDDLAMAAAAAAAAAQIZZBgAAAAAAAACADLMMAAAAAAAAAAAZZhkAAAAAAAAAADLMMgAAAAAAAAAAZJhlAAAAAAAAAADIMMsAAAAAAAAAAJBhlgEAAAAAAAAAIMMsAwAAAAAAAABAhlkGAAAAAAAAAIAMswwAAAAAAAAAABlmGQAAAAAAAAAAMswyAAAAAAAAAABkmGUAAAAAAAAAAMgwywAAAAAAAAAAkGGWAQAAAAAAAAAgwywDAAAAAAAAAECGWQYAAAAAAAAAgAyzDAAAAAAAAAAAGWYZAAAAAAAAAAAyzDIAAAAAAAAAAGSYZQAAAAAAAAAAyDDLAAAAAAAAAACQYZYBAAAAAAAAACDDLAMAAAAAAAAAQIZZBgAAAAAAAACADLMMAAAAAAAAAAAZZhkAAAAAAAAAADLMMgAAAAAAAAAAZJhlAAAAAAAAAADIMMsAAAAAAAAAAJBhlgEAAAAAAAAAIMMsAwAAAAAAAABAhlkGAAAAAAAAAIAMswwAAAAAAAAAABlmGQAAAAAAAAAAMswyAAAAAAAAAABkmGUAAAAAAAAAAMgwywAAAAAAAAAAkGGWAQAAAAAAAAAgwywDAAAAAAAAAECGWQYAAAAAAAAAgAyzDAAAAAAAAAAAGWYZAAAAAAAAAAAyzDIAAAAAAAAAAGSYZQAAAAAAAAAAyDDLAAAAAAAAAACQYZYBAAAAAAAAACDDLAMAAAAAAAAAQIZZBgAAAAAAAACADLMMAAAAAAAAAAAZZhkAAAAAAAAAADLMMgAAAAAAAAAAZJhlAAAAAAAAAADIMMsAAAAAAAAAAJBhlgEAAAAAAAAAIMMsAwAAAAAAAABAhlkGAAAAAAAAAIAMswwAAAAAAAAAABlmGQAAAAAAAAAAMswyAAAAAAAAAABkmGUAAAAAAAAAAMgwywAAAAAAAAAAkGGWAQAAAAAAAAAgwywDAAAAAAAAAECGWQYAAAAAAAAAgAyzDAAAAAAAAAAAGWYZAAAAAAAAAAAyzDIAAAAAAAAAAGSYZQAAAAAAAAAAyDDLAAAAAAAAAACQYZYBAAAAAAAAACDDLAMAAAAAAAAAQIZZBgAAAAAAAACADLMMAAAAAAAAAAAZZhkAAAAAAAAAADLMMgAAAAAAAAAAZJhlAAAAAAAAAADIMMsAAAAAAAAAAJBhlgEAAAAAAAAAIMMsAwAAAAAAAABAhlkGAAAAAAAAAIAMswwAAAAAAAAAABlmGQAAAAAAAAAAMswyAAAAAAAAAABkmGUAAAAAAAAAAMgwywAAAAAAAAAAkGGWAQAAAAAAAAAgwywDAAAAAAAAAECGWQYAAAAAAAAAgAyzDAAAAAAAAAAAGWYZAAAAAAAAAAAyzDIAAAAAAAAAAGSYZQAAAAAAAAAAyDDLAAAAAAAAAACQYZYBAAAAAAAAACDDLAMAAAAAAAAAQIZZBgAAAAAAAACADLMMAAAAAAAAAAAZZhkAAAAAAAAAADLMMgAAAAAAAAAAZJhlAAAAAAAAAADIMMsAAAAAAAAAAJBhlgEAAAAAAAAAIMMsAwAAAAAAAABAhlkGAAAAAAAAAIAMswwAAAAAAAAAABlmGQAAAAAAAAAAMswyAAAAAAAAAABkmGUAAAAAAAAAAMgwywAAAAAAAAAAkGGWAQAAAAAAAAAgwywDAAAAAAAAAECGWQYAAAAAAAAAgAyzDAAAAAAAAAAAGWYZAAAAAAAAAAAyzDIAAAAAAAAAAGSYZQAAAAAAAAAAyDDLAAAAAAAAAACQYZYBAAAAAAAAACDDLAMAAAAAAAAAQIZZBgAAAAAAAACADLMMAAAAAAAAAAAZZhkAAAAAAAAAADLMMgAAAAAAAAAAZJhlAAAAAAAAAADIMMsAAAAAAAAAAJBhlgEAAAAAAAAAIMMsAwAAAAAAAABAhlkGAAAAAAAAAIAMswwAAAAAAAAAABlmGQAAAAAAAAAAMswyAAAAAAAAAABkmGUAAAAAAAAAAMgwywAAAAAAAAAAkGGWAQAAAAAAAAAgwywDAAAAAAAAAECGWQYAAAAAAAAAgAyzDAAAAAAAAAAAGWYZAAAAAAAAAAAyzDIAAAAAAAAAAGSYZQAAAAAAAAAAyDDLAAAAAAAAAACQYZYBAAAAAAAAACDDLAMAAAAAAAAAQIZZBgAAAAAAAACADLMMAAAAAAAAAAAZZhkAAAAAAAAAADLMMgAAAAAAAAAAZJhlAAAAAAAAAADIMMsAAAAAAAAAAJBhlgEAAAAAAAAAIMMsAwAAAAAAAABAhlkGAAAAAAAAAIAMswwAAAAAAAAAABlmGQAAAAAAAAAAMswyAAAAAAAAAABkmGUAAAAAAAAAAMgwywAAAAAAAAAAkGGWAQAAAAAAAAAgwywDAAAAAAAAAECGWQYAAAAAAAAAgAyzDAAAAAAAAAAAGWYZAAAAAAAAAAAyzDIAAAAAAAAAAGSYZQAAAAAAAAAAyDDLAAAAAAAAAACQYZYBAAAAAAAAACDDLAMAAAAAAAAAQIZZBgAAAAAAAACADLMMAAAAAAAAAAAZZhkAAAAAAAAAADLMMgAAAAAAAAAAZJhlAAAAAAAAAADIMMsAAAAAAAAAAJBhlgEAAAAAAAAAIMMsAwAAAAAAAABAhlkGAAAAAAAAAIAMswwAAAAAAAAAABlmGQAAAAAAAAAAMswyAAAAAAAAAABkmGUAAAAAAAAAAMgwywAAAAAAAAAAkGGWAQAAAAAAAAAgwywDAAAAAAAAAECGWQYAAAAAAAAAgAyzDAAAAAAAAAAAGWYZAAAAAAAAAAAyzDIAAAAAAAAAAGSYZQAAAAAAAAAAyDDLAAAAAAAAAACQYZYBAAAAAAAAACDDLAMAAAAAAAAAQIZZBgAAAAAAAACADLMMAAAAAAAAAAAZZhkAAAAAAAAAADLMMgAAAAAAAAAAZJhlAAAAAAAAAADIMMsAAAAAAAAAAJBhlgEAAAAAAAAAIMMsAwAAAAAAAABAhlkGAAAAAAAAAIAMswwAAAAAAAAAABlmGQAAAAAAAAAAMswyAAAAAAAAAABkmGUAAAAAAAAAAMgwywAAAAAAAAAAkGGWAQAAAAAAAAAgwywDAAAAAAAAAECGWQYAAAAAAAAAgAyzDAAAAAAAAAAAGWYZAAAAAAAAAAAyzDIAAAAAAAAAAGSYZQAAAAAAAAAAyDDLAAAAAAAAAACQYZYBAAAAAAAAACDDLAMAAAAAAAAAQIZZBgAAAAAAAACADLMMAAAAAAAAAAAZZhkAAAAAAAAAADLMMgAAAAAAAAAAZJhlAAAAAAAAAADIMMsAAAAAAAAAAJBhlgEAAAAAAAAAIMMsAwAAAAAAAABAhlkGAAAAAAAAAIAMswwAAAAAAAAAABlmGQAAAAAAAAAAMswyAAAAAAAAAABkmGUAAAAAAAAAAMgwywAAAAAAAAAAkGGWAQAAAAAAAAAgwywDAAAAAAAAAECGWQYAAAAAAAAAgAyzDAAAAAAAAAAAGWYZAAAAAAAAAAAyzDIAAAAAAAAAAGSYZQAAAAAAAAAAyDDLAAAAAAAAAACQYZYBAAAAAAAAACDDLAMAAAAAAAAAQIZZBgAAAAAAAACADLMMAAAAAAAAAAAZZhkAAAAAAAAAADLMMgAAAAAAAAAAZJhlAAAAAAAAAADIMMsAAAAAAAAAAJBhlgEAAAAAAAAAIMMsAwAAAAAAAABAhlkGAAAAAAAAAIAMswwAAAAAAAAAABlmGQAAAAAAAAAAMswyAAAAAAAAAABkmGUAAAAAAAAAAMgwywAAAAAAAAAAkGGWAQAAAAAAAAAgwywDAAAAAAAAAECGWQYAAAAAAAAAgAyzDAAAAAAAAAAAGWYZAAAAAAAAAAAyzDIAAAAAAAAAAGSYZQAAAAAAAAAAyDDLAAAAAAAAAACQYZYBAAAAAAAAACDDLAMAAAAAAAAAQIZZBgAAAAAAAACADLMMAAAAAAAAAAAZZhkAAAAAAAAAADLMMgAAAAAAAAAAZJhlAAAAAAAAAADIMMsAAAAAAAAAAJBhlgEAAAAAAAAAIMMsAwAAAAAAAABAhlkGAAAAAAAAAIAMswwAAAAAAAAAABlmGQAAAAAAAAAAMswyAAAAAAAAAABkmGUAAAAAAAAAAMgwywAAAAAAAAAAkGGWAQAAAAAAAAAgwywDAAAAAAAAAECGWQYAAAAAAAAAgAyzDAAAAAAAAAAAGWYZAAAAAAAAAAAyzDIAAAAAAAAAAGSYZQAAAAAAAAAAyDDLAAAAAAAAAACQYZYBAAAAAAAAACDDLAMAAAAAAAAAQIZZBgAAAAAAAACADLMMAAAAAAAAAAAZZhkAAAAAAAAAADLMMgAAAAAAAAAAZJhlAAAAAAAAAADIMMsAAAAAAAAAAJBhlgEAAAAAAAAAIMMsAwAAAAAAAABAhlkGAAAAAAAAAIAMswwAAAAAAAAAABlmGQAAAAAAAAAAMswyAAAAAAAAAABkmGUAAAAAAAAAAMgwywAAAAAAAAAAkGGWAQAAAAAAAAAgwywDAAAAAAAAAECGWQYAAAAAAAAAgAyzDAAAAAAAAAAAGWYZAAAAAAAAAAAyzDIAAAAAAAAAAGSYZQAAAAAAAAAAyDDLAAAAAAAAAACQYZYBAAAAAAAAACDDLAMAAAAAAAAAQIZZBgAAAAAAAACADLMMAAAAAAAAAAAZZhkAAAAAAAAAADLMMgAAAAAAAAAAZJhlAAAAAAAAAADIMMsAAAAAAAAAAJBhlgEAAAAAAAAAIMMsAwAAAAAAAABAhlkGAAAAAAAAAIAMswwAAAAAAAAAABlmGQAAAAAAAAAAMswyAAAAAAAAAABkmGUAAAAAAAAAAMgwywAAAAAAAAAAkGGWAQAAAAAAAAAgwywDAAAAAAAAAECGWQYAAAAAAAAAgAyzDAAAAAAAAAAAGWYZAAAAAAAAAAAyzDIAAAAAAAAAAGSYZQAAAAAAAAAAyDDLAAAAAAAAAACQYZYBAAAAAAAAACDDLAMAAAAAAAAAQIZZBgAAAAAAAACADLMMAAAAAAAAAAAZZhkAAAAAAAAAADLMMgAAAAAAAAAAZJhlAAAAAAAAAADIMMsAAAAAAAAAAJBhlgEAAAAAAAAAIMMsAwAAAAAAAABAhlkGAAAAAAAAAIAMswwAAAAAAAAAABlmGQAAAAAAAAAAMswyAAAAAAAAAABkmGUAAAAAAAAAAMgwywAAAAAAAAAAkGGWAQAAAAAAAAAgwywDAAAAAAAAAECGWQYAAAAAAAAAgAyzDAAAAAAAAAAAGWYZAAAAAAAAAAAyzDIAAAAAAAAAAGSYZQAAAAAAAAAAyDDLAAAAAAAAAACQYZYBAAAAAAAAACDDLAMAAAAAAAAAQIZZBgAAAAAAAACADLMMAAAAAAAAAAAZZhkAAAAAAAAAADLMMgAAAAAAAAAAZJhlAAAAAAAAAADIMMsAAAAAAAAAAHz27iApjiNd4HjaMXt4J6DnBDAngFnWSrxtbWBOIPkEg09g5gRGm9oarWppOIHhBINO8OAEvKiuQsIyArqp7q7M7/eLUMyMNyMymyoH+edLwhDLAAAAAAAAAAAQhlgGAAAAAAAAAIAwxDIAAAAAAAAAAIQhlgEAAAAAAAAAIAyxDAAAAAAAAAAAYYhlAAAAAAAAAAAIQywDAAAAAAAAAEAYYhkAAAAAAAAAAMIQywAAAAAAAAAAEIZYBgAAAAAAAACAMMQyAAAAAAAAAACEIZYBAAAAAAAAACAMsQwAAAAAAAAAAGGIZQAAAAAAAAAACEMsAwAAAAAAAABAGGIZAAAAAAAAAADCEMsAAAAAAAAAABCGWAYAAAAAAAAAgDDEMgAAAAAAAAAAhCGWAQAAAAAAAAAgDLEMAAAAAAAAAABhiGUAAAAAAAAAAAhDLAMAAAAAAAAAQBhiGQAAAAAAAAAAwhDLAAAAAAAAAAAQhlgGAAAAAAAAAIAwxDIAAAAAAAAAAIQhlgEAAAAAAAAAIAyxDAAAAAAAAAAAYYhlAAAAAAAAAAAIQywDAAAAAAAAAEAYYhkAAAAAAAAAAMIQywAAAAAAAAAAEIZYBgAAAAAAAACAMMQyAAAAAAAAAACEIZYBAAAAAAAAACAMsQwAAAAAAAAAAGGIZQAAAAAAAAAACEMsAwAAAAAAAABAGGIZAAAAAAAAAADCEMsAAAAAAAAAABCGWAYAAAAAAAAAgDDEMgAAAAAAAAAAhCGWAQAAAAAAAAAgDLEMAAAAAAAAAABhiGUAAAAAAAAAAAhDLAMAAAAAAAAAQBhiGQAAAAAAAAAAwhDLAAAAAAAAAAAQhlgGAAAAAAAAAIAwxDIAAAAAAAAAAIQhlgEAAAAAAAAAIAyxDAAAAAAAAAAAYYhlAAAAAAAAAAAIQywDAAAAAAAAAEAYYhkAAAAAAAAAAMIQywAAAAAAAAAAEIZYBgAAAAAAAACAMMQyAAAAAAAAAACEIZYBAAAAAAAAACAMsQwAAAAAAAAAAGGIZQAAAAAAAAAACEMsAwAAAAAAAABAGGIZAAAAAAAAAADCEMsAAAAAAAAAABCGWAYAAAAAAAAAgDDEMgAAAAAAAAAAhCGWAQAAAAAAAAAgDLEMAAAAAAAAAABhiGUAAAAAAAAAAAhDLAMAAAAAAAAAQBhiGQAAAAAAAAAAwhDLAAAAAAAAAAAQhlgGAAAAAAAAAIAwxDIAAAAAAAAAAIQhlgEAAAAAAAAAIAyxDAAAAAAAAAAAYYhlAAAAAAAAAAAIQywDAAAAAAAAAEAYYhkAAAAAAAAAAMIQywAAAAAAAAAAEIZYBgAAAAAAAACAMMQyAAAAAAAAAACEIZYBAAAAAAAAACAMsQwAAAAAAAAAAGGIZQAAAAAAAAAACEMsAwAAAAAAAABAGGIZAAAAAAAAAADCEMsAAAAAAAAAABCGWAYAAAAAAAAAgDDEMgAAAAAAAAAAhCGWAQAAAAAAAAAgDLEMAAAAAAAAAABhiGUAAAAAAAAAAAhDLAMAAAAAAAAAQBhiGQAAAAAAAAAAwhDLAAAAAAAAAAAQhlgGAAAAAAAAAIAwxDIAAAAAAAAAAIQhlgEAAAAAAAAAIAyxDAAAAAAAAAAAYYhlAAAAAAAAAAAIQywDAAAAAAAAAEAYYhkAAAAAAAAAAMIQywAAAAAAAAAAEIZYBgAAAAAAAACAMMQyAAAAAAAAAACEIZYBAAAAAAAAACAMsQwAAAAAAAAAAGGIZQAAAAAAAAAACEMsAwAAAAAAAABAGGIZAAAAAAAAAADCEMsAAAAAAAAAABCGWAYAAAAAAAAAgDDEMgAAAAAAAAAAhCGWAQAAAAAAAAAgDLEMAAAAAAAAAABhiGUAAAAAAAAAAAhDLAMAAAAAAAAAQBhiGQAAAAAAAAAAwhDLAAAAAAAAAAAQhlgGAAAAAAAAAIAwxDIAAAAAAAAAAIQhlgEAAAAAAAAAIAyxDAAAAAAAAAAAYYhlAAAAAAAAAAAIQywDAAAAAAAAAEAYYhkAAAAAAAAAAMIQywAAAAAAAAAAEIZYBgAAAAAAAACAMMQyAAAAAAAAAACEIZYBAAAAAAAAACAMsQwAAAAAAAAAAGGIZQAAAAAAAAAACEMsAwAAAAAAAABAGGIZAAAAAAAAAADCEMsAAAAAAAAAABCGWAYAAAAAAAAAgDDEMgAAAAAAAAAAhCGWAQAAAAAAAAAgDLEMAAAAAAAAAABhiGUAAAAAAAAAAAhDLAMAAAAAAAAAQBhiGQAAAAAAAAAAwhDLAAAAAAAAAAAQhlgGAAAAAAAAAIAwxDIAAAAAAAAAAIQhlgEAAAAAAAAAIAyxDAAAAAAAAAAAYYhlAAAAAAAAAAAIQywDAAAAAAAAAEAYYhkAAAAAAAAAAMIQywAAAAAAAAAAEIZYBgAAAAAAAACAMMQyAAAAAAAAAACEIZYBAAAAAAAAACAMsQwAAAAAAAAAAGGIZQAAAAAAAAAACEMsAwAAAAAAAABAGGIZAAAAAAAAAADCEMsAAAAAAAAAABCG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AAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAAAAAAAA2ZBkAAAAAAAAAADZkGQAAAAAAAAAANmQZAAAAoHbtQAAAAIBh0P2pD7LiCAAAAAAyZBkAAAAAAAAAADJkGQAAAAAAAAAAMmQZAAAAAAAAAAAyZBkAAAAAAAAAADJkGQAAAAAAAAAAMmQZAAAAAAAAAAAyZBkAAAAAAAAAADJkGQAAAAAAAAAAMmQZAAAAAAAAAAAyZBkAAAAAAAAAADJkGQAAAAAAAAAAMmQZAAAAAAAAAAAyZBkAAAAAAAAAADJkGQAAAAAAAAAAMmQZAAAAAAAAAAAyZBkAAAAAAAAAADJkGQAAAAAAAAAAMmQZAAAAAAAAAAAyZBkAAAAAAAAAADJkGQAAAAAAAAAAMmQZAAAAAAAAAAAyZBkAAAAAAAAAADJkGQAAAAAAAAAAMmQZAAAAAAAAAAAyZBkAAAAAAAAAADJkGQAAAAAAAAAAMmQZAAAAAAAAAAAyZBkAAAAAAAAAADJkGQAAAAAAAAAAMmQZAAAAAAAAAAAyZBkAAAAAAAAAADJkGQAAAAAAAAAAMmQZAAAAAAAAAAAyZBkAAAAAAAAAADJkGQAAAAAAAAAAMmQZAAAAAAAAAAAyZBkAAAAAAAAAADJkGQAAAAAAAAAAMmQZAAAAAAAA6MQ96gAABJdJREFUAAAyZBkAAAAAAAAAADJkGQAAAAAAAAAAMmQZAAAAAAAAAAAyZBkAAAAAAAAAADJkGQAAAAAAAAAAMmQZAAAAAAAAAAAyZBkAAAAAAAAAADJkGQAAAAAAAAAAMmQZAAAAAAAAAAAyZBkAAAAAAAAAADJkGQAAAAAAAAAAMmQZAAAAAAAAAAAyZBkAAAAAAAAAADJkGQAAAAAAAAAAMmQZAAAAAAAAAAAyZBkAAAAAAAAAADJkGQAAAAAAAAAAMmQZAAAAAAAAAAAyZBkAAAAAAAAAADJkGQAAAAAAAAAAMmQZAAAAAAAAAAAyZBkAAAAAAAAAADJkGQAAAAAAAAAAMmQZAAAAAAAAAAAyZBkAAAAAAAAAADJkGQAAAAAAAAAAMmQZAAAAAAAAAAAyZBkAAAAAAAAAADJkGQAAAAAAAAAAMmQZAAAAAAAAAAAyZBkAAAAAAAAAADJkGQAAAAAAAAAAMmQZAAAAAAAAAAAyZBkAAAAAAAAAADJkGQAAAAAAAAAAMmQZAAAAAAAAAAAyZBkAAAAAAAAAADJkGQAAAAAAAAAAMmQZAAAAAAAAAAAyZBkAAAAAAAAAADJkGQAAAAAAAAAAMmQZAAAAAAAAAAAyZBkAAAAAAAAAADJkGQAAAAAAAAAAMmQZAAAAAAAAAAAyZBkAAAAAAAAAADJkGQAAAAAAAAAAMmQZAAAAAAAAAAAyZBkAAAAAAAAAADJkGQAAAAAAAAAAMmQZAAAAAAAAAAAyZBkAAAAAAAAAADJkGQAAAAAAAAAAMmQZAAAAAAAAAAAyZBkAAAAAAAAAADJkGQAAAAAAAAAAMmQZAAAAAAAAAAAyZBkAAAAAAAAAADJkGQAAAAAAAAAAMmQZAAAAAAAAAAAyZBkAAAAAAAAAADJkGQAAAAAAAAAAMmQZAAAAAAAAAAAyZBkAAAAAAAAAADJkGQAAAAAAAAAAMmQZAAAAAAAAAAAyZBkAAAAAAAAAADJkGQAAAAAAAAAAMmQZAAAAAAAAAAAyZBkAAAAAAAAAADJkGQAAAAAAAAAAMmQZAAAAAAAAAAAyZBkAAAAAAAAAADJkGQAAAAAAAAAAMmQZAAAAAAAAAAAyZBkAAAAAAAAAADJkGQAAAAAAAAAAMmQZAAAAAAAAAAAyZBkAAAAAAAAAADJkGQAAAAAAAAAAMmQZAAAAAAAAAAAyZBkAAAAAAAAAADJkGQAAAAAAAAAAMmQZAAAAAAAAAAAyZBkAAAAAAAAAADJkGQAAAAAAAAAAMmQZAAAAAAAAAAAyZBkAAAAAAAAAADJkGQAAAAAAAAAAMmQZAAAAAAAAAAAyZBkAAAAAAAAAADJkGQAAAAAAAAAAMmQZAAAAAAAAAAAyZBkAAAAAAAAAADJkGQAAAAAAAAAAMmQZAAAAAAAAAAAyZBkAAAAAAAAAADJkGQAAAAAAAAAAMmQZAAAAAAAAAAAyZBkAAAAAAAAAADJkGQAAAAAAAAAAMmQZAAAAAAAAAAAyZBkAAAAAAAAAADJkGQAAAAAAAAAAMmQZAAAAAAAAAAAyZBkAAAAAAAAAABq2HZhOUxH4nkUrAAAAAElFTkSuQmCC";
+document.documentElement.style.setProperty('--nv-logo-mask', 'url("' + window.__novaLogoSrc + '")');
+</script>
+
+<script type="text/babel">
+// Sidebar, TopBar, Pomodoro, Breadcrumb — shared chrome
+// Note: use React.useState/useEffect/useRef directly to avoid const redeclare across babel scripts
+
+function NovaMark({ size = 32 }) {
+  // Real brand mark — rendered via CSS mask on .nv-brand-mark::after
+  // (aqua fill on coral square), so React renders nothing here.
+  return null;
+}
+
+function Glyph({ kind, size = 20, color = "currentColor" }) {
+  const paths = {
+    home: "M3 11l9-8 9 8v10a2 2 0 01-2 2h-4v-6h-6v6H5a2 2 0 01-2-2V11z",
+    books: "M4 4h5a3 3 0 013 3v14a2 2 0 00-2-2H4V4zm16 0h-5a3 3 0 00-3 3v14a2 2 0 012-2h6V4z",
+    quiz: "M12 2a10 10 0 100 20 10 10 0 000-20zm0 15v.01M12 7a3 3 0 013 3c0 2-3 2.5-3 4",
+    exam: "M9 11l3 3 8-8M3 12a9 9 0 1015 6.7",
+    code: "M8 5l-5 7 5 7m8-14l5 7-5 7m-4-14l-4 14",
+    rules: "M3 5h18M3 12h18M3 19h18",
+    flashcards: "M3 6h12v12H3zM9 4h12v12",
+    progress: "M3 17l4-6 4 4 6-9 4 5",
+    glossary: "M4 4h12a4 4 0 014 4v12a2 2 0 00-2-2H4V4zm4 6h8M8 14h5",
+    highlights: "M4 20l2-5 10-10 3 3-10 10-5 2zM13 5l3 3",
+    objectives: "M12 2l2 7h7l-6 4 2 7-5-4-5 4 2-7-6-4h7z",
+    summary: "M6 4h12M6 12h12M6 20h8",
+    puzzle: "M10 3a2 2 0 114 0v2h5v5a2 2 0 110 4h-5v5a2 2 0 11-4 0H5a2 2 0 002-2v-3h-2a2 2 0 110-4h2V8a2 2 0 00-2-2h5z",
+    search: "M10 17a7 7 0 100-14 7 7 0 000 14zm11 4l-6-6",
+    moon: "M21 13a9 9 0 01-11.3-11A9 9 0 1021 13z",
+    sun: "M12 4v2m0 12v2m8-8h-2M6 12H4m13.5-5.5L16 8m-8 8l-1.5 1.5m11 0L16 16m-8-8L6.5 6.5M12 8a4 4 0 100 8 4 4 0 000-8z",
+    menu: "M3 6h18M3 12h18M3 18h18",
+    timer: "M12 8v4l3 2m-3 6a8 8 0 100-16 8 8 0 000 16zM9 2h6",
+    bell: "M6 8a6 6 0 0112 0v5l2 2H4l2-2V8zm3 10a3 3 0 006 0",
+    ext: "M12 3l9 4v10l-9 4-9-4V7l9-4zm0 0v18m9-14l-9 4-9-4",
+    arrow: "M5 12h14m-6-6l6 6-6 6",
+    back: "M19 12H5m6 6l-6-6 6-6",
+    chapter: "M7 4h10a2 2 0 012 2v14l-7-3-7 3V6a2 2 0 012-2z",
+  };
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+      <path d={paths[kind] || paths.home} />
+    </svg>
+  );
+}
+
+// Big decorative brand glyphs (arch, circle, triangle, teardrop) — Nova signature
+function BrandGlyph({ kind, size = 160, color = "var(--nova-coral)", style = {} }) {
+  const els = {
+    arch: <path d={`M${size*0.1} ${size} V${size*0.4} a${size*0.4} ${size*0.4} 0 0 1 ${size*0.8} 0 V${size}`} stroke={color} strokeWidth={size*0.18} fill="none" strokeLinecap="butt" />,
+    circle: <circle cx={size/2} cy={size/2} r={size*0.45} fill={color} />,
+    triangle: <polygon points={`${size*0.05},${size*0.95} ${size*0.95},${size*0.95} ${size/2},${size*0.1}`} fill={color} />,
+    teardrop: <path d={`M${size*0.5} ${size*0.05} a${size*0.45} ${size*0.45} 0 1 0 ${size*0.01} 0 L${size*0.95} ${size*0.5} L${size*0.95} ${size*0.95} L${size*0.5} ${size*0.95} Z`} fill={color} />,
+  };
+  return (
+    <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} style={style}>
+      {els[kind]}
+    </svg>
+  );
+}
+
+function Sidebar({ page, setPage }) {
+  const items = [
+    { group: "OVERVIEW", items: [
+      { id: "portal", label: "Portal", glyph: "home" },
+    ]},
+    { group: "EXAM PREP", items: [
+      { id: "index", label: "Study Home", glyph: "books" },
+      { id: "chapter", label: "Reader", glyph: "chapter" },
+      { id: "quiz-sections", label: "Quiz", glyph: "quiz" },
+      { id: "quiz", label: "Practice", glyph: "exam", badge: "618" },
+      { id: "progress", label: "Progress", glyph: "progress" },
+      { id: "flashcards", label: "Flashcards", glyph: "flashcards" },
+      { id: "glossary", label: "Glossary", glyph: "glossary" },
+    ]},
+    { group: "REFERENCE", items: [
+      { id: "api", label: "API Reference", glyph: "code", badge: "5.3k" },
+      { id: "rules", label: "Business Rules", glyph: "rules" },
+      { id: "extension", label: "Extension Guide", glyph: "ext" },
+    ]},
+  ];
+  return (
+    <aside className="nv-sidebar">
+      <div className="nv-brand" onClick={() => setPage("portal")} style={{ cursor: "pointer" }}>
+        <div className="nv-brand-mark" style={{ "--nv-logo-mask": `url("${window.__novaLogoSrc}")` }}>
+          <NovaMark size={22} />
+        </div>
+        <div className="nv-brand-name">
+          OneStream
+          <small>Nova Portal</small>
+        </div>
+      </div>
+      {items.map(group => (
+        <div className="nv-nav-group" key={group.group}>
+          <div className="nv-nav-label">{group.group}</div>
+          {group.items.map(it => (
+            <div key={it.id}
+              className={`nv-nav-item ${page === it.id ? "active" : ""}`}
+              onClick={() => setPage(it.id)}>
+              <Glyph kind={it.glyph} size={18} />
+              <span>{it.label}</span>
+              {it.badge && <span className="badge">{it.badge}</span>}
+            </div>
+          ))}
+        </div>
+      ))}
+      <div className="nv-sidebar-footer">
+        <div style={{ fontSize: 11, color: "var(--color-text-3)", padding: "0 12px" }}>
+          OS-201 Certification<br/>
+          v2.0 · Nova Design System
+        </div>
+      </div>
+    </aside>
+  );
+}
+
+function TopBar({ theme, toggleTheme }) {
+  return (
+    <div className="nv-topbar">
+      <div className="nv-search">
+        <span className="nv-search-icon"><Glyph kind="search" size={16} /></span>
+        <input type="search" placeholder="Search chapters, rules, APIs..." />
+        <kbd>⌘K</kbd>
+      </div>
+      <div className="nv-topbar-actions">
+        <button className="nv-icon-btn" title="Notifications">
+          <Glyph kind="bell" size={18} />
+        </button>
+        <button className="nv-icon-btn" onClick={toggleTheme} title="Toggle theme">
+          <Glyph kind={theme === "dark" ? "sun" : "moon"} size={18} />
+        </button>
+        <div style={{ width: 1, height: 24, background: "var(--nova-line)", margin: "0 4px" }}/>
+        <div style={{
+          width: 36, height: 36, borderRadius: 999,
+          background: "var(--nova-teal)", color: "#fff",
+          display: "grid", placeItems: "center",
+          fontWeight: 700, fontSize: 13
+        }}>MP</div>
+      </div>
+    </div>
+  );
+}
+
+function Pomodoro() {
+  const [open, setOpen] = React.useState(false);
+  const [running, setRunning] = React.useState(false);
+  const [mode, setMode] = React.useState("study"); // study | break
+  const [seconds, setSeconds] = React.useState(25 * 60);
+  const intv = React.useRef(null);
+
+  React.useEffect(() => {
+    if (running) {
+      intv.current = setInterval(() => {
+        setSeconds(s => {
+          if (s <= 1) {
+            clearInterval(intv.current);
+            setRunning(false);
+            setMode(m => m === "study" ? "break" : "study");
+            return (mode === "study" ? 5 : 25) * 60;
+          }
+          return s - 1;
+        });
+      }, 1000);
+    }
+    return () => clearInterval(intv.current);
+  }, [running, mode]);
+
+  const m = Math.floor(seconds / 60);
+  const s = seconds % 60;
+  const time = `${m}:${String(s).padStart(2, "0")}`;
+
+  return (
+    <div className="nv-pomo">
+      {open && (
+        <div className="nv-pomo-panel open fade-in">
+          <div className={`nv-pomo-time ${mode === "break" ? "break" : ""}`}>{time}</div>
+          <div className="nv-pomo-label">{mode === "study" ? "Focus Session" : "Break"}</div>
+          <div className="nv-pomo-btns">
+            <button className="start" onClick={() => setRunning(r => !r)}>
+              {running ? "Pause" : "Start"}
+            </button>
+            <button className="reset" onClick={() => {
+              setRunning(false);
+              setMode("study");
+              setSeconds(25 * 60);
+            }}>Reset</button>
+          </div>
+          <div style={{ marginTop: 16, fontSize: 11, textAlign: "center", color: "var(--color-text-3)", letterSpacing: "0.08em", textTransform: "uppercase" }}>
+            Sessions today: <strong style={{ color: "var(--nova-coral)" }}>3</strong> · 75 min
+          </div>
+        </div>
+      )}
+      <button className={`nv-pomo-fab ${running ? "running" : ""}`} onClick={() => setOpen(o => !o)}>
+        <Glyph kind="timer" size={22} color="#fff" />
+      </button>
+    </div>
+  );
+}
+
+function Crumb({ items }) {
+  return (
+    <nav className="nv-crumb">
+      {items.map((it, i) => (
+        <React.Fragment key={i}>
+          {i > 0 && <span className="sep">/</span>}
+          {it.onClick ? <a onClick={it.onClick} style={{ cursor: "pointer" }}>{it.label}</a> :
+           <span className={i === items.length - 1 ? "current" : ""}>{it.label}</span>}
+        </React.Fragment>
+      ))}
+    </nav>
+  );
+}
+
+window.NovaMark = NovaMark;
+window.Glyph = Glyph;
+window.BrandGlyph = BrandGlyph;
+window.Sidebar = Sidebar;
+window.TopBar = TopBar;
+window.Pomodoro = Pomodoro;
+window.Crumb = Crumb;
+
+</script>
+<script type="text/babel">
+// Portal page — 3 variants selectable via tweaks
+
+function PortalPage({ setPage, variant, setVariant }) {
+  return (
+    <div className="nv-page fade-in">
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 24 }}>
+        <span className="nv-eyebrow">OS-201 · Platform Architect</span>
+        <div style={{ display: "flex", gap: 4, background: "var(--nova-paper)", border: "1px solid var(--nova-line)", borderRadius: 999, padding: 4 }}>
+          {["A", "B", "C"].map(v => (
+            <button key={v} onClick={() => setVariant(v)}
+              style={{
+                padding: "6px 14px", borderRadius: 999, fontSize: 12, fontWeight: 600,
+                background: variant === v ? "var(--nova-ink)" : "transparent",
+                color: variant === v ? "#fff" : "var(--color-text-2)"
+              }}>
+              Variant {v}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {variant === "A" && <PortalA setPage={setPage} />}
+      {variant === "B" && <PortalB setPage={setPage} />}
+      {variant === "C" && <PortalC setPage={setPage} />}
+    </div>
+  );
+}
+
+// ── Variant A: bone hero with oversized coral arch glyph
+function PortalA({ setPage }) {
+  const cards = [
+    { id: "index", title: "Exam Prep", desc: "4 books · 60 chapters · 618 questions with explanations, flashcards and timed exam simulation.", color: "coral", glyph: "arch" },
+    { id: "api", title: "API Reference", desc: "5,323 classes across 288 namespaces with full method signatures and live examples.", color: "teal", glyph: "circle" },
+    { id: "rules", title: "Business Rules", desc: "827 real rules — Extender, Finance, Connector, Dashboard, Assemblies.", color: "ink", glyph: "triangle" },
+    { id: "extension", title: "Extension Guide", desc: "VS Code extension + MCP server documentation for AI-assisted development.", color: "aqua", glyph: "teardrop" },
+  ];
+  return (
+    <>
+      {/* Hero */}
+      <section style={{ position: "relative", padding: "40px 0 80px", overflow: "hidden" }}>
+        <BrandGlyph kind="arch" size={520} color="var(--nova-coral)" style={{ position: "absolute", top: -40, right: -80, opacity: 0.08, zIndex: 0 }} />
+        <div style={{ position: "relative", zIndex: 1, maxWidth: 820 }}>
+          <p className="nv-eyebrow" style={{ marginBottom: 20 }}>
+            <span style={{ display: "inline-block", width: 6, height: 6, background: "var(--nova-coral)", borderRadius: 999, marginRight: 8, verticalAlign: "middle" }}></span>
+            CERTIFICATION PORTAL
+          </p>
+          <h1 style={{ fontSize: 96, lineHeight: 1.02, letterSpacing: "-0.03em", fontWeight: 700, margin: "0 0 24px" }}>
+            Study.<br/>
+            <span style={{ color: "var(--nova-coral)" }}>Build.</span> Certify.
+          </h1>
+          <p style={{ fontSize: 22, lineHeight: 1.5, color: "var(--color-text-2)", maxWidth: 620, margin: "0 0 36px" }}>
+            Your centralized hub for OS-201 mastery and complete OneStream API documentation — no fluff, just what you need to ship.
+          </p>
+          <div style={{ display: "flex", gap: 12 }}>
+            <button className="nv-btn nv-btn--primary" onClick={() => setPage("index")}>
+              Start studying <Glyph kind="arrow" size={16} />
+            </button>
+            <button className="nv-btn nv-btn--ghost" onClick={() => setPage("api")}>
+              Browse the API
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats strip */}
+      <section style={{
+        background: "var(--nova-ink)", color: "var(--nova-paper)",
+        borderRadius: "var(--r-lg)", padding: "32px 40px",
+        display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 24,
+        marginBottom: 48
+      }}>
+        {[
+          { n: "5,323", l: "API Classes" },
+          { n: "827", l: "Business Rules" },
+          { n: "600k+", l: "Words of Reference" },
+          { n: "618", l: "Quiz Questions" },
+        ].map(s => (
+          <div key={s.l}>
+            <div style={{ fontSize: 48, fontWeight: 700, letterSpacing: "-0.03em", lineHeight: 1 }}>{s.n}</div>
+            <div style={{ fontSize: 12, color: "#A7E8E4", letterSpacing: "0.14em", textTransform: "uppercase", marginTop: 8, fontWeight: 700 }}>{s.l}</div>
+          </div>
+        ))}
+      </section>
+
+      {/* Cards */}
+      <section style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 20, marginBottom: 60 }}>
+        {cards.map(c => (
+          <PortalCard key={c.id} card={c} onClick={() => setPage(c.id)} />
+        ))}
+      </section>
+    </>
+  );
+}
+
+function PortalCard({ card, onClick }) {
+  const colorMap = {
+    coral: { bg: "var(--nova-coral)", fg: "#fff", glyphColor: "rgba(255,255,255,0.18)" },
+    teal: { bg: "var(--nova-teal)", fg: "#fff", glyphColor: "rgba(255,255,255,0.18)" },
+    ink: { bg: "var(--nova-ink)", fg: "#fff", glyphColor: "rgba(255,255,255,0.14)" },
+    aqua: { bg: "var(--nova-aqua)", fg: "var(--nova-ink)", glyphColor: "rgba(46,58,64,0.14)" },
+  };
+  const c = colorMap[card.color];
+  return (
+    <div onClick={onClick} style={{
+      position: "relative", overflow: "hidden",
+      background: c.bg, color: c.fg,
+      borderRadius: 24, padding: 40,
+      minHeight: 240, cursor: "pointer",
+      transition: "transform 220ms var(--ease-out)",
+    }} onMouseEnter={e => e.currentTarget.style.transform = "translateY(-4px)"}
+       onMouseLeave={e => e.currentTarget.style.transform = "translateY(0)"}>
+      <BrandGlyph kind={card.glyph} size={220} color={c.glyphColor} style={{ position: "absolute", right: -30, bottom: -30 }} />
+      <div style={{ position: "relative", zIndex: 1, display: "flex", flexDirection: "column", height: "100%" }}>
+        <h3 style={{ fontSize: 32, fontWeight: 700, letterSpacing: "-0.02em", margin: "0 0 12px" }}>{card.title}</h3>
+        <p style={{ fontSize: 15, lineHeight: 1.55, opacity: 0.88, margin: 0, maxWidth: 420 }}>{card.desc}</p>
+        <div style={{ marginTop: "auto", paddingTop: 40, fontWeight: 600, fontSize: 14, display: "flex", alignItems: "center", gap: 8 }}>
+          Explore <Glyph kind="arrow" size={16} color={c.fg} />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ── Variant B: split layout, coral + bone, teardrop motif
+function PortalB({ setPage }) {
+  return (
+    <>
+      <section style={{
+        display: "grid", gridTemplateColumns: "1.2fr 1fr", gap: 0,
+        borderRadius: 40, overflow: "hidden", marginBottom: 48,
+        border: "1px solid var(--nova-line)"
+      }}>
+        <div style={{ padding: "80px 56px", background: "var(--nova-paper)", position: "relative" }}>
+          <p className="nv-eyebrow" style={{ marginBottom: 16 }}>OS-201 · PLATFORM ARCHITECT</p>
+          <h1 style={{ fontSize: 72, lineHeight: 1.03, letterSpacing: "-0.03em", margin: "0 0 20px" }}>
+            The handbook,<br/>the drills, and<br/>the <span style={{ color: "var(--nova-coral)" }}>reference</span>.
+          </h1>
+          <p style={{ fontSize: 18, color: "var(--color-text-2)", maxWidth: 480, marginBottom: 32 }}>
+            One portal for OneStream practitioners — study, reference, and real business rules, in one place.
+          </p>
+          <div style={{ display: "flex", gap: 12 }}>
+            <button className="nv-btn nv-btn--primary" onClick={() => setPage("index")}>Start</button>
+            <button className="nv-btn nv-btn--ghost" onClick={() => setPage("api")}>Browse API</button>
+          </div>
+        </div>
+        <div style={{ background: "var(--nova-coral)", position: "relative", overflow: "hidden", display: "grid", placeItems: "center" }}>
+          <BrandGlyph kind="teardrop" size={360} color="rgba(255,255,255,0.9)" />
+          <BrandGlyph kind="circle" size={80} color="var(--nova-aqua)" style={{ position: "absolute", top: 40, left: 40 }} />
+          <BrandGlyph kind="triangle" size={60} color="var(--nova-ink)" style={{ position: "absolute", bottom: 40, right: 40 }} />
+        </div>
+      </section>
+
+      <section style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 16, marginBottom: 48 }}>
+        {[
+          { id: "index", title: "Exam Prep", n: "618", l: "questions", glyph: "arch" },
+          { id: "api", title: "API Reference", n: "5,323", l: "classes", glyph: "circle" },
+          { id: "rules", title: "Business Rules", n: "827", l: "real rules", glyph: "triangle" },
+          { id: "extension", title: "Extension", n: "12", l: "features", glyph: "teardrop" },
+        ].map(s => (
+          <div key={s.id} onClick={() => setPage(s.id)} className="nv-card" style={{ cursor: "pointer", padding: 24 }}>
+            <BrandGlyph kind={s.glyph} size={36} color="var(--nova-coral)" />
+            <div style={{ fontSize: 40, fontWeight: 700, letterSpacing: "-0.02em", marginTop: 32 }}>{s.n}</div>
+            <div style={{ fontSize: 12, color: "var(--color-text-3)", textTransform: "uppercase", letterSpacing: "0.14em", fontWeight: 700 }}>{s.l}</div>
+            <div style={{ marginTop: 20, fontSize: 15, fontWeight: 600 }}>{s.title} →</div>
+          </div>
+        ))}
+      </section>
+    </>
+  );
+}
+
+// ── Variant C: teal-forward, editorial magazine layout
+function PortalC({ setPage }) {
+  return (
+    <>
+      <section style={{ padding: "40px 0 60px", position: "relative" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "auto 1fr", gap: 48, alignItems: "end", marginBottom: 40 }}>
+          <BrandGlyph kind="arch" size={140} color="var(--nova-coral)" />
+          <div style={{ borderBottom: "1px solid var(--nova-line)", paddingBottom: 20 }}>
+            <p className="nv-eyebrow">ISSUE 01 · SPRING EDITION</p>
+            <h1 style={{ fontSize: 120, lineHeight: 0.95, letterSpacing: "-0.04em", margin: "12px 0 0", fontWeight: 700 }}>
+              OneStream,<br/>end to end.
+            </h1>
+          </div>
+        </div>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 40, marginTop: 40 }}>
+          <p style={{ fontSize: 18, lineHeight: 1.55, margin: 0 }}>
+            This is the portal for OS-201 candidates and working architects. Study the official guides, drill through 618 weighted questions, and cross-reference real business rules next to the API that defines them.
+          </p>
+          <div>
+            <p className="nv-eyebrow" style={{ marginBottom: 8 }}>IN THIS EDITION</p>
+            <ul style={{ margin: 0, paddingLeft: 0, listStyle: "none", fontSize: 15, lineHeight: 1.8 }}>
+              <li>— 4 reference books</li>
+              <li>— 8 exam sections</li>
+              <li>— 827 real business rules</li>
+              <li>— MCP server + VS Code</li>
+            </ul>
+          </div>
+          <div style={{ display: "flex", flexDirection: "column", gap: 8, alignItems: "flex-start" }}>
+            <button className="nv-btn nv-btn--primary" onClick={() => setPage("index")}>Start studying</button>
+            <button className="nv-btn nv-btn--teal" onClick={() => setPage("api")}>Open API reference</button>
+          </div>
+        </div>
+      </section>
+
+      {/* Feature blocks */}
+      <section style={{ display: "grid", gridTemplateColumns: "2fr 1fr", gap: 20, marginBottom: 20 }}>
+        <div onClick={() => setPage("index")} style={{ background: "var(--nova-teal)", color: "#fff", borderRadius: 40, padding: 48, position: "relative", overflow: "hidden", cursor: "pointer", minHeight: 320 }}>
+          <BrandGlyph kind="circle" size={260} color="rgba(167,232,228,0.25)" style={{ position: "absolute", right: -40, top: -40 }} />
+          <p className="nv-eyebrow" style={{ color: "var(--nova-aqua)", marginBottom: 16 }}>FEATURED · STUDY TRACK</p>
+          <h2 style={{ fontSize: 56, fontWeight: 700, letterSpacing: "-0.02em", margin: "0 0 16px", maxWidth: 560 }}>Everything for OS-201 in one reading track.</h2>
+          <p style={{ fontSize: 17, opacity: 0.88, maxWidth: 480, marginBottom: 32 }}>Design Reference Guide, Finance Rules, Foundation Handbook, Workspaces & Assemblies — all cross-linked, all searchable.</p>
+          <div style={{ fontSize: 15, fontWeight: 600, display: "flex", gap: 8 }}>Enter the reader <Glyph kind="arrow" size={16} /></div>
+        </div>
+        <div onClick={() => setPage("quiz-sections")} style={{ background: "var(--nova-coral)", color: "#fff", borderRadius: 40, padding: 40, position: "relative", overflow: "hidden", cursor: "pointer" }}>
+          <BrandGlyph kind="triangle" size={180} color="rgba(255,255,255,0.16)" style={{ position: "absolute", right: -20, bottom: -20 }} />
+          <p className="nv-eyebrow" style={{ color: "#fff", opacity: 0.85, marginBottom: 16 }}>PRACTICE</p>
+          <h2 style={{ fontSize: 36, fontWeight: 700, letterSpacing: "-0.02em", margin: "0 0 12px" }}>618 weighted questions.</h2>
+          <p style={{ fontSize: 14, opacity: 0.9 }}>8 exam sections. Track your score, skip to unanswered, review the ones you missed.</p>
+          <div style={{ marginTop: 24, fontSize: 14, fontWeight: 600 }}>Start drills →</div>
+        </div>
+      </section>
+
+      <section style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20, marginBottom: 60 }}>
+        {[
+          { id: "api", title: "API Reference", sub: "5,323 classes · 288 namespaces", glyph: "circle", color: "#1A8A7F" },
+          { id: "rules", title: "Business Rules", sub: "827 production-grade rules", glyph: "arch", color: "#2E3A40" },
+          { id: "extension", title: "Extension Guide", sub: "VS Code + MCP server", glyph: "teardrop", color: "#FF5948" },
+        ].map(s => (
+          <div key={s.id} onClick={() => setPage(s.id)} className="nv-card" style={{ cursor: "pointer", padding: 32 }}>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 24 }}>
+              <BrandGlyph kind={s.glyph} size={44} color={s.color} />
+              <Glyph kind="arrow" size={18} color="var(--color-text-3)" />
+            </div>
+            <div style={{ fontSize: 20, fontWeight: 700, letterSpacing: "-0.01em", marginBottom: 4 }}>{s.title}</div>
+            <div style={{ fontSize: 13, color: "var(--color-text-2)" }}>{s.sub}</div>
+          </div>
+        ))}
+      </section>
+    </>
+  );
+}
+
+window.PortalPage = PortalPage;
+
+</script>
+<script type="text/babel">
+// Exam prep pages: index/home, chapter reader, quiz sections, quiz, progress, flashcards, glossary
+const books = [
+  { slug: "design-reference-guide", title: "Design Reference Guide", chapters: 24, words: 312000, desc: "Comprehensive reference covering the full OneStream platform: dimensions, cubes, workflow, dashboards, data integration." },
+  { slug: "finance-rules", title: "Finance Rules Handbook", chapters: 10, words: 155000, desc: "Financial logic engine, calculations, translations, and consolidation rules." },
+  { slug: "foundation-handbook", title: "Foundation Handbook", chapters: 14, words: 185000, desc: "Core platform concepts: architecture, security, metadata, business rules, and administration." },
+  { slug: "workspaces-assemblies", title: "Workspaces & Assemblies", chapters: 12, words: 75000, desc: "Workspaces, assemblies, solution management, and deployment patterns." },
+];
+
+function ExamIndexPage({ setPage }) {
+  return (
+    <div className="nv-page fade-in">
+      <Crumb items={[{ label: "Portal", onClick: () => setPage("portal") }, { label: "Exam Prep" }]} />
+
+      <div style={{ display: "grid", gridTemplateColumns: "1.4fr 1fr", gap: 40, marginBottom: 48, alignItems: "center" }}>
+        <div>
+          <p className="nv-eyebrow" style={{ marginBottom: 16 }}>OS-201 · YOUR TRACK</p>
+          <h1 style={{ fontSize: 64, lineHeight: 1.02, letterSpacing: "-0.03em", margin: "0 0 16px" }}>
+            Welcome back,<br/>Maria.
+          </h1>
+          <p style={{ fontSize: 18, color: "var(--color-text-2)", maxWidth: 520 }}>
+            You're 42% through the syllabus. Pick up where you left off, or jump into a drill.
+          </p>
+        </div>
+        <div style={{ background: "var(--nova-ink)", color: "#fff", borderRadius: 24, padding: 32, position: "relative", overflow: "hidden" }}>
+          <BrandGlyph kind="arch" size={180} color="rgba(255,89,72,0.22)" style={{ position: "absolute", right: -20, top: -20 }} />
+          <p className="nv-eyebrow" style={{ color: "var(--nova-aqua)" }}>CONTINUE READING</p>
+          <h3 style={{ fontSize: 22, fontWeight: 700, margin: "12px 0 8px" }}>Chapter 08 — Cubes</h3>
+          <p style={{ fontSize: 13, opacity: 0.7, marginBottom: 20 }}>Design Reference Guide · 48 min remaining</p>
+          <div style={{ height: 6, background: "rgba(255,255,255,0.1)", borderRadius: 999, overflow: "hidden", marginBottom: 16 }}>
+            <div style={{ width: "62%", height: "100%", background: "var(--nova-coral)" }}/>
+          </div>
+          <button className="nv-btn nv-btn--primary" onClick={() => setPage("chapter")} style={{ height: 38 }}>Resume →</button>
+        </div>
+      </div>
+
+      <section style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: 16, marginBottom: 48 }}>
+        {[
+          { n: "4", l: "Books", c: "var(--nova-coral)" },
+          { n: "60", l: "Chapters", c: "var(--nova-teal)" },
+          { n: "618", l: "Questions" },
+          { n: "247", l: "Answered" },
+          { n: "81%", l: "Avg Score", c: "var(--nova-teal)" },
+        ].map((s, i) => (
+          <div key={i} className="nv-card" style={{ padding: 24 }}>
+            <div style={{ fontSize: 40, fontWeight: 700, letterSpacing: "-0.02em", color: s.c || "var(--color-text)" }}>{s.n}</div>
+            <div style={{ fontSize: 11, color: "var(--color-text-3)", textTransform: "uppercase", letterSpacing: "0.14em", fontWeight: 700, marginTop: 4 }}>{s.l}</div>
+          </div>
+        ))}
+      </section>
+
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: 20 }}>
+        <h2 style={{ fontSize: 32, fontWeight: 700, letterSpacing: "-0.02em", margin: 0 }}>Reference Books</h2>
+        <button className="nv-btn nv-btn--ghost" onClick={() => setPage("quiz-sections")} style={{ height: 40, padding: "0 16px", fontSize: 13 }}>Jump to quiz</button>
+      </div>
+
+      <section style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 20 }}>
+        {books.map((b, i) => {
+          const glyphs = ["arch", "circle", "triangle", "teardrop"];
+          const colors = ["var(--nova-coral)", "var(--nova-teal)", "var(--nova-ink)", "var(--nova-coral)"];
+          return (
+            <div key={b.slug} className="nv-card" style={{ padding: 32, cursor: "pointer" }} onClick={() => setPage("chapter")}>
+              <div style={{ display: "flex", gap: 20 }}>
+                <BrandGlyph kind={glyphs[i]} size={56} color={colors[i]} />
+                <div style={{ flex: 1 }}>
+                  <p className="nv-eyebrow" style={{ marginBottom: 4 }}>BOOK {String(i+1).padStart(2, "0")}</p>
+                  <h3 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 8px", letterSpacing: "-0.01em" }}>{b.title}</h3>
+                  <p style={{ fontSize: 14, color: "var(--color-text-2)", lineHeight: 1.55, margin: "0 0 16px" }}>{b.desc}</p>
+                  <div style={{ display: "flex", gap: 16, fontSize: 12, color: "var(--color-text-3)" }}>
+                    <span><strong style={{ color: "var(--color-text)" }}>{b.chapters}</strong> chapters</span>
+                    <span><strong style={{ color: "var(--color-text)" }}>{(b.words/1000).toFixed(0)}k</strong> words</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </section>
+    </div>
+  );
+}
+
+// ── Chapter reader
+function ChapterPage({ setPage }) {
+  const [noteOpen, setNoteOpen] = React.useState(false);
+  const [notes, setNotes] = React.useState("Cubes are the core dimensional model — when defining a cube, the Time dimension is always required.\n\nKey point: only ONE of each dimension type per cube.");
+
+  return (
+    <div className="nv-page fade-in" style={{ maxWidth: 1200 }}>
+      <Crumb items={[
+        { label: "Portal", onClick: () => setPage("portal") },
+        { label: "Design Reference", onClick: () => setPage("index") },
+        { label: "Chapter 08 — Cubes" }
+      ]} />
+
+      <div style={{ display: "grid", gridTemplateColumns: "240px 1fr 280px", gap: 40 }}>
+        {/* TOC */}
+        <aside style={{ position: "sticky", top: 80, alignSelf: "start", height: "fit-content" }}>
+          <p className="nv-eyebrow" style={{ marginBottom: 12 }}>IN THIS CHAPTER</p>
+          <nav style={{ borderLeft: "2px solid var(--nova-line)", paddingLeft: 16 }}>
+            {[
+              { t: "Introduction", active: false },
+              { t: "Dimensionality", active: true },
+              { t: "Cube types", active: false },
+              { t: "Time dimension", active: false },
+              { t: "Scenario setup", active: false },
+              { t: "Consolidation rules", active: false },
+              { t: "Custom dimensions", active: false },
+            ].map((it, i) => (
+              <a key={i} style={{
+                display: "block", padding: "6px 0",
+                fontSize: 13,
+                color: it.active ? "var(--nova-coral)" : "var(--color-text-2)",
+                fontWeight: it.active ? 700 : 500,
+                marginLeft: it.active ? -18 : 0,
+                borderLeft: it.active ? "2px solid var(--nova-coral)" : "none",
+                paddingLeft: it.active ? 16 : 0,
+                cursor: "pointer"
+              }}>{it.t}</a>
+            ))}
+          </nav>
+        </aside>
+
+        {/* Main content */}
+        <article style={{ fontSize: 17, lineHeight: 1.7, color: "var(--color-text)" }}>
+          <p className="nv-eyebrow" style={{ marginBottom: 12 }}>CHAPTER 08 · DESIGN REFERENCE GUIDE</p>
+          <h1 style={{ fontSize: 56, lineHeight: 1.05, letterSpacing: "-0.03em", margin: "0 0 32px" }}>Cubes</h1>
+          <p style={{ fontSize: 21, lineHeight: 1.5, color: "var(--color-text-2)", marginBottom: 32 }}>
+            Cubes are the multidimensional containers that store financial data in OneStream. Each cube combines required and optional dimensions into a logical model your organization reports against.
+          </p>
+
+          <h2 style={{ fontSize: 32, fontWeight: 700, letterSpacing: "-0.02em", marginTop: 48, marginBottom: 16 }}>Dimensionality</h2>
+          <p>A cube always contains the <strong>eight required dimensions</strong>: Scenario, Time, Entity, Consolidation, Parent Currency, Cube, View, and Account. These form the backbone of every financial record stored in the platform — you cannot remove them, but you can extend them.</p>
+          <p>Beyond the required set, cubes support up to <strong>four User-Defined (UD)</strong> dimensions and up to <strong>four Flow</strong> dimensions, which give you space to model the specifics of your business.</p>
+
+          <div style={{ background: "var(--nova-aqua)", borderLeft: "4px solid var(--nova-teal)", padding: "20px 24px", borderRadius: 14, margin: "32px 0", color: "var(--nova-ink)" }}>
+            <p className="nv-eyebrow" style={{ color: "var(--nova-teal-ink)", marginBottom: 8 }}>💡 EXAM TIP</p>
+            <p style={{ margin: 0, fontSize: 16 }}>Only ONE of each required dimension type per cube. When the exam asks "how many Time dimensions can a cube have?" — the answer is always one.</p>
+          </div>
+
+          <h2 style={{ fontSize: 32, fontWeight: 700, letterSpacing: "-0.02em", marginTop: 48, marginBottom: 16 }}>Cube types</h2>
+          <p>OneStream provides three cube types: <strong>Standard</strong> cubes for financial consolidation, <strong>Planning</strong> cubes for budgeting and forecasting, and <strong>BI Viewer</strong> cubes for analytics blends. Each has subtle differences in how it caches and aggregates data.</p>
+
+          {/* Mini-quiz */}
+          <section style={{ marginTop: 64, padding: "40px 0", borderTop: "2px solid var(--nova-line)" }}>
+            <p className="nv-eyebrow" style={{ marginBottom: 8 }}>TEST YOUR UNDERSTANDING</p>
+            <h2 style={{ fontSize: 28, fontWeight: 700, letterSpacing: "-0.01em", margin: "0 0 24px" }}>3 questions for this chapter</h2>
+
+            <div className="nv-card" style={{ padding: 28 }}>
+              <div style={{ display: "flex", gap: 8, marginBottom: 12, alignItems: "center" }}>
+                <span style={{ fontSize: 11, fontWeight: 700, color: "var(--nova-teal)", background: "var(--nova-teal-soft)", padding: "3px 10px", borderRadius: 999 }}>MEDIUM</span>
+                <span style={{ fontSize: 11, color: "var(--color-text-3)" }}>Question 1 of 3</span>
+              </div>
+              <p style={{ fontSize: 17, fontWeight: 600, margin: "0 0 20px" }}>How many Time dimensions can a single cube contain?</p>
+              <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+                {[
+                  { l: "A", t: "Zero — Time is scenario-specific", s: "default" },
+                  { l: "B", t: "Exactly one", s: "correct" },
+                  { l: "C", t: "Up to four (matching UD dimensions)", s: "wrong" },
+                  { l: "D", t: "Unlimited", s: "default" },
+                ].map(o => (
+                  <button key={o.l} style={{
+                    textAlign: "left", padding: "14px 18px",
+                    border: `1.5px solid ${o.s === "correct" ? "var(--nova-teal)" : o.s === "wrong" ? "var(--nova-coral)" : "var(--nova-line)"}`,
+                    background: o.s === "correct" ? "var(--nova-teal-soft)" : o.s === "wrong" ? "var(--nova-coral-soft)" : "var(--nova-paper)",
+                    borderRadius: 12, fontSize: 14, fontWeight: 500,
+                    display: "flex", gap: 12
+                  }}>
+                    <strong style={{ color: o.s === "correct" ? "var(--nova-teal-ink)" : o.s === "wrong" ? "var(--nova-coral-ink)" : "var(--color-text-3)" }}>{o.l})</strong>
+                    {o.t}
+                    {o.s === "correct" && <span style={{ marginLeft: "auto", color: "var(--nova-teal)" }}>✓</span>}
+                    {o.s === "wrong" && <span style={{ marginLeft: "auto", color: "var(--nova-coral)" }}>✗</span>}
+                  </button>
+                ))}
+              </div>
+              <div style={{ marginTop: 20, padding: 16, background: "var(--nova-line-soft)", borderRadius: 10, fontSize: 14, lineHeight: 1.5 }}>
+                <strong>Correct — B.</strong> Every cube has exactly one Time dimension, which is fundamental to how OneStream periodizes and aggregates data. The Time dimension is mandatory and singular.
+              </div>
+            </div>
+          </section>
+
+          {/* Prev/next */}
+          <nav style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginTop: 48, paddingTop: 32, borderTop: "1px solid var(--nova-line)" }}>
+            <a className="nv-card" style={{ padding: 20, cursor: "pointer" }}>
+              <div style={{ fontSize: 11, color: "var(--color-text-3)", textTransform: "uppercase", letterSpacing: "0.14em", fontWeight: 700 }}>← Previous</div>
+              <div style={{ fontSize: 16, fontWeight: 600, marginTop: 6 }}>Chapter 07 — Implementing Security</div>
+            </a>
+            <a className="nv-card" style={{ padding: 20, cursor: "pointer", textAlign: "right" }}>
+              <div style={{ fontSize: 11, color: "var(--color-text-3)", textTransform: "uppercase", letterSpacing: "0.14em", fontWeight: 700 }}>Next →</div>
+              <div style={{ fontSize: 16, fontWeight: 600, marginTop: 6 }}>Chapter 09 — Workflow</div>
+            </a>
+          </nav>
+        </article>
+
+        {/* Right rail: Notes */}
+        <aside style={{ position: "sticky", top: 80, alignSelf: "start", height: "fit-content" }}>
+          <div className="nv-card" style={{ padding: 20 }}>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 12 }}>
+              <p className="nv-eyebrow" style={{ margin: 0 }}>MY NOTES</p>
+              <span style={{ fontSize: 10, color: "var(--nova-teal)", fontWeight: 600 }}>● Saved</span>
+            </div>
+            <textarea value={notes} onChange={e => setNotes(e.target.value)}
+              style={{
+                width: "100%", minHeight: 180,
+                border: "1px solid var(--nova-line)", borderRadius: 10,
+                padding: 12, fontSize: 13, lineHeight: 1.5,
+                background: "var(--nova-line-soft)",
+                resize: "vertical", outline: "none"
+              }}/>
+            <button className="nv-btn nv-btn--ghost" style={{ width: "100%", justifyContent: "center", fontSize: 12, height: 36, marginTop: 12 }}>
+              Export to Markdown
+            </button>
+          </div>
+          <div style={{ fontSize: 11, color: "var(--color-text-3)", padding: "16px 4px", lineHeight: 1.6 }}>
+            <strong style={{ color: "var(--color-text-2)" }}>💡 Tip:</strong> Highlight text with your cursor — it will be saved automatically to your highlights panel.
+          </div>
+        </aside>
+      </div>
+    </div>
+  );
+}
+
+// ── Quiz Sections
+function QuizSectionsPage({ setPage }) {
+  const sections = [
+    { n: 1, slug: "cube", name: "Cube Design", weight: 18, total: 95, answered: 63, correct: 54 },
+    { n: 2, slug: "workflow", name: "Workflow", weight: 14, total: 78, answered: 40, correct: 32 },
+    { n: 3, slug: "data", name: "Data Collection", weight: 12, total: 68, answered: 28, correct: 22 },
+    { n: 4, slug: "presentation", name: "Presentation", weight: 15, total: 88, answered: 50, correct: 41 },
+    { n: 5, slug: "tools", name: "Tools & Admin", weight: 10, total: 62, answered: 18, correct: 14 },
+    { n: 6, slug: "security", name: "Security", weight: 11, total: 68, answered: 30, correct: 28 },
+    { n: 7, slug: "admin", name: "Administration", weight: 8, total: 52, answered: 10, correct: 8 },
+    { n: 8, slug: "rules", name: "Business Rules", weight: 12, total: 107, answered: 8, correct: 6 },
+  ];
+  return (
+    <div className="nv-page fade-in">
+      <Crumb items={[{ label: "Portal", onClick: () => setPage("portal") }, { label: "Exam Prep", onClick: () => setPage("index") }, { label: "Quiz" }]} />
+
+      <div style={{ display: "grid", gridTemplateColumns: "1fr auto", gap: 40, alignItems: "end", marginBottom: 48 }}>
+        <div>
+          <p className="nv-eyebrow" style={{ marginBottom: 12 }}>618 WEIGHTED QUESTIONS · 8 SECTIONS</p>
+          <h1 style={{ fontSize: 56, lineHeight: 1.02, letterSpacing: "-0.03em", margin: 0 }}>Practice, by section.</h1>
+        </div>
+        <div style={{ display: "flex", gap: 8 }}>
+          <button className="nv-btn nv-btn--ghost" style={{ height: 44, padding: "0 18px" }}>Review failed</button>
+          <button className="nv-btn nv-btn--primary" onClick={() => setPage("quiz")}>Start exam simulation →</button>
+        </div>
+      </div>
+
+      <div className="nv-card" style={{ padding: 0, overflow: "hidden" }}>
+        <table style={{ width: "100%", borderCollapse: "collapse" }}>
+          <thead>
+            <tr style={{ background: "var(--nova-line-soft)" }}>
+              {["#", "Section", "Exam weight", "Progress", "Score", ""].map((h, i) => (
+                <th key={i} style={{ textAlign: i === 5 ? "right" : "left", padding: "16px 20px", fontSize: 11, textTransform: "uppercase", letterSpacing: "0.14em", fontWeight: 700, color: "var(--color-text-3)" }}>{h}</th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {sections.map((s, i) => {
+              const pct = s.answered > 0 ? Math.round(s.correct/s.answered*100) : 0;
+              const progPct = Math.round(s.answered/s.total*100);
+              return (
+                <tr key={s.slug} style={{ borderTop: "1px solid var(--nova-line)", cursor: "pointer" }}
+                    onClick={() => setPage("quiz")}
+                    onMouseEnter={e => e.currentTarget.style.background = "var(--nova-line-soft)"}
+                    onMouseLeave={e => e.currentTarget.style.background = "transparent"}>
+                  <td style={{ padding: "20px", fontSize: 13, color: "var(--color-text-3)", fontFamily: "var(--font-mono)" }}>{String(s.n).padStart(2,"0")}</td>
+                  <td style={{ padding: "20px" }}>
+                    <div style={{ fontSize: 16, fontWeight: 600 }}>{s.name}</div>
+                    <div style={{ fontSize: 12, color: "var(--color-text-3)", marginTop: 2 }}>{s.total} questions</div>
+                  </td>
+                  <td style={{ padding: "20px", fontSize: 14 }}>
+                    <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                      <div style={{ width: 60, height: 4, background: "var(--nova-line)", borderRadius: 999, overflow: "hidden" }}>
+                        <div style={{ width: `${s.weight*5}%`, height: "100%", background: "var(--nova-ink)" }}/>
+                      </div>
+                      <span style={{ fontWeight: 600 }}>{s.weight}%</span>
+                    </div>
+                  </td>
+                  <td style={{ padding: "20px", fontSize: 14 }}>
+                    <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                      <div style={{ width: 100, height: 6, background: "var(--nova-line)", borderRadius: 999, overflow: "hidden" }}>
+                        <div style={{ width: `${progPct}%`, height: "100%", background: "var(--nova-coral)" }}/>
+                      </div>
+                      <span style={{ fontVariantNumeric: "tabular-nums", fontWeight: 600 }}>{s.answered}/{s.total}</span>
+                    </div>
+                  </td>
+                  <td style={{ padding: "20px" }}>
+                    {s.answered > 0 ? (
+                      <span style={{
+                        fontSize: 14, fontWeight: 700,
+                        color: pct >= 80 ? "var(--nova-teal)" : pct >= 50 ? "var(--color-text)" : "var(--nova-coral)"
+                      }}>{pct}%</span>
+                    ) : <span style={{ color: "var(--color-text-3)" }}>—</span>}
+                  </td>
+                  <td style={{ padding: "20px", textAlign: "right" }}>
+                    <Glyph kind="arrow" size={16} color="var(--color-text-3)" />
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+}
+
+// ── Quiz (single question)
+function QuizPage({ setPage }) {
+  const [selected, setSelected] = React.useState(null);
+  const [answered, setAnswered] = React.useState(false);
+  const correct = "B";
+
+  const opts = [
+    { l: "A", t: "Use XFSetCellAmount to directly write to the target cell without any buffering" },
+    { l: "B", t: "Use api.Data.Calculate() and route the result through the Finance Engine's Data Buffer" },
+    { l: "C", t: "Manually query SQL through XFSqlHelper and insert directly into tblDataRecord" },
+    { l: "D", t: "Use a Dashboard Extender rule with api.Pov.GetPovForFormulas()" },
+  ];
+
+  return (
+    <div className="nv-page fade-in" style={{ maxWidth: 960 }}>
+      <Crumb items={[
+        { label: "Portal", onClick: () => setPage("portal") },
+        { label: "Exam Prep", onClick: () => setPage("index") },
+        { label: "Quiz", onClick: () => setPage("quiz-sections") },
+        { label: "Business Rules" }
+      ]} />
+
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 20 }}>
+        <div>
+          <h1 style={{ fontSize: 32, fontWeight: 700, letterSpacing: "-0.01em", margin: 0 }}>Business Rules <span style={{ color: "var(--color-text-3)", fontWeight: 500, fontSize: 18 }}>12% of exam</span></h1>
+        </div>
+        <div style={{ fontSize: 14, color: "var(--color-text-2)" }}>Question <strong>34</strong> of <strong>107</strong></div>
+      </div>
+
+      {/* Progress bar */}
+      <div style={{ height: 6, background: "var(--nova-line)", borderRadius: 999, overflow: "hidden", marginBottom: 24, display: "flex" }}>
+        <div style={{ width: "28%", background: "var(--nova-teal)" }}/>
+        <div style={{ width: "4%", background: "var(--nova-coral)" }}/>
+      </div>
+
+      {/* Filter chips */}
+      <div style={{ display: "flex", gap: 8, marginBottom: 24, alignItems: "center", flexWrap: "wrap" }}>
+        <span style={{ fontSize: 12, color: "var(--color-text-3)", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.08em", marginRight: 4 }}>Difficulty:</span>
+        {["All", "Easy", "Medium", "Hard"].map((f, i) => (
+          <button key={f} style={{
+            padding: "6px 14px", borderRadius: 999,
+            border: `1px solid ${i === 0 ? "var(--nova-ink)" : "var(--nova-line)"}`,
+            background: i === 0 ? "var(--nova-ink)" : "transparent",
+            color: i === 0 ? "#fff" : "var(--color-text-2)",
+            fontSize: 12, fontWeight: 600
+          }}>{f}</button>
+        ))}
+        <span style={{ width: 1, height: 20, background: "var(--nova-line)", margin: "0 8px" }}/>
+        <span style={{ fontSize: 12, color: "var(--color-text-3)", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.08em", marginRight: 4 }}>Status:</span>
+        {["All", "Unanswered", "Correct", "Incorrect"].map((f, i) => (
+          <button key={f} style={{
+            padding: "6px 14px", borderRadius: 999,
+            border: "1px solid var(--nova-line)",
+            background: "transparent",
+            color: "var(--color-text-2)",
+            fontSize: 12, fontWeight: 600
+          }}>{f}</button>
+        ))}
+      </div>
+
+      {/* Question card */}
+      <div className="nv-card" style={{ padding: 40 }}>
+        <div style={{ display: "flex", gap: 8, marginBottom: 20, alignItems: "center" }}>
+          <span style={{ fontSize: 11, fontWeight: 700, color: "var(--nova-coral)", background: "var(--nova-coral-soft)", padding: "4px 12px", borderRadius: 999 }}>HARD</span>
+          <span style={{ fontSize: 12, color: "var(--color-text-3)" }}>Objective 8.3 · Finance Engine API</span>
+        </div>
+        <p style={{ fontSize: 22, fontWeight: 600, lineHeight: 1.45, margin: "0 0 32px", letterSpacing: "-0.005em" }}>
+          When writing a Finance business rule that calculates a member formula based on another account's data, which approach correctly routes through the Data Buffer cell loop?
+        </p>
+
+        <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+          {opts.map(o => {
+            let state = "default";
+            if (answered) {
+              if (o.l === correct) state = "correct";
+              else if (o.l === selected) state = "wrong";
+            } else if (o.l === selected) state = "selected";
+
+            return (
+              <button key={o.l} onClick={() => { if (!answered) { setSelected(o.l); setAnswered(true); }}}
+                style={{
+                  textAlign: "left", padding: "18px 22px",
+                  border: `1.5px solid ${
+                    state === "correct" ? "var(--nova-teal)" :
+                    state === "wrong" ? "var(--nova-coral)" :
+                    state === "selected" ? "var(--nova-ink)" : "var(--nova-line)"
+                  }`,
+                  background:
+                    state === "correct" ? "var(--nova-teal-soft)" :
+                    state === "wrong" ? "var(--nova-coral-soft)" :
+                    "var(--nova-paper)",
+                  borderRadius: 14, fontSize: 15, fontWeight: 500, lineHeight: 1.5,
+                  display: "flex", gap: 14, alignItems: "flex-start",
+                  transition: "all 140ms"
+                }}>
+                <strong style={{
+                  flexShrink: 0,
+                  width: 28, height: 28, borderRadius: 999,
+                  background: state === "correct" ? "var(--nova-teal)" : state === "wrong" ? "var(--nova-coral)" : "var(--nova-line-soft)",
+                  color: state === "correct" || state === "wrong" ? "#fff" : "var(--color-text-2)",
+                  display: "grid", placeItems: "center", fontSize: 13
+                }}>{o.l}</strong>
+                <span style={{ flex: 1 }}>{o.t}</span>
+                {state === "correct" && <span style={{ color: "var(--nova-teal)" }}>✓</span>}
+                {state === "wrong" && <span style={{ color: "var(--nova-coral)" }}>✗</span>}
+              </button>
+            );
+          })}
+        </div>
+
+        {answered && (
+          <div style={{ marginTop: 24, padding: 24, background: "var(--nova-line-soft)", borderRadius: 14, borderLeft: "4px solid var(--nova-teal)" }}>
+            <p className="nv-eyebrow" style={{ color: "var(--nova-teal-ink)", marginBottom: 8 }}>CORRECT — B</p>
+            <p style={{ fontSize: 15, lineHeight: 1.6, margin: "0 0 12px" }}>
+              The Finance Engine's <strong>Data Buffer cell loop</strong> is the officially supported path for cross-account calculations. Using <code style={{ background: "var(--nova-paper)", padding: "2px 6px", borderRadius: 4, fontSize: 13 }}>api.Data.Calculate()</code> ensures the engine respects scenario, POV, and consolidation rules.
+            </p>
+            <a style={{ fontSize: 13, color: "var(--nova-coral)", fontWeight: 600 }}>
+              📖 Read more: Finance Rules Handbook · Ch. 03 — API Data Calculate →
+            </a>
+          </div>
+        )}
+      </div>
+
+      {/* Nav */}
+      <div style={{ display: "flex", justifyContent: "space-between", marginTop: 24 }}>
+        <button className="nv-btn nv-btn--ghost">← Previous</button>
+        <div style={{ display: "flex", gap: 8 }}>
+          <button className="nv-btn nv-btn--ghost">Skip to unanswered</button>
+          <button className="nv-btn nv-btn--primary" onClick={() => { setSelected(null); setAnswered(false); }}>Next question →</button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ── Progress page
+function ProgressPage({ setPage }) {
+  return (
+    <div className="nv-page fade-in">
+      <Crumb items={[{ label: "Portal", onClick: () => setPage("portal") }, { label: "Exam Prep", onClick: () => setPage("index") }, { label: "Progress" }]} />
+      <h1 style={{ fontSize: 56, letterSpacing: "-0.03em", fontWeight: 700, margin: "0 0 40px" }}>Progress</h1>
+
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 16, marginBottom: 32 }}>
+        <div className="nv-card" style={{ padding: 28, background: "var(--nova-coral)", color: "#fff", border: "none" }}>
+          <p className="nv-eyebrow" style={{ color: "rgba(255,255,255,0.75)" }}>ANSWERED</p>
+          <div style={{ fontSize: 72, fontWeight: 700, letterSpacing: "-0.03em", lineHeight: 1 }}>247</div>
+          <div style={{ fontSize: 14, opacity: 0.8, marginTop: 4 }}>of 618 questions (40%)</div>
+        </div>
+        <div className="nv-card" style={{ padding: 28 }}>
+          <p className="nv-eyebrow">AVG SCORE</p>
+          <div style={{ fontSize: 72, fontWeight: 700, letterSpacing: "-0.03em", lineHeight: 1, color: "var(--nova-teal)" }}>81%</div>
+          <div style={{ fontSize: 14, color: "var(--color-text-2)", marginTop: 4 }}>Passing threshold is 70%</div>
+        </div>
+        <div className="nv-card" style={{ padding: 28 }}>
+          <p className="nv-eyebrow">STUDY STREAK</p>
+          <div style={{ fontSize: 72, fontWeight: 700, letterSpacing: "-0.03em", lineHeight: 1 }}>12 <span style={{ fontSize: 32, color: "var(--color-text-3)" }}>days</span></div>
+          <div style={{ fontSize: 14, color: "var(--color-text-2)", marginTop: 4 }}>3 Pomodoro sessions today</div>
+        </div>
+      </div>
+
+      <div className="nv-card" style={{ padding: 32 }}>
+        <h3 style={{ fontSize: 20, fontWeight: 700, margin: "0 0 20px" }}>Per-section accuracy</h3>
+        {[
+          { s: "Cube Design", p: 57, a: 85 },
+          { s: "Workflow", p: 51, a: 80 },
+          { s: "Data Collection", p: 41, a: 79 },
+          { s: "Presentation", p: 57, a: 82 },
+          { s: "Tools & Admin", p: 29, a: 78 },
+          { s: "Security", p: 44, a: 93 },
+          { s: "Administration", p: 19, a: 80 },
+          { s: "Business Rules", p: 7, a: 75 },
+        ].map(r => (
+          <div key={r.s} style={{ display: "grid", gridTemplateColumns: "180px 1fr 60px", gap: 16, alignItems: "center", padding: "14px 0", borderTop: "1px solid var(--nova-line)" }}>
+            <div style={{ fontSize: 14, fontWeight: 600 }}>{r.s}</div>
+            <div style={{ display: "flex", gap: 2, height: 8, background: "var(--nova-line)", borderRadius: 999, overflow: "hidden" }}>
+              <div style={{ width: `${r.p}%`, background: "var(--nova-coral)" }}/>
+            </div>
+            <div style={{ fontSize: 14, fontWeight: 700, textAlign: "right", color: r.a >= 80 ? "var(--nova-teal)" : "var(--color-text)" }}>{r.a}%</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// ── Flashcards page
+function FlashcardsPage({ setPage }) {
+  const [flipped, setFlipped] = React.useState(false);
+  return (
+    <div className="nv-page fade-in" style={{ maxWidth: 900 }}>
+      <Crumb items={[{ label: "Portal", onClick: () => setPage("portal") }, { label: "Exam Prep", onClick: () => setPage("index") }, { label: "Flashcards" }]} />
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 32 }}>
+        <h1 style={{ fontSize: 48, fontWeight: 700, letterSpacing: "-0.03em", margin: 0 }}>Flashcards</h1>
+        <div style={{ fontSize: 14, color: "var(--color-text-2)" }}>Card <strong>7</strong> of <strong>120</strong> · Cube Design</div>
+      </div>
+
+      <div onClick={() => setFlipped(f => !f)} style={{
+        background: flipped ? "var(--nova-teal)" : "var(--nova-coral)",
+        color: "#fff", borderRadius: 32, padding: 80,
+        minHeight: 400, display: "grid", placeItems: "center",
+        textAlign: "center", cursor: "pointer",
+        position: "relative", overflow: "hidden",
+        transition: "background 360ms var(--ease-out)"
+      }}>
+        <BrandGlyph kind={flipped ? "circle" : "arch"} size={300} color="rgba(255,255,255,0.10)" style={{ position: "absolute", right: -40, bottom: -40 }}/>
+        <div style={{ position: "relative", zIndex: 1 }}>
+          <p className="nv-eyebrow" style={{ color: "rgba(255,255,255,0.7)", marginBottom: 16 }}>{flipped ? "ANSWER" : "QUESTION"}</p>
+          <p style={{ fontSize: 36, fontWeight: 600, lineHeight: 1.3, letterSpacing: "-0.015em", margin: 0, maxWidth: 640 }}>
+            {flipped
+              ? "One — every cube has exactly one Time dimension. It is mandatory and singular."
+              : "How many Time dimensions can a single cube contain?"}
+          </p>
+          <p style={{ fontSize: 13, opacity: 0.6, marginTop: 32 }}>Click to {flipped ? "flip back" : "reveal"}</p>
+        </div>
+      </div>
+
+      <div style={{ display: "flex", justifyContent: "space-between", marginTop: 24, gap: 12 }}>
+        <button className="nv-btn nv-btn--ghost">← Previous</button>
+        <div style={{ display: "flex", gap: 8 }}>
+          <button style={{ padding: "10px 20px", borderRadius: 999, background: "var(--nova-coral-soft)", color: "var(--nova-coral-ink)", fontWeight: 600, fontSize: 14 }}>Hard</button>
+          <button style={{ padding: "10px 20px", borderRadius: 999, background: "var(--nova-line-soft)", fontWeight: 600, fontSize: 14 }}>Medium</button>
+          <button style={{ padding: "10px 20px", borderRadius: 999, background: "var(--nova-teal-soft)", color: "var(--nova-teal-ink)", fontWeight: 600, fontSize: 14 }}>Easy</button>
+        </div>
+        <button className="nv-btn nv-btn--primary">Next →</button>
+      </div>
+    </div>
+  );
+}
+
+// ── Glossary
+function GlossaryPage({ setPage }) {
+  const terms = [
+    { t: "Assembly", d: "A container for related business rules, dashboards, and database tables within a workspace.", ch: "Workspaces · Ch. 05" },
+    { t: "BI Blend", d: "OneStream's analytic engine that joins relational stage data with cube data for reporting.", ch: "Foundation · Ch. 12" },
+    { t: "Cube View", d: "A configurable matrix of dimensions rendered as a grid — rows, columns, and POV.", ch: "Design · Ch. 12" },
+    { t: "Data Buffer", d: "An in-memory collection of data cells used inside a Finance rule cell loop.", ch: "Finance · Ch. 04" },
+    { t: "Dimension", d: "A hierarchical axis of a cube — Entity, Account, Time, Scenario, etc.", ch: "Design · Ch. 02" },
+    { t: "Extender", d: "A business rule type for custom logic not tied to the Finance Engine.", ch: "Foundation · Ch. 08" },
+    { t: "Finance Engine", d: "The core calculation engine that processes consolidation, translation, and custom rules.", ch: "Finance · Ch. 01" },
+    { t: "POV", d: "Point of View — the currently selected dimension members defining a user's context.", ch: "Design · Ch. 05" },
+    { t: "Workflow", d: "The process orchestration model: Import → Validate → Load → Confirm → Certify.", ch: "Design · Ch. 09" },
+  ];
+  return (
+    <div className="nv-page fade-in">
+      <Crumb items={[{ label: "Portal", onClick: () => setPage("portal") }, { label: "Exam Prep", onClick: () => setPage("index") }, { label: "Glossary" }]} />
+      <h1 style={{ fontSize: 56, letterSpacing: "-0.03em", fontWeight: 700, margin: "0 0 12px" }}>Glossary</h1>
+      <p style={{ fontSize: 18, color: "var(--color-text-2)", margin: "0 0 32px", maxWidth: 600 }}>Core OneStream terms, auto-extracted from chapter headings. {terms.length} terms.</p>
+
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 16 }}>
+        {terms.map(term => (
+          <div key={term.t} className="nv-card" style={{ padding: 24 }}>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: 8 }}>
+              <h3 style={{ fontSize: 20, fontWeight: 700, margin: 0, letterSpacing: "-0.01em" }}>{term.t}</h3>
+              <span style={{ fontSize: 11, color: "var(--nova-coral)", fontWeight: 600 }}>{term.ch}</span>
+            </div>
+            <p style={{ fontSize: 14, color: "var(--color-text-2)", lineHeight: 1.55, margin: 0 }}>{term.d}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+window.ExamIndexPage = ExamIndexPage;
+window.ChapterPage = ChapterPage;
+window.QuizSectionsPage = QuizSectionsPage;
+window.QuizPage = QuizPage;
+window.ProgressPage = ProgressPage;
+window.FlashcardsPage = FlashcardsPage;
+window.GlossaryPage = GlossaryPage;
+
+</script>
+<script type="text/babel">
+// API Reference, Business Rules, Extension pages
+
+// ── API Reference page
+function ApiPage({ setPage }) {
+  const [selected, setSelected] = React.useState("OneStream.Finance.Api.BusinessRule");
+  const namespaces = [
+    { ns: "OneStream.Finance", count: 842, open: true, classes: [
+      { n: "Api.BusinessRule", t: "Class", selected: true },
+      { n: "Api.DataBuffer", t: "Class" },
+      { n: "Api.DataCell", t: "Class" },
+      { n: "Api.Pov", t: "Class" },
+      { n: "Api.FinanceFunctions", t: "Class" },
+    ]},
+    { ns: "OneStream.Data", count: 420 },
+    { ns: "OneStream.Dashboard", count: 618 },
+    { ns: "OneStream.Assemblies", count: 312 },
+    { ns: "OneStream.Workspaces", count: 180 },
+    { ns: "OneStream.Admin", count: 278 },
+    { ns: "OneStream.Security", count: 124 },
+  ];
+
+  return (
+    <div className="nv-page fade-in" style={{ maxWidth: 1400 }}>
+      <Crumb items={[
+        { label: "Portal", onClick: () => setPage("portal") },
+        { label: "API Reference" },
+        { label: "OneStream.Finance" },
+        { label: "BusinessRule" }
+      ]} />
+
+      <div style={{ display: "grid", gridTemplateColumns: "260px 1fr 280px", gap: 32 }}>
+        {/* LEFT: namespace tree */}
+        <aside style={{ position: "sticky", top: 80, alignSelf: "start", height: "calc(100vh - 120px)", overflowY: "auto" }}>
+          <p className="nv-eyebrow" style={{ marginBottom: 12 }}>NAMESPACES · 288</p>
+          <nav>
+            {namespaces.map(ns => (
+              <div key={ns.ns} style={{ marginBottom: 4 }}>
+                <div style={{
+                  display: "flex", alignItems: "center", gap: 6,
+                  padding: "8px 10px", borderRadius: 8,
+                  fontSize: 13, fontWeight: 600,
+                  background: ns.open ? "var(--nova-line-soft)" : "transparent",
+                  cursor: "pointer"
+                }}>
+                  <span style={{ color: "var(--color-text-3)", fontSize: 10, transform: ns.open ? "rotate(90deg)" : "none" }}>▶</span>
+                  <span style={{ flex: 1, fontFamily: "var(--font-mono)" }}>{ns.ns}</span>
+                  <span style={{ fontSize: 10, color: "var(--color-text-3)", fontWeight: 700 }}>{ns.count}</span>
+                </div>
+                {ns.open && ns.classes && (
+                  <div style={{ borderLeft: "1px solid var(--nova-line)", marginLeft: 18, paddingLeft: 8 }}>
+                    {ns.classes.map(c => (
+                      <div key={c.n} style={{
+                        padding: "6px 10px", fontSize: 12.5,
+                        fontFamily: "var(--font-mono)",
+                        borderRadius: 6,
+                        background: c.selected ? "var(--nova-coral)" : "transparent",
+                        color: c.selected ? "#fff" : "var(--color-text-2)",
+                        fontWeight: c.selected ? 600 : 400,
+                        cursor: "pointer",
+                        display: "flex", alignItems: "center", gap: 6
+                      }}>
+                        <span style={{
+                          width: 16, height: 16, borderRadius: 4,
+                          background: c.selected ? "rgba(255,255,255,0.2)" : "var(--nova-teal)",
+                          color: "#fff", fontSize: 10, fontWeight: 700,
+                          display: "grid", placeItems: "center", flexShrink: 0
+                        }}>C</span>
+                        {c.n}
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+          </nav>
+        </aside>
+
+        {/* CENTER */}
+        <main style={{ minWidth: 0 }}>
+          <div style={{ display: "flex", alignItems: "baseline", gap: 12, marginBottom: 8 }}>
+            <span style={{
+              background: "var(--nova-teal)", color: "#fff",
+              fontSize: 11, fontWeight: 700, padding: "4px 10px",
+              borderRadius: 999
+            }}>CLASS</span>
+            <span style={{ fontFamily: "var(--font-mono)", fontSize: 13, color: "var(--color-text-3)" }}>OneStream.Finance.Api</span>
+          </div>
+          <h1 style={{ fontSize: 48, fontWeight: 700, letterSpacing: "-0.02em", margin: "0 0 16px", fontFamily: "var(--font-mono)" }}>BusinessRule</h1>
+          <p style={{ fontSize: 17, lineHeight: 1.55, color: "var(--color-text-2)", margin: "0 0 32px", maxWidth: 640 }}>
+            Base class for all Finance business rules. Provides access to the POV, data buffer, and finance engine helpers. All custom Finance rules should inherit from this class.
+          </p>
+
+          {/* Tabs */}
+          <div style={{ display: "flex", gap: 2, borderBottom: "1px solid var(--nova-line)", marginBottom: 24 }}>
+            {["Overview", "Methods (24)", "Properties (8)", "Events (3)", "Examples"].map((t, i) => (
+              <button key={t} style={{
+                padding: "10px 18px",
+                fontSize: 13, fontWeight: 600,
+                color: i === 1 ? "var(--nova-coral)" : "var(--color-text-2)",
+                borderBottom: i === 1 ? "2px solid var(--nova-coral)" : "2px solid transparent",
+                marginBottom: -1
+              }}>{t}</button>
+            ))}
+          </div>
+
+          {/* Methods list */}
+          <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
+            {[
+              { rt: "DataBuffer", n: "Calculate", params: "string formula, Scenario scn", d: "Evaluates a formula against the current POV and returns a DataBuffer with the result. Use inside cell-loop contexts for cross-account arithmetic." },
+              { rt: "void", n: "SetDataCell", params: "DataCell cell, decimal amount", d: "Write a value to a data cell. Respects consolidation, translation, and calculation order." },
+              { rt: "Pov", n: "GetPovForFormulas", params: "", d: "Returns the POV the current formula is being evaluated against." },
+              { rt: "bool", n: "IsBaseEntity", params: "Member entity", d: "True if the supplied entity has no children in the consolidation hierarchy." },
+            ].map(m => (
+              <div key={m.n} className="nv-card" style={{ padding: 20 }}>
+                <div style={{ fontFamily: "var(--font-mono)", fontSize: 14, marginBottom: 8 }}>
+                  <span style={{ color: "var(--nova-teal)" }}>{m.rt}</span>
+                  {" "}
+                  <strong style={{ color: "var(--nova-coral)" }}>{m.n}</strong>
+                  <span style={{ color: "var(--color-text-3)" }}>({m.params})</span>
+                </div>
+                <p style={{ fontSize: 14, color: "var(--color-text-2)", margin: 0, lineHeight: 1.55 }}>{m.d}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Example */}
+          <h3 style={{ fontSize: 24, fontWeight: 700, letterSpacing: "-0.01em", margin: "40px 0 16px" }}>Example</h3>
+          <pre style={{
+            background: "var(--nova-ink)", color: "#E7F7F6",
+            padding: 24, borderRadius: 14,
+            fontFamily: "var(--font-mono)", fontSize: 13, lineHeight: 1.6,
+            overflow: "auto", margin: 0
+          }}>
+{`// Calculate NetSales from GrossSales minus Returns
+Function Main(si As SessionInfo, globals, api, args)
+    Dim result As DataBuffer = api.Data.Calculate("A#GrossSales - A#Returns")
+    api.Data.SetDataBuffer(result)
+End Function`}
+          </pre>
+        </main>
+
+        {/* RIGHT: on-this-page */}
+        <aside style={{ position: "sticky", top: 80, alignSelf: "start", height: "fit-content" }}>
+          <p className="nv-eyebrow" style={{ marginBottom: 12 }}>ON THIS PAGE</p>
+          <nav style={{ fontSize: 13, lineHeight: 1.9 }}>
+            {["Overview", "Inheritance", "Methods", "Example", "Related rules"].map((t, i) => (
+              <a key={t} style={{ display: "block", color: i === 2 ? "var(--nova-coral)" : "var(--color-text-2)", fontWeight: i === 2 ? 700 : 500 }}>{t}</a>
+            ))}
+          </nav>
+          <div style={{ marginTop: 32, padding: 16, background: "var(--nova-aqua)", borderRadius: 12, color: "var(--nova-ink)" }}>
+            <p className="nv-eyebrow" style={{ color: "var(--nova-teal-ink)", marginBottom: 8 }}>RELATED</p>
+            <p style={{ fontSize: 13, lineHeight: 1.5, margin: "0 0 12px" }}>This class is referenced by <strong>47 business rules</strong> in the library.</p>
+            <button onClick={() => setPage("rules")} style={{ fontSize: 12, fontWeight: 600, color: "var(--nova-teal-ink)" }}>See all rules →</button>
+          </div>
+        </aside>
+      </div>
+    </div>
+  );
+}
+
+// ── Business Rules page
+function RulesPage({ setPage }) {
+  const [selected, setSelected] = React.useState(null);
+  const rules = [
+    { n: "Consolidation_GoodwillCalc", cat: "Finance", complexity: "Complex", loc: 342, desc: "Calculates goodwill for M&A scenarios during consolidation.",
+      author: "Finance Team", updated: "2 days ago", refs: 47, uses: ["BRApi.Finance.Members.GetMembersUsingFilter", "BRApi.Finance.Data.GetDataBufferUsingFormula", "BRApi.ErrorLog.LogError"],
+      snippet: `Namespace OneStream.BusinessRule.Finance.Consolidation_GoodwillCalc
+  Public Class MainClass
+    Public Function Main(ByVal si As SessionInfo, ByVal globals As BRGlobals,
+                         ByVal api As FinanceRulesApi, ByVal args As FinanceRulesArgs) As Object
+      Try
+        Select Case args.FunctionType
+          Case Is = FinanceFunctionType.Calculate
+            ' Pull goodwill memo account
+            Dim goodwillBuffer = api.Data.GetDataBufferUsingFormula(
+              "A#Goodwill:E#" & api.Pov.Entity.Name)
+
+            ' Apply impairment test
+            If goodwillBuffer.GetTotal() > GetThreshold(api) Then
+              api.Data.Calculate("A#Goodwill_Impairment = A#Goodwill * 0.15")
+            End If
+        End Select
+      Catch ex As Exception
+        Throw ErrorHandler.LogWrite(si, New XFException(si, ex))
+      End Try
+      Return Nothing
+    End Function
+  End Class
+End Namespace` },
+    { n: "Extender_FXRateLoader", cat: "Extender", complexity: "Medium", loc: 128, desc: "Pulls FX rates from external source and loads into Rate scenario.",
+      author: "Integration Team", updated: "1 week ago", refs: 23, uses: ["BRApi.Utilities.GetWebResponse", "BRApi.Import.Data.ExecuteDataSource", "BRApi.Database.ExecuteActionQuery"],
+      snippet: `Namespace OneStream.BusinessRule.Extender.FXRateLoader
+  Public Class MainClass
+    Public Function Main(ByVal si As SessionInfo, ByVal globals As BRGlobals,
+                         ByVal api As Object, ByVal args As ExtenderArgs) As Object
+      Try
+        ' Fetch rates from ECB API
+        Dim json = BRApi.Utilities.GetWebResponse(si,
+          "https://api.ecb.europa.eu/rates?base=USD", Nothing)
+
+        ' Parse and load into Rate scenario
+        Dim rates = JsonConvert.DeserializeObject(Of Dictionary(Of String, Decimal))(json)
+        For Each kv In rates
+          LoadRate(si, kv.Key, kv.Value)
+        Next
+      Catch ex As Exception
+        Throw ErrorHandler.LogWrite(si, New XFException(si, ex))
+      End Try
+      Return Nothing
+    End Function
+  End Class
+End Namespace` },
+    { n: "Connector_SAPHana", cat: "Connector", complexity: "Complex", loc: 584, desc: "Incremental data pull from SAP Hana into Stage.",
+      author: "Platform Team", updated: "3 days ago", refs: 89, uses: ["BRApi.Database.CreateCommand", "BRApi.Import.Data.PushDataToStage", "BRApi.Utilities.GetCustomSubstVarsAsDictionary"],
+      snippet: `Namespace OneStream.BusinessRule.Connector.SAPHana
+  Public Class MainClass
+    Public Function Main(ByVal si As SessionInfo, ByVal globals As BRGlobals,
+                         ByVal api As Object, ByVal args As ConnectorArgs) As Object
+      Try
+        Select Case args.ActionType
+          Case Is = ConnectorArgActionType.GetFieldList
+            Return GetFieldList()
+          Case Is = ConnectorArgActionType.GetData
+            Return FetchIncrementalData(si, args.CustomSubstVars)
+        End Select
+      Catch ex As Exception
+        Throw ErrorHandler.LogWrite(si, New XFException(si, ex))
+      End Try
+      Return Nothing
+    End Function
+  End Class
+End Namespace` },
+    { n: "Dashboard_CubeViewExport", cat: "Dashboard", complexity: "Simple", loc: 62, desc: "Exports cube view to Excel with custom styling.",
+      author: "Reporting Team", updated: "5 days ago", refs: 15, uses: ["BRApi.Dashboards.CubeViews.GetCubeView", "BRApi.Utilities.WriteToFileStore"],
+      snippet: `Namespace OneStream.BusinessRule.Dashboard.CubeViewExport
+  Public Class MainClass
+    Public Function Main(ByVal si As SessionInfo, ByVal globals As BRGlobals,
+                         ByVal api As Object, ByVal args As DashboardExtenderArgs) As Object
+      Try
+        Dim cv = BRApi.Dashboards.CubeViews.GetCubeView(si, "Consol_PL")
+        Dim xlsx = RenderToExcel(cv, args.CustomSubstVars)
+        Return BRApi.Utilities.WriteToFileStore(si, xlsx, "/Exports/PL.xlsx", True)
+      Catch ex As Exception
+        Throw ErrorHandler.LogWrite(si, New XFException(si, ex))
+      End Try
+    End Function
+  End Class
+End Namespace` },
+    { n: "Finance_AllocationEngine", cat: "Finance", complexity: "Complex", loc: 412, desc: "Drives cross-dimensional allocation patterns.",
+      author: "Finance Team", updated: "Yesterday", refs: 62, uses: ["BRApi.Finance.Data.GetDataBufferUsingFormula", "BRApi.Finance.Members.GetMembersUsingFilter"],
+      snippet: `Namespace OneStream.BusinessRule.Finance.AllocationEngine
+  Public Class MainClass
+    Public Function Main(ByVal si As SessionInfo, ByVal globals As BRGlobals,
+                         ByVal api As FinanceRulesApi, ByVal args As FinanceRulesArgs) As Object
+      Try
+        ' Allocate corporate overhead by revenue
+        Dim drivers = api.Data.GetDataBufferUsingFormula(
+          "A#Revenue:E#TOTAL.Base:C#Local")
+        AllocateByDriver(api, "A#CorpOverhead", drivers)
+      Catch ex As Exception
+        Throw ErrorHandler.LogWrite(si, New XFException(si, ex))
+      End Try
+      Return Nothing
+    End Function
+  End Class
+End Namespace` },
+    { n: "Assembly_WorkflowOrchestrator", cat: "Assembly", complexity: "Medium", loc: 218, desc: "Coordinates multi-entity close workflow tasks.",
+      author: "Close Team", updated: "4 days ago", refs: 31, uses: ["BRApi.Workflow.Metadata.GetWorkflowProfile", "BRApi.Workflow.Status.GetWorkflowStatus"],
+      snippet: `Namespace OneStream.BusinessRule.Assembly.WorkflowOrchestrator
+  Public Class MainClass
+    Public Function Main(ByVal si As SessionInfo, ByVal globals As BRGlobals,
+                         ByVal api As Object, ByVal args As Object) As Object
+      Try
+        Dim wfProfiles = BRApi.Workflow.Metadata.GetWorkflowChannels(si)
+        For Each wf In wfProfiles
+          OrchestrateClose(si, wf)
+        Next
+      Catch ex As Exception
+        Throw ErrorHandler.LogWrite(si, New XFException(si, ex))
+      End Try
+      Return Nothing
+    End Function
+  End Class
+End Namespace` },
+  ];
+  const cats = [
+    { name: "All Rules", c: 827, active: true },
+    { name: "Finance", c: 312 },
+    { name: "Extender", c: 218 },
+    { name: "Connector", c: 142 },
+    { name: "Dashboard", c: 98 },
+    { name: "Assembly", c: 57 },
+  ];
+  const catColor = {
+    Finance: "var(--nova-coral)",
+    Extender: "var(--nova-teal)",
+    Connector: "var(--nova-ink)",
+    Dashboard: "var(--nova-coral)",
+    Assembly: "var(--nova-teal)",
+  };
+  return (
+    <div className="nv-page fade-in" style={{ maxWidth: 1300 }}>
+      <Crumb items={[{ label: "Portal", onClick: () => setPage("portal") }, { label: "Business Rules" }]} />
+
+      {/* Hero */}
+      <section style={{ position: "relative", marginBottom: 40, padding: "32px 0" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr auto", alignItems: "center", gap: 40 }}>
+          <div>
+            <p className="nv-eyebrow" style={{ marginBottom: 16 }}>PRODUCTION-GRADE LIBRARY</p>
+            <h1 style={{ fontSize: 64, letterSpacing: "-0.03em", fontWeight: 700, lineHeight: 1.02, margin: "0 0 16px" }}>
+              <span style={{ color: "var(--nova-coral)" }}>827</span> real<br/>business rules.
+            </h1>
+            <p style={{ fontSize: 18, color: "var(--color-text-2)", maxWidth: 580, margin: 0 }}>
+              Every rule here is pulled from real OneStream implementations. Read them, copy them, adapt them — with full cross-references to the API they call.
+            </p>
+          </div>
+          <BrandGlyph kind="triangle" size={180} color="var(--nova-ink)" />
+        </div>
+      </section>
+
+      <div style={{ display: "grid", gridTemplateColumns: "220px 1fr", gap: 32 }}>
+        {/* Cat sidebar */}
+        <aside>
+          <p className="nv-eyebrow" style={{ marginBottom: 12 }}>CATEGORY</p>
+          {cats.map(c => (
+            <div key={c.name} style={{
+              display: "flex", justifyContent: "space-between", alignItems: "center",
+              padding: "10px 14px", borderRadius: 10, fontSize: 14,
+              background: c.active ? "var(--nova-ink)" : "transparent",
+              color: c.active ? "#fff" : "var(--color-text-2)",
+              fontWeight: c.active ? 700 : 500,
+              marginBottom: 2, cursor: "pointer"
+            }}>
+              {c.name}
+              <span style={{
+                fontSize: 11,
+                background: c.active ? "rgba(255,255,255,0.15)" : "var(--nova-line-soft)",
+                color: c.active ? "#fff" : "var(--color-text-3)",
+                padding: "2px 8px", borderRadius: 999, fontWeight: 700
+              }}>{c.c}</span>
+            </div>
+          ))}
+
+          <p className="nv-eyebrow" style={{ marginBottom: 12, marginTop: 32 }}>COMPLEXITY</p>
+          {["Simple", "Medium", "Complex"].map(c => (
+            <label key={c} style={{ display: "flex", gap: 10, padding: "6px 14px", fontSize: 14, color: "var(--color-text-2)" }}>
+              <input type="checkbox" defaultChecked={c !== "Complex"} style={{ accentColor: "var(--nova-coral)" }}/>
+              {c}
+            </label>
+          ))}
+        </aside>
+
+        {/* Rules list */}
+        <div>
+          <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 16, alignItems: "center" }}>
+            <p style={{ fontSize: 14, color: "var(--color-text-2)", margin: 0 }}>Showing <strong style={{ color: "var(--color-text)" }}>6 of 827</strong> rules</p>
+            <select style={{ padding: "8px 12px", borderRadius: 10, border: "1px solid var(--nova-line)", fontSize: 13, background: "var(--nova-paper)" }}>
+              <option>Most referenced</option>
+              <option>A → Z</option>
+              <option>Recently added</option>
+            </select>
+          </div>
+
+          <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+            {rules.map(r => (
+              <div key={r.n} className="nv-card" style={{ padding: 24, display: "grid", gridTemplateColumns: "1fr auto", gap: 20, alignItems: "center" }}>
+                <div style={{ minWidth: 0 }}>
+                  <div style={{ display: "flex", gap: 8, marginBottom: 8, alignItems: "center" }}>
+                    <span style={{
+                      fontSize: 10, fontWeight: 700,
+                      background: catColor[r.cat] || "var(--nova-ink)", color: "#fff",
+                      padding: "3px 10px", borderRadius: 999, letterSpacing: "0.04em"
+                    }}>{r.cat.toUpperCase()}</span>
+                    <span style={{
+                      fontSize: 10, fontWeight: 700, color: "var(--color-text-3)",
+                      border: "1px solid var(--nova-line)", padding: "3px 8px", borderRadius: 999
+                    }}>{r.complexity}</span>
+                  </div>
+                  <h3 style={{ fontFamily: "var(--font-mono)", fontSize: 17, fontWeight: 700, margin: "0 0 6px", letterSpacing: "-0.005em" }}>{r.n}</h3>
+                  <p style={{ fontSize: 14, color: "var(--color-text-2)", lineHeight: 1.5, margin: 0 }}>{r.desc}</p>
+                </div>
+                <div style={{ textAlign: "right", flexShrink: 0 }}>
+                  <div style={{ fontSize: 28, fontWeight: 700, letterSpacing: "-0.02em", fontFamily: "var(--font-mono)" }}>{r.loc}</div>
+                  <div style={{ fontSize: 11, color: "var(--color-text-3)", textTransform: "uppercase", letterSpacing: "0.14em", fontWeight: 700 }}>Lines</div>
+                  <button onClick={() => setSelected(r)} className="nv-btn nv-btn--ghost" style={{ marginTop: 12, height: 34, padding: "0 14px", fontSize: 12 }}>View →</button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {selected && <RuleDetailDrawer rule={selected} onClose={() => setSelected(null)} setPage={setPage} catColor={catColor} />}
+    </div>
+  );
+}
+
+// ── Rule detail drawer
+function RuleDetailDrawer({ rule, onClose, setPage, catColor }) {
+  React.useEffect(() => {
+    const onKey = (e) => { if (e.key === "Escape") onClose(); };
+    window.addEventListener("keydown", onKey);
+    document.body.style.overflow = "hidden";
+    return () => { window.removeEventListener("keydown", onKey); document.body.style.overflow = ""; };
+  }, []);
+  return (
+    <div onClick={onClose} style={{
+      position: "fixed", inset: 0, zIndex: 100,
+      background: "rgba(11,15,20,0.55)", backdropFilter: "blur(4px)",
+      display: "flex", justifyContent: "flex-end",
+      animation: "fadeIn 0.18s ease"
+    }}>
+      <div onClick={(e) => e.stopPropagation()} style={{
+        width: "min(820px, 92vw)", height: "100%",
+        background: "var(--nova-paper)",
+        boxShadow: "-24px 0 60px rgba(11,15,20,0.25)",
+        overflowY: "auto",
+        animation: "slideIn 0.25s cubic-bezier(0.22, 1, 0.36, 1)",
+      }}>
+        {/* Header */}
+        <div style={{
+          position: "sticky", top: 0, zIndex: 1,
+          background: "var(--nova-paper)",
+          borderBottom: "1px solid var(--nova-line)",
+          padding: "20px 32px",
+          display: "flex", justifyContent: "space-between", alignItems: "center"
+        }}>
+          <div style={{ display: "flex", gap: 10, alignItems: "center", minWidth: 0 }}>
+            <span style={{
+              fontSize: 10, fontWeight: 700,
+              background: catColor[rule.cat] || "var(--nova-ink)", color: "#fff",
+              padding: "3px 10px", borderRadius: 999, letterSpacing: "0.04em", flexShrink: 0
+            }}>{rule.cat.toUpperCase()}</span>
+            <span style={{
+              fontSize: 10, fontWeight: 700, color: "var(--color-text-3)",
+              border: "1px solid var(--nova-line)", padding: "3px 8px", borderRadius: 999, flexShrink: 0
+            }}>{rule.complexity}</span>
+          </div>
+          <button onClick={onClose} style={{
+            width: 36, height: 36, borderRadius: 10,
+            border: "1px solid var(--nova-line)",
+            background: "var(--nova-paper)", cursor: "pointer",
+            fontSize: 18, color: "var(--color-text-2)", lineHeight: 1
+          }}>×</button>
+        </div>
+
+        {/* Body */}
+        <div style={{ padding: "32px" }}>
+          <h1 style={{
+            fontFamily: "var(--font-mono)",
+            fontSize: 28, fontWeight: 700,
+            letterSpacing: "-0.015em",
+            margin: "0 0 12px", wordBreak: "break-all"
+          }}>{rule.n}</h1>
+          <p style={{ fontSize: 16, color: "var(--color-text-2)", lineHeight: 1.5, margin: "0 0 24px" }}>{rule.desc}</p>
+
+          {/* Meta grid */}
+          <div style={{
+            display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 0,
+            border: "1px solid var(--nova-line)", borderRadius: 14,
+            overflow: "hidden", marginBottom: 32
+          }}>
+            {[
+              { k: "Lines", v: rule.loc, mono: true },
+              { k: "References", v: rule.refs, mono: true },
+              { k: "Author", v: rule.author },
+              { k: "Updated", v: rule.updated },
+            ].map((m, i) => (
+              <div key={m.k} style={{
+                padding: "16px 18px",
+                borderRight: i < 3 ? "1px solid var(--nova-line)" : "none"
+              }}>
+                <div style={{
+                  fontSize: 10, color: "var(--color-text-3)",
+                  textTransform: "uppercase", letterSpacing: "0.14em",
+                  fontWeight: 700, marginBottom: 6
+                }}>{m.k}</div>
+                <div style={{
+                  fontSize: 18, fontWeight: 700, letterSpacing: "-0.01em",
+                  fontFamily: m.mono ? "var(--font-mono)" : "inherit"
+                }}>{m.v}</div>
+              </div>
+            ))}
+          </div>
+
+          {/* Source */}
+          <p className="nv-eyebrow" style={{ marginBottom: 10 }}>SOURCE</p>
+          <div style={{
+            background: "var(--nova-ink)", color: "#F5E7D8",
+            borderRadius: 14, padding: "20px 22px",
+            fontFamily: "var(--font-mono)", fontSize: 12.5,
+            lineHeight: 1.65,
+            overflowX: "auto",
+            marginBottom: 32,
+            whiteSpace: "pre"
+          }}>{rule.snippet}</div>
+
+          {/* API uses */}
+          <p className="nv-eyebrow" style={{ marginBottom: 10 }}>API METHODS USED</p>
+          <div style={{ display: "flex", flexDirection: "column", gap: 8, marginBottom: 32 }}>
+            {rule.uses.map(u => (
+              <button key={u} onClick={() => { setPage("api"); onClose(); }} style={{
+                display: "flex", justifyContent: "space-between", alignItems: "center",
+                padding: "14px 18px",
+                border: "1px solid var(--nova-line)", borderRadius: 12,
+                background: "var(--nova-paper)", cursor: "pointer",
+                textAlign: "left", width: "100%",
+                fontFamily: "var(--font-mono)", fontSize: 13, fontWeight: 600,
+                color: "var(--color-text)",
+                transition: "border-color 0.12s, background 0.12s"
+              }}
+              onMouseEnter={(e) => { e.currentTarget.style.borderColor = "var(--nova-coral)"; e.currentTarget.style.background = "var(--nova-paper-2)"; }}
+              onMouseLeave={(e) => { e.currentTarget.style.borderColor = "var(--nova-line)"; e.currentTarget.style.background = "var(--nova-paper)"; }}
+              >
+                <span>{u}</span>
+                <span style={{ color: "var(--nova-coral)", fontSize: 14 }}>→</span>
+              </button>
+            ))}
+          </div>
+
+          {/* Actions */}
+          <div style={{ display: "flex", gap: 10, paddingTop: 20, borderTop: "1px solid var(--nova-line)" }}>
+            <button className="nv-btn nv-btn--primary">Copy to clipboard</button>
+            <button className="nv-btn">Open in VS Code</button>
+            <button className="nv-btn">Download .vb</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ── Extension Guide page
+function ExtensionPage({ setPage }) {
+  return (
+    <div className="nv-page fade-in" style={{ maxWidth: 1200 }}>
+      <Crumb items={[{ label: "Portal", onClick: () => setPage("portal") }, { label: "Extension Guide" }]} />
+
+      {/* Hero */}
+      <section style={{
+        background: "var(--nova-ink)", color: "#fff",
+        borderRadius: 32, padding: 56,
+        position: "relative", overflow: "hidden",
+        marginBottom: 40
+      }}>
+        <BrandGlyph kind="teardrop" size={360} color="rgba(255,89,72,0.28)" style={{ position: "absolute", right: -60, top: -60 }} />
+        <BrandGlyph kind="circle" size={80} color="var(--nova-aqua)" style={{ position: "absolute", right: 100, bottom: 40, opacity: 0.4 }}/>
+        <div style={{ position: "relative", zIndex: 1, maxWidth: 640 }}>
+          <p className="nv-eyebrow" style={{ color: "var(--nova-aqua)", marginBottom: 16 }}>VS CODE + MCP SERVER</p>
+          <h1 style={{ fontSize: 64, letterSpacing: "-0.03em", fontWeight: 700, lineHeight: 1.02, margin: "0 0 20px" }}>
+            AI-assisted<br/>OneStream<br/>development.
+          </h1>
+          <p style={{ fontSize: 18, color: "rgba(255,255,255,0.8)", margin: "0 0 32px", lineHeight: 1.5 }}>
+            Write, debug, and deploy business rules directly from VS Code — with a Model Context Protocol server that feeds Claude and Copilot the full OneStream API.
+          </p>
+          <div style={{ display: "flex", gap: 12 }}>
+            <button className="nv-btn nv-btn--primary">Install extension →</button>
+            <button className="nv-btn" style={{ border: "1.5px solid rgba(255,255,255,0.3)", color: "#fff" }}>View on GitHub</button>
+          </div>
+        </div>
+      </section>
+
+      {/* Features grid */}
+      <section style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 16, marginBottom: 40 }}>
+        {[
+          { t: "Live API Completion", d: "Full IntelliSense for 5,323 OneStream API classes inside .vb and .cs files.", g: "arch", c: "var(--nova-coral)" },
+          { t: "Rule Deployment", d: "Push business rules to dev / QA / prod from the VS Code command palette.", g: "circle", c: "var(--nova-teal)" },
+          { t: "MCP Server", d: "Exposes the OneStream metadata layer to Claude, Cursor, and Copilot.", g: "triangle", c: "var(--nova-ink)" },
+          { t: "Cube View Preview", d: "Render cube views in a VS Code panel without leaving your editor.", g: "teardrop", c: "var(--nova-coral)" },
+          { t: "Debug Console", d: "Attach to a running app server and step through rule execution.", g: "circle", c: "var(--nova-teal)" },
+          { t: "Snippet Library", d: "All 827 business rules available as parameterized VS Code snippets.", g: "arch", c: "var(--nova-ink)" },
+        ].map(f => (
+          <div key={f.t} className="nv-card" style={{ padding: 28 }}>
+            <BrandGlyph kind={f.g} size={40} color={f.c} />
+            <h3 style={{ fontSize: 18, fontWeight: 700, margin: "24px 0 8px", letterSpacing: "-0.01em" }}>{f.t}</h3>
+            <p style={{ fontSize: 14, color: "var(--color-text-2)", lineHeight: 1.55, margin: 0 }}>{f.d}</p>
+          </div>
+        ))}
+      </section>
+
+      {/* Install steps */}
+      <section style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 32, marginBottom: 40 }}>
+        <div>
+          <p className="nv-eyebrow" style={{ marginBottom: 16 }}>GETTING STARTED</p>
+          <h2 style={{ fontSize: 40, fontWeight: 700, letterSpacing: "-0.02em", margin: "0 0 24px" }}>Three steps to your first rule.</h2>
+          {[
+            { n: "01", t: "Install from Marketplace", d: "Search for 'OneStream' in the VS Code extensions panel." },
+            { n: "02", t: "Connect your app server", d: "Authenticate via the command palette: OneStream: Connect." },
+            { n: "03", t: "Start writing", d: "Open any .vb file and watch IntelliSense light up." },
+          ].map(s => (
+            <div key={s.n} style={{ display: "flex", gap: 20, padding: "20px 0", borderTop: "1px solid var(--nova-line)" }}>
+              <div style={{ fontSize: 32, fontWeight: 700, color: "var(--nova-coral)", fontFamily: "var(--font-mono)", letterSpacing: "-0.02em" }}>{s.n}</div>
+              <div>
+                <h4 style={{ fontSize: 17, fontWeight: 700, margin: "0 0 4px" }}>{s.t}</h4>
+                <p style={{ fontSize: 14, color: "var(--color-text-2)", margin: 0 }}>{s.d}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div style={{
+          background: "var(--nova-ink)",
+          borderRadius: 20, overflow: "hidden",
+          fontFamily: "var(--font-mono)", fontSize: 12.5,
+          border: "1px solid var(--nova-line)",
+        }}>
+          <div style={{ background: "#1E2628", color: "#A7E8E4", padding: "10px 16px", fontSize: 11, display: "flex", gap: 8, alignItems: "center" }}>
+            <span style={{ display: "flex", gap: 6 }}>
+              <span style={{ width: 10, height: 10, borderRadius: 999, background: "#FF5948" }}/>
+              <span style={{ width: 10, height: 10, borderRadius: 999, background: "#FFD57E" }}/>
+              <span style={{ width: 10, height: 10, borderRadius: 999, background: "#A7E8E4" }}/>
+            </span>
+            <span style={{ marginLeft: 12, color: "#8A949B" }}>ConsolidationRule.vb · OneStream VS Code</span>
+          </div>
+          <pre style={{ color: "#E7F7F6", padding: 24, margin: 0, lineHeight: 1.7 }}>
+{`1  ' Auto-completion from OneStream MCP
+2  Function Main(si As SessionInfo, api)
+3      Dim entity = api.Pov.Entity
+4      If api.Entity.IsBaseEntity(entity) Then
+5          api.Data.Calculate("A#Revenue * 1.05")
+6      End If
+7  End Function`}
+          </pre>
+        </div>
+      </section>
+
+      {/* MCP callout */}
+      <section style={{
+        background: "var(--nova-coral)", color: "#fff",
+        borderRadius: 32, padding: 48,
+        display: "grid", gridTemplateColumns: "1fr auto", gap: 40,
+        alignItems: "center", position: "relative", overflow: "hidden"
+      }}>
+        <BrandGlyph kind="arch" size={260} color="rgba(255,255,255,0.18)" style={{ position: "absolute", right: -30, bottom: -30 }}/>
+        <div style={{ position: "relative", zIndex: 1 }}>
+          <p className="nv-eyebrow" style={{ color: "rgba(255,255,255,0.85)", marginBottom: 12 }}>MCP SERVER</p>
+          <h2 style={{ fontSize: 40, letterSpacing: "-0.02em", fontWeight: 700, margin: "0 0 12px" }}>Give Claude the full API context.</h2>
+          <p style={{ fontSize: 16, opacity: 0.9, margin: 0, maxWidth: 520, lineHeight: 1.55 }}>Run our MCP server alongside any AI assistant and it'll query live metadata, search business rules, and validate calls — no hallucinated method names.</p>
+        </div>
+        <button className="nv-btn" style={{ background: "#fff", color: "var(--nova-coral)", fontWeight: 700 }}>Read the docs →</button>
+      </section>
+    </div>
+  );
+}
+
+window.ApiPage = ApiPage;
+window.RulesPage = RulesPage;
+window.ExtensionPage = ExtensionPage;
+
+</script>
+
+<script type="text/babel">
+const { useState, useEffect } = React;
+
+// Tweak defaults — EDITMODE block (JSON)
+const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+  "theme": "dark",
+  "portalVariant": "A",
+  "density": "comfy",
+  "logoVariant": "stream"
+}/*EDITMODE-END*/;
+
+function TweaksPanel({ open, state, setState }) {
+  const update = (key, val) => {
+    const next = { ...state, [key]: val };
+    setState(next);
+    window.parent.postMessage({ type: '__edit_mode_set_keys', edits: { [key]: val } }, '*');
+  };
+  if (!open) return null;
+  return (
+    <div className="tweaks-panel open fade-in">
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 12 }}>
+        <strong style={{ fontSize: 14 }}>Tweaks</strong>
+        <span style={{ fontSize: 10, color: "var(--color-text-3)", textTransform: "uppercase", letterSpacing: "0.14em", fontWeight: 700 }}>Nova</span>
+      </div>
+      <div className="tweaks-row">
+        <label>Theme</label>
+        <div className="tweaks-btns">
+          {["light", "dark"].map(v => (
+            <button key={v} className={state.theme === v ? "on" : ""} onClick={() => update("theme", v)}>{v}</button>
+          ))}
+        </div>
+      </div>
+      <div className="tweaks-row">
+        <label>Portal hero</label>
+        <div className="tweaks-btns">
+          {["A", "B", "C"].map(v => (
+            <button key={v} className={state.portalVariant === v ? "on" : ""} onClick={() => update("portalVariant", v)}>{v}</button>
+          ))}
+        </div>
+      </div>
+      <div className="tweaks-row">
+        <label>Density</label>
+        <div className="tweaks-btns">
+          {["comfy", "dense"].map(v => (
+            <button key={v} className={state.density === v ? "on" : ""} onClick={() => update("density", v)}>{v}</button>
+          ))}
+        </div>
+      </div>
+      <div style={{ marginTop: 14, padding: 12, background: "var(--nova-aqua-soft, var(--nova-line-soft))", borderRadius: 10, fontSize: 11, lineHeight: 1.5, color: "var(--color-text-2)" }}>
+        Variant A = bold coral hero · B = split + teardrop · C = editorial teal magazine
+      </div>
+    </div>
+  );
+}
+
+function App() {
+  const [page, _setPage] = useState(() => localStorage.getItem("osp:page") || "portal");
+  const [state, setState] = useState(TWEAK_DEFAULTS);
+  const [tweaksOpen, setTweaksOpen] = useState(false);
+
+  const setPage = (p) => {
+    _setPage(p);
+    localStorage.setItem("osp:page", p);
+    window.scrollTo({ top: 0, behavior: "instant" });
+  };
+
+  // Apply theme
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", state.theme);
+  }, [state.theme]);
+
+  // Density → compact spacing
+  useEffect(() => {
+    document.documentElement.style.setProperty("--density-scale", state.density === "dense" ? "0.85" : "1");
+  }, [state.density]);
+
+  // Logo variant — set global so NovaMark re-reads on next render
+  const [, forceTick] = useState(0);
+  useEffect(() => {
+    window.__logoVariant = state.logoVariant;
+    forceTick(t => t + 1);
+  }, [state.logoVariant]);
+
+  // Edit mode handshake
+  useEffect(() => {
+    const onMsg = (e) => {
+      if (e.data?.type === "__activate_edit_mode") setTweaksOpen(true);
+      if (e.data?.type === "__deactivate_edit_mode") setTweaksOpen(false);
+    };
+    window.addEventListener("message", onMsg);
+    window.parent.postMessage({ type: "__edit_mode_available" }, "*");
+    return () => window.removeEventListener("message", onMsg);
+  }, []);
+
+  const toggleTheme = () => {
+    const next = state.theme === "dark" ? "light" : "dark";
+    setState(s => ({ ...s, theme: next }));
+    window.parent.postMessage({ type: '__edit_mode_set_keys', edits: { theme: next } }, '*');
+  };
+
+  return (
+    <>
+      <div className="nv-shell">
+        <Sidebar page={page} setPage={setPage} />
+        <div className="nv-main" data-screen-label={`${pageLabel(page)}`}>
+          <TopBar theme={state.theme} toggleTheme={toggleTheme} />
+          <div key={page}>
+            {page === "portal" && <PortalPage setPage={setPage} variant={state.portalVariant} setVariant={(v) => {
+              setState(s => ({ ...s, portalVariant: v }));
+              window.parent.postMessage({ type: '__edit_mode_set_keys', edits: { portalVariant: v } }, '*');
+            }} />}
+            {page === "index" && <ExamIndexPage setPage={setPage} />}
+            {page === "chapter" && <ChapterPage setPage={setPage} />}
+            {page === "quiz-sections" && <QuizSectionsPage setPage={setPage} />}
+            {page === "quiz" && <QuizPage setPage={setPage} />}
+            {page === "progress" && <ProgressPage setPage={setPage} />}
+            {page === "flashcards" && <FlashcardsPage setPage={setPage} />}
+            {page === "glossary" && <GlossaryPage setPage={setPage} />}
+            {page === "api" && <ApiPage setPage={setPage} />}
+            {page === "rules" && <RulesPage setPage={setPage} />}
+            {page === "extension" && <ExtensionPage setPage={setPage} />}
+          </div>
+        </div>
+      </div>
+      <Pomodoro />
+      <TweaksPanel open={tweaksOpen} state={state} setState={setState} />
+    </>
+  );
+}
+
+function pageLabel(page) {
+  const labels = {
+    portal: "Portal", index: "Exam Home", chapter: "Chapter Reader",
+    "quiz-sections": "Quiz Sections", quiz: "Quiz", progress: "Progress",
+    flashcards: "Flashcards", glossary: "Glossary", api: "API Reference",
+    rules: "Business Rules", extension: "Extension Guide"
+  };
+  return labels[page] || page;
+}
+
+// Wait for all scripts to load
+function tryMount() {
+  if (window.Sidebar && window.PortalPage && window.ExamIndexPage && window.ApiPage) {
+    ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+  } else {
+    setTimeout(tryMount, 50);
+  }
+}
+tryMount();
+</script>
+</body>
+</html>
