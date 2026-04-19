@@ -3,32 +3,40 @@
 {% block title %}{{ book.title }} — OneStream Study Guide{% endblock %}
 
 {% block content %}
-<nav class="breadcrumb">
-  <a href="/">Home</a> <span>&rsaquo;</span> <span>{{ book.title }}</span>
+{% set total_words = book.chapters | sum(attribute='word_count') %}
+<nav class="nv-crumb">
+  <a href="/">Portal</a><span class="sep">/</span>
+  <a href="/exam-prep/guide/">Study Books</a><span class="sep">/</span>
+  <span class="current">{{ book.title }}</span>
 </nav>
 
-<h1>{{ book.title }}</h1>
+<section class="nv-hero">
+  <span class="nv-eyebrow">{{ book.chapters | length }} chapters · {{ "{:,}".format(total_words) }} words</span>
+  <h1>{{ book.title }}</h1>
+</section>
 
-<table role="grid">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Chapter</th>
-      <th scope="col">Words</th>
-      <th scope="col">Images</th>
-    </tr>
-  </thead>
-  <tbody>
-    {% for ch in book.chapters %}
-    <tr>
-      <td>{{ loop.index }}</td>
-      <td>
-        <a href="/exam-prep/guide/{{ book.slug }}/{{ ch.file | chapter_slug }}">{{ ch.title }}</a>
-      </td>
-      <td class="chapter-meta">{{ "{:,}".format(ch.word_count) }}</td>
-      <td class="chapter-meta">{{ ch.image_count }}</td>
-    </tr>
-    {% endfor %}
-  </tbody>
-</table>
+<div class="nv-card nv-card--table" style="margin-top: 32px;">
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Chapter</th>
+        <th scope="col">Words</th>
+        <th scope="col">Images</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for ch in book.chapters %}
+      <tr>
+        <td style="color: var(--color-text-3); font-variant-numeric: tabular-nums;">{{ "%02d"|format(loop.index) }}</td>
+        <td>
+          <a href="/exam-prep/guide/{{ book.slug }}/{{ ch.file | chapter_slug }}" style="color: var(--nova-coral); font-weight: 600;">{{ ch.title }}</a>
+        </td>
+        <td class="chapter-meta">{{ "{:,}".format(ch.word_count) }}</td>
+        <td class="chapter-meta">{{ ch.image_count }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
 {% endblock %}
