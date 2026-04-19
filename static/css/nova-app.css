@@ -90,11 +90,10 @@ input, textarea, select { font-family: inherit; color: inherit; }
 .nv-brand:hover { color: inherit; }
 .nv-brand-mark {
   width: 36px; height: 36px;
-  border-radius: 8px;
-  background-color: var(--nova-aqua);
   background-image: url("/static/img/nova-logo.png");
-  background-size: cover;
+  background-size: contain;
   background-position: center;
+  background-repeat: no-repeat;
   flex-shrink: 0;
 }
 .nv-brand-name { line-height: 1.1; }
