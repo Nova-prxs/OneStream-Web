@@ -2241,6 +2241,185 @@ kbd {
 }
 .api-tag:hover { background: var(--nova-coral); color: #FFFFFF; }
 
+.ns-tag {
+  display: inline-block;
+  font-size: 12px;
+  padding: 4px 10px;
+  background: var(--nova-aqua-soft);
+  color: var(--nova-teal-ink);
+  border-radius: 6px;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  margin: 2px;
+}
+[data-theme="dark"] .ns-tag { color: var(--nova-aqua); }
+
+.workspace-badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--nova-line-soft);
+  color: var(--color-text-2);
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+.subcat-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0 24px;
+}
+.subcat-chip {
+  display: inline-flex;
+  align-items: center;
+  height: 32px;
+  padding: 0 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  border: 1px solid var(--nova-line);
+  background: var(--nova-paper);
+  color: var(--color-text-2);
+  text-decoration: none;
+  transition: background 140ms, color 140ms, border-color 140ms;
+}
+.subcat-chip:hover {
+  background: var(--nova-coral);
+  color: #FFFFFF;
+  border-color: var(--nova-coral);
+}
+.subcat-chip small {
+  margin-left: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  color: inherit;
+  opacity: 0.7;
+}
+
+.subcat-header {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-text-3);
+  margin: 32px 0 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--nova-line-soft);
+}
+.subcat-header small {
+  font-size: 11px;
+  margin-left: 8px;
+  font-weight: 600;
+  color: var(--color-text-3);
+}
+
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+  margin: 24px 0;
+}
+.book-grid article {
+  margin: 0 !important;
+  padding: 24px !important;
+  display: flex;
+  flex-direction: column;
+}
+.book-grid article > header {
+  padding: 0 !important;
+  border: 0 !important;
+  margin: 0 0 8px !important;
+}
+.book-grid article > header h3 {
+  margin: 0;
+  font-size: 18px;
+  letter-spacing: -0.01em;
+}
+.book-grid article > header h3 a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+.book-grid article > header h3 a:hover { color: var(--nova-coral); }
+.book-grid article > p {
+  font-size: 12px;
+  color: var(--color-text-3);
+  margin: 0 0 16px;
+  letter-spacing: 0.04em;
+}
+.book-grid article > footer {
+  padding: 0 !important;
+  border: 0 !important;
+  margin-top: auto !important;
+}
+.book-grid article > footer a {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--nova-coral);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.book-grid article > footer a::after { content: "→"; }
+
+#rule-filter {
+  width: 100%;
+  height: 40px;
+  padding: 0 14px;
+  border: 1px solid var(--nova-line);
+  background: var(--nova-paper);
+  color: var(--color-text);
+  border-radius: var(--r-sm);
+  font-size: 14px;
+  margin: 16px 0 24px;
+}
+#rule-filter:focus {
+  outline: 0;
+  border-color: var(--nova-coral);
+  box-shadow: 0 0 0 3px rgba(255, 89, 72, 0.15);
+}
+
+.code-block {
+  font-size: 12px;
+  max-height: 600px;
+  overflow-y: auto;
+  background: var(--nova-line-soft);
+  border-radius: 12px;
+  padding: 16px;
+  margin: 16px 0;
+}
+.highlighted-code {
+  border-radius: 12px;
+  overflow: auto;
+  max-height: none;
+  padding: 0;
+  background: var(--nova-line-soft);
+}
+.highlighted-code .highlight {
+  padding: 8px 0;
+  border-radius: 12px;
+  font-size: 12px;
+  line-height: 1.6;
+  background: transparent;
+}
+.highlighted-code .highlight pre { margin: 0; padding: 0 16px; }
+.highlighted-code .highlighttable { width: 100%; border-collapse: collapse; }
+.highlighted-code .highlighttable td { vertical-align: top; padding: 0; }
+.highlighted-code .linenodiv {
+  padding-right: 12px;
+  border-right: 1px solid var(--nova-line);
+  user-select: none;
+}
+.highlighted-code .linenodiv pre {
+  color: var(--color-text-3);
+  font-size: 11px;
+}
+
 /* -------------------- Utility -------------------- */
 .stack-4  > * + * { margin-top: 4px; }
 .stack-8  > * + * { margin-top: 8px; }

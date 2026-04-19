@@ -3,25 +3,19 @@
 {% block title %}{{ rule.name }} — OneStream Docs{% endblock %}
 
 {% block content %}
-<nav aria-label="Breadcrumb" class="breadcrumb">
-  <a href="/docs/rules/">Business Rules</a> &rsaquo;
-  <a href="/docs/rules/{{ rule.type_slug }}">{{ rule.type_name }}</a> &rsaquo;
-  {% if rule.workspace %}
-  <span>{{ rule.workspace }}</span> &rsaquo;
-  {% endif %}
-  <strong>{{ rule.name }}</strong>
+<nav class="nv-crumb">
+  <a href="/">Portal</a><span class="sep">/</span>
+  <a href="/docs/rules/">Business Rules</a><span class="sep">/</span>
+  <a href="/docs/rules/{{ rule.type_slug }}">{{ rule.type_name }}</a><span class="sep">/</span>
+  {% if rule.workspace %}<span>{{ rule.workspace }}</span><span class="sep">/</span>{% endif %}
+  <span class="current">{{ rule.name }}</span>
 </nav>
 
-<hgroup>
+<section class="nv-hero" style="margin-bottom: 16px;">
+  <span class="nv-eyebrow">{{ rule.type_name }}{% if rule.workspace %} · {{ rule.workspace }}{% endif %} · {{ rule.line_count }} lines · {{ rule.language|upper }}</span>
   <h1>{{ rule.name }}</h1>
-  <p>{{ rule.type_name }}
-    {%- if rule.workspace %} &mdash; {{ rule.workspace }}{% endif %}
-    &mdash; {{ rule.line_count }} lines &mdash; {{ rule.language|upper }}</p>
-</hgroup>
-
-{% if rule.description %}
-<p>{{ rule.description }}</p>
-{% endif %}
+  {% if rule.description %}<p>{{ rule.description }}</p>{% endif %}
+</section>
 
 {# --- APIs Used --- #}
 {% if rule.apis_used %}

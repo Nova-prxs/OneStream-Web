@@ -3,15 +3,16 @@
 {% block title %}{{ rule_type.name }} — OneStream Docs{% endblock %}
 
 {% block content %}
-<nav aria-label="Breadcrumb" class="breadcrumb">
-  <a href="/docs/rules/">Business Rules</a> &rsaquo;
-  <strong>{{ rule_type.name }}</strong>
+<nav class="nv-crumb">
+  <a href="/">Portal</a><span class="sep">/</span>
+  <a href="/docs/rules/">Business Rules</a><span class="sep">/</span>
+  <span class="current">{{ rule_type.name }}</span>
 </nav>
 
-<hgroup>
+<section class="nv-hero" style="margin-bottom: 8px;">
+  <span class="nv-eyebrow">{{ rules|length }} rules</span>
   <h1>{{ rule_type.name }}</h1>
-  <p>{{ rules|length }} business rules</p>
-</hgroup>
+</section>
 
 <input type="text" id="rule-filter" placeholder="Filter rules..." oninput="filterRules()">
 

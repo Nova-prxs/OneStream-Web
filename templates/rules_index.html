@@ -3,10 +3,16 @@
 {% block title %}Business Rules — OneStream Docs{% endblock %}
 
 {% block content %}
-<hgroup>
-  <h1>Business Rules Catalog</h1>
-  <p>{{ total_rules }} real OneStream business rules organized by type</p>
-</hgroup>
+<nav class="nv-crumb">
+  <a href="/">Portal</a><span class="sep">/</span>
+  <span class="current">Business Rules</span>
+</nav>
+
+<section class="nv-hero" style="margin-bottom: 8px;">
+  <span class="nv-eyebrow">{{ total_rules }} real rules · {{ rule_types|length }} types</span>
+  <h1>Business <span style="color: var(--nova-coral);">rules</span></h1>
+  <p>Real OneStream business rules organized by type. Browse for patterns, examples, and APIs in use.</p>
+</section>
 
 <div class="book-grid">
   {% for rt in rule_types %}
