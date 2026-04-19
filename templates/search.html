@@ -3,17 +3,26 @@
 {% block title %}{% if query %}Search: {{ query }}{% else %}Search{% endif %} — OneStream Study Guide{% endblock %}
 
 {% block content %}
-<h1>Search</h1>
+<nav class="nv-crumb">
+  <a href="/">Portal</a><span class="sep">/</span>
+  {% if exam_id %}<a href="/exam-prep/{{ exam_id }}/quiz">{{ exam_id|upper }} Quiz</a><span class="sep">/</span>{% endif %}
+  <span class="current">Search</span>
+</nav>
+
+<section class="nv-hero" style="margin-bottom: 16px;">
+  <span class="nv-eyebrow">Full-text · all chapters</span>
+  <h1>Search</h1>
+</section>
 
 <form action="{% if exam_id is defined and exam_id %}/exam-prep/{{ exam_id }}/search{% else %}/exam-prep/search{% endif %}" method="get" role="search" id="search-form">
-  <input type="search" name="q" id="search-input" placeholder="Search across all 60 chapters..." aria-label="Search" value="{{ query }}" autofocus>
+  <input type="search" name="q" id="search-input" class="glossary-search" placeholder="Search across all chapters..." aria-label="Search" value="{{ query }}" autofocus>
 </form>
 
-<div id="search-results">
+<div id="search-results" class="search-results">
 {% if not query %}
-  <p>Enter a search term to find topics across all 60 chapters.</p>
+  <p style="color: var(--color-text-3); font-size: 14px; margin-top: 16px;">Enter a search term to find topics across all study chapters.</p>
 {% elif results %}
-  <p>Found {{ results|length }} result{{ 's' if results|length != 1 }} for &ldquo;{{ query }}&rdquo;</p>
+  <p style="color: var(--color-text-3); font-size: 13px; letter-spacing: 0.04em; margin: 16px 0;">{{ results|length }} result{{ 's' if results|length != 1 }} for <strong style="color: var(--color-text);">{{ query }}</strong></p>
   {% for r in results %}
   <article class="search-result">
     {% set book_slug = r.file_key.split('/')[0] %}
@@ -26,7 +35,7 @@
   </article>
   {% endfor %}
 {% else %}
-  <p>No results found for &ldquo;{{ query }}&rdquo;.</p>
+  <p style="color: var(--color-text-3); font-size: 14px; margin-top: 16px;">No results found for <strong style="color: var(--color-text);">{{ query }}</strong>.</p>
 {% endif %}
 </div>
 
