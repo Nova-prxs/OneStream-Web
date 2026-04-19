@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 
-{% block title %}Progress Dashboard — OneStream Study Guide{% endblock %}
+{% block title %}{{ exam.name }} Progress Dashboard — OneStream Study Guide{% endblock %}
 
 {% block content %}
-<h1>Progress Dashboard</h1>
+<h1>{{ exam.name }} Progress Dashboard</h1>
 
 {# Overall summary card #}
 <article class="progress-summary">
@@ -41,7 +41,7 @@
     <tbody id="progress-body">
       {% for section in sections %}
       <tr id="row-{{ section.slug }}">
-        <td><a href="/exam-prep/quiz/{{ section.slug }}">{{ section.name }}</a></td>
+        <td><a href="/exam-prep/{{ exam_id }}/quiz/{{ section.slug }}">{{ section.name }}</a></td>
         <td>{{ section.weight }}%</td>
         <td><div class="section-bar" id="bar-{{ section.slug }}"></div></td>
         <td id="answered-{{ section.slug }}">—</td>
@@ -68,10 +68,10 @@
 
 {# Study Tools quick links #}
 <div class="study-tools-links">
-  <a href="/exam-prep/review" role="button" class="outline">Review Failed Questions</a>
-  <a href="/exam-prep/objectives" role="button" class="outline">Study by Objectives</a>
-  <a href="/exam-prep/summary" role="button" class="outline">Section Summaries</a>
-  <a href="/exam-prep/glossary" role="button" class="outline">Glossary</a>
+  <a href="/exam-prep/{{ exam_id }}/review" role="button" class="outline">Review Failed Questions</a>
+  <a href="/exam-prep/{{ exam_id }}/objectives" role="button" class="outline">Study by Objectives</a>
+  <a href="/exam-prep/{{ exam_id }}/summary" role="button" class="outline">Section Summaries</a>
+  <a href="/exam-prep/{{ exam_id }}/glossary" role="button" class="outline">Glossary</a>
 </div>
 
 <div class="export-import-btns">
@@ -83,12 +83,13 @@
 
 <script>
 (function() {
+  const examId = '{{ exam_id }}';
   const sections = {{ sections | tojson }};
 
   function getStats(slug, questions) {
     let answeredCount = 0, correctCount = 0;
     try {
-      const raw = localStorage.getItem('quiz_progress_' + slug);
+      const raw = localStorage.getItem('quiz_progress_' + examId + '_' + slug);
       if (raw) {
         const data = JSON.parse(raw);
         if (data && data.answered) {
@@ -189,14 +190,14 @@
 
   window.resetSection = function(slug, name) {
     if (!confirm('Reset progress for ' + name + '?')) return;
-    localStorage.removeItem('quiz_progress_' + slug);
+    localStorage.removeItem('quiz_progress_' + examId + '_' + slug);
     refreshDisplay();
   };
 
   window.resetAll = function() {
     if (!confirm('Reset ALL quiz progress? This cannot be undone.')) return;
     sections.forEach(function(section) {
-      localStorage.removeItem('quiz_progress_' + section.slug);
+      localStorage.removeItem('quiz_progress_' + examId + '_' + section.slug);
     });
     refreshDisplay();
   };
@@ -204,7 +205,7 @@
   window.exportProgress = function() {
     const data = {};
     sections.forEach(function(section) {
-      const raw = localStorage.getItem('quiz_progress_' + section.slug);
+      const raw = localStorage.getItem('quiz_progress_' + examId + '_' + section.slug);
       if (raw) data[section.slug] = JSON.parse(raw);
     });
     // Also export notes
@@ -232,7 +233,7 @@
           if (key.startsWith('notes_')) {
             localStorage.setItem(key, data[key]);
           } else {
-            localStorage.setItem('quiz_progress_' + key, JSON.stringify(data[key]));
+            localStorage.setItem('quiz_progress_' + examId + '_' + key, JSON.stringify(data[key]));
           }
         }
         refreshDisplay();
@@ -249,7 +250,7 @@
   function renderExamHistory() {
     var historyEl = document.getElementById('exam-history-section');
     try {
-      var history = JSON.parse(localStorage.getItem('exam_history') || '[]');
+      var history = JSON.parse(localStorage.getItem('exam_history_' + examId) || '[]');
       if (history.length === 0) { historyEl.style.display = 'none'; return; }
       historyEl.style.display = 'block';
 
@@ -289,7 +290,7 @@
 
   window.clearExamHistory = function() {
     if (!confirm('Clear all exam history?')) return;
-    localStorage.removeItem('exam_history');
+    localStorage.removeItem('exam_history_' + examId);
     renderExamHistory();
   };
 

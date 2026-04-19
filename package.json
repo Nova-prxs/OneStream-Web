@@ -1,0 +1,27 @@
+{
+  "name": "onestream-web",
+  "version": "1.0.0",
+  "description": "Self-contained web application for **OS-201 OneStream Core Platform Architect** certification preparation and comprehensive API documentation.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nova-prxs/OneStream-Web.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nova-prxs/OneStream-Web/issues"
+  },
+  "homepage": "https://github.com/Nova-prxs/OneStream-Web#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.59.1"
+  }
+}

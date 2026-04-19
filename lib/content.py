@@ -21,6 +21,7 @@ import markdown
 BOOK_TITLES: dict[str, str] = {
     "design-reference-guide": "Design & Reference Guide",
     "finance-rules": "Finance Rules & Calculations Handbook",
+    "financial-close-guide": "Financial Close Guide (OFC)",
     "foundation-handbook": "Foundation Handbook",
     "workspaces-assemblies": "Workspaces & Assemblies",
 }

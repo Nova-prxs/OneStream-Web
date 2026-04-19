@@ -1,13 +1,13 @@
 {% extends "base.html" %}
 
-{% block title %}OS-201 Exam Quiz — OneStream Study Guide{% endblock %}
+{% block title %}{{ exam.name }} Exam Quiz — OneStream Study Guide{% endblock %}
 
 {% block content %}
-<h1>OS-201 Exam Quiz</h1>
+<h1>{{ exam.name }} Exam Quiz</h1>
 <p>
   Practice with <strong>{{ total_questions }}</strong> questions across
   <strong>{{ sections|length }}</strong> exam sections. Each section is weighted
-  according to the official OS-201 certification exam blueprint.
+  according to the official {{ exam.name }} certification exam blueprint.
 </p>
 
 <figure>
@@ -26,7 +26,7 @@
       {% for section in sections %}
       <tr>
         <td>{{ section.number }}</td>
-        <td><a href="/exam-prep/quiz/{{ section.slug }}">{{ section.name }}</a></td>
+        <td><a href="/exam-prep/{{ exam_id }}/quiz/{{ section.slug }}">{{ section.name }}</a></td>
         <td>{{ section.weight }}%</td>
         <td>{{ section.question_count }} questions</td>
         <td id="progress-{{ section.slug }}">—</td>
@@ -48,15 +48,16 @@
 </figure>
 
 <div class="study-tools-links" style="margin-top:1rem">
-  <a href="/exam-prep/exam" role="button" class="outline">Exam Simulation</a>
-  <a href="/exam-prep/review" role="button" class="outline">Review Failed</a>
-  <a href="/exam-prep/objectives" role="button" class="outline">Study by Objectives</a>
-  <a href="/exam-prep/summary" role="button" class="outline">Section Summaries</a>
-  <a href="/exam-prep/glossary" role="button" class="outline">Glossary</a>
+  <a href="/exam-prep/{{ exam_id }}/exam" role="button" class="outline">Exam Simulation</a>
+  <a href="/exam-prep/{{ exam_id }}/review" role="button" class="outline">Review Failed</a>
+  <a href="/exam-prep/{{ exam_id }}/objectives" role="button" class="outline">Study by Objectives</a>
+  <a href="/exam-prep/{{ exam_id }}/summary" role="button" class="outline">Section Summaries</a>
+  <a href="/exam-prep/{{ exam_id }}/glossary" role="button" class="outline">Glossary</a>
 </div>
 
 <script>
 (function() {
+  const examId = '{{ exam_id }}';
   const sections = {{ sections | tojson }};
   let totalAnswered = 0;
   let totalCorrect = 0;
@@ -71,7 +72,7 @@
     let correctCount = 0;
 
     try {
-      const raw = localStorage.getItem('quiz_progress_' + slug);
+      const raw = localStorage.getItem('quiz_progress_' + examId + '_' + slug);
       if (raw) {
         const data = JSON.parse(raw);
         if (data && data.answered) {

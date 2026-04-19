@@ -1,13 +1,13 @@
 {% extends "base.html" %}
-{% block title %}Exam Simulation — OneStream Study Guide{% endblock %}
+{% block title %}{{ exam.name }} Exam Simulation — OneStream Study Guide{% endblock %}
 {% block content %}
 
-<h1>Exam Simulation</h1>
+<h1>{{ exam.name }} Exam Simulation</h1>
 
 {# Pre-exam setup #}
 <div id="exam-setup">
   <article>
-    <header><strong>OS-201 Practice Exam</strong></header>
+    <header><strong>{{ exam.name }} Practice Exam</strong></header>
     <p>Simulate the real certification exam experience:</p>
     <ul>
       <li><strong>60 questions</strong> randomly selected, weighted by exam section</li>
@@ -75,11 +75,12 @@
   </figure>
 
   <button onclick="location.reload()">Try Again</button>
-  <a href="/exam-prep/progress" role="button" class="outline">View Progress</a>
+  <a href="/exam-prep/{{ exam_id }}/progress" role="button" class="outline">View Progress</a>
 </div>
 
 <script>
 const allSections = {{ sections | tojson }};
+const examId = '{{ exam_id }}';
 let examQuestions = [];
 let examAnswers = {};
 let examCurrent = 0;
@@ -222,7 +223,7 @@ function finishExam() {
 
   // Save exam result to history (#9)
   try {
-    var history = JSON.parse(localStorage.getItem('exam_history') || '[]');
+    var history = JSON.parse(localStorage.getItem('exam_history_' + examId) || '[]');
     var examResult = {
       date: new Date().toISOString(),
       score: score,
@@ -240,7 +241,7 @@ function finishExam() {
     });
     history.push(examResult);
     if (history.length > 50) history = history.slice(-50);
-    localStorage.setItem('exam_history', JSON.stringify(history));
+    localStorage.setItem('exam_history_' + examId, JSON.stringify(history));
   } catch(e) {}
 
   var scoreEl = document.getElementById('result-score');

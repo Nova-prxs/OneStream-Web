@@ -1,14 +1,14 @@
 {% extends "base.html" %}
-{% block title %}Study by Objectives — OneStream Study Guide{% endblock %}
+{% block title %}{{ exam.name }} Study by Objectives — OneStream Study Guide{% endblock %}
 {% block content %}
 
 <nav class="breadcrumb">
   <a href="/">Home</a> &rsaquo;
-  <a href="/exam-prep/quiz">Quiz</a> &rsaquo;
+  <a href="/exam-prep/{{ exam_id }}/quiz">Quiz</a> &rsaquo;
   <span>Study by Objectives</span>
 </nav>
 
-<h1>Study by Objectives</h1>
+<h1>{{ exam.name }} — Study by Objectives</h1>
 <p>Track your mastery of each certification objective. The exam tests specific objectives — study them one by one for complete coverage.</p>
 
 {# Concept Map — #8 interactive overview #}
@@ -20,7 +20,7 @@
       <div class="concept-children">
         {% for section in sections %}
         <div class="concept-node concept-section">
-          <a href="/exam-prep/quiz/{{ section.slug }}" class="concept-label concept-link">
+          <a href="/exam-prep/{{ exam_id }}/quiz/{{ section.slug }}" class="concept-label concept-link">
             {{ section.name }} <small>({{ section.weight }}%)</small>
           </a>
         </div>
@@ -79,11 +79,12 @@
 
 <script>
 const sections = {{ sections | tojson }};
+const examId = '{{ exam_id }}';
 const objectivesData = {{ objectives | tojson }};
 
 function getProgress(slug) {
   try {
-    var raw = localStorage.getItem('quiz_progress_' + slug);
+    var raw = localStorage.getItem('quiz_progress_' + examId + '_' + slug);
     if (raw) return JSON.parse(raw);
   } catch(e) {}
   return { answered: {} };

@@ -1,0 +1,146 @@
+{
+  "book": "financial-close-guide",
+  "chapter_count": 14,
+  "chapters": [
+    {
+      "title": "Overview",
+      "file": "financial-close-guide/chapter-01-overview.md",
+      "book": "financial-close-guide",
+      "chapter": 1,
+      "start_page": 1,
+      "end_page": 1,
+      "word_count": 4,
+      "image_count": 2
+    },
+    {
+      "title": "Setup and Installation",
+      "file": "financial-close-guide/chapter-02-setup-and-installation.md",
+      "book": "financial-close-guide",
+      "chapter": 2,
+      "start_page": 2,
+      "end_page": 17,
+      "word_count": 1287,
+      "image_count": 0
+    },
+    {
+      "title": "Account Reconciliations Settings",
+      "file": "financial-close-guide/chapter-03-account-reconciliations-settings.md",
+      "book": "financial-close-guide",
+      "chapter": 3,
+      "start_page": 18,
+      "end_page": 49,
+      "word_count": 4132,
+      "image_count": 23
+    },
+    {
+      "title": "Reconciliation Administration",
+      "file": "financial-close-guide/chapter-04-reconciliation-administration.md",
+      "book": "financial-close-guide",
+      "chapter": 4,
+      "start_page": 50,
+      "end_page": 107,
+      "word_count": 10030,
+      "image_count": 44
+    },
+    {
+      "title": "Notifications",
+      "file": "financial-close-guide/chapter-05-notifications.md",
+      "book": "financial-close-guide",
+      "chapter": 5,
+      "start_page": 108,
+      "end_page": 110,
+      "word_count": 328,
+      "image_count": 3
+    },
+    {
+      "title": "Security",
+      "file": "financial-close-guide/chapter-06-security.md",
+      "book": "financial-close-guide",
+      "chapter": 6,
+      "start_page": 111,
+      "end_page": 132,
+      "word_count": 3018,
+      "image_count": 7
+    },
+    {
+      "title": "Using Account Reconciliations",
+      "file": "financial-close-guide/chapter-07-using-account-reconciliations.md",
+      "book": "financial-close-guide",
+      "chapter": 7,
+      "start_page": 133,
+      "end_page": 199,
+      "word_count": 9457,
+      "image_count": 49
+    },
+    {
+      "title": "Transaction Matching Settings",
+      "file": "financial-close-guide/chapter-08-transaction-matching-settings.md",
+      "book": "financial-close-guide",
+      "chapter": 8,
+      "start_page": 200,
+      "end_page": 249,
+      "word_count": 6467,
+      "image_count": 57
+    },
+    {
+      "title": "Transaction Matching Administration",
+      "file": "financial-close-guide/chapter-09-transaction-matching-administration.md",
+      "book": "financial-close-guide",
+      "chapter": 9,
+      "start_page": 250,
+      "end_page": 299,
+      "word_count": 8003,
+      "image_count": 25
+    },
+    {
+      "title": "Using Transaction Matching",
+      "file": "financial-close-guide/chapter-10-using-transaction-matching.md",
+      "book": "financial-close-guide",
+      "chapter": 10,
+      "start_page": 300,
+      "end_page": 340,
+      "word_count": 4782,
+      "image_count": 25
+    },
+    {
+      "title": "Integration",
+      "file": "financial-close-guide/chapter-11-integration.md",
+      "book": "financial-close-guide",
+      "chapter": 11,
+      "start_page": 341,
+      "end_page": 389,
+      "word_count": 7025,
+      "image_count": 34
+    },
+    {
+      "title": "Journal Entries",
+      "file": "financial-close-guide/chapter-12-journal-entries.md",
+      "book": "financial-close-guide",
+      "chapter": 12,
+      "start_page": 390,
+      "end_page": 410,
+      "word_count": 2875,
+      "image_count": 11
+    },
+    {
+      "title": "Troubleshooting and Best Practices",
+      "file": "financial-close-guide/chapter-13-troubleshooting-and-best-practices.md",
+      "book": "financial-close-guide",
+      "chapter": 13,
+      "start_page": 411,
+      "end_page": 430,
+      "word_count": 2988,
+      "image_count": 14
+    },
+    {
+      "title": "Appendices",
+      "file": "financial-close-guide/chapter-14-appendices.md",
+      "book": "financial-close-guide",
+      "chapter": 14,
+      "start_page": 431,
+      "end_page": 456,
+      "word_count": 3068,
+      "image_count": 15
+    }
+  ]
+}

@@ -1,10 +1,10 @@
 {% extends "base.html" %}
-{% block title %}Review Failed Questions — OneStream Study Guide{% endblock %}
+{% block title %}{{ exam.name }} Review Failed Questions — OneStream Study Guide{% endblock %}
 {% block content %}
 
 <nav class="breadcrumb">
   <a href="/">Home</a> &rsaquo;
-  <a href="/exam-prep/quiz">Quiz</a> &rsaquo;
+  <a href="/exam-prep/{{ exam_id }}/quiz">Quiz</a> &rsaquo;
   <span>Review Failed</span>
 </nav>
 
@@ -22,7 +22,7 @@
 <div id="no-failed" style="display:none">
   <article class="review-empty">
     <header><strong>No failed questions!</strong></header>
-    <p>You haven't answered any questions incorrectly yet. Start practicing in the <a href="/exam-prep/quiz">Quiz</a> section first.</p>
+    <p>You haven't answered any questions incorrectly yet. Start practicing in the <a href="/exam-prep/{{ exam_id }}/quiz">Quiz</a> section first.</p>
   </article>
 </div>
 
@@ -58,6 +58,7 @@
 
 <script>
 const allSections = {{ sections | tojson }};
+const examId = '{{ exam_id }}';
 let failedQuestions = [];
 let reviewAnswers = {};
 let reviewCurrent = 0;
@@ -67,7 +68,7 @@ function loadFailedQuestions() {
   failedQuestions = [];
   allSections.forEach(function(section) {
     try {
-      var raw = localStorage.getItem('quiz_progress_' + section.slug);
+      var raw = localStorage.getItem('quiz_progress_' + examId + '_' + section.slug);
       if (!raw) return;
       var data = JSON.parse(raw);
       if (!data || !data.answered) return;
@@ -186,11 +187,11 @@ function selectReviewAnswer(letter, idx) {
   var fq = filtered[idx];
   if (letter === fq.question.correct_answer) {
     try {
-      var raw = localStorage.getItem('quiz_progress_' + fq.sectionSlug);
+      var raw = localStorage.getItem('quiz_progress_' + examId + '_' + fq.sectionSlug);
       if (raw) {
         var data = JSON.parse(raw);
         data.answered[fq.originalIndex] = letter;
-        localStorage.setItem('quiz_progress_' + fq.sectionSlug, JSON.stringify(data));
+        localStorage.setItem('quiz_progress_' + examId + '_' + fq.sectionSlug, JSON.stringify(data));
       }
     } catch(e) {}
   }

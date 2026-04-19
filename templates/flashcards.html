@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}Flashcards — OneStream Study Guide{% endblock %}
+{% block title %}{{ exam.name }} Flashcards — OneStream Study Guide{% endblock %}
 {% block content %}
 
 <nav class="breadcrumb">
@@ -7,7 +7,7 @@
   <span>Flashcards</span>
 </nav>
 
-<h1>Flashcards <small>— Spaced Repetition</small></h1>
+<h1>{{ exam.name }} Flashcards <small>— Spaced Repetition</small></h1>
 <p>Cards you get wrong appear more often. Cards you know well come back less frequently. Based on the SM-2 algorithm.</p>
 
 {# Section filter #}
@@ -69,7 +69,8 @@
 
 <script>
 const allSections = {{ sections | tojson }};
-const FC_STORAGE = 'flashcard_progress';
+const examId = '{{ exam_id }}';
+const FC_STORAGE = 'flashcard_progress_' + examId;
 let fcSection = 'all';
 let fcCards = [];
 let fcDue = [];

@@ -24,6 +24,7 @@
       document.documentElement.setAttribute('data-theme', t);
     })();
   </script>
+  <script src="/static/js/theme-toggle.js" defer></script>
 
   <style>
     /* ── Theme CSS Variables — Nova Praxis brand ── */
@@ -385,21 +386,6 @@
     OneStream Platform Portal — OS-201 Certification Prep
   </footer>
 
-  <script>
-    function toggleTheme() {
-      var html = document.documentElement;
-      var current = html.getAttribute('data-theme');
-      var next = current === 'dark' ? 'light' : 'dark';
-      html.setAttribute('data-theme', next);
-      localStorage.setItem('theme', next);
-      updateThemeIcon();
-    }
-    function updateThemeIcon() {
-      var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-      document.getElementById('icon-moon').style.display = isDark ? 'none' : '';
-      document.getElementById('icon-sun').style.display = isDark ? '' : 'none';
-    }
-    updateThemeIcon();
-  </script>
+  <!-- theme-toggle.js handles toggleTheme() globally -->
 </body>
 </html>

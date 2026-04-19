@@ -5,7 +5,7 @@
 {# Breadcrumb: Home > Quiz > Section Name #}
 <nav aria-label="breadcrumb" class="breadcrumb">
   <a href="/">Home</a> &rsaquo;
-  <a href="/exam-prep/quiz">Quiz</a> &rsaquo;
+  <a href="/exam-prep/{{ exam_id }}/quiz">Quiz</a> &rsaquo;
   <span>{{ section.name }}</span>
 </nav>
 
@@ -73,7 +73,8 @@
 <script>
 const allQuestions = {{ section.questions | tojson }};
 const sectionSlug = {{ section.slug | tojson }};
-const storageKey = 'quiz_progress_' + sectionSlug;
+const examId = '{{ exam_id }}';
+const storageKey = 'quiz_progress_' + examId + '_' + sectionSlug;
 let currentIndex = 0;
 let answered = {};  // {index: selectedLetter}
 let filteredIndices = [];  // indices into allQuestions that match current filters

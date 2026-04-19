@@ -26,6 +26,7 @@
       document.documentElement.setAttribute('data-theme', t);
     })();
   </script>
+  <script src="/static/js/theme-toggle.js" defer></script>
 </head>
 <body>
   <!-- Animated background blobs -->
@@ -46,14 +47,21 @@
       <div class="nav-links">
         <a href="/docs/">API Reference</a>
         <span class="nav-sep">|</span>
+        {% if exam_id is defined and exam_id %}
+        <form action="/exam-prep/{{ exam_id }}/search" method="get" role="search" class="search-form">
+          <input type="search" name="q" placeholder="Search chapters..." aria-label="Search" value="{{ request.args.get('q', '') }}">
+        </form>
+        <a href="/exam-prep/{{ exam_id }}/quiz">Quiz</a>
+        <a href="/exam-prep/{{ exam_id }}/exam">Exam</a>
+        <a href="/exam-prep/{{ exam_id }}/flashcards">Flashcards</a>
+        <a href="/exam-prep/{{ exam_id }}/highlights">Highlights</a>
+        <a href="/exam-prep/{{ exam_id }}/progress">Progress</a>
+        {% else %}
         <form action="/exam-prep/search" method="get" role="search" class="search-form">
           <input type="search" name="q" placeholder="Search chapters..." aria-label="Search" value="{{ request.args.get('q', '') }}">
         </form>
-        <a href="/exam-prep/quiz">Quiz</a>
-        <a href="/exam-prep/exam">Exam</a>
-        <a href="/exam-prep/flashcards">Flashcards</a>
-        <a href="/exam-prep/highlights">Highlights</a>
-        <a href="/exam-prep/progress">Progress</a>
+        <a href="/exam-prep/">Exam Prep</a>
+        {% endif %}
         <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode" id="theme-btn">
           <i class="ph ph-moon" id="icon-moon"></i>
           <i class="ph ph-sun" id="icon-sun" style="display:none"></i>
@@ -84,26 +92,11 @@
   </div>
 
   <footer class="container">
-    <small>OS-201 Certification Prep — <kbd>?</kbd> for keyboard shortcuts</small>
+    <small>{% if exam is defined and exam %}{{ exam.name }}{% else %}OneStream{% endif %} Certification Prep — <kbd>?</kbd> for keyboard shortcuts</small>
   </footer>
 
   <script>
-    function toggleTheme() {
-      var html = document.documentElement;
-      var current = html.getAttribute('data-theme');
-      var next = current === 'dark' ? 'light' : 'dark';
-      html.setAttribute('data-theme', next);
-      localStorage.setItem('theme', next);
-      updateThemeIcon();
-    }
-    function updateThemeIcon() {
-      var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-      var moon = document.getElementById('icon-moon');
-      var sun = document.getElementById('icon-sun');
-      if (moon) moon.style.display = isDark ? 'none' : '';
-      if (sun) sun.style.display = isDark ? '' : 'none';
-    }
-    updateThemeIcon();
+    // theme-toggle.js handles toggleTheme() globally
 
     // --- Pomodoro Timer ---
     var pomoState = 'stopped';

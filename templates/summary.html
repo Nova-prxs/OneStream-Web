@@ -1,14 +1,14 @@
 {% extends "base.html" %}
-{% block title %}Section Summaries — OneStream Study Guide{% endblock %}
+{% block title %}{{ exam.name }} Section Summaries — OneStream Study Guide{% endblock %}
 {% block content %}
 
 <nav class="breadcrumb">
   <a href="/">Home</a> &rsaquo;
-  <a href="/exam-prep/quiz">Quiz</a> &rsaquo;
+  <a href="/exam-prep/{{ exam_id }}/quiz">Quiz</a> &rsaquo;
   <span>Section Summaries</span>
 </nav>
 
-<h1>Section Summaries <small>— Cheat Sheets</small></h1>
+<h1>{{ exam.name }} Section Summaries <small>— Cheat Sheets</small></h1>
 <p>Condensed key facts per exam section, extracted from quiz questions and explanations. Use these for quick review before the exam.</p>
 
 {# Section tabs #}
@@ -30,7 +30,7 @@
     <div class="summary-content" id="summary-content-{{ section.slug }}"></div>
 
     <footer>
-      <a href="/exam-prep/quiz/{{ section.slug }}" role="button" class="outline">Practice {{ section.name }} Quiz</a>
+      <a href="/exam-prep/{{ exam_id }}/quiz/{{ section.slug }}" role="button" class="outline">Practice {{ section.name }} Quiz</a>
     </footer>
   </article>
 </div>

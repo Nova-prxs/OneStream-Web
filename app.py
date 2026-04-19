@@ -1,8 +1,9 @@
 """OneStream Portal — Flask application entry point.
 
-Two sections:
-  /exam-prep/  — OS-201 Certification prep (study guide, quizzes, flashcards)
+Three sections:
+  /exam-prep/  — Multi-exam Certification prep (OS-102, OS-201, OS-300, OS-301)
   /docs/       — API reference + business rules browser with search
+  /docs/extension/ — Extension guide
 """
 
 from pathlib import Path
@@ -34,61 +35,79 @@ def get_content_cache():
     return app.config["CONTENT_CACHE"]
 
 
-def get_quiz_cache():
-    """Lazy-load quiz cache (handles Flask reloader child process)."""
-    if "QUIZ_CACHE" not in app.config:
-        from lib.quiz import build_quiz_cache
+def get_all_quiz_caches():
+    """Lazy-load quiz caches for all exams."""
+    if "ALL_QUIZ_CACHES" not in app.config:
+        from lib.quiz import build_all_quiz_caches
 
-        app.config["QUIZ_CACHE"] = build_quiz_cache(EXAM_PREP_DIR)
-        _enrich_quiz_with_chapter_links()
+        app.config["ALL_QUIZ_CACHES"] = build_all_quiz_caches(EXAM_PREP_DIR)
+        _enrich_all_quizzes_with_chapter_links()
         _build_chapter_questions_map()
-    return app.config["QUIZ_CACHE"]
+    return app.config["ALL_QUIZ_CACHES"]
 
 
-def _enrich_quiz_with_chapter_links():
+def get_quiz_cache(exam_id: str = "os-201"):
+    """Get quiz cache for a specific exam."""
+    caches = get_all_quiz_caches()
+    return caches.get(exam_id)
+
+
+def _enrich_all_quizzes_with_chapter_links():
     """Add related_chapter to each quiz question using FTS5 search."""
     from lib.search import find_related_chapter
 
     conn = get_search_index()
-    quiz_cache = app.config["QUIZ_CACHE"]
-    linked = 0
-    for section in quiz_cache["sections"]:
-        for question in section["questions"]:
-            result = find_related_chapter(
-                conn,
-                question["text"],
-                question.get("explanation", ""),
-                section["name"],
-            )
-            question["related_chapter"] = result
-            if result:
-                linked += 1
-    total = sum(s["question_count"] for s in quiz_cache["sections"])
-    print(f"  Quiz linking: {linked}/{total} questions linked to chapters")
+    all_caches = app.config["ALL_QUIZ_CACHES"]
+    total_linked = 0
+    total_questions = 0
+
+    for exam_id, quiz_cache in all_caches.items():
+        linked = 0
+        for section in quiz_cache["sections"]:
+            for question in section["questions"]:
+                result = find_related_chapter(
+                    conn,
+                    question["text"],
+                    question.get("explanation", ""),
+                    section["name"],
+                )
+                question["related_chapter"] = result
+                if result:
+                    linked += 1
+        exam_total = sum(s["question_count"] for s in quiz_cache["sections"])
+        total_linked += linked
+        total_questions += exam_total
+        print(f"  Quiz linking ({exam_id}): {linked}/{exam_total} questions linked to chapters")
+
+    print(f"  Quiz linking total: {total_linked}/{total_questions}")
 
 
 def _build_chapter_questions_map():
     """Build reverse mapping: chapter file_key -> related quiz questions."""
-    quiz_cache = app.config["QUIZ_CACHE"]
+    all_caches = app.config["ALL_QUIZ_CACHES"]
     chapter_questions: dict[str, list[dict]] = {}
-    for section in quiz_cache["sections"]:
-        for q in section["questions"]:
-            rc = q.get("related_chapter")
-            if rc:
-                key = f"{rc['book_slug']}/{rc['chapter_slug']}.md"
-                if key not in chapter_questions:
-                    chapter_questions[key] = []
-                chapter_questions[key].append(
-                    {
-                        "text": q["text"],
-                        "options": q["options"],
-                        "correct_answer": q["correct_answer"],
-                        "explanation": q.get("explanation", ""),
-                        "difficulty": q["difficulty"],
-                        "objective": q.get("objective", ""),
-                        "section_name": section["name"],
-                    }
-                )
+
+    for exam_id, quiz_cache in all_caches.items():
+        for section in quiz_cache["sections"]:
+            for q in section["questions"]:
+                rc = q.get("related_chapter")
+                if rc:
+                    key = f"{rc['book_slug']}/{rc['chapter_slug']}.md"
+                    if key not in chapter_questions:
+                        chapter_questions[key] = []
+                    chapter_questions[key].append(
+                        {
+                            "text": q["text"],
+                            "options": q["options"],
+                            "correct_answer": q["correct_answer"],
+                            "explanation": q.get("explanation", ""),
+                            "difficulty": q["difficulty"],
+                            "objective": q.get("objective", ""),
+                            "section_name": section["name"],
+                            "exam_id": exam_id,
+                        }
+                    )
+
     app.config["CHAPTER_QUESTIONS"] = chapter_questions
     print(f"  Chapter quiz map: {len(chapter_questions)} chapters with questions")
 
@@ -147,7 +166,7 @@ def get_extension_guide_cache():
 
 
 # ===========================================================================
-# Template filters
+# Template filters & helpers
 # ===========================================================================
 
 
@@ -155,6 +174,14 @@ def get_extension_guide_cache():
 def chapter_slug_filter(file_path):
     """Extract chapter slug from file path: 'book/chapter-08-cubes.md' -> 'chapter-08-cubes'."""
     return file_path.rsplit("/", 1)[-1].replace(".md", "")
+
+
+def _get_exam_or_404(exam_id: str):
+    """Return the quiz cache for *exam_id* or abort with 404."""
+    cache = get_quiz_cache(exam_id)
+    if not cache:
+        abort(404)
+    return cache
 
 
 # ===========================================================================
@@ -181,13 +208,37 @@ def portal():
 
 
 # ===========================================================================
-# Exam Prep routes (previously at /)
+# Exam Prep routes — multi-exam support
 # ===========================================================================
 
 
 @app.route("/exam-prep/")
-def index():
-    """Home page listing all books."""
+def exam_selector():
+    """Exam selector page listing all available certification exams."""
+    from lib.quiz import EXAMS
+
+    all_caches = get_all_quiz_caches()
+    exams_info = []
+    for exam_id, exam_meta in EXAMS.items():
+        cache = all_caches.get(exam_id)
+        if cache and cache["sections"]:
+            total_q = sum(s["question_count"] for s in cache["sections"])
+            exams_info.append({
+                "id": exam_id,
+                "name": exam_meta["name"],
+                "title": exam_meta["title"],
+                "level": exam_meta["level"],
+                "section_count": len(cache["sections"]),
+                "question_count": total_q,
+            })
+    return render_template("exam_selector.html", exams=exams_info)
+
+
+# --- Study guide (books) routes — NOT exam-scoped ---
+
+@app.route("/exam-prep/guide/")
+def guide_index():
+    """Home page listing all study books."""
     cache = get_content_cache()
     return render_template("index.html", books=cache["books"])
 
@@ -223,7 +274,7 @@ def chapter_view(book_slug, chapter_slug):
         if current_idx is not None and current_idx < len(chapters) - 1
         else None
     )
-    get_quiz_cache()
+    get_all_quiz_caches()
     mini_quiz = app.config.get("CHAPTER_QUESTIONS", {}).get(file_key, [])[:10]
 
     return render_template(
@@ -248,78 +299,83 @@ def serve_image(book, filename):
     return response
 
 
-@app.route("/exam-prep/quiz")
-def quiz_sections():
-    """Quiz landing page listing all 8 exam sections."""
-    cache = get_quiz_cache()
+# --- Exam-scoped routes ---
+
+@app.route("/exam-prep/<exam_id>/quiz")
+def quiz_sections(exam_id):
+    """Quiz landing page listing exam sections."""
+    cache = _get_exam_or_404(exam_id)
     total_questions = sum(s["question_count"] for s in cache["sections"])
     return render_template(
         "quiz_sections.html",
         sections=cache["sections"],
         total_questions=total_questions,
+        exam=cache["exam"],
+        exam_id=exam_id,
     )
 
 
-@app.route("/exam-prep/quiz/<section_slug>")
-def quiz_section(section_slug):
+@app.route("/exam-prep/<exam_id>/quiz/<section_slug>")
+def quiz_section(exam_id, section_slug):
     """Interactive quiz for a single exam section."""
-    cache = get_quiz_cache()
+    cache = _get_exam_or_404(exam_id)
     section = next((s for s in cache["sections"] if s["slug"] == section_slug), None)
     if not section:
         abort(404)
-    return render_template("quiz.html", section=section)
+    return render_template("quiz.html", section=section, exam=cache["exam"], exam_id=exam_id)
 
 
-@app.route("/exam-prep/exam")
-def exam_simulation():
-    """Exam simulation page — 60 weighted random questions with timer."""
-    cache = get_quiz_cache()
-    return render_template("exam.html", sections=cache["sections"])
+@app.route("/exam-prep/<exam_id>/exam")
+def exam_simulation(exam_id):
+    """Exam simulation page — weighted random questions with timer."""
+    cache = _get_exam_or_404(exam_id)
+    return render_template("exam.html", sections=cache["sections"], exam=cache["exam"], exam_id=exam_id)
 
 
-@app.route("/api/quiz/<section_slug>")
-def api_quiz_section(section_slug):
-    """API endpoint returning quiz questions as JSON (for lighter page loads)."""
+@app.route("/api/quiz/<exam_id>/<section_slug>")
+def api_quiz_section(exam_id, section_slug):
+    """API endpoint returning quiz questions as JSON."""
     from flask import jsonify
 
-    cache = get_quiz_cache()
+    cache = _get_exam_or_404(exam_id)
     section = next((s for s in cache["sections"] if s["slug"] == section_slug), None)
     if not section:
         abort(404)
     return jsonify(section)
 
 
-@app.route("/exam-prep/search")
-def search():
-    """Full-text search across all chapters."""
+@app.route("/exam-prep/<exam_id>/search")
+def exam_search(exam_id):
+    """Full-text search across all chapters (exam-scoped URL)."""
     from lib.search import search_chapters
 
+    _get_exam_or_404(exam_id)  # validate exam_id
     query = request.args.get("q", "").strip()
     results = []
     if query:
         conn = get_search_index()
         results = search_chapters(conn, query)
-    return render_template("search.html", query=query, results=results)
+    return render_template("search.html", query=query, results=results, exam_id=exam_id)
 
 
-@app.route("/exam-prep/progress")
-def progress():
+@app.route("/exam-prep/<exam_id>/progress")
+def progress(exam_id):
     """Progress dashboard showing per-section quiz stats."""
-    cache = get_quiz_cache()
-    return render_template("progress.html", sections=cache["sections"])
+    cache = _get_exam_or_404(exam_id)
+    return render_template("progress.html", sections=cache["sections"], exam=cache["exam"], exam_id=exam_id)
 
 
-@app.route("/exam-prep/review")
-def review():
+@app.route("/exam-prep/<exam_id>/review")
+def review(exam_id):
     """Review failed questions across all sections."""
-    cache = get_quiz_cache()
-    return render_template("review.html", sections=cache["sections"])
+    cache = _get_exam_or_404(exam_id)
+    return render_template("review.html", sections=cache["sections"], exam=cache["exam"], exam_id=exam_id)
 
 
-@app.route("/exam-prep/objectives")
-def objectives():
+@app.route("/exam-prep/<exam_id>/objectives")
+def objectives(exam_id):
     """Study plan organized by certification objectives."""
-    cache = get_quiz_cache()
+    cache = _get_exam_or_404(exam_id)
     obj_map: dict[str, dict] = {}
     for section in cache["sections"]:
         for q in section["questions"]:
@@ -336,13 +392,15 @@ def objectives():
             obj_map[obj]["questions"].append(q)
     sorted_obj = sorted(obj_map.values(), key=lambda x: x["code"])
     return render_template(
-        "objectives.html", objectives=sorted_obj, sections=cache["sections"]
+        "objectives.html", objectives=sorted_obj, sections=cache["sections"],
+        exam=cache["exam"], exam_id=exam_id,
     )
 
 
-@app.route("/exam-prep/glossary")
-def glossary():
+@app.route("/exam-prep/<exam_id>/glossary")
+def glossary(exam_id):
     """Searchable glossary of OneStream terms from chapter headings."""
+    _get_exam_or_404(exam_id)  # validate exam_id
     cache = get_content_cache()
     terms: dict[str, dict] = {}
     for file_key, chapter in cache["chapters"].items():
@@ -366,56 +424,121 @@ def glossary():
                     "anchor": hid,
                 }
     sorted_terms = sorted(terms.values(), key=lambda x: x["term"].lower())
-    return render_template("glossary.html", terms=sorted_terms)
+    return render_template("glossary.html", terms=sorted_terms, exam_id=exam_id)
+
+
+@app.route("/exam-prep/<exam_id>/flashcards")
+def flashcards(exam_id):
+    """Spaced repetition flashcards from quiz questions."""
+    cache = _get_exam_or_404(exam_id)
+    return render_template("flashcards.html", sections=cache["sections"], exam=cache["exam"], exam_id=exam_id)
+
+
+@app.route("/exam-prep/<exam_id>/summary")
+def summary(exam_id):
+    """Cheat sheets / key facts per exam section."""
+    cache = _get_exam_or_404(exam_id)
+    return render_template("summary.html", sections=cache["sections"], exam=cache["exam"], exam_id=exam_id)
+
+
+@app.route("/exam-prep/<exam_id>/highlights")
+def highlights(exam_id):
+    """Highlights summary — all user-highlighted text (client-side localStorage)."""
+    _get_exam_or_404(exam_id)
+    return render_template("highlights.html", exam_id=exam_id)
+
+
+# --- Non-exam-scoped search (global) ---
+
+@app.route("/exam-prep/search")
+def search():
+    """Full-text search across all chapters."""
+    from lib.search import search_chapters
+
+    query = request.args.get("q", "").strip()
+    results = []
+    if query:
+        conn = get_search_index()
+        results = search_chapters(conn, query)
+    return render_template("search.html", query=query, results=results, exam_id=None)
+
+
+# ===========================================================================
+# Legacy redirects (301) — old routes redirect to OS-201
+# ===========================================================================
+
+
+@app.route("/exam-prep/quiz")
+def legacy_quiz_sections():
+    return redirect("/exam-prep/os-201/quiz", code=301)
+
+
+@app.route("/exam-prep/quiz/<section_slug>")
+def legacy_quiz_section(section_slug):
+    return redirect(f"/exam-prep/os-201/quiz/{section_slug}", code=301)
+
+
+@app.route("/exam-prep/exam")
+def legacy_exam():
+    return redirect("/exam-prep/os-201/exam", code=301)
+
+
+@app.route("/exam-prep/progress")
+def legacy_progress():
+    return redirect("/exam-prep/os-201/progress", code=301)
+
+
+@app.route("/exam-prep/review")
+def legacy_review():
+    return redirect("/exam-prep/os-201/review", code=301)
+
+
+@app.route("/exam-prep/objectives")
+def legacy_objectives():
+    return redirect("/exam-prep/os-201/objectives", code=301)
+
+
+@app.route("/exam-prep/glossary")
+def legacy_glossary():
+    return redirect("/exam-prep/os-201/glossary", code=301)
 
 
 @app.route("/exam-prep/flashcards")
-def flashcards():
-    """Spaced repetition flashcards from quiz questions."""
-    cache = get_quiz_cache()
-    return render_template("flashcards.html", sections=cache["sections"])
+def legacy_flashcards():
+    return redirect("/exam-prep/os-201/flashcards", code=301)
 
 
 @app.route("/exam-prep/summary")
-def summary():
-    """Cheat sheets / key facts per exam section."""
-    cache = get_quiz_cache()
-    return render_template("summary.html", sections=cache["sections"])
+def legacy_summary():
+    return redirect("/exam-prep/os-201/summary", code=301)
 
 
 @app.route("/exam-prep/highlights")
-def highlights():
-    """Highlights summary — all user-highlighted text (client-side localStorage)."""
-    return render_template("highlights.html")
+def legacy_highlights():
+    return redirect("/exam-prep/os-201/highlights", code=301)
 
 
-# ===========================================================================
-# Legacy redirects (301) — old routes without /exam-prep/ prefix
-# ===========================================================================
-
-_LEGACY_ROUTES = [
-    "/quiz", "/exam", "/search", "/progress", "/review",
-    "/objectives", "/glossary", "/flashcards", "/summary", "/highlights",
-]
-
-
+# Very old legacy routes (no /exam-prep/ prefix)
 @app.route("/guide/<path:rest>")
 def legacy_guide(rest):
     return redirect(f"/exam-prep/guide/{rest}", code=301)
 
 
-for _old in _LEGACY_ROUTES:
+_OLD_ROUTES = ["/quiz", "/exam", "/search", "/progress", "/review",
+               "/objectives", "/glossary", "/flashcards", "/summary", "/highlights"]
+
+for _old in _OLD_ROUTES:
 
     def _make_redirect(old_path):
         def _redirect_fn(**kwargs):
-            new = old_path.replace("/", "/exam-prep/", 1)
+            new = f"/exam-prep/os-201{old_path}"
             qs = request.query_string.decode()
             return redirect(f"{new}?{qs}" if qs else new, code=301)
 
-        _redirect_fn.__name__ = f"legacy_{old_path.strip('/')}"
+        _redirect_fn.__name__ = f"legacy2_{old_path.strip('/')}"
         return _redirect_fn
 
-    app.add_url_rule(_old, endpoint=f"legacy_{_old.strip('/')}", view_func=_make_redirect(_old))
+    app.add_url_rule(_old, endpoint=f"legacy2_{_old.strip('/')}", view_func=_make_redirect(_old))
 
 
 # ===========================================================================
@@ -488,7 +611,6 @@ def rules_type(type_slug):
         for slug in rule_type["rule_slugs"]
         if slug in rules_cache["rules"]
     ]
-    # Build a map for subcategory template lookups
     rules_map = {r["full_slug"]: r for r in rules}
     subcategories = rule_type.get("subcategories", [])
     return render_template(
@@ -553,7 +675,7 @@ def extension_page(page_slug):
 
 if __name__ == "__main__":
     from lib.content import build_content_cache
-    from lib.quiz import build_quiz_cache
+    from lib.quiz import build_all_quiz_caches
     from lib.search import build_search_index
     from lib.api_docs import build_api_cache, build_api_search_index
     from lib.rules_browser import build_rules_cache, link_apis_to_rules
@@ -569,19 +691,19 @@ if __name__ == "__main__":
         f"\n  Startup summary: {total_books} books, {total_chapters} chapters, {total_words:,} words"
     )
 
-    quiz_cache = build_quiz_cache(EXAM_PREP_DIR)
-    app.config["QUIZ_CACHE"] = quiz_cache
-    total_questions = sum(s["question_count"] for s in quiz_cache["sections"])
-    print(
-        f"  Quiz loaded: {len(quiz_cache['sections'])} sections, {total_questions} questions"
-    )
+    # Build all exam quiz caches
+    all_quiz_caches = build_all_quiz_caches(EXAM_PREP_DIR)
+    app.config["ALL_QUIZ_CACHES"] = all_quiz_caches
+    for eid, qc in all_quiz_caches.items():
+        tq = sum(s["question_count"] for s in qc["sections"])
+        print(f"  Exam {eid}: {len(qc['sections'])} sections, {tq} questions")
 
     search_conn = build_search_index(cache)
     app.config["SEARCH_INDEX"] = search_conn
     row_count = search_conn.execute("SELECT COUNT(*) FROM chapters_fts").fetchone()[0]
     print(f"  Search index: {row_count} chapters indexed")
 
-    _enrich_quiz_with_chapter_links()
+    _enrich_all_quizzes_with_chapter_links()
     _build_chapter_questions_map()
 
     # API docs + rules

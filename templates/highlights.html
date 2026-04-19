@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}My Highlights — OneStream Study Guide{% endblock %}
+{% block title %}{% if exam is defined and exam %}{{ exam.name }} {% endif %}My Highlights — OneStream Study Guide{% endblock %}
 {% block content %}
 
 <nav class="breadcrumb">
