@@ -2411,7 +2411,18 @@ kbd {
   line-height: 1.6;
   background: transparent;
 }
-.highlighted-code .highlight pre { margin: 0; padding: 0 16px; }
+.highlighted-code .highlight pre {
+  margin: 0;
+  padding: 0 16px;
+  tab-size: 4;
+  -moz-tab-size: 4;
+  font-size: 12px;
+  line-height: 1.6;
+}
+.highlighted-code .highlight .err {
+  border: none;
+  background: transparent;
+}
 .highlighted-code .highlighttable { width: 100%; border-collapse: collapse; }
 .highlighted-code .highlighttable td { vertical-align: top; padding: 0; }
 .highlighted-code .linenodiv {
@@ -2421,7 +2432,8 @@ kbd {
 }
 .highlighted-code .linenodiv pre {
   color: var(--color-text-3);
-  font-size: 11px;
+  font-size: 12px;
+  line-height: 1.6;
 }
 
 /* -------------------- Utility -------------------- */
@@ -2710,3 +2722,68 @@ kbd {
   background: #1A2226;
   color: var(--color-text);
 }
+/* Pygments tokens were designed for white bg; remap dark-illegible colors. */
+[data-theme="dark"] .highlight .c,
+[data-theme="dark"] .highlight .ch,
+[data-theme="dark"] .highlight .cm,
+[data-theme="dark"] .highlight .c1,
+[data-theme="dark"] .highlight .cs,
+[data-theme="dark"] .highlight .cpf  { color: #8AA8A8; }
+[data-theme="dark"] .highlight .cp   { color: #D4A65A; }
+[data-theme="dark"] .highlight .k,
+[data-theme="dark"] .highlight .kc,
+[data-theme="dark"] .highlight .kd,
+[data-theme="dark"] .highlight .kn,
+[data-theme="dark"] .highlight .kp,
+[data-theme="dark"] .highlight .kr,
+[data-theme="dark"] .highlight .nb,
+[data-theme="dark"] .highlight .nt,
+[data-theme="dark"] .highlight .bp,
+[data-theme="dark"] .highlight .sx   { color: #6FCF8E; }
+[data-theme="dark"] .highlight .kt,
+[data-theme="dark"] .highlight .ne,
+[data-theme="dark"] .highlight .gr,
+[data-theme="dark"] .highlight .gd,
+[data-theme="dark"] .highlight .no   { color: #FF7A92; }
+[data-theme="dark"] .highlight .s,
+[data-theme="dark"] .highlight .sa,
+[data-theme="dark"] .highlight .sb,
+[data-theme="dark"] .highlight .sc,
+[data-theme="dark"] .highlight .dl,
+[data-theme="dark"] .highlight .sd,
+[data-theme="dark"] .highlight .s2,
+[data-theme="dark"] .highlight .sh,
+[data-theme="dark"] .highlight .s1   { color: #F2A66B; }
+[data-theme="dark"] .highlight .se,
+[data-theme="dark"] .highlight .si,
+[data-theme="dark"] .highlight .sr   { color: #E89BC0; }
+[data-theme="dark"] .highlight .nc,
+[data-theme="dark"] .highlight .nf,
+[data-theme="dark"] .highlight .nn,
+[data-theme="dark"] .highlight .fm,
+[data-theme="dark"] .highlight .gh,
+[data-theme="dark"] .highlight .gp   { color: #6FB8FF; }
+[data-theme="dark"] .highlight .nv,
+[data-theme="dark"] .highlight .vc,
+[data-theme="dark"] .highlight .vg,
+[data-theme="dark"] .highlight .vi,
+[data-theme="dark"] .highlight .vm,
+[data-theme="dark"] .highlight .ss   { color: #B59CFF; }
+[data-theme="dark"] .highlight .nd,
+[data-theme="dark"] .highlight .ow,
+[data-theme="dark"] .highlight .gu   { color: #C9A8FF; }
+[data-theme="dark"] .highlight .o,
+[data-theme="dark"] .highlight .m,
+[data-theme="dark"] .highlight .mb,
+[data-theme="dark"] .highlight .mf,
+[data-theme="dark"] .highlight .mh,
+[data-theme="dark"] .highlight .mi,
+[data-theme="dark"] .highlight .mo,
+[data-theme="dark"] .highlight .il,
+[data-theme="dark"] .highlight .go,
+[data-theme="dark"] .highlight .ni,
+[data-theme="dark"] .highlight .w    { color: #B0BEC5; }
+[data-theme="dark"] .highlight .na,
+[data-theme="dark"] .highlight .nl,
+[data-theme="dark"] .highlight .gi,
+[data-theme="dark"] .highlight .gt   { color: #C5D67A; }
