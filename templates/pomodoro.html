@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+{% block title %}Pomodoro Timer — OneStream Nova Portal{% endblock %}
+
+{% block content %}
+<nav class="nv-crumb">
+  <a href="/">Portal</a><span class="sep">/</span>
+  <span class="current">Pomodoro</span>
+</nav>
+
+<section class="nv-hero">
+  <span class="nv-eyebrow">Focus tool</span>
+  <h1>Pomodoro <span style="color: var(--nova-coral);">timer</span></h1>
+  <p>25-minute focus sessions followed by a 5-minute break. Sessions are saved per day in your browser.</p>
+</section>
+
+<div class="nv-pomo-card">
+  <div class="nv-pomo-time" id="pomodoro-display">25:00</div>
+  <div class="nv-pomo-label" id="pomodoro-label">Focus Session</div>
+  <div class="nv-pomo-btns">
+    <button class="start" type="button" onclick="startPomodoro()" id="pomo-start">Start</button>
+    <button class="start" type="button" onclick="pausePomodoro()" id="pomo-pause" style="display:none">Pause</button>
+    <button class="reset" type="button" onclick="resetPomodoro()">Reset</button>
+  </div>
+  <div class="nv-pomo-sessions">
+    Sessions today: <strong id="pomo-sessions">0</strong> · <span id="pomo-total-time">0</span> min
+  </div>
+</div>
+
+<script>
+  var pomoState = 'stopped';
+  var pomoSeconds = 25 * 60;
+  var pomoMode = 'study';
+  var pomoInterval = null;
+  var pomoTodayKey = 'pomodoro_' + new Date().toISOString().slice(0, 10);
+
+  function loadPomoSessions() {
+    try { var raw = localStorage.getItem(pomoTodayKey); if (raw) return JSON.parse(raw); } catch (e) {}
+    return { count: 0, minutes: 0 };
+  }
+  function savePomoSession() {
+    var data = loadPomoSessions();
+    data.count++;
+    data.minutes += 25;
+    localStorage.setItem(pomoTodayKey, JSON.stringify(data));
+    updatePomoDisplay();
+  }
+  function updatePomoDisplay() {
+    var m = Math.floor(pomoSeconds / 60);
+    var s = pomoSeconds % 60;
+    document.getElementById('pomodoro-display').textContent = m + ':' + (s < 10 ? '0' : '') + s;
+    document.getElementById('pomodoro-label').textContent = pomoMode === 'study' ? 'Focus Session' : 'Break';
+    var sessions = loadPomoSessions();
+    document.getElementById('pomo-sessions').textContent = sessions.count;
+    document.getElementById('pomo-total-time').textContent = sessions.minutes;
+    var display = document.getElementById('pomodoro-display');
+    display.className = 'nv-pomo-time' + (pomoMode === 'break' ? ' break' : '');
+  }
+  function startPomodoro() {
+    pomoState = 'running';
+    document.getElementById('pomo-start').style.display = 'none';
+    document.getElementById('pomo-pause').style.display = '';
+    updatePomoDisplay();
+    pomoInterval = setInterval(function () {
+      pomoSeconds--;
+      updatePomoDisplay();
+      if (pomoSeconds <= 0) {
+        clearInterval(pomoInterval);
+        if (pomoMode === 'study') {
+          savePomoSession();
+          pomoMode = 'break';
+          pomoSeconds = 5 * 60;
+          updatePomoDisplay();
+          alert('Study session complete! Take a 5-minute break.');
+          startPomodoro();
+        } else {
+          pomoMode = 'study';
+          pomoSeconds = 25 * 60;
+          pomoState = 'stopped';
+          document.getElementById('pomo-start').style.display = '';
+          document.getElementById('pomo-pause').style.display = 'none';
+          updatePomoDisplay();
+          alert('Break over! Ready for another session?');
+        }
+      }
+    }, 1000);
+  }
+  function pausePomodoro() {
+    if (pomoState === 'running') {
+      clearInterval(pomoInterval);
+      pomoState = 'paused';
+      document.getElementById('pomo-start').style.display = '';
+      document.getElementById('pomo-pause').style.display = 'none';
+      document.getElementById('pomo-start').textContent = 'Resume';
+      updatePomoDisplay();
+    }
+  }
+  function resetPomodoro() {
+    clearInterval(pomoInterval);
+    pomoState = 'stopped';
+    pomoMode = 'study';
+    pomoSeconds = 25 * 60;
+    document.getElementById('pomo-start').style.display = '';
+    document.getElementById('pomo-start').textContent = 'Start';
+    document.getElementById('pomo-pause').style.display = 'none';
+    updatePomoDisplay();
+  }
+  updatePomoDisplay();
+</script>
+{% endblock %}

@@ -207,6 +207,12 @@ def portal():
     return render_template("portal.html", api_stats=api_stats, ext_stats=ext_stats)
 
 
+@app.route("/tools/pomodoro")
+def pomodoro():
+    """Dedicated Pomodoro timer page (25min focus + 5min break)."""
+    return render_template("pomodoro.html")
+
+
 # ===========================================================================
 # Exam Prep routes — multi-exam support
 # ===========================================================================
