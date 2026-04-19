@@ -363,6 +363,10 @@ input, textarea, select { font-family: inherit; color: inherit; }
 .nv-pillar.teal  { background: var(--nova-teal);  color: #FFFFFF; }
 .nv-pillar.ink   { background: var(--nova-ink);   color: #F5E7D8; }
 .nv-pillar.aqua  { background: var(--nova-aqua);  color: var(--nova-ink); }
+.nv-pillar h3,
+.nv-pillar p,
+.nv-pillar .pillar-eyebrow,
+.nv-pillar .pillar-cta { color: inherit; position: relative; z-index: 1; }
 .nv-pillar .pillar-eyebrow {
   font-size: 11px;
   font-weight: 700;
@@ -377,7 +381,7 @@ input, textarea, select { font-family: inherit; color: inherit; }
   line-height: 1.05;
   font-weight: 700;
 }
-.nv-pillar p { font-size: 14px; opacity: 0.9; max-width: 320px; }
+.nv-pillar p { font-size: 14px; max-width: 320px; color: color-mix(in oklab, currentColor 85%, transparent); }
 .nv-pillar .pillar-cta {
   margin-top: 20px;
   font-size: 14px;
@@ -390,9 +394,9 @@ input, textarea, select { font-family: inherit; color: inherit; }
   position: absolute;
   bottom: -20px;
   right: -20px;
-  opacity: 0.18;
+  opacity: 0.10;
   pointer-events: none;
-  z-index: -1;
+  z-index: 0;
 }
 
 /* Card grid helpers */
