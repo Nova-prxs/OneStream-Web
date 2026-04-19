@@ -2,23 +2,26 @@
 {% block title %}{% if exam is defined and exam %}{{ exam.name }} {% endif %}My Highlights — OneStream Study Guide{% endblock %}
 {% block content %}
 
-<nav class="breadcrumb">
-  <a href="/">Home</a> &rsaquo;
-  <span>My Highlights</span>
+<nav class="nv-crumb">
+  <a href="/">Portal</a><span class="sep">/</span>
+  <span class="current">My Highlights</span>
 </nav>
 
-<h1>My Highlights</h1>
-<p>All your highlighted text from chapters, stored in your browser. Export to Markdown or open directly in Obsidian.</p>
+<section class="nv-hero" style="margin-bottom: 8px;">
+  <span class="nv-eyebrow">Saved selections · per-browser storage</span>
+  <h1>My <span style="color: var(--nova-coral);">highlights</span></h1>
+  <p>All your highlighted text from chapters. Export to Markdown or open directly in Obsidian.</p>
+</section>
 
 <div class="export-toolbar" id="export-toolbar" style="display:none">
   <button onclick="HL.downloadAllHighlights()">Download as Markdown</button>
-  <button class="outline" onclick="HL.openInObsidian()">Open in Obsidian</button>
-  <button class="outline" onclick="clearAll()" style="margin-left:auto;color:#c62828;border-color:#c62828">Clear All</button>
+  <button onclick="HL.openInObsidian()">Open in Obsidian</button>
+  <button onclick="clearAll()">Clear all</button>
 </div>
 
 <div id="highlights-container">
   <div class="highlights-empty" id="highlights-empty">
-    <p><strong>No highlights yet</strong></p>
+    <p>No highlights yet</p>
     <p>Select text in any chapter to highlight it. Use the color toolbar or Apple Pencil to highlight directly.</p>
     <p><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>H</kbd> to highlight with keyboard</p>
   </div>
